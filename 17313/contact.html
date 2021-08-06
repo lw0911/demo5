@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <link type="text/css" rel="stylesheet" href="css/frontmodule.css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_select.css?v=0.0.0.9" front="css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_style.css?v=0.0.0.9" front="css" /> 
+  <script type="text/javascript">
+       window.PERF_START=new Date;
+       function _splash(page, uid, tid, pid){
+        uid =  uid || 0;  // 这里是用户ID
+        tid =  tid || 0;   // 这里是租户ID
+        pid =  pid || 'unknown';  // 这里是项目标识
+        var now = new Date;
+        var start = window.PERF_START || now;
+        var diff = now - start;
+        var rand = Math.round(Math.random()*1000000);
+        var url= document.location.protocol+'//opsapi.beisen.com/opsapi/AddLog?appName='+pid+'&label=%5Bsplash%5D%20'+page+'&uid='+uid+'&tid='+tid+'&time='+diff+'&type=1&sid='+rand+'&step=0';
+        var img = new Image;
+        img.src = url;
+    }
+    </script> 
+<!--  <link href="css/jiathis_share.css" rel="stylesheet" type="text/css" /> -->
+  <script type="text/javascript" src="js/5_themes_default_jquery191.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_custom.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_dialog.js?v=0.0.0.9"></script> 
+  <script type="text/javascript">var $bs_vars={'st':'http://stnew.beisen.com/','version':'2015.09.17.001','constSite':'http://const.tms.beisen.com'};function vstr(str) {
+         if (typeof ($bs_vars) == 'undefine')
+             return str;
+         var result = str;
+         for (var v in $bs_vars) {
+             var regex = new RegExp('\\$\\{' + v.toString() + '\\}|\\{' + v.toString() + '\\}', 'igm');
+             result = result.replace(regex, $bs_vars[v]);
+         }
+         return result;
+     };</script>
+  <!--引用静态文件:requirejs--> 
+  <script type="text/javascript" src="js/require.js"></script> 
+  <title>联系我们</title> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <div class="headercontain"> 
+    <div class="logo"> 
+     <img src="images/104003_medias_20141215_20141215logo.jpg?v=635542641034400000" /> 
+    </div> 
+    <!--module:login begin--> 
+    <div class="bs-module"> 
+     <div class="login-link "> 
+      <div class="login-hearder"> 
+       <ul class="header-login" style="display:none"> 
+        <li class="welcome"><span><span class="userName" style="float:none"></span>，欢迎您！</span></li> 
+        <li class="PortalIndex"><a href="member_apply.html"><span>个人中心</span></a></li> 
+        <li class="LogoutUrl"><a href="/User/Account/LogOut"><span>退出</span></a></li> 
+       </ul> 
+       <ul class="header-unLogin" style="display:none"> 
+        <li><a class="loginlink" href="/Portal/Account/Login?returnUrl=%2Fa%2Fcontactus"> <span>登录</span> </a></li> 
+        <li><a class="reglink" href="/Portal/Account/Register?returnUrl=%2Fa%2Fcontactus"><span> 注册</span></a></li> 
+       </ul> 
+      </div> 
+      <script type="text/javascript">
+ $.post("ajax.php", {type:"1"}, function(data) {
+                var loginView = $(".login-hearder .header-login");
+                var unLoginView = $(".login-hearder .header-unLogin");
+                if (data.name != '') {
+                    loginView.find('.userName').text(data.name);
+                    loginView.show()
+                }
+                else {
+                    unLoginView.show()
+                }
+            }, "json")
+     </script>
+     </div> 
+    </div> 
+    <!--module:login end-->
+    <!--module:internalrecommend begin--> 
+    <div class="bs-module"> 
+     <div class="internalrecommend-default "> 
+      <div class="internaldiv"> 
+       <a class="internal" href="http://neitui.zhiye.com/51talk" target="_blank">内部推荐专区</a> 
+      </div> 
+     </div> 
+    </div> 
+    <!--module:internalrecommend end--> 
+   </div> 
+  </div> 
+  <div class="nav"> 
+   <!--module:menu begin--> 
+   <div class="bs-module"> 
+    <div class="menu-simple "> 
+     <ul id="portalmenu"> 
+      <li><a target="_self" href="index.html" class="">首页</a> </li> 
+      <li><a target="_self" href="jobs.html" class="">全部职位</a> </li> 
+      <li><a target="_self" href="social.html" class="">社会招聘</a> </li> 
+      <li><a target="_self" href="jobs.html" class="">校园招聘</a> </li> 
+      <li><a target="_self" href="jobs.html" class="">实习生招聘</a> </li> 
+      <li><a target="_self" href="about.html" class="">公司介绍</a> </li> 
+      <li><a target="_self" href="contact.html" class="current">联系我们</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <!--module:menu end--> 
+  </div> 
+  <div class="contain joblist clearfix"> 
+   <div class="containsidebar"> 
+    <div class="zhaopindongtai bodertop nofly minheight"> 
+     <!--module:menu begin--> 
+     <div class="bs-module"> 
+      <div class="menu-secondtemplate "> 
+       <div class="parttitleline"></div> 
+       <div class="titlelinks"> 
+        <ul> 
+         <ul class="secondarymenu"> 
+          <li class="secondCurrent"><a target="_self" href="contact.html">联系我们</a></li> 
+         </ul> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <!--module:menu end--> 
+    </div> 
+    <div class="zhaopindongtai bodertop"> 
+     <!--module:newslist begin--> 
+     <div class="bs-module"> 
+      <div class="newslist-newsimple "> 
+       <div class="parttitleline"></div> 
+       <div class="parttitle">
+        <span class="dongtaiico"></span>
+        <div class="wordtitle">
+         招聘动态
+        </div>
+       </div> 
+       <a href="news.html" class="morelinks">更多&gt;&gt;</a> 
+       <div class="dongtailinks"> 
+        <ul> 
+         <li><a href="news_detail.html?110000085" title="51Talk最嗨实习岗来啦~快来一起嗨" target="_blank">51Talk最嗨实习岗来...</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <!--module:newslist end--> 
+    </div> 
+   </div> 
+   <div class="zhiweisousuo bodertop selectmod zx_aboutus"> 
+    <div class="parttitleline"></div> 
+    <div class="parttitle">
+     <span class="dongtaiico"></span>
+     <div class="wordtitle">
+      联系我们
+     </div>
+    </div> 
+    <div class="s_detail"> 
+     <div class="about adminarea" id="ctlArticleShow"> 
+      <p class="title f_18 f_c m_b10 unreset"><span style="font-size: medium;">联系方式</span></p> 
+      <p class="m_b30 unreset"><span style="font-size: medium;"><img src="images/map.jpg" alt="" /></span></p> 
+      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>1. 客服电话：</strong>4000-51-51-51 (09:00-22:30)</span></p> 
+      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>2. 公司电话：</strong>（北京）：010-56928909 （上海）021-31125901</span></p> 
+      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>3. 公司地址：</strong>（总部）北京市海淀区上地七街得实大厦6层南区 邮编：100085 （上海分公司）<span>上海市桂林路<span lang="EN-US">406</span>号华鑫中心<span lang="EN-US">1</span>号楼<span lang="EN-US">6</span>楼</span>&nbsp;</span></p> 
+      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>4. 官方微博：</strong>@51Talk无忧英语招聘（新浪微博）</span></p> 
+      <p class="m_b10 unreset"><span style="font-size: medium;"><strong>5. 官方微信：</strong>51Talk无忧英语招聘/zhaopin51talk</span></p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer">
+   <span>&copy;2015&nbsp;&nbsp;51talk&nbsp;&nbsp;京ICP备XXX号 京公网安备XXX号 &nbsp;Powered by&nbsp;<a href="http://www.beisen.com" class="footerlogo" target="_blank"></a></span>
+  </div>  
+  <script type="text/javascript">
+        require([
+            vstr('${st}/${version}/cmsportal/skin/js/baiduStatistics.js')
+
+		]);
+    </script>
+  <script type="text/javascript">
+    $(function(){
+    _splash('zhiye_contentpage',0,104003,'new.zhiye.com');
+    });
+    </script>
+ </body>
+</html>

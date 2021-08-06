@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/myfocus-2.0.4.min.js"></script>
+<script src="js/jquery-1.7.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	var left = $("#left");
+	var right = $("#right");
+	var obj = $(".subBox ul");
+	var w = obj.find("li").innerWidth();
+	
+	left.click(function(){
+		obj.find("li:last").prependTo(obj);
+		obj.css("margin-left",-w);
+		obj.animate({"margin-left": 0});
+	});
+	
+	right.click(function(){
+		obj.animate({"margin-left": -w},function(){
+			obj.find("li:first").appendTo(obj);
+			obj.css("margin-left","0");
+		});
+	});
+	
+	var moving = setInterval(function(){right.click()},3000);
+	
+	obj.hover(function(){
+		clearInterval(moving);
+	},function(){
+		moving = setInterval(function(){right.click()},3000);
+	})
+	
+});
+</script>
+<script type="text/javascript">
+//设置
+myFocus.set({
+	id:'myFocus',//ID
+	pattern:'mF_expo2010'//风格
+});
+</script>
+<!--[if lte IE 6]>
+  <style type="text/css">
+    body { behavior:url("csshover.htc"); }
+  </style>
+<![endif]-->
+</head>
+<body>
+<div id="header">
+  <div class="top">
+    <div class="logo"><a href="#" title="LOGO"><img src="images/main_02.jpg" /></a></div>
+    <div class="tel">TEL:XXX</div>
+  </div>
+  <div class="nav">
+    <div class="nav_01">
+      <UL>
+        <LI><a href="#" id="li">网站首页</a></LI>
+        <LI><a href="#">关于我们</a></LI>
+        <LI><a href="#">新闻动态</a></LI>
+        <LI><a href="#">主营项目</a></LI>
+        <LI><a href="#">设备展示</a></LI>
+        <LI><a href="#">合作伙伴</a></LI>
+        <LI><a href="#">人才招聘</a></LI>
+        <LI><a href="#">给我留言</a></LI>
+        <LI><a href="#">联系我们</a></LI>
+      </UL>
+    </div>
+  </div>
+</div>
+<div id="banner">
+  <div id="myFocus"><!--焦点图盒子-->
+    <div class="pic"><!--图片列表-->
+      <ul>
+        <li><img src="images/main_05.jpg" /></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="content_bg"><!-- 公告 -->
+  <div id="content">
+    <div class="hot"><a href="#">新闻列表新闻列表新闻列表新闻列表</a></div>
+    <div id="search_box">
+      <form id="search_form" method="post" action="#">
+        <input type="text" id="s" value="请输入关键字" class="swap_value" />
+        <input type="image" src="images/main_06_03.jpg" id="go" alt="Search" title="Search" />
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="content"><!-- 子页样式 -->
+  <div class="zy_main">
+      <div class="zy_left">
+        <div class="left_bt"><B>ABOUT</B>关于我们</div>
+        <div class="left_nei">
+          <UL>
+            <LI><a href="#" id="li_01">公司简介</a></LI>
+            <LI><a href="#">企业荣誉</a></LI>
+            <LI><a href="#">总裁致辞</a></LI>
+            <LI><a href="#">企业文化</a></LI>
+          </UL>
+        </div>
+        <div class="left_tel">
+          服务热线:<B>021-78956223</B>
+        </div>
+      </div>
+      <div class="zy_right">
+        <div class="right_bt"><B>公司简介</B><span>当前所在位置：<a href="#">网站首页</a>><a href="#">关于我们</a>><a href="#">公司简介</a></span></div>
+        <div class="right_nei"><!-- 新闻 内容页 -->
+      <div class="tite">隔热断桥铝门窗流行 逐步走俏国内市场</div>
+      <div class="time"><i>发布者：admin</i><i>发布日期：2012-12-02 14:22</i><i>点击：38次</i></div>
+      <div class="new01_nei">
+        <p>继塑钢门窗、铝合金门窗之后，断桥铝门窗正成为国内新型门窗的代名词。目前，断桥铝塑复合门窗采用隔热铝型材，不仅外形美观且具有重量轻、稳定性强、耐腐蚀、可塑性好、防雷电等多重优点，而且还是当今国际上流行的绿色产品，并逐步走俏于国内市场。</p>
+        <P>什么是隔热断桥铝门窗及期产品性能介绍：</P>
+        <P>断桥铝门窗，它还有一个比较专业性的名字——铝塑复合门窗。</P>
+        <P>隔热断桥铝合金门窗的突出优点是刚性好，超强硬度、防火性好，保温隔热性能极佳、高强度，采光面积大，耐大气腐蚀性，综合性能优秀，使用寿命长，装饰效果好，使用高档的断桥隔热型材铝合金门窗，是高档建筑用窗、中档家居装修的首选产品。</P>
+        <P> 断桥铝门窗水密性、气密性良好，均达到了国家A1类窗标准，它的热传导系数K值为3W/m2？K以下，比普通门窗热量散失减少一半，降低取暖费用30%左右，隔声量达29分贝以上。断桥铝门窗采用隔热断桥铝型材和中空玻璃作为主要结构，具有隔音、节能、防尘、防噪、防水等功能。</P>
+        <P>下面就隔热断桥铝门窗的性能和优点列出以下几点浅见：性能</P>
+        <P>1、防火性好：铝合金为金属材料，因此，它不易燃烧。</P>
+        <P>2、防撬防盗性能好：铝塑复合窗配置高级装饰锁及优良的五金配件（如平开上悬五金件），使盗贼行窃亦难以下手。</P>
+        <P>3、耐冲击：由于铝塑复合型材外表面为铝合金材料，超强硬度，刚性好，因此它比塑钢窗型材的耐冲击性强大得多。</P>
+        <P>4、颜色多种多样：可供客户选择的自由空间很大。</P>
+        <P>5、免去维护的麻烦：铝塑复合型材不易受酸碱侵蚀，使用断桥铝门窗不会变黄褪色，几乎不必保养。</P>
+        <P>6、它具有很好的密封性能，真正做到了冬暖夏凉。</P>
+      </div>
+      <div class="time"> <span style="float:left; text-align:left;">上一篇：<a href="#">“十二五”期间上海将杜绝使用玻璃幕墙</a></span> <span style="float:right; text-align:right;">下一篇：<i>没有了！</i></span> </div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+    </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+</div>
+<div id="content_bg"><!-- 尾部 -->
+  <div id="content">
+    <div class="footer">
+      地址：XXX 电话：XXX <br />Copyright?2020 All Right Reserved
+    </div>
+  </div>
+</div>
+</body>
+</html>

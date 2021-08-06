@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+<!-- 字符编码 -->
+<meta charset="utf-8">
+<!-- IE兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!-- 采用高速模式渲染（目前仅有360支持） -->
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="">
+<meta name="description" content="如何科学理性挑选补习机构？看师资？看教研？看过往成绩单？家长常见的疑问和困惑在这里能得到全面的解答。">
+<meta name="baidu-site-verification" content="wcMMFTPk07" />
+<title>补习答疑 -挑出最好的补习机构-XXX教育</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<!--   <link rel="stylesheet" href="css/bootstrap.css"> -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/teachers.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery-1.7.2.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+<!--  <script type="text/javascript" src="js/hotspot.min.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!-- 浏览器判断 -->
+<!--[if lt IE 7]>
+    <script>window.location.href='./error.html'</script>
+    <![endif]-->
+<script src="js/jquery.lazyload.js"></script>
+
+<!--[if !IE]><!-->
+<script src="js/haifengLibRoll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script>
+        $(function(){
+            window.scrollReveal = new scrollReveal({ reset: true, move: '50px'});
+        })
+    </script> -->
+<!--<![endif]-->
+<script>
+        $(function(){
+            $("img.lazy").lazyload({
+                effect : "fadeIn"
+            });
+
+        })
+
+    </script>
+<script>
+        function test(){
+            $("#LXB_CONTAINER" ).hide();
+        }
+        $(function(){
+            setInterval(test, 100 )
+
+        })
+
+    </script><script type="text/javascript">
+     $(function(){
+         $(".nav_menu .nav_menu_item").hover(function(){
+            $(this).find('ul').show();
+          },function(){
+            $(this).children('ul').stop().slideUp('fast');
+          } );
+        /*$(".nav_menu .nav_menu_item").hover(function(){
+            $(this).children('ul').stop().slideDown('fast');
+            console.info('down')
+          },function(){
+              $(this).children('ul').stop().slideUp('fast');
+            console.info('up')
+          } );*/
+            //防止有些浏览器出现异常
+           /* $(".nav").mouseleave(function(){
+              $(".nav_menu" ).children('ul').stop().slideToggle('fast');
+          } )
+            $(".nav_submenu").mouseleave(function(){
+                $(".nav_menu" ).children('ul').stop().slideUp('fast');
+            } ) */
+
+        var select_title=location.pathname+location.search;
+         console.info(select_title)
+        $(".nav_menu_item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    //console.info(href)
+                    if(select_title.indexOf(href)>0){
+                        $(this ).parents('li' ).find('.no_is_sub').addClass('active');
+                    }
+                }
+            })
+        })
+        $(".nav_submenu-item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    if(select_title.indexOf(href)>0){
+                        $(this ).addClass('active');
+                    }
+                }
+            })
+        })
+     })
+</script>
+    <script>
+    /*广告系统参数传递*/
+    function GetUrlArgsObj() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var args=GetUrlArgsObj();
+    if(typeof (args.adid)=="undefined"){
+        args.adid="";
+    }
+    var adid=args.adid;
+    $(function(){
+        if(adid){
+            $('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if(typeof (href)!="undefined"&&!href.match(/\#/)&&href.indexOf('javascript')==-1){
+
+                    console.info(href)
+                    if(!href.match(/\?/)){
+                        adid='?adid='+args.adid;
+                    }else{
+                        adid='&adid='+args.adid;
+                    }
+                    if(href.indexOf("//")!=-1){
+                        $(this ).attr('href',href+adid);
+                    }else{
+                        var cur_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        $(this ).attr('href',cur_protocol+ location.hostname +'/' + href+adid);
+                    }
+                }
+            });
+        }
+
+
+        $("#lunbo li" ).click(function(){
+            var href=$(this ).attr('href');
+            window.open(href+adid);
+        })
+
+    })
+
+    function jumpUrl( link ){
+        var jump_link = link;
+        if(typeof (args.adid) != "undefined"&&args.adid ){
+            if(jump_link.match(/\?/)){
+                jump_link = link+'#adid='+args.adid;
+            }else{
+                jump_link = link+'?adid='+args.adid;
+            }
+
+        }
+        window.open(jump_link);
+    }
+</script>
+    <script type="text/javascript">window._pt_lt = new Date().getTime();</script>
+</head>
+<script type="text/javascript">
+  window._pt_sp_2 = [];
+  _pt_sp_2.push('setAccount,68d72831');
+  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  
+  (function() {
+    var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+    atag.src = _protocol + 'js.ptengine.cn/js/pta.js';
+    var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+    stag.src = _protocol + 'js.ptengine.cn/js/pts.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+  })();
+</script>
+<body >
+<!--header导航开始-->
+<div class="header">
+  <div class="container clearfix">
+    <div class="header_nav"> <a class="logo fl" href="#"> <img src="images/logo.png" alt=""> </a>
+      <ul class="nav_menu ">
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">首页</a> </li>
+        <li class="nav_menu_item "> <a class="no_is_sub">课程介绍</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item "><a >学科辅导</a></li>
+            <li class="nav_submenu-item "><a onclick="#">自主招生辅导</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item"> <a class="no_is_sub" href="#">XXX优势</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a href="#">教研质量</a></li>
+            <li class="nav_submenu-item"><a href="#">师资力量</a> </li>
+            <li class="nav_submenu-item"><a onclick="#">学员成绩</a> </li>
+            <li class="nav_submenu-item"><a href="#">XXXQ&amp;A</a> </li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">名师公开课 </a>
+          <ul class="nav_submenu " style="display: none;">
+            <li class="nav_submenu-item"><a href="#">公开课课表页面</a> </li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" onclick="#">自测工具 </a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a onclick="#">志愿填报</a></li>
+            <li class="nav_submenu-item"><a onclick="#">专业倾向测试</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">在线学习中心</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a href="#">平台简介</a></li>
+            <li class="nav_submenu-item"><a href="#">如何上课</a> </li>
+            <li class="nav_submenu-item"><a onclick="#">选课中心</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">客户端下载 </a> </li>
+      </ul>
+      <div class="header_tel fr"> <img src="images/phone.png" alt="" class="fl phone_img"> <a>XXX</a> </div>
+    </div>
+  </div>
+</div>
+<!--header导航结束-->
+<link rel="stylesheet" href="css/course.css">
+<script src="js/jquery.scrollfollow.js"></script> 
+<script>
+    $(function() {
+        $(window).scroll( function() {
+            var body_offset_top=$('html,body' ).offset().top;
+            if(body_offset_top<=-460){
+                $("#left-fixed" ).css({position:'fixed',top:'100px'})
+            }else{
+                $("#left-fixed" ).css({position:'relative',top:0} )
+            }
+        } );
+
+        $("#left-fixed [name=bb]" ).click(function(){
+            $(this ).addClass('currt' ).parents('li').siblings().find('a').removeClass('currt' )
+        }).each(function(i){
+            $(this ).click(function(){
+                var test=$(".sidebar-mian" ).eq(i ).offset().top;
+                $('html,body' ).stop().animate({scrollTop:test-90},500);
+                console.info(test);
+            })
+        } )
+
+    });
+</script> 
+<!-- 轮播图片 专区 -->
+<div class="clearfix banner" > <img src="images/Tutorialad.jpg" alt="XXX师资名校保证_清华北大复旦交大一对一学科教学辅导_XXX教育官网" title="XXX师资名校保证_清华北大复旦交大一对一学科教学辅导_XXX教育官网" /> </div>
+<!-- 第二屏：招牌一：学科培优  开始 -->
+<div class="featurette " >
+    <div class="sidebar-content">
+        <div id="left-fixed" class="sidebar_a fl" style="position: relative;">
+            <ul>
+                <li class="title"> <a  > XXXQ&A</a> </li>
+                <li> <a  name="bb">品牌优势</a> </li>
+                <hr/>
+                <li> <a  name="bb">师资力量</a> </li>
+                <hr/>
+                <li> <a  name="bb">以往成绩</a> </li>
+                <hr/>
+                <li> <a  name="bb">上课流程</a> </li>
+            </ul>
+        </div>
+        <div class="sidebar_b fr">
+            <div class="sidebar-mian hf-updown">
+                <h1 class="h1"><a name="aa">品牌优势</a></h1>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育是什么样的机构？</h3>
+                        <p><img src="images/QA02.png" alt="" /> XXX教育是一家围绕中小学生课外辅导提供在线实时一对一式的平台化服务的教育机构。XXX学习中心平台的筹建并在服务提供中，依靠标准化的教研内容和教学流程，以及个性化的在线一对一教学模式发挥优势。 </p>
+                        <hr/>
+                    </li>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />孩子在许多教育机构都补过，怎么还是没提高？</h3>
+                        <p><img src="images/QA02.png" alt="" /> 目前的中小学生课外辅导存在着学生学习相对被动（课内问题不及时解决、课外补习加重负担）、老师教学缺乏针对性（大班补习老师统一发教材，“一刀切”）、辅导效果很难显性量化（考前考后提分效果不明显）的问题。针对这些问题，XXX教育从课程设计、教研内容、教学流程到技术研发力求为学生提供个性化的学习能力提升课程。 </p>
+                        <hr/>
+                    </li>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育与其他教育机构相比的优势是什么？</h3>
+                        <p> <img src="images/QA02.png" alt="" /> XXX教育在教研内容、教学流程、教学系统三个方面拥有显著优势：<br/>
+                            1)XXX教育教研资深团队将教学知识点切细到不可再分的原子级大小，再针对教学具体需要进行组合、进行教学。这样做既能精准定位学生问题并组织针对性教学，同时，又能细化、量化教学结果；对于不同考纲之间的差异老师也能够准确把握，从而更好实现跨区域教学。 <br/>
+                            2） 而线上一对一教学模式而言，XXX教育的优势在于利用互联网教学节约通勤成本，利用一对一个性化的形式，以及利用教学中积累下来的大数据分析提高教学安排上的针对性， 这些都能大幅提升教学效率。 <br/>
+                            3） XXX教育的第三大优势是自行研发的教学系统。系统封装嵌入了所有标准化的教研切片材料数据库，并且以在线一对一模式为主预设了标准教学流程，为教与学提供了强大支持。 </p>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-mian hf-updown">
+                <h1 class="h1"><a name="bb">师资力量</a></h1>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育的老师都来自哪里？能够保证上课质量和效果吗？</h3>
+                        <p><img src="images/QA02.png" alt="" /> XXX教育整个学科讲师团队具有极强的学历背景和丰富的教学经验。我们的老师全部来自复旦、交大、上外、华师大等名校，九成以上的老师为研究生毕业，这些名校高材生在一对一授课中注重培养学生的学科兴趣，用自己的成功经验给学生最实际的指导。教学经验方面，XXX的老师本身对各地高考、自招考试方向和重难点都有很深入的研究，且所有老师都带过高三学生。同时，XXX讲师培训涵盖了教学系统培训、授课技巧培训、岗位制度培训、学科教学培训、试讲培训等三轮培训，最终各项培训考核均通过者方能上岗，我们重视老师的教学水平、自我提升和自我完善，根据老师的辅导效果我们实行淘汰制度。 </p>
+                        <hr/>
+                    </li>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育是上海的教育机构，能否适应我们来自其他省份的学生？</h3>
+                        <p><img src="images/QA02.png" alt="" /> 目前XXX教研团队已经完成所有教材覆盖了初高中阶段全国范围全十门学科共计4500多个知识切片化讲义编写工作，所有讲义中包含了近10万道精选配套的习题和详解。不论学员来自我国什么地区、处于什么学习阶段都能够通过我们的精细化教研工作和个性化的授课方式给予每个学生最有针对性的课外辅导。针对各省市高考各学科教研组每月、每周都会进行不同形式的教研会议，教学内容将顺应当下阶段各个地区的重点变化而进行调整。 </p>
+                        <hr/>
+                    </li>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育如何保证上课效果？</h3>
+                        <p> <img src="images/QA02.png" alt="" /> XXX教育整个教学团队从多个方面把控教学质量、提升上课效果与课后监督，帮助学生在短时间内获得成绩提升。：<br/>
+                            1） 老师将根据学生当下学习情况，制定详细的教学计划并实时按照学生对每个知识点的掌握情况进行实时调整，始终保证上课内容是学生最需要的内容、解决最关键的问题。 <br/>
+                            2） 上课过程中，老师安排按照布鲁姆教育目标分类原则即记忆、理解、应用、分析、评价、创造的学习顺序安排教学内容，让学生在每节课中理解并运用学科知识与解题方法。 <br/>
+                            3） 课外，每位学生的助教老师将对学生的作业完成情况、学习情绪管理、近期考试情况做实时跟踪，发现问题及时与老师、家长沟通从而及时帮助学生解决学习困难，提供完善的教学服务体系。 </p>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-mian hf-updown">
+                <h1 class="h1"><a name="cc">以往成绩</a></h1>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育办学成绩如何？</h3>
+                        <p><img src="images/QA02.png" alt="" /> 办学五年来，XXX教育累计帮助超过50000名学员完成名校升学梦想，其中每年限量帮助150名申请人晋级世界排名TOP100的国际名校。2015届高考，共有1656名XXX学员晋级国内名校，其中1022人获得“中国常青藤”C9大学联盟的预录取资格，158人并欧美顶尖院校录取并获得奖学金。 </p>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-mian hf-updown">
+                <h1 class="h1"><a name="dd">上课流程</a></h1>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />在XXX教育报名上课前有哪些步骤？</h3>
+                        <p><img src="images/QA02.png" alt="" /> 学生正式上课前将经历基本信息沟通、试听课、教学课时沟通、首课体验和正式上课若干阶段。每节课正式报名前，学生均享有试听课程的机会，专业课程顾问将协助学生从高中阶段所有知识点中挑选出2-4个重要性高、阶段性强的知识点，老师由此进行备课。试听课中，讲师将利用选取主题展现一对一授课过程和个人授课风格，课后依据学生情况老师将决定后续课程的主要内容、学习进度、教学难度等。正式上课前的整个过程体现的一对一辅导与学校教学和大班教学存在本质的区别——“私人定制”、“对症下药”。 </p>
+                        <hr/>
+                    </li>
+                    <li>
+                        <h3><img src="images/QA02.jpg" alt="" />XXX教育线上课程在什么平台上课？</h3>
+                        <p><img src="images/QA02.png" alt="" /> [系统上课时老师+学生界面图片]
+                            XXX教育的线上课程在独立研发的教学系统上进行。教学系统除了本身涵盖讲义呈现、板书圈画、师生聊天、图片传送、音视频交互等功能以外，对包括课程讲义、手写板书以及教学录音等在内的所有教学过程中的数据都可以进行完整记录。一方面方便老师、学生、家长和XXX课程质量监督团队对教学过程进行随时可视化的复盘分析，提升授课与学习效果；另一方面也实现了大数据对教、学、研等各环节的有效支持，比如学生可以在考前使用错题本回顾错题，并且同时可以完成推荐的相似相近标签、其他易错题的练习等。 </p>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 第二屏：招牌一：学科培优  结束 -->
+<div class="page08_mian">
+  <div class="foot_box container ">
+    <form class="form" action=" " method="post" id="tmsLandingForm">
+      <div class="ui-form-item title "> 立即预约 </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input type="text" class="ui-input" name='studentName'placeholder="请填写您的姓名" id="name">
+        </div>
+        <div class="ui-form-explain"> 请输入姓名 </div>
+      </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input value="" class="ui-input" type="text" placeholder="请填写您的手机号" id="phone" name='firstPhone' maxlength="11">
+        </div>
+        <div class="ui-form-explain "> 请输入手机号 </div>
+      </div>
+      <input type='hidden' name='formId' value='6'>
+      <div class="ui-form-item"> <a class="ui-button" id='tmsLandingFormBtn'>开始预约</a> </div>
+    </form>
+  </div>
+</div>
+<!-- 活动页面 -->
+<div class="reserve">
+  <div class="reserve_box container ">
+    <form class="reserve_form" action=" " method="post" id="tmsLandingForm">
+      <div class="zero"> <a onclick=" "> <img src="images/fankui.png"> </a> </div>
+      <div id="wufeng">
+        <ul>
+          <li> <a > <span style="color:white">张*林妈妈今日电话助教：孩子最近厌学情绪严重，十一期间作业都没做，老师也批评了他。和孩子聊了XXX在线补习模式之后，他倒是觉得挺新奇的，也没排斥，试听下来他还挺满意，准备报课了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white"> 王*铮家长短信反馈：以前过十一，孩子要么玩不好，要么学不好。今年有了XXX在线平台，学习和出行两不误，他特别开心。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white">刘*焉妈妈来电：孩子最近学习状态特别好，有了XXX的错题本，她明显知道自己问题出在哪里了，这个势头很好，特意和老师说一声，借着这个势能再冲一冲。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+        </ul>
+      </div>
+      <div class="page-right fl"> <img src="images/miss.png"> <a target="_blank" style="cursor: pointer;"> <img src="images/gaokao3.png"> </a> </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.easie.js"></script> 
+<script type="text/javascript" src="js/wufeng.js"></script> 
+<script type="text/javascript">
+$(function(){
+    wufeng(90800);
+})
+</script> <script type='text/javascript'>
+$(function(){var adid = location.href.match(/adid=([a-zA-Z0-9]+)/);
+    var adidNo='';
+    if(adid && adid[1]) {
+        adidNo=adid[1];
+    }
+    var tmsLandingFormUrl = 'register?adidNo='+adidNo;
+    var oS=$('.ui-form-explain');
+    $('#tmsLandingFormBtn').click(function(){
+        var phone=$('#phone').val();
+        var name=$('#name').val();
+                if(!name||name==""){
+            oS[0].style.display="block";
+            return false;
+        }
+        if(!phone||phone==""){
+            oS[1].style.display="block";
+            return false;
+        }else if(phone!==""&&!/(^(13|14|15|17|18|)\d{9}$)/.test(phone)){
+            oS[1].style.display="block";
+            return false;
+        }
+    $('#phone').focus(function(){
+        $(oS[1]).hide();
+    });
+    $('#name').focus(function(){
+            $(oS[0]).hide();
+    });
+        $.ajax({
+            type : 'post',
+            data : $('#tmsLandingForm').serialize(),
+            url : tmsLandingFormUrl,dataType : 'jsonp',
+            jsonp: 'callbackparam',
+            success : function(json){if(json.error==1) {alert(json.msg);} else {location.href ='';
+                }}
+        });
+    });
+})
+</script> 
+<script>
+function bb() {
+    var body_height=$('body' ).height();
+    var window_height=$(window).height();
+        if ($(this).scrollTop() >=body_height-window_height-158) {
+                $(".reserve").css("position","relative");
+            }else{
+                $(".reserve").css("position","fixed");
+        }
+        }
+$(window).scroll(bb);
+bb();
+</script> 
+<!-- footer开始 --> 
+<!-- footer -->
+<div class="footer_pege">
+  <div class="container clearfix">
+    <div class="footer_main"> <a href="teachers.html" target="_blank">XXX师资</a>| <a href="research.html" target="_blank">XXX教研</a>| <a onclick=" )" target="_blank">学员成绩</a>| <a href="Online.html" target="_blank">学习中心</a>| <a href="cooperation.html" tppabs=" " target="_blank">商务合作</a>| <a href="joinUs.html" target="_blank">加入我们</a> </div>
+    <p> ©2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> 上XXX创信息咨询有限公司 <span class="icp_num">沪ICP备XXX号-8</span> </p>
+  </div>
+</div>
+<!--footer结束  --> 
+<!-- 侧边栏开始 --> 
+<script>
+    $(function(){
+        $("#go_top").click(function(){
+            $('html,body').animate({scrollTop:0},500);
+            return false;
+        });
+        $("#hangyeyanzheng").click(function(e){
+            e.preventDefault();
+            window.open('');
+        })
+        var _cur_host = window.location.host;
+        if( _cur_host.indexOf('yphen100.com')>0 ) $('.icp_num').text('沪ICP备XXX号-1');
+
+        if( _cur_host.indexOf('f100.net')>0 ) $('.icp_num').text('沪ICP备XXX号-3');
+    })
+</script> 
+<!--右侧贴边导航quick_links.js控制-->
+<div class="mui-mbar-tabs">
+  <div class="quick_link_mian">
+    <div class="quick_links_panel">
+      <div id="quick_links" class="quick_links">
+        <ul>
+          <li> <a class="history_list"><i class="view"></i></a>
+            <div class="mp_tooltip" style=" visibility:hidden;" onclick="window.open(' ')">
+              <p> 在线客服 </p>
+              <p class="p3" onclick="window.open(' ')"> (点击详情) </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li class="quick_toggle"> <a class="my_qlinks"><i class="setting"></i></a>
+            <div class="ibar_login_box status_login">
+              <div class="avatar_box">
+                <p> XXX微信 </p>
+                <p class="avatar_imgbox"> <img src="images/img_qrcode.png" alt=""> </p>
+              </div>
+              <i class="icon_arrow_white"></i> </div>
+          </li>
+  
+          <li> <a class="mpbtn_histroy"><i class="tel"></i></a>
+            <div class="mp_tooltip">
+              <p onclick="window.open(' ')"> XXX热线 </p>
+              <p class="p3"> XXX </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li id="go_top"> <a class="mpbtn_histroy"> <i class="tops"></i> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(".quick_links_panel li").mouseenter(function(){
+        $(this).children(".mp_tooltip").stop().animate({left:-130,queue:true});
+        $(this).children(".mp_tooltip").css("visibility","visible");
+        $(this).children(".ibar_login_box").css("display","block");
+    });
+    $(".quick_links_panel li").mouseleave(function(){
+        $(this).children(".mp_tooltip").css("visibility","hidden");
+        $(this).children(".mp_tooltip").stop().animate({left:-159,queue:true});
+        $(this).children(".ibar_login_box").css("display","none");
+    });
+    $(".quick_toggle").mouseover(function(){
+        $(this).children(".ibar_login_box").stop().animate({left:-160,queue:true});
+        $(this).children(".ibar_login_box").css("visibility","visible");
+        $(this).children(".avatar_box").css("display","block");
+    });
+    $(".quick_toggle ").mouseleave(function(){
+        $(this).children(".ibar_login_box").css("visibility","hidden");
+        $(this).children(".ibar_login_box").stop().animate({left:-180,queue:true});
+        $(this).children(".avatar_box").css("display","none");
+    });
+</script>
+</body>
+</html>

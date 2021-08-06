@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="utf-8">
+<title>贵州XXX装饰工程有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/ziy.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script><!-- 
+<script type="text/javascript" src="js/jquery1.42.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.source.js"></script>
+<script type="text/javascript" src="js/jquery.yx_rotaion.js"></script>
+
+ 
+</head>
+<body>
+<!--头部-->
+<div class="daoh">
+	<div class="daoh_z">
+		<div class="logo">
+			<a href="../"><img src="images/logo.png"></a>
+		</div>
+		<div class="nav">
+            <ul>
+                <li class="nav-item"><a href="index.html" target="_blank">网站首页</a></li>
+                <li class="nav-item"><a href="Aboutus.html" target="_blank">企业概况</a></li>
+                <li class="nav-item"><a href="#" target="_blank">网咖装修专家</a></li>
+                <li class="nav-item"><a href="Tuand.html" target="_blank">公司团队</a></li>
+                <li class="nav-item"><a href="Anli.html" target="_blank">工装案例</a></li> 
+                <li class="nav-item"><a href="news.html" target="_blank">公司新闻</a></li> 
+                <li class="nav-item cur"><a href="lianx_wom.html" target="_blank">联系我们</a></li>
+            </ul>
+            <div class="move-bg"></div>
+        </div>
+	</div>
+</div>
+
+<!--联系我们-->
+<div class="lianx_wom_beij">
+    <div class="wenz_biaot_1 wenz_biaot_2">
+        <h1>Contact us</h1>
+        <h2>联系我们</h2>
+    </div>
+    <div class="ditu_beij">
+        <div class="ditu">
+            
+            <!--引用百度地图API-->
+            <style type="text/css">
+                html,body{margin:0;padding:0;}
+                .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+                .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+            </style>
+            <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+            </head>
+
+            <body>
+              <!--百度地图容器-->
+              <div style="width:560px;height:420px;border:#ccc solid 1px;" id="dituContent"></div>
+            </body>
+            <script type="text/javascript">
+                //创建和初始化地图函数：
+                function initMap(){
+                    createMap();//创建地图
+                    setMapEvent();//设置地图事件
+                    addMapControl();//向地图添加控件
+                    addMarker();//向地图中添加marker
+                }
+                
+                //创建地图函数：
+                function createMap(){
+                    var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                    var point = new BMap.Point(106.691568,26.573544);//定义一个中心点坐标
+                    map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+                    window.map = map;//将map变量存储在全局
+                }
+                
+                //地图事件设置函数：
+                function setMapEvent(){
+                    map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                    map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                    map.enableKeyboard();//启用键盘上下左右键移动地图
+                }
+                
+                //地图控件添加函数：
+                function addMapControl(){
+                    //向地图中添加缩放控件
+                var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                map.addControl(ctrl_nav);
+                    //向地图中添加缩略图控件
+                var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+                map.addControl(ctrl_ove);
+                    //向地图中添加比例尺控件
+                var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                map.addControl(ctrl_sca);
+                }
+                
+                //标注点数组
+                var markerArr = [{title:"贵州XXX装饰工程有限公司",content:"电话：0857-85989458&nbsp;&nbsp;&nbsp;138-0948-4222",point:"106.69133|26.574004",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+                     ];
+                //创建marker
+                function addMarker(){
+                    for(var i=0;i<markerArr.length;i++){
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        label.setStyle({
+                                    borderColor:"#808080",
+                                    color:"#333",
+                                    cursor:"pointer"
+                        });
+                        
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                this.openInfoWindow(_iw);
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                    }
+                }
+                //创建InfoWindow
+                function createInfoWindow(i){
+                    var json = markerArr[i];
+                    var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+                    return iw;
+                }
+                //创建一个Icon
+                function createIcon(json){
+                    var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+                    return icon;
+                }
+                
+                initMap();//创建和初始化地图
+            </script>
+
+        </div>
+        <div class="liuyan">
+            <h2>装饰&创意空间设计</h2>
+            <h1>贵州XXX装饰工程有限公司</h1>
+            <h3>
+                <p>服务热线：400-6677-937</p>
+                <p>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：XXX.com</p>
+                <p>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：XXX</p>
+                <p>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：XXX</p>
+            </h3>
+            <div class="liuy_biaod">
+                <input type="text" placeholder="姓名" />
+                <input type="text" placeholder="手机号" />
+                <textarea placeholder="留言内容"></textarea>
+                <input class="yanzm" type="text" placeholder="验证码" />
+                <img src="#" width="64" height="27" class="yzmimg" />
+                <input class="tij_liuyan" type="submit" value="提交留言"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部开始-->
+
+<div class="jis_zhic">
+    <p>Copyright © <span>2017XXX装饰</span>  沪ICP备XXX号-6    技术支持：XXX</p>
+</div>
+
+</body>
+</html>
+

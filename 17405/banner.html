@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/banner.css"/>
+<title>海科_banner</title>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.mScroll.js"></script>
+</head>
+
+<body>
+<script src="js/jquery.mScroll.js"></script>
+<div id="content" class="home">
+  <div class="widget-area focus">
+    <div class="frame">
+      <div class="child" ><img src="images/ban01.jpg" /></div>
+      <div class="child" ><img src="images/ban02.jpg" /></div>
+      <div class="child" ><img src="images/ban03.jpg" /></div>
+    </div>
+    <div class="boxnav">
+      <div class="nav">
+        <div class="l"></div>
+        <div class="r"></div>
+        <div class="bg"> <a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a> </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+$('.index-bannar').css('background','url() 50% 0% no-repeat') ;
+</script></div>
+  <script>
+        $('.home .focus .frame').mScroll({
+            auto : 1,                   //自动开始
+            direction : "h",                 //滚动方向,h横向,v纵向
+            dtype : "left",              //正反方向
+            isfocus : 0,                   //是否作为焦点图
+            minsize : 1,                   //最小数量
+            speed : 500,                 //滚动速度
+            easing : "",                  //缓冲类型
+            delay : 5000,                //自动滚动间隔
+            nav : ".home .focus .nav a",                //导航按钮
+            scrollnav : 0,                   //导航滚动
+            nav_direction : "h",                 //导航方向,h横向,v纵向
+            prev : null,      //前一个
+            next : null,      //后一个
+            index : null,     //当前序号
+            count : null,   //总数
+            title : null,  //标题
+            arrow : 1,                   //是否反转
+            cycle : 1,                   //是否循环
+            mousestop : 1,                   //鼠标划入停止
+            mousewheel : 0                    //开启滚轮事件
+        });
+        $(function(){
+            $(window).on('load',function(){
+                $('.bannar .flash').fadeIn(1000);
+            });
+
+            cRotatel();
+            function cRotatel(){
+                var rotateN=0,raf=0;
+                var rotateArr=[90,248,307];
+                function rotatel(){
+                    var n=0;
+                    if(rotateN>360){
+                        rotateN=0;
+                    }
+                    rotateN++;
+                    $('.block1 .linearr').css({ rotate: rotateN});
+                    for(n in rotateArr){
+                        if(rotateN==rotateArr[n]){
+                            $('.block1 .box a').eq(n).addClass('cur').siblings().removeClass('cur');
+                        }
+                    }
+                }
+
+                function infi(){
+                    (function fun(){
+                        rotatel();
+                        raf=requestAnimationFrame(fun);
+                    }());
+                }
+
+                infi();
+
+                $('.block1 .box a').hover(function(){
+                    cancelAnimationFrame(raf);
+                    rotateN=rotateArr[$(this).index()];
+                    $('.block1 .linearr').transition({ rotate: rotateN}, 500, 'linear');
+                    $('.block1 .box a').removeClass('cur');
+                },function(){
+                    infi();
+                });
+            };
+
+            $('.transition').parent().each(function(index, element) {
+                $(this).find('.transition').each(function(index, element) {
+                    transformFix($(this),'transition-delay',index*0.2+'s',false);
+                });
+            });
+
+            var obj=['http://www.haikegroup.com/.block4 .list'];
+            $(window).on('scroll',function(){
+                if(scrollPos($(obj[0]),-100) && !$(obj[0]).hasClass('s')){
+                    $(obj[0]).addClass('s');
+                    cline();
+                    $(obj[0]).find('li').each(function(index, element) {
+                        var $this=$(this);
+                        $this.animateCss('bounce',function(){
+                            $this.css('opacity',1);
+                        });
+                    });
+                };
+
+            });
+
+            var x0,y0;
+            $(".block3").mouseenter(function(event){
+                x0=event.clientX;
+                y0=event.clientY;
+            });
+
+            $(".block3").mousemove(function(event){
+                var x1=event.clientX;
+                var y1=event.clientY;
+                $(".video .piece").each(function(index, element) {
+                    //$(this).css({"transform":"translate("+((x1-x0)*-0.1)+"px,"+((y1-y0)*-0.1)+"px)","-webkit-transform":"translate("+((x1-x0)*-0.1)+"px,"+((y1-y0)*-0.1)+"px)"});
+                    transformFix($(this),'translate('+(((x1-x0)*-0.1)/(index+1))+'px,'+(((y1-y0)*-0.1)/(index+1))+'px)',true);
+                });
+            });
+
+            function cline(){
+                var elm= document.getElementById("line");
+                var paper = Raphael(elm);
+                var line = paper.path("M89, 349L211, 89L421, 247L335,543L659, 457L753,191L992, 446L1141, 229").attr({
+                    stroke: '#fff',
+                    'stroke-width': 2,
+                    'stroke-dasharray': '-'
+                });
+                var i=0;
+                $('path').attr('stroke-dasharray','0,2000');
+                var ref;
+                (function fun(){
+                    if(i<5000){
+                        i+=20;
+                    }else{
+                        cancelAnimationFrame(raf);
+                    }
+                    $('path').attr('stroke-dasharray',i+',2000');
+                    raf=requestAnimationFrame(fun);
+                }());
+            }
+        });
+    </script> 
+</div>
+</body>
+</html>

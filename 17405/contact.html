@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="济南XXX环保" />
+<meta name="description" content="济南XXX环保" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="author" content="nissachang">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>济南XXX环保_新闻列表页面</title>
+<link rel="stylesheet" type="text/css" href="css/xinen.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.nicescroll.min.js" ></script>
+<script src="js/jquery.transit.min.js" ></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.carouFredSel.js"></script>
+<script src="js/xinen.js"></script>
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+
+<body>
+<!--header start-->
+<div id="header"> <a href="index.html" class="logo"><img src="images/logo.png" /></a>
+  <div  class="widget-area nav clear">
+    <ul class="clear">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">产品中心</a>
+        <div class="subnav"> <a href="products.html">盘类</a><a href="products.html">碗类</a><a href="products.html">杯类</a>
+          <a href="products.html">托盘</a><a href="products.html">餐盒</a> </div>
+      </li>
+      <li><a href="news_list.html">资质认证</a>
+        <div class="subnav"> <a href="">证书</a><a href="">质检</a></div>
+      </li>
+      <li><a href="about.html">关于我们</a>
+        <div class="subnav"> <a href="about.html">公司简介</a><a href="cluture.html">企业文化</a><a href="">厂容厂貌</a><a href="">新闻中心</a> </div>
+      </li>
+      <li><a href="contact.html">联系我们</a> </li>
+
+    </ul>
+    <div class="wbsearch"> <a class="wb" href="index.htm">XXX</a> <a class="wx" href="index.htm">EN</a> </div>
+  </div>
+</div>
+<!--header end-->
+<div class="contact-ban" style=" background:url(images/contact_ban.jpg) no-repeat center top;"></div>
+<div class="caption2">
+  <h2>新闻中心</h2>
+  <a href="#">首页</a><a href="#">> 关于我们</a><a href="#">> 新闻中心</a><span>当前位置：</span> </div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4 "></script>
+<div id="map"> </div>
+<div class="lx_info">
+  <h3>济南XXX环保科技股份有限公司</h3>
+  <ul class="lx_ulinfo">
+    <li><em><img src="images/add.gif" width="50" height="36" alt=""/></em><span>XXX（工厂地址）</span></li>
+    <li><em><img src="images/tel.gif" width="50" height="36" alt=""/></em><span>XXX    XXX</span></li>
+    <li><em><img src="images/emaill.gif" width="50" height="36" alt=""/></em><span>XXX</span></li>
+    <li><em><img src="images/tel2.gif" width="50" height="36" alt=""/></em><span>0531-XXX </span></li>
+  </ul>
+</div>
+<div class="lx_form">
+  <h3>在线留言</h3>
+  <ul class="form_mes">
+    <li>
+      <label> 公司名称： </label>
+      <input type="text"  require="true" datatype="require" msg="公司名称不能为空" msgid="msgqq" value="请填写您的公司名称" onfocus="if(this.value == '请填写您的公司名称')this.value = ''" onblur="if(this.value == '')this.value='请填写您的公司名称'" />
+    </li>
+    <li>
+      <label> 姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名： </label>
+      <input type="text"  require="true" datatype="require" msg="姓名不能为空" msgid="msgqq" value="请填写您的姓名" onfocus="if(this.value == '请填写您的姓名')this.value = ''" onblur="if(this.value == '')this.value='请填写您的姓名'" />
+    </li>
+    <li>
+      <label> 电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话： </label>
+     <input type="text"  require="true" datatype="require" msg="电话不能为空" msgid="msgqq" value="请填写您的电话" onfocus="if(this.value == '请填写您的电话')this.value = ''" onblur="if(this.value == '')this.value='请填写您的电话'" />
+    </li>
+    <li>
+      <label> 邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱： </label>
+      <input type="text"  require="true" datatype="require" msg="邮箱不能为空" msgid="msgqq" value="请填写您的邮箱" onfocus="if(this.value == '请填写您的邮箱')this.value = ''" onblur="if(this.value == '')this.value='请填写您的邮箱'" />
+    </li>
+    <li>
+      <label> 留言内容： </label>
+       <textarea require="true" datatype="require" msg="留言内容不能为空" msgid="msgcontent" style="border:none;"></textarea>
+    </li>
+    <li class="btn_from">
+     <input type="reset" value="重置" class="reset" />
+       <input type="submit" value="提交" class="submit" />
+                 
+                  <input type="hidden" name="dosubmit" value="1" />
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(116.988951,36.655629),19);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"XXXC座11楼",title:"济南XXX环保科技股份有限公司",imageOffset: {width:-46,height:-21},position:{lat:36.655401,lng:116.988546}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("images/mapicon.png",new BMap.Size(25,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+    }
+    var map;
+      initMap();
+  </script>
+<div class="footer-nav">
+  <div class="footer-bonav">
+    <dl>
+      <dt><a href="#">产品中心</a></dt>
+      <dd><a href="#">盘类</a></dd>
+      <dd><a href="#">碗类</a></dd>
+      <dd><a href="#">杯类</a></dd>
+      <dd><a href="#">托盘</a></dd>
+      <dd><a href="#">餐盒</a></dd>
+      <dd><a href="#">其他</a></dd>
+    </dl>
+    <dl>
+      <dt><a href="#">资质认证</a></dt>
+      <dd><a href="#">证书</a></dd>
+      <dd><a href="#">质检</a></dd>
+    </dl>
+    <dl>
+      <dt><a href="#">关于我们</a></dt>
+      <dd><a href="#">公司简介</a></dd>
+      <dd><a href="#">企业文化</a></dd>
+      <dd><a href="#">厂容厂貌</a></dd>
+      <dd><a href="#">新闻中心</a></dd>
+    </dl>
+  </div>
+  <div class="footer-info">
+    <h2>济南XXX环保科技股份有限公司</h2>
+    <div class="tel">联系电话：XXX    XXX</div>
+    <div class="footer-add"> 办公地址：XXX<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C座11楼<br/>
+      工厂地址：XXX<br/>
+      传       真：0531-XXX <br/>
+      邮       箱：XXX</div>
+  </div>
+</div>
+<div id="footer">
+  <div class="group-circle">
+    <div class="copy">Copyright © 2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>. 鲁ICP备XXX号</div>
+    <a href="#" class="author">网站建设：XXX</a> </div>
+</div>
+</body>
+</html>

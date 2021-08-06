@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XXX人力首页</title>
+	<link href="css/common.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.source.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/slider.js"></script>	
+	<script src="js/fk.js" type="text/javascript"></script>
+</head>
+<body>
+<!--顶部样式-->
+<div id="topdar">
+ <div id="top">
+ <span class="left"><a href="#">在线留言</a></span>
+ <span class="right"><a href="#">员工登陆</a> | <a href="#">客户登陆</a></span>
+ </div>
+</div>
+<div id="header">
+ <div id="top">
+  <div class="top">
+ <div class="logo"><a href="#"><img src="images/logo.png" /></a></div>
+  <div class="Search">
+  <p class="links"><a href="#" class="Blog"></a><a href="#" class="Weibo"></a></p>
+  <p><form>
+	<input name="" type="text" class="text">
+	<input name="" type="button" class="button">
+	</form>   </p>
+ </div>
+ </div>
+ <div class="Hotline"><img  src="images/Hotline.png" /></div>
+ <div id="Menu">
+  <ul id="nav">
+	    <li class="mainlevel" id="mainlevel"><a href="index.html" target="_blank" >首页</a>          
+        </li>
+		   <li class="mainlevel" id="mainlevel"><a href="gd_news.html" target="_blank"> XXX资讯</a>
+           <ul id="sub">
+		    <div class="Arrow"></div>
+			<li><a href="#" target="_blank">XXX信息</a></li>
+			<li><a href="#" target="_blank">XXX观点</a></li>
+			<li><a href="#" target="_blank">知识问答</a></li>	
+			<li><a href="#" target="_blank">XXX活动</a></li>				
+          </ul>
+        </li>
+		   <li class="mainlevel" id="mainlevel"><a href="Recruitment.html" target="_blank" class="Activity">最新招聘</a>
+        </li>
+		 <li class="mainlevel" id="mainlevel"><a href="About.html" target="_blank" class="Review">关于XXX</a>
+           <ul id="sub">
+		   <div class="Arrow"></div>
+			<li><a href="#" target="_blank">XXX简介</a></li>
+			<li><a href="#" target="_blank">企业文化</a></li>
+			<li><a href="#" target="_blank">荣誉资质</a></li>	
+			<li><a href="#" target="_blank">发展历程</a></li>	
+          </ul>
+        </li>
+		 <li class="mainlevel" id="mainlevel"><a href="Contact_us.html" target="_blank" class="Campsite">联系我们</a>
+           <ul id="sub">
+		   <div class="Arrow"></div>
+			<li><a href="#" target="_blank">联系方式</a></li>
+			<li><a href="Message.html" target="_blank">在线留言</a></li>
+			<li><a href="#" target="_blank">简历注册</a></li>			
+          </ul>
+        </li>		
+	 </ul>
+ </div>
+ </div>
+</div>
+<!--qq样式-->
+<!-- 代码 开始 -->
+<div id="online_qq_layer">
+    <div id="online_qq_tab">
+      <div class="online_icon">
+        <a title="" id="floatShow" style="display:none" href="javascript:void(0);">&nbsp;</a>
+        <a title="" id="floatHide" style="display:block" href="javascript:void(0);">&nbsp;</a>
+      </div>
+    </div>
+    <div id="onlineService" style="display: block;">
+      <div class="online_windows overz">
+          <div class="online_w_top"></div>
+          <div class="online_w_c overz">
+            <div id="online_qq">
+                <ul class="qq_ul fn-clear">
+<li class="kfli" onclick="openQQ('799129700')"><img src="images/Line_qq.png" border="0" /> 业务咨询</li>  
+<li class="kfli" onclick="openQQ('363576965')"><img src="images/Line_qq.png" border="0" /> 业务咨询</li>  
+<li class="kfli" onclick="openQQ('2193744200')"><img src="images/Line_qq.png" border="0" /> 客服服务</li>  
+<li class="kfli" onclick="openQQ('1315797152')"><img src="images/Line_qq.png" border="0" /> 投诉建议</li> 
+                            </ul>
+            </div>
+            <div class="phone_Advisory">
+ <p class="phone_img"></p>
+ <p class="Number">XXX</p>
+ <p><img src="images/QQ_weixin.png" /></p>
+</div>
+          </div>
+          <div class="online_w_bottom"></div>
+      </div>
+    </div>
+</div>
+
+<script>  
+    var online = new Array();  
+</script>  
+<script type= "text/javascript" src="http://webpresence.qq.com/getonline?Type=1&799129700:363576965:2193744200:1315797152" ></script>  
+<script type="text/javascript">  
+    for (var i = 0; i < online.length; i++) {  
+        if (online[i] == 0) {  
+            $(".kfli img").eq(i).attr("src","images/not_qq.png");  
+        } else {  
+            $(".kfli img").eq(i).attr("src",'images/Line_qq.png');  
+        }  
+    }  
+        
+  
+    window.onscroll = function () {  
+        if (document.documentElement.scrollTop + document.body.scrollTop > 100) {  
+            document.getElementById("scrollto").style.display = "block";  
+        }  
+        else {  
+            document.getElementById("scrollto").style.display = "none";  
+        }  
+    }  
+    function OpenSmallWindows(strURL, scrollbar, width, height, left, top) {  
+        window.open(strURL, "_blank",  
+     "status=no,resizable=0,toolbar=no,menubar=no,scrollbars=" + scrollbar + ",width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + "");  
+    }  
+    function openQQ(qq) {  
+        window.location.href = "tencent://message/?uin=" + qq + "&Site=gbgjs.com&Menu=yes";  
+    }  
+</script>    
+<!--结束-->
+<div class="Share">
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"left","bdTop":"120"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+<!--幻灯片样式-->
+<div class="banner">
+   <div class="Slide">
+  <div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li><a href="#" target="_blank"><img src="images/img_bg.png" /></a></li>
+					<li><a href="#" target="_blank"><img src="images/bananr.jpg" /></a></li>
+					<li><a href="#" target="_blank"><img src="images/bananr1.jpg" /></a></li>
+					<li><a href="#" target="_blank"><img src="images/bananr-2.jpg" /></a></li>
+					<li><a href="#" target="_blank"><img src="images/bananr-3.jpg" /></a></li>
+				</ul>
+			</div>
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+		<script type="text/javascript">
+		jQuery(".slideBox").slide({ titCell:".hd ul", mainCell:".bd ul",effect:"leftLoop",autoPlay:true,autoPage:true,triggerTime:1000,interTime:5000});
+		</script>
+  </div>
+  </div>
+ </div>
+ <div id="Service">
+   <div id="main">
+     <div class="titler_name"><img src="images/title_img_07.png" /></div>
+	 <ul class="Service_link">
+	  <li><a href="#" class="gw"></a></li>
+	  <li><a href="#" class="lw"></a></li>
+	  <li><a href="#" class="sb"></a></li>
+	  <li><a href="#" class="xz"></a></li>
+	  <li><a href="#" class="lt"></a></li>
+	  <li><a href="#" class="zx"></a></li>
+	 </ul>
+    </div>
+ </div>
+ <div id="main"> 
+ <div class="style">
+   <div class="Knowledge">
+    <div class="title_name"><img src="images/title_img_10.png" /></div>
+   <ul class="contents">
+     <li class="Pale_blue">
+	 <p><em></em><a href="#">企业为什么要采用技术外包？</a></p>
+	 <p class="Profile">现在的商业环境，变化快速，技术日新月异。做你最擅长的（核心竞争力），其余的外包！"Do what you do best (your core competency) and outsource the rest!"已经成为一种不可逆转的趋势。                                                <a href="#" class="With"> 详细<< </a></p>
+	 </li>
+	  <li style="background:#feffe2 ">
+	 <p><em></em><a href="#">企业为什么要采用技术外包？</a></p>
+	 <p class="Profile">现在的商业环境，变化快速，技术日新月异。做你最擅长的（核心竞争力），其余的外包！"Do what you do best (your core competency) and outsource the rest!"已经成为一种不可逆转的趋势。                                                <a href="#" class="With"> 详细<< </a></p>
+	 </li>
+	  <li >
+	 <p><em class="red_yuan"></em><a href="#">企业为什么要采用技术外包？</a></p>
+	 <p class="Profile">现在的商业环境，变化快速，技术日新月异。做你最擅长的（核心竞争力），其余的外包！"Do what you do best (your core competency) and outsource the rest!"已经成为一种不可逆转的趋势。                                                <a href="#" class="With"> 详细<< </a></p>
+	 </li>
+	  <li >
+	 <p><em class="red_yuan"></em><a href="#">企业为什么要采用技术外包？</a></p>
+	 <p class="Profile">现在的商业环境，变化快速，技术日新月异。做你最擅长的（核心竞争力），其余的外包！"Do what you do best (your core competency) and outsource the rest!"已经成为一种不可逆转的趋势。                                                <a href="#" class="With"> 详细<< </a></p>
+	 </li>
+	  <li style="background:#fffce8">
+	 <p><em></em><a href="#">企业为什么要采用技术外包？</a></p>
+	 <p class="Profile">现在的商业环境，变化快速，技术日新月异。做你最擅长的（核心竞争力），其余的外包！"Do what you do best (your core competency) and outsource the rest!"已经成为一种不可逆转的趋势。                                                <a href="#" class="With"> 详细<< </a></p>
+	 </li>
+	  <li style="background:#f0f0f0">
+	 <p><em></em><a href="#">企业为什么要采用技术外包？</a></p>
+	 <p class="Profile">现在的商业环境，变化快速，技术日新月异。做你最擅长的（核心竞争力），其余的外包！"Do what you do best (your core competency) and outsource the rest!"已经成为一种不可逆转的趋势。                                                <a href="#" class="With"> 详细<< </a></p>
+	 </li>
+   </ul>
+   </div> 
+   <!--新闻活动--> 
+   <div class="Wire">
+     <div class="title">XXX资讯<span><a href="#">MORE</a></span></div>
+	 <ul class="content">
+	   <li>
+	   <p><a href="#">养老金双轨制正式废除 公务员须缴纳月工资8%</a><span>2015-4-24</span></p>
+	   <p>国务院办公厅发出通知部署做好今年高校毕业生就业创业工作
+据新华社电 国务院办公厅近日印发《关于做好2014年全国普通...</p>
+	   </li>
+	    <li>
+	   <p><a href="#">养老金双轨制正式废除 公务员须缴纳月工资8%</a><span>2015-4-24</span></p>
+	   <p>国务院办公厅发出通知部署做好今年高校毕业生就业创业工作
+据新华社电 国务院办公厅近日印发《关于做好2014年全国普通...</p>
+	   </li>
+	    <li>
+	   <p><a href="#">养老金双轨制正式废除 公务员须缴纳月工资8%</a><span>2015-4-24</span></p>
+	   <p>国务院办公厅发出通知部署做好今年高校毕业生就业创业工作
+据新华社电 国务院办公厅近日印发《关于做好2014年全国普通...</p>
+	   </li>
+	 </ul>
+   </div>
+   <div class="Activities">
+    <div class="title">XXX活动<span><a href="#">MORE</a></span></div>
+	 <ul class="content">
+	   <li>
+	   <p><a href="#">养老金双轨制正式废除 公务员须缴纳月工资8%</a><span>2015-4-24</span></p>
+	   <p>国务院办公厅发出通知部署做好今年高校毕业生就业创业工作
+据新华社电 国务院办公厅近日印发《关于做好2014年全国普通...</p>
+	   </li>
+	    <li>
+	   <p><a href="#">养老金双轨制正式废除 公务员须缴纳月工资8%</a><span>2015-4-24</span></p>
+	   <p>国务院办公厅发出通知部署做好今年高校毕业生就业创业工作
+据新华社电 国务院办公厅近日印发《关于做好2014年全国普通...</p>
+	   </li>
+	    <li>
+	   <p><a href="#">养老金双轨制正式废除 公务员须缴纳月工资8%</a><span>2015-4-24</span></p>
+	   <p>国务院办公厅发出通知部署做好今年高校毕业生就业创业工作
+据新华社电 国务院办公厅近日印发《关于做好2014年全国普通...</p>
+	   </li>
+	 </ul>
+   </div> 
+   </div>
+   <!--客户-->
+   <div  class="Customer">
+    <div class="Cooperation">   
+	<img src="images/title_img_14.png" />
+  </div>
+  <div class="Partner_logo">
+    <div class="multipleColumn" style="margin:0 auto">
+			<div class="hd">
+				<a class="next"><</a>
+				<a class="prev">></a>
+			</div>
+			<div class="bd">
+				<div class="ulWrap">
+
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_03.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_06.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_08.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_10.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_12.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_19.png" /></a></div>
+							</li>
+						</ul>
+
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_38.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_41.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_44.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_52.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_54.png" /></a></div>
+							</li>
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="images/logo/Partner_logo_55.png" /></a></div>
+							</li>
+						</ul>										
+				</div><!-- ulWrap End -->
+			</div><!-- bd End -->
+		</div><!-- multipleColumn End -->
+
+		<script type="text/javascript">
+			/*
+				多行/多列的滚动解决思路在于：把每次滚动的n个li放到1个ul里面，然后用SuperSlide每次滚动1个ul，相当于每次滚动n个li
+			*/
+			jQuery(".multipleColumn").slide({titCell:".hd ul",mainCell:".bd .ulWrap",autoPage:true,effect:"leftLoop",autoPlay:false});
+		</script>
+  </div>
+ </div>
+   </div>
+ </div>
+<!--底部样式-->
+<div id="footer">
+<div class="footer_img">
+ <div id="main">
+   <div class="link">
+   <a href="#">关于XXX </a> 
+   <a href="#">联系方式 </a>
+   <a href="#">最新招聘 </a>
+   <a href="#"> 在线留言</a>
+   <a href="Cooperate.html"> 友情链接</a>
+   <a href="#"> 网站地图</a>
+   </div>
+   <div class="Telephone"></div>
+   <div class="copyright">
+    <p>CopyRight©2005-2020  四川省XXX人力资源管理有限公司  All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.  蜀ICP备XXX号</p>
+	<p>电话：XXX &nbsp;&nbsp;&nbsp;&nbsp;     传真：XXX&nbsp;&nbsp;&nbsp;&nbsp; </p>
+   </div>
+ </div>
+ </div>
+</div>
+</body>
+</html>

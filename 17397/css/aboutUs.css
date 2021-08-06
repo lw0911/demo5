@@ -1,0 +1,91 @@
+
+
+/***暗锚 - 开始***/
+.rightContent .one{
+	position: relative;
+}
+.target-fix{
+	position: absolute;
+    top: -120px; 
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+/***暗锚 - 结束***/
+
+/***左侧菜单 - 开始***/
+.leftMenu{
+	width: 100%;
+	z-index: 999;
+}
+.leftMenu a{
+	display: block;
+	width: 100%;
+	height: 88px;
+	line-height: 88px;
+	text-align: center;
+	background-color: #F6F6F6;
+	border-bottom: 1px solid #FFF;
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+	border-left: 10px solid #F6F6F6;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.leftMenu a:hover{
+	color: #1da193;
+	text-decoration: none;
+}
+.leftMenu a.active{
+	border-left: 10px solid #1da193;
+}
+
+.content .dis p{
+	margin-bottom: 30px;
+	text-indent: 0;
+	text-align: justify;
+}
+.content .dis p.smallT{
+	margin-bottom: 0px;
+	text-indent: 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+.content .openMore{
+	display: none;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+	.leftMenu{
+		display: none;
+	}
+}
+@media (max-width: 767px){
+	.leftMenu{
+		display: none;
+	}
+	.content .dis p{
+		margin-bottom: 16px;
+	}
+	.content .dis{
+		max-height: 346px;
+		overflow: hidden;
+	}
+	.content .one{
+		padding-bottom: 80px;
+		position: relative;
+	}
+	.content .openMore{
+		display: block;
+		position: absolute;
+		bottom: 40px;
+		right: 0;
+		color: #1DA193;
+	}
+	.content .openMore span{
+		margin-left: 5px;
+		font-size: 12px;
+	}
+}
+/***leftMenu - 结束***/

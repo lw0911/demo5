@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/*------重置样式------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button,figure {
+	margin:0;
+	padding:0;
+}  
+body,button,input,select,textarea{ 
+	font:14px "微软雅黑",arial, verdana, sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal;
+	}
+/* 初始化标签在所有浏览器中的margin、padding值 */  
+fieldset,img {
+	border:0 none;
+	}  /* 重置fieldset（表单分组）、图片的边框为0*/  
+dl,ul,ol,menu,li {
+	list-style:none;
+	}   /* 重置类表前导符号为onne,menu在HTML5中有效 */  
+blockquote, q {
+	quotes: none;
+	}   /* 重置嵌套引用的引号类型 */  
+blockquote:before, blockquote:after,q:before, q:after {
+	content:'';
+	content:none;
+	}
+/* 重置嵌套引用*/  
+input,select,textarea,button {
+	vertical-align:middle;
+	}  /* 重置表单控件垂直居中*/  
+button {
+	border:0 none;
+	background-color:transparent;
+	cursor:pointer;
+	}
+  /* 重置表单button按钮效果 */  
+body {
+	background:#fff;
+	height: 100%;
+	overflow-x: hidden;/*临时添加*/
+	}   /* 重置body 页面背景为白色 */  
+body,th,td,input,select,textarea,button {
+	font-size:12px;
+	line-height:1 ;
+	font-family:"微软雅黑", "黑体","宋体";
+	color:#666;
+	} /* 重置页面文字属性 */  
+a {
+	color:#666;
+	text-decoration:none;
+	}  /* 重置链接a标签 */  
+a:active,a:hover {
+	text-decoration:none;
+	}   /* 重置链接a标签的鼠标滑动效果 */  
+address,caption,cite,code,dfn,em,var {
+	font-style:normal;
+	font-weight:normal;
+	}  /* 重置样式标签的样式 */  
+caption {
+	display:none;
+	}    /* 重置表格标题为隐藏 */  
+table {
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+	table-layout:fixed;
+	}    /* 重置table属性 */  
+img{
+	display: block;
+	vertical-align:top;
+	}  /* 图片在当前行内的垂直位置 */   
+/* 页面设置 */  
+  /* 取消a标签点击后的虚线框 */  
+a {
+	outline: none;
+	}    
+a:active {
+	star:expression(this.onFocus=this.blur());
+	}  
+/* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */  
+/*   
+::selection {color: #fff;background-color: #4C6E78;}      
+::-moz-selection {color: #fff;background-color: #4C6E78;}   
+*/  
+/*清除浮动--推荐使用*/  
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{
+   height: 0;
+   visibility: hidden;
+   display: block;
+   clear: both;
+	} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+/*自己添加*/
+a,img,button,input,textarea{
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+}/*解决a标签点击有阴影*/
+.box-sizing{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;;
+}
+/*首页背景*/
+.sy-box{
+	background: url(../img/sy-bg.jpg) no-repeat center top;
+	z-index: -1;
+}
+/*----------页眉部分----------------*/
+.com-top-bg{
+	background: url(../img/com-top-bg.png) no-repeat center top;
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 40px;
+	z-index: 1000;
+}
+.com-nav{
+	z-index: 1001;
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	width: 1080px;
+	margin-left: -540px;
+}
+/*banner*/
+.com-banner-box{
+	width: 100%;
+}
+.com-banner-box img{
+	width: 100%;
+	display: block;
+}
+/*logo-和导航*/
+.com-logo,.com-nav-bg{
+	float: left;
+}
+.com-logo{
+	width: 370px;
+	padding-right: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;;
+}
+.com-logo img{
+	width: 100%;
+}
+.com-nav-bg{
+	padding-top: 12px;
+	width: 690px;
+}
+.com-nav-bg .com-nav-list{
+	float: left;
+	background-color: #000;
+}
+.com-nav-list > a{
+	font-size: 16px;
+	display: block;
+	color: #fff;
+	line-height: 50px;
+	height: 50px;
+	padding: 0 12px;
+	text-align: center;
+}
+.com-nav-list a:hover{
+	text-decoration: none;
+	color: rgba(255,255,255,.8);
+}
+.com-sub-box{
+	background-color: #986c33;
+	display: none;
+	text-align: center;
+	line-height:26px;
+	padding:10px 0;	
+}
+.com-sub-box a{
+	color: #fff;
+	display: block;
+	/*border-bottom: 1px dotted #fff;*/
+	font-size: 14px;
+	text-align: center;
+}
+.current-nav{
+	background-color: #986c33;
+}
+.com-nav-bg .current-nav{
+	background-color: #986c33;
+}
+.com-nav-list:hover{
+	background-color: #986c33;
+}
+/*----------主体部分----------------*/
+/*bg-width:1500*/
+.sy-main-bg{
+	position: relative;
+	left: 50%;
+	margin-left: -750px;
+	width: 1500px;
+	background: url(../img/sy-com-bg.jpg) no-repeat center bottom;
+}
+.wrapper{ 
+	width: 1080px; 
+	margin: 0 auto;
+}
+.padding-30{
+	padding: 30px 0;
+}
+.com-title-box{
+	width: 100%;
+	background: url(../img/sy-title-bg.jpg) no-repeat center bottom;
+	margin: 70px 0 50px 0;
+}
+.com-title{
+	float: left;
+	font-size: 22px;
+	color: #000;
+	line-height: 50px;
+}
+.com-title-more{
+	float: right;
+	font-size: 16px;
+	padding-top: 20px;
+	padding-right: 30px;
+}
+.com-title-more a{
+	color: #a80110;
+}
+.com-title-more a:hover{
+	color: #986C33;
+}
+/*----------页脚部分----------------*/
+/*页脚*/
+.com-footer{
+	width: 100%;
+	height: 110px;
+	background: url(../img/footer-bg.png) no-repeat center center;
+	font-size: 12px;
+	color: #333;
+}
+.footer-message{
+	width: 780px;
+	margin: 0 auto;
+	padding: 30px 0 10px 0;
+}
+.footer-message li{
+	float: left;
+	line-height: 30px;
+	margin: 0 20px;
+}
+.copyright{
+	text-align: center;
+}
+.copyright a{
+	color: #333;
+}

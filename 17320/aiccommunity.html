@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>智能云社区</title>
+		<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/allc.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/aiccommunity.css" />
+		<link rel="stylesheet" href="css/phone.css" />
+	</head>
+
+	<body>
+
+		<!--
+    	作者：柳州大数据3班网页设计组
+    	时间：2020-12-03
+    	描述：顶部导航
+    -->
+
+		<!--导航栏-->
+		<div class="top">
+			<div class="logo">
+
+				<a href="index.html"><img src="img/logo.png" width="45" height="45" /></a><span>智能云社区</span>
+			</div>
+			<div class="topmenu">
+				<span><a href="EnglishIndex.html" target="_blank">International-English</a></span>
+				<span><a href="#">备案</a></span>
+				<span class="userreg"><a href="#">注册</a></span>
+
+			</div>
+
+		</div>
+		<div class="d_01">
+
+			<div class="logo2">
+
+				<a href="index.html"><img src="img/logo.png" width="40" height="40" /></a><span>智能云社区</span>
+			</div>
+			<!--手机端导航-->
+			<div class="ph-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--手机端导航-->
+			<div class="ph_h">
+				<div class="ph_hed">
+					<ul>
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="#">最新活动</a>
+						</li>
+						<li>
+							<a href="#">产品</a>
+						</li>
+						<li>
+							<a href="#">解决方案</a>
+						</li>
+						<li>
+							<a href="#">安全</a>
+						</li>
+						<li>
+							<a href="#">智能体验</a>
+						</li>
+						<li>
+							<a href="#">开发平台</a>
+						</li>
+
+						<li>
+							<a href="EnglishIndex.html">国际站/English</a>
+						</li>
+						<li>
+							<a href="#" style="background: #16b4ef;text-align: center;font-size: 120%;color: #FFFFFF;font-family: '微软雅黑';">登录</a>
+						</li>
+						<li>
+							<a href="#" style="background: #16b4ef;text-align: center;font-size: 120%;color: #FFFFFF;font-family: '微软雅黑';">注册</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!--手机端导航结束-->
+
+			<div class="header" style="overflow: hidden;">
+
+				<ul>
+
+					<li>
+						<a href="index.html" target="_blank">网站首页</a><span></span></li>
+
+					<li>
+						<a href="#">社区头条<span></span></a>
+					</li>
+					<li>
+						<a href="#">最新活动</a><span></span></li>
+					<li>
+						<a href="#">产品</a><span></span></li>
+					<li>
+						<a href="#">解决方案</a><span></span></li>
+					<li>
+						<a href="#">智能云社区</a><span></span></li>
+					<li>
+						<a href="#">智能体验</a><span></span></li>
+					<li>
+						<a href="#">开发平台</a><span></span></li>
+					<li>
+						<a href="#">文档</a><span></span></li>
+
+				</ul>
+
+			</div>
+
+			<div class="login">
+				<a href="#" style="font-size: 80%;">登录社区</a>
+
+			</div>
+
+			<!--搜索-->
+			<div class="sousuo">
+				<img src="img/sousuo.png" class="s01">
+				<img src="img/clear.png" class="s02">
+			</div>
+
+			<div class="sk">
+
+				<div class="s04">
+
+					<div class="s05">
+						<input type="text" name="" id="" value="" placeholder="请输入关键字" class="sy" />
+					</div>
+					<div class="s06">
+						<img src="img/sousuo.png" />
+					</div>
+
+				</div>
+
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$(".s01").click(function() {
+						$(".sk").slideToggle();
+						$(".s01").hide();
+						$(".s02").show();
+						$(".d_01,.top").css("background", "#353a3c");
+					})
+					$(".s02").click(function() {
+						$(".sk").slideUp();
+						$(".s01").show();
+						$(".s02").hide();
+						$(".d_01,.top").css("background", "#000");
+					})
+
+					$(".s06").click(function() {
+						$(".sk").slideUp();
+						$(".s01").show();
+						$(".s02").hide();
+						$(".d_01,.top").css("background", "#000");
+					})
+				})
+			</script>
+
+			<!--
+            	作者：柳州大数据3班网页设计组
+            	时间：2020-12-10
+            	描述：搜索结束
+            -->
+
+		</div>
+
+		<!--登陆层-->
+		<div class="logindex">
+			<div class="log" id="logMove">
+				<div class="logtitle" id="logDrag">
+					智能云社区登录
+					<a class="logclosebutton" href="#"></a>
+
+				</div>
+				<div class="logcontent">
+					<div id="error_box"></div>
+					<div class="logre pt">
+						<input class="loginput" type="input" placeholder="手机/邮箱/用户名" value="" id="uname" />
+					</div>
+					<div class="logre pt">
+						<input class="loginput" type="input" placeholder="密码" value="" id="upass" />
+					</div>
+					<div class="logre">
+						<a href="#">忘记密码</a>
+					</div>
+					<div>
+						<a class="logsubmit" href="#" onclick="fnLogin()">登录</a>
+					</div>
+					<div class="logre">
+						<span class="logfs">其他方式登录&nbsp;&nbsp;</span>
+						<div id="logtup">
+							<a href="#"><img src="img/qq.png" height="25" /></a>
+							<a href="#">&nbsp;<img src="img/wx.png" height="25" /></a>
+						</div>
+						<a href="#">立即注册</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--登陆层-->
+
+		<!--导航栏结束-->
+		<!--注册-->
+
+		<div class="regindex">
+			<div class="usreg" id="regmoe">
+				<div class="regtitle" id="regdr">
+					用户注册
+					<a class="regclose" href="#"></a>
+
+				</div>
+				<div class="regconmet">
+					<div id="error_box"></div>
+					<div class="regre pt">
+						<input class="reginput" type="text" placeholder="手机/邮箱/用户名" value="" id="uname" />
+					</div>
+					<div class="regre pt">
+						<input class="reginput" type="password" placeholder="请输入密码" value="" id="upass" />
+					</div>
+					<div class="regre pt">
+						<input class="reginput" type="password" placeholder="请确认密码" value="" id="upass" />
+					</div>
+					<div class="regre pt">
+						<input class="reginput" type="text" placeholder="请输入邮箱" value="" id="email" />
+					</div>
+					<div class="regre">
+
+					</div>
+					<div>
+						<a class="regsubmit" href="#">注册</a>
+					</div>
+					<div class="regre">
+						<a href="#">已有账号</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--注册-->
+
+		<!--社区内容部分-->
+
+		<div class="communuityheader">
+			<h1>智能云社区</h1>
+
+		</div>
+
+		<div class="communuitymiddle">
+
+			<div class="aicc">
+
+				<div class="communuitynavigation">
+					<ul>
+						<li>
+							<a href="javascript:void(0)">推荐</a>
+
+							<div class="newlistcom">
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/13.jpg" alt="" /></a>
+											<p>遇到宕机现象我们该怎么处理？</p>
+											<p>如何配置自己的服务器？</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：2545次</p>
+										</ul>
+									</div>
+								</div>
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/13.jpg" alt="" /></a>
+											<p>虽然中国提供云计算服务的企业众多，但在全球云服务市场的总..</p>
+											<p>在云计算出现之前，想要大量储存和处理数据只能自己搭建服务器系统。这不仅需要很多IT知识，还需要很高的成本，云..</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：51561次</p>
+										</ul>
+									</div>
+								</div>
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/13.jpg" alt="" /></a>
+											<p>“微信身份证”广州试点，你知道怎么申请吗？</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：5158次</p>
+										</ul>
+									</div>
+								</div>
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>谈起 2020 年的 VR/AR 时，希望你想到的..</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：5111546次</p>
+										</ul>
+									</div>
+								</div>
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>三问“电子身份证”：怎么用？好用不？安全吗？</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：6411次</p>
+										</ul>
+									</div>
+								</div>
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>中国支付清算协会：8成移动支付用户不到30岁</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：54841次</p>
+										</ul>
+									</div>
+								</div>
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>人工智能手机哪家强 新年购机怎么选当然优先...</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：5121次</p>
+										</ul>
+									</div>
+								</div>
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>定了 明年联发科将推P40/P70主打智能AI</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：1151次</p>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+						</li>
+						<li>
+							<a href="javascript:void(0)">云计算</a>
+							<div class="newlistcom">
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>曾几何时，云计算在中国市场成为企业竞相追逐的热点</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：51658次</p>
+										</ul>
+									</div>
+								</div>
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>虽然中国提供云计算服务的企业众多，但在全球云服务市场的总..</p>
+											<p>在云计算出现之前，想要大量储存和处理数据只能自己搭建服务器系统。这不仅需要很多IT知识，还需要很高的成本，云..</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：15584次</p>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)">大数据</a>
+							<div class="newlistcom">
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>工智能和大数据在2020年的发展遇到了以下10个成长的烦恼...</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：541854次</p>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)">人工智能</a>
+							<div class="newlistcom">
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>人工智能实验室（AiLab）是中国目前最大最专业的人工智能网上门户...</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：62561次</p>
+										</ul>
+									</div>
+								</div>
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应...</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：6525次</p>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)">物联网</a>
+							<div class="newlistcom">
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>物联网是新一代信息技术的重要组成部分，也是“信息化”时代的重要发展阶段。顾名思义，物联网就是物物相连的互联网</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：8541次</p>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)">关于社区</a>
+							<div class="newlistcom">
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>智能云社区将迎来2018年，新注册用户可免费获得￥200云服务器代金劵</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：72561次</p>
+										</ul>
+									</div>
+								</div>
+
+								<div class="aicn">
+
+									<div class="newlist">
+										<ul>
+											<a href="#"><img src="img/4.jpg" alt="" /></a>
+											<p>2018迎新晚会，贵港智能科技馆不见不散..</p>
+											<p style="color: #8C8C8C; font-size: 80%;">来自：智能云&nbsp;&nbsp;发布时间 : 2020-12-30&nbsp;&nbsp;浏览量：245451次</p>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+						</li>
+						<li>
+							<a href="index.html">更多>></a>
+
+						</li>
+
+					</ul>
+				</div>
+				<h4 style="color: #d8dddd; font-family: arial; font-size: 80%;">我是有底线的 😄</h4>
+			</div>
+
+			<div class="aiccommunityleft">
+				<div class="aicle_0">
+					<div class="aiq">
+						<img src="img/qu1.png" alt="" width="30" height="30" />
+						<p>
+							<a href="#">签到</a>
+						</p>
+					</div>
+					<div class="aiq" style="border-left: 1px solid #e9ebea;">
+						<img src="img/qu2.png" alt="" width="30" height="30" />
+						<p>
+							<a href="#">发表社区说说</a>
+						</p>
+					</div>
+
+				</div>
+				<div class="aicle_1">
+					<div class="aiq_02">
+						<h3>社区公告</h3>
+						<p>&nbsp;&nbsp;
+							<a href="#">智能云社区开放1周年</a>
+						</p>
+						<p>&nbsp;&nbsp;
+							<a href="#">那些年我们一起学习代码...</a>
+						</p>
+						<p>&nbsp;&nbsp;
+							<a href="#">社区全面改造</a>
+						</p>
+
+					</div>
+
+				</div>
+
+				<div class="aicle_2">
+					<div class="aiq_02">
+						<h3>社区活动</h3>
+						<marquee direction="up" behavior="slide" scrolldelay="200">
+							<p><span></span>&nbsp;&nbsp;
+								<a href="#">2018-1-1日体验智能技术>></a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">我要成为社区大使>></a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">为社区守护>></a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">点亮社区>></a>
+							</p>
+						</marquee>
+
+					</div>
+
+				</div>
+
+				<div class="aicle_3">
+					<div class="aiq_02">
+						<h3>网友最新说说</h3>
+						<marquee direction="up" scrolldelay="200">
+							<p>&nbsp;&nbsp;
+								<a href="#">今天我来签到到了..</a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">有人在吗？</a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">哈哈😄</a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">今天很高兴。</a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">各位肚子饿吗？刚下班回来</a>
+							</p>
+							<p>&nbsp;&nbsp;
+								<a href="#">今天购买了智能云服务器！觉得很不错，不卡</a>
+							</p>
+
+						</marquee>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--社区内容部分-->
+
+		<!--底部导航/版权-->
+
+		<div class="footg" style="background: #000000;">
+
+			<div class="fott">
+				<div class="zj">
+					<ul>
+						<span>热门产品</span>
+
+						<li>
+							<a href="#">云服务器2折起</a>
+						</li>
+
+						<li>
+							<a href="#">云数据库RDS</a>
+						</li>
+
+						<li>
+							<a href="#">云存储OSS</a>
+						</li>
+
+						<li>
+							<a href="#">NAT网关</a>
+						</li>
+
+						<li>
+							<a href="#">负载均衡</a>
+						</li>
+
+						<li>
+							<a href="#">域名注册</a>
+						</li>
+
+						<li>
+							<a href="#">网站建设</a>
+						</li>
+
+						<li>
+							<a href="#">大数据</a>
+						</li>
+
+						<li>
+							<a href="#">云计算</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="zj">
+					<ul>
+						<span>用户热搜</span>
+
+						<li>
+							<a href="#">网站备案</a>
+						</li>
+
+						<li>
+							<a href="#">网安法</a>
+						</li>
+
+						<li>
+							<a href="#">CDN加速</a>
+						</li>
+
+						<li>
+							<a href="#">API网关</a>
+						</li>
+
+						<li>
+							<a href="#">企业邮箱</a>
+						</li>
+
+						<li>
+							<a href="#">whois查询</a>
+						</li>
+
+						<li>
+							<a href="#">视频直播</a>
+						</li>
+
+						<li>
+							<a href="#">视频转码</a>
+						</li>
+
+						<li>
+							<a href="#">云安全</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="zj">
+					<ul>
+						<span>更多推荐</span>
+
+						<li>
+							<a href="#">数据科研社区</a>
+						</li>
+
+						<li>
+							<a href="#">智能社区</a>
+						</li>
+
+						<li>
+							<a href="#">学生机</a>
+						</li>
+
+						<li>
+							<a href="#">IT论坛</a>
+						</li>
+
+						<li>
+							<a href="#">数据可视化</a>
+						</li>
+
+						<li>
+							<a href="#">云虚机</a>
+						</li>
+
+						<li>
+							<a href="#">com域名</a>
+						</li>
+
+						<li>
+							<a href="#">cn域名</a>
+						</li>
+
+						<li>
+							<a href="#">物联网</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="banquan">
+				<p>Copyright © 2020 AI Cloud. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a></p>
+				<p>智能云&nbsp;柳XXX&nbsp;&nbsp;版权所有-参赛版</p>
+				<p>ICP备案：桂ICP备XXXXXXXX号-1</p>
+
+			</div>
+		</div>
+
+		<!--底部导航/版权-->
+
+		<div id="to_top" title="返回顶部">
+			<img src="img/top1.png" />
+
+		</div>
+	</body>
+
+</html>
+
+<!--导航动画-->
+<script>
+	$('.header li').hover(function() {
+
+		$('span', this).stop().css('height', '2px');
+		$('span', this).animate({
+			left: '0',
+			width: '100%',
+			right: '0'
+		}, 200);
+	}, function() {
+
+		$('span', this).stop().animate({
+
+			left: '50%',
+			width: '0'
+
+		}, 200);
+	});
+
+	//返回顶部/悬浮层
+
+	function stop() {
+		h = $(window).height();
+		tp = $(document).scrollTop();
+		if(tp > h) {
+			$('#to_top').show();
+		} else {
+			$('#to_top').hide();
+		}
+	}
+	$(document).ready(function(e) {
+		stop();
+		$('#to_top').click(function() {
+			$(document).scrollTop(0);
+		})
+	})
+	$(window).scroll(function(e) {
+		stop();
+	})
+
+	//登陆
+
+	$(function() {
+		(function() {
+			var num;
+			$(".login").on('click', 'a', function(event) {
+				event.preventDefault();
+				num = $(this).index();
+				$(".logindex").fadeIn('fast');
+			});
+			$(".logtitle").on('click', '.logclosebutton', function(event) {
+				event.preventDefault();
+				$(".logindex").fadeOut();
+				num = "";
+			});
+		})();
+
+	});
+	//注册
+	$(function() {
+		(function() {
+			var num;
+			$(".topmenu").on('click', '.userreg', function(event) {
+				event.preventDefault();
+				num = $(this).index();
+				$(".regindex").fadeIn('fast');
+			});
+			$(".regtitle").on('click', '.regclose', function(event) {
+				event.preventDefault();
+				$(".regindex").fadeOut();
+				num = "";
+			});
+		})();
+
+	});
+</script>

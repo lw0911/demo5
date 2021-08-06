@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+</head>
+<link  href="css/style.css" type="text/css" rel="stylesheet"> 
+<script type="text/javascript" src="js/js.js"></script> 
+<body>
+<!-- head -->
+<div class="head">
+<div class="inner">
+<div class="logo">
+<img src="images/logo.jpg"  />
+<h2>常州市XXX包装材料有限公司</h2>
+<h3>CHANGZHOU KAIHUI Packging material co., LTD</h3>
+</div>
+<div class="navBar">
+    <ul class="nav clearfix">
+        <li class="m">
+            <h3><a href="index.html">网站首页</a></h3>
+        </li>
+        <li class="m">
+            <h3><a href="about.html">XXX简介</a></h3>
+        </li>
+        <li class="m">
+            <h3><a href="#">企业文化</a></h3>
+        </li>
+        <li class="m">
+            <h3><a href="#">产品中心</a></h3>
+          <ul class="sub" style="display: none;">
+                <li><a href="#">纸箱</a></li>
+                <li><a href="#">托盘</a></li>
+            </ul>
+        </li>
+        <li class="m">
+            <h3><a href="#">工厂环境</a></h3>
+            
+        </li>
+        
+        <li class="m">
+            <h3><a href="#">联系我们</a></h3>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="js/SuperSlide.2.1.js"></script>
+<script type="text/javascript">
+$(function(){
+    var nav = $(".nav");
+    var init = $(".nav .m").eq(ind);
+    var block = $(".nav .block");
+    block.css({
+        "left": init.position().left + 18
+    });
+    nav.hover(function() {},
+    function() {
+        block.stop().animate({
+            "left": init.position().left + 18
+        },
+        100);
+    });
+    $(".nav").slide({
+        type: "menu",
+        titCell: ".m",
+        targetCell: ".sub",
+        delayTime: 300,
+        triggerTime: 0,
+        returnDefault: true,
+        defaultIndex: ind,
+        startFun: function(i, c, s, tit) {
+            block.stop().animate({
+                "left": tit.eq(i).position().left  + 18
+            },
+            100);
+        }
+    });
+});
+
+var ind = 0;
+</script>
+
+
+<div class="tel">
+XXX
+</div>
+    <div class="cnen">
+   <a href="#"> <img src="images/cn.jpg" ></a> &nbsp;
+   <a href="#"> <img src="images/en.jpg" ></a> 
+    </div>
+  
+<div class="clear"></div>
+</div>
+</div>
+
+
+<!--banner-->
+<div class="flexslider">
+  <ul class="slides">
+    <li style="background:url(images/banner1.jpg) 50% 0 no-repeat;"></li>
+    <li style="background:url(images/banner2.jpg) 50% 0 no-repeat;"></li>
+    <li style="background:url(images/banner3.jpg) 50% 0 no-repeat;"></li>
+  </ul>
+</div>
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="css/owl.carousel.css">
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#scroll').owlCarousel({
+        items: 4,
+        autoPlay: true,
+        navigation: true,
+        navigationText: ["",""],
+        scrollPerPage: true
+    });
+});
+</script>
+
+<div class="pro">
+<h2>品牌与产品</h2>
+<h3></h3>
+<h4>永远奉行“一切为了用户”这一宗旨为目标</h4>
+</div>
+<div class="scroll-outer">
+    <div id="scroll" class="owl-carousel">
+        <div class="item">
+            <img src="images/1.jpg" alt="">
+            <div class="txt">
+                <h3><a href="#">纸箱   各种3~~7层纸箱</a></h3>
+                <h4>The cartons</h4>
+                <p>纸箱是应用最广泛的包装制品，纸箱常用的有三层、五层，七层使用较少，各层分为里纸、瓦楞纸、芯纸…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="">
+            
+            <div class="txt">
+                <h3><a href="#">纸管   各种直径38~300mm口径</a></h3>
+                <h4>Paper tube</h4>
+                <p>纸用纸张加工成的管状的物体。大多纸管为螺旋纸管和无缝纸管…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="">
+            
+            <div class="txt">
+                <h3><a href="#">蜂窝箱</a></h3>
+                <h4>Honeycomb carton</h4>
+                <p>蜂窝纸箱以蜂窝纸板冲压、裁切、粘贴制成，纸板接口处粘贴纸护角用以加强…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/4.jpg" alt="">
+            
+            <div class="txt">
+                <h3><a href="#">吸塑（PVC）</a></h3>
+                <h4>Blister (PVC)</h4>
+                <p>将PVC片材通过真空吸塑成型工艺加工而成的吸塑产品(吸塑托盘、吸塑盒)…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/1.jpg" alt="">
+            <div class="txt">
+                <h3><a href="#">纸箱   各种3~~7层纸箱</a></h3>
+                <h4>The cartons</h4>
+                <p>纸箱是应用最广泛的包装制品，纸箱常用的有三层、五层，七层使用较少，各层分为里纸、瓦楞纸、芯纸…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="">
+            
+            <div class="txt">
+                <h3><a href="#">纸管   各种直径38~300mm口径</a></h3>
+                <h4>Paper tube</h4>
+                <p>纸用纸张加工成的管状的物体。大多纸管为螺旋纸管和无缝纸管…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="">
+            
+            <div class="txt">
+                <h3><a href="#">蜂窝箱</a></h3>
+                <h4>Honeycomb carton</h4>
+                <p>蜂窝纸箱以蜂窝纸板冲压、裁切、粘贴制成，纸板接口处粘贴纸护角用以加强…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/4.jpg" alt="">
+            
+            <div class="txt">
+                <h3><a href="#">吸塑（PVC）</a></h3>
+                <h4>Blister (PVC)</h4>
+                <p>将PVC片材通过真空吸塑成型工艺加工而成的吸塑产品(吸塑托盘、吸塑盒)…</p>
+            </div>
+        </div>
+    </div><div class="clear"> </div>
+</div>
+
+
+
+<div class="about">
+<h2>品牌与产品</h2>
+<h3></h3>
+<h4>永远奉行“一切为了用户”这一宗旨为目标</h4>
+<div class="inner">
+<p>常州市XXX包装材料有限公司是专业生产加工定做三层、五层纸箱，各种规格纸管，各类纸盒，吸塑（PVC）,蛇皮袋，免熏蒸托盘和EPE（珍珠棉）的生产厂家。同时也可以根据客户的具体使用情况定做生产各种异形纸箱。XXX包装材料有限公司以“质量第一、服务先行、信誉至上”永远奉行“一切为了用户”这一宗旨为目标，竭诚为广大客户提供优质良好的服务，与此同时，我们一如既往，精益求精，不断进取，不断完善，保证我们卓越的品质和信誉。XXX包装材料有限公司会尽其所能，竭诚为您们服务，成为您们可以信赖和依靠的合作伙伴。先进的技术，可靠的质量，完善的服务，良好的信誉，是我们对客户的承诺。质量可靠，价格合理，交货及时，服务周到，互惠双赢，是我们的宗旨。</p>
+<br>
+<p>我们一定做到价格最低，质量更好，让你们的产品在起跑线上先赢一步，只要您问一下我们的价格，我们就一定让你们现在的产品包装降些价格。
+     </p>
+<br>
+<p>常州市XXX包装材料有限公司全体员工欢迎新老客户来电来函咨询洽谈合作。</p>
+<br><br>
+<a href="#" class="more">了解更多>></a>
+<br><br><br><br><br>
+<div class="clear"></div>
+</div>
+
+
+
+<div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+<!--foot-->
+
+<!-- news -->
+<div class="news">
+<div class="inner">
+<div class="new">
+<h2>新闻动态 <i>news</i></h2>
+<ul class="newa">
+    <li><a href="#">印铁包装技术趋向高科技化 <span>2016-7-6</span></a> </li>
+    <li><a href="#">2016中国涂料行业之“九大形势” <span>2016-7-5</span></a> </li>
+    <li><a href="#">马口铁罐：符合环保诉求的包装材料 <span>2016-7-4</span></a> </li>
+    <li><a href="#">全球涂料回顾与新形势展望 <span>2016-7-3</span></a> </li>
+
+</ul>
+</div>
+<div class="con">
+<h2>联系我们 <i>contact us</i></h2>
+<p>
+<b>常州市XXX包装材料有限公司</b><br>
+CHANGZHOU KAIHUI Packging material co., LTD<br><br>
+地址：XXX<br>
+电话：XXX<br>
+传真：XXX<br>
+
+</p>
+<div class="ewm">
+<img src="images/ewm.jpg">
+扫描二维码即可添加微信
+</div>
+
+</div>
+
+</div><div class="clear"></div>
+</div>
+      <div id="tabs" class="inner">
+      <ul>
+      <li class="on"><a href="javascript:;">主营业务</a></li>
+      <li><a href="javascript:;">友情链接</a></li>
+      </ul>
+      <div class="clear"> </div>
+      </div>
+      <div id="tab" class="inner">
+      <ul class="cur">       常州市XXX包装材料有限公司是专业生产加工定做三层、五层纸箱，各种规格纸管，各类纸盒，吸塑（PVC）,蛇皮袋，免熏蒸托盘和EPE（珍珠棉）的生产厂家。同时也可以根据客户的具体使用情况定做生产各种异形纸箱。</ul>
+      <ul class=hide>友情链接：<a href="#">东网科技</a> <a href="#">常州网络公司</a></ul>
+      </div>
+      
+      <script type="text/javascript">
+      window.onload=function(){
+      var li=document.getElementById("tabs").getElementsByTagName("li");var ul=document.getElementById("tab").getElementsByTagName("ul");for( var i=0; i<li.length;i++){li[i].about=i;li[i].onclick=function(){for( var j=0; j<li.length;j++){li[j].className="";ul[j].className="hide";  }this.className="on"; ul[this.about].className = "";}} }
+      </script>
+</div>
+
+<div class="ftb">
+<div class="inner">
+<p>COPYRIGHT (©) 2020  常州市XXX包装材料有限公司   技术支持:<a href="#">江苏东网科技</a> <a href="#">[管理后台]</a></p>
+</div>
+</div>
+
+
+</body>
+</html>

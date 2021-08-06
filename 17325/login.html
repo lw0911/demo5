@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=no" />
+<title>XXX</title>
+<link rel="stylesheet" type="text/css" href="css/qdd_common.css" />
+<link rel="stylesheet" type="text/css" href="css/qdd_index.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+</head>
+<body>
+<!--导航start-->
+<secton class='Header W100 HeaderDetail'>
+  <div class="widthSmall HeaderConts">
+    <div class="right w100 clearfix">
+    	<ul class="fl HeaderUl">      
+    		<li class="fl Item"><a href="">首页</a></li>
+    		<li class="fl Item ItemChilden">
+    		  <a href="">产品&服务 <em class="home_arrow"></em></a>
+    			<div class="itemList">
+    				<div class="widthSmall clearfix">
+    				  <div class="fl itemListLeft">
+    				  	<h3>我们的服务</h3>
+    				  	<p>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon6.png" /></i>公司注册</a>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon1.png" /></i>公司注销</a>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon2.png" /></i>公司转让</a>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon3.png" /></i>代理记账</a>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon4.png" /></i>法律服务</a>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon5.png" /></i>人力资源</a>
+    				  		<a href="" class="itemListLefta"><i class="img_icon"><img src="images/img_icon7.png" /></i>问答</a>
+    				  	</p>
+    				  </div>
+    				  <div class="fr itemListRight">
+    				  	<h3>我们的产品</h3>
+    				  	<dl>
+    				  		<dt>注销大厅</dt>
+    				  		<dd>注销大厅为XXX独家研发的共享服务云平台</dd>
+    				  		<dd><a href="" class="color-blue">前往注销大厅 > </a></dd>
+    				  	</dl>
+    				  	<dl>
+    				  		<dt>薪酬大厅</dt>
+    				  		<dd>注销大厅为XXX独家研发的共享服务云平台注销大厅为XXX独家研发的共享服务云平台注销大厅为XXX独家研发的共享服务云平台</dd>
+    				  		<dd><a href="" class="color-blue">前往注销大厅 > </a></dd>
+    				  	</dl>
+    				  </div>
+    				</div>
+    			</div>
+    		</li>
+    		<li class="fl Item"><a href="">资讯</a></li> 
+    		<li class="fl Item"><a href="">问答</a></li>
+    		<li class="fl Item"><a href="">公司注册</a></li>
+    		<li class="fl Item li_last"><a href="">关于我们</a></li>
+    	</ul>
+    	<!--未登录Start-->
+    	<div class="fr HeadPerson HeadLogin">
+    		<a onclick="loginBtn(this)">登录</a>
+    		<span class="line"></span>
+    		<a onclick="registerBtn(this)">注册</a>
+    	</div>
+    	<!--登录之后Start-->
+    	<div class="fr HeadPerson headpersonList hide">
+    		<a class="fr" href="javascript()"><img class="personImg radius50" src="images/2.jpg" />科技有毒</a>
+    		<ul class="headList">
+    			<li><a href="">个人中心</a></li>
+    			<li><a href="">我的收藏</a></li>
+    			<li><a href="">个人设置</a></li>
+    			<li><a href="">个人中心</a></li>
+    		</ul>
+    	</div>
+    </div>
+  </div>
+</secton>
+
+<div class="dlpopupLayer">
+	<!--短信登录Start-->
+	<!--<div class="loginWrap dlWrap radius8">
+		<p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon"></em></p>
+    <h3 class="loginTitle size20">登录</h3>
+    <ul class="loginConts w100">
+      <form action="" method="post" class="dx_dlform" id="dx_dlform">
+	      <li class="loginItem w100 clearfix">
+	        <label class="fl li_left"><em class="userIcon"></em></label>
+	        <div class="fl li_center">
+	        	<input class="w100" type="text" name="dx_dlphone" id="dx_dlphone" placeholder="输入您的手机号" maxlength="11" autocomplete="off" value="" />
+	        </div>
+	      </li>
+	      <li class="loginItem w100 clearfix">
+	        <label class="fl li_left"><em class="writeIcon"></em></label>
+	        <div class="fl li_center">
+	        	<input class="w100" type="text" name="dx_dlimgcode" id="dx_dlimgcode" placeholder="输入验证码" autocomplete="off" value="" />
+	        </div>
+	        <div class="fr li_right">
+	        	<span class="genimage"><img src="images/genimage.png" /></span>
+	        </div>
+	      </li>
+	      <li class="loginItem w100 clearfix">
+	        <label class="fl li_left"><em class="lockIcon"></em></label>
+	        <div class="fl li_center">
+	        	<input class="w100" type="text" name="dx_dlcode" id="dx_dlcode" placeholder="输入验证码" autocomplete="off" value="" />
+	        </div>
+	        <div class="fr li_right">
+	        	<input onclick="dlsendMessage(this)" id="dlsendcodeMessage" class="sendcode radius14 size12 cursor fr" type="button" value="发送验证码" />
+	        </div>
+	      </li>
+	      <div class="w100 clearfix size12 freelogin">
+	      	<label class="fl cursor" for="freeLogin">
+	      		<input class="hide" type="checkbox" name="freeLogin" id="freeLogin" value="60天内免登录" onclick="freeloginClick(this)" />
+	      		<em class="chooseIcon"></em>
+	      		60天内免登录
+	      	</label>
+	      	<a class="fr color-blue" onclick="passwordloginClick(this)">密码登录</a>
+	      </div>
+	      <input class="loginbutton radius3 size16 cursor" type="button" name="dx_dlBtn" id="dx_dlBtn" value="登录" onclick="dxdlButton(this)" />
+	      <div class="w100 clearfix size12 freelogin2">
+	      	<a class="fl color-blue"></a>
+	      	<p class="fr">没有账户 , <a onclick="registernowBtn(this)" class="color-blue">现在注册</a></p>
+	      </div>
+	      <p class="signinWith w100">
+	      	社交账号登录
+	      	<span class="icon qqIcon"></span>
+	      	<span class="icon wechatIcon"></span>
+	      </p>
+	  </form>
+    </ul>
+  </div>-->
+	
+	
+	
+	<!--密码登录Start-->
+	<!--<div class="loginWrap dlWrap radius8">
+		<p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon"></em></p>
+    <h3 class="loginTitle size20">登录</h3>
+    <ul class="loginConts w100">
+      <li class="loginItem w100 clearfix">
+        <label class="fl li_left"><em class="userIcon"></em></label>
+        <div class="fl li_center">
+        	<input class="w100" type="text" name="mm_dlphone" id="mm_dlphone" placeholder="输入您的手机号" autocomplete="off" value="" />
+        </div>
+      </li>
+      <li class="loginItem w100 clearfix">
+        <label class="fl li_left"><em class="writeIcon"></em></label>
+        <div class="fl li_center">
+        	<input class="w100" type="text" name="mm_dlimgcode" id="mm_dlimgcode" placeholder="输入验证码" autocomplete="off" value="" />
+        </div>
+        <div class="fr li_right">
+        	<span class="genimage"><img src="images/genimage.png" /></span>
+        </div>
+      </li>
+      <li class="loginItem w100 clearfix">
+        <label class="fl li_left"><em class="lockIcon"></em></label>
+        <div class="fl li_center">
+        	<input class="w100" type="text" name="mm_dlpass" id="mm_dlpass" placeholder="输入密码" autocomplete="off" value="" />
+        </div>
+      </li>
+      <div class="w100 clearfix size12 freelogin">
+      	<label class="fl cursor" for="freeLogin1">
+      		<input class="hide" type="checkbox" name="freeLogin1" id="freeLogin1" value="60天内免登录" onclick="freeloginClick(this)" />
+      		<em class="chooseIcon"></em>
+      		60天内免登录
+      	</label>
+      	<a class="fr color-blue" onclick="forgetpasswordClick(this)">忘记密码</a>
+      </div>
+      <input onclick="passdlButton(this)" class="loginbutton radius3 size16 cursor" type="button" name="mm_dlBtn" id="mm_dlBtn" value="登录" />
+      <div class="w100 clearfix size12 freelogin2">
+      	<a onclick="mobilecodeLogin(this)" class="fl color-blue">手机验证码登录</a>
+      	<p class="fr">没有账户 , <a onclick="registernowBtn(this)" class="color-blue">现在注册</a></p>
+      </div>
+      <p class="signinWith w100">
+      	社交账号登录
+      	<span class="icon qqIcon"></span>
+      	<span class="icon wechatIcon"></span>
+      </p>
+    </ul>
+  </div>-->
+	
+	<!--注册Start-->
+	<!--<div class="loginWrap dlWrap radius8 registeredWrap">
+	  <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon"></em></p>
+      <h3 class="loginTitle size20">注册</h3>
+      <ul class="loginConts w100">
+        <li class="loginItem w100 clearfix">
+          <label class="fl li_left"><em class="userIcon"></em></label>
+          <div class="fl li_center">
+        	<input class="w100" type="text" name="zcphone" id="zcphone" placeholder="输入您的手机号" autocomplete="off" value="" />
+          </div>
+        </li>
+        <li class="loginItem w100 clearfix">
+          <label class="fl li_left"><em class="lockIcon"></em></label>
+          <div class="fl li_center">
+        	<input oninput="logincodeClick(this)" class="w100" type="text" name="zccode" id="zccode" placeholder="输入验证码" autocomplete="off" value="" />
+          </div>
+          <div class="fr li_right">
+        	<input onclick="zcsendcodeMessage(this)" class="sendcode radius14 size12 cursor fr" id="zcsendcodeMessage" type="button" value="发送验证码" />
+        	<span class="fr send_success radius14"><em class="correctIcon"></em></span>
+          </div>
+        </li>
+        <p class="hint size18 w100 clearfix">输入验证码即可注册用户</p>
+        <div class="w100 size12 xieyi">
+      	  <p class="fl size12 color-gray">输入验证码即代表同意<a href="" class="color-blue">《XXX协议》</a></p>
+      	  <a onclick="loginBtn(this)" class="fr size16 color-blue">登录</a>
+        </div>
+      </ul>
+	</div>-->
+	
+	<!--注册成功Start-->
+	<!--<div class="dlWrap radius8 loginWrap registrationSuccess">
+	  <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon2"></em></p>
+      <h3 class="loginTitle loginTitle2 size20">注册成功</h3>
+      <p class="size12 registered_text">已为您生成密码和用户名，<em class="color-black2">可在此修改</em></p>
+      <ul class="w100 loginConts w100">
+      	<form action="" method="post">
+      	  <li class="loginItem w100 clearfix loginItem2">
+      	    <label class="fl li_left size14">密   码 : </label>
+      	    <div class="fl li_center radius3">
+      	  	  <input class="size16 color-black" type="password" name="zcpass" id="zcpass" value="123456" />
+      	    </div>
+      	    <div class="fl li_right">
+      	  	  <span onclick="viewpassBtn(this)" class="viewpassBtn cursor"><em class="eyeIcon"></em></span>
+      	  	  <span class="view_img size12">查看密码</span>
+      	    </div>
+      	  </li>
+      	  <li class="loginItem w100 clearfix loginItem2">
+      	    <label class="fl li_left size14">用户名 :</label>
+      	    <div class="fl li_center radius3">
+      	  	  <input class="size16 color-black" type="text" name="zcusername" id="zcusername" value="wjk19990921" />
+      	    </div>
+      	  </li>
+      	  <input onclick="regsuccButton(this)" type="button" class="loginbutton radius3 size16 cursor loginbutton2" value="确定" />
+      	</form>
+      </ul>
+	</div>-->
+	
+	<!--找回密码第一步-->
+	<!--<div class="dlWrap radius8 loginWrap retrievePassa">
+      <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon2"></em></p>
+      <h3 class="loginTitle loginTitle3 size20 color-blue">找回密码</h3>
+      <ul class="loginConts w100">
+        <li class="loginItem w100 clearfix">
+          <label class="fl li_left"><em class="userIcon"></em></label>
+          <div class="fl li_center">
+        	<input class="w100" type="text" name="retrievephone" id="retrievephone" placeholder="输入您的手机号" maxlength="11" autocomplete="off" value="" />
+          </div>
+        </li>
+        <li class="loginItem w100 clearfix">
+          <label class="fl li_left"><em class="lockIcon"></em></label>
+          <div class="fl li_center">
+        	<input oninput="retrieveCode(this)" class="w100" type="text" name="retrievecode" id="retrievecode" placeholder="输入验证码"  autocomplete="off" value="" />
+          </div>
+          <div class="fr li_right">
+        	<input onclick="retrieveMessage(this)" class="sendcode radius14 size12 cursor fr" id="retrieveMessage" type="button" value="发送验证码" />
+        	<span class="fr send_success radius14"><em class="correctIcon"></em></span>
+          </div>
+        </li>
+        <input onclick="retrievebtnNext(this)" class="loginbutton radius3 size16 cursor loginbutton3" type="button" value="下一步" />
+        <p class="contactCustomer"><a href="" class="color-blue">联系客服</a></p>
+      </ul>
+	</div>-->
+     
+    <!--找回密码第二步Start-->
+    <!--<div class="dlWrap radius8 loginWrap retrievePassb">
+      <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon2"></em></p>
+      <h3 class="loginTitle size20 color-blue">修改密码</h3>
+      <p class="retrieve_text size12">新密码应不少于6位，且不可与之前设置过的密码重复</p>
+      <ul class="loginConts w100">
+        <li class="loginItem w100 clearfix">
+          <div class="w100 li_center li_center2">
+        	<input class="w100" type="password" name="newPass" id="newPass" placeholder="设置新密码" autocomplete="off" value="" />
+          </div>
+        </li>
+        <li class="loginItem w100 clearfix">
+          <div class="w100 li_center li_center2">
+        	<input class="w100" type="password" name="newPass2" id="newPass2" placeholder="再次输入新密码" autocomplete="off" value="" />
+          </div>
+        </li>
+        <input class="loginbutton radius3 size16 cursor loginbutton3" onclick="newpassButton(this)" type="button" name="newpassButton" id="newpassButton" value="确认修改" />
+        <p class="contactCustomer"><a href="" class="color-blue">联系客服</a></p>
+      </ul>
+    </div>-->
+    
+    <!--找回密码第三步Start-->
+    <!--<div class="dlWrap radius8 loginWrap retrievePassc">
+      <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon2"></em></p>
+      <h3 class="loginTitle size20 color-blue">密码修改成功</h3>
+      <p class="retrieve_text">请返回登录页面,使用新密码进行登录</p>
+      <input class="loginbutton radius3 size16 cursor returnloginButton" onclick="returnloginButton(this)" type="button" name="returnloginButton" id="returnloginButton" value="返回登录页面" />
+    </div>-->
+</div>
+
+
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="layer/layer.js" type="text/javascript"></script>
+<script src="js/basefunction.js" type="text/javascript"></script>
+<script src="js/loginregister.js" type="text/javascript"></script>
+<script src="js/jquery.flexslider.js" type="text/javascript"></script>
+<script src="js/wow.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>

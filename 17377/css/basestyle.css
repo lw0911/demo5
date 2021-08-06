@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {height: 100%;}
+body {font-family:Microsoft YaHei, Arial; margin: 0; font-size:14px;  line-height: 1.8; color: #333333; background:url(../images/bj-re.jpg);}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+svg:not(:root) { overflow: hidden; }
+.hidden,.hide{display:none}
+.clearfiexd,.clearfiexd:after{ content:""; clear:both; display:block;}{clear:both;}
+.posre{position:relative;}
+
+a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; color: #333; }
+a:active { outline: 0; }
+a:active { color: #0088cc; }
+b, strong { font-weight: bold; }
+em,s,i{font-style:normal;}
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; vertical-align: middle; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; outline:none; border:0; font-family: Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;}
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+legend { border: 0; padding: 0; }
+textarea { overflow: auto; resize: vertical; }
+optgroup { font-weight: bold; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none outside none; }
+
+
+/* 公用切换 */
+#autobanner{width: 280px;height: 368px;}
+.banCarousel {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.banCarousel-btn {
+	display: none;
+}
+.banCarousel-btn a {
+	display: block;
+	line-height: 40px;
+	position: absolute;
+	top: 160px;
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	opacity: 0.3;
+ filter: alpha(opacity=30) color:rgb(255, 255, 255);
+	overflow: hidden;
+	z-index: 4;
+}
+.banCarouselprevBtn {
+	left: 5px;
+}
+.banCarouselnextBtn {
+	right: 5px;
+}
+.banCarousel-img {
+	font-size: 0;
+ *word-spacing: -1px; /* IE6、7 */
+	letter-spacing: -3px;
+	position: relative;
+}
+.banCarousel-img li {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1; /* IE6、7 */
+	vertical-align: top;
+	letter-spacing: normal;
+	word-spacing: normal;
+	font-size: 12px;
+}
+.banCarousel i {background:url(../images/lunbojt-icon.png) no-repeat; width: 15px;height: 23px;cursor: pointer;margin: 8px 0 0 12px;display: block;}
+.banCarousel .banCarouselnextBtn i {background-position: 0 -24px;}
+.banCarousel .banCarouselprevBtn i {background-position: 0 0;}
+.banCarousel-circle {
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	height: 13px;
+	text-align: center;
+	font-size: 0;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.3);
+ filter: alpha(opacity:30);
+}
+.banCarousel-circle li {
+	border-radius: 10px;
+	margin: 2px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	vertical-align: middle;
+	zoom: 1;
+}
+.banCarousel-circle li a {
+	display: block;
+	padding-top: 9px;
+	width: 9px;
+	height: 0;
+	border-radius: 50%;
+	background: #B7B7B7;
+	overflow: hidden;
+}
+.banCarousel-circle .selected a {
+	background: #F40;
+}

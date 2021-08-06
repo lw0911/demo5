@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>某某有限公司 | 联系我们</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<!--引用百度地图API-->
+    <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>  
+</head>
+<body>
+   <div id="warpp">
+   	<header>
+<!-- 代码部分begin -->
+<div class="slides">
+	<div class="slideInner">
+		<a href="#" style="background: url(images/banner1.jpg) no-repeat;">
+		</a>
+		<a href="#" style="background: url(images/banner2.jpg) no-repeat">
+		</a>
+	</div>
+	<div class="nav">
+		<a class="prev" href="javascript:;"></a>
+		<a class="next" href="javascript:;"></a>
+	</div>
+</div>
+<!-- 结束 -->
+   	 <div class="head">
+		<h1 class="logo">这是logo</h1>
+		<form action="#" method="get">
+			<select>
+				<option>1</option>
+				<option>2</option>
+			</select>
+			<input type="text" name="seach" class="icon1">
+		</form>
+		<ul class="nav1">
+			<li class="li1"><a href="index.html">公司首页</a></li>
+			<li><a href="company.html">公司介绍</a></li>
+			<li><a href="new-list.html">新闻中心</a></li>
+			<li><a href="product-list.html">产品展示</a></li>
+			<li><a href="picture.html">公司相册</a></li>
+			<li><a href="messages.html">在线留言</a></li>
+			<li><a href="contact.html" class="scence">联系我们</a></li>
+		</ul>
+   	 </div>
+   	</header>
+   	<div class="c-main">
+      <div class="c_left">
+	       <p class="c_title">联系我们</p>
+	       <ul class="c_left_asidebar">
+			  <li><a href="contact.html" class="selected2">联系我们</a></li>
+        		<li><a href="messages.html">在线留言</a></li>
+			</ul>
+			<h6>
+       <a href="contact.html"><img src="images/company_10.jpg"></a>
+       <a href="messages.html"><img src="images/company_15.jpg"></a>
+        </h6>
+	  </div>
+       <div class="c_right">
+        <div class="c_title2">
+	      <span>联系我们</span>
+	      <span class="break_nav">您当前位置：<a href="index.html">首页</a>><a href="company.html" class="scence_color">联系我们</a></span>
+	    </div>
+		
+		<div class="box2">
+			<div class="box2_photo">
+              <div class="contact_txt">
+              	<h5>山东某某科技有限公司</h5>
+              	<p>电话：0539-8800978</p>
+              	<p>Q Q：2254898878</p>
+              	<p>微信：sdlwkj</p>
+              	<p>地址：临沂市经济开发区中印软件产业园（临沂云计算中心）</p>
+              </div>
+         <!--百度地图容器-->
+            <div style="width:770px;height:400px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+		   </div>
+		</div> <!--box2 end  -->
+   	  </div>
+   	</div>
+	
+
+
+   	<div class="clear"></div>
+   	<div class="foot">
+   	   <div class="foot-con">
+   	   	 <!--<span>xxxxxxxxxxx版权所有</span>-->
+   	   	 <ul class="foot-nav">
+   	   	 	<li><a href="index.html">公司首页</a></li>
+   	   	 	<li><a href="company.html">公司介绍</a></li>
+   	   	 	<li><a href="new-list.html">新闻中心</a></li>
+   	   	 	<li><a href="product-list.html">产品展示</a></li>
+   	   	 	<li><a href="picture.html">公司相册</a></li>
+   	   	 	<li><a href="messages.html">在线留言</a></li>
+   	   	 	<li><a href="contact.html">联系我们</a></li>
+   	   	 </ul>
+   	   	 <span>联系地址：山东省临沂市XXXXXXXXXXXXXXXX   电话：XXX</span>
+   	   	 <span>Copyright © 2020 版权所有 </span>
+   	   </div>
+   	</div>
+   </div> 
+  
+<!-- tab切换 -->
+<script src="script/jquery-1.8.1.js"></script>
+<!-- banner切换 -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slide.js"></script>
+<script >
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 3000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	})
+})
+
+</script>
+<!-- 代码部分end -->
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(118.439169,35.015098),18);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"我的备注",title:"某公司",imageOffset: {width:0,height:3},position:{lat:35.014765,lng:118.438693}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+</body>
+</html>

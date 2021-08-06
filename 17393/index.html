@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XXX-金丽商行大连XXX代理</title>
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<!--头部 开始-->
+<iframe src="header.html" frameborder="0" scrolling="no" width="100%" height="166"></iframe>
+<!--头部 结束-->
+<!--大轮换图 开始-->
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var $window = $(window),
+			window_width = $window.width();
+		$('#js_banner, #js_banner_img li').width(window_width);
+
+		var urlParam = G.util.parse.url(),
+			startFrame = 0;
+		if (urlParam.search && ('banner' in urlParam.search)) {
+			startFrame = (parseInt(urlParam.search['banner'])-1) || 0;
+		}
+
+		new $.Tab({/*添加圆点按钮*/
+			target: $('#js_banner_img li'),
+			effect: 'slide3d',
+			animateTime: 1000,
+			stay: 4000,
+			playTo: startFrame,
+			autoPlay: true,
+			merge: true,
+			prevBtn: $('#js_banner_pre'),
+			nextBtn: $('#js_banner_next')
+		});
+		$('#js_banner_img').css('left','-' + (window_width * startFrame) + 'px');
+	})
+</script>
+<div id="js_banner" class="banner">
+	<ul id="js_banner_img" class="banner_img clear">
+		<li class="bgli01">
+			<div class="banner_inner">
+				<div class="child child1" data-z="2"><img src="images/1-1.png" /></div><!-- data-z="2"与data-z="3"表示两个图层进退场的顺序有区别 -->
+				<div class="child child2" data-z="3"><img src="images/1-2.png" style=" position:absolute; z-index:9" />
+                <a href="#"><h1>甲醛克星 新房墙推 累计千万好评</h1>
+                <p>XXX乳胶漆致悦抗甲醛五合一净味套装内墙乳胶漆墙面漆涂料油漆,6L*3套装 吸收分解甲醛 千万好评 超值6L</p>
+                <span><img src="images/more.png" /></span></a>
+                </div>
+			</div>
+		</li>
+		<li class="bgli02">
+			<div class="banner_inner">
+				<div class="child child1" data-z="2"><img src="images/1-1.png" /></div><!-- data-z="2"与data-z="3"表示两个图层进退场的顺序有区别 -->
+				<div class="child child2" data-z="3"><img src="images/2-2.png" style=" position:absolute; z-index:9" />
+                <a href="#"><h1>甲醛克星 新房墙推 累计千万好评</h1>
+                <p>XXX乳胶漆致悦抗甲醛五合一净味套装内墙乳胶漆墙面漆涂料油漆,6L*3套装 吸收分解甲醛 千万好评 超值6L</p>
+                <span><img src="images/more.png" /></span></a>
+                </div>
+			</div>
+		</li>
+		<li class="bgli03">
+			<div class="banner_inner">
+				<div class="child child1" data-z="2"><img src="images/1-1.png" /></div><!-- data-z="2"与data-z="3"表示两个图层进退场的顺序有区别 -->
+				<div class="child child2" data-z="3"><img src="images/3-2.png" style=" position:absolute; z-index:9" />
+                <a href="#"><h1>甲醛克星 新房墙推 累计千万好评</h1>
+                <p>XXX乳胶漆致悦抗甲醛五合一净味套装内墙乳胶漆墙面漆涂料油漆,6L*3套装 吸收分解甲醛 千万好评 超值6L</p>
+                <span><img src="images/more.png" /></span></a>
+                </div>
+			</div>
+		</li>
+		<li class="bgli04">
+			<div class="banner_inner">
+				<div class="child child1" data-z="2"><img src="images/1-1.png" /></div><!-- data-z="2"与data-z="3"表示两个图层进退场的顺序有区别 -->
+				<div class="child child2" data-z="3"><img src="images/4-2.png" style=" position:absolute; z-index:9" />
+                <a href="#"><h1>甲醛克星 新房墙推 累计千万好评</h1>
+                <p>XXX乳胶漆致悦抗甲醛五合一净味套装内墙乳胶漆墙面漆涂料油漆,6L*3套装 吸收分解甲醛 千万好评 超值6L</p>
+                <span><img src="images/more.png" /></span></a>
+                </div>
+			</div>
+		</li>
+	</ul>
+	<div class="banner_common">
+		<a id="js_banner_pre" href="javascript:;" class="banner_pre"></a>
+		<a id="js_banner_next" href="javascript:;" class="banner_next"></a>
+	</div>
+</div>
+<!--大轮换图 结束-->
+
+<!--大图标 开始-->
+<div class="index_1">
+<a href="#"><img src="images/img_1.png" /></a>
+<a href="#"><img src="images/img_2.png" /></a>
+<a href="#"><img src="images/img_3.png" /></a>
+</div>
+<!--大图标 结束-->
+
+<!--动态新闻 开始-->
+<div class="index_news">
+<div class="index_title"><img src="images/img_4.png" /></div>
+<div class="rollBox">
+     <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+     <div class="Cont" id="ISL_Cont">
+      <div class="ScrCont">
+       <div id="List1">
+       
+        <!-- 图片列表 begin -->
+         <div class="pic">
+          <a href="#"><img src="images/pic_1.jpg"  /></a>
+          <p><a href="#">XXX 无添加 欧美认证 家更安心</a></p>
+         </div>       
+        <div class="pic">
+          <a href="#"><img src="images/pic_2.jpg"  /></a>
+          <p><a href="#">家易涂 管家级焕新服务</a></p>
+         </div> 
+         <div class="pic">
+          <a href="#"><img src="images/pic_3.jpg"  /></a>
+          <p><a href="#">XXX焕彩大师 所见即所得</a></p>
+         </div> 
+         <div class="pic">
+          <a href="#"><img src="images/pic_1.jpg"  /></a>
+          <p><a href="#">XXX 无添加 欧美认证 家更安心</a></p>
+         </div>       
+        <div class="pic">
+          <a href="#"><img src="images/pic_2.jpg"  /></a>
+          <p><a href="#">家易涂 管家级焕新服务</a></p>
+         </div> 
+         <div class="pic">
+          <a href="#"><img src="images/pic_3.jpg"  /></a>
+          <p><a href="#">XXX焕彩大师 所见即所得</a></p>
+         </div> 
+        <!-- 图片列表 end -->
+        
+       </div>
+       <div id="List2"></div>
+      </div>
+     </div>
+     <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+    </div>
+   </div>
+
+<script language="javascript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//图片滚动列表 16css.com
+var Speed = 1; //速度(毫秒)
+var Space = 5; //每次移动(px)
+var PageWidth = 960; //翻页宽度
+var fill = 0; //整体移位
+var MoveLock = false;
+var MoveTimeObj;
+var Comp = 0;
+var AutoPlayObj = null;
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+GetObj('ISL_Cont').scrollLeft = fill;
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+AutoPlay();
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay(){ //自动滚动
+ clearInterval(AutoPlayObj);
+ AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',3000); //间隔时间
+}
+function ISL_GoUp(){ //上翻开始
+ if(MoveLock) return;
+ clearInterval(AutoPlayObj);
+ MoveLock = true;
+ MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+}
+function ISL_StopUp(){ //上翻停止
+ clearInterval(MoveTimeObj);
+ if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){
+  Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+  CompScr();
+ }else{
+  MoveLock = false;
+ }
+ AutoPlay();
+}
+function ISL_ScrUp(){ //上翻动作
+ if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth}
+ GetObj('ISL_Cont').scrollLeft -= Space ;
+}
+function ISL_GoDown(){ //下翻
+ clearInterval(MoveTimeObj);
+ if(MoveLock) return;
+ clearInterval(AutoPlayObj);
+ MoveLock = true;
+ ISL_ScrDown();
+ MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+}
+function ISL_StopDown(){ //下翻停止
+ clearInterval(MoveTimeObj);
+ if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){
+  Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+  CompScr();
+ }else{
+  MoveLock = false;
+ }
+ AutoPlay();
+}
+function ISL_ScrDown(){ //下翻动作
+ if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+ GetObj('ISL_Cont').scrollLeft += Space ;
+}
+function CompScr(){
+ var num;
+ if(Comp == 0){MoveLock = false;return;}
+ if(Comp < 0){ //上翻
+  if(Comp < -Space){
+   Comp += Space;
+   num = Space;
+  }else{
+   num = -Comp;
+   Comp = 0;
+  }
+  GetObj('ISL_Cont').scrollLeft -= num;
+  setTimeout('CompScr()',Speed);
+ }else{ //下翻
+  if(Comp > Space){
+   Comp -= Space;
+   num = Space;
+  }else{
+   num = Comp;
+   Comp = 0;
+  }
+  GetObj('ISL_Cont').scrollLeft += num;
+  setTimeout('CompScr()',Speed);
+ }
+}
+//--><!]]>
+</script>
+</div>
+<!--动态新闻 结束-->
+<!--底部 开始-->
+<div class="index_bottom">
+<div class="index_bottom_1">
+<img src="images/img_6.png" />
+<ul>
+<li><a href="#">关于我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">门店查找</a></li>
+<li><a href="#">网站地图</a></li>
+</ul>
+<ul>
+<li><a href="#">隐私政策</a></li>
+<li><a href="#">法律条款</a></li>
+<li><a href="#">色彩精准度</a></li>
+<li><a href="#">XXX专业官方网站</a></li>
+</ul>
+</div>
+</div>
+<!--底部 结束-->
+</body>
+</html>

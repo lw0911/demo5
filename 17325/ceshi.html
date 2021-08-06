@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+        <div id="appendClick">append()方法追加内容</div>
+        
+        <script type="text/javascript">
+            function rethtml() {
+                var $html = "<div id='test' title='hi'>我是调用函数创建的</div>"
+                return $html;
+            }
+            $("#appendClick").append(rethtml());
+            
+            var s='<!--注册Start-->' +
+                '<div class="loginWrap dlWrap radius8 registeredWrap">' +
+                '  <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon"></em></p>' +
+                '      <h3 class="loginTitle size20">注册</h3>' +
+                '      <ul class="loginConts w100">' +
+                '        <li class="loginItem w100 clearfix">' +
+                '          <label class="fl li_left"><em class="userIcon"></em></label>' +
+                '          <div class="fl li_center">' +
+                '        <input class="w100" type="text" name="zcphone" id="zcphone" placeholder="输入您的手机号" autocomplete="off" value="" />' +
+                '          </div>' +
+                '        </li>' +
+                '        <li class="loginItem w100 clearfix">' +
+                '          <label class="fl li_left"><em class="lockIcon"></em></label>' +
+                '          <div class="fl li_center">' +
+                '        <input oninput="logincodeClick(this)" class="w100" type="text" name="zccode" id="zccode" placeholder="输入验证码" autocomplete="off" value="" />' +
+                '          </div>' +
+                '          <div class="fr li_right">' +
+                '        <input onclick="zcsendcodeMessage(this)" class="sendcode radius14 size12 cursor fr" id="zcsendcodeMessage" type="button" value="发送验证码" />' +
+                '        <span class="fr send_success radius14"><em class="correctIcon"></em></span>' +
+                '          </div>' +
+                '        </li>' +
+                '        <p class="hint size18 w100 clearfix">输入验证码即可注册用户</p>' +
+                '        <div class="w100 size12 xieyi">' +
+                '        <p class="fl size12 color-gray">输入验证码即代表同意<a href="" class="color-blue">《XXX协议》</a></p>' +
+                '        <a class="fr size16 color-blue">登录</a>' +
+                '        </div>' +
+                '      </ul>' +
+                '</div>' +
+                '' +
+                '<!--注册成功Start-->' +
+                '<div class="dlWrap radius8 loginWrap registrationSuccess">' +
+                '  <p onclick="cancelClick(this)" class="cancelClick cursor"><em class="cancelIcon2"></em></p>' +
+                '      <h3 class="loginTitle loginTitle2 size20">注册成功</h3>' +
+                '      <p class="size12 registered_text">已为您生成密码和用户名，<em class="color-black2">可在此修改</em></p>' +
+                '      <ul class="w100 loginConts w100">' +
+                '      <form action="" method="post">' +
+                '        <li class="loginItem w100 clearfix loginItem2">' +
+                '          <label class="fl li_left size14">密   码 : </label>' +
+                '          <div class="fl li_center radius3">' +
+                '          <input class="size16 color-black" type="password" name="zcpass" id="zcpass" value="123456" />' +
+                '          </div>' +
+                '          <div class="fl li_right">' +
+                '          <span onclick="viewpassBtn(this)" class="viewpassBtn cursor"><em class="eyeIcon"></em></span>' +
+                '          <span class="view_img size12">查看密码</span>' +
+                '          </div>' +
+                '        </li>' +
+                '        <li class="loginItem w100 clearfix loginItem2">' +
+                '          <label class="fl li_left size14">用户名 :</label>' +
+                '          <div class="fl li_center radius3">' +
+                '          <input class="size16 color-black" type="text" name="zcusername" id="zcusername" value="wjk19990921" />' +
+                '          </div>' +
+                '        </li>' +
+                '        <input onclick="regsuccButton(this)" type="button" class="loginbutton radius3 size16 cursor loginbutton2" value="确定" />' +
+                '      </form>' +
+                '      </ul>' +
+                '</div>'
+			
+            
+        </script>
+    </body>
+</html>

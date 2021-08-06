@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <link type="text/css" rel="stylesheet" href="css/frontmodule.css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_style.css?v=0.0.0.9" front="css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_flexslider.css?v=0.0.0.9" front="css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_jqueryuicore.css?v=0.0.0.9" front="css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_jqueryuiselectmenu.css?v=0.0.0.9" front="css" /> 
+  <link type="text/css" rel="stylesheet" href="css/5_themes_default_jqueryuitheme.css?v=0.0.0.9" front="css" /> 
+  <script type="text/javascript">
+       window.PERF_START=new Date;
+       function _splash(page, uid, tid, pid){
+        uid =  uid || 0;  // 这里是用户ID
+        tid =  tid || 0;   // 这里是租户ID
+        pid =  pid || 'unknown';  // 这里是项目标识
+        var now = new Date;
+        var start = window.PERF_START || now;
+        var diff = now - start;
+        var rand = Math.round(Math.random()*1000000);
+        var url= document.location.protocol+'//opsapi.beisen.com/opsapi/AddLog?appName='+pid+'&label=%5Bsplash%5D%20'+page+'&uid='+uid+'&tid='+tid+'&time='+diff+'&type=1&sid='+rand+'&step=0';
+        var img = new Image;
+        img.src = url;
+    }
+    </script> 
+  <script type="text/javascript" src="js/5_themes_default_jquery191.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_dialog.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_jqueryflexslidermin.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_jqueryuicore1.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_jqueryuiposition.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_jqueryuiwidget.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_jqueryuiselectmenu1.js?v=0.0.0.9"></script> 
+  <script type="text/javascript" src="js/5_themes_default_demo.js?v=0.0.0.9"></script> 
+  <script type="text/javascript">var $bs_vars={'st':'http://stnew.beisen.com/','version':'2015.09.17.001','constSite':'http://const.tms.beisen.com'};function vstr(str) {
+         if (typeof ($bs_vars) == 'undefine')
+             return str;
+         var result = str;
+         for (var v in $bs_vars) {
+             var regex = new RegExp('\\$\\{' + v.toString() + '\\}|\\{' + v.toString() + '\\}', 'igm');
+             result = result.replace(regex, $bs_vars[v]);
+         }
+         return result;
+     };</script>
+  <!--引用静态文件:requirejs--> 
+  <script type="text/javascript" src="js/require.js"></script> 
+  <title>招聘详细</title> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <div class="headercontain"> 
+    <div class="logo"> 
+     <div class="logo"> 
+      <img src="images/104003_medias_20141215_20141215logo.jpg?v=635542641034400000" /> 
+     </div>
+    </div> 
+    <!--module:login begin--> 
+    <div class="bs-module"> 
+     <div class="login-link "> 
+      <div class="login-hearder"> 
+       <ul class="header-login" style="display:none"> 
+        <li class="welcome"><span><span class="userName" style="float:none"></span>，欢迎您！</span></li> 
+        <li class="PortalIndex"><a href="member_apply.html"><span>个人中心</span></a></li> 
+        <li class="LogoutUrl"><a href="/User/Account/LogOut"><span>退出</span></a></li> 
+       </ul> 
+       <ul class="header-unLogin" style="display:none"> 
+        <li><a class="loginlink" href="/Portal/Account/Login?returnUrl=%2Fzpdetail%2F620025388"> <span>登录</span> </a></li> 
+        <li><a class="reglink" href="/Portal/Account/Register?returnUrl=%2Fzpdetail%2F620025388"><span> 注册</span></a></li> 
+       </ul> 
+      </div> 
+      <script type="text/javascript">
+ $.post("ajax.php", {type:"1"}, function(data) {
+                var loginView = $(".login-hearder .header-login");
+                var unLoginView = $(".login-hearder .header-unLogin");
+                if (data.name != '') {
+                    loginView.find('.userName').text(data.name);
+                    loginView.show()
+                }
+                else {
+                    unLoginView.show()
+                }
+            }, "json")
+     </script>
+     </div> 
+    </div> 
+    <!--module:login end-->
+    <!--module:internalrecommend begin--> 
+    <div class="bs-module"> 
+     <div class="internalrecommend-default "> 
+      <div class="internaldiv"> 
+       <a class="internal" href="http://neitui.zhiye.com/51talk" target="_blank">内部推荐专区</a> 
+      </div> 
+     </div> 
+    </div> 
+    <!--module:internalrecommend end--> 
+   </div> 
+  </div> 
+  <div class="nav"> 
+   <!--module:menu begin--> 
+   <div class="bs-module"> 
+    <div class="menu-simple "> 
+     <ul id="portalmenu"> 
+      <li><a target="_self" href="index.html" class="">首页</a> </li> 
+      <li><a target="_self" href="jobs.html" class="">全部职位</a> </li> 
+      <li><a target="_self" href="social.html" class="">社会招聘</a> </li> 
+      <li><a target="_self" href="jobs.html" class="">校园招聘</a> </li> 
+      <li><a target="_self" href="jobs.html" class="">实习生招聘</a> </li> 
+      <li><a target="_self" href="about.html" class="">公司介绍</a> </li> 
+      <li><a target="_self" href="contact.html" class="">联系我们</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <!--module:menu end--> 
+  </div> 
+  <div class="contain zpcontain clearfix"> 
+   <div class="clearfix zpdetail eheight"> 
+    <!--module:positionsearch begin--> 
+    <div class="bs-module"> 
+     <div class="positionsearch-smallfresh "> 
+      <a name="jlt"></a> 
+      <div class="zhiweisousuo bodertop"> 
+       <div class="parttitleline"></div> 
+       <div class="parttitle"> 
+        <span class="serchico"></span> 
+        <div class="wordtitle">
+         职位搜索
+        </div> 
+       </div> 
+       <div class="serchcontain"> 
+        <input type="hidden" name="p" value="" id="jobAdClassHidden" />
+        <input type="hidden" name="p" value="" id="jobAdClassHidden" />
+        <input type="hidden" name="p" value="" id="jobAdClassHidden" />
+        <input type="hidden" name="p" value="" id="jobAdClassHidden" />
+        <input type="hidden" name="p" value="" id="jobAdClassHidden" />
+        <input type="hidden" name="p" value="" id="jobAdClassHidden" />
+        <table class="jobserch"> 
+         <tbody>
+          <tr class="serchjob"> 
+           <td class="listtitle">工作地点：</td> 
+           <td> 
+            <ul class="workplace"> 
+             <span class="selectall"><span class="shuxian"></span><a href="/search?r=&amp;p=&amp;c=-1&amp;d=&amp;k=#jlt" class="chooseon" title="全部">全部</a></span> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=1&amp;d=&amp;k=#jlt" title="全国">全国</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=1100&amp;d=&amp;k=#jlt" title="北京市">北京市</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=1103&amp;d=&amp;k=#jlt" title="海淀区">海淀区</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=3100&amp;d=&amp;k=#jlt" title="上海市">上海市</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=3102&amp;d=&amp;k=#jlt" title="徐汇区">徐汇区</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=8100&amp;d=&amp;k=#jlt" title="香港">香港</a> </li> 
+            </ul> </td> 
+          </tr> 
+          <input type="hidden" name="p" value="" id="jobAdClassHidden" /> 
+          <input type="hidden" name="p" value="" id="jobAdClassHidden" /> 
+          <tr class="serchjob"> 
+           <td class="listtitle" title="职位类型">职位类型：</td> 
+           <td> 
+            <ul class="workplace"> 
+             <span class="selectall"><span class="shuxian"></span><a href="/search?r=&amp;p=1^-1&amp;c=&amp;d=&amp;k=#jlt" class="chooseon" title="全部">全部</a></span> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=1^20&amp;c=&amp;d=&amp;k=#jlt" title="北京">北京</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=1^9&amp;c=&amp;d=&amp;k=#jlt" title="上海">上海</a> </li> 
+            </ul> </td> 
+          </tr> 
+          <tr class="serchjob"> 
+           <td class="listtitle">发布时间：</td> 
+           <td> 
+            <ul class="workplace"> 
+             <span class="selectall"><span class="shuxian"></span><a href="/search?r=&amp;p=&amp;c=&amp;d=-1&amp;k=#jlt" class="chooseon">全部</a></span> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=&amp;d=3&amp;k=#jlt" title="三天内">三天内</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=&amp;d=7&amp;k=#jlt" title="一周内">一周内</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=&amp;d=30&amp;k=#jlt" title="一个月内">一个月内</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=&amp;d=90&amp;k=#jlt" title="三个月内">三个月内</a> </li> 
+             <li> <span class="shuxian"></span> <a href="/search?r=&amp;p=&amp;c=&amp;d=180&amp;k=#jlt" title="半年内">半年内</a> </li> 
+            </ul> </td> 
+          </tr> 
+          <input type="hidden" name="p" value="" id="jobAdClassHidden" /> 
+          <input type="hidden" name="p" value="" id="jobAdClassHidden" /> 
+          <input type="hidden" name="p" value="" id="jobAdClassHidden" /> 
+          <tr class="serchjob"> 
+           <td class="listtitle"></td> 
+           <td> <input type="text" class="serchinput" maxlength="50" id="k" name="k" /><span class="serchbtn"><a href="javascript:void(0)" id="searchlink">搜索</a></span></td> 
+          </tr> 
+          <input type="hidden" name="p" value="" id="jobAdClassHidden" /> 
+         </tbody>
+        </table> 
+       </div> 
+      </div> 
+      <script type="text/javascript">
+    function GetParam(key) {
+        return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
+    }
+
+    function myHTMLEnCode(str) {
+        var s = "";
+        if (str.length == 0) return "";
+        s = str.replace(/&/g, "&");
+        s = s.replace(/</g, "<");
+        s = s.replace(/>/g, ">");
+        s = s.replace(/ /g, "&nbsp;");
+        s = s.replace(/\'/g, "&#39;");
+        
+        s = s.replace(/\n/g, "<br>");
+        return s;
+    }
+
+    function myHTMLDeCode(str) {
+        var s = "";
+        if (str.length == 0) return "";
+        s = str.replace(/&/g, "&");
+        s = s.replace(/</g, "<");
+        s = s.replace(/>/g, ">");
+        s = s.replace(/&nbsp;/g, " ");
+        s = s.replace(/&#39;/g, "\'");
+        s = s.replace(/"/g, "\"");
+        s = s.replace(/<br>/g, "\n");
+        return s;
+    }
+
+    var defaultText = "请输入关键字";
+
+    $(document).ready(function () {
+        $("input[name='keyword']").click(function () {
+            $(this).val("");
+        });
+
+        var keyWord = GetParam("k");
+
+        if (keyWord != null) {
+            keyWord = decodeURIComponent(keyWord);
+            keyWord = myHTMLDeCode(keyWord);
+
+            $("input[name='k']").val(keyWord);
+        }
+
+        $("#searchlink").click(function () {
+            var r = GetParam("r");
+            r = (r == null ? -1 : r);
+            var p = GetParam("p");
+            p = (p == null ? "" : p);
+            var c = GetParam("c");
+            c = (c == null ? "" : c);
+            var d = GetParam("d");
+            d = (d == null ? "" : d);
+            var k = $("input[name='k']").val();
+
+            if (k == defaultText)
+                k = "";
+
+            k = myHTMLEnCode(k);
+            k = encodeURIComponent($.trim(k));
+            location.href = "/search" + "?r=" + r + "&p=" + p + "&c=" + c + "&d=" + d + "&k=" + k + '#jlt';
+        });
+
+        var keyStr = $("#k").val();
+        if (!keyStr || keyStr == "") {
+            $("#k").css("color", "#d2cece");
+            $("#k").val(defaultText);
+        }
+
+        $("#k").focus(function () {
+            var v = $(this).val();
+            if (v == defaultText) {
+                $(this).val("");
+                $(this).css("color", "");
+            }
+        });
+
+        $("#k").blur(function () {
+            var v = $(this).val();
+            if (!v || v == "") {
+                $(this).val(defaultText);
+                $(this).css("color", "#d2cece");
+            }
+        });
+
+    });
+</script> 
+     </div> 
+    </div> 
+    <!--module:positionsearch end--> 
+    <div class="zhaopindongtai nomargin bodertop nosame"> 
+     <!--module:newslist begin--> 
+     <div class="bs-module"> 
+      <div class="newslist-newsimple "> 
+       <div class="parttitleline"></div> 
+       <div class="parttitle">
+        <span class="dongtaiico"></span>
+        <div class="wordtitle">
+         招聘动态
+        </div>
+       </div> 
+       <a href="news.html" class="morelinks">更多&gt;&gt;</a> 
+       <div class="dongtailinks"> 
+        <ul> 
+         <li><a href="news_detail.html?110000085" title="51Talk最嗨实习岗来啦~快来一起嗨" target="_blank">51Talk最嗨实习岗来...</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <!--module:newslist end--> 
+    </div> 
+   </div> 
+   <div class="zhiweixiangqing fr"> 
+    <!--module:positiondetail begin--> 
+    <div class="bs-module"> 
+     <div class="positiondetail-simple "> 
+      <script type="text/javascript">
+   
+</script> 
+      <div class="xiangqingtitle"> 
+       <span>业务培训总监/区域培训总监 /销售运 营总监 </span> 
+      </div> 
+      <div class="xiangqingcontain"> 
+       <div class="xiangqingline"></div> 
+       <ul class="xiangqinglist clearfix"> 
+        <li class="ntitle td-HasRecruitCategories">招聘类别：</li> 
+        <li class="nvalue"> 社会招聘 </li> 
+        <li class="ntitle td-HasKind">工作性质：</li> 
+        <li class="nvalue"> 全职 </li> 
+        <li class="ntitle td-HasSalaries">薪资范围：</li> 
+        <li class="nvalue"> 面议 </li> 
+        <li class="ntitle td-HasHeadCount">招聘人数：</li> 
+        <li class="nvalue"> 1 </li> 
+       </ul> 
+       <ul class="xiangqinglist clearfix"> 
+        <li class="ntitle td-HasPostDate">发布时间：</li> 
+        <li class="nvalue"> 2015-11-25 </li> 
+        <li class="ntitle td-HasEndTime">截止时间：</li> 
+        <li class="nvalue"> &nbsp; </li> 
+        <br /> 
+        <div class="xiangqingtext"> 
+         <p>工作地点:</p> 
+         <p> </p> 
+         <br /> 
+         <p>工作职责:</p> 
+         <p> 1、负责电话销售团队的培训框架和体系的搭建；<br />2、负责课程销售入职、技能提升、领导力培训落地及评估；<br />3、负责相关手册的编写和更新；<br />4、负责对外地中心的培训、服务、支持等工作；<br />5、组建培训团队<br /> </p> 
+         <br /> 
+         <p>任职资格：</p> 
+         <p> 1、本科以上学历；<br />2、8年以上工作经验，其中至少3年以上的销售经验,2年的培训SOP梳理经验；<br />3、根据培训需求制定培训计划；<br />4、能独立的根据培训需求确定培训方案；<br />5、能独立的根据培训大纲编写培训讲义，熟练地使用PPT；<br />6、能独立的组织和进行销售培训；<br />7、为人诚实、热情，具创新意识。<br /> </p> 
+        </div> 
+        <div class="xiangqingfooter clearfix"> 
+         <div class="footerbtn fl">
+          <a href="#this" id="apply" url="/Portal/Resume/ResumeItem?jid=620025388&amp;r=%2Fzpdetail%2F620025388">现在申请</a>
+         </div> 
+         <a href="javascript:ReturnToJobList()" class="returnlist">返回职位列表</a> 
+        </div> 
+        <div class="fenxiang clearfix"> 
+         <a href="#this" id="collect">收藏</a> 
+         <div style="padding-top: 10px"> 
+          <div class="shareto" style="float: left; margin-left: 20px; margin-bottom: 20px">
+           分享到：
+          </div> 
+          <div style="float: left" class="jiathis_style"> 
+           <a class="jiathis_button_email"></a> 
+           <a class="jiathis_button_tqq"></a> 
+           <a class="jiathis_button_qzone"></a> 
+           <a class="jiathis_button_xiaoyou"></a> 
+           <a class="jiathis_button_tsina"></a> 
+           <a class="jiathis_button_renren"></a> 
+          </div> 
+         </div> 
+         <script type="text/javascript">
+                var jiathis_config = {
+                    uid: '1527941',
+                    summary: '#招聘#职位详情和申请方式请看：' + window.location.href + ' 。欢迎围观，感谢转发！',
+                    url: window.location.href,
+                    title: '招聘职位：业务培训总监/区域培训总监 /销售运 营总监',
+                              hideMore: true
+                          }
+            </script> 
+         <script type="text/javascript" src="js/jia.js" charset="utf-8"></script> 
+        </div> 
+       </ul>
+      </div> 
+      <script language="javascript">
+  
+    var htmlSuccess = ['<div class="dl_dialog1">',
+                            '	<div class="dl_dialog_wrap" style="text-align:center">',
+                            '       <div class="dl_dialog_icook"><span>收藏成功！</span></div>',
+                            '	</div>',
+                            '</div>'].join("");
+    var htmlError = ['<div class="dl_dialog1">',
+                        '	<div class="dl_dialog_wrap" style="text-align:center">',
+                        '       <div class="dl_dialog_icowarn"><span>收藏失败！</span></div>',
+                        '	<div class="dl_dialog_btn">',
+                        ' <a href="javascript:void(0);" class="dl_btn_grey1" id="okbtn1" ><span>确定</span></a>',
+                        '		<div>',
+                        '	</div>',
+                        '</div>'].join("");
+
+    $.ajax({
+        url: 'ajax.php?v=' + Math.random()
+        , data: {
+            'jobAdId': "620025388"
+        }           
+        , type: 'post'
+        , error: function () { }
+        , success: function (resp) {
+
+           
+
+            var hasA = 1;
+            var isAllow = 2;
+            var allowCount = 1;
+            var jobCategory = "社会招聘";
+            var isLogin = resp.Success;
+            var isAllowApplyInfinity = 3;
+
+            $(document).ready(function () {
+
+                $("#apply").click(function () {
+                    if (!isLogin) {
+                        location.href = 'login.html';
+                        return;
+                    }
+                    if (allowCount == 0 && hasA == 0) {
+
+                        var maxhas = ['<div class="dl_dialog1">',
+                                       '	<div class="dl_dialog_wrap">',
+                                       '       <div class="dl_dialog_icowarn"><span>您可以申请的' + jobCategory + '职位数为0，无法继续申请</span></div>',
+                                       '	<div class="dl_dialog_btn">',
+                                       ' <a href="javascript:void(0);" class="dl_btn_grey1 ok" id="okbtn2"><span>确定</span></a>',
+                                       '		<div>',
+                                       '	</div>',
+                                       '</div>'].join("");
+                        $.modal(maxhas, {
+                            containerCss: {
+                                backgroundColor: "transparent",
+                                borderColor: "transparent",
+                                padding: 0,
+                                width: '360px'
+                            },
+                            onShow: function () {
+                                $("#okbtn2").on("click", function () {
+                                    $.modal.close();
+                                });
+                            }
+                        });
+                    }
+                    else if (hasA == 1 && isAllow == 0) {
+                        var hasas = ['<div class="dl_dialog1">',
+                                       '	<div class="dl_dialog_wrap">',
+                                       '       <div class="dl_dialog_icowarn"><span>您之前已经成功申请过该职位，请不要重复申请！</span></div>',
+                                       '	<div class="dl_dialog_btn">',
+                                       ' <a href="javascript:void(0);" class="dl_btn_grey1 ok" id="okbtn2"><span>确定</span></a>',
+                                       '		<div>',
+                                       '	</div>',
+                                       '</div>'].join("");
+                        $.modal(hasas, {
+                            containerCss: {
+                                backgroundColor: "transparent",
+                                borderColor: "transparent",
+                                padding: 0,
+                                width: '360px'
+                            },
+                            onShow: function () {
+                                $("#okbtn2").on("click", function () {
+                                    $.modal.close();
+                                });
+                            }
+                        });
+                    }
+                    else {
+                        if (hasA == 1) {
+                            var url = $("#apply").attr("url");
+                            window.location.href = url;
+                            return;
+                        }
+                        if (isAllowApplyInfinity == 1) {
+                            var url = $("#apply").attr("url");
+                            $("#apply").attr("href", url);
+                            location.href = url;
+                            showWaitDialage("页面跳转中...");
+                        }
+                        var applyMsg = "您可以申请的" + jobCategory + "职位数为" + allowCount + "，请确认是否继续";
+
+                        var maxhas = ['<div class="dl_dialog1">',
+                                       '	<div class="dl_dialog_wrap">',
+                                       '       <div class="dl_dialog_icowarn"><span>' + applyMsg + '</span></div>',
+                                       '	<div class="dl_dialog_btn">',
+                                       ' <a href="javascript:void(0);" class="dl_btn_grey1 ok" id="okbtn2"><span>确定</span></a>',
+                                       ' <a href="javascript:void(0);" class="dl_btn_grey1 ok" id="cancelBtn"><span>取消</span></a>',
+                                       '		<div>',
+                                       '	</div>',
+                                       '</div>'].join("");
+                        $.modal(maxhas, {
+                            containerCss: {
+                                backgroundColor: "transparent",
+                                borderColor: "transparent",
+                                padding: 0,
+                                width: '360px'
+                            },
+                            onShow: function () {
+                                $("#okbtn2").on("click", function () {
+                                    var url = $("#apply").attr("url");
+                                    $("#apply").attr("href", url);
+
+                                    location.href = url;
+                                    $.modal.close();
+                                    showWaitDialage("页面跳转中...");
+                                });
+
+                                $("#cancelBtn").on("click", function () {
+                                    $.modal.close();
+                                });
+                            }
+                        });
+                    }
+                });
+
+                $("#collect").click(function () {
+
+                    if (isLogin) {
+                        $.post("/Portal/Apply/JobAdCollect", { "jId": "620025388" }, function (data) {
+                        if (!data) {
+                            htmlSuccess = htmlError;
+                        }
+                        $.modal(htmlSuccess, {
+                              containerCss: {
+                                    backgroundColor: "transparent",
+                                    borderColor: "transparent",
+                                    padding: 0,
+                                    width: '150px'
+                                },
+                                onShow: function () {
+                                    $("#okbtn1").click(function () {
+                                        $.modal.close();
+                                    });
+                                }
+                            });
+                            function a() {
+                                $.modal.close();
+                            }
+                            setTimeout(a, 2000);
+                        }, "json");
+                    } else {
+                        location.href = '/Portal/Account/Login' + '?returnUrl=' + location.href;
+                    }
+
+                });
+            })
+        }//success
+    });
+    
+    function ReturnToJobList() {
+        if (document.referrer == null || document.referrer == "" || document.referrer == location.href) {
+            location.href = '/';
+        }
+        else {
+            location.href = document.referrer;
+        }
+        return false;
+    }
+    
+    function showWaitDialage(msg) {
+        var html = ['<div class="dl_dialog1">',
+              '	<div class="dl_dialog_wrap">',
+              '   <div class="dl_tocenter">',
+              '<span class=" dl_ft14_grey2"><b>' + msg + '</b>',
+              '</span>',
+              '</div>',
+              '	</div>',
+              '</div>'].join("");
+
+        $.modal(html, {
+            containerCss: {
+                backgroundColor: "transparent",
+                borderColor: "transparent",
+                padding: 0
+            },
+            onShow: function () {
+                $("div[class='dl_dialog1']").css("padding", "15px");
+            }
+        });
+    }
+</script> 
+     </div> 
+    </div> 
+    <!--module:positiondetail end--> 
+   </div> 
+  </div> 
+  <div class="footer">
+   <span>&copy;2015&nbsp;&nbsp;51talk&nbsp;&nbsp;京ICP备XXX号 京公网安备XXX号 &nbsp;Powered by&nbsp;<a href="http://www.beisen.com" class="footerlogo" target="_blank"></a></span>
+  </div>  
+  <script type="text/javascript">
+        require([
+            vstr('${st}/${version}/cmsportal/skin/js/baiduStatistics.js')
+
+		]);
+    </script>
+  <script type="text/javascript">
+    $(function(){
+    _splash('zhiye_contentpage',0,104003,'new.zhiye.com');
+    });
+    </script>
+ </body>
+</html>

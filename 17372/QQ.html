@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>qq</title>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  
+<style>  
+.qq_top {background:url(images/QQ_img_03.png) no-repeat; height:22px;}  
+#QQ_Advisory{position:fixed;top:150px;right:7px;width:160px;}
+.rightad {font-size:12px; background:url(images/QQ_img_06.png) repeat-y;}  
+#scrollto {position:fixed;bottom:100px; width:30px;right:0px;background:#368bcc;color:#FFF;cursor:pointer; text-align:center;_position:absolute;  display:none}  
+.kfli img{top:10px; position:relative;}
+.kfli {height:40px; line-height:30px; color: #000000; text-align:center;cursor:pointer; border-bottom:1px solid  #D8D8D8; margin:0px 20px; font-size:14px; font-family:"Microsoft YaHei"} 
+.phone{ text-align:center;} 
+.phone_img{ background:url(images/QQ_phone.png) no-repeat; height:29px; text-align:center; background-position:center;}
+.phone .Number{ font-size:18px; font-family:Impact; color: #CC0000; text-align:center;}
+#leftad span,#rightad span{cursor:pointer;}  
+.QQ_bottom{ background:url(images/QQ_img_08.png) no-repeat; height:30px;}
+</style>  
+  
+
+<div id="QQ_Advisory">
+<div id="rightad"><span style="color:#0f8ed2">关闭</span></div> 
+<div id="divMenu">  
+<span style="color:#0f8ed2">关闭</span>
+<div class="qq_top"></div>
+<div class="rightad">  
+<div class="kfli" onclick="openQQ('799129700')"><img src="images/Line_qq.png" border="0" /> 业务咨询</div>  
+<div class="kfli" onclick="openQQ('363576965')"><img src="images/Line_qq.png" border="0" /> 业务咨询</div>  
+<div class="kfli" onclick="openQQ('2193744200')"><img src="images/Line_qq.png" border="0" /> 客服服务</div>  
+<div class="kfli" onclick="openQQ('1315797152')"><img src="images/Line_qq.png" border="0" /> 投诉建议</div> 
+<div class="phone">
+ <p class="phone_img"></p>
+ <p class="Number">XXX</p>
+ <p><img src="images/QQ_weixin.png" /></p>
+</div>  
+</div>  
+<div class="QQ_bottom"></div> 
+</div>    
+</div>  
+<script>  
+    var online = new Array();  
+</script>  
+<script type= "text/javascript" src="http://webpresence.qq.com/getonline?Type=1&799129700:363576965:2193744200:1315797152" ></script>  
+<script type="text/javascript">  
+    for (var i = 0; i < online.length; i++) {  
+        if (online[i] == 0) {  
+            $(".kfli img").eq(i).attr("src","images/not_qq.png");  
+        } else {  
+            $(".kfli img").eq(i).attr("src",'images/Line_qq.png');  
+        }  
+    }  
+         
+     
+   //关闭浮动  
+    $(document).ready(function () {  
+        $("#rightad span").click(function () {  
+            $("#rightad").hide(300);  
+            $("#divMenu").show(300);  
+        });  
+  
+        $("#divMenu").click(function () {  
+            $("#rightad").slideDown(300);  
+            $("#divMenu").hide(200);  
+        });  
+  
+        /*  
+        $("#rightad").mouseleave(function(){  
+        $("#rightad").hide(200);  
+        $("#divMenu").show(300);  
+        });  
+        */  
+    });  
+  
+    window.onscroll = function () {  
+        if (document.documentElement.scrollTop + document.body.scrollTop > 100) {  
+            document.getElementById("scrollto").style.display = "block";  
+        }  
+        else {  
+            document.getElementById("scrollto").style.display = "none";  
+        }  
+    }  
+    function OpenSmallWindows(strURL, scrollbar, width, height, left, top) {  
+        window.open(strURL, "_blank",  
+     "status=no,resizable=0,toolbar=no,menubar=no,scrollbars=" + scrollbar + ",width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + "");  
+    }  
+    function openQQ(qq) {  
+        window.location.href = "tencent://message/?uin=" + qq + "&Site=gbgjs.com&Menu=yes";  
+    }  
+</script>  
+</body>
+</html>

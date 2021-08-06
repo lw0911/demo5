@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>XXX高级定制旅游</title>
+		<meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"  />
+		<link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/popup.mini.js"></script>
+		<script type="text/javascript" src="js/nav.js"></script>
+	</head>
+	<body class="bg">
+		<header id="head">
+			<div class="container">
+				<div class="fadeInLeft wow"><a class="logo" href="index.html"><img src="images/logo.png"/></a></div>
+				<div id="nav" class="fadeInRight animated">
+					  <ul>
+					    <li class="active"><a href="index.html">首　页<span>HOME</span></a></li>
+					    <li ><a href="lifeserver.html">俱乐部服务<span>Rave Club Service</span></a>
+					      <ul>
+					        <li><a href="lifeserver.html">生活服务</a></li>
+					   	  	<li><a href="service.html">出行服务</a></li>
+					   	  	<li><a href="business.html">事业服务</a></li>
+					      </ul>
+					    </li>
+					    <li ><a href="personal.html">私人定制<span>Yc Travel</span></a>
+					    <li ><a href="member.html">会员申请<span>Membership Application</span></a></li>
+					  </ul>
+				</div>
+				<div class="zhuan"><img src="images/zhuan.png"/></div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="member-box">
+				<h2>会员申请表<span>APPLICATION FOR MEMBERSHIP</span></h2>
+				<ul class="member-list">
+					<li>
+						<span> 申请人姓名：</span>
+						<input type="text" class="mem-infor" />
+					</li>
+					<li>
+						<span> 性别：</span>
+						<input name="sex" type="radio" value="1" checked="" class="sex" style="margin-top: 10px;"><label class="hy-xb">男</label>
+						<input name="sex" type="radio" value="2" class="sex" style="margin-top: 10px; margin-left: 20px;"><label class="hy-xb">女</label>
+					</li>
+					<li>
+						<span> 手机：</span>
+						<input type="text" class="mem-infor" />
+					</li>
+					<li>
+						<span> 手机验证码：</span>
+						<input type="text" class="mem-infor" style=" width:175px;" />
+						<button type="button" class="yzm-btn">获取验证码</button>
+					</li>
+					<li>
+						<span> 微信号：</span>
+						<input type="text" class="mem-infor" />
+					</li>
+					<li>
+						<span> 电子邮箱：</span>
+						<input type="text" class="mem-infor" />&nbsp; (选填)
+					</li>
+				</ul>
+				<button type="submit" class="subbtn">提交</button>
+			</div>
+		</div>
+		<!--二维码扫描-->
+		    <div class="side_code">
+				<div class="code_div" id="div1" style="background-color: rgb(218, 184, 102);">
+					<em class="icon_code2 code1"></em>
+					<a href="javascript:;" class="code_top"></a>
+				</div>
+				<div class="code_div code_div2" id="div2" onclick="window.scrollTo(0,0);return false;">
+					<em class="icon_code2 code2" id="em1" style="display: block;"></em>
+				</div>
+		    </div>
+			<div class="side_code side_left" style="display: block;"><em id="qrCode" class="icon_code code3"> </em>
+				<div class="code_hhtravel"><em class="icon_code1 code4"></em></div>
+				<!--<span>关注官方微信<br>接收最新资讯</span>-->
+				<div class="icon_arrow2"></div>
+			</div>
+		    <!--二维码扫描-->
+		<div class="copyright">
+		    	Copyright©2020　XXX高端定制旅游　版权所有　<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action;jsessionid=FkTTXdKpX27NtbKMM7hfJcJK13JS1JYvDvWLJZqnh8CX1BpJlJhx!871614666" target="_blank">粤ICP备123456789号</a>
+	    </div>
+	      <!--弹出框-->
+            <div class="popWeixin">
+			    <em class="closeWeixin popup-close">×</em>
+			    <div class="weixin_qr">
+			        <div class="qr_line1">
+			            <img id="CSPhoto" src="images/logomain5.png">
+			            <div class="weixinline">
+			                <div class="weixin_icon icon_img"></div><div class="weixindesc">微信私人客服</div>
+			            </div>
+			            <div class="weixinline2" id="CSName">客服一</div>
+			        </div>
+			        <div class="erweima">
+			            <img src=" images/arrow.png" class="weixinarrow">
+			            <img id="siderWeixinBigImg" src="images/icon_code.png" alt="请在微信中搜索'XXX'添加私人客服">
+			            <div class="erweima_desc">微信扫码加好友，在线咨询</div>
+			        </div>
+			    </div>
+			    <div class="workingTime">
+			        <img src="images/yc.jpg">
+			    </div>
+			</div>
+			<script type='text/javascript'>
+				(function(){
+					 new PopUp_api({el:'.side_left',html:'.popWeixin'});
+				})()
+			</script>
+	</body>
+</html>

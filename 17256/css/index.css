@@ -1,0 +1,102 @@
+@import "base.css";
+
+/*banner start*/
+.banner{width:100%;height:600px;}
+#full-screen-slider{width:100%;height:600px;float:left;position:relative;}
+#slides{display:block;height:600px;list-style:none;padding:0;margin:0;position:relative}
+#slides li{display:block;width:100%;height:100%;list-style:none; padding:0;margin:0;position:absolute}
+#slides li a{display:block;width:100%;height:100%;text-indent:-9999px}
+#pagination{display:block;list-style:none;position:absolute;right:10%;top:530px;z-index:9900;padding:5px 0px 5px 0;margin:0;}
+#pagination li{display:block;list-style:none;width:10px;height:30px;float:left;margin-right:3px;background:url(../images/btn2.png) no-repeat center bottom}
+#pagination li a{display:block;padding:0;margin:0;text-indent:-9999px; width:10px; height:20px;}
+#pagination li.current{background:url(../images/btn.png) no-repeat center bottom;}
+/*pages scroll start*/
+.flexslider{margin:0px auto;position:relative;width:738px;height:474px;overflow:hidden;zoom:1;}
+.flex-viewport{max-height:474px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+.flexslider .slides{zoom:1;}
+.flex-direction-nav a{width:60px;height:90px;line-height:99em;overflow:hidden;margin:-60px 0 0;display:block;background:url(../images/ad_ctr.png) no-repeat;position:absolute;top:50%;z-index:10;cursor:pointer;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .3s ease;}
+.flex-direction-nav .flex-next{background-position:0 -90px;right:0;}
+.flex-direction-nav .flex-prev{left:0;}
+.flexslider:hover .flex-next{opacity:0.8;filter:alpha(opacity=25);}
+.flexslider:hover .flex-prev{opacity:0.8;filter:alpha(opacity=25);}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:1;filter:alpha(opacity=50);}
+.flex-control-nav{width:100%;position:absolute;bottom:10px;text-align:center;}
+.flex-control-nav li{margin:0 5px;display:inline-block;zoom:1;*display:inline;}
+.flex-control-paging li a{background:url(../images/dot.png) no-repeat 0 -16px;display:block;height:16px;overflow:hidden;text-indent:-99em;width:16px;cursor:pointer;}
+.flex-control-paging li a.flex-active{background-position:0 0;}
+/*pages scroll end*/
+
+/*拓展项目 title start*/
+.tiptitle{ width: 226px; height: 46px; padding-left: 18px;}
+.tiptitle h3{ line-height: 46px; font-weight: 900;}
+.tiptitle span{margin-left: 3px;}
+/*拓展项目 list start*/
+.project li{ float: left; width: 386px; margin-left: 21px; position:relative; height:245px; z-index:10;}
+.project li a.projectimg{ display:block; width:386px; height:245px; position:relative;z-index:12;}
+.project li .hoverblock{ position:absolute; top:0px; left:0px; z-index:14; width:386px; height:205px; padding-top:40px; background-color:rgba(51,51,51,0.5);}
+/*拓展基地 Expansion base start */
+.expbase{ width: 738px; height: 474px; background: url("../images/expbase.jpg") no-repeat left top;}
+.expbaseall{ width:462px; height: 474px;}
+.expbasetxt{ width: 378px;height: 132px;}
+.expbasenav a{ display: block;}
+.expbasenavli{ width: 231px; text-align: center;}
+.expbasenav a.expbasenava{ height: 119px; line-height: 119px;}
+.expbasenav a.expbasenavaall{ height: 237px; line-height: 237px;}
+/*青少年拓展 start*/
+.youth{ height: 130px; background: url("../images/youth_bg.jpg") no-repeat center top;}
+.younthnav{ width:682px;margin: 0px auto;}
+.younthnav li{ float: left;}
+.younthnav li a{ display: block; width:180px; height: 37px; line-height: 37px; margin: 18px 22px;}
+/*客户案例 start*/
+.wcases{ width: 644px;}
+.cases_ad{ height: 244px;}
+.cases_adpic li{ float: left;}
+.cases_adpic li a{ display: block; float: left; width: 322px;}
+.cases_scroll{ width: 556px; height: 488px;}
+
+.demo {width: 555px;height: 487px;font-size: 14px;position:relative; margin: 0px auto; background: red;}
+.demo a.control {position:absolute;display: block;bottom: 10px; width: 20px;height: 28px;cursor: pointer;z-index: 222;background: url(../images/buttons.png) no-repeat}
+.demo a.prev {left: 10px;background-position: 0 0}
+.demo a.next {right: 10px;background-position: -27px 0}
+.demo a.prev:hover {background-position: 0 -30px}
+.demo a.next:hover {background-position: -27px -30px}
+/*----------------------------为保证最佳效果，建议设置如下样式------------------------*/
+.slider {display: none}
+.desc{ background-color: #e9e9e9;}
+.desc p a{ display: block; color: #333333; font-size: 16px;font-weight: bold; text-align: center;}
+.num{ display: none;}
+
+
+/*home news start*/
+.homenewimg{ display: block; width: auto; height: auto;}
+.hothomenew,.hotnewlhome{  width: 336px; height: auto;}
+.hotnewone{ display: block; height: auto;}
+.hotnewlhome li{ float: left;}
+.hotnewlhome li a{display: block; height: auto;float: left; }
+
+
+
+.scrollpic { width: 1200px;margin-top: 30px;}
+#myscroll { display: block;width: 100%;position: relative;height: 315px;overflow: hidden; }
+#myscroll #myscrollbox {display: block;	float: left;position: absolute;left: 0;top: 0; width: 1000000px;}
+#myscroll ul {display: block;float: left;list-style-type: none;padding: 0;margin: 0;}
+#myscroll ul li {display: block;float: left;padding: 0; height: 250px; margin-right: 13px;width:228px; padding: 30px; background: url("../images/teachebg.jpg") no-repeat left top; border: 1px solid #e4e4e4;}
+#myscroll ul li a {display: block;	float: left;width: 114px;padding: 0 57px;height: 114px;}
+#myscroll .intro { margin:0px; padding:0px;width: 228px; color: #000; float: left; text-align: center; margin-top: 25px;}
+#myscroll .intro { margin:0px; padding:0px;width: 228px; color: #000; float: left; text-align: center; margin-top: 25px;}
+#myscroll .intro h5 { font-size: 16px; color:#000000; font-weight:bold;  width: 228px;line-height: 30px; }
+#myscroll .intro p {font-size: 12px;line-height: 20px; color:#666666; line-height:21px; height:45px;overflow: hidden;}
+#myscroll .intro span{ font-size: 12px; color:#a2a2a2; display: block; width: 100%; text-align: center;}
+#myscroll .intro a{ color:#d40300; font-size: 14px; line-height: 25px;}
+
+
+#mybtns {margin: 30px auto 0px auto;width:200px;display: block;	height: 28px;}
+#mybtns a {	width: 87px;height: 28px;	display: block;	float: right;	margin-right: 1px; margin-left:10px;}
+#mybtns a:hover, #myscroll, #mybtns a, #myscroll a:hover .intro, #myscroll a .intro, #myscroll #myscrollbox {-webkit-transition: all 0.5s ease;	-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;transition: all 0.5s ease;}
+#mybtns #left {	background-image: url(../images/jt_l.png);}
+#mybtns #right {background-image: url(../images/jt_r.png);}
+
+
+
+

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="济南XXX环保" />
+<meta name="description" content="济南XXX环保" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="author" content="nissachang">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>济南XXX环保_首页</title>
+<link rel="stylesheet" type="text/css" href="css/xinen.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.nicescroll.min.js" ></script>
+<script src="js/jquery.transit.min.js" ></script>
+<script src="js/xinen.js"></script>
+</head>
+
+<body>
+<!--header start-->
+<div id="header"> <a href="index.htm" class="logo"><img src="images/logo.png" /></a>
+  <div  class="widget-area nav clear">
+    <ul class="clear">
+      <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">产品中心</a>
+            <div class="subnav"> <a href="products.html">盘类</a><a href="products.html">碗类</a><a href="products.html">杯类</a>
+                <a href="products.html">托盘</a><a href="products.html">餐盒</a> </div>
+        </li>
+      <li><a href="news_list.html">资质认证</a>
+        <div class="subnav"> <a href="">证书</a><a href="">质检</a></div>
+      </li>
+      <li><a href="about.html">关于我们</a>
+        <div class="subnav"> <a href="about.html">公司简介</a><a href="cluture.html">企业文化</a><a href="">厂容厂貌</a><a href="">新闻中心</a> </div>
+      </li>
+     <li><a href="contact.html">联系我们</a> </li>
+
+    </ul>
+    <div class="wbsearch"> <a class="wb" href="index.htm">XXX</a> <a class="wx" href="index.htm">EN</a> </div>
+  </div>
+</div>
+<!--header end--> 
+<script src="js/jquery.mScroll.js"></script>
+<div id="content" class="home">
+  <div class="widget-area focus">
+    <div class="frame">
+      <div class="child" ><img src="images/ban01.jpg" /></div>
+      <div class="child" ><img src="images/ban02.jpg" /></div>
+      <div class="child" ><img src="images/ban03.jpg" /></div>
+      <div class="child" ><img src="images/ban01.jpg" /></div>
+    </div>
+    <div class="boxnav">
+      <div class="nav">
+        <div class="l"></div>
+        <div class="r"></div>
+        <div class="bg"> <a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a> </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+$('.index-bannar').css('background','url() 50% 0% no-repeat') ;
+</script></div>
+  <div class="widget-area block1 index-block1">
+    <div class="wrap">
+      <div class="head">
+        <h1>持续创新，赢得客户的尊重和信赖</h1>
+        <p>公司始终以“品质保证、服务专业、顾客满意”为经营宗旨，坚持“诚信、专业、创新”精神，基于客户需求持续创新，赢得客户的尊重和信赖是我们不懈的追求</p>
+      </div>
+      <div class="box"> <a class="iconar a1" href="#">托盘<i></i></a> <a class="icona a2" href="#">其他<i></i></a><a class="icona a3" href="#">餐盒<i></i></a><a class="icona a4" href="#">盘类<i></i></a><a class="iconar a5" href="#">碗类<i></i></a><a class="iconar a6" href="#">杯类<i></i></a>
+        <div class="linearr"></div>
+      </div>
+      <a href="javascript:;" class="pagearr"></a> </div>
+  </div>
+  <script>
+        $('.home .focus .frame').mScroll({
+            auto : 1,                   //自动开始
+            direction : "h",                 //滚动方向,h横向,v纵向
+            dtype : "left",              //正反方向
+            isfocus : 0,                   //是否作为焦点图
+            minsize : 1,                   //最小数量
+            speed : 500,                 //滚动速度
+            easing : "",                  //缓冲类型
+            delay : 5000,                //自动滚动间隔
+            nav : ".home .focus .nav a",                //导航按钮
+            scrollnav : 0,                   //导航滚动
+            nav_direction : "h",                 //导航方向,h横向,v纵向
+            prev : null,      //前一个
+            next : null,      //后一个
+            index : null,     //当前序号
+            count : null,   //总数
+            title : null,  //标题
+            arrow : 1,                   //是否反转
+            cycle : 1,                   //是否循环
+            mousestop : 1,                   //鼠标划入停止
+            mousewheel : 0                    //开启滚轮事件
+        });
+        $(function(){
+            $(window).on('load',function(){
+                $('.bannar .flash').fadeIn(1000);
+            });
+
+            cRotatel();
+            function cRotatel(){
+                var rotateN=0,raf=0;
+                var rotateArr=[153,210,254,306,55,108];
+                function rotatel(){
+                    var n=0;
+                    if(rotateN>360){
+                        rotateN=0;
+                    }
+                    rotateN++;
+                    $('.block1 .linearr').css({ rotate: rotateN});
+                    for(n in rotateArr){
+                        if(rotateN==rotateArr[n]){
+                            $('.block1 .box a').eq(n).addClass('cur').siblings().removeClass('cur');
+                        }
+                    }
+                }
+
+                function infi(){
+                    (function fun(){
+                        rotatel();
+                        raf=requestAnimationFrame(fun);
+                    }());
+                }
+
+                infi();
+
+                $('.block1 .box a').hover(function(){
+                    cancelAnimationFrame(raf);
+                    rotateN=rotateArr[$(this).index()];
+                    $('.block1 .linearr').transition({ rotate: rotateN}, 500, 'linear');
+                    $('.block1 .box a').removeClass('cur');
+                },function(){
+                    infi();
+                });
+            };
+
+            $('.transition').parent().each(function(index, element) {
+                $(this).find('.transition').each(function(index, element) {
+                    transformFix($(this),'transition-delay',index*0.2+'s',false);
+                });
+            });
+
+            var obj=['http://www.haikegroup.com/.block4 .list'];
+            $(window).on('scroll',function(){
+                if(scrollPos($(obj[0]),-100) && !$(obj[0]).hasClass('s')){
+                    $(obj[0]).addClass('s');
+                    cline();
+                    $(obj[0]).find('li').each(function(index, element) {
+                        var $this=$(this);
+                        $this.animateCss('bounce',function(){
+                            $this.css('opacity',1);
+                        });
+                    });
+                };
+
+            });
+
+            var x0,y0;
+            $(".block3").mouseenter(function(event){
+                x0=event.clientX;
+                y0=event.clientY;
+            });
+
+            $(".block3").mousemove(function(event){
+                var x1=event.clientX;
+                var y1=event.clientY;
+                $(".video .piece").each(function(index, element) {
+                    //$(this).css({"transform":"translate("+((x1-x0)*-0.1)+"px,"+((y1-y0)*-0.1)+"px)","-webkit-transform":"translate("+((x1-x0)*-0.1)+"px,"+((y1-y0)*-0.1)+"px)"});
+                    transformFix($(this),'translate('+(((x1-x0)*-0.1)/(index+1))+'px,'+(((y1-y0)*-0.1)/(index+1))+'px)',true);
+                });
+            });
+
+            function cline(){
+                var elm= document.getElementById("line");
+                var paper = Raphael(elm);
+                var line = paper.path("M89, 349L211, 89L421, 247L335,543L659, 457L753,191L992, 446L1141, 229").attr({
+                    stroke: '#fff',
+                    'stroke-width': 2,
+                    'stroke-dasharray': '-'
+                });
+                var i=0;
+                $('path').attr('stroke-dasharray','0,2000');
+                var ref;
+                (function fun(){
+                    if(i<5000){
+                        i+=20;
+                    }else{
+                        cancelAnimationFrame(raf);
+                    }
+                    $('path').attr('stroke-dasharray',i+',2000');
+                    raf=requestAnimationFrame(fun);
+                }());
+            }
+        });
+    </script>
+  <div class="block2 index-block2">
+    <div class="wrap">
+      <ul class="list">
+        <li class="widget-area" style="margin-left:0"><!--  --> 
+          <a href="haike.html#haike3" style="margin-left:0">
+          <div class="img scaleimg"><img src="images/about.png" alt=""></div>
+          <h3>厂容厂貌</h3>
+          <p></p>
+          </a> </li>
+        <li class="widget-area"><!--  --> 
+          
+          <a href="haike.html#haike4">
+          <div class="img scaleimg"><img src="images/honor.png" alt=""></div>
+          <h3>资质认证</h3>
+          <p></p>
+          </a> </li>
+        <li class="widget-area"><!--  --> 
+          
+          <a href="haike.html#haike2">
+          <div class="img scaleimg"><img src="images/cluture.png" alt=""></div>
+          <h3>企业文化</h3>
+          <p></p>
+          </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer-nav">
+  <div class="footer-bonav">
+    <dl>
+      <dt><a href="#">产品中心</a></dt>
+      <dd><a href="#">盘类</a></dd>
+      <dd><a href="#">碗类</a></dd>
+      <dd><a href="#">杯类</a></dd>
+      <dd><a href="#">托盘</a></dd>
+      <dd><a href="#">餐盒</a></dd>
+      <dd><a href="#">其他</a></dd>
+    </dl>
+    <dl>
+      <dt><a href="#">资质认证</a></dt>
+      <dd><a href="#">证书</a></dd>
+      <dd><a href="#">质检</a></dd>
+    </dl>
+    <dl>
+      <dt><a href="#">关于我们</a></dt>
+      <dd><a href="#">公司简介</a></dd>
+      <dd><a href="#">企业文化</a></dd>
+      <dd><a href="#">厂容厂貌</a></dd>
+      <dd><a href="#">新闻中心</a></dd>
+    </dl>
+  </div>
+  <div class="footer-info">
+    <h2>济南XXX环保科技股份有限公司</h2>
+    <div class="tel">联系电话：XXX    XXX</div>
+    <div class="footer-add"> 办公地址：XXX<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C座11楼<br/>
+      工厂地址：XXX<br/>
+      传       真：0531-XXX <br/>
+      邮       箱：XXX</div>
+  </div>
+</div>
+<div id="footer">
+  <div class="group-circle">
+    
+      <div class="copy">Copyright © 2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>. 鲁ICP备XXX号</div>
+      <a href="#" class="author">网站建设：XXX</a> </div>
+  
+</div>
+</body>
+</html>

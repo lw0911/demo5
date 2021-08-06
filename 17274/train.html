@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="" content=""/>
+		<meta name="Description" content=""/>
+		<meta name="Keywords" content=""/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>教育培训</title>
+	</head>
+	<body>
+		<div class="com-top-bg"></div>
+		<div class="sy-box">
+			<div class="com-nav clearfix">
+				<div class="com-logo">
+					<img src="img/logo.png" alt="logo" />
+				</div>
+				<ul class="com-nav-bg clearfix">
+					<li class="com-nav-list">
+						<a href="index.html">首页</a>
+					</li>
+					<li class="com-nav-list">
+						<a href="sfgk.html">书法概况</a>
+						<ol class="com-sub-box">
+							<li><a href="sfgk.html">书协简介</a></li>
+							<li><a href="sfgk.html">书协动态</a></li>
+							<li><a href="sfgk.html">主席团名单</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="###">书法论坛</a>
+						<ol class="com-sub-box">
+							<li><a href="">书协咨询</a></li>
+							<li><a href="">书协交流</a></li>
+							<li><a href="">书协活动</a></li>
+							<li><a href="">书协公告</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="">书法欣赏</a>
+						<ol class="com-sub-box">
+							<li><a href="">历代名帖</a></li>
+							<li><a href="ybjz.html">硬笔佳作</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="member.html">会员风采</a>
+					</li>
+					<li class="com-nav-list current-nav">
+						<a href="train.html">教育培训</a>
+						<ol class="com-sub-box">
+							<li><a href="train.html">培训基地</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="hyzx.html">会员中心</a>
+						<ol class="com-sub-box">
+							<li><a href="hyzx.html">入会细则</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="contact.html">联系我们</a>
+					</li>
+				</ul>
+			</div>
+			<!--banner-->
+			<div class="com-banner-box">
+				<img src="img/small-banner-01.jpg" alt="" />
+			</div>
+			<!----------主体--------->
+			<div class="wrapper">
+				<ul class="com-title-box clearfix">
+					<li class="com-title">教育培训</li>
+					<li class="com-title-more clearfix">
+						<a href="index.html" class="crumbs">首页</a>
+						<span class="crumbs">&gt;</span>
+						<a href="train.html" class="crumbs">教育培训</a>
+					</li>
+				</ul>
+			</div>
+			<div class="wrapper">
+				<ul class="train-box clearfix">
+					<li class="train-pic-box">
+						<div class="train-pic">
+							<a href="training-base.html">
+								<img src="img/train-pic02.jpg" alt="" />
+							</a>
+						</div>
+						<a class="train-text" href="training-base.html">
+							一手好字培训教育
+						</a>
+					</li>
+					<li class="train-pic-box">
+						<div class="train-pic">
+							<a href="training-base.html">
+								<img src="img/train-pic03.jpg" alt="" />
+							</a>
+						</div>
+						<a class="train-text" href="training-base.html">
+							一手好字培训教育
+						</a>
+					</li>
+					<li class="train-pic-box">
+						<div class="train-pic ">
+							<a href="training-base.html"><img src="img/train-pic04.jpg" alt="" /></a>
+						</div>
+						<a class="train-text" href="training-base.html">
+							一手好字培训教育
+						</a>
+					</li>
+				</ul>
+				<ol class="page-box train-page clearfix">
+					<li class="page-float"><a class="page">&lt;</a></li>
+					<li class="page-float"><a class="page current-page" href="">1</a></li>
+					<li class="page-float"><a class="page" href="">2</a></li>
+					<li class="page-float"><a class="page" href="">3</a></li>
+					<li class="page-float"><a class="page" href="">4</a></li>
+					<li class="page-float"><a class="page" href="">5</a></li>
+					<li class="page-float"><a class="page">&gt;</a></li>
+				</ol>
+			</div>
+			<!--页脚-->
+			<div class="com-footer">
+				<div class="wrapper">
+					<ul class="footer-message clearfix">
+						<li>版权所有：XXX硬笔书法家协会</li>
+						<li>联系电话：XXX</li>
+						<li>联系地址：XXX</li>
+						<li>邮编：XXX</li>
+					</ul>
+					<p class="copyright">Copyright &copy; XXX 技术支持<a href="/">XXX</a> </p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//导航
+	$(".com-nav-list").mouseenter(function(){
+		$(this).children(".com-sub-box").stop(false,true).slideDown();
+		}).mouseleave(function(){
+		$(this).children(".com-sub-box").stop(false,true).slideUp();
+		});
+	$(".com-nav-list").click(function(){
+		$(this).addClass("current-nav").siblings().removeClass("current-nav");
+	});
+});
+</script>

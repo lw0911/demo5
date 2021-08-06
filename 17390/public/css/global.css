@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin:0;padding:0;word-wrap:break-word}
+body, html, input {font:14px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;color:#666;}
+table {border-collapse:collapse;border-spacing:0;}
+img {border:none}
+a{color:#666; text-decoration:none;}
+a:hover{color:#159301; text-decoration:underline;}
+ul li{ list-style-type:none;}
+
+/**清楚浮动**/
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+/**顶部**/
+.top{ width:100%; height:auto; background:#216f0e;}
+.topMain{width:1200px; height:27px; color:#fff; margin:0 auto; font-size:12px; line-height:27px;}
+.topMain p{ float:right;}
+.topMain span{ float:left;}
+
+
+/**banner**/
+#kinMaxShow{visibility:hidden;width:100%; height:750px; overflow:hidden;}
+
+/**导航**/
+.nav{ width:100%; height:auto; background:url(../images/nav.png) repeat-x; position:absolute; top:27px; z-index:99;}
+.navMain{ width:1200px; height:90px; margin:0 auto;}
+.logo{ width:400px; height:90px; float:left;}
+.navList{ width:730px; height:90px; float:right;}
+.navList ul li{ float:left;}
+.navList ul li a{ line-height:90px; padding:35px 24px; color:#FFF; font-size:14px;}
+.navList ul li a:hover{ color:#159301; background:#fff; text-decoration:none; border-bottom:1px solid #127402;}
+
+/**产品展示**/
+.product{ width:100%; height:720px; background:url(../images/jianbian.jpg) repeat-x; overflow:hidden;}
+.productMain{ width:1200px; margin:0 auto;}
+.ptitle{ background:url(../images/products.png) no-repeat; width:1200px; height:60px; margin-top:50px; margin-bottom:15px;}
+.ptitle span{ float:right; margin-top:35px;}
+.productMain ul li{ width:275px; height:235px; background:url(../images/cpbj.jpg) top no-repeat; margin-top:30px; float:left; margin-left:12px; margin-right:13px; margin-bottom:15px; display:none;}
+.productMain ul li p{ text-align:center; line-height:50px;}
+.productMain ul li img{ margin-left:6px; margin-top:6px;}
+
+/**关于我们**/
+.aboutMain{ width:1200px; height:400px; margin:0 auto;}
+.pabout{ background:url(../images/about.png) no-repeat; width:1200px; height:60px; margin-bottom:30px;}
+.pabout span{ float:right; margin-top:35px;}
+
+.aboutimg{ width:400px; height:265px; float:left; margin-right:25px;}
+.aboutcon{ width:500px; height:260px; float:left;}
+.aboutjj{ line-height:30px; margin-bottom:25px; margin-top:10px;}
+.aboutcon ul li{ width:112px; float:left; text-align:center; margin-left:6px; margin-right:7px;}
+.aboutcon ul li p{ line-height:40px;}
+.honorimg{ float:right; margin-right:20px;}
+
+/**案例展示**/
+.anli{ width:100%;}
+.anliMain{ width:1200px; height:320px; margin:0 auto;}
+.anlititle{ background:url(../images/anli.png) no-repeat; width:1200px; height:60px; margin-bottom:5px;}
+.anlititle span{ float:right; margin-top:35px;}
+.anliList{ width:1200px; height:230px; background:url(../images/anli.jpg) no-repeat;}
+.anliList ul li{ float:left; margin-top:15px; margin-left:20px; margin-right:15px; display:none;}
+
+/**新闻和联系**/
+.xwlx{ width:100%;}
+.xwlxMain{ width:1200px; height:350px; margin:0 auto;}
+.newsMain{ width:440px; float:left;}
+.ntitle{ background:url(../images/news.png) no-repeat; width:440px; height:60px; margin-bottom:5px;}
+.ntitle span{ float:right; margin-top:35px;}
+
+.consMain{ width:685px; float:right;}
+.ctitle{ background:url(../images/lianxi.jpg) no-repeat; width:685px; height:60px; margin-bottom:5px;}
+.ctitle span{ float:right; margin-top:35px;}
+
+.newsMain ul li{line-height:40px; margin-top:10px; border-bottom:1px dashed #ccc;}
+.newsMain ul li span{ float:right; font-size:12px; color:#aaa;}
+.newsMain ul li a{ font-size:16px;}
+.newsMain ul li b{ margin-right:5px; color:#159301;}
+
+.conmap{ width:370px; height:235px; float:left; background:#ccc; margin-top:15px;}
+.conxx ul{ float:right; margin-top:15px; width:285px; height:235px;}
+.conxx ul li{line-height:38px;}
+
+/**底部**/
+.foot{ text-align:center; line-height:30px; font-size:12px; background:#159301; padding:15px 0px; color:#fff; margin-top:20px; font-family:Arial, Helvetica, sans-serif;}
+.foot a{ color:#fff;}
+
+@-webkit-keyframes bounceIn{
+0%{opacity:0;
+-webkit-transform:scale(.3)}
+50%{opacity:1;
+-webkit-transform:scale(1.05)}
+70%{-webkit-transform:scale(.9)}
+100%{-webkit-transform:scale(1)}
+}
+@-moz-keyframes bounceIn{
+0%{opacity:0;
+-moz-transform:scale(.3)}
+50%{opacity:1;
+-moz-transform:scale(1.05)}
+70%{-moz-transform:scale(.9)}
+100%{-moz-transform:scale(1)}
+}
+
+#al1{-webkit-animation:bounceIn 1s .2s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al2{-webkit-animation:bounceIn 1s .4s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al3{-webkit-animation:bounceIn 1s .6s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al4{-webkit-animation:bounceIn 1s .8s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al5{-webkit-animation:bounceIn 1s 1.0s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al6{-webkit-animation:bounceIn 1s 1.2s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al7{-webkit-animation:bounceIn 1s 1.4s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}
+#al8{-webkit-animation:bounceIn 1s 1.6s ease both; -moz-animation:bounceIn 1s .2s ease both; display:block;}

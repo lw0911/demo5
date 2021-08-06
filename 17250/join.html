@@ -1,0 +1,988 @@
+<!doctype html>
+<html>
+<head>
+<!-- 字符编码 -->
+<meta charset="utf-8">
+<!-- IE兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!-- 采用高速模式渲染（目前仅有360支持） -->
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="">
+<meta name="description" content="互联网教育正在颠覆传统教育行业,随着业务范围的扩大,为了满足更大的发展需求,XXX教育诚邀热衷有识之士合作共赢,共同创造互联网教育的美好未来！">
+<meta name="baidu-site-verification" content="wcMMFTPk07" />
+<title>商务合作-共谋互联网教育大业-XXX教育</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/teachers.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery-1.7.2.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+<!--  <script type="text/javascript" src="js/hotspot.min.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!-- 浏览器判断 -->
+<!--[if lt IE 7]>
+    <script>window.location.href='./error.html'</script>
+    <![endif]-->
+<script src="js/jquery.lazyload.js"></script>
+
+<!--[if !IE]><!-->
+<script src="js/haifengLibRoll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script>
+        $(function(){
+            window.scrollReveal = new scrollReveal({ reset: true, move: '50px'});
+        })
+    </script> -->
+<!--<![endif]-->
+<script>
+        $(function(){
+            $("img.lazy").lazyload({
+                effect : "fadeIn"
+            });
+
+        })
+
+    </script>
+<script>
+        function test(){
+            $("#LXB_CONTAINER" ).hide();
+        }
+        $(function(){
+            setInterval(test, 100 )
+
+        })
+
+    </script><script type="text/javascript">
+     $(function(){
+         $(".nav_menu .nav_menu_item").hover(function(){
+            $(this).find('ul').show();
+          },function(){
+            $(this).children('ul').stop().slideUp('fast');
+          } );
+        /*$(".nav_menu .nav_menu_item").hover(function(){
+            $(this).children('ul').stop().slideDown('fast');
+            console.info('down')
+          },function(){
+              $(this).children('ul').stop().slideUp('fast');
+            console.info('up')
+          } );*/
+            //防止有些浏览器出现异常
+           /* $(".nav").mouseleave(function(){
+              $(".nav_menu" ).children('ul').stop().slideToggle('fast');
+          } )
+            $(".nav_submenu").mouseleave(function(){
+                $(".nav_menu" ).children('ul').stop().slideUp('fast');
+            } ) */
+
+        var select_title=location.pathname+location.search;
+         console.info(select_title)
+        $(".nav_menu_item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    //console.info(href)
+                    if(select_title.indexOf(href)>0){
+                        $(this ).parents('li' ).find('.no_is_sub').addClass('active');
+                    }
+                }
+            })
+        })
+        $(".nav_submenu-item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    if(select_title.indexOf(href)>0){
+                        $(this ).addClass('active');
+                    }
+                }
+            })
+        })
+     })
+</script>
+    <script>
+    /*广告系统参数传递*/
+    function GetUrlArgsObj() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var args=GetUrlArgsObj();
+    if(typeof (args.adid)=="undefined"){
+        args.adid="";
+    }
+    var adid=args.adid;
+    $(function(){
+        if(adid){
+            $('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if(typeof (href)!="undefined"&&!href.match(/\#/)&&href.indexOf('javascript')==-1){
+
+                    console.info(href)
+                    if(!href.match(/\?/)){
+                        adid='?adid='+args.adid;
+                    }else{
+                        adid='&adid='+args.adid;
+                    }
+                    if(href.indexOf("//")!=-1){
+                        $(this ).attr('href',href+adid);
+                    }else{
+                        var cur_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        $(this ).attr('href',cur_protocol+ location.hostname +'/' + href+adid);
+                    }
+                }
+            });
+        }
+
+
+        $("#lunbo li" ).click(function(){
+            var href=$(this ).attr('href');
+            window.open(href+adid);
+        })
+
+    })
+
+    function jumpUrl( link ){
+        var jump_link = link;
+        if(typeof (args.adid) != "undefined"&&args.adid ){
+            if(jump_link.match(/\?/)){
+                jump_link = link+'#adid='+args.adid;
+            }else{
+                jump_link = link+'?adid='+args.adid;
+            }
+
+        }
+        window.open(jump_link);
+    }
+</script>
+    <script type="text/javascript">window._pt_lt = new Date().getTime();</script>
+</head>
+<script type="text/javascript">
+  window._pt_sp_2 = [];
+  _pt_sp_2.push('setAccount,68d72831');
+  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  
+  (function() {
+    var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+    atag.src = _protocol + 'js.ptengine.cn/js/pta.js';
+    var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+    stag.src = _protocol + 'js.ptengine.cn/js/pts.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+  })();
+</script>
+<body >
+<!--header导航开始-->
+<div class="header">
+    <div class="container clearfix">
+        <div class="header_nav"> <a class="logo fl" href="#"> <img src="images/logo.png" alt=""> </a>
+            <ul class="nav_menu ">
+                <li class="nav_menu_item "> <a class="no_is_sub" href="index.html">首页</a> </li>
+                <li class="nav_menu_item "> <a class="no_is_sub" onclick="jumpUrl('');">课程介绍</a>
+                    <ul class="nav_submenu ">
+                        <li class="nav_submenu-item "><a onclick="jumpUrl('');">学科辅导</a></li>
+                        <li class="nav_submenu-item "><a onclick="#">自主招生辅导</a></li>
+                    </ul>
+                </li>
+                <li class="nav_menu_item"> <a class="no_is_sub" href="#">XXX优势</a>
+                    <ul class="nav_submenu ">
+                        <li class="nav_submenu-item"><a href="#">教研质量</a></li>
+                        <li class="nav_submenu-item"><a href="#">师资力量</a> </li>
+                        <li class="nav_submenu-item"><a onclick="#">学员成绩</a> </li>
+                        <li class="nav_submenu-item"><a href="#">XXXQ&amp;A</a> </li>
+                    </ul>
+                </li>
+                <li class="nav_menu_item "> <a class="no_is_sub" href="#">名师公开课 </a>
+                    <ul class="nav_submenu " style="display: none;">
+                        <li class="nav_submenu-item"><a href="#">公开课课表页面</a> </li>
+                    </ul>
+                </li>
+                <li class="nav_menu_item "> <a class="no_is_sub" onclick="#">自测工具 </a>
+                    <ul class="nav_submenu ">
+                        <li class="nav_submenu-item"><a onclick="#">志愿填报</a></li>
+                        <li class="nav_submenu-item"><a onclick="#">专业倾向测试</a></li>
+                    </ul>
+                </li>
+                <li class="nav_menu_item "> <a class="no_is_sub" href="#">在线学习中心</a>
+                    <ul class="nav_submenu ">
+                        <li class="nav_submenu-item"><a href="#">平台简介</a></li>
+                        <li class="nav_submenu-item"><a href="#">如何上课</a> </li>
+                        <li class="nav_submenu-item"><a onclick="#">选课中心</a></li>
+                    </ul>
+                </li>
+                <li class="nav_menu_item "> <a class="no_is_sub" href="#">客户端下载 </a> </li>
+            </ul>
+            <div class="header_tel fr"> <img src="images/phone.png" alt="" class="fl phone_img"> <a>XXX</a> </div>
+        </div>
+    </div>
+</div>
+<!--header导航结束--> 
+<script>
+    $(document).ready(function () {
+        var p = 0, t = 0;
+
+        $(window).scroll(function (e) {
+            p = $(this).scrollTop();
+            if (t <= p) {//下滚
+                $("#layout_header_menu").hide();
+            }
+            else {//上滚
+                $("#layout_header_menu").show();
+            }
+            setTimeout(function () { t = p; }, 0);
+        });
+    });
+
+</script> 
+<!-- End: Header -->
+<link rel="stylesheet" href="css/course.css">
+<!-- 轮播图片 专区 -->
+<div class="clearfix banner" > <img src="images/join.jpg" aalt="加入我们-职场精英通缉令- XXX教育" title="加入我们-职场精英通缉令- XXX教育"/> </div>
+<!-- 第二屏：招牌一：学科培优  开始 --> 
+<script>
+    $(function(){
+        $(window).scroll( function() {
+            var body_offset_top=$('html,body' ).offset().top;
+            if(body_offset_top<=-500){
+                $("#left-nav" ).css({position:'fixed',top:'100px'})
+                //$("#jianliyouxiang").css({position:'fixed',top:'62px'})
+            }else{
+                $("#left-nav" ).css({position:'relative',top:0})
+                //$("#jianliyouxiang" ).css({position:'relative',top:0})
+            }
+        } );
+        $("#left-nav [href=#bb]" ).click(function(){
+            $(this ).addClass('currt' ).parents('li').siblings().find('a').removeClass('currt' )
+        }).each(function(i){
+            $(this ).click(function(){
+                var test=$(".sidebar-mian" ).eq(i ).offset().top;
+                $('html,body' ).stop().animate({scrollTop:test-90},500);
+            })
+        })
+        $(".sidebar-mian .join_boxR ul li" ).each(function(){
+            $(this ).parents('.join_boxR' ).find('li' ).each(function(j){
+                $(this ).click(function(){
+                    $('html,body' ).stop().animate({scrollTop:$(this ).parents('.sidebar-mian' ).find('h3' ).eq(j ).offset().top-140},500);
+                })
+
+            })
+        })
+
+    })
+</script>
+<div class="featurette  " id="join_page">
+    <div class="sidebar-content">
+        <div id="left-nav" class="sidebar_a fl">
+            <ul>
+                <li class="title"> <a href="javascript:;" > 加入XXX</a> </li>
+                <li > <a  name=""  style="color:#333;
+   font-size:16px;">XXX招聘（全职）</a> </li>
+                <hr>
+                <li> <a href="#bb" target="_self" class="currt">市场营销部</a> </li>
+                <li> <a href="#bb" target="_self" >技术开发部</a> </li>
+                <li> <a href="#bb" target="_self" >学科辅导产品部</a> </li>
+                <li> <a href="#bb" target="_self" >客户关系部</a> </li>
+                <li> <a href="#bb" target="_self" >人事行政部</a> </li>
+                <li> <a href="#bb" target="_self" >留学产品部</a> </li>
+                <li style="height:60px;line-height:60px;"> <a href="#bb" name="" style="color:#333;
+   font-size:16px;">XXX招聘（兼职）</a> </li>
+                <hr>
+                <li style="height:60px;line-height:60px;"> <a href="#bb" name="" style="color:#333;
+   font-size:16px;">福利待遇</a> </li>
+            </ul>
+            <div style="font-size:12px;text-align:left;margin-left:30px;margin-bottom:30px;margin-top:-30px;font-family: Microsoft YaHei;">
+                <p style="color:#333;  line-height:28XXX招聘（兼职px;margin:0;
+   font-size:14px;">简历投递邮箱:</p>
+                <p style="color: #00a0e9;">career@hfjy.com<br />
+                    并请标注【姓名+申请岗位】</p>
+            </div>
+        </div>
+        <div class="sidebar_b fr">
+            <p id="jianliyouxiang" class="join_t ">简历投递邮箱：career@hfjy.com，简历标题请注明【姓名+申请XX岗位】</p>
+            <!--市场营销部开始 -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxL"> <img src="images/join01.jpg" alt="" /> </div>
+                    <div class="join_boxR">
+                        <h1 class="h1"><a name="aa">市场营销部</a></h1>
+                        <ul>
+                            <li> <a href="#SEM经理">SEM经理</a> </li>
+                            <li> <a href="#新媒体运营">新媒体运营</a> </li>
+                            <li> <a href="#渠道专员">渠道专员</a> </li>
+                            <li> <a href="#网站编辑">网站编辑</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--【SEM经理】  -->
+                <h3 class="h3"><a class="hf-mouseenter" name="SEM经理" >【SEM经理】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、 负责公司SEM投放策略与优化策略制定； <br/>
+                    2、 独立完成SEM竞价的投放工作，完成投放指标； <br/>
+                    3、 熟练使用百度、谷歌、搜狗、搜搜等搜索引擎推广后台； <br/>
+                    4、 定期和搜索媒体进行沟通，了解其产品变化，并灵活应用到方案当中； <br/>
+                    5、 针对不同产品特性及网民搜索习惯，确定优化关键字及着陆页面（具备SEO\UEO经验）； <br/>
+                    6、 定期提供数据分析报告，并找出相应的改进方法，保证SEM推广正常有效推进； <br/>
+                    7、 监控和研究竞争对手及其他网站搜索营销策略，提出调整方案，不断优化账户提高ROI。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、 熟悉百度、谷歌、搜狗等搜索引擎账户基本操作方法，有三年以上百度SEM实操经验，操作过大型SEM账户； <br/>
+                    2、 对教育、电商等行业网络推广工作有经验者优先； <br/>
+                    3、 热爱互联网，精通目前主要搜索引擎（Google、百度等）优化的原理和策略； <br/>
+                    4、 有缜密的数据分析能力，能够使用各种数据平台整合分析数据，找出问题，并提出可行性计划，负责实施； <br/>
+                    5、 对于广告素材有一定的效果判断能力； <br/>
+                    6、 较强的工作责任心及良好的团队合作精神，思维活跃，创新意识，有较好的知识分享意识和沟通意识，有良好的价值观和人生观。 <br/>
+                    <br/>
+                </p>
+                <hr>
+                <!--新媒体运营】-->
+                <h3 class="h3"><a>【新媒体运营】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"/> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、负责移动互联网自媒体平台（微信、微博或APP、QQ营销等）的日常内容运营及推广； <br/>
+                    2、负责为粉丝策划与提供优质、有高度传播性的内容； <br/>
+                    3、负责策划并执行新媒体营销线日常活动及跟踪维护，根据项目推送各种内容； <br/>
+                    4、负责增加粉丝数，提高关注度和粉丝的活跃度，并及时与粉丝互动； <br/>
+                    5、挖掘和分析用户使用习惯、情感及体验感受，及时跟进热点，有效完成专题策划活动； <br/>
+                    6、充分了解用户需求，收集用户反馈，分析用户行为及需求，从而反向推进运营工作的改进等。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、市场营销、新闻或传播学、广告学、社会学、心理学等专业优先； <br/>
+                    2、一年以上网站或新媒体运营工作经验，有微信运营经验的优先； <br/>
+                    3、热爱新媒体行业和自媒体运营，对微信、微博、互联网等平台较为熟悉，对移动互联网发展潮流高度关注，思维活跃、有创意； <br/>
+                    4、具有良好的理解、沟通和学习能力，较强的洞察力和社会交往能力，具有比较完善的知识结构，文字表达能力强； <br/>
+                    5、对工作极具热情，优秀的团队合作精神、积极主动，创造性强。 <br/>
+                    <br/>
+                </p>
+                <hr>
+                <!--【渠道专员】-->
+                <h3 class="h3"><a>【渠道专员】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、负责根据公司发展战略策划且执行校园品牌推广方案（即XXX校园行）； <br/>
+                    2、负责组织开展各高中的专题讲座、市场调查、广告宣传等工作； <br/>
+                    3、培养校园联络渠道，并维护合作关系。 <br/>
+                    <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、本科以上学历，2年或以上校园推广经验，熟悉学生群体，拥有一定的学校资源； <br/>
+                    2、踏实认真，思路开阔，思维敏捷，富有创新精神； <br/>
+                    3、具有较强的沟通表达能力及一定的谈判技巧； <br/>
+                    4、具备较强的组织协调能力及兼职人员的管理能力，亲和力强； <br/>
+                    5、能够承担一定工作压力，富有团队合作精神和较强的集体荣誉感。 <br/>
+                </p>
+                <hr>
+                <!--【网站编辑】  -->
+                <h3 class="h3"><a>【网站编辑】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top"  src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、负责“录取啦 |
+                    高中升学资讯交流平台”（http://luqu.la）的内容创作，包括且不限于以下类型：高中升学资讯报道、教育类热点资讯时评、高中学习相关、升学相关的干货技巧、高考改革、自主招生等各种国内外招生升学政策的解读分析、高校校园情报、大学专业志愿选择攻略、家庭教育相关指导； <br/>
+                    2、提高网站内容量、内容专业度及用户黏性； <br/>
+                    3、及时把握热点话题及用户需求，完成专题栏目策划，通过内容为目标人群（高中生家庭）创造价值。 </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、有良好的文字功底； <br/>
+                    2、具有独到的创新思想和良好的栏目策划能力，并有一定的组织协调能力以及专题策划执行能力； <br/>
+                    3、具有良好的数据分析能力、沟通、表达、协调能力，责任心强，能够承受一定强度的工作压力； <br/>
+                    4、熟悉互联网热点，有根据需求结合不同热点撰稿的经验，有独特视角及写作风格者优先； <br/>
+                    5、一年以上互联网应用运营经验，有文字编辑、微博微信、论坛运营相关内容运营工作经验优先； <br/>
+                    6、熟悉高考改革新政等国内教育改革动态者、有教育行业内新闻媒体工作经验者优先； <br/>
+                    7、具有良好的团队协作能力，性格开朗，思维活跃。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!--市场营销部结束 --> 
+            <!--技术开发部开始 -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxL"> <img src="images/join02.jpg" alt="" /> </div>
+                    <div class="join_boxR">
+                        <h1 class="h1"><a name="aa">技术开发部</a></h1>
+                        <ul>
+                            <li> <a>IOS工程师</a> </li>
+                            <li> <a>Android工程师</a> </li>
+                            <li> <a>前端工程师</a> </li>
+                            <li> <a>测试工程师</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--IOS工程师 -->
+                <h3 class="h3"><a>【IOS工程师】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、参与或独立负责IOS应用程序的设计、开发工作； <br/>
+                    2、根据产品部门提出的产品设计,进行IOS版本应用的实现； <br/>
+                    3、对IOS平台开发技术进行研究,根据开发过程中的体验对产品提出改进建议； <br/>
+                    4、具备独立解决问题的能力，对新技术敏感、有较强的自学能力、具备良好的职业操守，能够承受工作压力，态度积极，认真负责。 <br/>
+                    <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、至少2年以上IOS开发经验（含自己开发的产品），独立完成过IOS软件的设计和开发工作； <br/>
+                    2、熟悉Xcode， UIKit，Cocoa Touch，Core Data，Core Graphics等基础框架；并能熟练使用调试和测试工具就行系统调优和测试； <br/>
+                    3、熟悉Objective-C程序，具备主流开源组件或框架的使用经验； 有一定的C/C++基础； <br/>
+                    4、熟悉IOS下的多线程、网络、内存管理、UI、SQLite开发；
+                    熟悉手势、Notification相关技术； <br/>
+                    5、有音视频解码，webRTC开发相关经验者优先； <br/>
+                    6、有支付、分享、日历相关项目的开发经验者优先考虑； <br/>
+                    7、有自己开发并发布过APP（可演示）的优先考虑； <br/>
+                    8、有敏捷开发实践者优先考虑。 <br/>
+                </p>
+                <hr>
+                <!--【Android工程师】-->
+                <h3 class="h3"><a>【Android工程师】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、参与或独立负责Android应用程序的设计、开发工作； <br/>
+                    2、根据产品部门提出的产品设计,进行Android版本应用的实现； <br/>
+                    3、对Android平台开发技术进行研究,根据开发过程中的体验对产品提出改进建议 ；<br/>
+                    4、具备独立解决问题的能力，对新技术敏感、有较强的自学能力、具备良好的职业操守，能够承受工作压力，态度积极，认真负责。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、两年以上Android手机平台开发经验、熟悉调试环境，具备扎实的Java编程基础； <br/>
+                    2、熟悉Android框架及各种特性，精通xutils框架，熟悉面向对象编程，理解设计模式等； <br/>
+                    3、熟练掌握TCP、HTTP等网络传输协议、数据库、XML、JSON等常用技术，有HTML5/CSS3经验者优先； <br/>
+                    4、熟悉手势、Notification相关技术； <br/>
+                    5、有音视频解码，webRTC开发相关经验者优先； <br/>
+                    6、有支付、分享、日历相关项目的开发经验者优先考虑； <br/>
+                    7、有自己开发并发布过App产品（可演示）的优先考虑； <br/>
+                    8、有敏捷开发实践者优先考虑。 <br/>
+                </p>
+                <hr>
+                <!--【前端工程师】-->
+                <h3 class="h3"><a>【前端工程师】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、负责平台的前端开发，配合后台开发人员实现产品界面和功能； <br/>
+                    2、与UI及交互设计师不断优化产品前端运行效率，制作标准优化的代码，致力于通过技术提高用户体验； <br/>
+                    3、满足网站及活动专题的各种JS交互效果和功能，实现跨浏览器兼容。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、熟悉html、css、javascript、jquery、ajax等前端技术； <br/>
+                    2、对一些流行的前端框架有所了解； <br/>
+                    3、熟悉当前互联网的各种流行应用，在交互、用户体验等方面有自己的见解； <br/>
+                    4、拥有良好的沟通能力和团队协作能力，有积极解决各种难题的能力； <br/>
+                    5、有创业激情、对教育行业有热情和抱负者优先。 <br/>
+                </p>
+                <hr>
+                <!--测试工程师  -->
+                <h3 class="h3"><a>测试工程师</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1.Web产品的功能测试、压力测试、问题跟踪和进度总结； <br/>
+                    2.参与测试计划制定，测试用例编写； <br/>
+                    3.各种浏览器的适配测试，配合研发修改bug； <br/>
+                    4.研发等相关部门进行有效沟通，并完成产品相关文档的撰写等； <br/>
+                    5.建立和完善测试工作文档； <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1.两年以上的JavaWeb测试经验； <br/>
+                    2.熟练使用配置管理工具svn/cvs/git； <br/>
+                    3.对测试有强烈的兴趣,喜欢钻研,具有良好的自我学习能力； <br/>
+                    4.工作踏实、认真、细心、负责,具有良好的沟通技能、团队合作能力。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!--技术开发部 结束 --> 
+            <!-- 学科辅导部开始 -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxL"> <img src="images/join03.jpg" alt="" /> </div>
+                    <div class="join_boxR">
+                        <h1 class="h1"><a>学科辅导部</a></h1>
+                        <ul>
+                            <!--  <li>
+               <a href="#学科教研老师">学科教研老师</a>
+              </li> -->
+                            <li> <a href="#学科授课老师">学科授课老师</a> </li>
+                            <li> <a href="#教务">教务</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--学科教研老师 --> 
+                
+                <!--【学科授课老师】-->
+                <h3 class="h3"><a>【学科授课老师】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、在线一对一初中或高中学科教学工作； <br/>
+                    2、了解并根据学生学习能力与需求，准备教学计划和课前教案； <br/>
+                    3、根据学生情况因材施教，提供专业化的、高质量的一对一教学服务； <br/>
+                    4、激发学生的学习兴趣，培养学生养成良好的学习习惯，掌握高效的学习方法； <br/>
+                    5、参加教师培训和部门会议，完成主管交付的其他相关工作。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、本科及以上学历，师范类毕业优先，接受优秀的应届毕业生； <br/>
+                    2、 熟悉初中或高中课程，学科对口专业优先； <br/>
+                    3、 学科知识扎实，熟悉初中或高中升学考试的形式和内容； <br/>
+                    4、 具有较强表达力、亲和力，有良好的教学技巧，有相关教学经验者优先； <br/>
+                    5、 保证周末、寒暑假全天代课，保证良好的网络和基本电脑操作。 <br/>
+                </p>
+                <hr>
+                <!--【教务】-->
+                <h3 class="h3"><a>【教务】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1. 负责一对一教务运营管理工作，协调安排课表； <br/>
+                    2. 协调讲师团队，管理教学资源； <br/>
+                    3. 承担教学部门行政事务性工作； <br/>
+                    3. 与相关部门协作共同计划、组织与实施业务项目。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1. 对教育行业有热情，有教务工作经验者优先； <br/>
+                    2. 良好的协调能力、沟通表达能力和学习能力，亲和力强，富有团队合作精神； <br/>
+                    3. 工作作风严谨、细致、具责任心和敬业精神。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!-- 学科辅导部结束  --> 
+            <!-- 客户关系部开始 -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxL"> <img src="images/join04.jpg" alt="" /> </div>
+                    <div class="join_boxR">
+                        <h1 class="h1"><a>客户关系部</a></h1>
+                        <ul>
+                            <li> <a href="#课程顾问">课程顾问</a> </li>
+                            <li> <a href="#客服专员">客服专员</a> </li>
+                            <li> <a href="#高级助教">高级助教</a> </li>
+                            <li> <a href="#课程顾问主管">课程顾问主管</a> </li>
+                            <li> <a href="#客服主管">客服主管</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--课程顾问 -->
+                <h3 class="h3"><a>【课程顾问】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、深入了解在线一对一教学和电销模式，接待学员来电和来访，负责学员课程报名，最终达成报名目标，配合主管完成销售指标； <br/>
+                    2、管理学员信息，及时在系统中做好回访记录，分析学员情况和数据，完成学员的跟进和转化； <br/>
+                    3、参与营销活动，完成销售任务和目标。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、具有良好的沟通表达能力和客户服务意识，有教育行业和销售经验者优先； <br/>
+                    2、有亲和力，性格开朗，擅于在对话中了解对方的意图，并给予适当的建议，获得对方的认可和信任； <br/>
+                    3、工作积极主动，有良好的学习能力，能够在工作中反思并改进，具有团队合作精神； <br/>
+                    4、熟练操作MS Office，较强的数据分析能力； <br/>
+                    5、一周工作五天，周中轮休。 <br/>
+                </p>
+                <hr>
+                <!--【客服专员】-->
+                <h3 class="h3"><a>【客服专员】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、掌握公司提供的咨询材料，为用户提供较为专业的咨询服务； <br/>
+                    2、负责外呼工作，邀约有意向的学员和家长参与现场咨询活动。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、亲和力强，具备良好的人际沟通技能，善于沟通； <br/>
+                    2、有教育行业相关从业背景优先； <br/>
+                    3、能够在工作中反思并改进，有团队协作精神； <br/>
+                    4、一周工作五天，周中轮休。 <br/>
+                </p>
+                <hr>
+                <!--【高级助教】-->
+                <h3 class="h3"><a>【高级助教】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、课前了解学生需求，制定学生的学习计划； <br/>
+                    2、提升学员服务品质，达到二次销售，并协助课程顾问完成学员续费； <br/>
+                    3、协调沟通教师、学生、家长，进行定期的回访。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、具有认真细致、尽职尽责和吃苦耐劳的工作精神； <br/>
+                    2、热爱教育行业，有相关行业工作经验者优先； <br/>
+                    3、擅长沟通表达，有良好的团队协作能力； <br/>
+                    4、一周工作五天，周中轮休。 <br/>
+                </p>
+                <hr>
+                <!--课程顾问主管-->
+                <h3 class="h3"><a>课程顾问主管</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、协助销售总监设置销售目标、销售模式、销售战略、销售预算和奖励计划； <br/>
+                    2、负责部门的日常管理工作及部门员工的管理、指导、培训及评估； <br/>
+                    3、从销售和客户需求的角度，对产品的研发提供建议。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、3年以上教育行业相关从业经验，有销售管理工作经历者优先； <br/>
+                    2、具备较强的市场分析、营销、推广能力和良好的人际沟通、协调能力，分析和解决问题的能力； <br/>
+                    3、有较强的事业心，具备一定的领导能力； <br/>
+                    4、一周工作五天，周中轮休。 <br/>
+                </p>
+                <hr>
+                <!--客服主管  -->
+                <h3 class="h3"><a>客服主管</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、负责部门的日常管理工作及部门员工的管理、指导、培训及评估； <br/>
+                    2、设计并优化客户服务各种流程和话术，带领团队完成外呼任务，提高咨询学员的销售转化率； <br/>
+                    3、适当处理学员的投诉，控制学员满意度的跟踪及分析。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、2年以上教育行业从业经验，熟悉客户服务体系的管理流程； <br/>
+                    2、高度的责任心和客户服务意识，亲和力强，有耐心； <br/>
+                    3、较强的组织、计划、控制、协调能力和人际交往能力、应变能力； <br/>
+                    4、良好的协调及沟通能力，较强的团队合作意识； <br/>
+                    5、一周两天休息，周中轮休。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!-- 客户关系部结束 --> 
+            <!--行政人事部开始  -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxL"> <img src="images/join05.jpg" alt="" /> </div>
+                    <div class="join_boxR">
+                        <h1 class="h1"><a>人事行政部</a></h1>
+                        <ul>
+                            <li> <a href="#招聘专员">招聘专员</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--招聘专员 -->
+                <h3 class="h3"><a>【招聘专员】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、招聘渠道维护，简历筛选，电话邀约； <br/>
+                    2、拓展招聘渠道及计划实施； <br/>
+                    3、招聘工作的相关报表进行统计、汇总与分析； <br/>
+                    4、参与面试，评估候选人，发放offer； <br/>
+                    5、对候选人进行背景调查，确保候选人工作经历的真实可靠性。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、大专以上学历，人力资源相关专业优先； <br/>
+                    2、熟悉各种招聘模式； <br/>
+                    3、具备较好的亲和力、沟通协调、时间管理和语言表达能力； <br/>
+                    4、具备良好的团队协作精神，责任心强，工作积极； <br/>
+                    5、具有较强的执行力、计划性及抗压能力。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!--行政人事部 结束 --> 
+            <!--留学产品部开始  -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxL"> <img src="images/join06.png" alt="" /> </div>
+                    <div class="join_boxR">
+                        <h1 class="h1"><a>留学产品部</a></h1>
+                        <ul>
+                            <li> <a href="#留学顾问">留学顾问</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--留学顾问 -->
+                <h3 class="h3"><a>【留学顾问】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、搜索、整理海外升学相关信息； <br/>
+                    2、在客户留学申请的各个阶段提供相应的信息支持； <br/>
+                    3、围绕客户的需求，持续提供针对性的升学指导服务。 <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、有英美留学申请经验，有本科英美留学经验者优先； <br/>
+                    2、英语的读写能力较强，至少能够无障碍浏览英文网站； <br/>
+                    3、具有较强信息搜索整理能力； <br/>
+                    4、有良好的语言及书面沟通能力； <br/>
+                    5、团队协作能力和学习能力较强，能够在工作中主动反思总结，对教育行业有浓厚兴趣者优先。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!---留学产品部结束  --> 
+            <!--网络推广实习生开始  -->
+            <div class="sidebar-mian">
+                <div class="join_box">
+                    <div class="join_boxR">
+                        <h1 class="h1"><a>招聘兼职</a></h1>
+                        <ul>
+                            <li> <a href="#网络推广实习生">网络推广实习生</a> <a href="#地推兼职">地推兼职</a> <a href="#学科兼职讲师">学科兼职讲师</a> <a href="#客户关系实习生">客户关系实习生</a> <a href="#人力资源实习生">人力资源实习生</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--【网络推广实习生】-->
+                <h3 class="h3"><a>【网络推广实习生】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、线上平台推广（QQ群等）；<br/>
+                    2、线上平台内容发布（今日头条、搜狐自媒体、人人小站、乐乎、人人我那个、网易阅读、一点资讯等）；<br/>
+                    3、新媒体数据维护。<br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、能熟练运用常用办公软件，熟悉互联网；<br/>
+                    2、工作认真踏实，有团队合作精神；<br/>
+                    3、 能够出勤每周工作日三天以上（能保持长期实习3个月以上、能自备电脑者优先）；<br/>
+                    4、通过培训后，可远程工作。<br/>
+                </p>
+                <hr>
+                <!--地推兼职-->
+                <h3 class="h3"><a>【地推兼职】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、每天需完成指定地点一定问卷数量目标（经多次测算，认真工作都能完成）；<br/>
+                    2、监督团队内其他兼职工作，确保兼职在岗尽职；<br/>
+                    3、对团队内兼职做简单培训，鼓励兼职完成目标；<br/>
+                    4、参加公司月度会议，参与评选表彰。 </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、 一周至少能保证3天出勤，周一至周五工作为16：00-18：00；<br/>
+                    2、 认真负责，善于沟通，具有一定的领导能力；<br/>
+                    3、有过地推问卷经验者优先。<br/>
+                    <br/>
+                </p>
+                <hr>
+                <!-- 学科讲义实习生 --> 
+                
+                <!--学科教研实习生  --> 
+                
+                <!--【学科兼职讲师】  -->
+                <h3 class="h3"><a>【学科兼职讲师】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、通过互联网进行一对一在线授课，承担初高中某一学科的教学任务；<br/>
+                    2、无需奔波，并配有专业教研团队，备课无压力。<br/>
+                    <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、有一门特长学科，熟悉初高中内容，基础扎实；<br/>
+                    2、具有优秀的题目解析能力和讲解能力，有一年以上教学经验者优先；<br/>
+                    3、熟练掌握电脑操作技能；<br/>
+                    4、对工作认真负责，有精益求精的态度；<br/>
+                    5、参加寒暑假和学期中周末的授课，能够长期参与者优先。<br/>
+                </p>
+                <hr>
+                <!--客户关系实习生  -->
+                <h3 class="h3"><a>【客户关系实习生】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、负责整理、汇总部门相关数据表格；<br/>
+                    2、处理部门相关文案的撰写、修改、发布等；<br/>
+                    3、协助完成部门内务后勤工作。<br/>
+                    <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、熟练操作办公室软件，有基本的数据、文字处理能力；<br/>
+                    2、认真负责，踏实细致，有良好的团队协作能力和沟通能力；<br/>
+                    3、能够每周现场出勤三天以上（含周末），能够长期实习者优先。<br/>
+                    <br/>
+                </p>
+                <hr>
+                <!-- 【人力资源实习生】 -->
+                <h3 class="h3"><a>【人力资源实习生】</a> <a href="#aa" target="_self" class="fanhui"> <img class="goto_top" src="images/fanhui.jpg"> </a> </h3>
+                <h4 class="join-mtitle"> 岗位职责&nbsp;：</h4>
+                <p class="join_p "> 1、配合主管，完成公司的招聘需求；<br/>
+                    2、参与员工关系工作，协助完成相关操作；<br/>
+                    3、为人力资源其他模块如内部培训、绩效管理提供支持。<br/>
+                    <br/>
+                </p>
+                <h4 class="join-mtitle"> 任职资格&nbsp;：</h4>
+                <p class="join_p "> 1、熟练操作办公软件，工作认真踏实，耐心细致，善于沟通，有良好的团队协作精神；<br/>
+                    2、具有处理多任务的能力，条理清晰，能够在工作中反思并改进；<br/>
+                    3、实习期可持续3个月以上，并能够保证至少一周三天的出勤，可五天全勤者优先。<br/>
+                    <br/>
+                </p>
+                <hr>
+            </div>
+            <!--网络推广实习生结束 --> 
+            <!--XXX的福利待遇开始  -->
+            <div class="sidebar-mian">
+                <div class="join_box"> 
+                    <!--  <div class="join_boxL">
+           
+          </div> -->
+                    <div class="join_boxR">
+                        <h1 class="h1"><a>XXX的福利待遇</a></h1>
+                    </div>
+                </div>
+                <!--留学顾问 -->
+                <h4 class="join-mtitle"> XXX的福利待遇&nbsp;：</h4>
+                <p class="join_p "> 1.社保公积金、年度健康体检、餐补当然是标准福利； <br/>
+                    2.带薪年假多，且用不完还能折现； <br/>
+                    3.零食、水果、咖啡畅吃畅喝； <br/>
+                    4.员工生日惊喜多多； <br/>
+                    5.每人每月有固定的腐败金喔； <br/>
+                    6.各类福利活动多多，如按摩、美甲、篮球、真人CS…… <br/>
+                    7. CEO 经常在QQ群和微信群中发红包呦； <br/>
+                    8.一年两次的调薪机会，良好的晋升空间，努力的你会有快速的成长； <br/>
+                    9. 最重要的是，结构简单的我们拥有通畅的沟通渠道，你的建议会不断丰富以上福利。 <br/>
+                </p>
+                <hr>
+            </div>
+            <!--XXX的福利待遇结束 --> 
+        </div>
+    </div>
+</div>
+<!-- 第二屏：招牌一：学科培优  结束 -->
+<div class="page08_mian">
+  <div class="foot_box container ">
+    <form class="form" action=" " method="post" id="tmsLandingForm">
+      <div class="ui-form-item title "> 立即预约 </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input type="text" class="ui-input" name='studentName'placeholder="请填写您的姓名" id="name">
+        </div>
+        <div class="ui-form-explain"> 请输入姓名 </div>
+      </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input value="" class="ui-input" type="text" placeholder="请填写您的手机号" id="phone" name='firstPhone' maxlength="11">
+        </div>
+        <div class="ui-form-explain "> 请输入手机号 </div>
+      </div>
+      <input type='hidden' name='formId' value='6'>
+      <div class="ui-form-item"> <a class="ui-button" id='tmsLandingFormBtn'>开始预约</a> </div>
+    </form>
+  </div>
+</div>
+<!-- 活动页面 -->
+<div class="reserve">
+  <div class="reserve_box container ">
+    <form class="reserve_form" action=" " method="post" id="tmsLandingForm">
+      <div class="zero"> <a onclick=" "> <img src="images/fankui.png"> </a> </div>
+      <div id="wufeng">
+        <ul>
+          <li> <a > <span style="color:white">张*林妈妈今日电话助教：孩子最近厌学情绪严重，十一期间作业都没做，老师也批评了他。和孩子聊了XXX在线补习模式之后，他倒是觉得挺新奇的，也没排斥，试听下来他还挺满意，准备报课了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white"> 王*铮家长短信反馈：以前过十一，孩子要么玩不好，要么学不好。今年有了XXX在线平台，学习和出行两不误，他特别开心。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white">刘*焉妈妈来电：孩子最近学习状态特别好，有了XXX的错题本，她明显知道自己问题出在哪里了，这个势头很好，特意和老师说一声，借着这个势能再冲一冲。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+        </ul>
+      </div>
+      <div class="page-right fl"> <img src="images/miss.png"> <a target="_blank" style="cursor: pointer;"> <img src="images/gaokao3.png"> </a> </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.easie.js"></script> 
+<script type="text/javascript" src="js/wufeng.js"></script> 
+<script type="text/javascript">
+$(function(){
+    wufeng(90800);
+})
+</script> <script type='text/javascript'>
+$(function(){var adid = location.href.match(/adid=([a-zA-Z0-9]+)/);
+    var adidNo='';
+    if(adid && adid[1]) {
+        adidNo=adid[1];
+    }
+    var tmsLandingFormUrl = 'http://i.hfjy.com/landingForm/register?adidNo='+adidNo;
+    var oS=$('.ui-form-explain');
+    $('#tmsLandingFormBtn').click(function(){
+        var phone=$('#phone').val();
+        var name=$('#name').val();
+                if(!name||name==""){
+            oS[0].style.display="block";
+            return false;
+        }
+        if(!phone||phone==""){
+            oS[1].style.display="block";
+            return false;
+        }else if(phone!==""&&!/(^(13|14|15|17|18|)\d{9}$)/.test(phone)){
+            oS[1].style.display="block";
+            return false;
+        }
+    $('#phone').focus(function(){
+        $(oS[1]).hide();
+    });
+    $('#name').focus(function(){
+            $(oS[0]).hide();
+    });
+        $.ajax({
+            type : 'post',
+            data : $('#tmsLandingForm').serialize(),
+            url : tmsLandingFormUrl,dataType : 'jsonp',
+            jsonp: 'callbackparam',
+            success : function(json){if(json.error==1) {alert(json.msg);} else {location.href ='http://vip.hfjy.com/thanks';
+                }}
+        });
+    });
+})
+</script> 
+<script>
+function bb() {
+    var body_height=$('body' ).height();
+    var window_height=$(window).height();
+        if ($(this).scrollTop() >=body_height-window_height-158) {
+                $(".reserve").css("position","relative");
+            }else{
+                $(".reserve").css("position","fixed");
+        }
+        }
+$(window).scroll(bb);
+bb();
+</script> 
+<!-- footer开始 --> 
+<!-- footer -->
+<div class="footer_pege">
+  <div class="container clearfix">
+    <div class="footer_main"> <a href="teachers.html" target="_blank">XXX师资</a>| <a href="research.html" target="_blank">XXX教研</a>| <a onclick=" )" target="_blank">学员成绩</a>| <a href="Online.html" target="_blank">学习中心</a>| <a href="cooperation.html" tppabs=" " target="_blank">商务合作</a>| <a href="joinUs.html" target="_blank">加入我们</a> </div>
+    <p> ©2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> 上XXX创信息咨询有限公司 <span class="icp_num">沪ICP备XXX号-8</span> </p>
+  </div>
+</div>
+<!--footer结束  --> 
+<!-- 侧边栏开始 --> 
+<script>
+    $(function(){
+        $("#go_top").click(function(){
+            $('html,body').animate({scrollTop:0},500);
+            return false;
+        });
+        $("#hangyeyanzheng").click(function(e){
+            e.preventDefault();
+            window.open(' ');
+        })
+        var _cur_host = window.location.host;
+        if( _cur_host.indexOf('yphen100.com')>0 ) $('.icp_num').text('沪ICP备XXX号-1');
+
+        if( _cur_host.indexOf('f100.net')>0 ) $('.icp_num').text('沪ICP备XXX号-3');
+    })
+</script> 
+<!--右侧贴边导航quick_links.js控制-->
+<div class="mui-mbar-tabs">
+  <div class="quick_link_mian">
+    <div class="quick_links_panel">
+      <div id="quick_links" class="quick_links">
+        <ul>
+          <li> <a class="history_list"><i class="view"></i></a>
+            <div class="mp_tooltip" style=" visibility:hidden;" onclick="window.open(' ')">
+              <p> 在线客服 </p>
+              <p class="p3" onclick="window.open(' ')"> (点击详情) </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li class="quick_toggle"> <a class="my_qlinks"><i class="setting"></i></a>
+            <div class="ibar_login_box status_login">
+              <div class="avatar_box">
+                <p> XXX微信 </p>
+                <p class="avatar_imgbox"> <img src="images/img_qrcode.png" alt=""> </p>
+              </div>
+              <i class="icon_arrow_white"></i> </div>
+          </li>
+  
+          <li> <a class="mpbtn_histroy"><i class="tel"></i></a>
+            <div class="mp_tooltip">
+              <p onclick="window.open(' ')"> XXX热线 </p>
+              <p class="p3"> XXX </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li id="go_top"> <a class="mpbtn_histroy"> <i class="tops"></i> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(".quick_links_panel li").mouseenter(function(){
+        $(this).children(".mp_tooltip").stop().animate({left:-130,queue:true});
+        $(this).children(".mp_tooltip").css("visibility","visible");
+        $(this).children(".ibar_login_box").css("display","block");
+    });
+    $(".quick_links_panel li").mouseleave(function(){
+        $(this).children(".mp_tooltip").css("visibility","hidden");
+        $(this).children(".mp_tooltip").stop().animate({left:-159,queue:true});
+        $(this).children(".ibar_login_box").css("display","none");
+    });
+    $(".quick_toggle").mouseover(function(){
+        $(this).children(".ibar_login_box").stop().animate({left:-160,queue:true});
+        $(this).children(".ibar_login_box").css("visibility","visible");
+        $(this).children(".avatar_box").css("display","block");
+    });
+    $(".quick_toggle ").mouseleave(function(){
+        $(this).children(".ibar_login_box").css("visibility","hidden");
+        $(this).children(".ibar_login_box").stop().animate({left:-180,queue:true});
+        $(this).children(".avatar_box").css("display","none");
+    });
+</script>
+</body>
+</body>
+</html>

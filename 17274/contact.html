@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="" content=""/>
+		<meta name="Description" content=""/>
+		<meta name="Keywords" content=""/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>联系我们</title>
+		<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="com-top-bg"></div>
+		<div class="sy-box">
+			<div class="com-nav clearfix">
+				<div class="com-logo">
+					<img src="img/logo.png" alt="logo" />
+				</div>
+				<ul class="com-nav-bg clearfix">
+					<li class="com-nav-list">
+						<a href="index.html">首页</a>
+					</li>
+					<li class="com-nav-list">
+						<a href="sfgk.html">书法概况</a>
+						<ol class="com-sub-box">
+							<li><a href="sfgk.html">书协简介</a></li>
+							<li><a href="sfgk.html">书协动态</a></li>
+							<li><a href="sfgk.html">主席团名单</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="###">书法论坛</a>
+						<ol class="com-sub-box">
+							<li><a href="">书协咨询</a></li>
+							<li><a href="">书协交流</a></li>
+							<li><a href="">书协活动</a></li>
+							<li><a href="">书协公告</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="">书法欣赏</a>
+						<ol class="com-sub-box">
+							<li><a href="">历代名帖</a></li>
+							<li><a href="ybjz.html">硬笔佳作</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="member.html">会员风采</a>
+					</li>
+					<li class="com-nav-list">
+						<a href="train.html">教育培训</a>
+						<ol class="com-sub-box">
+							<li><a href="train.html">培训基地</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list">
+						<a href="hyzx.html">会员中心</a>
+						<ol class="com-sub-box">
+							<li><a href="hyzx.html">入会细则</a></li>
+						</ol>
+					</li>
+					<li class="com-nav-list current-nav">
+						<a href="contact.html">联系我们</a>
+					</li>
+				</ul>
+			</div>
+			<!--banner轮播图-->
+			<div class="com-banner-box">
+				<img src="img/small-banner.jpg" alt="" width="1920" height="530" />
+			</div>
+			<!--主体-->
+			<div class="wrapper">
+				<ul class="com-title-box clearfix">
+					<li class="com-title">联系我们</li>
+					<li class="com-title-more clearfix">
+						<a href="index.html" class="crumbs">首页</a>
+						<span class="crumbs">&gt;</span>
+						<a href="contact.html" class="crumbs">联系我们</a>
+					</li>
+				</ul>
+			</div>
+			<div class="wrapper">
+				<div class="center-wrap">
+					<ul class="contact-wrap">
+						<li class="contact-item">电话：XXX</li>
+						<li class="contact-item">Q Q：562715672</li>
+						<li class="contact-item">传真：0539-8707277</li>
+						<li class="contact-item">邮箱：562715672@qq.com</li>
+						<li class="contact-item">联系地址:</li>
+					</ul>
+				</div>
+				<div class="center-wrap">
+					<div class="erweima-wrap">
+						<span>
+							<img src="img/prcode.png"/>
+						</span>
+						<p>临沂硬笔书法家协会</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div style="width:1080px;height:550px;border:#ccc solid 1px;margin:60px auto; font-size:12px" id="map"></div>	
+			</div>
+			<!--页脚-->
+			<div class="com-footer">
+				<div class="wrapper">
+					<ul class="footer-message clearfix">
+						<li>版权所有：XXX硬笔书法家协会</li>
+						<li>联系电话：XXX</li>
+						<li>联系地址：XXX</li>
+						<li>邮编：XXX</li>
+					</ul>
+					<p class="copyright">Copyright &copy; XXX 技术支持<a href="/">XXX</a> </p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//导航
+	$(".com-nav-list").mouseenter(function(){
+		$(this).children(".com-sub-box").stop(false,true).slideDown();
+		}).mouseleave(function(){
+		$(this).children(".com-sub-box").stop(false,true).slideUp();
+		});
+	$(".com-nav-list").click(function(){
+		$(this).addClass("current-nav").siblings().removeClass("current-nav");
+	});	
+</script>	
+<script type="text/javascript">
+	//创建和初始化地图函数：
+	function initMap(){
+	  createMap();//创建地图
+	  setMapEvent();//设置地图事件
+	  addMapControl();//向地图添加控件
+	  addMapOverlay();//向地图添加覆盖物
+	}
+	function createMap(){ 
+	  map = new BMap.Map("map"); 
+	  map.centerAndZoom(new BMap.Point(118.307555,34.994511),18);
+	}
+	function setMapEvent(){
+	  map.enableScrollWheelZoom();
+	  map.enableKeyboard();
+	  map.enableDragging();
+	  map.enableDoubleClickZoom()
+	}
+	function addClickHandler(target,window){
+	  target.addEventListener("click",function(){
+	    target.openInfoWindow(window);
+	  });
+	}
+	function addMapOverlay(){
+	  var markers = [
+	    {content:"临沂硬笔书法家协会",title:"临沂硬笔书法家协会",imageOffset: {width:0,height:3},position:{lat:34.994489,lng:118.307474}}
+	  ];
+	  for(var index = 0; index < markers.length; index++ ){
+	    var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+	    var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+	      imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+	    })});
+	    var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+	    var opts = {
+	      width: 200,
+	      title: markers[index].title,
+	      enableMessage: false
+	    };
+	    var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+	    marker.setLabel(label);
+	    addClickHandler(marker,infoWindow);
+	    map.addOverlay(marker);
+	  };
+	}
+	//向地图添加控件
+	function addMapControl(){
+	  var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	  scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+	  map.addControl(scaleControl);
+	  var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	  map.addControl(navControl);
+	  var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+	  map.addControl(overviewControl);
+	}
+	var map;
+	  initMap();
+</script>	

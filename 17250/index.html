@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 字符编码 -->
+<meta charset="utf-8">
+<!-- IE兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!-- 采用高速模式渲染（目前仅有360支持） -->
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="初高中辅导, 初高中家教, 同步辅导, 学科培优, 专项课程, 自招竞赛, 留学咨询, 在线家教, 初高中补习, 升学辅导学习平台">
+<meta name="description" content="XXX英语培训学校是国内首家初高中在线1对1一站式补习平台。现有学科培优、升学辅导、留学咨询三大课程体系, 通过自主研发的一站式在线学习平台,清北复交名师组成豪华教研阵容,全面解决初高中学生中考、高考、留学等升学过程中的各类需求。">
+<meta name="baidu-site-verification" content="wcMMFTPk07">
+<title>XXX英语培训学校官网_名校升学课外辅导教育机构_初高中名师一对一网络教育领导品牌</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/teachers.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.lazyload.js"></script>
+<script type="text/javascript">
+     $(function(){
+         $(".nav_menu .nav_menu_item").hover(function(){
+            $(this).find('ul').show();
+          },function(){
+            $(this).children('ul').stop().slideUp('fast');
+          } );
+        /*$(".nav_menu .nav_menu_item").hover(function(){
+            $(this).children('ul').stop().slideDown('fast');
+            console.info('down')
+          },function(){
+              $(this).children('ul').stop().slideUp('fast');
+            console.info('up')
+          } );*/
+            //防止有些浏览器出现异常
+           /* $(".nav").mouseleave(function(){
+              $(".nav_menu" ).children('ul').stop().slideToggle('fast');
+          } )
+            $(".nav_submenu").mouseleave(function(){
+                $(".nav_menu" ).children('ul').stop().slideUp('fast');
+            } ) */
+
+        var select_title=location.pathname+location.search;
+         console.info(select_title)
+        $(".nav_menu_item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    //console.info(href)
+                    if(select_title.indexOf(href)>0){
+                        $(this ).parents('li' ).find('.no_is_sub').addClass('active');
+                    }
+                }
+            })
+        })
+        $(".nav_submenu-item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    if(select_title.indexOf(href)>0){
+                        $(this ).addClass('active');
+                    }
+                }
+            })
+        })
+     })
+</script>
+<script>
+    /*广告系统参数传递*/
+    function GetUrlArgsObj() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var args=GetUrlArgsObj();
+    if(typeof (args.adid)=="undefined"){
+        args.adid="";
+    }
+    var adid=args.adid;
+    $(function(){
+        if(adid){
+            $('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if(typeof (href)!="undefined"&&!href.match(/\#/)&&href.indexOf('javascript')==-1){
+
+                    console.info(href)
+                    if(!href.match(/\?/)){
+                        adid='?adid='+args.adid;
+                    }else{
+                        adid='&adid='+args.adid;
+                    }
+                    if(href.indexOf("//")!=-1){
+                        $(this ).attr('href',href+adid);
+                    }else{
+                        var cur_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        $(this ).attr('href',cur_protocol+ location.hostname +'/' + href+adid);
+                    }
+                }
+            });
+        }
+
+
+        $("#lunbo li" ).click(function(){
+            var href=$(this ).attr('href');
+            window.open(href+adid);
+        })
+
+    })
+
+    function jumpUrl( link ){
+        var jump_link = link;
+        if(typeof (args.adid) != "undefined"&&args.adid ){
+            if(jump_link.match(/\?/)){
+                jump_link = link+'#adid='+args.adid;
+            }else{
+                jump_link = link+'?adid='+args.adid;
+            }
+
+        }
+        window.open(jump_link);
+    }
+</script>
+<script type="text/javascript">window._pt_lt = new Date().getTime();</script>
+</head>
+<script type="text/javascript">
+  window._pt_sp_2 = [];
+  _pt_sp_2.push('setAccount,68d72831');
+  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  
+  (function() {
+    var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+    atag.src = _protocol + 'js.ptengine.cn/js/pta.js';
+    var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+    stag.src = _protocol + 'js.ptengine.cn/js/pts.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+  })();
+</script>
+<body >
+<!--header导航开始-->
+<div class="header">
+  <div class="container clearfix">
+    <div class="header_nav"> <a class="logo fl" href="#"> <img src="images/logo.png" alt=""> </a>
+      <ul class="nav_menu ">
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">首页</a> </li>
+        <li class="nav_menu_item "> <a class="no_is_sub">课程介绍</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item "><a >学科辅导</a></li>
+            <li class="nav_submenu-item "><a onclick="#">自主招生辅导</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item"> <a class="no_is_sub" href="#">XXX优势</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a href="#">教研质量</a></li>
+            <li class="nav_submenu-item"><a href="#">师资力量</a> </li>
+            <li class="nav_submenu-item"><a onclick="#">学员成绩</a> </li>
+            <li class="nav_submenu-item"><a href="#">XXXQ&amp;A</a> </li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">名师公开课 </a>
+          <ul class="nav_submenu " style="display: none;">
+            <li class="nav_submenu-item"><a href="#">公开课课表页面</a> </li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" onclick="#">自测工具 </a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a onclick="#">志愿填报</a></li>
+            <li class="nav_submenu-item"><a onclick="#">专业倾向测试</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">在线学习中心</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a href="#">平台简介</a></li>
+            <li class="nav_submenu-item"><a href="#">如何上课</a> </li>
+            <li class="nav_submenu-item"><a onclick="#">选课中心</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">客户端下载 </a> </li>
+      </ul>
+      <div class="header_tel fr"> <img src="images/phone.png" alt="" class="fl phone_img"> <a>XXX</a> </div>
+    </div>
+  </div>
+</div>
+<!--header导航结束--> 
+<script>
+    $(document).ready(function () {
+        var p = 0, t = 0;
+
+        $(window).scroll(function (e) {
+            p = $(this).scrollTop();
+            if (t <= p) {//下滚
+                $("#layout_header_menu").hide();
+            }
+            else {//上滚
+                $("#layout_header_menu").show();
+            }
+            setTimeout(function () { t = p; }, 0);
+        });
+    });
+
+</script> 
+<!-- End: Header --><!-- 轮播图片 专区1 -->
+<div class="clearfix"></div>
+<!--banner 开始  -->
+<div id="banner" >
+  <ul class="tuul">
+    <li class="no1" onclick="jumpUrl('Gongbang.html')" alt=" " title=""> </li>
+    <li class="no2" onclick="jumpUrl('jinbang.html')" alt=" " title=""> </li>
+    <li class="no3" onclick="jumpUrl(' ')" alt="" title=""></li>
+    <!-- onclick="javascript:location.reload();" -->
+    <li class="no4"  alt="" title=""></li>
+  </ul>
+  <div class="anniu"> <span class="leftbut"></span> <span class="rightbut"></span> </div>
+  <ul class="dianul">
+    <li class="cur"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<script type="text/javascript" src="js/index.js"></script> 
+<script type="text/javascript">
+    $(function(){
+        $('a').live('click', function(event) {
+            var href=$(this ).attr('href');
+            var this_href=window.location.href;
+            //if(href.indexOf('http')<0&&(this_href.indexOf('100')>0)){
+            if(href.indexOf('http')<0&&(this_href.indexOf('100')>0||this_href.indexOf('vip')>0)){
+                href="index.htm"+href;
+                window.location.href=href;
+                event.preventDefault();
+            }
+        });
+    })
+  
+    chuantong(5000,500)
+  
+</script>
+<div class="clearfix"></div>
+<!--banner 结束  -->
+<div class="h60 clearfix"></div>
+<div class="container clearfix"> 
+  <!--第二屏：课程介绍开始 -->
+  <div class="page02_mian clearfix">
+    <h2 class="title">XXX教育两大系列课程</h2>
+    <p class="min_title">名校升学一站式学习平台</p>
+    <ul class="product_list clearfix ">
+      <li > <img src="images/page201.jpg" alt="学科辅导:一节更比六节强！" title="学科辅导:一节更比六节强！"/> <a class="more" onclick="jumpUrl('')">点击查询详细课程 &gt;</a>
+        <div class="listbox ">
+          <h3 >以前学1小时，在这里或只需10分钟。XXX1对1在线学科培优，通过知识点切片化教学帮助同学们高效学习。</h3>
+          <p><span>●</span>中小学学科——同步辅导</p>
+          <p><span>●</span>专项课程——重点突破</p>
+          <p><span>●</span>自招竞赛——拓展提升</p>
+        </div>
+      </li>
+      <li> <img src="images/page202.jpg" alt="学科辅导:一节更比六节强！" title="学科辅导:一节更比六节强！"/> <a class="more" onclick="jumpUrl('')">点击查询详细课程 &gt;</a>
+        <div class="listbox ">
+          <h3>XXX招牌系列课程，特有名校自主招生、上纽大、上海春考等服务，满足升学的各种需求。 </h3>
+          <p><span>●</span>名校自主招生“签约”辅导</p>
+          <p><span>●</span>上海春考保过辅导</p>
+          <p><span>●</span>上海纽约大学直通车</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <!--第二屏：课程介绍 结束  -->
+  <div class="h60 clearfix"></div>
+  <!--第三屏：综合实力 开始 -->
+  <div class="page03_mian clearfix">
+    <h2 class="title">高效提分，我们有一套</h2>
+    <p class="min_title">三级知识点切片+智能学习中心=一节更比六节强</p>
+    <div class="main_block clearfix">
+      <div class="item_main bk_h num1">
+        <div class="item_page">
+          <div class="cont cont1">
+            <div class="b_cube2">
+              <p class="b_title"> XXX独家三级知识点切片 </p>
+            </div>
+          </div>
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_title"> XXX独家三级知识点切片 </p>
+              <p class="b_desc">中小学5000+知识点，精准定位薄弱点，一课见效。 </p>
+              <p> <a href="research.html" target="_blank" class="square">了解详情</a> </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png" alt=""> </div>
+          </div>
+          <div class="b_hover b_blue"> </div>
+          <div class="cover"> <img src="images/page301.jpg" height="281" width="" alt=""> </div>
+        </div>
+      </div>
+      <div class="item_main bk_h num2">
+        <div class="item_page">
+          <div class="cont cont1">
+            <div class="b_cube2">
+              <p class="b_title"> 清北复交一流名师 </p>
+              <p class="b_desc">"百里挑一"  五层筛选机制</p>
+              <p> 
+            </div>
+          </div>
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_title"> 五层筛选，百里挑一 </p>
+              <p class="b_desc"> 第1层筛选：全国顶尖名校毕业<br />
+                第2层筛选：拥有长期教学经验<br />
+                第3层筛选：具备专业教学技巧<br />
+                第4层筛选：备课与教案能力<br />
+                第5层筛选：试讲好评率达到85%以上 </p>
+              <p> <a href="teachers.html" target="_blank" class="square">了解详情</a> </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png" alt=""> </div>
+          </div>
+          <div class="b_hover b_blue"> </div>
+          <div class="cover"> <img src="images/page302.jpg" height="" width="370" alt=""> </div>
+        </div>
+      </div>
+      <div class="item_main bk_h num3">
+        <div class="item_page">
+          <div class="cont cont1">
+            <div class="b_cube2">
+              <p class="b_title"> 超豪华教研阵容 </p>
+              <p class="b_desc">严格把关教学质量 </p>
+            </div>
+          </div>
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_title"> 严格把控，教学质量</p>
+              <p class="b_desc"> 150+名校骨干教师严格把关教研，深度剖析34省份，200种全国考纲，每个知识点精确定位对应考纲，重点难点考点全面分类标注。 </p>
+              <p> <a href="research.html" target="_blank" class="square">了解详情</a> </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png" alt=""> </div>
+          </div>
+          <div class="b_hover b_green"> </div>
+          <div class="cover"> <img src="images/page303.jpg" height="" width="370" alt=""> </div>
+        </div>
+      </div>
+      <div class="item_main bk_h num4">
+        <div class="item_page">
+          <div class="cont cont1">
+            <div class="b_cube2">
+              <p class="b_title"> 智能学习中心 </p>
+              <p class="b_desc">全国首家自主研发，<br />
+                畅快体验在线学习！ </p>
+              <p> 
+            </div>
+          </div>
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_title"> XXX学习中心</p>
+              <p class="b_desc"> 国内最早，历时三年，耗资千万，仿佛老师就在身边。 </p>
+              <p> <a href="Learning_Center.html" target="_blank" class="square">了解详情</a> </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png" alt=""> </div>
+          </div>
+          <div class="b_hover b_blue2"> </div>
+          <div class="cover"> <img src="images/page304.jpg" height="" width="370" alt=""> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--第三屏：综合实力结束  -->
+  <div class="h60 clearfix"></div>
+  <!-- 第四屏：公开课开始  -->
+  <div class="page04_mian clearfix">
+    <h2 class="title">XXX公开课，名师传绝招</h2>
+    <p class="min_title">五星名师四两拨千斤，用手机免费听</p>
+    <div class="main_block clearfix">
+      <div class="item_main bk_h num1">
+        <div class="item_page">
+          <div class="cont cont2 ">
+            <div class="b_cube2">
+              <p class="b_title"> 免费公开课，黄金一小时</p>
+              <p  class="b_desc"> XXX教育为高中生量身定制学科系列公开课，通过对高中各个阶段主要学科的重点知识梳理与重要解题技巧分析，帮助学生深度理解各个学科最具决定性的知识要点与学习方法，通过系列课程帮助学生在最短时间内抓住高考备考决胜关键。 </p>
+              <p class="b_desc">采用微信、视频直播的方式，上课前需先报名，课前20分钟短信通知即将开课、同时直播教室开门，进入后大家可文字群聊，到点直播，过程中同样和群聊互动。之后会提供录屏视频分享上课用户。 </p>
+            </div>
+            <div class="pic_bg "> </div>
+          </div>
+          <div class="b_green"> </div>
+          <div class="cover"> <img src="images/page401.jpg" height="281" width="" alt=""> </div>
+        </div>
+      </div>
+      <div class="item_main bk_h num2">
+        <div class="item_page">
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_title">五星名师，就是这么牛</p>
+              <p class="b_desc"> 五星名师讲课有什么不同，醍醐灌顶？打通任督<br />
+                二脉？四两拨千斤？自己来感受！<br />
+              </p>
+              <p> <a href="teachers.html" target="_blank" class="square">了解老师</a> </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png" alt=""> </div>
+          </div>
+          <div class=" b_blue2"> </div>
+          <div class="cover"> <img src="images/page402.jpg" height="" width="370" alt=""> </div>
+        </div>
+      </div>
+      <div class="item_main bk_h num3">
+        <div class="item_page">
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_title"> 公开课课表</p>
+              <p class="b_desc"> 本月公开课课程预告 </p>
+              <p> <a href="Open_Schedule.html" target="_blank"  class="square">查看课表</a> </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png" alt=""> </div>
+          </div>
+          <div class=" b_blue"> </div>
+          <div class="cover"> <img src="images/page403.jpg" height="" width="370" alt=""> </div>
+        </div>
+      </div>
+      <div class="item_main  num4">
+        <div class="item_page"> <img src="images/page404.jpg" height="" width="" alt=""> </div>
+      </div>
+      <div class="item_main bk_h num5">
+        <div class="item_page">
+          <div class="cont cont2">
+            <div class="b_cube2">
+              <p class="b_desc"> 学科培优、竞赛拓展、自招备考、专业选择，从零起点到晋级名校，初高中生名校升学一站式辅导。 </p>
+              <p> <img src="images/Arrow.png" alt="" /> </p>
+              <p class="b_desc"> 扫描左侧二维码收听 </p>
+            </div>
+            <div class="pic_bg"> <img src="images/bg.png"  alt=""> </div>
+          </div>
+          <div class=" b_blue"> </div>
+          <div class="cover"> <img src="images/page405.jpg" height="" width="370" alt=""> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--第四屏：公开课结束  -->
+  <div class="h60 clearfix"></div>
+  <!--第五屏：社会活动等开始  -->
+  <div class="page05_mian clearfix">
+    <h2 class="title">成就学员，XXX吹得远</h2>
+    <p class="min_title">我们信仰教育公平，我们借助网络共享教育资源</p>
+    <div class="student_cont_left" id="demo1">
+      <div class="student_cont_box" id="ban_pic1">
+        <ul>
+          <li> <a > <img src="images/page501.jpg" alt="" />
+            <div class="student_title"> XXX教育CEO 接受腾讯专访 </div>
+            </a> <a  class="video"></a> </li>
+          <li> <a > <img src="images/page502.jpg" alt="" />
+            <div class="student_title"> XXX教育《自招宝典》新书发布会 </div>
+            </a> <a  class="video"></a> </li>
+          <li> <a > <img src="images/page503.jpg" alt="" />
+            <div class="student_title"> XXX荣获首届 “互联网+”大学生创新创业大赛金奖 </div>
+            </a> <a  class="video"></a> </li>
+        </ul>
+      </div>
+      <div class="min_pic">
+        <div class="num_list clearfix" id="ban_num1">
+          <ul>
+            <li class="on"><a ><img src="images/min_pic01.jpg" width="" height="" alt=""/>
+              <div class="bun_bg"></div>
+              </a></li>
+            <li><a ><img src="images/min_pic02.jpg" width="" height="" alt=""/>
+              <div class="bun_bg"></div>
+              </a></li>
+            <li><a ><img src="images/min_pic03.jpg" width="" height="" alt=""/>
+              <div class="bun_bg"></div>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="student_cont_right">
+      <div class="student_right_main">
+        <ul>
+          <li > <a onclick="window.open('#')"> <img src="images/student_right01.jpg" alt="" />
+            <div class="student_title"> XXX教育：线上一对一打造教育B2C </div>
+            </a> </li>
+          <li class="noMar"> <a  onclick="window.open('#')"> <img src="images/student_right02.jpg" alt="" />
+            <div class="student_title"> 《重点高校自主招生备考宝典》在沪发布 </div>
+            </a> </li>
+        </ul>
+      </div>
+      <div class="student_right_main2">
+        <ul>
+          <li> <a  onclick="window.open('#')"> <img src="images/student_right03.jpg" alt="" />
+            <div class="student_title"> XXX教育赞助高中生微电影《铸梦》 </div>
+            </a> </li>
+          <li class="main_block">
+            <div class="item_main bk_h num6">
+              <div class="item_page">
+                <div class="cont cont2">
+                  <div class="b_cube2">
+                    <p >截止2016年初，XXX教育与上海、浙江、江苏、山东等省市近百所全国重点中学建立合作，</p>
+                    <p class="b_desc"> 完成校园讲座超500场，提供个性化诊断咨询服务逾8000人次。<br>
+                    </p>
+                  </div>
+                </div>
+                <div class=" b_blue"> </div>
+                <div class="cover"> <img src="images/student_right04.jpg" height="" width="" alt=""> </div>
+              </div>
+            </div>
+          </li>
+          <li class="noMar"> <a  onclick="window.open('#')"> <img src="images/student_right05.jpg" alt="" />
+            <div class="student_title"> XXX教育获沪江投资 </div>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mhc"></div>
+    <div class="pop_up" id="demo2">
+      <div class="pop_up_xx"> <img src="images/chacha3.png" width="40" height="40"  alt=""/></div>
+      <div class="pop_up2" id="ban_pic2">
+        <div class="prev1" id="prev2"><img src="images/index_tab_l.png" width="28" height="51"  alt=""/></div>
+        <div class="next1" id="next2"><img src="images/index_tab_r.png" width="28" height="51"  alt=""/></div>
+        <ul>
+          <li> <a onclick="window.open('#')">
+            <embed src="#" quality="high" width="800" height="450" align="middle" allowScriptAccess="always" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
+            </a> </li>
+          <li> <a onclick="window.open('#')">
+           <embed src="#" quality="high" width="800" height="450" align="middle" allowScriptAccess="always" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
+            </a> </li>
+          <li> <a onclick="window.open('#')">
+            <embed src="#" quality="high" width="800" height="450" align="middle" allowScriptAccess="always" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
+            </a> </li>
+        </ul>
+      </div>
+      <script src="js/pic_tab.js"></script> 
+      <script type="text/javascript">
+          carousel('#demo1').banqh({
+            box:"#demo1",//总框架
+            pic:"#ban_pic1",//大图框架
+            pnum:"#ban_num1",//小图框架
+            pop_prev:"#prev2",//弹出框左箭头
+            pop_next:"#next2",//弹出框右箭头
+            prev:"#prev1",//大图左箭头
+            next:"#next1",//大图右箭头
+
+            pop_div:"#demo2",//弹出框框架
+            pop_pic:"#ban_pic2",//弹出框图片框架
+            pop_xx:".pop_up_xx",//关闭弹出框按钮
+            mhc:".mhc",//朦灰层
+            autoplay:true,//是否自动播放
+            interTime:5000,//图片自动切换间隔
+            delayTime:400,//切换一张图片时间
+            pop_delayTime:400,//弹出框切换一张图片时间
+            order:0,//当前显示的图片（从0开始）
+            picdire:true,//大图滚动方向（true为水平方向滚动）
+            mindire:true,//小图滚动方向（true为水平方向滚动）
+            min_picnum:3,//小图显示数量
+            pop_up:true//大图是否有弹出框
+          })
+
+          
+      </script> 
+    </div>
+    <!--第五屏：社会活动等结束   --> 
+  </div>
+  <div class="h60 clearfix"></div>
+</div>
+<!-- 体验XXX高效1对1在线补习 开始-->
+<div class="page06_mian">
+  <div class="container clearfix">
+    <h2 class="title">体验XXX高效1对1在线补习</h2>
+    <ul  class=" chatlist">
+      <li> <a onclick="window.open('#')"  target="_blank" class="btn greenColor"> <i class="iconfont">&#xe604;</i>预约试听
+        <p>请准确填写您的联系方式，预约试听课程</p>
+        </a> </li>
+      <li> <a class="btn buleColor" onclick="window.open('#')"  target="_blank"> <i class="iconfont">&#xe60e;</i>在线咨询
+        <p>有疑问，请联系在线助教，您的问题将得到耐心解答</p>
+        </a> </li>
+      <li class="noMar"> <a onclick="window.open('#')"  target="_blank" class="btn redColor"> <i class="iconfont">&#xe60f;</i>免费资料
+        <p>五年沉淀最有价值资料，初高中升学必备</p>
+        </a> </li>
+    </ul>
+  </div>
+</div>
+<!-- 体验XXX高效1对1在线补习 结束  --> 
+<!-- 媒体报道   开始-->
+<div class="page07_mian">
+  <div class="container clearfix">
+    <div class="tablist">
+      <div class="hd_tittle"> <span class="active"> 媒体报道 </span> <span > &nbsp;|&nbsp;XXX荣誉 </span> </div>
+      <div class="tabBox cur">
+        <div class="module_box">
+          <div class="module_left"> <a  target="_blank" class="li01"></a> <a  target="_blank" class="li02"></a> <a target="_blank" class="li03"></a> <a  target="_blank" class="li04"></a> <a target="_blank" class="li05"></a> <a  target="_blank" class="li06"></a> <a  target="_blank" class="li07"></a> </div>
+          <div class="module_right">
+            <h3>超过50家知名媒体专业报道</h3>
+            <p> 突破传统补习局限——在线1对1 <br>
+              新闻联播报道XXX教育模式创新<br>
+              国务院主办“互联网+”创业大赛金奖 </p>
+          </div>
+        </div>
+      </div>
+      <div class="tabBox ">
+        <ul class="tabC">
+          <li > <img src="images/page9206.jpg" alt="2016年度中国互联网教育行业优秀示范企业" title="2016年度中国互联网教育行业优秀示范企业" />
+            <p>2016年度中国互联网教育行业优秀示范企业</p>
+          </li>
+          <li > <img src="images/page9201.jpg" alt="2015年度用户口碑教辅品牌" title="2015年度用户口碑教辅品牌" />
+            <p>2015年荣获腾讯网“2015年度用户口碑教辅品牌” </p>
+          </li>
+          <li> <img src="images/page9202.jpg" alt="首届中国“互联网+”创新创业大赛金奖 "  title="首届中国“互联网+”创新创业大赛金奖 "/>
+            <p>2015年国务院主办首届中国“互联网+”创新创业大赛金奖  </p>
+          </li>
+          <li> <img src="images/page9203.jpg" alt="年度优秀早期投资项目奖" title="年度优秀早期投资项目奖"/>
+            <p>2014年上海市大学生“挑战杯”银奖(同期“饿了吗”项目获金奖)</p>
+          </li>
+          <li> <img src="images/page9204.jpg" alt="上海市雏鹰奖银奖" title="上海市雏鹰奖银奖"/>
+            <p>2014年获得全球创业周“年度优秀早期投资项目奖”  </p>
+          </li>
+          <li class="nMar"> <img src="images/page9205.jpg" alt="复旦大学“聚劲杯”创业大赛一等奖"  title="复旦大学“聚劲杯”创业大赛一等奖"/>
+            <p>2011年复旦大学“聚劲杯”创业大赛一等奖</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $(function(){
+        $(".hd_tittle span" ).mouseenter(function(){
+            $(this ).addClass('active' ).siblings('span' ).removeClass('active');
+            $(".tabBox" ).removeClass('cur').eq($(this ).index()).addClass('cur');
+        });
+    })
+</script> 
+
+<!-- 媒体报道  结束--> 
+<!--第九屏：团队+媒体+荣誉结束  -->
+
+<div class="page08_mian">
+  <div class="foot_box container ">
+    <form class="form" action=" " method="post" id="tmsLandingForm">
+      <div class="ui-form-item title "> 立即预约 </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input type="text" class="ui-input" name='studentName'placeholder="请填写您的姓名" id="name">
+        </div>
+        <div class="ui-form-explain"> 请输入姓名 </div>
+      </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input value="" class="ui-input" type="text" placeholder="请填写您的手机号" id="phone" name='firstPhone' maxlength="11">
+        </div>
+        <div class="ui-form-explain "> 请输入手机号 </div>
+      </div>
+      <input type='hidden' name='formId' value='6'>
+      <div class="ui-form-item"> <a class="ui-button" id='tmsLandingFormBtn'>开始预约</a> </div>
+    </form>
+  </div>
+</div>
+<!-- 活动页面 -->
+<div class="reserve">
+  <div class="reserve_box container ">
+    <form class="reserve_form" action=" " method="post" id="tmsLandingForm">
+      <div class="zero"> <a onclick=" "> <img src="images/fankui.png"> </a> </div>
+      <div id="wufeng">
+        <ul>
+          <li> <a > <span style="color:white">张*林妈妈今日电话助教：孩子最近厌学情绪严重，十一期间作业都没做，老师也批评了他。和孩子聊了XXX在线补习模式之后，他倒是觉得挺新奇的，也没排斥，试听下来他还挺满意，准备报课了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white"> 王*铮家长短信反馈：以前过十一，孩子要么玩不好，要么学不好。今年有了XXX在线平台，学习和出行两不误，他特别开心。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white">刘*焉妈妈来电：孩子最近学习状态特别好，有了XXX的错题本，她明显知道自己问题出在哪里了，这个势头很好，特意和老师说一声，借着这个势能再冲一冲。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+        </ul>
+      </div>
+      <div class="page-right fl"> <img src="images/miss.png"> <a target="_blank" style="cursor: pointer;"> <img src="images/gaokao3.png"> </a> </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.easie.js"></script> 
+<script type="text/javascript" src="js/wufeng.js"></script> 
+<script type="text/javascript">
+$(function(){
+    wufeng(90800);
+})
+</script> <script type='text/javascript'>
+$(function(){var adid = location.href.match(/adid=([a-zA-Z0-9]+)/);
+    var adidNo='';
+    if(adid && adid[1]) {
+        adidNo=adid[1];
+    }
+    var tmsLandingFormUrl = 'landingForm/register?adidNo='+adidNo;
+    var oS=$('.ui-form-explain');
+    $('#tmsLandingFormBtn').click(function(){
+        var phone=$('#phone').val();
+        var name=$('#name').val();
+                if(!name||name==""){
+            oS[0].style.display="block";
+            return false;
+        }
+        if(!phone||phone==""){
+            oS[1].style.display="block";
+            return false;
+        }else if(phone!==""&&!/(^(13|14|15|17|18|)\d{9}$)/.test(phone)){
+            oS[1].style.display="block";
+            return false;
+        }
+    $('#phone').focus(function(){
+        $(oS[1]).hide();
+    });
+    $('#name').focus(function(){
+            $(oS[0]).hide();
+    });
+        $.ajax({
+            type : 'post',
+            data : $('#tmsLandingForm').serialize(),
+            url : tmsLandingFormUrl,dataType : 'jsonp',
+            jsonp: 'callbackparam',
+            success : function(json){if(json.error==1) {alert(json.msg);} else {location.href ='';
+                }}
+        });
+    });
+})
+</script> 
+<script>
+function bb() {
+    var body_height=$('body' ).height();
+    var window_height=$(window).height();
+        if ($(this).scrollTop() >=body_height-window_height-158) {
+                $(".reserve").css("position","relative");
+            }else{
+                $(".reserve").css("position","fixed");
+        }
+        }
+$(window).scroll(bb);
+bb();
+</script> 
+<!-- footer开始 --> 
+<!-- footer -->
+<div class="footer_pege">
+  <div class="container clearfix">
+    <div class="footer_main"> <a href="teachers.html" target="_blank">XXX师资</a>| <a href="research.html" target="_blank">XXX教研</a>| <a onclick=" )" target="_blank">学员成绩</a>| <a href="Online.html" target="_blank">学习中心</a>| <a href="cooperation.html" tppabs=" " target="_blank">商务合作</a>| <a href="joinUs.html" target="_blank">加入我们</a> </div>
+    <p> ©2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> 上XXX创信息咨询有限公司 <span class="icp_num">沪ICP备XXX号-8</span> </p>
+  </div>
+</div>
+<!--footer结束  --> 
+<!-- 侧边栏开始 --> 
+<script>
+    $(function(){
+        $("#go_top").click(function(){
+            $('html,body').animate({scrollTop:0},500);
+            return false;
+        });
+        $("#hangyeyanzheng").click(function(e){
+            e.preventDefault();
+            window.open(' ');
+        })
+        var _cur_host = window.location.host;
+        if( _cur_host.indexOf('yphen100.com')>0 ) $('.icp_num').text('沪ICP备XXX号-1');
+
+        if( _cur_host.indexOf('f100.net')>0 ) $('.icp_num').text('沪ICP备XXX号-3');
+    })
+</script> 
+<!--右侧贴边导航quick_links.js控制-->
+<div class="mui-mbar-tabs">
+  <div class="quick_link_mian">
+    <div class="quick_links_panel">
+      <div id="quick_links" class="quick_links">
+        <ul>
+          <li> <a class="history_list"><i class="view"></i></a>
+            <div class="mp_tooltip" style=" visibility:hidden;" onclick="window.open(' ')">
+              <p> 在线客服 </p>
+              <p class="p3" onclick="window.open(' ')"> (点击详情) </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li class="quick_toggle"> <a class="my_qlinks"><i class="setting"></i></a>
+            <div class="ibar_login_box status_login">
+              <div class="avatar_box">
+                <p> XXX微信 </p>
+                <p class="avatar_imgbox"> <img src="images/img_qrcode.png" alt=""> </p>
+              </div>
+              <i class="icon_arrow_white"></i> </div>
+          </li>
+  
+          <li> <a class="mpbtn_histroy"><i class="tel"></i></a>
+            <div class="mp_tooltip">
+              <p onclick="window.open(' ')"> XXX热线 </p>
+              <p class="p3"> XXX </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li id="go_top"> <a class="mpbtn_histroy"> <i class="tops"></i> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(".quick_links_panel li").mouseenter(function(){
+        $(this).children(".mp_tooltip").stop().animate({left:-130,queue:true});
+        $(this).children(".mp_tooltip").css("visibility","visible");
+        $(this).children(".ibar_login_box").css("display","block");
+    });
+    $(".quick_links_panel li").mouseleave(function(){
+        $(this).children(".mp_tooltip").css("visibility","hidden");
+        $(this).children(".mp_tooltip").stop().animate({left:-159,queue:true});
+        $(this).children(".ibar_login_box").css("display","none");
+    });
+    $(".quick_toggle").mouseover(function(){
+        $(this).children(".ibar_login_box").stop().animate({left:-160,queue:true});
+        $(this).children(".ibar_login_box").css("visibility","visible");
+        $(this).children(".avatar_box").css("display","block");
+    });
+    $(".quick_toggle ").mouseleave(function(){
+        $(this).children(".ibar_login_box").css("visibility","hidden");
+        $(this).children(".ibar_login_box").stop().animate({left:-180,queue:true});
+        $(this).children(".avatar_box").css("display","none");
+    });
+</script>
+</body>
+</html>

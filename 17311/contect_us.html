@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>联系我们</title>
+<link href="css/index.css" rel="stylesheet"/>
+</head>
+
+<body>
+<!--header头部-->
+<div class="header_box">
+    <div class="header clearfix">
+        <div class="logo fl">
+        	<a href="#">
+            	<img src="img/logo_03.jpg" width="170" height="47" alt="logo"/>
+            </a>
+        </div>
+        <div class="search fr">
+        	<p>
+            	XXX有限责任公司欢迎您
+            	<a href="#">设为主页</a>
+                <a href="#">收藏本站</a>
+            </p>
+            <div class="search_box">
+            	<a class="fr" href="#">English</a>
+                <a class="fr" href="#">中文 |</a>
+                <div class="search_btn fr"></div>
+            	<input class="fr" type="text"/>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div class="nav_box">
+	<ul class="nav">
+    	<li ><a  href="index.html">网站首页</a></li>
+        <li><a href="about_us.html">关于我们</a></li>
+        <li><a href="product_center.html">产品中心</a></li>
+        <li><a href="news_info.html">新闻资讯</a></li>
+        <li><a href="health_info.html">健康资讯</a></li>
+        <li><a href="service_support.html">服务支持</a></li>
+        <li><a href="recruitment.html">招贤纳士</a></li>
+        <li class="nav_bg"><a class="nava_bg" href="contect_us.html">联系我们</a></li>
+    </ul>
+</div>
+<!--banner-->
+<div class="contect_map" id="dituContent">
+	
+</div>
+<!--联系我们标题-->
+<div class="news_box">
+	<div class="news_title">
+        <span>C</span>
+        <p class="p1">CONTECT</p>
+        <p class="p2">联系我们</p>
+    </div>
+</div>
+<!--联系我们-->
+<div class="contect_box">
+	<div class="contect clearfix">
+    	<div class="con_add fl">
+        	<h4>联系方式</h4>
+            <p>北京xx科技有限公司</p>
+            <p class="cont_p">Beijing xx Technology CO.,LTD</p>
+            <p>注册地址：北京市昌平区科技园超前路xx号</p>
+            <p>生产地址：北京市昌平区科技园超前路xx号</p>
+            <p>生产地址：北京市昌平区科技园超前路xx号</p>
+        </div>
+        <ul class="fl">
+        	<li class="contect_li1">
+            	<h3>【市场部】</h3>
+                <p>招标组：010-12345678</p>
+                <p>会务组：010-12345678</p>
+                <p>学术组：010-12345678</p>
+                <p>传真：010-12345678</p>
+            </li>
+            <li class="contect_li2">
+            	<h3>【配送部】</h3>
+                <p>配送电话：010-123456789</p>
+                <p>传真：010-123456</p>
+                <h3>【技术支持部】</h3>
+                <p>电话：010-123456</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--footer-->
+<div class="footer_box">
+	<div class="footer">
+    	<ul>
+        	<li class="li1">
+            	<span>在线留言</span>
+                <input class="name" type="text" placeholder="请输入姓名"/>
+                <input class="tel" type="text" placeholder="请输入联系方式"/>
+                <textarea  placeholder="请输入留言内容"></textarea>
+                <input class="submit" type="button" value="提交"/>
+            </li>
+            <li class="li2">
+            	<span>联系我们</span>
+                <ul>
+                	<li class="tel_icon">服务热线：XXX</li>
+                    <li class="phone_icon">电话：XXX</li>
+                    <li class="fax_icon">传真：XXX</li>
+                    <li class="address_icon">公司地址：XXX</li>
+                </ul>
+            </li>
+            <li class="li3 clearfix">
+            	<span>关注我们</span>
+                <div class="firm fl"><img src="img/erweima.jpg" width="80" height="80" alt="lepu"/></div>
+                <div class="product1 fl"><img src="img/erweima.jpg" width="80" height="80" alt="lepu"/></div>
+                <div class="product2 fl"><img src="img/erweima.jpg" width="80" height="80" alt="lepu"/></div>
+                <div class="bdsharebuttonbox fr"><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script src="js/public.js"></script>
+<script>
+//百度地图
+
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.395645,39.929986);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>经销商专区</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=1117" />
+    <link href="css/dealer.css" rel="stylesheet" type="text/css" />
+    <link href="css/simple.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrap">
+        
+<div id="header">
+            <h1><a href="/" id="logo">logo</a></h1>
+            <ul id="nav">
+                <li><a href="index.html" class="">首 页</a></li>
+                <li><a href="product.html" class="">产 品</a></li>
+                <li><a href="help.html" class="">服 务</a></li>
+                <li><a href="explore.html" class="">探 索 品 牌</a></li>
+                <li><a href="share.html" class="">快乐分享</a></li>
+                 <li><a href="dealer.html" class="current">经销商专区</a></li> 
+            </ul>
+        </div>
+        <div id="contain">
+            <div id="index">
+                <h2>授权经销商查询</h2>
+                <form>
+                    <input type="text" class="text" value="输入姓名查询" /><input class="btn" type="button" />
+                </form>
+            </div>
+        </div>
+        
+<div id="footer">
+            <div class="inner">
+                <div class="links">
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd><a href="service.html">售后政策</a></dd>
+                        <dd><a href="inquiry.html">防伪查询</a></dd>
+                        <dd><a href="faq.html">常见问题</a></dd>
+                        <dd><a href="sitemap.html">网站地图</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="news.html">新闻资讯</a></dd>
+                        <dd><a href="job.html">招聘专区</a></dd>
+                        <dd><a href="partner.html">合作伙伴</a></dd>
+                        <dd><a href="contactus.html">联系我们</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd><a href="http://weibo.com/u/5494636663?refer_flag=1005050010_&is_hot=1" target="_blank">新浪微博</a></dd>
+                        <dd class="wx"><a href="javascript:;">官方微信<span><img src="picture/weixin.png"><s>></s></span></a></dd>
+                    </dl>
+                </div>
+                <div class="info">
+                    <p class="e">
+                        <a href="https://shop114073423.taobao.com/shop/view_shop.htm?spm=a230r.1.14.32.s29UqX&user_number_id=2247553021"target="_blank">淘宝直营店</a>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=2725408471&site=qq&menu=yes" target="_blank" class="online">在线客服</a>
+                    </p>
+                    <div class="hotline">
+			<h5>服务咨询 : </h5>
+			<strong>XXX</strong>
+                        <h5>售后咨询 : </h5>
+                        <strong class="b">XXX</strong>
+                        <p>服务时间：上午9:00-晚上21:00</p>
+                    </div>
+                </div>
+                <div class="copy"><span>XXX科技艾灸</span>©2020沪ICP备XXX号-4</div>
+            </div>
+        </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?0d57846c1656faa1621d4ec9cdeb4840";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259904775'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259904775' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.artdialog.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("form .text").focus(function () {
+                $("form .text").val("");
+            })
+            var result = 0; 
+            $("form .btn").live({
+                click: function () {
+                    var searchname = $("form .text").val();
+                    if (searchname == "输入姓名查询"||searchname=="") {
+                        art.dialog({
+                            time: 3,
+                            content: '请输入姓名！',
+                            lock: true,
+                            background: '#000', // 背景色
+                            opacity: 0.19,
+                            padding: 0
+                        });
+                    }
+                    else {
+                        $.ajax({
+                            type: "POST",
+                            url: "/ashx/Area.ashx",
+                            data: { "action": "checkUser", "name": searchname },
+                            async: false,
+                            error: function (request) {
+                                alert("异常");
+                            },
+                            success: function (data) { 
+                                if (data == "true") { 
+                                    window.location.href="result.html?name=" + searchname;
+                                } else {
+                                    art.dialog({
+                                        content: '经查证，' + searchname + '不是XXX授权经销商',
+                                        lock: true,
+                                        background: '#000', // 背景色
+                                        opacity: 0.19,
+                                        padding: 0
+                                    });
+                                }
+                            }
+                        });
+                    }
+                    return false;
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

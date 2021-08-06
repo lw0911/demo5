@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/weibo.js" type="text/javascript"></script>
+<script src="js/tqq.js" type="text/javascript"></script>
+<script type="text/javascript">
+myFocus.set({
+	id:'tqq',
+	pattern:'mF_sd_tqq',
+	time:3
+});
+</script>
+
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(function (){
+			
+	var slid = $('ul.slide_box li'),controls = $('ul.bx-controls a');
+	slid.addClass('none');
+	slid.eq(0).removeClass('none');
+
+	var slideindex = 0;
+	function switchi() {
+		if(slideindex == slid.length - 1){
+			slideindex = 0;
+		}else {
+			slideindex = slideindex + 1;
+		}
+		slid.addClass('none');
+		slid.eq(slideindex).removeClass('none');
+		controls.removeClass('actives');
+		controls.eq(slideindex).addClass('actives');
+	}
+	
+	var timer = setInterval(switchi, 3000);
+
+	function options(indexs) {
+		slid.addClass('none');
+		slid.eq(indexs).removeClass('none');
+		controls.removeClass('actives');
+		controls.eq(indexs).addClass('actives');
+	}
+
+	$('a.options').click(function(){
+		var drec = $(this).data('drec');
+		if(drec == 'pre') {
+			if(slideindex == 0) {
+				slideindex = 3;
+			}else {
+				slideindex = slideindex - 1;
+			}
+		}else {
+			if(slideindex == 3) {
+				slideindex = 0;
+			}else {
+				slideindex = slideindex + 1;
+			}
+		}
+		clearInterval(timer);
+		options(slideindex);
+		timer = setInterval(switchi, 3000);
+	});
+
+	$('ul.bx-controls li').hover(function(){
+		slideindex = $(this).index();
+		clearInterval(timer);
+		options(slideindex);
+	},function(){
+		timer = setInterval(switchi, 3000);
+	});
+	
+})
+</script>
+
+
+
+
+
+<style type="text/css" media="all">
+.d1{
+margin:8px auto;
+width:600px;
+
+height:20px;
+overflow:hidden;
+white-space:nowrap;
+float:left;
+margin-left:125px;
+margin-bottom:10px;
+padding-bottom:3px;
+}
+.d2{
+margin:0px auto;
+background-color:#FF9933;
+}
+.div2{
+color:#999;	
+width:auto;
+height:30px;
+font-size:16px;
+letter-spacing:3px;
+
+}
+
+
+
+
+#tqq { width: 355px;overflow: hidden;position: relative; height:593px; margin: auto auto; margin-top: 20px;}
+#tqq ul {width:95%; display:inline;line-height: 22px; margin-left:10px;position: absolute;}
+#tqq ul li {float: left; padding-bottom: 14px; width: 100%; padding-top: 14px; border-bottom: #d8d8d8 1px dashed}
+#tqq ul li .img { float: left; padding-top: 1px; padding-left:10px; }
+#tqq ul li .img img{ float:left;}
+#tqq ul li .img p{ float:right; margin-left:10px;}
+#tqq ul li .msg {float: right; width:330px}
+#tqq ul li .msg p {font-size: 14px}
+#tqq ul li .msg .from {font-size: 12px; color: #999; float:right;}
+</style>
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+var s,s2,s3,timer;
+function init(){
+s=getid("div1");
+s2=getid("div2");
+s3=getid("div3");
+s3.innerHTML=s2.innerHTML;
+timer=setInterval(mar,30)
+}
+function mar(){
+if(s2.offsetWidth<=s.scrollLeft){
+s.scrollLeft-=s2.offsetWidth;
+}else{s.scrollLeft++;}
+}
+function getid(id){
+return document.getElementById(id);
+}
+window.onload=init;
+</script>
+
+
+
+
+</head>
+
+<body style=" background-color:#F9F7E8">
+
+<div class="head" style=" background-color:#fff;">
+	<div class="logo">
+   		<div class="left"><a href="#"><img src="images/logo.jpg" /></a></div>
+        <div class="right">
+        	<div class="top">
+            	<a href="#">在线下单</a>
+                <a href="#">售后服务</a>
+                <a href="#">下载app</a>
+            
+            </div>
+            <div class="bottom">
+            	<p>服务热线：XXX</p>
+            
+            </div>
+        
+        </div>
+    
+    
+    </div>
+    <div style=" clear:both"></div>
+    <div class="nav">
+    	<div class="nav-ron">
+                        
+                <ul>
+                <li><a  href="index.html" >首页</a></li>
+                <li><a href="qiyejianje.html">关于XXX</a>
+                <div style=" clear:both"></div>
+                  <ul>
+                    <li><a href="qiyejianje.html">企业简介</a></li>
+                    <li><a href="qiyewenhua.html">企业文化</a></li>
+                    <li><a href="qiyezizhi.html">企业荣誉</a></li>
+                  
+                  
+                  </ul>
+                
+                
+                
+                
+                </li>
+                <li><a href="redianloupan.html"   >热点楼盘</a>
+                  <ul>
+                    <li><a href="redianloupan.html">热点楼盘</a></li>
+                    <li><a href="zaijiangongdi.html">在建工地</a></li>
+                    <li><a href="yuyuekangongdi.html">预约看工地</a></li>
+                    <li><a href="yuyueshejishi.html">预约设计师</a></li>
+                  
+                  
+                  </ul>
+                
+                
+                
+                </li>
+                <li><a href="shejituandui.html" >设计团队</a>
+                  <ul>
+                    <li><a href="shejituandui.html">青岛</a></li>
+                    <li><a href="shejituandui.html">烟台</a></li>
+                    <li><a href="shejituandui.html">潍坊</a></li>
+                     <li><a href="shejituandui.html">菏泽</a></li>
+                      <li><a href="shejituandui.html">济南</a></li>
+                  
+                  
+                  </ul>
+                
+                
+                </li>
+                <li><a href="anli.html" >装修案例</a>
+                  <ul>
+                    <li><a href="anli.html">特别案例</a></li>
+                    <li><a href="360°.html">360°全景房</a></li>
+                    <li><a href="tupiananli.html">图片案例</a></li>
+                  
+                  
+                  </ul>
+                
+                
+                </li>
+                <li><a href="gongzhuang.html">工装体系</a>
+                  <ul>
+                    <li><a href="gongzhuang.html">会所</a></li>
+                    <li><a href="gongzhuang.html">休闲</a></li>
+                    <li><a href="gongzhuang.html">酒店</a></li>
+                    <li><a href="gongzhuang.html">商场</a></li>
+                    <li><a href="gongzhuang.html">银行</a></li>
+                    <li><a href="gongzhuang.html">办公</a></li>
+                     <li><a href="gongzhuang.html">地产</a></li>
+
+                  
+                  
+                  </ul>
+                
+                
+                </li>
+                <li><a href="fuwugushi.html">客户见证</a>
+                  <ul>
+                    <li><a href="fuwugushi.html">服务故事</a></li>
+                    <li><a href="fuwugushi.html">客户评价</a></li>
+                    <li><a href="fuwuluicheng.html">服务流程</a></li>
+                    <li><a href="chang">常见问题</a></li>
+                     <li><a href="liuyanzixun.html">留言咨询</a></li>
+
+                  
+                  
+                  </ul>
+                
+                
+                </li>
+                <li><a href="gongsidongtai.html" >活动专题</a>
+                  <ul>
+                    <li><a href="gongsidongtai.html">公司动态</a></li>
+                    <li><a href="meitibaodao.html">媒体报到</a></li>
+                    <li><a href="zhuangxiuketang.html">装修课堂</a></li>
+                    <li><a href="shejifengshui.html">设计风水</a></li>
+                  
+                  
+                  </ul>
+                
+                
+                </li>
+                <li>
+                  <a href="baozhangtixi.html" class="fuw fuwa" class="dangqian">服务保障</a>
+                  <ul >
+                  
+                    <li><a href="baozhangtixi.html"  style="width:120px;">文明施工保障</a></li>
+                    <li><a href="baozhangtixi.html" style="width:120px;">工程工艺保障</a></li>
+                    <li><a href="baozhangtixi.html" style="width:120px;">工程材料保障</a></li>
+                    <li><a href="baozhangtixi.html" style="width:120px;">仪器检测保障</a></li>
+                     <li><a href="baozhangtixi.html" style="width:120px;">验收体系保障</a></li>
+                  
+                  
+                  </ul>
+                
+                
+                
+                
+                
+                </li>
+                
+                <div style=" clear:both"></div>
+                           
+                
+                </ul>
+                          
+        
+        </div>
+    </div>    
+</div>
+
+
+<div class="gongzhuang">
+	<div class="ron_fwbz">
+    	<p>截至<span> 2015 年 11 月 7 日 15 时</span> XXX匠心装饰已经</p>
+        <div class="shu">
+            <h3 class="shu_a">413户</h3>
+            <h3 class="shu_a1">458户</h3>
+            <h3 class="shu_a2">566户</h3>
+            <h3 class="shu_a3">88888户</h3>
+        </div>
+    </div>
+    <div class="ron_qy2">
+    	<div class="dh"><a href="#" >文明施工保障</a><a href="#" id="rd">工程工艺保障</a><a href="#" >工程材料保障</a><a href="#" >仪器检测保障</a><a href="#" >验收体系保障</a></div>
+        <div class="dh2">
+         当前位置：<a href="index.html">首页</a>-服务保障
+        </div>
+    </div>
+       
+</div>
+
+<div class="gongzhuang_a">
+
+<div class="top_slide_wrap">
+	<div class="bx-wrapper">
+		<ul class="slide_box">
+			<li><a href="#"><img src="images/k1.fw.png" alt=""><p>倾城花园</p></a></li>
+			<li><a href="#"><img src="images/k2.fw.png" alt=""><p>倾城花园</p></a></li>
+			<li><a href="#"><img src="images/k3.fw.png" alt=""><p>倾城花园</p></a></li>
+			<li><a href="#"><img src="images/k4.fw.png" alt=""><p>倾城花园</p></a></li>
+            <li><a href="#"><img src="images/k5.fw.png" alt=""><p>倾城花园</p></a></li>
+            
+		</ul>
+		<ul class="bx-controls">
+			<li>
+				<a class="actives" href="#">
+					<img src="images/k1.fw.png" alt="">
+					<span></span>
+					<p>倾城花园位于新城中央，40万平方米花园御府。由安徽省高速公路总...</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/k2.fw.png" alt="">
+					<span></span>
+					<p>倾城花园位于新城中央，40万平方米花园御府。由安徽省高速公路总...</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/k3.fw.png" alt="">
+					<span></span>
+					<p>倾城花园位于新城中央，40万平方米花园御府。由安徽省高速公路总...</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/k4.fw.png" alt="">
+					<span></span>
+					<p>倾城花园位于新城中央，40万平方米花园御府。由安徽省高速公路总...</p>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<img src="images/k5.fw.png" alt="">
+					<span></span>
+					<p>倾城花园位于新城中央，40万平方米花园御府。由安徽省高速公路总...</p>
+				</a>
+			</li>
+            
+		</ul>
+	</div>
+	<a class="options pre" href="javascript:;" data-drec="pre"><i class="pre"></i></a>
+	<a class="options next" href="javascript:;" data-drex="next"><i class="next"></i></a>
+</div>
+</div>
+
+
+
+
+
+
+<div class="footer">
+	<div class="top">
+    	<h3 class="dibu"><a href="#">关于XXX</a> | <a href="#">媒体报道</a>| <a href="#">联系我们</a>| <a href="#">责任声明</a></h3>
+    </div>
+    <div class="bottom">
+    	<h3>XXX科技</h3>
+        <p>©2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> </p>
+    
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+	$("").ready(function() {
+		$(".nav-ron li ul").hide();
+		$(".nav-ron li").hover(function(e) {
+			$(this).find("ul").slideToggle(250)
+						
+			}
+	
+		);
+		
+		
+	
+	});
+	
+
+
+
+
+
+
+
+
+</script>
+
+</html>
