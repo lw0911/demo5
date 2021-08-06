@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet" href="css/animate.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript">
+new WOW().init();
+</script>
+<script type="text/javascript" src="js/banner.js"></script>
+</head>
+
+<body>
+<div class="logo">
+  <a href="index.html"><img src="images/logo.jpg" /></a>
+</div>
+<div class="clear"></div>
+<div class="nav">
+  <div class="main">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="piclist.html">产品中心</a></li>
+      <li><a href="list.html">公司动态</a></li>
+      <li><a href="list.html">行业动态</a></li>
+      <li><a href="book.html">我要留言</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="banner">
+  <div class="b-img">
+      <img src="images/banner1.jpg" width="100%"/>
+      <img src="images/banner1.jpg" width="100%" />
+  </div>
+  <div class="clear"></div>
+  <div class="b-list"> </div>
+</div>
+<div class="clear"></div>
+<div class="part1">
+  <div class="part1L">
+    <div class="titbox">
+      <p class="ccsl">产品展示</p>
+      <span class="ccsl">PRODUCT</span>
+      <img src="images/jt.jpg" />
+    </div>
+    <ul>
+      <li><a href="piclist.html" class="ccsl">五金工具</a></li>
+      <li><a href="piclist.html" class="ccsl">五金配件</a></li>
+      <li><a href="piclist.html" class="ccsl">机械门锁</a></li>
+      <li><a href="piclist.html" class="ccsl">窗用配件</a></li>
+      <li><a href="piclist.html" class="ccsl">门用五金</a></li>
+      <li><a href="piclist.html" class="ccsl">轴承</a></li>
+    </ul>
+  </div>
+  <div class="part1R">
+    <ul>
+      <li>
+        <div class="probox">
+          <a href="picdetail.html"><img src="images/1.jpg" /></a>
+        </div>
+        <a href="picdetail.html"><p class="ccsl">不锈钢小插销防盗门插销</p></a>
+      </li>
+      <li>
+        <div class="probox">
+          <a href="picdetail.html"><img src="images/1.jpg" /></a>
+        </div>
+        <a href="picdetail.html"><p class="ccsl">不锈钢小插销防盗门插销</p></a>
+      </li>
+      <li>
+        <div class="probox">
+          <a href="picdetail.html"><img src="images/1.jpg" /></a>
+        </div>
+        <a href="picdetail.html"><p class="ccsl">不锈钢小插销防盗门插销</p></a>
+      </li>
+      <li>
+        <div class="probox">
+          <a href="picdetail.html"><img src="images/1.jpg" /></a>
+        </div>
+        <a href="picdetail.html"><p class="ccsl">不锈钢小插销防盗门插销</p></a>
+      </li>
+      <li>
+        <div class="probox">
+          <a href="picdetail.html"><img src="images/1.jpg" /></a>
+        </div>
+        <a href="picdetail.html"><p class="ccsl">不锈钢小插销防盗门插销</p></a>
+      </li>
+      <li>
+        <div class="probox">
+          <a href="picdetail.html"><img src="images/1.jpg" /></a>
+        </div>
+        <a href="picdetail.html"><p class="ccsl">不锈钢小插销防盗门插销</p></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="part2">
+  <div class="main">
+    <div class="p2L wow fadeInLeft"><img src="images/5.jpg" /></div>
+    <div class="p2R wow fadeInRight">
+      <div class="titbox">
+        <div class="tit">
+          <h1 class="ccsl">关于我们</h1>
+          <span class="ccsl">ABOUT US</span>
+        </div>
+        <a href="about.html">了解更多</a>
+      </div>
+      <div class="con">传统的五金制品，也称"小五金"。是指铁、钢、铝等金属经过锻造、压延、切割、等等物理加工制造而成的各种金属器件。例如五金工具、五金零部件、日用五金、建筑五金以及安防用品等。小五金产品大都不是最终消费品。而是作为工业制造的配套产品、半成品以及生产过程所用工具等等。只有一小部分日用五金产品是人们生活必须的工具类消费品。</div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+$(document).ready(function () {
+    var oLi = document.getElementById("tab").getElementsByTagName("li");
+	var oUl = document.getElementById("content").getElementsByTagName("ul");
+		
+		for(var i = 0; i < oLi.length; i++)
+		{
+			oLi[i].index = i;
+			oLi[i].onmouseover = function ()
+			{
+				
+				for(var n = 0; n < oLi.length; n++)
+					oLi[n].className="";
+					
+				this.className = "current";
+				
+				for(var n = 0; n < oUl.length; n++) 
+					oUl[n].style.display = "none";
+					
+				oUl[this.index].style.display = "block";
+				if(oUl[this.index].title == ""){			
+					$.parser.parse(oUl[this.index]);
+					oUl[this.index].title = "parsed";
+				}
+			}	
+		}
+})		
+</script>
+<div class="part3">
+  <div class="contitbox wow fadeInDown">
+    <p class="ccsl">新闻资讯</p>
+    <span class="ccsl">NEWS INFORMATION</span>
+    <div class="sub">诚信似金，留下信任，带走满意，质高价廉，便携诚信</div>
+  </div>
+  <div class="p3L">
+    <a href="detail.html">
+    <img src="images/2.jpg" />
+    <div class="con">
+      <p class="ccsl">卫浴五金怎么保养 卫浴五金怎么挑选</p>
+      <div class="sub">在卫浴间里面也会用到些五金的产品，这些五金的产品在卫浴间里面也得到了积极的用处，而卫浴间是比较潮湿的，五金长期接触到它们是容易损坏，卫浴五金怎么保养?在购买卫浴五金的时候，可以见到各种各样的五金产品，卫浴五金怎么挑选?</div>
+    </div>
+    </a>
+  </div>
+  <div class="p3R">
+      <ul id="tab">
+         <li class="current"><a>行业资讯</a></li>
+         <li><a>内部新闻</a></li>
+      </ul>
+      <div id="content">
+        <ul style="display:block">
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金怎么保养 卫浴五金怎么挑选</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">在卫浴间里面也会用到些五金的产品，这些五金的产品在卫浴间里面也得到了积极的用处，而卫浴间是比较潮湿的，五金长期接触到它们是容易损坏，卫浴五金怎么保养?在购买卫浴五金的时候，可以见到各种各样的五金产品，卫浴五金怎么挑选?</div>
+          </li>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金怎么保养 卫浴五金怎么挑选</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">在卫浴间里面也会用到些五金的产品，这些五金的产品在卫浴间里面也得到了积极的用处，而卫浴间是比较潮湿的，五金长期接触到它们是容易损坏，卫浴五金怎么保养?在购买卫浴五金的时候，可以见到各种各样的五金产品，卫浴五金怎么挑选?</div>
+          </li>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金怎么保养 卫浴五金怎么挑选</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">在卫浴间里面也会用到些五金的产品，这些五金的产品在卫浴间里面也得到了积极的用处，而卫浴间是比较潮湿的，五金长期接触到它们是容易损坏，卫浴五金怎么保养?在购买卫浴五金的时候，可以见到各种各样的五金产品，卫浴五金怎么挑选?</div>
+          </li>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金怎么保养 卫浴五金怎么挑选</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">在卫浴间里面也会用到些五金的产品，这些五金的产品在卫浴间里面也得到了积极的用处，而卫浴间是比较潮湿的，五金长期接触到它们是容易损坏，卫浴五金怎么保养?在购买卫浴五金的时候，可以见到各种各样的五金产品，卫浴五金怎么挑选?</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金应如何保养？</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">原材料 优品：一般采用精抛纯铜，优质锌合金或钛合金作为原材料，结构严密，份量重、手感厚实。原材料以纯铜为佳。压铸、精加工工艺 优品：采用大型精密电脑控制压铸机床及数码精密机床，毛坯表面光滑、平整、无气孔、丝纹疵点等现象，研磨、抛当工艺严谨，工序繁多。</div>
+          </li>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金应如何保养？</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">原材料 优品：一般采用精抛纯铜，优质锌合金或钛合金作为原材料，结构严密，份量重、手感厚实。原材料以纯铜为佳。压铸、精加工工艺 优品：采用大型精密电脑控制压铸机床及数码精密机床，毛坯表面光滑、平整、无气孔、丝纹疵点等现象，研磨、抛当工艺严谨，工序繁多。</div>
+          </li>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金应如何保养？</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">原材料 优品：一般采用精抛纯铜，优质锌合金或钛合金作为原材料，结构严密，份量重、手感厚实。原材料以纯铜为佳。压铸、精加工工艺 优品：采用大型精密电脑控制压铸机床及数码精密机床，毛坯表面光滑、平整、无气孔、丝纹疵点等现象，研磨、抛当工艺严谨，工序繁多。</div>
+          </li>
+          <li>
+            <a href="detail.html" class="ccsl">卫浴五金应如何保养？</a>
+            <span>2018-10-13</span>
+            <div class="clear"></div>
+            <div class="sub">原材料 优品：一般采用精抛纯铜，优质锌合金或钛合金作为原材料，结构严密，份量重、手感厚实。原材料以纯铜为佳。压铸、精加工工艺 优品：采用大型精密电脑控制压铸机床及数码精密机床，毛坯表面光滑、平整、无气孔、丝纹疵点等现象，研磨、抛当工艺严谨，工序繁多。</div>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="part4">
+  <div class="contitbox wow fadeInDown">
+    <p class="ccsl">我们的优势</p>
+    <span class="ccsl">OUR ADVANTAGE</span>
+    <div class="sub">诚信似金，留下信任，带走满意，质高价廉，便携诚信</div>
+  </div>
+  <div class="p4con">
+    <div class="main">
+      <div class="p4L wow fadeInLeft">
+        <div class="item">
+          <strong>01&nbsp;</strong>
+          <b class="ccsl">质量保证</b>
+          <div class="clear"></div>
+          <div class="sub">质量保证(Quality Assurance)也是质量管理的一部分，它致力于提供质量要求会得到满足的信任。</div>
+        </div>
+        <div class="item">
+          <strong>02&nbsp;</strong>
+          <b class="ccsl">轻松供货</b>
+          <div class="clear"></div>
+          <div class="sub">质量保证(Quality Assurance)也是质量管理的一部分，它致力于提供质量要求会得到满足的信任。</div>
+        </div>
+      </div>
+      <div class="p4R wow fadeInRight">
+        <div class="item">
+          <strong>03&nbsp;</strong>
+          <b class="ccsl">售后服务</b>
+          <div class="clear"></div>
+          <div class="sub">365天24小时的售后体系  为您提供最贴心的服务拥有一支优秀的售后服务团队，确保第一时间解决客户的售后问题，让您无后顾之忧</div>
+        </div>
+        <div class="item">
+          <strong>04&nbsp;</strong>
+          <b class="ccsl">专业团队</b>
+          <div class="clear"></div>
+          <div class="sub">365天24小时的售后体系  为您提供最贴心的服务拥有一支优秀的售后服务团队，确保第一时间解决客户的售后问题，让您无后顾之忧</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="part5">
+<script type="text/javascript">
+     //js无缝滚动代码
+   function marquee(i, direction) {
+       var obj = document.getElementById("marquee" + i);
+       var obj1 = document.getElementById("marquee" + i + "_1");
+       var obj2 = document.getElementById("marquee" + i + "_2");
+       if (direction == "up") {
+          if (obj2.offsetTop - obj.scrollTop <= 0) {
+                obj.scrollTop -= (obj1.offsetHeight + 20);
+          } else {
+             var tmp = obj.scrollTop;
+             obj.scrollTop++;
+             if (obj.scrollTop == tmp) {
+              obj.scrollTop = 1;
+              }
+          }
+       } else {
+          if (obj2.offsetWidth - obj.scrollLeft <= 0) {
+               obj.scrollLeft -= obj1.offsetWidth;
+            } else {
+                obj.scrollLeft++;
+         }
+
+       }
+
+   }
+     function marqueeStart(i, direction) {
+        var obj = document.getElementById("marquee" + i);
+        var obj1 = document.getElementById("marquee" + i + "_1");
+        var obj2 = document.getElementById("marquee" + i + "_2");
+        obj2.innerHTML = obj1.innerHTML;
+        var marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+        obj.onmouseover = function () {
+              window.clearInterval(marqueeVar);
+         }
+        obj.onmouseout = function () {
+            marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+          }
+     }
+</script>
+  <div id="marquee1" class="marqueeleft">
+    <div style="width: 8000px;">
+      <ul id="marquee1_1">
+        <li><a href="picdetail.html"><img src="images/3.jpg" /></a></li>
+        <li><a href="picdetail.html"><img src="images/3.jpg" /></a></li>
+        <li><a href="picdetail.html"><img src="images/3.jpg" /></a></li>
+        <li><a href="picdetail.html"><img src="images/3.jpg" /></a></li>
+        <li><a href="picdetail.html"><img src="images/3.jpg" /></a></li>
+        <li><a href="picdetail.html"><img src="images/3.jpg" /></a></li>
+      </ul>
+      <ul id="marquee1_2">
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">marqueeStart(1, "left");</script>
+</div>
+<div class="clear"></div>
+<div class="part6">
+  <div class="main">
+    <div class="part6_1">
+      <p class="ccsl">联系我们</p>
+      <div class="sub">***五金有限公司<br />公司地址：河北省石家庄市桥西区***</div>
+      <div class="line"></div>
+    </div>
+    <div class="part6_2">
+      <div class="item">
+        <img src="images/icon1.png" />
+        <p class="ccsl">电话: 000-00000000</p>
+      </div>
+      <div class="item">
+        <img src="images/icon2.png" />
+        <p class="ccsl">Q Q : 123456789</p>
+      </div>
+      <div class="item">
+        <img src="images/icon3.png" />
+        <p class="ccsl">手机：+12345678910</p>
+      </div>
+      <div class="item">
+        <img src="images/icon4.png" />
+        <p class="ccsl">邮箱：123***@qq.com</p>
+      </div>
+    </div>
+    <div class="part6_3">
+      <img src="images/4.jpg" />
+      <p class="ccsl">微信公共号</p>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footerbox">
+  <div class="main">
+    <div>备123456789号-1 版权所有：***五金有限公司 技术支持：**科技 <br />**品牌厂家|高品质**专业供应商|***批发价格|**质量稳定</div>
+  </div>
+</div>
+</body>
+</html>

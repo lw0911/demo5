@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>汽车用品,汽车配件,提供优质汽车用品</title>
+<link href="css/style.css" rel=stylesheet>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/jqselect.js"></script>
+<script src="js/slides.min.jquery.js"></script>
+<script>
+$(function(){
+			// Set starting slide to 1
+			var startSlide = 1;
+			// Get slide number if it exists
+			if (window.location.hash) {
+				startSlide = window.location.hash.replace('#','');
+			}
+			// Initialize Slides
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				generatePagination: true,
+				play: 0,
+				pause: 2500,
+				hoverPause: true,
+				// Get the starting slide
+				start: startSlide,
+				animationComplete: function(current){
+					// Set the slide number as a hash
+
+					//window.location.hash = '#' + current;
+				}
+			});
+		});
+</script>
+
+</head>
+
+<body>
+<div class="header">
+  <div class="main"><a href="" class="logo"><img src="images/logo.png" class="pngFix"/></a>
+    <div class="tel"><span>咨询热线</span>
+      <p>4000-000-000</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="clear"></div>t
+<div class="banner">
+  <div class="main_visual">
+    <div class="notice">
+          <div class="main">
+          	<div class="menu">
+                  <ul>
+                    <li class="top"><a href="index.html">网站首页</a> </li>
+                    <li class="l1"><a href="about.html">关于我们</a> </li>
+                    <li><a href="news.html">新闻资讯</a> </li>
+                    <li class="l1"><a href="products.html">产品展示</a> </li>
+                    <li><a href="">工程案例</a> </li>
+                    <li class="l1"><a href="">服务中心</a> </li>
+                    <li><a href="">人才招聘</a> </li>
+                    <li class="l1"><a href="">在线留言</a> </li>
+                    <li><a href="">联系我们</a> </li>
+                    
+                    <li class="l1"><a href="">在线留言</a> </li>
+                    <li><a href="">联系我们</a> </li> 
+                  </ul>
+            </div>
+            <div class="noticecon"><b>网站公告：</b>
+               <marquee scrollamount="2" scrolldelay="5" onMouseOut="this.start()" onMouseOver="this.stop()">北京某某汽车用品网站建成，欢迎您的浏览！</marquee>
+            </div>
+           <div class="search">
+              <form id="search" name="search" method="get" action="">
+                <input type="text" class="text" name="kws" id="kws" value="输入您要搜索的关键词"/>
+                <div class="select">
+                  <select id="rid" style="display: none" name="rid">
+                    <option value="1" selected="selected">新闻资讯</option>
+                    <option value="2" >产品展示</option>
+                    <option value="5" >热销产品</option>
+                    <option value="8" >行业知识</option>
+                  </select>
+                </div>
+                <input type="submit" title="搜索" class="button" value=""/>
+              </form>
+              <script type=text/javascript>
+
+                        jQuery(document).ready(function() {
+
+                            jQuery("#rid").selectbox();
+
+                        });
+
+                    </script> 
+ 
+            </div>
+          </div>
+    </div>
+    
+    
+    <!--banner start-->
+  <div class="banner">
+	<ul class="slides">
+		<li style="background:url(images/banner01.jpg) 50% 0 no-repeat;"></li>
+		<li style="background:url(images/banner02.jpg) 50% 0 no-repeat;"></li>
+	</ul>
+</div>
+  <!-- js调用部分begin -->
+	
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script>
+    $(function(){
+        $('.banner').flexslider({
+            directionNav: true,
+            pauseOnAction: false
+        });
+    });
+    </script>
+    <!-- js调用部分end -->
+  <!--banner end-->
+    
+  </div>
+
+</div>
+
+
+<div class="activity">
+    <p class="proname">CASE</p>
+    <div class="kec"><p class="prona1">  工程案例</p></div>
+    <div class="viewmore"><a href="">查看更多</a></div>
+    <div class="clear"></div>
+    <div id="container">
+      <div id="example">
+        <div id="slides">
+          <div class="slides_container" >
+            <div class="slide">
+              <div class="qie01"></div>
+              <div class="qie02">
+                 <div class="fra"><em>工程案例名称一</em><img src="images/pic01.jpg" width="287" height="215"/><a href=""></a></div>
+                 <div class="fra1"><em>工程案例名称二</em><img src="images/pic02.jpg" width="287" height="215"/><a href=""></a></div>
+                 <div class="fra2"><em>工程案例名称三</em><img src="images/pic03.jpg" width="287" height="215"/><a href=""></a></div>
+                 <div class="fra3"><em>工程案例名称四</em><img src="images/pic04.jpg" width="287" height="215"/><a href=""></a></div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="qie01"></div>
+              <div class="qie02">
+                <div class="fra"><em>工程案例名称五</em><img src="images/pic05.jpg" width="287" height="215" /><a href=""></a></div>
+                <div class="fra1"><em>工程案例名称六</em><img src="images/pic06.jpg" width="287" height="215" /><a href=""></a></div>
+                <div class="fra2"><em>工程案例名称七</em><img src="images/pic03.jpg" width="287" height="215" /><a href=""></a></div>
+                <div class="fra3"><em>工程案例名称八</em><img  src="images/pic08.jpg" width="287" height="215" /><a href=""></a></div>
+              </div>
+
+            </div>
+          </div>
+
+          <a href="#" class="prev" title="prev">&nbsp;&nbsp;</a><a href="#" class="next">&nbsp;</a> </div>
+
+      </div>
+
+    </div>
+
+    <!--效果结束 end--> 
+
+
+
+</div>
+
+
+<div class="index_about">
+  <p class="proname">ABOUT</p>
+  <div class="kec"><p class="prona1">  关于我们</p></div>
+  <div class="viewmore"><a href="">查看更多</a></div>
+  <div class="index_con w980 clearfix">
+    <img class="fl" src="images/pic06.jpg" width="350" height="280"/>
+    <p class="fr"><span>北京某某汽车用品有限公司</span>经过多年的沉淀与发展，我国新能源汽车市场日益成熟，私人消费者对新能源汽车的关注热情日益高涨，不过毕竟是新生事物，买车时可供参考的经验还是相对较少，多车型的试驾活动正是当前所需。<br />
+　　3月8日，中国汽车报举行了一场新能源汽车的试驾会，汇集了市场上的主流新能源汽车，包括北汽EU260、江淮iEV6S、长安逸动EV、华晨宝马之诺1E、宝马i3、奇瑞eQ等车型。从北京海淀区北京印象社区出发，穿过长安街，再自由路线返回，由媒体试车手和业内专家组成的试驾团队在城市工况中体验了各车辆的动力、操控、节能等综合性能，并最终形成试驾报告。<br />
+　　窥一斑可知全豹，此次活动或许能映射出新能源汽车当前处于怎样的技术水平，又面临什么发展瓶颈，既能为消费者提供更多的购车指导，也可为企业打造一个专业的新能源汽车交流平台，更是鼓励绿色出行，从舆论层面推进新能源汽车发展。</p>
+  </div>
+</div>
+
+<div class="clear"></div>
+<div class="case">
+<div class="clear"></div>
+  <p class="proname">products</p>
+   <div class="kec"><p class="prona1"> 产品展示</p></div>
+   <div class="viewmore"><a href="">查看更多</a></div>
+<div class="track">
+
+  <div class="profra">
+    <div class="view-port">
+       <div class="limg"><a class="img" href=""><img src="images/pic01.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称一 </a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic02.jpg"width="220" height="165"/></a><a class="wor" href="">产品展示名称二 </a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic03.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称三  </a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic04.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称四 </a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic05.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称五</a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic06.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称六</a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic04.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称七</a></div>
+       <div class="limg"><a class="img" href=""><img src="images/pic08.jpg" width="220" height="165"/></a><a class="wor" href="">产品展示名称八</a></div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="newsfra">
+<p class="proname">Industry knowledge</p>
+   <div class="kec"><p class="prona1"> 行业知识</p></div>
+   <div class="viewmore"><a href="">查看更多</a></div>
+    <div class="news">
+        <ul class="newsul">
+          <li>
+            <img class="newsimg" src="images/pic01.jpg"  width="163" height="122" />
+            <a href="">
+               <div class="newsword">
+                <p class="top">车窗贴膜起泡不止是劣质那么简单 还会致癌</p>
+                <div class="newscon">　　汽车贴膜是新车标配配件，车窗贴上优质车膜后不仅能隔热、防晒、降低紫外线辐射、降低车内的温度，还可以保护车内的隐私。...</div>
+				 <label>2016 / 03 / 21</label>
+               </div>
+            </a>
+          </li>
+
+          <li>
+            <img class="newsimg" src="images/pic02.jpg" width="163" height="122" />
+            <a href="">
+               <div class="newsword">
+                <p class="top">习近平为干事创业净化“政治和经济”两大生 </p>
+                <div class="newscon">　　实现“十三五”宏伟目标，时间紧任务重；需要凝聚共识，充分发挥一切积极因素，为干事创业提供良好的氛围。所以，习近平总书记不仅提出要净化政治生态 ...</div>
+				 <label>2015 / 10 / 14</label>
+               </div>
+            </a>
+          </li>
+
+             
+          <li>
+            <img class="newsimg" src="images/pic06.jpg" width="163" height="122" />
+            <a href="">
+               <div class="newsword">
+                <p class="top">日本推出全球首辆无电池电动车</p>
+                <div class="newscon">　　日本研究人员日前推出全球首辆无需电池的电动汽车。这款车由位于爱知县的丰桥技术科学大学和大成建设公司共同研发并向媒体作性能演示。共同社报道，这款车需要在专用车道上行驶，从车道获取电能
+</div>
+                  <label>2015 / 09 / 11</label>
+               </div>
+            </a>
+          </li>
+             
+          <li>
+            <img class="newsimg" src="images/pic03.jpg" width="163" height="122" />
+            <a href="">
+              <div class="newsword">
+                <p class="top">SUV车型怎么选？ 不到30万的SUV车型导购 </p>
+                <div class="newscon">　　30万预算在BBA里能买到Q3、X1、GLA这三款紧凑型SUV，但论及豪华感，GLA是最佳的，GLA的内饰设计与新款C级几乎一模一样。GLA 200的中控有一块大面积的银色波纹质感面板做点缀...</div>
+                <label>2015 / 09 / 09</label>
+              </div>
+            </a>
+          </li>
+        </ul>
+  </div>
+</div>
+
+<div class="newsframe">
+  <div class="news_fra">
+    <div class="news_fleft">
+      <P class="p1"><span>新闻资讯</span><label >查看更多资讯</label></P>
+      <p class="p2">The latest information</p>
+      <ul class="news_ful">
+        <li>
+          <a href=""><p>重庆女司机开奔驰进车库 撞保安亭又撞8车</p><span>2015-12-21</span></a>
+        </li>
+       
+        <li>
+          <a href=""><p>互联网汽车快修新模式 养车无忧为车主解决养车难</p><span>2015-09-09</span></a>
+        </li>
+            
+        <li>
+          <a href=""><p>不是只有发动机和轮胎要保养 汽车这个地方你保养了吗？</p><span>2015-09-09</span></a>
+        </li>            
+        
+        <li>
+          <a href=""><p>3.15汽修黑洞扒下了谁的底裤？</p><span>2015-11-16</span></a>
+        </li>
+        
+        <li>
+          <a href=""><p>欧洲汽车使用更多的铝材以期达到排放标</p><span>2015-10-30</span></a>
+        </li>
+     </ul>
+   </div>
+   
+   <div class="news_fright">
+      <p class="p1">联系我们</p>
+      <p class="p2">13112341233</p>
+      <div class="news_frcon">
+         <div class="news_frr">
+           <div class="news_mapcon">
+            <label>邮箱：</label><span>123321aaa@.com</span>
+           </div>
+           <div class="news_mapcon">
+            <label>传真：</label><span>4000-000-000</span>
+           </div>
+           <div class="news_mapcon">
+            <label>手机：</label><span>131-1234-1233</span>
+           </div>
+           <div class="news_mapcon">
+            <label>联系人：</label><span>王经理</span>
+           </div>
+           <div class="news_mapcon">
+            <label>地址：</label><span>北京市海淀区某某大厦2032室</span>
+           </div>
+         </div>
+         <p class="mapimg"><img src="images/ewm.png" width="150" height="140" /></p>
+      </div>
+   </div>
+
+    </div>
+
+</div>
+
+
+<div class="footclear"></div>
+<div class="f_link">
+  <div class="link w980"><span>友情链接</span><a href="">百度</a><a href="">百度</a></div>
+</div>
+<div class="foot">
+  <div class="main">
+    <div class="bootTxt">
+      <div class="foot_nav">
+        <a href="">网站首页</a>
+        <a href="">关于我们</a>
+        <a href="">新闻中心</a>
+        <a href="">产品展示</a>
+        <a href="">工程案例</a>
+        <a href="">服务中心</a>
+        <a href="">人才招聘</a>
+        <a href="">在线留言</a>
+        <a href="">联系我们</a>
+      </div>
+      <div class="fl">手机：123-1234-1233&nbsp;&nbsp;&nbsp;联系人：王经理<br />传真：4000-000-000&nbsp;&nbsp;&nbsp;地址：北京市海淀区某某大厦2032室 <br />技术支持：<a href="" target="_blank">【XXX网络】</a>&nbsp;&nbsp;&nbsp;ICP备案编号：<a href="" target="_blank">冀ICP备15022***号</a>&nbsp;&nbsp;&nbsp; 版权所有：北京某某汽车用品有限公司<br />
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

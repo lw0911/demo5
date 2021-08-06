@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="XXX集团，一站式厂价直销平台，XXX客户服务互动关系平台" />
+<meta name="Description" content="XXX商贸物流有限公司，由XXX控股香港有限公司全资于2012年成立，并作为“深圳前海”重点集团型企业首批入驻。集团涉及快速消费品供应链管理、全国性经销业务、高科技软硬件系统开发、投资、建设、仓储物流系统开发、自动化系统设备研究与开发等诸多领域。" />
+<title>XXX商贸物流集团</title>
+<link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+<link href="webcss/global.css" type="text/css" rel="stylesheet" />
+<link href="webcss/layout.css" type="text/css" rel="stylesheet" />
+<script src="webjs/jquery-1.8.3.min.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script src="webjs/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div,ul,li,img,dl,p,dt,dd,span,input,textarea,h1,h2,h3,h4,h5,h6,em,i,ol,a,a.cur,a:hover'); 
+</script>
+<![endif]-->
+</head>
+
+<body>
+    <!--头部-->
+<div class="index_top">
+    	<div class="index_topCon">
+        	<dl class="clearfix">
+                <dt>热线电话：<em>XXX</em></dt>
+                <dd class="dd3"><a href="register.html">注册</a></dd>
+                <dd class="dd4"><a href="login.html">登录</a> |</dd>
+                <dd class="dd2"><a href="Friend.html">星客汇</a></dd>
+                <dd class="dd1" style="display:none"><a href="#">英文版</a></dd>
+            </dl>
+        </div>
+        <div class="index_menuCon">
+            <ul class="clearfix">
+                <li id="pr_3"><a href="Product.html">产品与业务</a></li>
+                <li id="pr_4"><a href="News.html">资讯中心</a></li>
+                <li id="pr_5"><a href="Job.html">人力资源</a></li>
+                <li id="pr_6"><a href="About.html">关于我们</a></li>
+                <li id="pr_7"><a href="Contact.html">联系我们</a></li>
+            </ul>
+            <a href="index.html" class="index_logo"><img src="webimages/index_logo_07.png" width="334" height="70" alt="" /></a>
+        </div>
+    </div>
+<script src="webjs/topMember.js"></script>
+  <script type="text/javascript">
+
+        function mobile_device_detect(url) {
+
+            var thisOS = navigator.platform;
+
+            var os = new Array("iPhone", "iPod", "iPad", "android", "Nokia", "SymbianOS", "Symbian", "Windows Phone", "Phone", "Linux armv71", "MAUI", "UNTRUSTED/1.0", "Windows CE", "BlackBerry", "IEMobile");
+
+            for (var i = 0; i < os.length; i++) {
+
+                if (thisOS.match(os[i])) {
+                    window.location = url;
+                }
+
+            }
+
+            //因为相当部分的手机系统不知道信息,这里是做临时性特殊辨认
+            if (navigator.platform.indexOf('iPad') != -1) {
+                window.location = url;
+            }
+
+            //做这一部分是因为Android手机的内核也是Linux
+            //但是navigator.platform显示信息不尽相同情况繁多,因此从浏览器下手，即用navigator.appVersion信息做判断
+            var check = navigator.appVersion;
+
+            if (check.match(/linux/i)) {
+                //X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
+                if (check.match(/mobile/i) || check.match(/X11/i)) {
+                    window.location = url;
+                }
+            }
+
+            //类in_array函数
+            Array.prototype.in_array = function (e) {
+                for (i = 0; i < this.length; i++) {
+                    if (this[i] == e)
+                        return true;
+                }
+                return false;
+            }
+        }
+
+        mobile_device_detect("http://m.synergy-hk.com/");
+
+    </script>   
+    <div class="ny_banner vip_banner">
+        
+    </div>
+    <div class="vip_box">
+        <div class="ny_box">
+            <div class="vip_title">
+                <h3>
+                    <span><a href="#">首页</a> >  注册会员</span>
+                    登录会员
+                </h3>
+            </div>
+            <div class="vip_regiestCon">
+                <div class="reg_con clearfix">
+                    <div class="reg_left">
+                        <!--<div class="reg_bt reg_bt2"><span>XXX</span></div>-->
+                        <form id="register_form">
+                            <div class="reg_list" style="display: block;">
+                                <ul>
+                                <li>
+                                    <span>用户名：</span><input name="name" type="text" class="login_txt" placeholder="邮箱注册" />
+                                </li>
+                                <li>
+                                    <span>设置密码：</span><input name="pwd" type="password" class="login_txt" />
+                                </li>
+                                <li>
+                                    <span>确认密码：</span><input name="repwd" type="password" class="login_txt" />
+                                </li>
+                                <li>
+                                    <span>验证码 ：</span><input name="yzm" type="text" class="login_txt login_txt2" /><em onclick="send_email();" class="sendemail_">发送验证码到邮箱</em><em  class="sendemail_fason" style="display:none;">还剩60秒,可重新发送!</em>
+                                    <p>
+                                      <label><input type="checkbox" name="CheckboxGroup1" value="复选框" id="CheckboxGroup1_0" />我已阅读<a href="#">《网站条款及隐私条款》</a></label>
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>&nbsp;</span><input name="" type="button" class="login_btn" value="立即注册" onclick="register()" />
+                                </li>
+                            </ul>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="reg_right">
+                        <h3>已有账号，立即登录！</h3>
+                        <a href="login.html" class="reg_login reg_login2">登 录</a>
+                        <p>如果您已有XXX会员，通过注册用户名与密码进行登录，并请完善相关个人信息。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vip_list">
+            <dl class="clearfix">
+                <dd class="dd1 cur"><a href="#">我是XXX</a></dd>
+                <dd class="dd2"><a href="#">我是供应商</a></dd>
+            </dl>
+        </div>
+    </div>
+      <div class="index_footer">
+    	<span class="scrollTop"></span>
+    	<dl class="clearfix">
+        	<dt>
+            	<p>2020 © 版权所有：XXX商贸物流集团</p>
+                
+            </dt>
+            <dd>
+            	<p><a href="Friend.html">星客汇 </a> | <a href="Gongying.html">供应商中心</a> | <a href="Product.html">产品业务</a> | <a href="News.html">资讯中心 </a> | <a href="Job.html">人力资源 </a></p>
+                <p><a href="About.html">关于我们</a> | <a href="Contact.html">联系我们</a> | <a href="#"> 友情链接 </a> | <a href="#">隐私政策 </a> | <a href="#">法律条款</a></p>
+            </dd>
+        </dl>
+    </div>
+
+
+
+     <div class="index_floatNav">
+    	<div class="floatNav_con">
+        	<dl>
+            
+        <dd class="dd1"><a href="javascript:"><em>微信</em></a><p><img src="UpLoadFiles/20200414/2020041414560392.jpg" width="100" height="100" alt="" /></p></dd>
+          
+            	 
+               	<dd class="dd2"><a href="mailto:Synergy@synergy-hk.com"><em>邮箱</em></a></dd>
+                
+            </dl>
+            <ul>
+             
+              <li class="cur1"><a href="http://wpa.qq.com/msgrd?v=3&uin=3101847697&site=qq&menu=yes">在线问</a></li>
+             
+             <li class="cur5"><a href="#">回顶部</a></li>
+            </ul>
+        </div>
+    	<span>展开<em></em></span>
+    </div>
+</body>
+<script src="webjs/zml.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $("#ch-@ChannerId@").addClass("cur");
+    $("#pr-@ChannerPrId@").addClass("cur");
+</script>
+    <script src="webjs/fc_Ajax.js"></script>
+    <script type="text/javascript">
+        $(".recruitment_contwo dt").eq(0).addClass("cur");
+        $(".recruitment_contwo dd").eq(0).show();
+    </script>
+</html>
+
+

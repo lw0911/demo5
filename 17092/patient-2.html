@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>口腔颌面外科</title>
+    <meta name="keywords" content="口腔颌面外科" />
+    <meta name="description" content="口腔颌面外科" />
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--<link rel="stylesheet" href="css/swiper.min.css">-->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bai.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/selectivizr-min.js"></script>
+    <script>
+       (function() {
+         if (!
+         /*@cc_on!@*/
+         0) return;
+         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+         var i= e.length;
+         while (i--){
+             document.createElement(e[i])
+         }
+    })()
+    </script>
+    <![endif]-->
+
+
+</head>
+<script> 
+$(function(){
+    var hei=($('.art_patient .nav_patient').offset().top)-10;
+    var left=$('.art_patient .nav_patient' ).offset().left;
+     $(document).on("scroll",function(){
+            var scroll_top=$(this).scrollTop();
+            if(scroll_top>hei){
+                $('.nav_patient').css({"position":"fixed",'top':'10px','left':left });
+            }else{$('.nav_patient').css({"position":"absolute",'top':'40px','left':'0'});
+        }
+     })
+})
+   </script>
+
+<body>
+    
+
+<div class="header container"  style="position:fixed ;top:0;left:0;right:0;">
+    <a href="index.html" class="logo pull_left" style="width:200px;height:100px;">
+        <img src="img/icon/logo.png" alt="" >
+    </a>
+    <div class="pull_right">
+        <ul class="main_nav content">
+            
+            <li class="main_li" index="关于XXX">
+                <p><a href="about.html">关于XXX</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="about.html">公司简介</a></li>
+                    
+                    <li><a href="items.html">代理项目</a></li>
+                    
+                    <li><a href="partner.html">合作伙伴</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="hzzx" index="患者中心">
+                <p><a href="patient.html">患者中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">心胸外科</a></li>
+                    
+                    <li><a href="patient-1.html">神经外科</a></li>
+                    
+                    <li><a href="patient-2.html">颌面外科</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="cpzx" index="产品中心">
+                <p><a href="patient.html">产品中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">胸骨固定产品</a></li>
+                    
+                    <li><a href="patient.html">漏斗胸产品</a></li>
+                    
+                    <li><a href="patient.html">神经外内科固定产品</a></li>
+                    
+                    <li><a href="patient.html">颌面外科系列产品</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="新闻动态">
+                <p><a href="news.html">新闻动态</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="news.html">公司新闻</a></li>
+                    
+                    <li><a href="news.html">展会信息</a></li>
+                    
+                    <li><a href="news.html">行业资讯</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="联系我们">
+                <p><a href="contact.html">联系我们</a></p>
+            </li>
+            
+        </ul>
+    </div>
+    <a href="#" class="lang">EN</a>
+    <div class="brush"></div>
+</div>
+
+<script>
+$('#hzzx,#cpzx').each(function(){
+    $(this).find(' p > a').eq(0).attr('href',$(this).find(' ul > li > a').eq(0).attr('href'))
+})
+</script>
+
+
+    <div class="banner ban_patient"></div>
+    <div class="show container relative">
+        <div class="title">
+    <h3>颌面外科</h3>
+    <ul class="content currentpage">
+        <li class="home_current"><a href="">首页</a></li> <span>></span> <li><a href="patient/index.html">患者中心</a></li> <span>></span> <li><a href="patient/p3/index.html" class="current">颌面外科</a>
+    </ul>
+</div>
+
+<script>
+$('.home_current a').html('<img src="img/icon/icon02.png" alt="" />')
+var tophead=$('.main_li[index="患者中心"]');
+if(tophead.find('.sec_nav li a').size()>1){
+	$('.currentpage li').last().addClass('hid_nav');
+	$('.hid_nav').append('<div class="hid"></div>');
+	tophead.find('.sec_nav li a').each(function() {
+		if($(this).text()=='颌面外科')return;
+		$('.hid_nav .hid').append('<a href="'+$(this).attr('href')+'">'+$(this).text()+'</a>')
+	})
+}
+</script>
+        <script>
+        $('.currentpage').each(function(){
+            $(this).find(' a ').eq(1).attr('href',$('#hzzx').find(' ul > li > a').eq(0).attr('href'))
+        })
+        </script>
+        <div class="art_patient relative">
+            <div class="nav_patient">
+                <ul>
+                    <li><a href="#cc_863">创伤</a></li>
+                    
+                    <li><a href="#cc_864">肿瘤</a></li>
+                    
+                    <li><a href="#cc_870">正颌</a></li>
+                    
+                    <li><a href="#cc_875">TMJ</a></li>
+                    
+                </ul>
+            </div>
+            <div class="cont_patient ">
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_863"></a>
+                    <div class="content">
+                    
+                        <img src="upload/2016/1121/1547882t6t.jpg" alt="" class="pull_left">
+                    
+                        <div class="img-margin">
+                            <h4>创伤</h4>
+                            <p style="white-space: normal;">创伤可以理解为骨折。骨折即骨的完整性和连续性中断。</p><p style="white-space: normal;">骨折：可由创伤和骨骼疾病所致，后者如骨髓炎、骨肿瘤所致骨质破坏，受轻微外力即发生的骨折，称为病理性骨折。</p><p style="white-space: normal;">颌骨骨折有一般骨折的共性，如出血、肿胀、疼痛、骨折移位、感觉异常和功能障碍等。但由于颌骨解剖结构和生理特点的特点，其临床表现和诊治方法与身体其他部位骨折又大不相同，最大的不同是由于上、下颌骨形成咬合关系，骨折时处理不当，会影响咀嚼功能。</p><p style="white-space: normal;">颌骨骨折的发生率约占颌面损伤的35%。平时损伤的原因多由于交通事故、工伤事故、跌打损伤及运动损伤所致。</p><p><br/></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">上颌骨骨折</li>
+                                
+                                <li>下颌骨骨折</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <ul class=" list-paddingleft-2" style="width: 900.594px; white-space: normal;"><li><p>1.22骨折段移位 影响下颌骨骨折后骨折段移位的因素有：骨折的部位、外力的大小和方向、骨折线方向和倾斜度、骨折段是否有牙以及附着肌肉的牵拉作用等，其中各咀嚼肌的牵拉扮演了重要的作用。常因不同部位骨折、不同方向的肌肉牵拉而出现不同情况的骨折段移位。</p></li><li><p>2.咬合错乱 颌骨骨折最常见的特征，对颌骨骨折的诊断与治疗有重要意义。即使骨折段仅有轻度移位，也可出现咬合错乱而影响功能。</p></li><li><p>3.骨折段异常动度 正常情况下下颌骨运动时是整体运动，只有在发生骨折时才会出现异常活动。</p></li><li><p>4.下唇麻木 下颌骨骨折时，突然的撕裂或牵拉会损伤下牙槽神经，出现下唇麻木。</p></li><li><p>5.张口受限 由于疼痛和升颌肌群痉挛，多数下颌骨骨折伤员存在张口受限症状。</p></li><li><p>6.牙龈撕裂 骨折处常可见牙龈撕裂，变色及水肿</p></li></ul><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <ul class=" list-paddingleft-2" style="width: 900.594px; white-space: normal;"><li><p>1.骨折段移位 影响下颌骨骨折后骨折段移位的因素有：骨折的部位、外力的大小和方向、骨折线方向和倾斜度、骨折段是否有牙以及附着肌肉的牵拉作用等，其中各咀嚼肌的牵拉扮演了重要的作用。常因不同部位骨折、不同方向的肌肉牵拉而出现不同情况的骨折段移位。</p></li><li><p>2.咬合错乱 颌骨骨折最常见的特征，对颌骨骨折的诊断与治疗有重要意义。即使骨折段仅有轻度移位，也可出现咬合错乱而影响功能。</p></li><li><p>3.骨折段异常动度 正常情况下下颌骨运动时是整体运动，只有在发生骨折时才会出现异常活动。</p></li><li><p>4.下唇麻木 下颌骨骨折时，突然的撕裂或牵拉会损伤下牙槽神经，出现下唇麻木。</p></li><li><p>5.张口受限 由于疼痛和升颌肌群痉挛，多数下颌骨骨折伤员存在张口受限症状。</p></li><li><p>6.牙龈撕裂 骨折处常可见牙龈撕裂，变色及水肿</p></li></ul><p><br/></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_864"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>肿瘤</h4>
+                            <p style="white-space: normal;">肿瘤是人体组织细胞由于内在和外界致病因素长时间的作用，使细胞的遗传物质——脱氧核糖核酸（DNA）产生突变，导致细胞的生长和分裂失去控制而发生异常增生和功能失调所造成的一种疾病。它是一类严重威胁人民健康的常见病、多发病，是多年来医学领域中越来越受到重视的话题。口腔颌面部肿瘤系头颈肿瘤的重要组成部分。</p><ol class=" list-paddingleft-2" style="width: 900.594px; white-space: normal;"><li><p>病因：</p></li><li><p>1.外来因素:如热、损伤、紫外线、X线及其他放射性物质以及长期慢性刺激等都可成为致癌的因素。近年来在临床上发现，因放射治疗而引起的继发性放射性癌也日益增多，已成为多原发癌病因方面的重要研究课题。</p></li><li><p>2.化学因素：这是肿瘤病因最早受到重视并被证实的因素。如煤焦油等可引起皮肤癌。</p></li><li><p>3.生物性因素：实验证明某些恶性肿瘤可以由病毒引起，如鼻咽癌、恶性淋巴瘤。</p></li><li><p>4.营养因素：营养与肿瘤的关系是近年来肿瘤学研究领域里的一个热门课题。人们注意到营养不良或营养过度，包括食谱、某些维生素及微量元素的变化与癌瘤的发生有一定的关系。</p></li><li><p>5.神经精神因素：精神过度紧张，心理平衡遭到破坏，造成人体功能失调，可能是肿瘤发生发展的有利因素。</p></li><li><p>6.内分泌因素：内分泌功能紊乱可引起某些肿瘤。</p></li></ol><p><br/></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">恶性肿瘤</li>
+                                
+                                <li>良性肿瘤</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p>1.大都生长较快。癌初期局限于黏膜内或表层之中，称原位癌。继之肿瘤穿过基底膜侵入周围组织，成一个小硬块。恶性肿瘤一般无包膜，因此，边界不清，肿块固定，与周围组织粘连而不能移动。恶性肿瘤由于生长快，并带有较大的破坏性，常发生表面坏死，溃烂出血，并有恶臭、疼痛。由于肿瘤迅速生长破坏而产生的毒性物质，可引起代谢紊乱，加以出血、感染、疼痛、饥饿等使机体不断消耗，因此恶性肿瘤发展到晚期，病人多出现消瘦、贫血、机体衰竭等症状，称为恶病质。</p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p>1.良性肿瘤一般生长缓慢，能够存在几十年，重量可达数公斤，如多唾液腺多形性腺瘤。良性肿瘤的生长方式大多为膨胀性生长，体积不断增大，挤开和压迫邻近组织。外表形态多为球形，如邻近有坚实组织时，肿瘤可因受压而呈扁圆或椭圆形；肿瘤生长部位的表面如受纤维条束的阻止，肿瘤可呈分叶状。</p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_870"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>正颌</h4>
+                            <p style="white-space: normal;">正颌，颌面部整形，例如：错牙合畸形分类，正颌手术分为 Le Fort Ⅰ型截骨术 SSRO 颏成形术</p><p style="white-space: normal;"><img src="upload/2016/1121/1556xxt0l6.jpg" alt="">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="upload/2016/1121/1556p8nbp2.jpg" alt=""></p><p><br/></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">Le FortⅠ型截骨术</li>
+                                
+                                <li>颌支矢状劈开截骨术（SSRO）</li>
+                                
+                                <li>颏成形术（颏：下巴）</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p>Le FortⅠ型截骨术适应证：</p><p>（1）上颌骨矢状向发育不足——截骨前移上颌骨</p><p>（2）上颌骨矢状向发育过度——截骨后退上颌骨</p><p>（3）上颌骨垂直向发育不足——截骨下降上颌骨</p><p>（4）上颌骨垂直向发育过度——截骨上抬上颌骨</p><p>（5）上颌牙弓缩窄——分块截骨扩大上颌牙弓</p><p>（6）上颌牙弓过宽——分块截骨缩小上颌牙弓</p><p>（7）颜面不对称——截骨纠正上颌骨偏斜</p><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p>SSRO适应症：</p><p>（1）下颌骨发育不足引起的下颌后缩畸形</p><p>（2）下颌骨发育过度引起的下颌前突畸形</p><p>（3）非上颌骨因素的轻度开牙合畸形</p><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p>颏成形术适应症：</p><p>（1） &nbsp; 颏部发育过度所致的颏前突畸形、颏过长畸形、颏过宽畸形</p><p>（2） &nbsp; 颏部发育不足所致的颏后缩畸形、颏短小畸形</p><p>（3） &nbsp; 颏部发育不对称所致的颏偏斜畸形</p><p><br/></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_875"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>TMJ</h4>
+                            <p>颞下颌关节强直：因器质性病变导致的关节固定、运动丧失，长期开口困难或完全不能开口。分为关节内强直和关节外强直。</p><p>关节内强直症状：</p><p>（1）开口困难：病史较长，一般在几年以上。</p><p>（2）面下部发育障碍畸形：多发生在儿童。双侧强直者由于整个下颌发育障碍，下颌内缩、后退，而正常上颌却显前突，形成特殊的小颌畸形。</p><p>关节内强直治疗：</p><p>（1）髁突切除术</p><p>（2）颞下颌关节成形术（包括全颞下颌关节假体置换）</p><p>全颞下颌关节假体置换适应证：</p><p>（1）年龄一般大于50岁</p><p>（2）关节强直</p><p>（3）关节肿瘤</p><p>（4）骨关节炎</p><p>（5）关节脱位</p><p>（6）类风湿性关节炎（不用假体）</p><p>（7）自体组织重建失败</p><p>（8）关节假体置换失败</p><p>（9）发育异常（如先天关节缺失）</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    
+             <div class="section footer fp-auto-height" >
+                 <div class="container relative foot-link">
+                    <div>
+                        <ul class="content">
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">关于XXX</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司简介</a></li>
+                                    
+                                    <li><a href="#">代理项目</a></li>
+                                    
+                                    <li><a href="#">合作伙伴</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">患者中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">心胸外科</a></li>
+                                    
+                                    <li><a href="#">神经外科</a></li>
+                                    
+                                    <li><a href="#">颌面外科</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">产品中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">胸骨固定产品</a></li>
+                                    
+                                    <li><a href="#">漏斗胸产品</a></li>
+                                    
+                                    <li><a href="#">神经外内科固定产品</a></li>
+                                    
+                                    <li><a href="#">颌面外科系列产品</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">新闻动态</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司新闻</a></li>
+                                    
+                                    <li><a href="#">展会信息</a></li>
+                                    
+                                    <li><a href="#">行业资讯</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">联系我们</a></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot_code">
+                        <img src="img/icon/code.png" alt="">    
+                        <p class="link_num">XXX</p>
+                    </div>
+                </div>
+                <div class="copy" >
+                     <p class="container">© Copyright 2020 all right PTY Medical  <span class="pull_right"> <a href="#." class=" share"></a>
+                     <a href="#." class=" share chat"></a></span></p>
+                </div>
+             </div>
+
+</body>
+
+</html>

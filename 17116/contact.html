@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联系我们</title>
+	<link rel="icon" href="./static/v4/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./static/v4/css/contact.css">
+	<link rel="stylesheet" href="./static/v4/css/public.css">
+	<script src="./static/v4/js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav_con">
+			<img class="logo" src="./static/v4/images/logo.png" width="10%"/>
+			<img class="logo_infro" src="./static/v4/images/logo_infro.png" width="15%"/>
+			<ul class="nav_ul">
+				<li class="nav_li"><a href="index.html">首页</a><div></div></li>
+				<li class="nav_li"><a href="about.html">关于XXX</a><div></div></li>
+				<li class="nav_li"><a href="game.html">XXX游戏</a><div></div></li>
+				<li class="li_ep">加入XXX<div class="li_list"><a href="join.html">社会招聘</a></div><div class="li_list"><a href="http://xiaozhao.XXX.com/index.html">校园招聘</a></div>
+				</li>
+				<li class="nav_li"><a href="work.html">商务合作</a><div></div></li>
+				<li class="nav_li"><a href="contact.html" class="active_hover">联系我们</a><div></div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="contact_con">
+			<div class="c_c_title">联系我们</div>
+			<div class="c_c_pic">
+				<img src="./static/v4/images/contactpic.png"/>
+			</div>
+			<div class="c_c_font1">
+				<ul>
+					<li>地址：广州海珠区新港东路琶洲新村11号楼24层</li>
+					<li>社招邮箱：hr@XXX.com</li>
+					<li>校招邮箱：xiaozhao@XXX.com</li>
+					<li>乘车路线：地铁站-四号线万胜围站（D出口）</li>
+					<li>公交站-万胜围站</li>
+				</ul>
+			</div>
+			<div class="c_c_font2">
+				<div class="c_c_ewm">
+					招聘官方微信
+					<img src="./static/v4/images/ewm1.jpg" width="100%" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_con">
+			<div class="foote_logo">
+				<img src="./static/v4/images/logo.png"/>
+			</div>
+			<div class="footer_font">
+				<ul>
+					<li><a href="about.html" target="_blank">关于XXX </a><span class="np">|</span> <a href="" target="_blank"></a>服务条款<span class="np">|</span> <a href="work.html" target="_blank">商务合作</a><span class="np">|</span> <a href="contact.html" target="_blank">联系我们</a></li>
+					<li><a href="http://sky.XXX.com/news/2015/0211/1190.html" target="_blank">《网络游戏管理暂行办法》</a>&nbsp;<a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/386615A1709B41BF989E35C4D54E9522" target="_blank"><img src="./static/v4/images/wen2.png"/></a> &nbsp;<a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08b525431c6015281d9acbd4cb9" target="_blank">文网游备字XXX</a></li>
+					<li>广州XXX信息科技有限公司 版权所有 粤网文 XXX 粤ICP备XXX</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	$(function() {
+		function play() {
+		};
+		play.prototype = {
+			NavHover:function() {
+				$(".nav_li").hover(function() {
+					$(this).find('div').stop().animate({"width":"100%"},300);
+				},function() {
+					$(this).find('div').stop().animate({"width":"0px"},200);
+				});
+			}
+		}
+		var Play = new play()
+		Play.NavHover();
+	})
+</script>

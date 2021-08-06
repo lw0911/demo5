@@ -1,0 +1,293 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="applicable-device" content="pc,mobile"/>
+<meta name="robots" content="noarchive">
+<title>HTML5响应式全屏网络品牌网站建设设计类静态html模板</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="renderer" content="webkit">
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/page.css" rel="stylesheet" type="text/css" />
+<link href="css/fix.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/fun.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.mChange.js"></script>
+<style>
+#header {
+	position: absolute;
+}
+</style>
+</head>
+
+<body>
+<div id="header">
+  <div edit_params="zoom%3D0.5%26height%3D82%26width%3D143"><a href="index.html" class="logo" style="background: url(images/logo.png) center center no-repeat;background-size:contain;"><i class="s1"></i><i class="s2"></i></a></div>
+  <span class="menu"></span>
+  <div class="nav_main"><a href="index.html">首页</a><a href="service.html">服务</a><a href="cases-internet.html">案例</a><a class="now" href="news.html">百科</a><a href="about.html">关于</a></div>
+  <div class="tel">400-999-6666</div>
+</div>
+<script type="text/javascript">
+
+$('<a href="tel:400-999-6666"><div class="t">400-999-6666</div></a>').appendTo('#header .nav_main');
+
+</script>
+<div class="nav_float">
+  <ul>
+    <li class="a1"><a href="http://dwz.cn/6nsBui" target="_blank">400-999-6666</a></li>
+    <li class="a2"><a href="http://p.qiao.baidu.com/" target="_blank"></a></li>
+    <li><a href='javascript:void(0);' class='a3'><span><img src='images/s5af8d06aa6971.jpg' width='200'></span></a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+
+$('.nav_float ul li').each(function(index, el) {
+
+  var c = $(this).attr('class');
+
+  var v = false;
+
+  if (c) {
+
+    v = '';
+
+    $.each(c.split(' '), function(index, val) {
+
+      if ( val != 'widget-area') {
+
+        v += val + ' ';
+
+      }
+
+    });
+
+  }
+
+
+
+  if ( v) {
+
+    $(this).removeClass(v).children('a').addClass(v);
+
+  }
+
+});
+
+</script>
+<div id="body">
+  <div class="body ">
+    <div class="banner"> <span class="bigimg" style="display:block;"><img class="img pimg" psrc="images/s5ab5dbc11a9c8.jpg"/></span> <span class="smallimg" style="display:block;"><img class="img mimg" msrc="images/s5ab856010bb80.jpg"/></span>
+      <div class="title"> </div>
+    </div>
+    <script>
+
+        $(function(){
+
+            var _width = $(window).width();
+
+            if(_width > 751){
+
+                $('.smallimg').css({"display":"none"});
+
+            }
+
+            if(_width < 751){
+
+                $('.bigimg').css({"display":"none"});
+
+            }
+
+        })
+
+        </script>
+    <div class="news_arc">
+      <div class="block">
+        <div class="title">
+          <div class="date"><span>2019-05-</span><strong>12</strong></div>
+          <h1 style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:70%;">网站抽奖系统数据库设计方案</h1>
+          <a href="javascript:void(0);" class="back">返回</a> 
+          <script type="text/javascript">
+
+          (function($){
+
+            $('.back').attr('href', (function(name) {
+
+              var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+
+              var r = window.location.search.substr(1).match(reg);
+
+              if (r!=null) return unescape(r[2]); return 'javascript:void(0);';
+
+            })('backurl'));
+
+          })(jQuery);
+
+        </script> </div>
+        <div class="content">
+          <p class="MsoNormal" style="text-indent:2em;"> 
+          <span style="font-size:14px;font-family:Microsoft YaHei;">
+          <p class="MsoNormal"> 现在很多<b class="lemma-word" data-id="184">网站</b>都会有抽奖系统，那么抽奖系统是怎么设计的呢，下面我们就来说说：<span></span> </p>
+          </span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;"><br />
+            </span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">1. </span><span style="font-size:14px;font-family:Microsoft YaHei;">我们可以把每个活动抽象出一张表，有具体的活动标题，活动的开始时间，活动的结束时间，因为每个活动限制的用户抽取次数不同，所以有一个抽取次数的限制，还有活动的状态，那么活动表我们起名为</span><span style="font-size:14px;font-family:Microsoft YaHei;">t_activity</span><span style="font-size:14px;font-family:Microsoft YaHei;">；</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span><span style="font-size:14px;font-family:Microsoft YaHei;">2. </span></span><span style="font-size:14px;font-family:Microsoft YaHei;">活动的奖励我们可以抽象出一张表，奖励有奖励的类型，红包和积分的具体数额，实物的奖品名称，等等，奖品的等级，是一等奖，二等奖，三等奖，还是纪念奖，还有每个奖品获取的概率，那么物品的表我们起名为</span><span style="font-size:14px;font-family:Microsoft YaHei;">t_prize</span><span style="font-size:14px;font-family:Microsoft YaHei;">；</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span><span style="font-size:14px;font-family:Microsoft YaHei;">3. </span></span><span style="font-size:14px;font-family:Microsoft YaHei;">如果是实物奖励的话，需要用户填写一些信息，领取人的姓名，领取人的联系方式，领取人的收获地址</span><span style="font-size:14px;font-family:Microsoft YaHei;">t_information;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span><span style="font-size:14px;font-family:Microsoft YaHei;">4. </span></span><span style="font-size:14px;font-family:Microsoft YaHei;">用户每次抽奖的记录，抽到了那个奖项，如果是红包的和积分的话，数额是多少，用户是否领取了奖励，如果是实物的话，抽到了那个实物，是否填写了实物的领取信息，还有抽奖时间</span><span style="font-size:14px;font-family:Microsoft YaHei;">t_raffle</span><span style="font-size:14px;font-family:Microsoft YaHei;">；</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">这就好像我们说的，我有一百个乒乓，其中一个是红色。然后把这些放到一个盒子里面，然后你在进行摸。当你摸完一次以后，在把你摸到的乒乓放回到盒子里面，在进行摸。这些，你每次摸中红色球的概率都是</span><span style="font-size:14px;font-family:Microsoft YaHei;">1/100</span><span style="font-size:14px;font-family:Microsoft YaHei;">。于是这样就产生的一个问题，我们对奖品会变得不可控制。如果一个运气好，很有可能机会造成奖品还不够发送。如果运气不好，这些奖品永远都可能留在那里。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">于是根据这种问题，又有一种方法，每一次我们摸中的球，不放回回去了。于是概率也就变成：</span><span style="font-size:14px;font-family:Microsoft YaHei;">1/100,1/99,1/98……</span><span style="font-size:14px;font-family:Microsoft YaHei;">。这样也就控制了中奖的人数。但是这样又会出现一个问题：作为开奖人我对抽奖时间是不可控的。很多商家希望的是我在每个时间段能发送相应的奖品回去，这样更能提高抽奖的热度。如果一个奖品很快我就发送出去出去了，后面来的人会很失望。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">于是根据这个问题，又出现了一种方法。如果我们把奖品放到抽奖的数量上面去，那不就可以控制抽奖的时间和中奖的人数了。如果</span><span style="font-size:14px;font-family:Microsoft YaHei;">100</span><span style="font-size:14px;font-family:Microsoft YaHei;">次抽奖中，我想每隔</span><span style="font-size:14px;font-family:Microsoft YaHei;">10</span><span style="font-size:14px;font-family:Microsoft YaHei;">次就有一个中奖，于是，我就随机吧中奖的机会放到</span><span style="font-size:14px;font-family:Microsoft YaHei;">5</span><span style="font-size:14px;font-family:Microsoft YaHei;">，</span><span style="font-size:14px;font-family:Microsoft YaHei;">16</span><span style="font-size:14px;font-family:Microsoft YaHei;">，</span><span style="font-size:14px;font-family:Microsoft YaHei;">21…..</span><span style="font-size:14px;font-family:Microsoft YaHei;">这样的抽奖次数去。这样我就能控制抽奖人的那种心情。能把更多的人留在我这里进行抽奖。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">现在我们来说说关于数据库设计：</span><span><br />
+            </span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <br />
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;" align="center"> <img src="images/s5ce3acee6bdfc.jpg" alt="" width="500" height="405" /> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <br />
+            <span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;然后我们来说说相关的设计思路：</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">Id</span><span style="font-size:14px;font-family:Microsoft YaHei;">：不做说明</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">OpporName</span><span style="font-size:14px;font-family:Microsoft YaHei;">：主要是为了区分，例如针对一个奖品我还要进行时间段的区分。所以当设置的奖品多的时候，就不方便区分了。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">PrizeID</span><span style="font-size:14px;font-family:Microsoft YaHei;">：奖品</span><span style="font-size:14px;font-family:Microsoft YaHei;">ID</span><span style="font-size:14px;font-family:Microsoft YaHei;">。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">PrizeName</span><span style="font-size:14px;font-family:Microsoft YaHei;">：奖品名称。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">PrizeNumber</span><span style="font-size:14px;font-family:Microsoft YaHei;">：奖品数量。（方便概率的计算，和奖品的统计。同时如果我对一个设置追加奖品的时候，能更好的使用）</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">OPNumberList</span><span style="font-size:14px;font-family:Microsoft YaHei;">：中奖的次数列表。这个是为了吧奖品设置到每次抽奖的次数上面去，如果数量不是很大，就用</span><span style="font-size:14px;font-family:Microsoft YaHei;">varchar</span><span style="font-size:14px;font-family:Microsoft YaHei;">类型。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">PTNum</span><span style="font-size:14px;font-family:Microsoft YaHei;">：已经抽中的数量，这个也是方便，如果追加奖品能进行计算。同时可以计算奖品的剩余数量。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">BeginDate</span><span style="font-size:14px;font-family:Microsoft YaHei;">：此抽奖概率适用开始时间。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">EndDate</span><span style="font-size:14px;font-family:Microsoft YaHei;">：此抽奖概率适用结束时间。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">ForeNumber</span><span style="font-size:14px;font-family:Microsoft YaHei;">：此次抽奖在前多少次抽奖里面进行选取。因为对于抽奖我们本身对某一时段的抽奖人数是不能拿确认的。一个小时里面，他有可能有</span><span style="font-size:14px;font-family:Microsoft YaHei;">100</span><span style="font-size:14px;font-family:Microsoft YaHei;">个人，或者有</span><span style="font-size:14px;font-family:Microsoft YaHei;">200</span><span style="font-size:14px;font-family:Microsoft YaHei;">个人。于是我们设置概率也就不能确认在多少，于是我们选择了在某个时段，前多少次抽奖里面进行选取。例如我在</span><span style="font-size:14px;font-family:Microsoft YaHei;">2-3</span><span style="font-size:14px;font-family:Microsoft YaHei;">点之间，一般来的人为</span><span style="font-size:14px;font-family:Microsoft YaHei;">100-500</span><span style="font-size:14px;font-family:Microsoft YaHei;">个人，如果当天来的人只有</span><span style="font-size:14px;font-family:Microsoft YaHei;">100</span><span style="font-size:14px;font-family:Microsoft YaHei;">个，那么我设置到</span><span style="font-size:14px;font-family:Microsoft YaHei;">102</span><span style="font-size:14px;font-family:Microsoft YaHei;">这样的次数上面，肯定奖品就只有轮空了。如果我们前</span><span style="font-size:14px;font-family:Microsoft YaHei;">100</span><span style="font-size:14px;font-family:Microsoft YaHei;">个人之间选，那么我的奖品肯定会配送出去的。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">AreaID</span><span style="font-size:14px;font-family:Microsoft YaHei;">：适于于那些地区。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">UserID</span><span style="font-size:14px;font-family:Microsoft YaHei;">：我指定抽中的为某个人。这个是为了某些公司有自己的托而进行的设置。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">NowNumber</span><span style="font-size:14px;font-family:Microsoft YaHei;">：现在抽奖的次数。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">OrderID</span><span style="font-size:14px;font-family:Microsoft YaHei;">：奖品的概率排序。如果我有多个奖品在一个时间进行了覆盖。我肯定要设置优先把那些奖品分配出去。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">LotteryExp</span><span style="font-size:14px;font-family:Microsoft YaHei;">：领奖的有效时间。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">OneMaxPriz</span><span style="font-size:14px;font-family:Microsoft YaHei;">：每次奖品中奖发放的数量。如果我们每次中奖给</span><span style="font-size:14px;font-family:Microsoft YaHei;">2</span><span style="font-size:14px;font-family:Microsoft YaHei;">张点卡，等等。</span><span></span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">&nbsp;</span> </p>
+          <p class="MsoNormal" style="text-indent:2em;"> <span style="font-size:14px;font-family:Microsoft YaHei;">States</span><span style="font-size:14px;font-family:Microsoft YaHei;">：状态。概率状态。</span><span></span> </p>
+          <p style="text-indent:2em;"> <br />
+          </p>
+          <span class="lemma-item" data-id="184" style="display:none;"></span><span style="display:none;">TAG标签耗时：0.0024280548095703 秒</span> <script type="text/javascript">
+
+            $('.lemma-word').each(function(){
+
+                if($(this).attr('href')){
+
+                    $(this).css({'color': '#27bec9','cursor': 'pointer'});
+
+                }else{
+
+                    if(!$(this).parents('strong').size()){
+
+                        $(this).css({'font-weight': 'normal'});
+
+                    }
+
+                }
+
+            })
+
+        </script> </div>
+        <div class="list">
+          <div class="item">
+            <h2><a href="javascript:void(0);">上一篇：没有了</a></h2>
+          </div>
+          <div class="item">
+            <h2><a href="news-info.html#673.html">下一篇：学校宿舍管理系统和人事系统的结构设计方案</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="footer">
+  <div class="block2">
+    <h1>CONTACT</h1>
+    <div class="text clearfix">
+      <div class="left d1">
+        <h3>专注设计，并非自我陶醉；沉浸细节，亦非锱铢必较；倾注心血于每一个作品，只为打动默默付出的我和停留于此的你！</h3>
+        <div class="p"> <span>版权所有：XXX</span><br>
+          <span>Copyright 2010 www.4miao.net All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a></span>|<a href="http://www.cnzz.com/stat/website.php?web_id=1256922411" target="_blank"><span id="cnzz_stat_icon_1256922411">站长统计</span></a> <a href="http://www.fractal-technology.com">深圳网站建设</a> </div>
+      </div>
+      <div class="left d2">
+        <div class="p">ADD：XXX</div>
+        <div class="p">TEL：400-999-6666</div>
+        <a href="mailto:XXX">E-mail：XXX</a>
+        <div class="p"><a href="">网站地图</a></div>
+      </div>
+      <div class="d3">
+        <h3>400-999-6666</h3>
+        <h4>010-64929332</h4>
+      </div>
+      <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032897" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="images/ghs.png" style="float:left;"/> <span class="p" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">京公网安备 11010502032897号</span> </a> </div>
+    </div>
+  </div>
+</div>
+<script>
+
+
+
+
+
+// 隐藏
+
+function hideSoperson123(second){
+
+    if(second>0){
+
+        second++;
+
+        setTimeout(function(){
+
+            $('.fa-plus').parent().hide();
+
+            hideSoperson123(second);
+
+        },1000);
+
+    }
+
+};
+
+hideSoperson123(1);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>��Ʊ����-Ͷ���߹�ϵ-XXX</title>
+
+<meta name="keywords" content="��ҳ-Ͷ���߹�ϵ-XXX">
+
+<meta name="Description" content="��ҳ-Ͷ���߹�ϵ-XXX">
+
+<body>
+
+<link href="css/style.css?a=1513083684" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.js?v=1513083684"></script>
+
+<header class="Top_bg">
+
+	<div class="Top">
+
+        <div class="logo"><a href="../index.html"><img src="images/logo.png" width="148"></a></div>
+
+        <nav class="mainnav">
+
+            <ul class="menu" id="menu">
+
+				<li><a style="color:#b5b5b5;" href="index.html">HOME</a></li>
+
+				<li><a class="nava" href="aboutus.html">��˾����</a></li>
+
+                <li><a class="nava" href="notice.html">��˾����</a></li>
+
+                <li><a class="nava" href="new.html">��˾��̬</a></li>
+
+                <li><a class="nava" href="feedback.html">���ʻ���</a></li>
+
+                <li><a class="nava" href="gupiao.html" >��Ʊ����</a></li>
+
+            </ul>
+
+            <div class="clear"></div>
+
+        </nav>
+
+    </div>
+
+    <script type="text/javascript">
+
+
+
+  var urlstr = location.href;
+
+
+
+  //alert((urlstr + '/').indexOf($(this).attr('href')));
+
+  var urlstatus=false;
+
+  $("#menu a").each(function () {
+
+    if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
+
+      $(this).addClass('cur'); urlstatus = true;
+
+    } else {
+      if(urlstr.indexOf('/noticedetail') > -1){
+          $("#menu a").eq(2).addClass('cur');
+          urlstatus = true;
+      }else if(urlstr.indexOf('/detail') > -1){
+          $("#menu a").eq(3).addClass('cur');
+          urlstatus = true;
+      }
+      $(this).removeClass('cur');
+
+    }
+
+  });
+
+  if (!urlstatus) {$("#menu a").eq(0).addClass('cur'); }
+
+</script>
+
+</header>
+<div class="ban_box">
+   <img src="images/ban06_01.jpg" height="300" width="1920" />
+   <img src="images/ban06_02.jpg" height="308" width="1920" />
+</div>
+<div class="where"><a href="#">HOME</a>><a  href="#">��Ʊ����</a></div>
+<div class="gupiao_box ">
+     
+<object type="application/x-shockwave-flash" data="http://finance.sina.com.cn/flash/cn.swf?" width="850" height="700" id="flash" style="visibility: visible;"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><param name="flashvars" value="symbol=sz300616&amp;code=iddg64geja6fea4eafh9jbj7c5j4ie5d&amp;s=3"></object>
+</div>
+
+<div class="dibu_bg">
+	<footer class="Bottom">
+		<div class="Copyright">
+			<nav class="BottomLinks">
+				<em>|</em><a href="../legal.html">��������</a>			
+			</nav>
+			Copyright &copy;&nbsp;2015 ����XXX�ҾӹɷAll Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>Reserved.��
+			�����ţ�<a target="_blank" href="http://www.miibeian.gov.cn" rel="nofollow">��ICP��13000441��-2</a>
+		</div>
+		<div class="clear"></div>
+		
+	</footer>
+</div>
+
+</body>
+
+</html>
+

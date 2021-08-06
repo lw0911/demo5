@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="description" content="" />
+<title>联系方式</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css/Animation.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/slider.js" type="text/javascript"></script>
+<script src="js/html5.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/wow.min.js" type="text/javascript"></script>
+    <script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: false,
+        live: true
+    });
+    wow.init();
+    </script>
+<!--[if lt IE 9]>
+	  <script src="js/html5shiv.min.js"></script>
+	  <script src="js/respond.min.js"></script>
+	<![endif]-->  
+	
+</head>
+</head>
+   <style type="text/css">
+        #allmap {
+            height: 100%;
+            overflow: hidden;
+        }
+		.BMap_pop .BMap_top {
+             border-top: 1px solid #41a2ff  !important;
+              background-color: #1D4465 !important;
+}
+.BMap_pop .BMap_bottom {
+    border-bottom: 1px solid #41a2ff  !important;
+    background-color: #1D4465 !important;
+	margin-top: -1px;
+}
+.BMap_pop .BMap_center {
+    border-left: 1px solid #41a2ff  !important;
+    border-right: 1px solid #41a2ff  !important;
+    background-color: #1D4465 !important;
+}
+.BMap_pop > div{ color:#FFF !important}
+.BMap_pop > div > div > div > div > span{ color:#333 !important}
+.BMap_pop > div > div > div > div > span:nth-child(3){ width:107px !important}
+.BMap_pop > div a{ color:#FFF !important}
+.BMap_pop > div p{ color:#FFF  !important}
+.BMap_pop > div > div{background-color: #1D4465 !important; border-radius: 5px; }
+.BMap_pop > div > div:nth-child(1){
+	 border-top: 1px solid #41a2ff !important;
+	 border-bottom: 1px solid #41a2ff !important;  
+	 border-right: 1px solid #41a2ff !important;  
+	 border-left: 1px solid #41a2ff !important;
+}
+.BMap_pop > div:nth-child(3) >div{ left:-7px !important}
+.BMap_pop > div:nth-child(5) >div{ top:-7px !important}
+.BMap_pop > div:nth-child(7) >div{ left:-7px !important;top:-7px !important}
+.BMap_pop > div:nth-child(8){ display:none}
+.BMap_pop  > div > div.BMap_bubble_title{ border:0px !important}
+.BMap_pop  > div > div.BMap_bubble_content{ border:0px !important}
+.BMap_pop  > div > div.BMap_bubble_max_content{ border:0px !important}
+	   .contest_header{ background: url(images/overlay.png) repeat; margin-top:0px}
+	   .header_phone{top:10px;}
+</style>
+<body>
+<header class="navbar-fixed-top headerbg contest_header">
+ <div class="container-fluid">
+   <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+   <div class="navBox hidden-xs hidden-sm">
+   	<ul class="navList list-unstyled">
+   	 <li class="navLi">
+       <h3><a href="index.html"><span>首页</span></a></h3>
+      </li>
+       	<li class="navLi on">
+                	<h3><a href="product.html"><span>产品中心</span></a></h3>
+                    <div class="navSub">
+                    	<ul class="navSubList list-unstyled">
+                        	<li class="navSubLi">
+                            	<h4><a href="Product_into.html">● 网站公司认证计费系统</a></h4>                                
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 网站公司tv系统</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 软件路由系统</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 网站公司缓存系统</a></h4>
+                            </li>
+                            <li class="navSubLi">
+                            	<h4><a href="#">● 网站公司智慧机房</a></h4>
+                            </li>
+                            <li class="navSubLi">
+                            	<h4><a href="#">● 网站公司硬件产品</a></h4>
+                            </li>
+                        </ul>
+                    </div>
+            </li>
+       <li class="navLi">
+       <h3><a href="Tutorial.html"><span>教程中心</span></a></h3>
+               <div class="navSub">
+                    	<ul class="navSubList list-unstyled">
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 计费产品对接</a></h4>                                
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 安装教程</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 网络技术教程</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● tv教程</a></h4>
+                            </li>
+     
+                        </ul>
+                    </div>
+      </li>
+       <li class="navLi">
+       <h3><a href="Case.html"><span>产品案例</span></a></h3>
+              <div class="navSub">
+                    	<ul class="navSubList list-unstyled">
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 酒店</a></h4>                                
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 社区</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 商务</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 小区</a></h4>
+                            </li>
+     
+                        </ul>
+                    </div>
+      </li>
+       <li class="navLi">
+       <h3><a href="Dynamic.html"><span>公司动态</span></a></h3>
+      </li>
+       <li class="navLi">
+       <h3><a href="Program.html"><span>解决方案</span></a></h3>
+             <div class="navSub">
+                    	<ul class="navSubList list-unstyled">
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 点播直播解决方案</a></h4>                                
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 宽带运营解决方案</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 运营商tv解决方案</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="#">● 酒店TPTV解决方案</a></h4>
+                            </li>
+     
+                        </ul>
+                    </div>
+      </li>
+       <li class="navLi">
+       <h3><a href="Company.html"><span>关于我们</span></a></h3>
+        <div class="navSub">
+                    	<ul class="navSubList list-unstyled">
+                        	<li class="navSubLi">
+                            	<h4><a href="Company.html">● 公司简介</a></h4>                                
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="Contact.html">● 联系方式</a></h4>
+                            </li>
+                        	<li class="navSubLi">
+                            	<h4><a href="Pay_by.html">● 支付方式</a></h4>
+                            </li>
+                        </ul>
+                    </div>
+      </li>
+	</ul >
+   </div>
+   <div class="header_phone">
+   	<div class="icon_phone pt5 fl"><img src="images/icon_phone.png"></div>
+   	<div class="phone fl">
+   		<h4>服务咨询热线：</h4>
+   		<h2>0536-11111111</h2>
+   	</div>
+   </div>
+ </div>
+</header>
+<!--联系方式-->
+	 <div class="map_style">
+		 	  <div id="allmap" style="width:100%; height: 100% "></div>
+		 	<div class="index-btn"><img src="images/h15.jpg" alt=""></div>
+        <div class="">
+          <div class="tips-box fix contact_style">
+            
+            <div class="contact-right-box fr fix">
+              <div class="tips-img fr"><img src="images/h14.png" width="40" height="40" alt=""></div>
+              <div class="tips-cont fl">
+                <h3><img src="images/h19.png" width="20" height="20" alt="">&nbsp;&nbsp;联系我们</h3>
+                <h4>软件名称潍坊网站公司网络科技</h4>
+                <ul class="clearfix">
+                 
+                  <li>办公地点：山东省潍坊市潍城区胜利街与安顺北300米路西</li>
+                  <li>服务热线：0536-11111111</li>
+                  <li>移动电话：137911111111、138536xxxxxx(生)</li>
+                  <li>邮政编码：<a href="mailto:xxxxxxxxx@QQ.com">xxxxxxxxx@QQ.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+		 </div>
+		   	<!--波浪效果-->	
+  <div class="waveWrapper waveAnimation page_waveWrapper">
+  <div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('images/wave-top.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('images/yun_02.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('images/yun_04.png')"></div>
+  </div>
+</div>
+  <div class="contact_phone contest_style">
+  </div>
+		  <!--底部样式-->
+  <footer class="footerBg">
+  	<div class="container">
+  		<div class="ptb40">
+  			<div class="footTopL">
+  				<dl class="clearfix">
+  				<dt>关于我们</dt>
+  				<dd><a href="#">联系地址</a></dd>
+  				<dd><a href="#">公司介绍</a></dd>
+  				<dd><a href="#">荣誉资质</a></dd>
+  				<dd><a href="#">招聘信息</a></dd>
+  				</dl>
+  				<dl class="clearfix">
+  				<dt >公司产品</dt>
+  				<dd><a href="#">网站公司认证计费系统</a></dd>
+  				<dd><a href="#">网站公司tv系统</a></dd>
+  				<dd><a href="#">软件路由系统</a></dd>
+  				<dd><a href="#">网站公司缓存系统</a></dd>
+  				<dd><a href="#">网站公司智慧机房</a></dd>
+  				<dd><a href="#">网站公司硬件产品</a></dd>
+  				</dl>
+  				<dl class="clearfix">
+  				<dt>教程中心</dt>
+  				<dd><a href="#">计费产品对接</a></dd>
+  				<dd><a href="#">安装教程</a></dd>
+  				<dd><a href="#">网络技术教程</a></dd>
+  				<dd><a href="#">tv教程</a></dd>
+  				</dl>
+  				<dl class="clearfix">
+  				<dt>解决方案</dt>
+  				<dd><a href="#">点播直播解决方案</a></dd>
+  				<dd><a href="#">宽带运营解决方案</a></dd>
+  				<dd><a href="#">运营商tv解决方案</a></dd>
+  				<dd><a href="#">酒店TPTV解决方案</a></dd>
+  				</dl>
+  				
+  			</div>
+  			<div class=" center weixin"><img src="images/weixing-ma.jpg"><h5>微信关注我们</h5></div>
+  		</div>
+  	</div>
+  	<div class="CopyRight">
+  		<div class="container"><span class="footer_logo"><img src="images/footer_logo.png"></span><span class="CopyRight_name">CopyRight 软件名称 2020 版权所有 鲁ICP备xxxxxxxxx</span></div>
+  	</div>
+  </footer>
+  <div class="cndns-right">
+    <div class="cndns-right-meau meau-sev">
+        <a href="javascript:" class="cndns-right-btn">
+            <span class="demo-icon">&#xe901;</span>
+            <p>
+                在线<br />
+                客服
+            </p>
+        </a>
+        <div class="cndns-right-box">
+            <div class="box-border">
+                <div class="sev-t">
+                    <span class="demo-icon">&#xe901;</span>
+                    <p>在线客服<i>服务时间：9:00-24:00</i></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="sev-b">
+                    <h4>选择下列产品马上在线沟通：</h4>
+                    <ul id="zixunUl">
+                        <li><a href="javascript:void(0);">客服1</a></li>
+                        <li><a href="javascript:void(0);">客服2</a></li>
+                        <li><a href="javascript:void(0);">产品经理</a></li>
+                        <li><a href="javascript:void(0);">技术支持</a></li>
+                        <li><a href="javascript:void(0);">技术支持1</a></li>
+                        <li><a href="javascript:void(0);">橙云主机</a></li>
+                        <li><a href="javascript:void(0);">产品交易</a></li>      
+                        <li><a href="javascript:void(0);">其他产品</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <span class="arrow-right"></span>
+            </div>
+        </div>
+    </div>
+    <div class="cndns-right-meau meau-contact">
+        <a href="javascript:" class="cndns-right-btn">
+            <span class="demo-icon">&#xe902;</span>
+            <p>
+                客服<br />
+                热线
+            </p>
+        </a>
+        <div class="cndns-right-box">
+            <div class="box-border">
+                <div class="sev-t">
+                    <span class="demo-icon">&#xe902;</span>
+                    <p>400-123-4567<br /><i>7*24小时客服服务热线</i></p>
+                    <div class="clear"></div>
+                </div>
+                <span class="arrow-right"></span>
+            </div>
+        </div>
+    </div>
+    <div class="cndns-right-meau meau-code">
+        <a href="javascript:" class="cndns-right-btn">
+            <span class="demo-icon">&#xe903;</span>
+            <p>
+                关注<br />
+                微信
+            </p>
+        </a>
+        <div class="cndns-right-box">
+            <div class="box-border">
+                <div class="sev-t">
+                    <img src="images/weixing-ma.jpg" />
+                    <i>关注官方微信</i>
+                </div>
+                <span class="arrow-right"></span>
+            </div>
+        </div>
+    </div>
+    <div class="cndns-right-meau meau-top" id="top-back">
+        <a href="javascript:" class="cndns-right-btn" onclick="topBack()">
+            <span class="demo-icon">&#xe904;</span>
+            <i>顶部</i>
+        </a>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=1.4&amp;ak=&amp;services=&amp;t=20150522093217"></script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap() {
+        var map = new BMap.Map("allmap");//在百度地图容器中创建一个地图
+          var point = new BMap.Point(119.0890710000, 36.7176050000);//定义一个中心点坐标
+        map.centerAndZoom(point, 16);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent() {
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl() {
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+        map.addControl(ctrl_sca);
+    }
+
+    //标注点数组
+    var markerArr = [{ title: "软件名称潍坊网站公司网络科技", content: "山东省潍坊市潍城区胜利街与安顺北300米路西",point:"119.0890710000|36.7176050000", isOpen: 1, icon: { w: 21, h: 26, l: 0, t: 0, x: 6, lb: 5 } }
+    ];
+    //创建marker
+    function addMarker() {
+        for (var i = 0; i < markerArr.length; i++) {
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0, p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point, { icon: iconImg });
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor: "#808080",
+                color: "#333",
+                cursor: "pointer"
+            });
+
+            (function () {
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click", function () {
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open", function () {
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close", function () {
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click", function () {
+                    _marker.openInfoWindow(_iw);
+                })
+                if (!!json.isOpen) {
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i) {
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json) {
+        var icon = new BMap.Icon("http://api.map.baidu.com/img/markers.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+</script>

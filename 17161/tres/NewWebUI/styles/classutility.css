@@ -1,0 +1,967 @@
+ /* 栏目标题样式开始 */
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+}
+.fontRed a{
+	color: #e60012!important; 
+}
+/* 面包屑开始 */
+.colmunPc#crumbs{
+	margin-top: 30px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	color: #666;
+}
+#crumbs a{
+	color: #666;
+}
+#crumbs span{
+	margin: 0 10px 0 6px;
+}
+@media  screen and (max-width:768px){
+	.colmunPc#crumbs{
+		display: none;
+	}
+}
+/* 低版本隐藏切换按钮 */
+body.ie6 .swiper-btn-box
+body.ie7 .swiper-btn-box,
+body.ie8 .swiper-btn-box{
+	display: none;
+}
+/* 面包屑结束 */
+
+/*视频弹层开始*/
+section#VideoPlay {
+	width: 100%; 
+	height: 100%;
+	position: fixed;
+	z-index: 1001;
+	top: 0;
+	left: 0; 
+	background: rgba(0,0,0,0.7);
+	display: none;
+}
+.ie8 #aboutUs .companyProfileVideo{
+	height: 100%;
+}
+.ie8box{ display: block;}
+.ie8 section#VideoPlay .ie8box{
+	background: #000000;
+	filter:alpha(opacity=70);
+	width: 100%;
+	height: 100%;
+	position: absolute; 
+	top: 0;
+	left: 0;
+	display: block;
+}
+section#VideoPlay .videoBox{
+	width: 770px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -232px;
+    margin-left: -385px;
+    width: 770px;
+    height: 464px;
+    z-index: 1
+}
+
+section#VideoPlay .videoBox video{
+	width: 100%; 
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+section#VideoPlay .videoBox .posterimg{
+	width: 100%; 
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+section#VideoPlay .videoBox .closevideo{
+	position: absolute;
+	top: -30px;
+	right: 0;
+}
+
+@media  screen and (max-width:768px){
+	section#VideoPlay .videoBox{
+		width: 100%;
+		height: auto;
+		padding: 0 3%;
+		position: absolute;
+	    top: 50%;
+	    left: 0;
+	    margin-top: -232px;
+	    margin-left: 0;
+	}
+	section#VideoPlay .videoBox video{
+		height: auto;
+	}
+	section#VideoPlay .videoBox .closevideo{
+		padding-right:3%;
+		top: -40px;
+	}
+}
+/*视频弹层结束*/
+/* 阴影效果 */
+ul.shandowHoverall li{
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+			transition: all .3s ease;
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	    -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	     -o-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+ul.shandowHoverall li:hover{
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+	    -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+	     -o-box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+			box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
+}
+/* PC端 */
+.columEntH3{
+	height: 32px;
+	line-height: 30px;
+	font-size: 100%;
+	text-align: left;
+	color: #000000;
+	font-weight: 400;
+	margin-bottom: 30px;
+	border-left: 5px solid #e60012;
+	padding-left: 16px;
+}
+/* 移动端 */
+.protechH5Tit{
+	width: 100%;
+	padding: 5.3% 0 4%;
+	background-color: #fff;
+	text-align: center;
+	color:#3c3c3c;
+	font-size: 59.4%;
+}
+.protechLine{
+	display: none;
+	width: 8%;
+	height: 3px;
+	background: #e60012;
+	margin: 1.8% auto 0;
+}
+/* swiper滑动标识公共样式开始 */
+.swiper-btn-box{
+	width: 100%;
+	height: 14 px;
+	line-height: 0;
+	box-sizing: content-box;
+	text-align: center;
+}
+.swiper-btn-box span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+	border-radius: 50%;
+	opacity: 1;
+	background-color: #d5d5d5;
+}
+/* 栏目标题样式结束 */
+/* 栏目标题右侧点击查看更多按钮样式开始 */
+.columGoMore{
+	height: 20px;
+	float: right;
+	margin-top: 6px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.columGoMore a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 20px;
+	color: #333;
+	padding-right: 30px;
+	position: relative;
+}
+.columGoMore a img{
+	position:absolute;
+	top: 0;
+	right: 0;
+}
+/* 栏目标题右侧点击查看更多按钮样式结束 */
+
+/* 公共外部包围容器样式开始 */
+.columWrapBox{
+	width: 1232px;
+	height: 100%;
+	padding: 0 16px;
+	margin: 0 auto;
+	position: relative;
+}
+@media  screen and (max-width:1232px){
+	.columWrapBox{
+		width: 100%;
+	}
+}
+/* 新闻资讯公共样式开始 */
+#newsWrap.protechJourn{
+	padding-top: 40px;
+	font-size: 32px;
+	background-color: #f5f5f5; 
+	padding-bottom: 50px;
+}
+/* 移动端标题下划线 */
+#newsWrap .proJouConList:after{
+	content: '';	
+	display: block;
+	clear: both;
+}
+#newsWrap .proJouConList li{
+	width: 47.5%;
+	float: left;
+	font-size: 20px;
+	margin-right: 0;
+	box-sizing: content-box;
+}
+#newsWrap .borderPC{
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 2.5%;
+	margin-bottom: 2.5%;
+}
+#newsWrap .proJouConList li:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#newsWrap .proJouConListImg{
+	display: block;
+	width: 38.5%;
+	float: left;
+	overflow: hidden;
+}
+#newsWrap .proJouConListImg:hover img{
+	-webkit-transform: scale(1.2);
+	   -moz-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	     -o-transform: scale(1.2);
+			transform: scale(1.2);
+}
+#newsWrap .proJouConListImg img{
+	display: block;
+	width: 100%;
+	height: 150px;
+	-webkit-transform: scale(1.01);
+	   -moz-transform: scale(1.01);
+	    -ms-transform: scale(1.01);
+	     -o-transform: scale(1.01);
+			transform: scale(1.01);
+	-webkit-transition: transform .3s linear;
+	   -moz-transition: transform .3s linear;
+	    -ms-transition: transform .3s linear;
+	     -o-transition: transform .3s linear;
+			transition: transform .3s linear;
+}
+#newsWrap h5.proJouConListTextTit{
+	width: 100%;
+	padding-left: 0;
+	-o-text-overflow:ellipsis; 
+	-icab-text-overflow: ellipsis; 
+	-khtml-text-overflow: ellipsis; 
+	-moz-text-overflow: ellipsis; 
+	-webkit-text-overflow: ellipsis; 
+    overflow: hidden;
+	white-space: nowrap; 
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+#newsWrap .protechH5JournBox .proJouConListText{
+	width: 60%;
+	height: 100%;
+	float: left;
+	padding-left: 2.5%;
+}
+#newsWrap .proJouConListTextTime{
+	display: block;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #e60012;
+}
+#newsWrap .proJouConListTextTit{
+	font-size: 110%;
+	color: #000;
+	margin-top: 10px;
+}
+#newsWrap .proJouConListTextp{
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+	margin-top: 15px;
+	max-height: 42px;
+}
+
+#newsWrap .proJouConListTextGo{
+	display: block;
+	text-align: right;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	margin-top: 15px;
+}
+#newsWrap .protechH5JournBox{
+	height: 100%;
+}
+#newsWrap .protechH5JournBox:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#newsWrap .proJouConListTextGo a{
+	display: inline-block;
+	line-height: 20px;
+	height: 100%;
+	color: #333;
+	padding-right: 30px;
+	position: relative;
+}
+#newsWrap .proJouConListTextGo a img{
+	position:absolute;
+	top: 0;
+	right: 0;
+}
+@media  screen and (max-width:1200px){
+	#newsWrap .proJouConList li{
+		font-size: 16px;
+	}
+	#newsWrap .proJouConListTextp{
+		font-size: 12px;
+	}
+}
+@media  screen and (max-width:980px){
+	#newsWrap .proJouConList li{
+		font-size: 14px;
+	}
+}
+/* 新闻资讯适配移动端样式开始 */
+@media  screen and (max-width:768px){
+	#newsWrap.protechJourn{
+		font-size: 75px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	#newsWrap .proJouConListTextp{
+	   -webkit-line-clamp:3;
+	}
+	.columWrapBox{ 
+		padding: 0;
+	}
+	#newsWrap.protechJourn .columGoMore{
+		display: none;
+	}
+	#newsWrap.protechJourn .protechLine{
+		display: block;
+	}
+	#newsWrap.protechJourn .columWrapBox{
+		font-size: 100%;
+	}
+	#newsWrap.protechJourn .columEntH3{
+		width: 100%;
+	    padding: 6.6% 0 4%;
+	    background-color: #f5f5f5;
+	    text-align: center;
+	    color: #3c3c3c;
+	    font-size: 59.4%;
+	    border: none;
+	    margin: 0;
+	    height: auto;
+	    line-height: 1;
+	}
+	#newsWrap.protechJourn .protechWrapBox{
+		padding: 0;
+		font-size: 100%;
+		margin: 0;
+	}
+	#newsWrap.protechJourn .borderPC{
+		border: none;
+		padding: 0;
+	}
+	#newsWrap.protechJourn .proJouConList{
+		padding: 16px;
+		padding-top: 0;
+	}
+	#newsWrap.protechJourn .proJouConList li{
+		width: 100%;
+		height: auto;
+		float: none;
+		font-size: 100%;
+	}
+	#newsWrap.protechJourn .proJouConList .journBoxact{
+		border-bottom: 1px solid #e6e6e6;
+	}
+	#newsWrap.protechJourn li .protechH5JournBox{
+		width: 100%;
+		margin-bottom: 8.1%;
+    	background-color: #fff;
+		-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	   	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	        -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	         -o-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+				box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	}
+	#newsWrap.protechJourn .proJouConListImg{
+		height: auto;
+		float: none;
+	}
+	#newsWrap.protechJourn .proJouConListImg img{
+		height: auto;
+	}
+	#newsWrap.protechJourn .protechH5JournBox .proJouConListText,#newsWrap.protechJourn .proJouConListText{
+		width: 100%;
+		padding: 4.5% 5.3%;
+		float: none;
+	}
+	#newsWrap.protechJourn .proJouConListImg{
+		width: 100%;
+	}
+	#newsWrap.protechJourn .proJouConListTextTime{
+		font-size: 37.3%;
+	    color: #e60012;
+	}
+	#newsWrap.protechJourn .proJouConListTextTit{
+	    font-size: 46.6%;
+	    color: #000000;
+	    line-height: 1.4;
+	    margin-top: 4%;
+	}
+	#newsWrap.protechJourn .proJouConListTextp{
+		font-size: 37.3%;
+	    margin-top: 4%;
+	    max-height: none;
+	    line-height: 1.5;
+	}
+	.ie8 #newsWrap.protechJourn .proJouConListTextp{
+		max-height: auto;
+	}
+	#newsWrap.protechJourn .proJouConListTextGo{
+	    display: block;
+	    width: 100%;
+	    height: auto;
+	    font-size: 37.33%;
+	    padding-bottom: 7.4%;
+	}
+	#newsWrap.protechJourn .proJouConListTextGo a{
+		display: inline-block;
+	    width: 100%;
+	    height: 100%;
+	    text-align: right;
+	    line-height: 1.3;
+	    color: #333;
+	    float: right;
+	    padding-right: 9%;
+	    position: relative;
+	}
+	#newsWrap.protechJourn .proJouConListTextGo a img{
+		display: block;
+		width: auto;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	}
+}
+@media  screen and (max-width:700px){
+	#newsWrap.protechJourn{
+		font-size: 60px;
+	}
+}
+@media  screen and (max-width:640px){
+	#newsWrap.protechJourn{
+		font-size: 50px;
+	}
+}
+@media  screen and (max-width:414px){
+	#newsWrap.protechJourn{
+		font-size: 44px;
+	}
+}
+@media  screen and (max-width:375px){
+	#newsWrap.protechJourn{
+		font-size: 37.5px;
+	}
+}
+/* 新闻资讯适配移动端结束
+/* 新闻资讯公共样式结束 */
+
+
+/* 成功案例公共样式开始 */
+
+/* 成功案例PC端样式开始 */
+#succWrapPC.technicalSolve,.technicalSolve{
+	padding-top: 40px;
+	font-size: 32px;
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+#succWrapPC .techSolveGoMore,.technicalSolve .techSolveGoMore{
+	height: 20px;
+	float: right;
+	font-size: 14px;
+	cursor: pointer;
+}
+#succWrapPC .techSolveGoMore a,.technicalSolve .techSolveGoMore a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 20px;
+	color: #333;
+	padding-right: 30px;
+	position:relative;
+}
+#succWrapPC .techSolveGoMore a img,.technicalSolve .techSolveGoMore a img{
+	position:absolute;
+	top: 0;
+	right: 0;
+}
+#succWrapPC .techSolveConList:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.technicalSolve  .techSolveConList:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.techSolveConList li{
+	width: 31.66%;
+	float: left;
+	margin-left: 2.5%;
+	font-size: 22px;
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	    -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	     -o-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.techSolveConList li:first-child{
+	margin-left: 0;
+	
+}
+.techSolveConList li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.techSolveConList li.technicalNoMar{
+	
+}
+.techSolveConList li .techSolveConListImg{
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	cursor: pointer;
+}
+.techSolveConListImg:hover img{
+	-webkit-transform: scale(1.2);
+	   -moz-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	     -o-transform: scale(1.2);
+			transform: scale(1.2);
+}
+.techSolveConListImg img{
+	display: block;
+	width: 100%;
+	-webkit-transform: scale(1.01);
+	   -moz-transform: scale(1.01);
+	    -ms-transform: scale(1.01);
+	     -o-transform: scale(1.01);
+			transform: scale(1.01);
+	-webkit-transition: transform .3s linear;
+	   -moz-transition: transform .3s linear;
+	    -ms-transition: transform .3s linear;
+	     -o-transition: transform .3s linear;
+			transition: transform .3s linear;
+}
+#succWrapPC .techSolveConListText,.technicalSolve .techSolveConListText{
+	padding: 20px;
+}
+#succWrapPC .techSolveConListText h5,.technicalSolve .techSolveConListText h5{
+	font-size: 24px;
+	color: #333;
+	-o-text-overflow:ellipsis; 
+	-icab-text-overflow: ellipsis; 
+	-khtml-text-overflow: ellipsis; 
+	-moz-text-overflow: ellipsis; 
+	-webkit-text-overflow: ellipsis; 
+    overflow: hidden;
+	white-space: nowrap; 
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+#succWrapPC .techSolveConListText p,.technicalSolve .techSolveConListText p{
+	font-size: 14px;
+	color: #333;
+	margin-top: 3%;
+	line-height: 1.5;
+	overflow: hidden;
+}
+/* 兼容ie8 添加边框 */
+body.ie6 #succWrapPC .techSolveConList li,
+body.ie7 #succWrapPC .techSolveConList li,
+body.ie8 #succWrapPC .techSolveConList li,
+body.ie6 .technicalSolve .techSolveConList li,
+body.ie7 .technicalSolve .techSolveConList li,
+body.ie8 .technicalSolve .techSolveConList li{
+	border: 2px solid #e6e6e6;
+}
+@media  screen and (max-width:1200px){
+	#succWrapPC .techSolveConListText h5,.technicalSolve .techSolveConListText h5{
+		font-size: 18px;
+	}
+}
+/* 成功案例PC端样式结束 */
+
+/* 成功案例移动端样式开始 */
+#succWrapH5,.techH5Succ.succTechH5{
+	display: none;
+	width: 100%;
+	font-size: 75px;
+}
+#succWrapH5 .techH5SuccCon,.techH5Succ.succTechH5 .techH5SuccCon{
+	padding: 0 0 1%;
+	overflow: hidden;
+	background-color: #fff;
+}
+#succWrapH5 .swiper-containerSuccH5 .swiper-slide,.techH5Succ.succTechH5 .swiper-containerSuccH5 .swiper-slide{
+	padding: 0 1.3%;
+}
+#succWrapH5 .succSysBox,.techH5Succ.succTechH5 .succSysBox{
+	width: 93.33%;
+	height: 100%;
+	margin: 0 auto;
+	position:relative;
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	    -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	     -o-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+#succWrapH5 .succSysBox a,.techH5Succ.succTechH5 .succSysBox a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#succWrapH5 .techH5SuccImg,.techH5Succ.succTechH5 .techH5SuccImg{
+	display: block;
+	width: 100%;
+}
+#succWrapH5 .techH5SuccImg img,.techH5Succ.succTechH5 .techH5SuccImg img{
+	width: 100%;
+}
+#succWrapH5 .techH5SuccText,.techH5Succ.succTechH5 .techH5SuccText{
+	width: 100%;
+	padding: 4.28% 5.7% 4.28%;
+}
+#succWrapH5 .techH5SuccText h5,.techH5Succ.succTechH5 .techH5SuccText h5{
+	font-size: 46.66%;
+	color: #333333;
+	line-height: 1;
+}
+#succWrapH5 .techH5SuccText p,.techH5Succ.succTechH5 .techH5SuccText p{
+	font-size: 37.33%;
+	color:#333333;
+	margin-top: 4%;
+	line-height: 1.5;
+}
+#succWrapH5 .techH5SuccBtn,.techH5Succ.succTechH5 .techH5SuccBtn{
+	background-color: #fff;
+	padding-top: 5%;
+	/* padding-bottom: 7.7%; */
+	padding-bottom: 1%;
+}
+/* 滑动标识样式开始 */
+#succWrapH5 .techH5SuccBtn span.H5noright,.techH5Succ.succTechH5 .techH5SuccBtn span.H5noright{
+	margin-right: 0;
+}
+#succWrapH5 .techH5SuccBtn span.swiper-pagination-bullet-active,.techH5Succ.succTechH5 .techH5SuccBtn span.swiper-pagination-bullet-active{
+	background-color: #e60213;
+}
+body.ie6 #succWrapH5 .succSysBox,
+body.ie7 #succWrapH5 .succSysBox,
+body.ie8 #succWrapH5 .succSysBox,
+body.ie6 .techH5Succ.succTechH5 .succSysBox,
+body.ie7 .techH5Succ.succTechH5 .succSysBox,
+body.ie8 .techH5Succ.succTechH5 .succSysBox{
+	margin-bottom: 5%;
+	border: 2px solid #e6e6e6;
+}
+body.ie6 #succWrapH5 .swiper-containerSuccH5 .swiper-slide,
+body.ie7 #succWrapH5 .swiper-containerSuccH5 .swiper-slide,
+body.ie8 #succWrapH5 .swiper-containerSuccH5 .swiper-slide,
+body.ie6 .techH5Succ.succTechH5 .swiper-containerSuccH5 .swiper-slide,
+body.ie7 .techH5Succ.succTechH5 .swiper-containerSuccH5 .swiper-slide,
+body.ie8 .techH5Succ.succTechH5 .swiper-containerSuccH5 .swiper-slide{
+	margin-bottom: 5%;
+}
+/* 滑动标识样式结束 */
+/* 移动端媒体查询开始 */
+@media  screen and (max-width:768px){
+	#succWrapPC,.technicalSolve{
+		display: none;
+	}
+	#succWrapH5.techH5Succ,.protechLine,.techH5Succ.succTechH5{
+		font-size: 75px;
+		display: block;
+	}
+}
+@media  screen and (max-width:700px){
+	#succWrapH5.techH5Succ,.techH5Succ.succTechH5{
+		font-size: 60px;
+	}
+}
+@media  screen and (max-width:640px){
+	#succWrapH5.techH5Succ,.techH5Succ.succTechH5{
+		font-size: 50px;
+	}
+}
+@media  screen and (max-width:414px){
+	#succWrapH5.techH5Succ,.techH5Succ.succTechH5{
+		font-size: 44px;
+	}
+}
+@media  screen and (max-width:375px){
+	#succWrapH5.techH5Succ,.techH5Succ.succTechH5{
+		font-size: 37.5px;
+	}
+}
+/* 移动端媒体查询结束 */
+/* 成功案例移动端样式结束 */
+
+/* 成功案例公共样式结束
+
+
+/* 产品视频公共样式开始 */
+
+/* 产品视频PC端开始 */
+#videoWrapPC.videoPc{
+	padding-top: 40px;
+	font-size: 32px;
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+#videoWrapPC .proVidConList:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.proVidConList li{
+	width: 31.66%;
+	float: left;
+	margin-left: 2.5%;
+	font-size: 22px;
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	    -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	     -o-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1); 
+}
+.proVidConList li:first-child{
+	margin-left: 0;
+}
+#videoWrapPC .proVidConList li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+}
+#videoWrapPC .proVidConImg{
+	width: 100%;
+	position:relative;
+}
+#videoWrapPC .proVidConImgBtn{
+	display: block;
+	width: 17.37%;
+	position:absolute;
+	top: 36%;
+	left: 42.1%;
+}
+#videoWrapPC .proVidConImgBlock{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+#videoWrapPC .proVidConImg img{
+	display: block;
+	width: 100%;
+}
+#videoWrapPC .proVidConList li.protechNoMar{
+	
+}
+#videoWrapPC .proVidConText{
+	width: 100%;
+	padding: 5%;
+	line-height: 1;
+	background: #fff;
+}
+/* 兼容ie8 添加边框 */
+body.ie6 #videoWrapPC .proVidConList li,
+body.ie7 #videoWrapPC .proVidConList li,
+body.ie8 #videoWrapPC .proVidConList li{
+	border: 2px solid #e6e6e6;
+}
+body.ie6 #videoWrapPC .proVidConList li,
+body.ie7 #videoWrapPC .proVidConList li{
+	width: 31%;
+}
+
+@media  screen and (max-width:1200px){
+	#videoWrapPC .proVidConText{
+		font-size: 18px;
+	}
+}
+@media  screen and (max-width:860px){
+	#videoWrapPC .proVidConText{
+		font-size: 14px;
+	}
+}
+/* 产品视频PC端结束 */
+
+/* 移动端产品视频样式开始 */
+#videoWrapH5{
+	display: none;
+}
+#videoWrapH5 .swiper-containerVidH5{
+	overflow: hidden;
+	padding-bottom: 1%;
+}
+#videoWrapH5 .swiper-containerVidH5 .swiper-slide{
+	padding: 0 20px;
+}
+#videoWrapH5 .protechH5VideoslBox{
+	width: 100%;
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	    -ms-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+	     -o-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+			box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+#videoWrapH5 .protechH5VidImg{
+	display: block;
+	width: 100%;
+	position:relative;
+}
+#videoWrapH5 .protechH5VidImg a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position:relative;
+}
+#videoWrapH5 .protechH5VidImg img{
+	display: block;
+	width: 100%;
+}
+#videoWrapH5 .protechblack{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+#videoWrapH5 .protechPlay{
+	display: block;
+	width: 17%;
+	position:absolute;
+	top: 36.36%;
+	left: 41.4%;
+}
+#videoWrapH5 .protechH5VidTxt{
+	padding: 4.8% 4%;
+	font-size: 45%;
+	color: #000000;
+}
+	/* 滑动标识样式开始 */
+#videoWrapH5 .protechH5VidBtn{
+	width: 100%;
+	background-color: #fff;
+	padding-top: 5%;
+}
+#videoWrapH5 .protechH5VidBtn span.H5noright{
+	margin-right: 0;
+}
+#videoWrapH5 .protechH5VidBtn span.swiper-pagination-bullet-active{
+	background-color: #e60213;
+}
+body.ie8 #videoWrapH5 .protechH5VideoslBox,
+body.ie8 #videoWrapH5 .protechH5VideoslBox,
+body.ie8 #videoWrapH5 .protechH5VideoslBox{
+	margin-bottom: 5%;
+	border: 2px solid #e6e6e6;
+}
+@media  screen and (max-width:768px){
+	.videoPc{
+		display: none;
+	}
+	#videoWrapH5,.protechLine{
+		display: block;
+	}
+	#videoWrapH5{
+		font-size: 75px;
+	}
+}
+@media  screen and (max-width:700px){
+	#videoWrapH5{
+		font-size: 60px;
+	}
+}
+@media  screen and (max-width:640px){
+	#videoWrapH5{
+		font-size: 50px;
+	}
+}
+@media  screen and (max-width:414px){
+	#videoWrapH5{
+		font-size: 44px;
+	}
+}
+@media  screen and (max-width:375px){
+	#videoWrapH5{
+		font-size: 37.5px;
+	}
+}
+/* 移动端产品视频样式结束 */
+
+/* 产品视频公共样式结束 
+
+
+/* 查看更多移动端样式 */
+#MobileSeeMore,.paddingMore{width:100%;padding:1% 0 4%;display:none;text-align:right;line-height:0!important;}
+#MobileSeeMore.paddingMore,.paddingMore{padding:1% 16px 4%;}
+#MobileSeeMore>a,.paddingMore>a{color:#333;font-size:16px;}
+#MobileSeeMore>a>img,.paddingMore>a>img{display:inline-block!important;margin-left:4px;width:20px!important;vertical-align: middle;margin-top: -2px;}
+@media  screen and (max-width:768px) {
+	.headMbl .headMblChooseC br{
+		display:none;
+	}
+	.protechSolveGoMore.gotoFontred{display:none;}
+	#MobileSeeMore,.paddingMore{display:block;}
+	.columGoMore.gotoFontred{display:none;}
+}

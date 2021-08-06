@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html class="page-common">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>完善信息_捷阅</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+		<link rel="stylesheet" href="assets/css/animate.css" />
+		<link rel="stylesheet" href="assets/css/main-index.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+
+	<body class="page-common">
+		<header id="header">
+			<div class="header-container header-other">
+				<div class="head">
+					<div class="head-left">
+						<a href="index.html"><img src="images/logo_b2.png" /></a>
+					</div>
+					<div class="head-right">
+						<a href="index.html#index" class="a_normal ">首页</a>
+						<a href="index.html#intro" class="a_normal">产品介绍</a>
+						<a href="index.html#select" class="a_normal">内容案例</a>
+						<a href="download.html" class="a_normal">下载</a>
+						<a href="help.html" class="a_normal">帮助</a>
+						<a href="login.html" class="login">登录</a>
+						<a href="register.html" class="register">免费注册</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<input type="hidden" name="" id="p" value="" />
+		<input type="hidden" name="" id="c" value="" />
+		<input type="hidden" name="" id="a" value="" />
+		<h1 class="h1-style">完善信息</h1>
+		<div class="wrapper infoWrap radius10px">
+			<div class="step step3"></div>
+			<form action="" method="post" class="m-register">
+				<div class="row tc">
+					<label class="label-text">机构名称:</label>
+					<input type="text" class=" box-sizing" id="companyName" autofocus="autofocus" autocomplete="on" placeholder="请填写企业名称" maxlength="20" />
+				</div>
+				<div class="row tc" style="display:none">
+
+					<input type="text" class=" box-sizing" id="organizationCode" placeholder="请填写企业机构码" maxlength="20" value="10000" />
+				</div>
+				<div class="row tc">
+					<label class="label-text">机构联系人:</label>
+					<input type="text" class=" box-sizing" id="contacts" placeholder="请填写机构联系人" maxlength="20" />
+				</div>
+				<div class="row tc">
+					<label class="label-text">机构联系电话:</label>
+					<input type="text" class=" box-sizing" id="contactPhone" placeholder="请填写机构联系电话" maxlength="20" />
+				</div>
+				<div class="row tc">
+					<label class="label-text">选择城市:</label>
+					<div id="city" class="citys">
+						<p>
+							<select name="province"></select>
+							<select name="city"></select>
+							<select name="area"></select>
+						</p>
+					</div>
+				</div>
+				<div class="row tc">
+					<label class="label-text">详细地址:</label>
+					<input type="text" class=" box-sizing" id="address" autocomplete="off" placeholder="请填写详细地址" maxlength="20" />
+				</div>
+				<div class="row">
+					<div class="error-msg hide" id="errorMsg"></div>
+				</div>
+				<div class="row tc add-c">
+					<button type="button" class="btn btn-login btn-last" id="submit">提交</button>
+				</div>
+			</form>
+		</div>
+		<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+		<script src="assets/js/jquery-1.9.0.min.js"></script>
+		<script src="assets/js/aes.js"></script>
+		<script src="assets/js/mode-ecb-min.js"></script>
+		<script src="assets/js/layer/layer.js"></script>
+		<script src="assets/js/md5.js"></script>
+		<script src="assets/js/info.js"></script>
+		<script src="assets/js/jquery.citys.js"></script>
+		<script type="text/javascript">
+			$('#city').citys({
+				province: remote_ip_info['province'],
+				city: remote_ip_info['city'],
+				area: remote_ip_info['district'],
+				required: false,
+				nodata: 'disabled',
+				onChange: function(data) {
+					var text = data['direct'] ? '(直辖市)' : '';
+					//$('#place').text('当前选中地区：' + data['province'] + text + ' ' + data['city'] + ' ' + data['area']);
+					$("#p").val(data['province'])
+					$("#c").val(data['city'])
+					$("#a").val(data['area'])
+				}
+			});
+		</script>
+		<style type="text/css">
+			.citys {
+				margin-bottom: 10px;
+			}
+			
+			.citys p {
+				line-height: 28px;
+			}
+			
+			.warning {
+				color: #c00;
+			}
+			
+			.main a {
+				margin-right: 8px;
+				color: #369;
+			}
+			
+			.label-text {
+				width: 120px;
+				float: left;
+				line-height: 51px;
+				margin-right: 0px;
+				text-align: right;
+				display: inline-block;
+			}
+			
+			.tc input,
+			.tc select {
+				float: left;
+				margin-left: 4px;
+				margin-bottom: 10px;
+			}
+			
+			select {
+				border: 1px solid #dce4e6;
+				padding: 15px 10px;
+				background: rgb(243, 246, 248);
+				border-radius: 5px;
+				width: 104px;
+			}
+			
+			.add-c {
+				clear: both;
+				padding-top: 20px;
+				padding-left: 20px;
+			}
+			
+			.btn-last {
+				float: left;
+				margin-left: 105px;
+			}
+						.error-msg{
+				    font-size: 14px;
+				    color: #e60012;
+				    float: left;
+				    padding-left: 122px;
+				    width: 100%;
+			}
+		</style>
+	</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商务合作</title>
+	<link rel="icon" href="./static/v4/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./static/v4/css/public.css">
+	<link rel="stylesheet" href="./static/v4/css/work.css">
+	<script src="./static/v4/js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav_con">
+			<div class="lang">
+				<font class="en">English</font> <span>&nbsp;|&nbsp;</span> <font class="ch lang_active">中文</font>
+			</div>
+			<img class="logo" src="./static/v4/images/logo.png" width="10%"/>
+			<img class="logo_infro" src="./static/v4/images/logo_infro.png" width="15%"/>
+			<ul class="nav_ul">
+				<li class="nav_li"><a href="index.html">首页</a><div></div></li>
+				<li class="nav_li"><a href="about.html">关于XXX</a><div></div></li>
+				<li class="nav_li"><a href="game.html">XXX游戏</a><div></div></li>
+				<li class="li_ep">加入XXX<div class="li_list"><a href="join.html">社会招聘</a></div><div class="li_list"><a href="http://xiaozhao.XXX.com/index.html">校园招聘</a></div>
+				</li>
+				<li class="nav_li"><a href="work.html" class="active_hover">商务合作</a><div></div></li>
+				<li class="nav_li"><a href="contact.html">联系我们</a><div></div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="work_banner"></div>
+	<div class="work_conntent">
+		<div class="w_c_con">
+			<ul>
+				<li>
+					<div class="work_title">
+						<font class="work_chinese">国内联运、CPS/CPA合作</font>
+						<font class="work_english">CPS、CPA and other cooperation in China</font>
+					</div>
+					<div class="work_qq">2853078226</div>
+					<img src="./static/v4/images/qqchat.png"/>
+				</li>
+				<li>
+					<div class="work_title">
+						<font class="work_chinese">媒体合作</font>
+						<font class="work_english">Media cooperation</font>
+					</div>
+					<div class="work_qq">2853078226</div>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2853078226&site=qq&menu=yes"><img src="./static/v4/images/qqchat.png"/></a>
+				</li>
+				<li>
+					<div class="work_title">
+						<font class="work_chinese">产品海外代理</font>
+						<font class="work_english">Global market business</font>
+					</div>
+					<div class="work_qq">2853078226</div>
+					<img src="./static/v4/images/qqchat.png"/>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_con">
+			<div class="foote_logo">
+				<img src="./static/v4/images/logo.png"/>
+			</div>
+			<div class="footer_font">
+				<ul>
+					<li><a href="about.html" target="_blank">关于XXX </a><span class="np">|</span> <a href="" target="_blank"></a>服务条款<span class="np">|</span> <a href="work.html" target="_blank">商务合作</a><span class="np">|</span> <a href="contact.html" target="_blank">联系我们</a></li>
+					<li><a href="http://sky.XXX.com/news/2015/0211/1190.html" target="_blank">《网络游戏管理暂行办法》</a>&nbsp;<a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/386615A1709B41BF989E35C4D54E9522" target="_blank"><img src="./static/v4/images/wen2.png"/></a> &nbsp;<a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08b525431c6015281d9acbd4cb9" target="_blank">文网游备字XXX</a></li>
+					<li>广州XXX信息科技有限公司 版权所有 粤网文 XXX 粤ICP备XXX</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	$(function() {
+		function play() {
+		};
+		play.prototype = {
+			NavHover:function() {
+				$(".nav_li").hover(function() {
+					$(this).find('div').stop().animate({"width":"100%"},300);
+				},function() {
+					$(this).find('div').stop().animate({"width":"0px"},200);
+				});
+			},
+			active:function() {
+				$(".lang font").click(function() {
+					$(".lang font").removeClass("lang_active");
+					$(this).addClass("lang_active");
+					if($(this).index() == 0) {
+						$(".work_chinese").hide();
+						$(".work_english").show();
+					}else {
+						$(".work_chinese").show();
+						$(".work_english").hide();
+					}
+				});
+			},
+			local:function() {
+				var language = window.location.href;
+				if(language.substr(-3) == "?en") {
+					$(".lang font").removeClass("lang_active");
+					$(".en").addClass("lang_active");
+					$(".work_chinese").hide();
+					$(".work_english").show();
+				}
+			}
+		}
+		var Play = new play()
+		Play.NavHover();
+		Play.active();
+		Play.local();
+	})
+</script>

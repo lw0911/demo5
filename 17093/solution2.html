@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>智能分析服务器与无人机对接应用解决方案-XXX是国内领先的安全监管领域软硬件系统研发和系统集成商，率先进行新一代信息技术及软硬件产品的自主研发。</title>
+<meta name="keywords" content="XXX,智慧安监,互联网+,安全监管,智慧矿山,智慧城市" />
+<meta name="description" content="XXX致力于为政府监管部门与企业用户提供软、硬件一体化的智慧安监、智慧矿山（含煤矿）、智慧城管、智慧水利、安全云计算平台整体解决方案，以及基于智慧安监云计算中心平台的云存储、应用等云服务平台。" />
+<link href="webcss/global.css" rel="stylesheet" type="text/css" />
+<link href="webcss/layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="webjs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+  var browser = {
+  versions: function () {
+  var u = navigator.userAgent, app = navigator.appVersion;
+  return {//移动终端浏览器版本信息
+  trident: u.indexOf('Trident') > -1, //IE内核
+  presto: u.indexOf('Presto') > -1, //opera内核
+  webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+  gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+  mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+  ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+  android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+  iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+  iPad: u.indexOf('iPad') > -1, //是否iPad
+  webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+  };
+  }(),
+  language: (navigator.browserLanguage || navigator.language).toLowerCase()
+  }
+
+  if (browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad) {
+  window.location = "m/index.html";
+  }
+</script>
+
+<script type="text/javascript" src="js/layer/layer.min.js"></script>
+
+</head>
+<body>
+<div class="header">
+  <div class="web clearfix">
+    <h1 class="logo fl">
+      <a href="index.html">
+        <img src="webimages/cimg01.png" alt="" />
+      </a>
+    </h1>
+    <p class="idea fl">
+      <img src="webimages/cimg02.png" alt="" />
+    </p>
+    <p class="shop-mall fr">
+      <a href="#">官方商城</a>
+    </p>
+  </div>
+</div>
+<div class="nav-box">
+  <div class="web clearfix">
+    <ul class="nav fl">
+      <li _t_nav="about">
+        <a href="company.html">公司概况</a>
+      </li>
+      <li _t_nav="product">
+        <a href="product.html">产品中心</a>
+      </li>
+      <li _t_nav="solution">
+        <a href="solution.html">解决方案</a>
+      </li>
+      <li _t_nav="new">
+        <a href="news.html">新闻中心</a>
+      </li>
+      <li _t_nav="support">
+        <a href="service.html">服务支持</a>
+      </li>
+      <li _t_nav="cantact">
+        <a href="contact.html">联系我们</a>
+      </li>
+      <li _t_nav="join">
+        <a href="joining.html">加盟合作</a>
+      </li>
+    </ul>
+    <div class="search fr clearfix">
+      <label>
+        <input class="text topsearchtext" name="topsearchtext" type="text" placeholder="搜索相关内容..." />
+      </label>
+      <input class="submit topsearchbtn" name="topsearchbtn" type="submit" value="" />
+    </div>
+  </div>
+</div>
+<div class="subnav">
+  <div class="web">
+    <div id="about" _t_nav="about" class="subnav-public clearfix">
+      <ul class="subnav01 clearfix">
+        <li>
+          <h3 class="profile">公司介绍</h3>
+          <div class="subnav-box">
+            
+            <a href="company.html">公司简介</a>
+            
+            <a href="organization.html">组织架构</a>
+            
+            <a href="development.html">发展历程</a>
+            
+            <a href="qualification.html">公司资质</a>
+            
+            <a href="environment.html">办公环境</a>
+            
+          </div>
+        </li>
+        <li>
+          <h3 class="innovate">创新技术</h3>
+          <div class="subnav-box">
+            
+            <a href="tech.html">智能物联网技术</a>
+            
+            <a href="tech.html">可信计算技术</a>
+            
+            <a href="tech.html">互联网+大数据技术</a>
+            
+            <a href="tech.html">事故预警预报技术</a>
+            
+            <a href="tech.html">智能视频分析技术</a>
+            
+          </div>
+        </li>
+        <li>
+          <h3 class="culture">企业文化</h3>
+          <div class="subnav-box">
+            
+            <a href="philosophy.html">企业理念</a>
+            
+            <a href="vision.html">愿景与使命</a>
+            
+            <a href="coreValues.html">核心价值观</a>
+            
+            <a href="talent.html">人才理念</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+          <img src="webimages/cimg08.jpg" alt="" />
+          <span class="text">XXX成立于2003年，是国内领先的安全监管领域软硬件系统研发和系统集成商。</span>
+      </div>
+    </div>
+    <div id="product" _t_nav="product" class="subnav-public">
+      <ul class="subnav01 clearfix">
+        <li>
+          <h3 class="sw-pro">软件产品</h3>
+          <div class="subnav-box">
+            
+            <a href="product.html">安监综合监管类软件</a>
+            
+            <a href="product.html">应急救援指挥类软件</a>
+            
+            <a href="product.html">行业监管监察类软件</a>
+            
+            <a href="product.html">煤矿安全监察类软件</a>
+            
+            <a href="product.html">大数据分析平台</a>
+            
+            <a href="product.html">智能移动监管APP前端</a>
+            
+          </div>
+        </li>
+        <li class="br-n">
+          <h3 class="hd-pro">硬件产品</h3>
+          <div class="subnav-box">
+            
+            <a href="product.html">监测预警类产品</a>
+            
+            <a href="product.html">移动终端类产品</a>
+            
+            <a href="product.html">图传设备</a>
+            
+            <a href="product.html">可信产品</a>
+            
+            <a href="product.html">水利产品</a>
+            
+            <a href="product.html">城市管理产品</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+        <img src="webimages/nnav01.jpg" alt="" />
+        <span class="text">用户遍布全国众多省市，综合多项自主研发创新技术，率先进行新一代信息技术及软硬件产品的开发。</span>
+      </div>
+    </div>
+    <div id="solution" _t_nav="solution" class="subnav-public">
+      <ul class="subnav01 clearfix">
+        <li>
+          <h3 class="hl-hy">“互联网+”行业信息化</h3>
+          <div class="subnav-box">
+            
+            <a href="solution.html">“互联网+智慧安监”信息化解决方案</a>
+            
+            <a href="solution.html">“互联网+智慧城管”信息化解决方案</a>
+            
+            <a href="solution.html">“互联网+智慧环保”信息化解决方案</a>
+            
+            <a href="solution.html">“互联网+智慧林业”信息化解决方案</a>
+            
+          </div>
+        </li>
+        <li class="br-n">
+          <h3 class="zx-aj">专项（安监信息化）</h3>
+          <div class="subnav-box">
+            
+            <a href="solution.html">智能分析服务器与无人机对接应用解决方案</a>
+            
+            <a href="solution.html">企业安全生产一体化防控平台解决方案</a>
+            
+            <a href="solution.html">安全生产远程监测监控系统解决方案</a>
+            
+            <a href="solution.html">煤矿安全生产远程监测监控平台解决方案</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+        <img src="webimages/nnav02.jpg" alt="" />
+        <span class="text">致力于为政府监管部门与企业用户提供智慧安监、智慧矿山（含煤矿）、智慧城管、智慧水利、安全云计算平台整体解决方案。</span>
+      </div>
+    </div>
+    <div id="new" _t_nav="new" class="subnav-public">
+      <ul class="subnav01 clearfix">
+        <li class="br-n">
+          <div class="subnav-box">
+            
+            <a href="news.html">企业新闻</a>
+            
+            <a href="news.html">行业新闻</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+        <img src="webimages/nnav03.jpg" alt="" />
+        <span class="text">首批进入安监领域的软件开发企业，是由国家安监总局评选的27家“安全生产创新型中小企业”之一，安监领域内“国家火炬计划重点高新技术企业”</span>
+      </div>
+    </div>
+    <div id="support" _t_nav="support" class="subnav-public">
+      <ul class="subnav01 clearfix">
+        <li class="br-n">
+          <div class="subnav-box">
+            
+            <a href="service.html">服务理念</a>
+            
+            <a href="sales.html">售后承诺</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+        <img src="webimages/nnav04.jpg" alt="" />
+        <span class="text">始终为客户提供超越期望的价值，坚持以精湛的技术赢得市场，以优质的服务赢得信誉！</span>
+      </div>
+    </div>
+    <div id="cantact" _t_nav="cantact" class="subnav-public">
+      <ul class="subnav01 clearfix">
+        <li class="br-n">
+          <div class="subnav-box">
+            
+            <a href="contact.html">联系方式</a>
+            
+            <a href="suggestions.html"> 投诉建议</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+        <img src="webimages/nnav05.jpg" alt="" />
+        <span class="text"  x-ms-format-detection="none">
+          咨询热线：XXX<br /> 硬件销售：XXX<br /> 软件销售：XXX
+        </span>
+      </div>
+    </div>
+    <div id="join" _t_nav="join" class="subnav-public">
+      <ul class="subnav01 clearfix">
+        <li class="br-n">
+          <div class="subnav-box">
+            
+            <a href="joining.html">代理商及合作伙伴</a>
+            
+            <a href="joining.html">商用密码行业协会</a>
+            
+          </div>
+        </li>
+      </ul>
+      <div class="ad">
+        <img src="webimages/nnav06.jpg" alt="" />
+        <span class="text">合作成就梦想，加盟共赢未来。</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg108.jpg" alt="解决方案banner" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg89.png" alt="" /></h2>
+    <div class="graybg pb70">
+        <div class="web">
+            <div class="second-menu">
+                <a id="aparentid49" href="Solution/Internet/index.html" class="drop">互联网+行业信息化解决方案</a><a id="aparentid50" href="Solution/Special/index.html" class="drop">专项（安监信息化）解决方案</a>
+                <div class="second-menudrop second-menudrop01">
+                    
+                    <a href="Solution/Internet/detail_44.html">“互联网+智慧安监”信息化解决方案</a>
+                    
+                    <a href="Solution/Internet/detail_55.html">“互联网+智慧城管”信息化解决方案</a>
+                    
+                    <a href="Solution/Internet/detail_56.html">“互联网+智慧环保”信息化解决方案</a>
+                    
+                    <a href="Solution/Internet/detail_57.html">“互联网+智慧林业”信息化解决方案</a>
+                    
+                </div>
+                <div class="second-menudrop second-menudrop02">
+                    
+                    <a href="Solution/Special/detail_45.html">智能分析服务器与无人机对接应用解决方案</a>
+                    
+                    <a href="Solution/Special/detail_58.html">企业安全生产一体化防控平台解决方案</a>
+                    
+                    <a href="Solution/Special/detail_59.html">安全生产远程监测监控系统解决方案</a>
+                    
+                    <a href="Solution/Special/detail_60.html">煤矿安全生产远程监测监控平台解决方案</a>
+                    
+                </div>
+            </div>
+            <div class="crumbs-box clearfix">
+                <span class="current">智能分析服务器与无人机对接应用解决方案</span>
+                <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="互联网行业信息化解决方案.html">解决方案</a> &gt; <a href="互联网行业信息化解决方案.html">互联网+行业信息化解决方案</a> &gt; <a href="javascript:;" class="on">互联网+”行业信息化解决方案</a></div>
+            </div>
+            <div class="single-cont">
+               <h3 class="solution-tile02 pb32">​智能分析服务器与无人机对接应用解决方案</h3><p class="tac-pic pb32"><img width="1118" height="273" title=" " style="width: 1118px; height: 273px;" alt=" " src="upload/ueditor/image/20160829/6360809521754870559026410.jpg" border="0" vspace="0"></p><p class="font4c pb32 bob mb40">为有效应对以上安全生产发展问题，基于“互联网+安全监管”思路，利用智能分析、无人机等先进技术，实现安全生产综合监管、监察执法、应急救援，为安全生产监管监察工作提供及时、高效的技术服务。</p>
+                <div class="hide-detail">
+                    <h3 class="solution-tile02 pb32">平台组成</h3>
+                    <div class="hide-cont"><p class="tac-pic pb32"><img width="800" height="420" title=" " style="width: 800px; height: 420px;" alt=" " src="upload/ueditor/image/20160829/6360809526252487668521994.jpg" border="0" vspace="0"></p><p class="font4c pb70">（1）智能分析服务器（hwkj-880）：XXX自主研发的新一代数码监测防控工业级服务器，采用嵌入式高速处理器和Linux操作系统，运行稳定可靠；集成数字视音频录像机（DVR）、数字视音频服务器（DVS）、视频智能分析、数据采集、数据分析及多级联动报警预警接口功能。</p><p class="tac-pic pb56"><img width="601" height="167" title=" " style="width: 601px; height: 167px;" alt=" " src="upload/ueditor/image/20160829/6360809529499251325169732.jpg" border="0" vspace="0"></p><p class="font4c pb24">（2）无人机航拍系统：以多轴无人驾驶飞机作为空中平台，搭载高清运动摄像机及其它仪器等获取信息，用智能分析服务器对图像信息进行处理。</p><p class="tac-pic pb56 bob mb40"><img width="1100" height="269" title=" " style="width: 1100px; height: 269px;" alt=" " src="upload/ueditor/image/20160829/6360809533450859906598171.jpg" border="0" vspace="0"></p></div>
+                </div>
+                <div class="hide-detail">
+                    <h3 class="solution-tile02 pb32">客户价值</h3>
+                    <div class="hide-cont"><ul class="solution-valuelist clearfix"><li> <img alt="6360809544471695475130268.png" src="upload/ueditor/image/20160829/6360809544471695475130268.png"><span>
+ 
+ 智能分析</span></li><li> <img alt="6360809547356680212179547.png" src="upload/ueditor/image/20160829/6360809547356680212179547.png"><span>
+ 
+ 及时</span></li><li> <img alt="6360809550221451689230360.png" src="upload/ueditor/image/20160829/6360809550221451689230360.png"><span>
+ 
+ 高效</span></li></ul>
+</div>
+                </div>
+                <h3 class="solution-tile02 solution-pros">相关产品</h3>
+                <div class="solution-pro">
+                    <div class="solution-probox">
+                        <ul class="solution-prolist clearfix">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--二维码弹窗-->
+<div class="mask"></div>
+<div class="wechat-popup gfwx">
+  <img src="webimages/cimg18.jpg" alt="" />
+  <p>XXX官方微信</p>
+  <span></span>
+</div>
+<div class="wechat-popup sjewm">
+  <img src="webimages/sjewm.jpg" alt="" />
+  <p>XXX手机版</p>
+  <span></span>
+</div>
+<div class="footer">
+  <div class="web clearfix">
+    <div class="footer-menu footer-solution clearfix">
+      <h2 class="footer-title">解决方案</h2>
+      <div class="footer-linkbox fl">
+        <h3 class="footer-subtitle">“互联网+”行业信息化解决方案</h3>
+        
+        <a href="solution.html">“互联网+智慧安监”信息化解决方案</a>
+        
+        <a href="solution.html">“互联网+智慧城管”信息化解决方案</a>
+        
+        <a href="solution.html">“互联网+智慧环保”信息化解决方案</a>
+        
+        <a href="solution.html">“互联网+智慧林业”信息化解决方案</a>
+        
+      </div>
+      <div class="footer-linkbox fr">
+        <h3 class="footer-subtitle">专项（安监信息化）解决方案</h3>
+        
+        <a href="solution.html">智能分析服务器与无人机对接应用解决方案</a>
+        
+        <a href="solution.html">企业安全生产一体化防控平台解决方案</a>
+        
+        <a href="solution.html">安全生产远程监测监控系统解决方案</a>
+        
+        <a href="solution.html">煤矿安全生产远程监测监控平台解决方案</a>
+        
+      </div>
+    </div>
+    <div class="footer-menu footer-contact">
+      <h2 class="footer-title">联系方式</h2>
+      <div class="footer-linkbox fl">
+        <h3 class="footer-subtitle">
+          咨询热线：<strong  x-ms-format-detection="none">XXX</strong>
+        </h3>
+        <p x-ms-format-detection="none">传真：XXX</p>
+        <p x-ms-format-detection="none">技术支持：XXX</p>
+        <p x-ms-format-detection="none">硬件销售：XXX</p>
+        <p x-ms-format-detection="none">软件销售：XXX</p>
+        <p>
+          邮箱：<a href="mailto:XXX">XXX</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-media">
+      <h2 class="footer-title">媒体方式</h2>
+      <ul>
+        <li class="mobile">
+          <a href="javascript:;">XXX手机版 &gt;</a>
+        </li>
+        <li class="wechat">
+          <a href="javascript:;">关注XXX官方微信公众号 &gt;</a>
+        </li>
+        <li class="micro-blog">
+          <a href="javascript:;">关注XXX官方微博  &gt;</a>
+        </li>
+      </ul>
+    </div>
+    <dl class="friendlink">
+      <dt>友情链接</dt>
+      <dd>
+        
+        <a href="#">中国安全生产网</a>
+        
+        <a href="#">广东省安监局</a>
+        
+        <a href="#">国家安监总局</a>
+        
+        <a href="#">中国安全生产宣教网</a>
+        
+        <a href="#">中国煤炭安全生产网</a>
+        
+        <a href="#">安标国家矿用产品安全标志中心</a>
+        
+        <a href="#">佛山市安全生产监督管理局</a>
+        
+        <a href="#">河北省安全生产监督管理局</a>
+        
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<div class="copyrigth-box">
+  <div class="web clearfix">
+    <p class="link fl">加盟合作：<a href="joining.html">代理商及合作伙伴</a> | <a href="joining.html">商用密码行业协会</a> | </p>
+    <p class="copyrigth fr">
+      Copyright © 深圳市XXX科技股份有限公司  All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>  | <a href="javascript:;">XXX</a>
+    </p>
+  </div>
+</div>
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <!--解决方案-->
+<script src="webjs/myscroll.js"></script>
+<script>
+    var relateproduct = "1";
+    $(function () {
+        $("#aparentid50").addClass("cur");
+        var newurl1 = $(".second-menudrop01 a").eq(0).attr("href");
+        $(".second-menu a").eq(0).attr("href", newurl1);
+        var newurl2 = $(".second-menudrop02 a").eq(0).attr("href");
+        $(".second-menu a").eq(1).attr("href", newurl2);
+
+        Product.GetRelate2(relateproduct, function (res) {
+            $(".solution-prolist").html(res.value);
+            if ($(".solution-prolist li").length == 0) {
+                $(".solution-pros").hide();
+                $(".solution-pro").hide();
+            } else {
+                // 相关产品
+                $('.solution-pro').myscroll({
+                    scrollbox: $('.solution-probox'),
+                    number: "4",
+                    auto: true
+                });
+            }
+        });
+
+        //2016.09.02 zxc 隐藏内容
+        $('.hide-cont').each(function () {
+            if ($.trim($(this).html()) == '') {
+                $(this).parents('.hide-detail').hide();
+            }
+        });
+
+        
+    });
+</script>
+
+</body>
+</html>
+

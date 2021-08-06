@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>心胸外科</title>
+    <meta name="keywords" content="心胸外科 " />
+    <meta name="description" content="心胸外科 " />
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--<link rel="stylesheet" href="css/swiper.min.css">-->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bai.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/selectivizr-min.js"></script>
+    <script>
+       (function() {
+         if (!
+         /*@cc_on!@*/
+         0) return;
+         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+         var i= e.length;
+         while (i--){
+             document.createElement(e[i])
+         }
+    })()
+    </script>
+    <![endif]-->
+
+
+</head>
+<script> 
+$(function(){
+    var hei=($('.art_patient .nav_patient').offset().top)-10;
+    var left=$('.art_patient .nav_patient' ).offset().left;
+     $(document).on("scroll",function(){
+            var scroll_top=$(this).scrollTop();
+            if(scroll_top>hei){
+                $('.nav_patient').css({"position":"fixed",'top':'10px','left':left });
+            }else{$('.nav_patient').css({"position":"absolute",'top':'40px','left':'0'});
+        }
+     })
+})
+   </script>
+
+<body>
+    
+
+<div class="header container"  style="position:fixed ;top:0;left:0;right:0;">
+    <a href="index.html" class="logo pull_left" style="width:200px;height:100px;">
+        <img src="img/icon/logo.png" alt="" >
+    </a>
+    <div class="pull_right">
+        <ul class="main_nav content">
+            
+            <li class="main_li" index="关于XXX">
+                <p><a href="about.html">关于XXX</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="about.html">公司简介</a></li>
+                    
+                    <li><a href="items.html">代理项目</a></li>
+                    
+                    <li><a href="partner.html">合作伙伴</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="hzzx" index="患者中心">
+                <p><a href="patient.html">患者中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">心胸外科</a></li>
+                    
+                    <li><a href="patient-1.html">神经外科</a></li>
+                    
+                    <li><a href="patient-2.html">颌面外科</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="cpzx" index="产品中心">
+                <p><a href="patient.html">产品中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">胸骨固定产品</a></li>
+                    
+                    <li><a href="patient.html">漏斗胸产品</a></li>
+                    
+                    <li><a href="patient.html">神经外内科固定产品</a></li>
+                    
+                    <li><a href="patient.html">颌面外科系列产品</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="新闻动态">
+                <p><a href="news.html">新闻动态</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="news.html">公司新闻</a></li>
+                    
+                    <li><a href="news.html">展会信息</a></li>
+                    
+                    <li><a href="news.html">行业资讯</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="联系我们">
+                <p><a href="contact.html">联系我们</a></p>
+            </li>
+            
+        </ul>
+    </div>
+    <a href="#" class="lang">EN</a>
+    <div class="brush"></div>
+</div>
+
+<script>
+$('#hzzx,#cpzx').each(function(){
+    $(this).find(' p > a').eq(0).attr('href',$(this).find(' ul > li > a').eq(0).attr('href'))
+})
+</script>
+
+
+    <div class="banner ban_patient"></div>
+    <div class="show container relative">
+        <div class="title">
+    <h3>心胸外科</h3>
+    <ul class="content currentpage">
+        <li class="home_current"><a href="">首页</a></li> <span>></span> <li><a href="patient/index.html">患者中心</a></li> <span>></span> <li><a href="patient/p1/index.html" class="current">心胸外科</a>
+    </ul>
+</div>
+
+<script>
+$('.home_current a').html('<img src="img/icon/icon02.png" alt="" />')
+var tophead=$('.main_li[index="患者中心"]');
+if(tophead.find('.sec_nav li a').size()>1){
+	$('.currentpage li').last().addClass('hid_nav');
+	$('.hid_nav').append('<div class="hid"></div>');
+	tophead.find('.sec_nav li a').each(function() {
+		if($(this).text()=='心胸外科')return;
+		$('.hid_nav .hid').append('<a href="'+$(this).attr('href')+'">'+$(this).text()+'</a>')
+	})
+}
+</script>
+        <script>
+        $('.currentpage').each(function(){
+            $(this).find(' a ').eq(1).attr('href',$('#hzzx').find(' ul > li > a').eq(0).attr('href'))
+        })
+        </script>
+        <div class="art_patient relative">
+            <div class="nav_patient">
+                <ul>
+                    <li><a href="#cc_876">先天性心脏病</a></li>
+                    
+                    <li><a href="#cc_891">后天性心脏病</a></li>
+                    
+                    <li><a href="#cc_897">胸主动脉疾病</a></li>
+                    
+                    <li><a href="#cc_900">前纵隔疾病</a></li>
+                    
+                    <li><a href="#cc_901">胸壁疾病</a></li>
+                    
+                </ul>
+            </div>
+            <div class="cont_patient ">
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_876"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>先天性心脏病</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">动脉导管未闭</li>
+                                
+                                <li>肺动脉口狭窄</li>
+                                
+                                <li>房间隔缺损</li>
+                                
+                                <li>室间隔缺损</li>
+                                
+                                <li>主动脉缩窄</li>
+                                
+                                <li>法洛四联症</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p style="white-space: normal;"><img src="upload/2016/1122/0934bbjf4h.png" width="300" height="300" border="0" hspace="0" vspace="0" title="" style="float: left; width: 233px; height: 248px;"><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>动脉导管是胎儿期连接主动脉峡部与左肺动脉根部之间的生理性血流通道。约85%婴儿在生后2个月内动脉导管闭合，成为动脉韧带，逾期不闭合者即为动脉导管未闭。</p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>临床表现：导管直径细、分流量小者常无明显症状。直径粗、分流量大者常并发充血性心力衰竭，表现为易激怒、气促、乏力、多汗以及喂养困难、发育不良等。当病情发展为严重肺动脉高压且出现右向左分流时，可表现为下半身发绀和杵状指/趾，称为“差异性发绀”。</p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span>治疗： 用手术人工关闭动脉导管<span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p><p><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span><br/></p><p><br/></p><p><br/></p><p>（1）结扎动脉导管<br/></p><p><img src="upload/2016/1122/0959j86dth.png" width="400" height="336" border="0" hspace="0" vspace="0" title="" style="width: 400px; height: 336px;"></p><p><br/></p><p>（2）切断动脉导管并缝合</p><p><img src="upload/2016/1122/0959p4v24b.png"></p><p>（3）补片修补导管内口</p><p><img src="upload/2016/1122/0958r8866t.png" width="400" height="388" border="0" hspace="0" vspace="0" title="" style="width: 400px; height: 388px;"></p><p>（4）导管封堵</p><p><img src="upload/2016/1122/095924zbvz.png" width="400" height="392" border="0" hspace="0" vspace="0" title="" style="width: 400px; height: 392px;"></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p style="text-align: left;"><span style="font-size: 16px;"><img src="upload/2016/1122/1026rr4hj6.png" width="350" height="245" border="0" hspace="0" vspace="0" title="" style="float: left; width: 350px; height: 245px;"></span></p><p><span id="_baidu_bookmark_start_18" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_20" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_16" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span></p><p><span style="font-size: 20px;"></span></p><p style="white-space: normal;"><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>右心室和肺动脉之间存在先天性狭窄的畸形，称为肺动脉口狭窄。可单独存在或者是复杂心脏疾病的一部分。临床表现：轻度狭窄者可长期无症状。中重度狭窄者表现为活动后胸闷、气短、心悸甚至晕厥，活动耐量差，易疲劳。症状随年龄增长而加重，晚期出现肝大、下肢水肿、腹水等右心衰表现。<br/></p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>治疗：&nbsp;<span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p><p><span id="_baidu_bookmark_end_21" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_17" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span></p><p style="text-align: left;"><br/></p><p style="text-align: left;"><br/></p><p style="text-align: left;"><br/></p><p style="text-align: left;"><br/></p><p style="text-align: left;">（1）狭窄部位切开</p><p><img src="upload/2016/1122/103322ft40.png" style="width: 400px; height: 392px;" title="7.png" width="400" height="392" border="0" hspace="0" vspace="0"></p><p><br/></p><p><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>（2）经皮肺动脉瓣球囊扩张术<span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span></p><p style="text-align: left;"><img src="upload/2016/1122/10334j088t.png" width="400" height="465" border="0" hspace="0" vspace="0" title="" style="width: 400px; height: 465px;"></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1044n622x2.png" title="9.png" width="350" height="324" border="0" hspace="0" vspace="0" style="width: 350px; height: 324px;"></p><p>房间隔缺损是心房间隔先天性发育不全导致的左、右心房间异常交通。</p><p>临床表现：继发孔型儿童期多无明显症状，少数分流量大者出现发育迟缓、活动耐量差，青年期逐渐出现易疲劳、活动后气短等症状。原发孔型症状出现早，病情进展快。</p><p>治疗：</p><p>（1）直接缝合/补片材料修补<br/></p><p><img src="upload/2016/1122/1045040p4j.png" title="10.png" width="400" height="280" border="0" hspace="0" vspace="0" style="width: 400px; height: 280px;"></p><p>（2）介入封堵</p><p><img src="upload/2016/1122/1212rjbvrj.png" title="11.png" width="400" height="336" border="0" hspace="0" vspace="0" style="width: 400px; height: 336px;"></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/13026bld28.png" title="12.png" width="350" height="350" border="0" hspace="0" vspace="0" style="width: 350px; height: 350px;"><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span></p><p>室间隔缺损是胎儿期室间隔发育不全所致的心室间异常交通。</p><p>临床表现：缺损小、分流量少者，一般无明显症状。分流量大者出生后即反复呼吸道感染、充血性心力衰竭、喂养困难和发育迟缓。能度过婴幼儿期的较大缺损者，表现为活动耐量差、劳累后心悸、气促、逐渐出现发绀和右心衰竭。室间隔缺损病人易并发感染性心内膜炎。</p><p>治疗：根据症状体征、心功能、缺损大小和位置、肺动脉高压程度、房室扩大的呢过情况综合判断。年龄和体重不是手术的决定因素。</p><p>心内直视手术仍然是治疗室间隔缺损的主要方法。手术方法与房间隔缺损基本相同。</p><p><br/></p><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/13136644fj.png" title="13.png" width="350" height="368" border="0" hspace="0" vspace="0" style="width: 350px; height: 368px;"><span style="font-size: 18px;"><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;"></span></span></p><p>主动脉缩窄是指降主动脉起始段先天性狭窄。</p><p>临床表现：症状轻重、出现早晚与缩窄程度、是否合并心血管畸形有关。若缩窄较轻，不合并其他心血管畸形，多无明显症状，常在体检时发现上肢高血压。缩窄较重者出现头痛、头晕、耳鸣、眼花、气促、心悸、面部潮红等高血压症状，并有下肢易麻木、发冷或间歇性跛行等缺血症状。严重主动脉缩窄合并心脏畸形者，症状出现早，婴幼儿期即有充血性心力衰竭、喂养困难和发育迟缓。</p><p>治疗：当上、下肢动脉收缩压差&gt;50mmHg，缩窄处管径小于主动脉正常段内经50%，即具备手术指征。单纯主动脉缩窄者，若上脉动脉收缩压&gt;150mmHg应及时手术。婴幼儿期反复肺部感染、心力衰竭或合并其他心脏畸形，应尽早手术和一期矫治。无症状者，目前认为4-6岁择期手术为宜。年龄过小者易发生术后远期再狭窄，年龄过大者主动脉分支易出现血管硬化等继发改变。</p><p><br/></p><p><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span></p><p><span id="_baidu_bookmark_end_21" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1335262nj2.png" title="14.png" width="400" height="345" border="0" hspace="0" vspace="0" style="width: 400px; height: 345px;"><span style="font-size: 20px;"><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;"></span></span></p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_18" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_21" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_24" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_24" style="display: none; line-height: 0px;"></span></span></p><p>法洛四联症是一种具有特征性肺动脉口狭窄和室间隔缺损的心脏畸形，主要包括四种病理解剖：</p><p>肺动脉口狭窄</p><p>室间隔缺损</p><p>主动脉骑跨</p><p>右心室肥厚</p><p>临床表现：大多数病人出生即有呼吸困难，生后3-6个月出现发绀，并随年龄增长逐渐加重。由于组织缺氧，体力和活动耐量均较同龄人差，伴喂养困难、发育迟缓。蹲踞是特征性姿态，多见于儿童期。蹲踞时发绀和呼吸困难有所减轻。缺氧发作多见于单纯漏斗部狭窄的婴幼儿，常发生在清晨和活动后，表现为骤然呼吸困难，发绀加重，甚至昏厥、抽搐死亡。</p><p>治疗：根治手术的两个必备条件：1.左心室发育正常，左心室舒张末期容量指数大于等于30ml/m2；2.肺动脉发育良好，McGoon比值大于等于1.2或Nakata指数大于等于150mm2/m2.对不具备上述条件，或者冠状动脉畸形影响右心室流出道疏通的病人，应先行姑息手术。有症状的新生儿和婴儿应早期手术，符合条件者应实施一期根治。对于无症状或症状轻者，目前倾向于1岁左右行择期根治术，以减少继发性心肌损害。无论根治还是姑息手术，禁忌证为经内科治疗无效的顽固性心衰、严重肝肾功能损害。</p><p><br/></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_891"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>后天性心脏病</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">二尖瓣狭窄</li>
+                                
+                                <li>二尖瓣关闭不全</li>
+                                
+                                <li>主动脉瓣狭窄</li>
+                                
+                                <li>主动脉瓣关闭不全</li>
+                                
+                                <li>冠心病</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/13478dj6l8.png" title="15.png" width="350" height="438" border="0" hspace="0" vspace="0" style="width: 350px; height: 438px; float: left;"><span id="_baidu_bookmark_start_28" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_30" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_24" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_26" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_20" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_22" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_16" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_18" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_17" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_19" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_48" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_50" style="display: none; line-height: 0px;">‍</span>在风湿性心脏瓣膜病中，最常累及二尖瓣，主动脉瓣次之，三尖瓣很少见，肺动脉瓣则极为罕见。<span id="_baidu_bookmark_end_51" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_49" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_23" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_21" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_20" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_18" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_12" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_16" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_14" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_4" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;"></span></span><span id="_baidu_bookmark_end_31" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_29" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_27" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_25" style="display: none; line-height: 0px;">‍</span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_21" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_23" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_32" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_34" style="display: none; line-height: 0px;">‍</span>临床表现：临床症状主要取决于瓣口狭窄的程度。当瓣口面积缩小至62.5px<span id="_baidu_bookmark_start_29" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_31" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_25" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_27" style="display: none; line-height: 0px;">‍</span>2左右，心脏听诊虽有二尖瓣狭窄的杂音，静息时可无症状出现。瓣口面积小于37.5px2时，左心房排血困难，肺部慢性阻性淤<span id="_baidu_bookmark_end_35" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_33" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_40" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_42" style="display: none; line-height: 0px;">‍</span>血<span id="_baidu_bookmark_end_43" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_41" style="display: none; line-height: 0px;">‍</span>，<span id="_baidu_bookmark_start_36" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_38" style="display: none; line-height: 0px;">‍</span>肺顺应性减低，临床上可出现气促、咳嗽、咯血、发绀等症状。气促通常在活动时出现，其轻重程度与活动量大小有密切关系。</p><p><span style="font-size: 20px;"><span style="font-size: 16px; font-family: 等线;"><span id="_baidu_bookmark_start_33" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_35" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_44" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_46" style="display: none; line-height: 0px;">‍</span>治疗：外科治疗的目的是扩大二尖瓣瓣口面积，解除左心房排血障碍，缓解症状，改善心功能。无症状或心脏功能属于I级者，不主张施行手术。有症状且心功能II级以上者均应手术治疗。<span id="_baidu_bookmark_end_47" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_45" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_39" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_37" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_17" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_24" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_22" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_32" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_30" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_28" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_26" style="display: none; line-height: 0px;">‍</span></p><p><span style="font-size: 20px;"><br/></span></p><p><span style="font-size: 20px;"><br/></span></p><p><span style="font-size: 20px;"><br/></span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_43" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_45" style="display: none; line-height: 0px;">‍</span>（1）经皮球囊二尖瓣成形术<span id="_baidu_bookmark_end_46" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_44" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1355b0l22p.png" title="16.png" width="400" height="385" border="0" hspace="0" vspace="0" style="width: 400px; height: 385px;"></p><p>（2）人工瓣膜替换术</p><p><img src="upload/2016/1122/13550b0004.png" title="17.png" width="400" height="465" border="0" hspace="0" vspace="0" style="width: 400px; height: 465px;"></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/135908z06n.png" title="18.png" width="350" height="449" border="0" hspace="0" vspace="0" style="width: 350px; height: 449px;"><span style="font-size: 20px;"><span id="_baidu_bookmark_start_21" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_23" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_17" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_19" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;"></span></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_29" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_31" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>左心室收缩时，由于两个瓣叶不能对拢闭合，一部分血液反流入左心房，使排入体循环的血流量减少。<span id="_baidu_bookmark_end_32" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_30" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_16" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_14" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_24" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_22" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_20" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_18" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_4" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_25" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_27" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>临床表现：病变轻、心脏功能代偿良好者可无明显症状。病变较重或历时较久者可出现乏力、心悸，劳累后气促等症状。急性肺水肿和咯血的发生率远较二尖瓣狭窄少。临床上出现症状后，病情可在较短时间内迅速恶化。<span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_28" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_26" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_26" style="display: none; line-height: 0px;"></span></span></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_33" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_35" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span>治疗：二尖瓣关闭不全症状明显，心功能受影响，心脏扩大时即应及时在体外循环下进行直视手术。手术可分为两种：1.二尖瓣修复成形术 2.二尖瓣替换术。<span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/14046d2r82.png" title="19.png" width="350" height="280" border="0" hspace="0" vspace="0" style="width: 350px; height: 280px;"></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>主动脉瓣狭窄是由于先天性瓣叶发育畸形或者风湿性病变侵害主动脉瓣致瓣叶增厚粘连，瓣口狭窄。<span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>临床表现：轻度狭窄病例没有明显的症状。中度和重度狭窄者可有乏力、眩晕或昏厥、心绞痛、劳累后气促、端坐呼吸、急性肺水肿等症状，并可并发细菌性内膜炎或猝死。<span id="_baidu_bookmark_end_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_13" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span>治疗：临床上呈现心绞痛、昏厥或心力衰竭者，一旦出现症状，病情往往迅速恶化，在2-3年内有较高的猝死发生率，故应争取尽早施行手术治疗，切除病变的瓣膜，进行人工瓣主动脉膜替换术。经心尖或经皮支架瓣膜植入术在近年得到应用，但仅在不适合手术的病人才考虑选用。<span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1414062bpf.png" title="20.png" width="350" height="210" border="0" hspace="0" vspace="0" style="width: 350px; height: 210px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>主动脉瓣关闭不全是主动脉瓣叶结构异常，导致瓣叶不能严密对合，使舒张期血液自主动脉反流入左心室。</p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>临床表现：轻度关闭不全病例，心脏代偿功能较好，没有明显症状。早期症状为心悸、心前区不适、头部强烈搏动感。重度关闭不全者常有心绞痛发作、气促，并可出现阵发性呼吸困难，端坐呼吸或急性肺水肿。<span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_16" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_18" style="display: none; line-height: 0px;">‍</span>治疗：临床上出现症状，如呈现心绞痛或左心室衰竭症状，则可在数年内病情恶化或发生猝死，故应争取尽早施行人工瓣膜替换术。<span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_17" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1417fzb404.png" title="21.png" width="350" height="246" border="0" hspace="0" vspace="0" style="width: 350px; height: 246px; float: left;"><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>冠状动脉粥样硬化性心脏病简称冠心病，是成人因心脏病死亡的主要原因。</p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>主要病变是冠状动脉内膜脂质沉着、局部结缔组织增生、纤维化或钙化，形成粥样硬化斑块，造成管壁增厚、管腔狭窄或阻塞。<span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span>冠心病有不同的临床表现：1.隐匿型或无症状型冠心病 2.心绞痛 3.缺血性心肌病 4.心肌梗死 5.猝死 近年趋向于根据发病特点和治疗原则不同分为两大类：<span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span><br/></p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_16" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_18" style="display: none; line-height: 0px;">‍</span>1.慢性冠脉病 2.急性冠状动脉综合征。前后包括稳定型心绞痛、缺血性心肌病和隐匿型冠心病等；后者包括不稳定型心绞痛，非ST段抬高型心肌梗死和ST段抬高型心肌梗死，也有将冠心病猝死包括在内。<span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_17" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span><br/></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;">‍</span></span></p><p><br/></p><p><br/></p><p>（1）稳定型心绞痛：阵发性前胸压榨性疼痛或憋闷感觉，常发生于劳力负荷增加时，休息或用硝酸制剂后疼痛消失。治疗：a. 经皮冠状动脉介入治疗（PCI）<br/></p><p style="text-align: left;"><img src="upload/2016/1122/1419nbtrrx.png" style="width: 400px; height: 226px;" title="22.png" width="400" height="226" border="0" hspace="0" vspace="0"></p><p><img src="upload/2016/1122/1419228f2d.png" style="width: 400px; height: 274px;" title="23.png" width="400" height="274" border="0" hspace="0" vspace="0"></p><p><span style="font-size: 16px;"><span id="_baidu_bookmark_start_41" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_43" style="display: none; line-height: 0px;">‍</span>（2）不稳定型心绞痛：程度更重，持续时间更长，休息时也可发生<span id="_baidu_bookmark_end_44" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_42" style="display: none; line-height: 0px;">‍</span></span></p><p><span style="font-size: 16px;"><span id="_baidu_bookmark_start_45" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_47" style="display: none; line-height: 0px;">‍</span>（3）急性ST段抬高型心肌梗死（STEMI）：指急性心肌缺血性坏死<span id="_baidu_bookmark_end_48" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_46" style="display: none; line-height: 0px;">‍</span></span></p><p><span style="font-size:16px"><span id="_baidu_bookmark_end_25" style="display: none; line-height: 0px;">‍</span></span><img src="upload/2016/1122/1420d6d2jb.png" title="24.png" width="400" height="465" border="0" hspace="0" vspace="0" style="width: 400px; height: 465px;"></p><p><br/></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_897"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>胸主动脉疾病</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">胸主动脉瘤</li>
+                                
+                                <li>主动脉夹层</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/142560zz2p.png" title="25.png" width="350" height="449" border="0" hspace="0" vspace="0" style="width: 350px; height: 449px; float: left;"><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_21" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span>各种病因所致局部主动脉壁扩张或膨出，达到正常管径1.5倍以上，即称为主动脉瘤。<span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_4" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;"></span></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_16" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_18" style="display: none; line-height: 0px;">‍</span>临床表现：胸主动脉瘤常见于中老年人，遗传性、感染性或创伤性病因所致动脉瘤好发于青壮年。病程早期多无症状、体征，常在影像学检查时偶尔发现。动脉瘤形成后不可逆转地持续增大，增加左心室容量负荷并压迫周围组织结构。可发生胸痛、压迫症状及血栓形成。<span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_17" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_8" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;"></span></span></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_13" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_20" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_22" style="display: none; line-height: 0px;">‍</span>治<span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span>疗<span id="_baidu_bookmark_end_16" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_14" style="display: none; line-height: 0px;">‍</span>：胸主动脉瘤明确诊断后应积极地施行侵入性治疗，包括手术、介入和杂交治疗三大类。<span id="_baidu_bookmark_end_23" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_21" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_22" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_12" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span></span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><span id="_baidu_bookmark_start_24" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_26" style="display: none; line-height: 0px;">‍</span>（1）手术治疗：置入人工血管替换病变的胸主动脉<span id="_baidu_bookmark_end_27" style="display: none; line-height: 0px;">‍</span><span style="font-size:16px;font-family:等线"><span id="_baidu_bookmark_end_25" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1426pbp0t2.png" title="26.png" width="400" height="345" border="0" hspace="0" vspace="0" style="width: 400px; height: 345px;"></p><p><span id="_baidu_bookmark_start_29" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_31" style="display: none; line-height: 0px;">‍</span>（2）介入治疗：置入带膜支架人工血管<span id="_baidu_bookmark_end_32" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_30" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/14272nl26v.png" title="27.png" width="400" height="351" border="0" hspace="0" vspace="0" style="width: 400px; height: 351px;"></p><p><span id="_baidu_bookmark_start_34" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_36" style="display: none; line-height: 0px;">‍</span>（3）杂交治疗：使用人工血管和带膜支架人工血管共同矫治<span id="_baidu_bookmark_end_37" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_35" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1427680hpf.png" title="28.png" width="400" height="204" border="0" hspace="0" vspace="0" style="width: 400px; height: 204px;"></p><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1429402jr2.png" title="29.png" width="350" height="507" border="0" hspace="0" vspace="0" style="width: 350px; height: 507px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>主动脉内膜和中层弹力膜发生撕裂，血液进入主动脉壁中层，形成壁间假腔，并通过一个或数个破口与主动脉真腔相交通，称为主动脉夹层。</p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>临床表现：急性期90%病人有前胸、后背或腹部突发性剧烈疼痛，疼痛可沿大动脉走行方向传导和转移，75%病人伴有高血压和心动过速，病人多烦躁不安、大汗淋漓。随病程进展，主动脉夹层病人可能出现与主动脉破裂、主动脉瓣关闭不全和（或）重要脏器组织供血障碍相关的症状和体征。<span id="_baidu_bookmark_end_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;">‍</span><br/> <span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span>治疗：与主动脉瘤相同。<span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_900"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>前纵隔疾病</h4>
+                            <p><img src="upload/2016/1122/1431vj442t.png" title="30.png" width="350" height="289" border="0" hspace="0" vspace="0" style="width: 350px; height: 289px;"><span id="_baidu_bookmark_start_13" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_9" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_11" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_17" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_19" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_37" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>纵膈实际上是一间隙，前为胸骨，后为胸椎，两侧为纵膈胸膜，上连颈部，下止于膈肌。纵膈内有心脏、大血管、食管、气管、神经、胸腺、胸导管、丰富的淋巴组织和结缔脂肪组织。临床最常见的纵膈分区法是“四分法”，即以胸骨角与第4胸椎下缘的水平连线为界，把纵膈分成上、下两部。下纵膈再以心包前后界分为前、中、后三部分。<span id="_baidu_bookmark_end_20" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_18" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_12" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_16" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_14" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_14" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_21" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_23" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>胸腺瘤是最常见的纵隔肿瘤之一<span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_24" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_22" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_22" style="display: none; line-height: 0px;"></span></span></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_25" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_27" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span>临床表现：一般而言，纵膈肿瘤的症状与肿瘤大小、部位、生长方向和速度、质地、性质等有关。良性肿瘤由于生长缓慢，向胸腔方向生长，可生长到相当大的成都尚无症状或很轻微。相反，恶性肿瘤侵蚀程度高，进展迅速，故肿瘤较小时已经出现症状。常见的症状有胸痛、胸闷、刺激或压迫呼吸系统、神经系统、大血管、食管的症状。此外，还可出现一些与肿瘤性质相关的特异性症状。<span id="_baidu_bookmark_end_28" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_26" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_26" style="display: none; line-height: 0px;"></span></p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_29" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_31" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span>治疗：绝大多数原发性纵膈肿瘤只要无其他禁忌症，均应外科治疗。<span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_901"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>胸壁疾病</h4>
+                            <p><img src="upload/2016/1122/1433z4nb6t.png" title="31.png" width="350" height="263" border="0" hspace="0" vspace="0" style="width: 350px; height: 263px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span>漏斗胸是胸骨连同肋骨向内向后凹陷，呈舟状或漏斗状；胸骨体剑突交界处凹陷最深。有家族倾向或伴有先天性心脏病。</p><p><span style="font-size: 20px;"><span style="font-size: 16px;"><span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_4" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_6" style="display: none; line-height: 0px;">‍</span>临床表现：婴儿期漏斗胸压迫症状较轻者常未被注意。有些虽有吸气性喘鸣和胸骨吸入性凹陷，但常未能检查出呼吸道阻塞的原因。患儿常体形瘦弱，不好动，易患上呼吸道感染，活动能力受到限制。用力呼气量和最大通气量明显减少。活动时出现心慌，气短和呼吸困难。体征除胸廓畸形外，常有轻度驼背、腹部凸出等特殊体型。<span id="_baidu_bookmark_end_7" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_5" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="font-size: 20px;"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_8" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_6" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_4" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;">‍</span></span></p><p><br/></p><p><span style="font-size: 20px;"><span id="_baidu_bookmark_start_8" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_10" style="display: none; line-height: 0px;">‍</span>治疗：</p><p><span style="font-size: 20px;"></span></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_22" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_24" style="display: none; line-height: 0px;">‍</span><span style="font-size: 18px;"><span id="_baidu_bookmark_start_12" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_14" style="display: none; line-height: 0px;">‍</span>一般采用手术方法进行矫治。传统手术方法切口长，创伤大。近年来，微创漏斗胸矫正术（Nuss手术）已广泛应用于临床。该手术采用两胸侧壁小切口，在胸腔镜辅助下于畸形胸骨后置入特殊材质的矫形钢板，无需切断胸骨及肋骨，手术效果较满意，创伤小。<span id="_baidu_bookmark_end_15" style="display: none; line-height: 0px;">‍</span><span style="font-size: 18px;"><span id="_baidu_bookmark_end_13" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_11" style="display: none; line-height: 0px;">‍</span><span style="font-size: 18px;"><span id="_baidu_bookmark_end_9" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_25" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_23" style="display: none; line-height: 0px;">‍</span></span></p><p><span style="font-size: 20px;"></span><br/></p><p><span style="font-size: 20px;"><img src="upload/2016/1122/1434f8p482.jpg" title="32.jpg"></span></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    
+             <div class="section footer fp-auto-height" >
+                 <div class="container relative foot-link">
+                    <div>
+                        <ul class="content">
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">关于XXX</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司简介</a></li>
+                                    
+                                    <li><a href="#">代理项目</a></li>
+                                    
+                                    <li><a href="#">合作伙伴</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">患者中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">心胸外科</a></li>
+                                    
+                                    <li><a href="#">神经外科</a></li>
+                                    
+                                    <li><a href="#">颌面外科</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">产品中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">胸骨固定产品</a></li>
+                                    
+                                    <li><a href="#">漏斗胸产品</a></li>
+                                    
+                                    <li><a href="#">神经外内科固定产品</a></li>
+                                    
+                                    <li><a href="#">颌面外科系列产品</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">新闻动态</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司新闻</a></li>
+                                    
+                                    <li><a href="#">展会信息</a></li>
+                                    
+                                    <li><a href="#">行业资讯</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">联系我们</a></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot_code">
+                        <img src="img/icon/code.png" alt="">    
+                        <p class="link_num">XXX</p>
+                    </div>
+                </div>
+                <div class="copy" >
+                     <p class="container">© Copyright 2020 all right PTY Medical  <span class="pull_right"> <a href="#." class=" share"></a>
+                     <a href="#." class=" share chat"></a></span></p>
+                </div>
+             </div>
+
+</body>
+
+</html>

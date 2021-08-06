@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>新闻动态</title>
+    <meta name="keywords" content="新闻动态" />
+    <meta name="description" content="新闻动态" />
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--<link rel="stylesheet" href="css/swiper.min.css">-->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bai.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/selectivizr-min.js"></script>
+    <script>
+       (function() {
+         if (!
+         /*@cc_on!@*/
+         0) return;
+         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+         var i= e.length;
+         while (i--){
+             document.createElement(e[i])
+         }
+    })()
+    </script>
+    <![endif]-->
+
+
+</head>
+<body>
+  
+
+<div class="header container"  style="position:fixed ;top:0;left:0;right:0;">
+    <a href="index.html" class="logo pull_left" style="width:200px;height:100px;">
+        <img src="img/icon/logo.png" alt="" >
+    </a>
+    <div class="pull_right">
+        <ul class="main_nav content">
+            
+            <li class="main_li" index="关于XXX">
+                <p><a href="about.html">关于XXX</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="about.html">公司简介</a></li>
+                    
+                    <li><a href="items.html">代理项目</a></li>
+                    
+                    <li><a href="partner.html">合作伙伴</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="hzzx" index="患者中心">
+                <p><a href="patient.html">患者中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">心胸外科</a></li>
+                    
+                    <li><a href="patient-1.html">神经外科</a></li>
+                    
+                    <li><a href="patient-2.html">颌面外科</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="cpzx" index="产品中心">
+                <p><a href="patient.html">产品中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">胸骨固定产品</a></li>
+                    
+                    <li><a href="patient.html">漏斗胸产品</a></li>
+                    
+                    <li><a href="patient.html">神经外内科固定产品</a></li>
+                    
+                    <li><a href="patient.html">颌面外科系列产品</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="新闻动态">
+                <p><a href="news.html">新闻动态</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="news.html">公司新闻</a></li>
+                    
+                    <li><a href="news.html">展会信息</a></li>
+                    
+                    <li><a href="news.html">行业资讯</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="联系我们">
+                <p><a href="contact.html">联系我们</a></p>
+            </li>
+            
+        </ul>
+    </div>
+    <a href="#" class="lang">EN</a>
+    <div class="brush"></div>
+</div>
+
+<script>
+$('#hzzx,#cpzx').each(function(){
+    $(this).find(' p > a').eq(0).attr('href',$(this).find(' ul > li > a').eq(0).attr('href'))
+})
+</script>
+
+     <div class="banner ban_news"></div>
+    <div class="show container relative">
+        <div class="title">
+    <h3>新闻动态</h3>
+    <ul class="content currentpage">
+        <li class="home_current"><a href="">首页</a></li> <span>></span> <li><a href="#" class="current">新闻动态</a>
+    </ul>
+</div>
+
+<script>
+$('.home_current a').html('<img src="img/icon/icon02.png" alt="" />')
+var tophead=$('.main_li[index="新闻动态"]');
+if(tophead.find('.sec_nav li a').size()>1){
+	$('.currentpage li').last().addClass('hid_nav');
+	$('.hid_nav').append('<div class="hid"></div>');
+	tophead.find('.sec_nav li a').each(function() {
+		if($(this).text()=='新闻动态')return;
+		$('.hid_nav .hid').append('<a href="'+$(this).attr('href')+'">'+$(this).text()+'</a>')
+	})
+}
+</script>
+        <div class="art_news">
+           <ul>
+            
+               <li>
+                   <span class="date active">2017-01-18</span>
+                   <div class="news">
+                   <h3><a href="#">两票制出台，医疗器械代表要消失？</a></h3>
+                   <div class="content">
+                       <img src="upload/2017/0118/1633886z04.png" alt="" class="pull_left">
+                       <div class="img_mar">
+                           <p>
+                               国家两票制政策文件已正式出台，高值耗材及诊断试剂两票制也将紧跟其后，药械流通行业整顿大潮来了！
+                           </p>
+                           <a href="#" class="more">查看更多<span>&gt;</span></a>
+                       </div>
+                   </div>
+                   </div>
+               </li>
+           
+               <li>
+                   <span class="date active">2017-01-16</span>
+                   <div class="news">
+                   <h3><a href="#">国务院：4类医疗器械将重点发展</a></h3>
+                   <div class="content">
+                       <img src="upload/2017/0116/1306l0r42b.png" alt="" class="pull_left">
+                       <div class="img_mar">
+                           <p>
+                               日前，国务院印发《“十三五”国家战略性新兴产业发展规划》，对到2020年的战略性新兴产发展做出部署。该规划提出，要在“十三五”期间加快发展新一代信息技术、高端制造、生物、绿色低碳和数字创意五大战略性新兴产业领域，形成5个产值规模10万亿元级的国家产业发展新支柱。其中，生物产业到2020年规模要达到8—10万亿元，而该产业发展的重点内容之一就是医疗器械方面。
+                           </p>
+                           <a href="#" class="more">查看更多<span>&gt;</span></a>
+                       </div>
+                   </div>
+                   </div>
+               </li>
+           
+               <li>
+                   <span class="date active">2016-11-21</span>
+                   <div class="news">
+                   <h3><a href="#">风云变幻的医疗器械行业</a></h3>
+                   <div class="content">
+                       <img src="upload/2016/1121/1537ndblnl.jpg" alt="" class="pull_left">
+                       <div class="img_mar">
+                           <p>
+                               在国家近三十轮药品降价和新医改”一品两规，双信封”等一系列政策的推动下，药品市场的利润日益摊薄，日益难做。这使得医疗器械这个预期颇丰的市场成为厂商们争相试探的领域。
+                           </p>
+                           <a href="#" class="more">查看更多<span>&gt;</span></a>
+                       </div>
+                   </div>
+                   </div>
+               </li>
+           
+               <li>
+                   <span class="date active">2016-11-21</span>
+                   <div class="news">
+                   <h3><a href="#">中国医疗器械行业发展现状及趋势分析</a></h3>
+                   <div class="content">
+                       <img src="upload/2016/1121/1539x48bv2.jpg" alt="" class="pull_left">
+                       <div class="img_mar">
+                           <p>
+                               医疗器械行业在我国是一个朝阳产业，企业如能从未来的医学发展方向、国际市场环境、国内市场政策及自身发展战略三者联动过程中抢占先机，必将成为行业的佼佼者。
+                           </p>
+                           <a href="#" class="more">查看更多<span>&gt;</span></a>
+                       </div>
+                   </div>
+                   </div>
+               </li>
+           
+               <li>
+                   <span class="date active">2016-12-02</span>
+                   <div class="news">
+                   <h3><a href="#">XXX医疗招聘信息</a></h3>
+                   <div class="content">
+                       <img src="upload/2016/1202/1124xh4z6d.png" alt="" class="pull_left">
+                       <div class="img_mar">
+                           <p>
+                               作为世界上最大的骨科生产商之一的Zimmer Biomet CMF & Thoracic 的中国总代理在中国市场进行神经外科、口腔颌面外科、心胸外科的医用器材的销售和市场推广工作。同时，提供配套的手术辅助规划和数字医学服务。通过产品与服务的结合，为外科医生提供基于产品的一体化手术方案。
+                           </p>
+                           <a href="#" class="more">查看更多<span>&gt;</span></a>
+                       </div>
+                   </div>
+                   </div>
+               </li>
+           
+               <li>
+                   <span class="date active">2016-11-18</span>
+                   <div class="news">
+                   <h3><a href="#">最有料的全球医疗器械市场：15大子行业</a></h3>
+                   <div class="content">
+                       <img src="upload/2016/1121/15342fd6b8.jpg" alt="" class="pull_left">
+                       <div class="img_mar">
+                           <p>
+                               基于120家医疗器械行业内领先公司的数据：2013～2020年世界医疗器械产业复合年均增长率（CAGR）将达到5%，到2020年市场规模达到5140亿美元。2014年是全球医疗器械产业令人振奋的一年，2014年上半年已完成的医疗器械领域并购金额比上年同期增长363%。
+                           </p>
+                           <a href="#" class="more">查看更多<span>&gt;</span></a>
+                       </div>
+                   </div>
+                   </div>
+               </li>
+           
+           </ul>
+          
+           <div class="page content">
+                 <ol >
+                     
+                 </ol>
+           </div>
+          
+        </div>
+  </div>
+
+  
+             <div class="section footer fp-auto-height" >
+                 <div class="container relative foot-link">
+                    <div>
+                        <ul class="content">
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">关于XXX</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司简介</a></li>
+                                    
+                                    <li><a href="#">代理项目</a></li>
+                                    
+                                    <li><a href="#">合作伙伴</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">患者中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">心胸外科</a></li>
+                                    
+                                    <li><a href="#">神经外科</a></li>
+                                    
+                                    <li><a href="#">颌面外科</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">产品中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">胸骨固定产品</a></li>
+                                    
+                                    <li><a href="#">漏斗胸产品</a></li>
+                                    
+                                    <li><a href="#">神经外内科固定产品</a></li>
+                                    
+                                    <li><a href="#">颌面外科系列产品</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">新闻动态</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司新闻</a></li>
+                                    
+                                    <li><a href="#">展会信息</a></li>
+                                    
+                                    <li><a href="#">行业资讯</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">联系我们</a></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot_code">
+                        <img src="img/icon/code.png" alt="">    
+                        <p class="link_num">XXX</p>
+                    </div>
+                </div>
+                <div class="copy" >
+                     <p class="container">© Copyright 2020 all right PTY Medical  <span class="pull_right"> <a href="#." class=" share"></a>
+                     <a href="#." class=" share chat"></a></span></p>
+                </div>
+             </div>
+
+
+</body>
+</html>

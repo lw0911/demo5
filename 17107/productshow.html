@@ -1,0 +1,753 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+<title>RGB＋W系列 - 产品中心 - XXX光电</title>
+<meta name="generator" content="PHP" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="实现七彩变幻的同时可以拥有纯正的白光" />
+    <link rel="stylesheet" href="templates/default/css/global.css">
+    <link rel="stylesheet" href="templates/default/css/layout.css">
+    <script src="templates/default/js/jquery-1.11.2.min.js"></script>
+<!--[if IE]>
+    <script type="text/javascript" src="templates/default/js/html5.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+    <script type="text/javascript" src="templates/default/js/DD_belatedPNG_0.0.8a.min.js"></script>
+    <script>
+        DD_belatedPNG.fix('*');
+    </script>
+<![endif]-->
+       <script>
+        $(document).ready(function () {
+            $('#gallery-list').find('li').on('click', function () {
+                $(this).addClass('act').siblings().removeClass();
+                $('#gallery-big').hide().attr('src', $(this).attr('data-big')).fadeIn();
+            }).eq(0).trigger('click');
+
+            $('#product-info-title').find('li').on('click', function () {
+                $(this).addClass('act').siblings().removeClass();
+                $('.product-info-content').hide().eq($(this).index()).fadeIn();
+            }).eq(0).trigger('click');
+        })
+    </script>
+
+</head>
+<body class="product">
+<!-- header-->
+<header id="header">
+    <section class="clear">
+        <a href="index.html" id="logo"></a>
+        <ul id="nav" class="clear">
+            <li><a href="index.html" class="layer1">首 页</a></li>
+            <li>
+                <a href="about.html" class="layer1 nav-more">关于我们</a>
+                <dl>
+                    <dt>
+                        <img src="templates/default/img/nav01.jpg">
+                        <p>中国领先的LED灯带照明产品提供商</p>
+                    </dt>
+                                   	 <dd><a href="about.html">公司简介</a></dd>
+		 <dd><a href="page.html">企业文化</a></dd>
+		 <dd><a href="strength.html">公司实力</a></dd>
+		 <dd><a href="news.html">公司新闻</a></dd>
+		 <dd><a href="certification.html">资质荣誉</a></dd>
+	                </dl>
+            </li>
+            <li>
+                <a href="product.html" class="layer1">产品中心</a></li>
+            <li>
+                <a href="exports.html" class="layer1">外贸出口</a></li>
+            <li><a href="contact.html" class="layer1">联系我们</a></li>
+        </ul>
+        <a href="customize.html" class="customize">专业定制</a>
+        <div class="top-info"></div>
+    </section>
+</header>
+<!-- /header-->
+<!-- banner-->
+<div class="banner banner-product" style="background-image:url(templates/default/img/banner_product.jpg)"></div>
+<!-- /banner-->
+<!-- mainbody-->
+<div class="container">
+        <div class="clear">
+            <div class="product-left">
+
+            
+                <div class="product-title">
+                    <h1>RGB＋W系列</h1>
+                    <p>实现七彩变幻的同时可以拥有纯正的白光</p>
+                    <a href="product.html"><i class="icon i-back"></i>返回列表</a>
+                </div>
+                <div class="product-gallery">
+                    <ul id="gallery-list">
+                                 			    					<li data-big="uploads/image/20160717/1468758741.jpg" ><img src="uploads/image/20160717/1468758741.jpg"></li>
+										<li data-big="uploads/image/20160717/1468752264.jpg" class="act" ><img src="uploads/image/20160717/1468752264.jpg"></li>
+										<li data-big="uploads/image/20160717/1468755261.jpg" ><img src="uploads/image/20160717/1468755261.jpg"></li>
+					                    </ul>
+                    <picture>
+                     					<img src="uploads/image/20160717/1468752264.jpg" id="gallery-big" style="display: inline;">
+					                    </picture>
+                                    </div>
+                <script>
+                    $('#gallery-list img').each(function () {
+                        $(this).parent().attr('data-big',$(this).attr('src'))
+                    })
+                </script>
+                <dl class="product-type">
+                    <dt>同系列产品</dt>
+                    <dd>
+	<a href="#">5050RGB+5050W/WW   30|60|72|96|120|144</a> 
+</dd>
+<dd>
+	<a href="#"> 5050RGBW/WW四合一  60|96</a> 
+</dd>
+<dd>
+	<a href="#">5050RGB+3528W/WW   120</a> 
+</dd>
+<dd>
+	<a href="#"> 5050RGB+2835W/WW   120</a> 
+</dd>
+<dd>
+	<a href="#"> 3528RGB+3528W/WW   240</a> 
+</dd>                </dl>
+                <ul id="product-info-title" class="clear">
+                    <li class="act">
+                        <i class="product-info01"></i>
+                        <p>产品详情</p>
+                    </li>
+                    <li>
+                        <i class="product-info02"></i>
+                        <p>注意事项</p>
+                    </li>
+                    <li>
+                        <i class="product-info03"></i>
+                        <p>应用范围</p>
+                    </li>
+                    <li style="display:none">
+                        <i class="product-info04"></i>
+                        <p>在线留言</p>
+                    </li>
+                </ul>
+                <div class="product-info-content" style="display: block;">
+                    <p style="white-space:normal;">
+	1.SMD5050 as lighting sources
+</p>
+<p style="white-space:normal;">
+	2.Working voltage: DC12V/24V
+</p>
+<p style="white-space:normal;">
+	3.Cuttable length: by every 6 leds or 12 leds
+</p>
+<p style="white-space:normal;">
+	4.IP20,IP54,IP67,IP68 for option
+</p>
+<p style="white-space:normal;">
+	5.Working temperature and Storage temperature:-20℃ - 60℃.
+</p>
+<p style="white-space:normal;">
+	6.Environment humidity:40-70% RH
+</p>
+<p style="white-space:normal;">
+	7.Installation: With 3M double-sided adhesive on the back, ultra-thin design
+</p>
+<p style="white-space:normal;">
+	8.Working Lifetime(Hour):50000
+</p>                </div>
+                <div class="product-info-content" style="display: none;">
+                     <p style="white-space:normal;">
+	1.Please make LED drivers compatible with flexible LED strips light before use LED strips;
+</p>
+<p style="white-space:normal;">
+	2.To use LED strips 5M in serial, longer than 5M in parallel;
+</p>
+<p style="white-space:normal;">
+	3.Before use,first check the power supply used in compliance with of the power requirements;
+</p>
+<p style="white-space:normal;">
+	4.Each roll ask for independent power supply;not to use of multi-volume series use;
+</p>                </div>
+                <div class="product-info-content" style="display: none;">
+                      <p style="white-space:normal;">
+	1.Decorative lighting for exhibition shelves, advertising light box and hotel etc;
+</p>
+<p style="white-space:normal;">
+	2.Backlight for edge lighting/signage;
+</p>
+<p style="white-space:normal;">
+	3.Holiday decorative lights, residential and outdoor lighting;
+</p>
+<p style="white-space:normal;">
+	4.Bridge, garden, road and car lighting etc;
+</p>
+<p style="white-space:normal;">
+	5.Long-distance project but with inconvenient wiring;
+</p>                
+                </div>
+                <div class="product-info-content" style="display: none;">
+                    RGB＋W系列
+                </div>
+                <div class="product-option">
+                    <h2>技术参数</h2>
+                    <table cellspacing="0" cellpadding="0" width="969">
+	<tbody>
+	</tbody>
+	<thead>
+		<tr class="firstRow">
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Item</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">LED Q'ty/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Voltage</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Power/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">FPC Width</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">LED Type</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="193">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Luminous flux/LED</span> 
+				</p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q30Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">30pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">7.2W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">15mm</span> 
+				</p>
+			</td>
+			<td rowspan="6" valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">5050</span> 
+				</p>
+			</td>
+			<td rowspan="9" valign="middle" style="border:1px solid #D8D8D8;" width="193">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">W:20-22lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">WW:20-22lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">RGB:10-12lm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q60Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">60pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12/24V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">14.4W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">10mm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q72Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">72pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">17.2W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">12mm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q96Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">96pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">23W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">12mm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q120Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">120pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">28.8W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">20mm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q144Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">144pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC24V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">34.4W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">20mm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q60Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">60pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12/24V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">19.2W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">12mm</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">5050RGBW</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q96Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">96pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC24V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">30.6W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">12mm</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">5050RGBW</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q72Vz-c10</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">72pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC24V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">23W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">16mm</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">5050RGB+WWW</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST5Q120Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">120pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC24V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">19.2W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">15mm</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">5050RGB+3528W</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="193">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">W:6-7lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">WW:6-7lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">RGB:10-12lm</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="173">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">SK-ST3Q240Vz-c9</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="126">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">240pcs</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="107">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">DC12V</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="98">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">19.2W/M</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="117">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">15mm</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="154">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">3528</span> 
+				</p>
+			</td>
+			<td valign="middle" style="border:1px solid #D8D8D8;" width="193">
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Red:1-3lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Blue:2-4lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">Green:2-4lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">W:6-7lm</span> 
+				</p>
+				<p>
+					<br />
+				</p>
+				<p style="line-height:normal;text-align:left;">
+					<span style="font-size:12px;">WW:6-7lm</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>                </div>
+                <div class="product-pack">
+                    <h2>产品包装</h2>
+                    <p style="text-align:center;">
+	<img src="uploads/image/20160717/1468754096.png" title="image001.png" /> 
+</p>
+<p>
+	<br />
+</p>
+<p style="text-align:center;">
+	Installation Instruction:
+</p>
+<p style="text-align:center;">
+	<img src="uploads/image/20160717/1468761061.png" title="image003.png" /> 
+</p>
+<p style="text-align:center;">
+	Connections diagram:
+</p>
+<p style="text-align:center;">
+	<img src="uploads/image/20160717/1468753119.png" title="image005.png" /> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>                </div>
+            </div>
+            <div class="product-right">
+                <h2>推荐产品系列</h2>
+                             
+        <a href="productshow.html">RGB＋W系列</a>
+                    
+        <a href="productshow.html">常规高亮系列</a>
+                    
+        <a href="productshow.html">可调色温系列</a>
+                    
+        <a href="productshow.html">恒流系列</a>
+                    
+        <a href="productshow.html">电源控制器系列</a>
+                    
+        <a href="productshow.html">幻彩系列</a>
+                    
+        <a href="productshow.html">硬灯条系列</a>
+              
+                   
+            </div>
+        </div>
+        <div class="product-example">
+            <h2>案例展示</h2>
+            <div align="center">
+            <table>
+	<tbody>
+		<tr class="firstRow">
+			<td width="450" valign="top" style="word-break:break-all;">
+				<img src="uploads/image/20160717/1468754642.jpg" title="RGBW-1.jpg" width="450" height="228" border="0" hspace="0" vspace="0" style="width:415px;height:207px;" /> 
+			</td>
+			<td width="450" valign="top" style="word-break:break-all;">
+				<img src="uploads/image/20160717/1468753379.jpg" title="RGBW-2.jpg" width="450" height="201" border="0" hspace="0" vspace="0" style="width:443px;height:206px;" /> 
+			</td>
+		</tr>
+	</tbody>
+</table>            </div>
+        </div>
+    </div>
+    <!-- /mainbody-->
+<!-- footer-->
+ <footer id="footer">
+    <section>
+    <dl>
+        <dt>关于我们</dt>
+             	 <dd><a href="about.html">公司简介</a></dd>
+		 <dd><a href="page.html">企业文化</a></dd>
+		 <dd><a href="strength.html">公司实力</a></dd>
+		 <dd><a href="news.html">公司新闻</a></dd>
+		 <dd><a href="certification.html">资质荣誉</a></dd>
+	    </dl>
+
+    <dl class="ft-product">
+        <dt>产品中心</dt>
+            <dd><a href="productshow.html">RGB＋W系列</a></dd>
+                    <dd><a href="productshow.html">常规高亮系列</a></dd>
+                    <dd><a href="productshow.html">可调色温系列</a></dd>
+                    <dd><a href="productshow.html">恒流系列</a></dd>
+                    <dd><a href="productshow.html">电源控制器系列</a></dd>
+                    <dd><a href="productshow.html">幻彩系列</a></dd>
+                    <dd><a href="productshow.html">硬灯条系列</a></dd>
+              
+</dl>
+    <dl>
+        <dt>外贸出口</dt>
+        <dd><a href="product.html">产品系列</a></dd>
+        <dd><a href="customize.html">专属服务</a></dd>
+    </dl>
+    <dl>
+        <dt>辅助导航</dt>
+        <dd><a href="">网站地图</a></dd>
+        <dd><a href="">免责声明</a></dd>
+        <dd><a href="">友情链接</a></dd>
+    </dl>
+    <div class="follow">
+        <h3>+ 关注XXX</h3>
+        <a href="javascript:;" class="follow-wx" title="微信"></a>
+        <a href="" class="follow-snwb" title="新浪微博"></a>
+        <a href="" class="follow-txwb" title="腾讯微博"></a>
+        <img src="templates/default/img/wxqr.png" id="wxqr">
+    </div>
+</section>
+    <section class="ft-info">
+        <div id="language">
+            <h6>LANGUAGE</h6>
+            <div>
+                <a href="">中文</a>
+                <a href="en">English</a>
+            </div>
+        </div>
+        <p>深圳市XXX光电有限公司版权所有  粤ICP备：XXX</p>
+    </section>
+</footer>
+<!-- /footer-->
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+.imap{position: relative;overflow: hidden;margin-left: auto;margin-right: auto; position: relative;height:620px;background:url(../images/imap/mapBg.jpg) no-repeat -15px -10px;}
+.imap .imap_svg{position: absolute;left: 0;top: 0;z-index: 5;}
+.imap .province{position:absolute;left: 0;top: 0;z-index: 2;}
+.imap .coordinate{position:absolute;left: 0;top: 0;z-index: 10;}
+.imap .province .city{position: absolute;-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; transition: all 0.2s ease-out; background:url("../images/imap/city.png") no-repeat;}
+.imap .province .xinjiang{left: 60px;top: 81px;width: 285px;height: 243px;}
+.imap .province .xizang{left: 103px;top: 288px;width: 264px;height: 161px;background-position:0 -243px;}
+.imap .province .qinghai{left: 246px;top: 246px;width: 171px;height: 127px;background-position:0 -404px;}
+.imap .province .gansu{left: 287px;top: 185px;width: 205px;height: 170px; background-position:-285px -263px;}
+.imap .province .neimenggu{left: 350px;top: 10px;width: 326px;height: 263px;background-position:-285px 0;}
+.imap .province .sichuan{left: 346px;top: 324px;width: 139px;height: 133px;background-position:-171px -432px;}
+.imap .province .yunnan{left: 341px;top: 403px;width: 120px;height: 140px;background-position:0 -564px;}
+.imap .province .ningxia{left: 428px;top: 238px;width: 49px;height: 76px;background-position:-120px -564px;}
+.imap .province .shanxi{left: 452px;top: 234px;width: 68px;height: 138px;background-position:-310px -432px;}
+.imap .province .heilongjiang{left: 617px;top: 4px;width: 170px;height: 172px; background-position:-610px 0;}
+.imap .province .chongqing{left: 442px;top: 358px;width: 68px;height: 61px;background-position:-171px -570px;}
+.imap .province .guizhou{left: 425px;top: 401px;width: 77px;height: 81px;background-position:-239px -570px;}
+.imap .province .jilin{left: 632px;top: 126px;width: 123px;height: 97px;background-position:-610px -172px;}
+.imap .province .liaoning{left: 604px;top: 172px;width: 89px;height: 86px;background-position:-543px -263px;}
+.imap .province .hebei{left: 541px;top: 187px;width: 80px;height: 106px; background-position:-632px -269px;}
+.imap .province .beijing{left: 564px;top: 213px;width: 32px;height: 31px;background-position:-712px -269px;}
+.imap .province .tianjin{left: 580px;top: 225px;width: 24px;height: 34px;background-position:-712px -300px;}
+.imap .province .shanxi02{left: 504px;top: 219px;width: 54px;height: 103px;background-position:-489px -262px;}
+.imap .province .shandong{left: 559px;top: 255px;width: 103px;height: 71px;background-position:-378px -432px;}
+.imap .province .jiangsu{left: 580px;top: 307px;width: 80px;height: 71px;background-position:-480px -432px;}
+.imap .province .henan{left: 504px;top: 288px;width: 85px;height: 82px;background-position:-623px -432px;}
+.imap .province .anhui{left: 566px;top: 315px;width: 62px;height: 87px;background-position:-560px -432px;}
+.imap .province .hubei{left: 482px;top: 335px;width: 102px;height: 77px;background-position:-378px -519px;}
+.imap .province .shanghai{left: 642px;top: 312px;width: 22px;height: 76px;background-position:-708px -375px;}
+.imap .province .zhejiang{left: 611px;top: 372px;width: 58px;height: 67px;background-position:-480px -519px;}
+.imap .province .fujian{left: 583px;top: 416px;width: 65px;height: 86px;background-position:-538px -519px;}
+.imap .province .jiangxi{left: 551px;top: 388px;width: 73px;height: 94px;background-position:-623px -519px;}
+.imap .province .hunan{left: 488px;top: 388px;width: 74px;height: 96px;background-position:-696px -519px;}
+.imap .province .guangxi{left: 434px;top:452px;width:103px;height: 86px;background-position:-316px -613px;}
+.imap .province .guangdong{left: 504px;top: 463px;width: 108px;height: 93px;background-position:-419px -613px;}
+.imap .province .taiwan{left: 642px;top: 460px;width: 28px;height: 69px;background-position:-527px -613px;}
+.imap .province .hainan{left: 490px;top: 556px;width: 29px;height: 35px;background-position:-555px -613px;}
+
+.imap .province .xianggang{left: 570px;top: 530px;color:#fff;}
+.imap .province .aomen{left: 600px;top: 515px;color:#fff;}
+
+.imap .province .ani{ -webkit-transform:translate(0,-3px);-moz-transform:translate(0,-3px);-ms-transform:translate(0,-3px);-o-transform:translate(0,-3px);transform:translate(0,-3px); opacity: 0;}
+.imap_svg g use{display: none;cursor: pointer;-webkit-animation:coordinate 1s  infinite linear forwards; -moz-animation:coordinate 1s  infinite linear forwards;-ms-animation:coordinate 1s  infinite linear forwards;-o-animation:coordinate 1s  infinite linear forwards;animation:coordinate 1s  infinite linear forwards;-webkit-transform-origin:bottom center;}
+@-webkit-keyframes coordinate{
+    0%{-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0);}
+	25%{-webkit-transform: translateY(-5px);-moz-transform:translateY(-5px);-ms-transform:translateY(-5px);-o-transform:translateY(-5px);transform:translateY(-5px);}
+    50%{-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0);}
+	75%{-webkit-transform: translateY(-3px);-moz-transform:translateY(-3px);-ms-transform:translateY(-3px);-o-transform:translateY(-3px);transform:translateY(-3px);}
+	100%{-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0);}
+}
+
+
+.imap .provinceHover{position:absolute;left: 0;top: 0;z-index: 1;}
+.imap .provinceHover .city{position: absolute;-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; transition: all 0.2s ease-out; background:url("../images/imap/city2.png") no-repeat;}
+.imap .provinceHover .xinjiang{left: 60px;top: 81px;width: 285px;height: 243px;}
+.imap .provinceHover .xizang{left: 103px;top: 288px;width: 264px;height: 161px;background-position:0 -243px;}
+.imap .provinceHover .qinghai{left: 246px;top: 246px;width: 171px;height: 127px;background-position:0 -404px;}
+.imap .provinceHover .gansu{left: 287px;top: 185px;width: 205px;height: 170px; background-position:-285px -263px;}
+.imap .provinceHover .neimenggu{left: 350px;top: 10px;width: 326px;height: 263px;background-position:-285px 0;}
+.imap .provinceHover .sichuan{left: 346px;top: 324px;width: 139px;height: 133px;background-position:-171px -432px;}
+.imap .provinceHover .yunnan{left: 341px;top: 403px;width: 120px;height: 140px;background-position:0 -564px;}
+.imap .provinceHover .ningxia{left: 428px;top: 238px;width: 49px;height: 76px;background-position:-120px -564px;}
+.imap .provinceHover .shanxi{left: 452px;top: 234px;width: 68px;height: 138px;background-position:-310px -432px;}
+.imap .provinceHover .heilongjiang{left: 617px;top: 4px;width: 170px;height: 172px; background-position:-610px 0;}
+.imap .provinceHover .chongqing{left: 442px;top: 358px;width: 68px;height: 61px;background-position:-171px -570px;}
+.imap .provinceHover .guizhou{left: 425px;top: 401px;width: 77px;height: 81px;background-position:-239px -570px;}
+.imap .provinceHover .jilin{left: 632px;top: 126px;width: 123px;height: 97px;background-position:-610px -172px;}
+.imap .provinceHover .liaoning{left: 604px;top: 172px;width: 89px;height: 86px;background-position:-543px -263px;}
+.imap .provinceHover .hebei{left: 541px;top: 187px;width: 80px;height: 106px; background-position:-632px -269px;}
+.imap .provinceHover .beijing{left: 564px;top: 212px;width: 32px;height: 31px;background-position:-712px -269px;}
+.imap .provinceHover .tianjin{left: 580px;top: 225px;width: 24px;height: 34px;background-position:-712px -300px;}
+.imap .provinceHover .shanxi02{left: 504px;top: 219px;width: 54px;height: 103px;background-position:-489px -262px;}
+.imap .provinceHover .shandong{left: 559px;top: 255px;width: 103px;height: 71px;background-position:-378px -432px;}
+.imap .provinceHover .jiangsu{left: 580px;top: 307px;width: 80px;height: 71px;background-position:-480px -432px;}
+.imap .provinceHover .henan{left: 504px;top: 288px;width: 85px;height: 82px;background-position:-623px -432px;}
+.imap .provinceHover .anhui{left: 566px;top: 315px;width: 62px;height: 87px;background-position:-560px -432px;}
+.imap .provinceHover .hubei{left: 482px;top: 335px;width: 102px;height: 77px;background-position:-378px -519px;}
+.imap .provinceHover .shanghai{left: 642px;top: 312px;width: 22px;height: 76px;background-position:-708px -375px;}
+.imap .provinceHover .zhejiang{left: 611px;top: 372px;width: 58px;height: 67px;background-position:-480px -519px;}
+.imap .provinceHover .fujian{left: 583px;top: 416px;width: 65px;height: 86px;background-position:-538px -519px;}
+.imap .provinceHover .jiangxi{left: 551px;top: 388px;width: 73px;height: 94px;background-position:-623px -519px;}
+.imap .provinceHover .hunan{left: 488px;top: 388px;width: 74px;height: 96px;background-position:-696px -519px;}
+.imap .provinceHover .guangxi{left: 434px;top:452px;width:103px;height: 86px;background-position:-316px -613px;}
+.imap .provinceHover .guangdong{left: 504px;top: 463px;width: 108px;height: 93px;background-position:-419px -613px;}
+.imap .provinceHover .taiwan{left: 642px;top: 460px;width: 28px;height: 69px;background-position:-527px -613px;}
+.imap .provinceHover .hainan{left: 490px;top: 556px;width: 29px;height: 35px;background-position:-555px -613px;}
+
+.imap .provinceHover  .xianggang{left: 570px;top: 530px; color:#fff;}
+.imap .provinceHover  .aomen{left: 600px;top: 515px;color:#fff;}
+
+.imap .coordinate .city{position: absolute;z-index:999; display:none; min-width:100px;padding: 10px 0 10px 15px;border: 2px solid  #09a6af;background: #fff; border-radius:20px; line-height:20px;}
+.imap .coordinate .city a{display: inline-block;margin-right: 20px; min-width:48px;}
+.imap .coordinate .city:after{position: absolute;width: 31px;height: 15px;left: -5px;bottom: -11px; background:url("../images/imap/imap_animal.png")/*tpa=http://www.cn/wcs/Tpl/home/default/images/imap/imap_animal.png*/ no-repeat -142px -31px; content:"";}
+.imap .coordinate .city i{position: absolute;width: 20px;height: 20px;right:5px; top:5px; border-radius:100%;text-align: center; line-height:20px;color: #09a6af; cursor:pointer;font-style: normal;font-weight: bold; font-size:16px; -webkit-transform-origin: center center; -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; transition: all 0.2s ease-out;}
+.imap .coordinate .city i:hover{ -webkit-transform:rotate(90deg); -moz-transform:rotate(90deg); -o-transform:rotate(90deg); -ms-transform:rotate(90deg);transform:rotate(90deg);}
+
+
+
+
+
+.imap .mapSearch{position:absolute;right:25px; bottom: 20px;z-index: 10000;width: 215px;height: 190px;background: #fff;padding: 20px;font-family:"微软雅黑";}
+.imap .mapSearch .tit{margin-bottom: 20px;color: #555;font-size: 14px;font-family:"微软雅黑";}
+.imap .mapSearch .imapS1{margin-bottom: 10px;width: 213px;height: 25px;display: block;color: #555; border:1px solid #dcdcdc; font-family:"微软雅黑";}
+.imap .mapSearch .imapS2{margin-bottom: 10px;width: 213px;height: 25px;display: block;color: #555; border:1px solid #dcdcdc;font-family:"微软雅黑";}
+.imap .mapSearch .inTxt{margin-bottom: 10px;width: 206px;padding-left:5px;height: 25px;color: #a7a7a7;border:1px solid #dcdcdc;font-family:"微软雅黑";}
+.imap .mapSearch .inSub{display: block;width: 145px; padding:12px 0;border:1px solid #eac000;background: #ffd100;font-size: 16px;color: #444;text-align: center; border-radius: 3px;}
+.imap .mapSearch .inSub:hover{filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8; cursor:pointer;}
+
+
+
+
+.WmapSearch{position: relative;z-index: 10000;display: none;margin-left: auto;margin-right: auto;width: 215px;height: 190px;background: #fff;padding: 20px;font-family:"微软雅黑";}
+.WmapSearch .tit{margin-bottom: 20px;color: #555;font-size: 14px;}
+.WmapSearch .imapS1{margin-bottom: 10px;width: 213px;height: 25px;display: block;color: #555; border:1px solid #dcdcdc;}
+.WmapSearch .imapS2{margin-bottom: 10px;width: 213px;height: 25px;display: block;color: #555; border:1px solid #dcdcdc;}
+.WmapSearch .inTxt{margin-bottom: 10px;width: 206px; padding-left:5px;height: 25px;color: #a7a7a7;border:1px solid #dcdcdc;}
+.WmapSearch .inSub{display: block;width: 150px;padding:12px 0;border:2px solid #eac000;background: #ffd100;font-size: 16px;color: #444;text-align: center; border-radius: 3px;}
+.WmapSearch .inSub:hover{filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8; cursor:pointer;}

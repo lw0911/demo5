@@ -1,0 +1,533 @@
+@charset "utf-8";
+
+a {
+  color: inherit;
+}
+.wrapper {
+  width: 1200px;
+  /* overflow: hidden; */
+  color: #333;
+  float: left;
+}
+.wrapper .left-wrapper {
+  position:relative;
+  float: left;
+  width: 795px;
+  margin-right: 15px;
+}
+.wrapper .right-wrapper {
+  float: left;
+  width: 390px;
+}
+.wrapper .right-wrapper .right-title {
+  padding: 10px 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.wrapper .right-wrapper .module {
+  position: relative;
+  margin-bottom: 20px;
+}
+.module {
+  background: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+/* ========== 列表切换 ============= */
+.nav-list {
+  padding: 15px 15px 0;
+}
+.nav-list .nav-item {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  margin-right: 30px;
+  font-size: 16px;
+  color: #808080;
+}
+.nav-list .nav-item .icon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  background-image: url(../images/news_list_icon.png);
+  background-size: 100%;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.nav-list .nav-item.current {
+  font-size: 16px;
+  color: #333;
+  border-bottom: 3px solid #14B9C8;
+}
+.nav-list .nav-item.current .icon {
+  background-image: url(../images/news_list_icon_hover.png);
+}
+/* ========== 资讯列表 ============= */
+.subject_list{width:765px; background:#fff;padding:0 15px 10px 15px; margin-top:10px; overflow: hidden;}
+.subject_list dd{width:100%; float:left; padding:20px 0; border-bottom:1px dashed #ddd;}
+.subject_list dd:hover .p1 a img{border:1px solid #ff6200}
+.subject_list dd .p1{width:260px;float:left;height:130px;}
+.subject_list dd .p1 a img{width:258px;height:128px; display:block;border:1px solid #ddd}
+.subject_list dd .p2{width:490px;float:right;}
+.subject_list dd .p2 p{line-height:30px;height:30px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.subject_list dd .p2 p a{font-size:20px;color:#333;}
+.subject_list dd .p2 p a:hover{color:#ff6200; text-decoration: underline;}
+.subject_list dd .p2 span{display:block;line-height:20px;margin-top:10px; color:#808080; height:60px; overflow:hidden; text-align:justify}
+.subject_list dd .p2 em{display:block;color:#b2b2b2;margin-top:5px;line-height:20px;font-weight:normal;}
+.subject_list dd .p2 em .more{float:right;color:#29aae3;}
+.subject_list dd .p2 em .more:hover { text-decoration: underline;}
+.subject_list dd .p2 em .icon {  position: relative;
+  top: 3px;
+  display: inline-block;
+  background-image: url(../images/news_list_icon.png);
+  background-size: 100%;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;}
+/*页码*/
+.newyiiPager{width:100%;float:left;text-align:center;padding:20px 0;font-size:14px;color:#515151}
+ul.yiiPager{font-size:12px;border:0;margin:0;padding:0;line-height:100%;display:inline;}
+ul.yiiPager li{display:inline; margin-left:5px;vertical-align:middle;}
+ul.yiiPager a{color:#515151;font-weight: normal !important;}
+ul.yiiPager .page a{border:solid 1px #DEDEDE;color:#515151;background:#fff}
+ul.yiiPager .hidden a,ul.yiiPager .next a,ul.yiiPager .last a{border:solid 1px #DEDEDE;	color:#515151;} 
+ul.yiiPager .selected span{padding:0px 12px; background:#e54c3d; color:#fff;border:solid 1px #e54c3d; line-height:30px; display:inline-block}
+ul.yiiPager a:link,ul.yiiPager a:visited{padding:0px 12px;border:solid 1px #DEDEDE;text-decoration:none; display:inline-block; line-height:30px;color:#515151;}
+ul.yiiPager a:hover{color:#e54c3d}
+ul.yiiPager .hidden{ display:none}
+ul.yiiPager .selected a{background:#e54c3d;color:#fff; border:solid 1px #e54c3d; cursor:text}
+ul.yiiPager .first, ul.yiiPager .last{display:inline}
+ul.yiiPager li span{ cursor:pointer}
+.page_tx{border:solid 1px #DEDEDE;color:#b2b2b2;background:#fff;line-height:30px;height:30px;width:60px;padding-left:5px;}
+
+/* 右侧盒子下载 */
+.game .game-info {
+  padding: 10px 14px;
+  height: 90px;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.game .game-info .game-pic {
+  float: left;
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 18px;
+}
+
+.game .game-info .game-pic img {
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+
+.game .game-info .game-detail {
+  float: left;
+  width: 250px;
+}
+
+.game .game-info .game-detail .game-name {
+  display: block;
+  font-size: 18px;
+  color: #222;
+  font-weight: bold;
+  padding-right: 130px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.game .game-info .game-detail .game-name:hover {
+  color: #14c0d8;
+}
+
+.game .game-info .game-detail .game-type {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #222;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.game .game-info .game-detail .game-wel {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #222;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.game-download .btn-download {
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0;
+  color: #fff;
+}
+
+.game .game-info .game-down {
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  width: 128px;
+  height: 35px;
+  background: #12a7b4;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+
+.game .game-info .game-down:hover {
+  background: #2bd1e0;
+}
+.right-wrapper .game .game-download {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 40px;
+}
+.right-wrapper .game .game-download .game-box2 {
+  background-color: #12a7b4;
+}
+.right-wrapper .game .game-download .game-box2:hover {
+  background-color: #2bd1e0;
+}
+.right-wrapper .game .game-download .btn-download.game-box2 .icon {
+  background-image: url(../images/android.png);
+  background-size: 100%;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.game .eight-ewm.box4 {
+  left: 178px;
+  top: 204px;
+  padding: 5px 0;
+}
+.eight-ewm {
+    width: 202px;
+    background: #fff;
+    border: 1px solid #14B9C8;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 15px 0px;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    left: 346px;
+    top: 200px;
+    z-index: 9999;
+    display: none;
+}
+
+.eight-ewm{width: 202px;background:#fff;border: 1px solid #14B9C8;box-shadow:0 0 2px rgba(0,0,0,0.5);text-align:center;padding:15px 0px;text-align:center;border-radius:4px;position:absolute;left: 346px;top: 200px;z-index:9999;display:none;}
+.eight-ewm p{font-size:14px;color:#333;line-height:22px;}
+.eight-ewm img{width:130px;height:130px;margin:10px auto;float:none;}
+.game-download .btn-download .text {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.game .game-info .game-down:hover {
+  background: #2bd1e0;
+}
+.game .game-info .game-down:hover .eight-ewm-3733 {
+  display: block;
+}
+.game .wechat {
+  padding: 13px 14px 10px;
+  overflow: hidden;
+}
+
+.game .wechat .wechat-qrcode {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  padding: 8px;
+  background: #fbeee3;
+  float: left;
+  margin-right: 15px;
+}
+
+.game .wechat .wechat-qrcode:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #fbeee3;
+  width: 12px;
+  height: 12px;
+  transform: rotateZ(45deg) translateY(-50%);
+  right: -2px;
+  top: 50%;
+}
+
+.game .wechat .wechat-qrcode img {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
+.game .wechat .wechat-desc {
+  float: left;
+}
+
+.game .wechat .wechat-desc p {
+  font-size: 14px;
+  color: #222;
+  line-height: 30px;
+}
+/*========== 右侧盒子下载完 ========== */
+
+.title {
+  margin-bottom: 10px;
+  padding: 0 0 0 8px;
+  line-height: 20px;
+  font-size: 18px;
+  border-left: 4px solid #14B9C8;
+}
+.title .right {
+  float: right;
+  color: red;
+  font-size: 12px;
+}
+.title .more {
+  float: right;
+  font-size: 12px;
+  color: #14B9C8;
+}
+
+
+/* ======== 右侧新闻 start ========== */
+.about-news .news-list {
+  padding: 10px;
+}
+.about-news .news-list .news-item {
+  margin: 10px 0;
+}
+.about-news .news-list .news-item .no {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: #f6f6f6;
+  color: #000;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+.about-news .news-list .news-item .no.hot {
+  background: #14B9C8;
+  color: #fff;
+}
+.about-news .news-list .news-item .content {
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 20px;
+  vertical-align: top;
+}
+.about-news .news-list .news-item .content:hover {
+  color: #14B9C8;
+}
+/* ======== 右侧新闻 end ========== */
+/* ======== 右侧排行 start ========== */
+.rank .rank-content {
+  margin: 10px;
+}
+.rank .rank-content .rank-item {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.rank .rank-content .rank-item .rank-icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 50px;
+  background-image: url(../images/rank.png);
+  background-repeat: no-repeat;
+}
+.rank .rank-content .rank-item .rank-icon.rank-1 {
+  background-position: 0 0;
+}
+.rank .rank-content .rank-item .rank-icon.rank-2 {
+  background-position: 0 -51px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-3 {
+  background-position: 0 -104px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-4 {
+  background-position: 0 -155px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-5 {
+  background-position: 0 -205px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-6 {
+  background-position: 0 -256px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-7 {
+  background-position: 0 -308px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-8 {
+  background-position: 0 -360px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-9 {
+  background-position: 0 -412px;
+}
+.rank .rank-content .rank-item .rank-icon.rank-10 {
+  background-position: 0 -468px;
+}
+.rank .rank-content .rank-item .rank-detail {
+  padding: 0 0 10px 30px;
+}
+.rank .rank-content .rank-item .rank-detail.no-img {
+  display: block;
+  height: 40px;
+  line-height: 50px;
+  color: #666666;
+  font-size: 14px;
+}
+.rank .rank-content .rank-item .rank-detail.img {
+  display: none;
+  position: relative;
+  min-height: 70px;
+}
+.rank .rank-content .rank-item .rank-detail.img .game-icon {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.rank .rank-content .rank-item .rank-detail.img .game-icon img {
+  width: 100%;
+  height: 100%;
+}
+.rank .rank-content .rank-item .rank-detail.img .rank-game-detail {
+  padding-left: 80px;
+}
+.rank .rank-content .rank-item .rank-detail.img .rank-game-detail .game-name {
+  font-size: 16px;
+}
+.rank .rank-content .rank-item .rank-detail.img .rank-game-detail .game-information {
+  margin-top: 7px;
+  color: #999999;
+}
+.rank .rank-content .rank-item .rank-detail.img .rank-game-detail .game-information .game-number {
+  margin-right: 3px;
+}
+.rank .rank-content .rank-item .rank-detail.img .rank-game-detail .game-information .game-size {
+  margin-left: 3px;
+}
+.rank .rank-content .rank-item .rank-detail.img .rank-game-detail .game-boon {
+  margin-top: 7px;
+  color: #999999;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rank .rank-content .rank-item .download {
+  position: absolute;
+  right: 0;
+  top: 22px;
+  width: 66px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid #14B9C8;
+  border-radius: 20px;
+  color: #14B9C8;
+}
+.rank .rank-content .rank-item .download:hover {
+  background: #14B9C8;
+  color: #fff;
+}
+.rank .rank-content .rank-item.on .rank-detail.no-img {
+  display: none;
+}
+.rank .rank-content .rank-item.on .rank-detail.img {
+  display: block;
+}
+.layui-layer-content .gm-helper-container {
+  padding: 15px;
+  overflow: hidden;
+}
+/* ============ 右侧排行 end ========== */
+/* ============ 右侧合集 start ======== */
+  .topic {overflow: hidden;}
+  .topic-list {
+    margin: 0 10px 10px;
+    overflow: hidden;
+  }
+  .topic-item { 
+    position: relative;
+    display: block;
+    float: left;
+    width: 180px;
+    height: 100px;
+    margin-top: 10px;
+  }
+  .topic-item:nth-of-type(2n) {
+    margin-left: 10px;
+  }
+  .topic-item img {
+    width: 100%;
+    height: 100%;
+  }
+  .topic-item .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .topic-item:hover .text {
+    color: #12a7b4;
+    text-decoration: underline;
+  }
+/* ============ 右侧合集 end ========== */
+.right-wrapper .eight-ewm-3733 {
+  width: 180px;
+  background: #fff;
+  border: 1px solid #14B9C8;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 15px 0px;
+  text-align: center;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45px;
+  z-index: 10000;
+  display: none;
+}
+.right-wrapper .eight-ewm-3733 p{font-size:14px;color:#333;line-height:22px;}
+.right-wrapper .eight-ewm-3733 img{width:130px;height:130px;margin:10px auto;float:none;}

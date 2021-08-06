@@ -1,0 +1,208 @@
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<title>宽屏简洁大气公司企业官网网站模板整站下载_在线演示_电脑网站模板_前端模板</title>
+	<meta name="keywords" content="宽屏,简洁大气,公司,企业官网,网站模板,整站下载" />
+	<meta name="description" content="宽屏简洁大气公司企业官网网站模板整站下载，下载文件包含企业官网所有网页模板，完整版下载。" />
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/global.css" rel="stylesheet" type="text/css">    
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="site_head">
+	<div class="head_cont wth1200">
+		<a href="index.html"><img src="pictures/logo.png" class="fl"></a>
+		<ul class="head_nav fr">
+			<li><a href="index.html" class="navon">首页</a></li>
+			
+			<li><a href="about.html">关于我们</a></li>
+			
+			<li><a href="culture.html">企业精神</a></li>
+			
+			<li><a href="course.html">发展历程</a></li>
+			
+			<li><a href="team.html">管理团队</a></li>
+			
+			<li><a href="news.html">公司动态</a></li>
+			
+			<li><a href="contact.html">联系我们</a></li>
+			
+            <li><a href="chaxun.html">员工查询</a></li>
+		</ul>
+	</div>
+</div>
+<!--内容-->   
+    	<div class="banner">
+    		<ul class="banner_img" id="banner_img">
+    		    <li><a target="_blank" href="#">
+    		    <img src="pictures/banner04.jpg"></a></li>
+    			<li><img src="pictures/banner03.jpg"></li>
+    			<li><img src="pictures/banner02.jpg"></li>
+    			<li><img src="pictures/banner01.jpg"></li>
+    		</ul>
+			<ul class="banner_dian" id="banner_dian">
+				<li class="slet"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<a href="javascript:void(0)" id="ban_left"><i class="icon ban_left"></i></a>
+			<a href="javascript:void(0)" id="ban_right"><i class="icon ban_right"></i></a>
+    	</div>
+	 <div class="site_cont">	
+		<div class="news">
+			<div class="news_cont wth1200 relative">
+				<i class="icon announcement fl"></i>
+				<div class="news_d">
+					<div class="news_dynamic">	
+						<a href="/nwes/196.html" target="_blank">新闻资讯：庆祝常州XX信息咨询有限公司-南京分公司成立</a>
+<a href="/nwes/195.html" target="_blank">新闻资讯：取消一级建造师考核标准！</a>
+<a href="/nwes/194.html" target="_blank">新闻资讯：取消一级建造师考核标准！</a>
+<a href="/nwes/193.html" target="_blank">新闻资讯：建筑资质“三包一靠”</a>
+<a href="/nwes/192.html" target="_blank">新闻资讯：一级建造师证书好处众多</a>
+
+					</div>
+				</div>
+				<a href="/nwes/"target="_blank" class="more_to fr">更多>></a>
+			</div>
+		</div>
+    	<script type="text/javascript">
+			$(function(){
+				$('#indexPage').addClass("selected");
+					//上页转换
+				var a=0;
+				var cd=$("#banner_img li").length;
+				$("#ban_left").click(function(){
+					a--;
+					if(a<0) a=cd-1;
+					$("#banner_dian li").eq(a).addClass("slet").siblings().removeClass("slet");
+					$("#banner_img li").hide().eq(a).css("opacity","0").fadeTo(0,1).siblings().removeClass("dongh");
+				});
+					//下页转换
+				$("#ban_right").click(function(){
+					a++;
+					if(a>=cd) a=0;
+					$("#banner_dian li").eq(a).addClass("slet").siblings().removeClass("slet");
+					$("#banner_img li").hide().eq(a).css("opacity","0").fadeTo(0,1).siblings().removeClass("dongh");
+				});
+					//自动转换
+				var time;
+				start();  //定义 函数循环开始				
+				function start(){ 
+					time = setInterval(function(){  //函数内的元素一直执行
+						a++;
+						if(a>cd-1) a=0;						
+						$("#banner_dian li").eq(a).addClass("slet").siblings().removeClass("slet");
+						$("#banner_img li").hide().eq(a).css("opacity","0").fadeTo(0,1).siblings().removeClass("dongh");
+						},4000);
+					};
+					//鼠标浮动转换
+				$("#banner_dian li").hover(function(){ //鼠标浮动在圆点上的时候
+					if(time)clearInterval(time);  //清除 函数循环
+					a=$(this).index();   //定义 
+					$("#banner_img li").hide().eq(a).css("opacity","0").fadeTo(0,1).siblings().removeClass("dongh");
+					$(this).addClass("slet").siblings().removeClass("slet");
+					},function(){
+					start();
+					});	
+
+				var settime;
+	            $(".news_d").hover(function () {	        
+	                clearInterval(settime);
+	            }, function () {
+	                settime = setInterval(function () {
+	                    var $first = $(".news_d div:first");     //选取div下的第一个ul 而不是li；
+	                    var height = $first.find("a:first").height();      //获取第一个li的高度，为ul向上移动做准备；
+	                    $first.animate({ "marginTop": -height + "px" }, 600, function () {
+	                        $first.css({ marginTop: 0 }).find("a:first").appendTo($first); //设置上边距为零，为了下一次移动做准备
+	                    });
+	                }, 2000);
+	            }).trigger("mouseleave");
+			});
+    	</script>
+		<div style="margin: 30px 0;">
+			<div class="wth1200">
+				<div class="index_title">
+					<b class="fs18">关于XX</b>   <span>About XinQi</span>
+					<em></em>
+				</div>
+				<div class="index_introduce_box clearfix">
+					<div class="index_introduce fl">
+						<p>　  北京市XX信息咨询有限公司创立于2009年，创始人是周福林先生,公司位于美丽的江苏常州。是一家专业从事建筑人才的服务、建筑资质咨询的企业，现业务范围已覆盖全国各地乃至全国性人才猎头公司，现已在广西、山东等地设立了分公司。</p>
+						<p>主营项目：1、专业从事建筑施工企业的资质代办，升级，年审等服务！2、专业为企业资质升级寻找优秀人才，为优秀建筑人才实现理想的兼职，全职目标。公司崇尚诚信、共赢理念，尊重客户切身利益，致力于和优秀企业、优秀人才建立长期战略合作伙伴关系。本着“诚信为本”的经营宗旨，对每项委托业务，均脚踏实地，务实高效，严格执行系统化、专业化、科学化的寻猎流程，为企业和人才创造核心竞争优势和智力资本增值。</p>
+					</div>
+					<div class="index_video fr">
+						<video autoplay loop controls>
+						 <source type="video/mp4" src="#"></source>
+							<embed loop="true" autostart="true" style="width:461px;height:270px;" src="#"> 
+						</video>
+					</div>
+				</div>
+				<div class="to_more">
+					<a href="/xinqi/" class="color_yellow transition">了解更多</a>
+				</div>
+			</div>
+		</div>
+
+		<div style="padding: 30px 0; background: #f2f2f2;">
+			<div class="wth1200 index_culture_box relative">
+				<div class="index_title">
+					<b class="fs18">企业精神</b>   <span>Culture</span>
+					<em></em>
+				</div>
+				<img src="pictures/index01.png" class="index_culture absolute1">
+				<div class="index_culture_left absolute1">
+					<p class="thought1 transition">付出不亚于任何人的努力</p>
+					<p class="thought2 transition">谦虚戒骄</p>
+					<p class="thought3 transition">天天反省</p>
+				</div>
+				<div class="index_culture_right absolute1">
+					<p class="thought4 transition">活着就要感谢</p>
+					<p class="thought5 transition">积善行，思利他</p>
+					<p class="thought6 transition">不要有感性的烦恼</p>
+				</div>
+			</div>
+			<div class="to_more">
+				<a href="/culture/" class="color_yellow transition">了解更多</a>
+			</div>
+		</div>
+		<div class="business">
+			<div class="wth1200 color_yellow center business_title">
+			<span>业务体系</span><br>Products<br>
+				<i class="icon business_tb"></i>
+			</div>
+		</div>
+		<div>
+			<div class="wth1200 business_cont">
+				<ul  class="clearfix">
+					<li class="yx_cluster"><div></div><a href="/business/index.html?id=2">一级建造师</a></li>
+					<li class="sj_cluster"><div></div><a href="/business/index.html?id=4">造价监理师</a></li>
+					<li class="rj_cluster"><div></div><a href="/business/index.html?id=1">设备公用</a></li>
+					<li class="sn_cluster"><div></div><a href="/business/index.html?id=8">土木工程</a></li>
+					<li class="yy_cluster"><div></div><a href="/business/index.html?id=3">建筑师</a></li>
+					<li class="ds_cluster"><div></div><a href="/business/index.html?id=5">结构师</a></li>
+					<li class="xkc_cluster"><div></div><a href="/business/index.html?id=9">中高级职称</a></li>
+					<li class="gy_cluster"><div></div><a href="/business/index.html?id=6">电气工程师</a></li>
+					<li class="bk_cluster"><div></div><a href="/business/index.html?id=7">八大员</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
+
+<!--底部-->
+<div class="site_food">
+	<div class="link">
+    	<div class="wth1200 center">
+	    		友情链接：<a href='http://www.17sucai.com/' target='_blank'>17素材网</a>
+
+	    	</div>
+	</div>
+</div>
+<div class="center copyright">
+	Copyright © 2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> HelloWorld  备案号：桂ICP备XXXXXXXX号
+</div>
+</body>
+</html>

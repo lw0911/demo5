@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>云主机-高端大气网络公司建站公司企业网站模板</title>
+<meta name="keywords" content/>
+<meta name="description" content/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css"/>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/online_js.ashx.js"></script>
+<script src="js/jquery.idtabs.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+
+<script type="text/javascript">
+$(function () {
+         var index_div_pro = [{
+                        sx: 0,
+                        sy: 0,
+                        mw: 3,
+                        mh: 1,
+                        bx: 8.4,
+                        by: 10.4,
+                        rx: -0.6
+                },
+                {
+                        sx: 35,
+                        sy: 0,
+                        mw: 3,
+                        mh: 0.5,
+                        bx: 6.4,
+                        by: 8.4,
+                        rx: -0.1
+                },
+                {
+                        sx: 785,
+                        sy: 90,
+                        mw: 0.3,
+                        mh: 0.1,
+                        bx: 6.5,
+                        by: 7.4,
+                        rx: -0.1
+                }];
+                
+                var ePageX = null;
+                var ePageY = null;
+                
+                function getMousePos(expression) {
+                        if (ePageX == null || ePageY == null) return null;
+                        var _x = $(expression).position().left;
+                        _x += ePageX - $(expression).parent().position().left;
+                        var _y = $(expression).position().top;
+                        _y += ePageY - $(expression).parent().position().top;
+                        return {
+                                x: _x,
+                                y: _y
+                        }
+                };
+                
+                var index_xh = setInterval(function () {
+                        for (var i = 0; i < 3; i++) {
+                                var mousepos = getMousePos("#indexg" + i);
+                                if (mousepos != null) {
+                                        var left = parseInt($("#indexg" + i).css("left"));
+                                        var l = left + (index_div_pro[i].sx + index_div_pro[i].mw - (mousepos.x - 100) / index_div_pro[i].bx * index_div_pro[i].rx - left) * 0.2;
+                                        var top = parseInt($("#indexg" + i).css("top"));
+                                        var t = top + (index_div_pro[i].sy + index_div_pro[i].mh - (mousepos.y - 100) / index_div_pro[i].by - top) * 0.2;
+                                        $("#indexg" + i).css({
+                                                left: l,
+                                                top: t
+                                        })
+                                }
+                        }
+                },
+                15);
+                
+                $("body").mousemove(function (event) {
+                        event = event || window.event;
+                        ePageX = event.pageX;
+                        ePageY = event.pageY;
+                });
+        
+        
+});
+</script>
+</head>
+<body>
+<div id="header">
+<div class="top-sub">
+<div class="container">
+<div class="know"><strong>js代码</strong> 专注营销型网站、高端品牌网站建设、互联网建站服务。</div>
+<div class="sidebar">
+<div class="brand">
+<div class="set">
+<ul>
+
+</ul>
+</div>
+<span>旗下网站</span> </div>
+<div class="tel"><span>服务热线：</span><span><strong>XXX</strong></span></div>
+<div class="help">
+<ul>
+<li><span><a href="#">关于我们</a></span>
+<ul>
+<li><a href="#">公司概况</a></li>
+<li><a href="#">我们能做什么</a></li>
+<li><a href="#">公司文化</a></li>
+<li><a href="#">公司资质</a></li>
+</ul>
+</li>
+<li><span><a href="#">新闻动态</a></span>
+<ul>
+<li><a href="#">行业新闻</a></li>
+<li><a href="#">公司新闻</a></li>
+<li><a href="#">技术帮助</a></li>
+<li><a href="#">其他新闻</a></li>
+<li><a href="#">客户评价</a></li>
+</ul>
+</li>
+<li><span><a href="#">售后服务</a></span></li>
+<li><span><a href="#">联系我们</a></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="l_ber">
+<div class="top-menu">
+<div class="container">
+<div class="logo"><a href="index.html"><img src="picture/logo.jpg" alt title width="250" height="58" border="0"/></a></div>
+<div class="menu">
+<ul>
+<li><span><a href="index.html">首页</a></span></li>
+<li><span><a href="web.html">网站建设</a></span></li>
+<li><span><a class="current" href="zhuji.html">云主机</a></span></li>
+<li><span><a href="case.html">经典案例</a></span></li>
+<li><span><a href="news.html">新闻动态</a></span></li>
+<li><span><a href="fuwu.html">售后服务</a></span></li>
+<li><span><a href="about.html">关于我们</a></span></li>
+<li><span><a href="lianxi.html">联系我们</a></span></li>
+</ul>
+</div>
+<div class="weixin"><img src="picture/weixin_swz.png" alt="加微信·送网站" title="加微信·送网站" border="0"/></div>
+</div>
+</div>
+</div>
+</div>
+<div class="yzj_banner"></div>
+<div class="yzj_technology">
+<div class="yzj_container" style="height:341px; background-image:url(images/yzj_01.jpg);background-position: left;">
+<div class="text2" style="width: 550px; left: 613px; top: 117px;"><strong>云技术</strong>
+<p>虚拟主机系统采用我公司研究多年的云计算技术分布式存储， <br/>
+实时备份,可靠性达到99.95%</p>
+</div>
+</div>
+</div>
+<div class="yzj_ty graybg" style="height:318px;">
+<div class="yzj_container" style="height:318px; background-image:url(images/yzj_02.jpg);background-position: right;">
+<div class="text2" style="width: 492px; left: 4px; top: 102px; text-align: right;"><strong>免费VIP服务</strong>
+<p>12年经验的售后团队为您带来专家级解决方案。享受最全面服务<br/>
+曾经需要付费的项目现在全部免费，从此人人都是VIP！</p>
+</div>
+</div>
+</div>
+<div class="yzj_ty" style="height:375px;">
+<div class="yzj_container" style="height:375px; background-image:url(images/yzj_03.jpg);background-position: left;">
+<div class="text2" style="width: 570px; left: 601px; top: 122px; text-align: left;"><strong>功能完善</strong>
+<p>拥有多项专利的行业领先虚拟主机控制面板！网站一键安装、在线文件管理、<br/>
+网站防护、异地备份等50项功能</p>
+</div>
+</div>
+</div>
+<div class="yzj_ty graybg" style="height:330px;">
+<div class="yzj_container" style="height:330px; background-image:url(images/yzj_04.jpg);background-position: right;">
+<div class="text2" style="width: 531px; left: 4px; top: 102px; text-align: right;"><strong>各种程序兼容</strong>
+<p>完美支持市面上大多数建站程序：<br/>
+Shopex、Ecshop、Discuz、Phpwind、Dedecms、Wordpress……</p>
+</div>
+</div>
+</div>
+<div class="yzj_ty" style="height:363px;">
+<div class="yzj_container" style="height:363px; background-image:url(images/yzj_05.jpg);background-position: left;">
+<div class="text2" style="width: 570px; left: 601px; top: 122px; text-align: left;"><strong>提供快速备案</strong>
+<p>10年备案经验打造出来的高效快速备案服务！为近10万个域名成功备案，<br/>
+备案通过率高达99.5%！</p>
+</div>
+</div>
+</div>
+<div class="yzj_ty graybg" style="height:370px;">
+<div class="yzj_container" style="height:370px; background-image:url(images/yzj_06.jpg);background-position: right;">
+<div class="text2" style="width: 633px; left: 4px; top: 102px; text-align: right;"><strong>数据安全</strong>
+<p>我们一直关注安全性维护，采取了基于云计算的分部式存储技术与虚拟主机三重备份 <br/>
+机制（SSD存储+SAS备份+异地备份）以及数据回滚，<br/>
+确保客户网站的安全、可靠！</p>
+</div>
+</div>
+</div>
+<div class="yzj_ty" style="height:330px;">
+<div class="yzj_container" style="height:330px; background-image:url(images/yzj_07.jpg);background-position: left;">
+<div class="text2" style="width: 570px; left: 601px; top: 122px; text-align: left;"><strong>可添加360网站卫士</strong>
+<p>200G防DDOS流量带宽、10秒CC攻击高效识别、1000余种漏洞防护规则、<br/>
+1600万QPS的高防DNS。有保护，无所畏！</p>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="copyright">
+<p>Copyright © 2020 js代码 版权所有 桂ICP备XXXXXXXX号</p>
+<p>地址： XXX</p>
+</div>
+<div class="bottom-subnav">
+<div class="con">
+<div class="menu"> <a href="/a/about/">关于我们</a>
+<a href="/a/news/">新闻动态</a>
+<a href="/a/fuwu/">售后服务</a>
+<a href="/a/lianxi/">联系我们</a> </div>
+<div class="share"> <span><a href="#"><img src="picture/bottom_ico_map.gif" border="0" alt="我们的位置" title="我们的位置"/></a></span><span><a href="#"><img src="picture/bottom_ico_qzone.gif" border="0" alt="我们官方QQ空间" title="我们官方QQ空间"/></a></span><span><a href="#"><img src="picture/bottom_ico_tweibo.gif" border="0" alt="我们官方微博" title="我们官方微博"/></a></span><span><a href="#"><img src="picture/bottom_ico_weibo.gif" border="0" alt="我们腾讯微博" title="我们腾讯微博"/></a></span> </div>
+</div>
+</div>
+</div>
+<div id="top"></div>
+<script type="text/javascript" src="js/tg35.js"></script>
+</body>
+</html>

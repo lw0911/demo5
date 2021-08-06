@@ -1,0 +1,13 @@
+if(typeof JSON =='undefined')document.writeln("<script type='text/javascript' src='/js/json2.js'></script>");
+var Job={};Job.GetPageData=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'GetPageData',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.CacheModel=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'CacheModel',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.CreateAllHtml=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'CreateAllHtml',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.CreateListHtml=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'CreateListHtml',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.CreateDetailHtml=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'CreateDetailHtml',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.CreateSelectHtml=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'CreateSelectHtml',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.UpdateField=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'UpdateField',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.Add=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'Add',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.Update=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'Update',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.Delete=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'Delete',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.Deletes=function(){var argsArray=[];for(var i=0;i<arguments.length-1;i++)argsArray[i]=JSON.stringify(arguments[i]);this.ajax({method:'Deletes',args:JSON.stringify(argsArray)},arguments[arguments.length-1]);};
+Job.ajax=function(data,callback){jQuery.ajax({url:this.ajaxUrl,type:'POST',dataType:'json',data:jQuery.extend({act:'method'},data),success:callback});};Job.ajaxUrl='/ajax/Job.ashx';

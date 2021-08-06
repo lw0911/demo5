@@ -1,0 +1,1 @@
+document.write("<a href='http://app.3733.com/' target=_blank><img src='http://www.3733.com/static/images/index_bottom_adv.jpg' border=0 width='428' height='138' alt='XXX'></a>");

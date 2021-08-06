@@ -1,0 +1,438 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="applicable-device" content="pc,mobile"/>
+<meta name="robots" content="noarchive">
+<title>HTML5响应式全屏网络品牌网站建设设计类静态html模板</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="renderer" content="webkit">
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/page.css" rel="stylesheet" type="text/css" />
+<link href="css/fix.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/fun.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.mChange.js"></script>
+<style>
+#header {
+	position: absolute;
+}
+</style>
+</head>
+
+<body>
+<div id="header">
+  <div edit_params="zoom%3D0.5%26height%3D82%26width%3D143"><a href="index.html" class="logo" style="background: url(images/logo.png) center center no-repeat;background-size:contain;"><i class="s1"></i><i class="s2"></i></a></div>
+  <span class="menu"></span>
+  <div class="nav_main"><a href="index.html">首页</a><a class="now" href="service.html">服务</a><a href="cases-internet.html">案例</a><a href="news.html">百科</a><a href="about.html">关于</a></div>
+  <div class="tel">400-999-6666</div>
+</div>
+<script type="text/javascript">
+
+$('<a href="tel:400-999-6666"><div class="t">400-999-6666</div></a>').appendTo('#header .nav_main');
+
+</script>
+<div class="nav_float">
+  <ul>
+    <li class="a1"><a href="http://dwz.cn/6nsBui" target="_blank">400-999-6666</a></li>
+    <li class="a2"><a href="http://p.qiao.baidu.com/" target="_blank"></a></li>
+    <li><a href='javascript:void(0);' class='a3'><span><img src='images/s5af8d06aa6971.jpg' width='200'></span></a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+
+$('.nav_float ul li').each(function(index, el) {
+
+  var c = $(this).attr('class');
+
+  var v = false;
+
+  if (c) {
+
+    v = '';
+
+    $.each(c.split(' '), function(index, val) {
+
+      if ( val != 'widget-area') {
+
+        v += val + ' ';
+
+      }
+
+    });
+
+  }
+
+
+
+  if ( v) {
+
+    $(this).removeClass(v).children('a').addClass(v);
+
+  }
+
+});
+
+</script>
+<div id="body">
+  <div class="body ">
+    <div class="banner"> <span class="bigimg" style="display:block;"><img class="img pimg" psrc="images/s5ab5db333d860.jpg"/></span> <span class="smallimg" style="display:block;"><img class="img mimg" msrc="images/s5ab47657223a8.jpg"/></span>
+      <div class="title">
+        <div class="bar"></div>
+        <h1>SERVICE</h1>
+      </div>
+    </div>
+    <script>
+
+        $(function(){
+
+            var _width = $(window).width();
+
+            if(_width > 751){
+
+                $('.smallimg').css({"display":"none"});
+
+            }
+
+            if(_width < 751){
+
+                $('.bigimg').css({"display":"none"});
+
+            }
+
+        })
+
+        </script>
+    <div class="service">
+      <div class="service1 screen"> <img src="images/png6.png" class="pic">
+        <div class="text">
+          <h1>营销型网站</h1>
+          <h2>MARKETING WEBSITE</h2>
+          <div class="list">
+            <h3>品牌官网建设</h3>
+            <h3>集团网站建设</h3>
+            <h3>HTML5响应式网站建设</h3>
+            <h3>手机端网站建设</h3>
+          </div>
+          <p>我们专注于帮助客户提升网络品牌价值，从竞品分析，核心定位，到具体实施，量身打造符合企业发展阶段的网络形象</p>
+          <div class="link"><a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">获取专业的策划方案</a>|<a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">了解服务报价</a>|<a href="cases-internet.html" target="_blank">通过案例了解我们</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+var x=new Array(50,80,80,80,0,80);
+
+$(window).scroll(function(){
+
+	$(".screen").each(function(index, element) {
+
+        if(scrollact($(this),x[index])){
+
+			if(!$(this).hasClass("show")){
+
+				$(this).addClass("show");
+
+			}
+
+		}
+
+    });	
+
+});
+
+$(".service4 ul li").each(function(index, element) {
+
+    $(this).css({"transition-delay":index*0.1+1.3+"s","-webkit-transition-delay":index*0.1+1.3+"s"})
+
+});
+
+</script>
+    <div class="service">
+      <div class="service2 screen"> <img src="images/png7.png" class="pic">
+        <div class="text">
+          <h1>移动设计与开发</h1>
+          <h2>Mobile Design and Development</h2>
+          <h3>手机网站建设</h3>
+          <p>深入理解用户需求与移动端特性， 独立打造视觉效果，保证最佳触屏体验。</p>
+          <h3>app开发</h3>
+          <p>IOS、Android跨平台的APP开发能力， 实现面对面人机交互，全方位增强品牌友好度</p>
+          <h3>H5页面设计开发</h3>
+          <p>设计开发符合移动端的H5页面， 全面兼容手机、PAD等移动设备，拓宽品牌传播渠道</p>
+          <div class="link"><a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">获取专业的策划方案</a>|<a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">了解服务报价</a>|<a href="cases-internet.html" target="_blank">通过案例了解我们</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+var x=new Array(50,80,80,80,0,80);
+
+$(window).scroll(function(){
+
+	$(".screen").each(function(index, element) {
+
+        if(scrollact($(this),x[index])){
+
+			if(!$(this).hasClass("show")){
+
+				$(this).addClass("show");
+
+			}
+
+		}
+
+    });	
+
+});
+
+$(".service4 ul li").each(function(index, element) {
+
+    $(this).css({"transition-delay":index*0.1+1.3+"s","-webkit-transition-delay":index*0.1+1.3+"s"})
+
+});
+
+</script>
+    <div class="service">
+      <div class="service3 screen">
+        <div class="text">
+          <h1>微信开发运营</h1>
+          <h2>Development and Operation of Wechat</h2>
+          <h3>我们通过微信端全案服务</h3>
+          <p>深入理解用户需求与移动端特性， 独立打造视觉效果，保证最佳触屏体验。</p>
+          <p>提升品牌新媒体平台传播价值</p>
+          <h3>我们可以为您提供</h3>
+          <p>微信平台解决方案·微官网建设·H5社交游戏定制开发· 微信小程序开发·微信公众号运营</p>
+          <div class="link"><a href="">获取专业的策划方案</a>|<a>了解服务报价</a>|<a>通过案例了解我们</a></div>
+        </div>
+        <img src="images/png8.png" class="pic"> </div>
+    </div>
+    <script>
+
+var x=new Array(50,80,80,80,0,80);
+
+$(window).scroll(function(){
+
+	$(".screen").each(function(index, element) {
+
+        if(scrollact($(this),x[index])){
+
+			if(!$(this).hasClass("show")){
+
+				$(this).addClass("show");
+
+			}
+
+		}
+
+    });	
+
+});
+
+$(".service4 ul li").each(function(index, element) {
+
+    $(this).css({"transition-delay":index*0.1+1.3+"s","-webkit-transition-delay":index*0.1+1.3+"s"})
+
+});
+
+</script>
+    <div class="service">
+      <div class="service4 screen">
+        <div class="text">
+          <h1>网站带运营</h1>
+          <h2>Website Agent Operation</h2>
+          <div class="list">
+            <h3>企业官网托管</h3>
+            <h3>电商平台维护</h3>
+            <h3>微信公众号托管</h3>
+            <h3>年度设计托管</h3>
+          </div>
+          <p>后期运维是甲方比较关注，乙方不愿触碰第一个环节，17愿意从后期运维的角度提供更周到的服务，合理的售后费用 +及时响应的技术服务=长期稳定的合作</p>
+          <div class="link"><a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">获取专业的策划方案</a>|<a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">了解服务报价</a>|<a href="cases-internet.html" target="_blank">通过案例了解我们</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+var x=new Array(50,80,80,80,0,80);
+
+$(window).scroll(function(){
+
+	$(".screen").each(function(index, element) {
+
+        if(scrollact($(this),x[index])){
+
+			if(!$(this).hasClass("show")){
+
+				$(this).addClass("show");
+
+			}
+
+		}
+
+    });	
+
+});
+
+$(".service4 ul li").each(function(index, element) {
+
+    $(this).css({"transition-delay":index*0.1+1.3+"s","-webkit-transition-delay":index*0.1+1.3+"s"})
+
+});
+
+</script>
+    <div class="service">
+      <div class="service5 screen"> <img src="images/png9.png" class="pic">
+        <div class="text">
+          <h1>网站运维</h1>
+          <h2>Customized website building services</h2>
+          <p>提供标准级专业技术保障满足用户更安全、更稳定、更快速的体验需求我们可以为您提供系统升级专题维护·模块更新云服务运维网站迁云·弹性架构改造·网站健康检查。</p>
+          <div class="link"><a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">获取专业的策划方案</a>|<a href="http://p.qiao.baidu.com//im/index?siteid=8658804&ucid=20253455" target="_blank">了解服务报价</a>|<a href="cases-internet.html" target="_blank">通过案例了解我们</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+var x=new Array(50,80,80,80,0,80);
+
+$(window).scroll(function(){
+
+	$(".screen").each(function(index, element) {
+
+        if(scrollact($(this),x[index])){
+
+			if(!$(this).hasClass("show")){
+
+				$(this).addClass("show");
+
+			}
+
+		}
+
+    });	
+
+});
+
+$(".service4 ul li").each(function(index, element) {
+
+    $(this).css({"transition-delay":index*0.1+1.3+"s","-webkit-transition-delay":index*0.1+1.3+"s"})
+
+});
+
+</script>
+    <div class="service">
+      <div class="service7 screen">
+        <div class="pic" style="background-image:url(images/pic16.jpg);"></div>
+        <div class="list">
+          <ul>
+            <li class="l1"><strong>签约合作</strong>贴心的服务，刚刚开始</li>
+            <li class="l2"><strong>专属定制规划</strong>破旧习，建新知</li>
+            <li class="l3"><strong>前端风格设计</strong>传承企业文化是设计的职责所在</li>
+            <li class="l4"><strong>顾客确认效果</strong>您的满意，才是最好的设计</li>
+            <li class="l5"><strong>网站制作开发</strong>壁垒高筑，稳定，乃心之所向</li>
+            <li class="l6"><strong>验收上线</strong>此刻，只是我们兑现承诺的开端</li>
+          </ul>
+        </div>
+        <div class="circle">
+          <div class="r"><img src="images/png5.png" class="c4"><img src="images/png3.png" class="c2"></div>
+          <div class="l"><img src="images/png4.png" class="c3"></div>
+          <img src="images/png2.png" class="c1"> </div>
+      </div>
+    </div>
+    <script>
+
+var x=new Array(50,80,80,80,0,80);
+
+$(window).scroll(function(){
+
+	$(".screen").each(function(index, element) {
+
+        if(scrollact($(this),x[index])){
+
+			if(!$(this).hasClass("show")){
+
+				$(this).addClass("show");
+
+			}
+
+		}
+
+    });	
+
+});
+
+$(".service4 ul li").each(function(index, element) {
+
+    $(this).css({"transition-delay":index*0.1+1.3+"s","-webkit-transition-delay":index*0.1+1.3+"s"})
+
+});
+
+</script></div>
+</div>
+<div id="footer">
+  <div class="block2">
+    <h1>CONTACT</h1>
+    <div class="text clearfix">
+      <div class="left d1">
+        <h3>专注设计，并非自我陶醉；沉浸细节，亦非锱铢必较；倾注心血于每一个作品，只为打动默默付出的我和停留于此的你！</h3>
+        <div class="p"> <span>版权所有：XXX</span><br>
+          <span>Copyright 2010 www.4miao.net All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a></span>|<a href="http://www.cnzz.com/stat/website.php?web_id=1256922411" target="_blank"><span id="cnzz_stat_icon_1256922411">站长统计</span></a> <a href="http://www.fractal-technology.com">深圳网站建设</a> </div>
+      </div>
+      <div class="left d2">
+        <div class="p">ADD：XXX</div>
+        <div class="p">TEL：400-999-6666</div>
+        <a href="mailto:XXX">E-mail：XXX</a>
+        <div class="p"><a href="">网站地图</a></div>
+      </div>
+      <div class="d3">
+        <h3>400-999-6666</h3>
+        <h4>010-64929332</h4>
+      </div>
+      <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032897" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="images/ghs.png" style="float:left;"/> <span class="p" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">京公网安备 11010502032897号</span> </a> </div>
+    </div>
+  </div>
+</div>
+<script>
+
+
+
+
+
+// 隐藏
+
+function hideSoperson123(second){
+
+    if(second>0){
+
+        second++;
+
+        setTimeout(function(){
+
+            $('.fa-plus').parent().hide();
+
+            hideSoperson123(second);
+
+        },1000);
+
+    }
+
+};
+
+hideSoperson123(1);
+
+
+
+</script>
+</body>
+</html>

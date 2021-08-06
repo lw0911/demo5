@@ -1,0 +1,214 @@
+input[type=checkbox] {
+    -webkit-appearance: checkbox;
+}
+
+.form-horizontal .control-label {
+    padding-top: 0;
+}
+
+.before:before {
+    content: "";
+    display: table;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header  {
+    background-color: #FFFFFF;
+    padding-top: 21px;
+    padding-bottom: 25px;
+    height:90px;
+    -webkit-box-shadow: 0 5px 15px -1px #ddd;
+    -moz-box-shadow: 0 5px 15px -1px #ddd;
+    box-shadow: 0 5px 15px -1px #ddd;
+}
+#header .pull-right{
+    color:#666;
+    font-size:14px;
+    padding-left: 28px;
+    background:url("../img/retrieve_01.png") no-repeat left center;
+    background-size:contain;
+    margin-top: 20px;
+
+}
+#footer {
+    background-color: #303030;
+    text-align: center;
+    color: #999999;
+    height: 45px;
+    line-height: 45px;
+}
+
+#header .col-right {
+    float: right;
+}
+#main .container{
+    border:2px solid #EEEEEE;
+    border-radius:5px;
+    border-top-color:#3C7FC2;
+    margin-top: 64px;
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+}
+#main .step{
+    border-bottom:1px solid #E5E5E5;
+    margin-bottom: 49px;
+}
+#main .step li{
+    background:url("../img/retrieve_02.png") no-repeat left center;
+    background-size:auto 14px ;
+    padding-left: 20px;
+    position: relative;
+    padding-bottom: 8px;
+    background-position-y:8px;
+    font-size:18px;
+}
+#main .step li:first-child{
+    color:#3C7FC2;
+}
+#main .step li.active:before{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 6px;
+    width: 103px;
+    background:url("../img/retrieve_06.png");
+
+}
+#main .step li:nth-child(2){
+    background-image:url("../img/retrieve_03.png");
+}
+#main .step li:nth-child(3){
+    background-image:url("../img/retrieve_04.png");
+}
+#main .step li:nth-child(4){
+    background-image:url("../img/retrieve_05.png");
+}
+#main .panel{
+        border:none;
+        box-shadow: none;
+}
+#main .panel #ver-code{
+    height: 52px;
+    padding-left: 44px;
+    background: url("../img/sign_in2_01.png") no-repeat left center;
+    background-size: 15px 20px;
+    background-position-x: 13px;
+}
+#main .panel #ver-code {
+    width: 250px;
+}
+#main .panel #name{
+    height: 52px;
+    background: #eee url("../img/retrieve_07.png") no-repeat left center;
+    background-size: 17px 19px;
+    padding-left: 44px;
+    background-position-x: 12px;
+    margin-bottom: 28px;
+
+}
+#main .panel #name:-webkit-inputplaceholder{
+    color:#999;
+
+}
+#main .panel  .code-img,#main .panel  .code-img img{
+    width: 192px;
+    height: 52px;
+}
+#main .panel .step1-next {
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #64A4EC;
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+}
+/*TODO 媒体查询*/
+
+     
+
+
+@media (max-width: 768px) {
+    .step-speed > .row {
+        margin: 0;
+    }
+}
+
+@media (max-width: 460px) {
+    #header .col-right {
+        float: left;
+    }
+
+    #header {
+        padding-bottom: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+
+
+}
+
+@media (min-width: 992px) {
+
+
+
+}
+
+@media (min-width: 1366px) {
+    #main .content{
+        margin-left: 216px;
+        margin-right:160px;
+    }
+    #main .container{
+        width: 1200px;
+    }
+    #footer{
+        margin-top: 307px;
+    }
+    #main .step{
+        padding-left: 49px;
+        width: 100%;
+    }
+    #main .step li:first-child{
+        margin-right: 67px;
+    }
+
+    #main .step li:nth-child(2){
+        margin-right: 67px;
+    }
+    #main .step li:nth-child(3){
+        margin-right: 50px;
+    }
+    #main .step li:nth-child(4){
+        margin-right: 100px;
+    }
+    #main .panel{
+        padding-left: 137px;
+        width: 599px;
+        margin-bottom: 218px;
+    }
+    #main .panel #name{
+        width: 462px;
+    }
+    #main .panel #ver-code{
+        margin-right: 18px;
+    }
+    #main .panel .step1-next {
+        width: 462px;
+    }
+
+
+
+}
+ 

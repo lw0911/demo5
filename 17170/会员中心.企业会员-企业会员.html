@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <title>网站标题</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.sslide.js" type="text/javascript"></script>
+	<!--[if lt IE 9]> <script type="text/javascript" src="js/html5.js"> </script><![endif]-->
+    <!--[if IE 6]>
+    <script type="text/javascript" src="js/DD_belatedPNG.js" ></script>
+    <script> DD_belatedPNG.fix('img,div,li,em,i,h3,.png,a'); </script>
+    <![endif]-->
+</head>
+<body class="com_bg1">
+	
+	<!-- topbar -->
+    <div class="topbar">
+		<div class="wrapper">
+			<div class="left fl">
+				欢迎来到居家装装修平台<a href="#">免费注册</a><em>|</em><a href="#">登录</a>
+			</div>
+			<div class="right fr">
+				<span>客服电话：400-500-8000</span><a href="#">首页</a><em>|</em><a href="#">我的居家</a><em>|</em><a href="#">帮助中心</a><em>|</em><a href="#">行业资讯</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--wrapper end-->
+	</div>
+    <!-- /topbar -->
+	
+    <!-- header -->
+    <div class="header">
+		<div class="wrapper">
+			<div class="row">
+				<div class="box3 fr">
+					<ul>
+						<li><span>&yen;4403261万</span>招标总金额</li>
+						<li><span>125677个</span>业主总数</li>
+						<li><span>31178家</span>装修公司数量</li>
+					</ul>
+					<div class="search">
+						<input type="text" class="text">
+						<input type="button" class="button">
+					</div>
+				</div>
+				<div class="logo fl">
+					<a href="#" title="居家装"><img src="images/logo_01.png" alt="居家装"></a>
+					<p><b>居家装</b>www.XXX</p>
+				</div>
+				<div class="box1 fl">
+					<h3>全国独创一站式装修平台</h3>
+					<p>省钱 · 省时 · 又省力</p>
+				</div>
+				<div class="box2 fl">
+					<ul>
+						<li>
+							<label>切换城市：</label>
+							<select class="sel1">
+								<option>广州市</option>
+								<option>广州市</option>
+							</select>
+							<select class="sel1">
+								<option>广州市</option>
+								<option>广州市</option>
+							</select>
+						</li>
+						<li>
+							<label>切换城市：</label>
+							<select class="sel2">
+								<option>装修</option>
+								<option>装修</option>
+							</select>
+						</li>	
+					</ul>
+					<input type="button" class="button">
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--rwo end-->
+		</div>
+		<!--wrapper end-->
+		<div class="naver">
+			<div class="wrapper">
+				<ul>
+					<li class="cur"><a href="#">首&emsp;&ensp;页</a></li>
+					<li><a href="#">所有招标信息</a></li>
+					<li><a href="#">发布招标信息</a><em></em></li>
+					<li><a href="#">找公司</a></li>
+					<li><a href="#">找设计师</a></li>
+					<li><a href="#">当地商品</a></li>
+					<li><a href="#">保障特权</a></li>
+					<li><a href="#">问吧</a></li>
+				</ul>
+			</div>
+			<!--wrapper end-->
+		</div>
+		<!--naver end-->
+		
+		<!--wrapper end-->
+	</div>
+    <!-- /header -->
+
+    <!-- main -->
+    <div class="main wrapper">
+		<div class="addr clf">
+			<div class="txt">您的位置： <a href="">首页</a> &gt; 个人中心</div>
+		</div>
+        <div class="member">
+            <div class="ltnva">
+                <h3 id="dddd">管理中心</h3>
+                <dl>
+                    <dd><a href="">投标管理</a></dd>
+                    <dd><a href="">中标管理</a></dd>
+                    <dd><a href="">评价管理</a></dd>
+                </dl>
+                <h3 class="mt">商城订单管理</h3>
+                <dl>
+                    <dd><a href="">发布商品</a></dd>
+                    <dd><a href="">仓库中的商品</a></dd>
+                    <dd><a href="">已卖出的商品</a></dd>
+                    <dd><a href="">评价管理</a></dd>
+                </dl>
+                <h3 class="mt">问答管理</h3>
+                <dl>
+                    <dd><a href="">我的提问</a></dd>
+                    <dd><a href="">我的回答</a></dd>
+                </dl>
+                <h3 class="mt">个人中心</h3>
+                <dl>
+                    <dd><a href="">公司简介</a></dd>
+                    <dd><a href="">公司模板及图片管理</a></dd>
+                    <dd><a href="">设计师管理</a></dd>
+                    <dd><a href="">案例相册管理</a></dd>
+                    <dd><a href="">查看主页</a></dd>
+                </dl>
+            </div>
+            <script>
+                $(document).ready(
+                    $(".ltnva h3").click(function(){
+                        $(this).toggleClass("hv");
+                        $(this).next("dl").slideToggle();
+                    })
+                );
+            </script>
+            <div class="rgcon">
+                <div class="enterprise user">
+                    <div class="userinfo">
+                        <div class="lt">
+                            <div class="lt1">
+                                <div class="img"><img src="images/member_img1.jpg" alt=""></div>
+                                <p><a href="">修改密码</a></p>
+                            </div>
+                            <h3><span>我爱装修</span>，欢迎您</h3>
+                            <p>积分值：2分    活跃值：100</p>
+                            <p>消息提醒（0）</p>
+                        </div>
+                        <div class="rg">
+                            <div class="mail"><div class="img" style="margin-top:8px"><img src="images/member_ico1.png" alt=""></div><p><b>邮箱绑定</b></p><p>未绑定  <a href="">立即绑定</a></p></div>
+                            <div class="mail"><div class="img"><img src="images/member_ico2.png" alt=""></div><p><b>手机绑定</b></p><p>未绑定  <a href="">立即绑定</a></p></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="unifybox mt">
+                        <div class="tt"><a href="" class="fr">更多&gt;</a><span>最近投标</span></div>
+                        <div class="con">
+                            <ul>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="box1">
+                                        <p class="c1">￥200000</p>
+                                        <p class="c2">发布时间</p>
+                                        <p class="c3">2020-07-15</p>
+                                    </div>
+                                    <div class="box2">
+                                        <p class="c1">背景大兴区西红门理想城2室1厅1卫  <span class="rd">急</span></p>
+                                        <p class="c2">招标编号：<b>E2020070</b>   装修时间：<b>2020-10-25</b></p>
+                                        <p class="c2">装修类型：<b>半包</b>    量房时间：<b>周末量房</b></p>
+                                    </div>
+                                    <div class="box3">
+                                        <p>投标数：（3）</p>
+                                        <a href="" class="btn-xq"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+	</div>
+    <!-- /main -->
+    
+    <!-- footer -->
+    <div class="footer wrapper">
+		<div class="friendship">
+			<div class="head">
+				<span><a href="#">申请友情链接&gt;&gt;</a></span>
+				<h2>友情链接</h2>
+			</div>
+			<div class="body">
+				<ul>
+					<li><a href="#">上海酒店家具</a></li>
+					<li><a href="#">广州房产网</a></li>
+					<li><a href="#">制冷快报</a></li>
+					<li><a href="#">广州装修网</a></li>
+					<li><a href="#">广州房产网</a></li>
+					<li><a href="#">实木地板</a></li>
+					<li><a href="#">广州装修网</a></li>
+					<li><a href="#">广州W</a></li>
+					<li><a href="#">广州厂房网</a></li>
+					<li><a href="#">广州房产网</a></li>
+					<li><a href="#">广州赶场网</a></li>
+					<li><a href="#">广州分类信息</a></li>
+					<li><a href="#">中国涂料网</a></li>
+					<li><a href="#">广州信息网</a></li>
+					<li><a href="#">广州房产网</a></li>
+					<li><a href="#">O2O平台</a></li>
+					<li><a href="#">广州办公室装修</a></li>
+					<li><a href="#">安家啦</a></li>
+					<li><a href="#">佛山二手房</a></li>
+					<li><a href="#">新乡房产信息网</a></li>
+					<li><a href="#">武汉装修</a></li>
+					<li><a href="#">丹东房产</a></li>
+					<li><a href="#">实验室装修</a></li>
+					<li><a href="#">醴陵房产网</a></li>
+					<li><a href="#">广州办公家具</a></li>
+					<li><a href="#">广州二手房</a></li>
+					<li><a href="#">广州家教网</a></li>
+					<li><a href="#">第一家居团购网</a></li>
+					<li><a href="#">实木衣柜</a></li>
+					<li><a href="#">门帘</a></li>
+					<li><a href="#">广州装修公司</a></li>
+					<li><a href="#">广州信息网</a></li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+		<!--friendship end-->
+		<div class="copyright">
+			<div class="head">
+				<a href="#">关于居家装</a><em>|</em><a href="#">加入我们</a><em>|</em><a href="#">免责声明</a><em>|</em><a href="#">联系我们</a><em>|</em><a href="#">建议与投诉</a><em>|</em><a href="#">友情链接</a>
+			</div>
+			<div class="body">
+				<dl class="first fl">
+					<dt>业主指南</dt>
+					<dd><a href="#">如何发布招标</a></dd>
+					<dd><a href="#">装修招标保障</a></dd>
+					<dd><a href="#">纠纷理赔规则</a></dd>
+				</dl>
+				<dl class="second fl">
+					<dt>公司指南</dt>
+					<dd><a href="#">如何参与投标</a></dd>
+					<dd><a href="#">赔付保障介绍</a></dd>
+					<dd><a href="#">加入赔付保障</a></dd>
+				</dl>
+				<div class="logo fl">
+					<a href="#" title="居家装"><img src="images/logo_02.png" alt="居家装"></a>
+					<p>全国最专业的装修平台 www.XXX</p>
+				</div>
+				<dl class="third fl">
+					<dt>支付方式</dt>
+					<dd><a href="#">装修公司会员怎样充值</a></dd>
+					<dd><a href="#">如何对装修公司收费</a></dd>
+					<dd><a href="#">发招标收业主费用吗</a></dd>
+				</dl>
+				<dl class="fr last">
+					<dt>关注我们</dt>
+					<dd class="d1"><a href="#">居家装新浪微博</a></dd>
+					<dd class="d2"><a href="#">居家装腾讯微博</a></dd>
+					<dd class="d3"><a href="#">居家装官方微信</a></dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+			<div class="foot">
+				<p>© 2020 XXX 居家装--全国最专业的装修平台 保留所有权利</p>
+				<p>全国最专业的装修平台 居家装装修网 XXX     技术支持：卓杰科技</p>
+			</div>
+		</div>
+		<!--copyright end-->
+		
+	</div>
+    <!-- /footer -->
+<!--wrapper end-->
+	
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>招聘行程</title>
+	<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/aos.css">
+	<link rel="stylesheet" href="./css/public.css">
+	<link rel="stylesheet" href="./css/process.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/aos.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav_con">
+			<a href="http://www.XXX.com/"><img class="logo" src="images/logo.png" width="13%"/></a>
+			<ul class="nav_ul">
+				<li class="nav_li"><a href="index.html">校招首页</a><div></div></li>
+				<li class="nav_li"><a href="about.html">走进XXX</a><div></div></li>
+				<li class="nav_li"><a href="plan.html">职业发展规划</a><div></div></li>
+				<li class="nav_li"><a href="product.html">产品介绍</a><div></div></li>
+				<li class="li_ep">校招流程
+					<div class="li_list"><a href="process.html">招聘流程</a></div>
+					<div class="li_list"><a href="faq.html">校招FAQ</a></div>
+					<div class="li_list"><a href="join.html">校招岗位</a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="game_banner"></div>
+	<div class="join">
+		<div class="join_tab_main">
+			<div class="join-infro">
+				<div class="join-infro_title">招聘流程</div>
+				<span class="join-infro_title2">Recruitment Process</span>
+			</div>
+			<div class="process_pic">
+				<img src="./images/provesspic.png"/>
+			</div>
+			<div class="plan_infro">招聘行程</div>
+			<div class="plan_table1" data-aos="fade-up">
+				<table cellspacing="0">
+					<tr>
+						<td class="plan_td" style="width: 150px;">省份</td>
+						<td class="plan_td">地点</td>
+						<td class="plan_td">时间</td>
+					</tr>
+					<tr>
+						<td rowspan="2">广东</td>
+						<td style="width: 200px; height: 120px;">华南理工大学（大学城校区）<br>教学楼B1-106<br>（宣讲会后安排笔试）</td>
+						<td>2017年9月20日<br>19:00--21:00</td>
+					</tr>
+					<tr>
+						<td style="height: 120px;">中山大学（大学城校区）<br>数据科学与计算机学院大楼<br>A101讲学厅<br>（宣讲会后安排笔试）</td>
+						<td>2017年10月11日<br>15:00-18:00</td>
+					</tr>
+					<tr class="plan_tr">
+						<td>湖南</td>
+						<td>中南大学校本部<br>科教南楼302</td>
+						<td>2017年10月21日<br>16:30</td>
+					</tr>
+				</table>
+			</div>
+		</div>	
+	<div class="footer">
+		<div class="footer-infro">
+			广州XXX信息科技有限公司版权所有<br>Copyright © 2020 XXX.com All Right<br>
+			广州XXX信息科技有限公司 粤ICP备XXX 
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	$(function() {
+		function play() {
+		};
+		play.prototype = {
+			NavHover:function() {
+				$(".nav_li").hover(function() {
+					$(this).find('div').stop().animate({"width":"100%"},300);
+				},function() {
+					$(this).find('div').stop().animate({"width":"0px"},200);
+				});
+			}
+		};
+		var Play = new play()
+		Play.NavHover();
+	});
+	AOS.init({
+		  offset: 200,
+		  duration: 600,
+		  easing: 'linear',
+		  delay: 100,
+		  once: "ture", //是否只执行一次
+		});	
+</script>

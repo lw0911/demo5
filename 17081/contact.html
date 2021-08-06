@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XXX网站</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript">
+ $(function(){
+	 //导航定位
+	 $(".nav li:eq(6)").addClass("navCur");
+	 })
+</script>
+</head>
+
+<body>
+ <div class="header">
+  <div class="width1108">
+   <h1 class="logo"><a href="index.html"><img src="images/logo.png" width="324" height="85" /></a></h1>
+   <div class="phone">
+    <span>在线咨询</span> <strong>400-0000-000</strong>
+   </div><!--phone/-->
+   <div class="clears"></div>
+  </div><!--width1108/-->
+ </div><!--header/-->
+ <div class="nav">
+  <ul class="width1108">
+   <li><a href="index.html">主页<br /><span>HOME</span></a></li>
+   <li><a href="case.html">作品案例<br /><span>PRODUCT</span></a></li>
+   <li><a href="music.html">精端设备<br /><span>EQUIPMENT</span></a></li>
+   <li><a href="video.html">拍摄花絮<br /><span>SCENCS</span></a></li>
+   <li><a href="about.html">关于我们<br /><span>ABOUT US</span></a></li>
+   <li><a href="new.html">新闻动态<br /><span>NEWS</span></a></li>
+   <li><a href="contact.html">联系我们<br /><span>CONTACT</span></a></li>
+   <div class="clears"></div>
+  </ul><!--width1108/-->
+ </div><!--nav/-->
+ <div class="Title2 white">
+  <h2 class="width1108">联系我们 <span>Contact Us</span></h2>
+ </div><!--Title2/-->
+ <div class="cont width1108">
+  <div class="contText">
+   <strong>策划+创意+设计+经验</strong><br />
+   <i>用嘴完善的方案 满足客户的需求 用最严谨的态度 做好每一项工作</i><br />
+   <span>With the mouth the perfect solution to meet the needs of customers with the most rigorous attitude to every task</span>
+  </div><!--contText/-->
+  <h3 class="Title3">联系我们/Contact Us</h3>
+ </div><!--cont/--> 
+ <!--百度地图-->
+ <!--引用百度地图API-->
+  <style type="text/css">
+        html,body{margin:0;padding:0;}
+        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+  <!--百度地图容器-->
+  <div style="width:100%;height:300px;" id="dituContent"></div>
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.487899,31.249162);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"XXX网站",content:"XXX网站",point:"121.478413|31.240764",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+  </script>
+ <!--百度地图-->
+ <div class="contacts width1108">
+  <div class="Address">
+   <strong>公司地址：</strong><br /><br />
+   XXX<br /> hanghai City, Putuo District sadjflsdajlfa asdf 阿萨德发斯蒂芬<br /><br />
+   <strong>联系电话：</strong><span>400-000-0000</span>
+   <br /><br />
+   <table>
+    <tr>
+     <td width="150"><img src="images/weixin2.jpg" width="141" height="141" /></td>
+     <td style="font-weight:bold; font-size:14px;" valign="top">
+      在线QQ：919191<br />
+      <img src="images/qq.jpg" width="132" height="29" /><br />
+      邮箱：serevas@webqin.net
+     </td>
+    </tr>
+   </table>
+  </div><!--Address/-->
+  <form action="#" method="get" class="messages">
+   <label>姓名</label>
+   <input type="text" class="messLen" />
+   <label>Email</label>
+   <input type="text" class="messLen" />
+   <label>联系电话</label>
+   <input type="text" class="messLen" />
+   <input type="submit" value="SUBMIT" class="messSub" />
+  </form><!--messages/-->
+  <div class="messages mright">
+   <label>姓名</label>
+   <textarea></textarea>
+   <label>验证码</label>
+   <img src="images/yzm.jpg" width="102" height="42" />
+   <div style="height:20px;"></div>
+   <input type="text" class="messLen" />
+  </div><!--messages/-->
+  <div class="clears"></div>
+ </div><!--contacts/-->
+ <div class="footNav">
+  <a href="index.html">主页</a> | 
+  <a href="case.html">作品案例</a> | 
+  <a href="music.html">精端设备</a> | 
+  <a href="video.html">拍摄花絮</a> | 
+  <a href="about.html">关于我们</a> | 
+  <a href="new.html">新闻动态</a> | 
+  <a href="contact.html">联系我们</a>
+ </div><!--footNav/-->
+ <div class="footer">
+  <div class="width1108">
+   <div class="footwx">
+    <img src="images/weixin.jpg" width="68" height="68" />
+   </div><!--footwx/-->
+   <div class="copy">
+    ©2020<br />
+    版权所有 &copy; XXX网站有限公司<br />
+    
+   </div><!--ftAdderss/-->
+   <div class="ftAddress">
+    XXX<br />
+    Address:XXX
+   </div><!--ftAddress/-->	
+   <div class="ftLink">
+    <a href="#"><img src="images/link1.jpg" width="38" height="38" /></a>
+    <a href="#"><img src="images/link2.jpg" width="38" height="38" /></a>
+    <a href="#"><img src="images/link3.jpg" width="38" height="38" /></a>
+   </div><!--ftLink/-->
+   <div class="clears"></div>
+  </div><!--width1108/-->
+ </div><!--footer/-->
+</body>
+</html>

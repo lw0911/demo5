@@ -1,0 +1,253 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="名榜" http-equiv="keywords">
+<meta name="description" content="名榜,wangid">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>名榜模版</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/children.css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="top_bg" id="top_bg">
+	<div class="top_line"></div>
+	<div class="top_main">
+		<div class="top_logo">
+			<a href='./'><img src="images/logo.png"></a>
+		</div>
+		<div class="top_tel">
+			<p>
+				<img src="images/write_icon.png">
+				<a href="message.html">在线留言</a>
+			</p>
+			<h1>
+				<span>贵阳专卖店 &nbsp;诚招各市县经销商</span>
+				<span>XXX</span>	
+			</h1>
+			  
+		</div>
+	</div>
+</div>
+
+<!--导航栏目Ŀ-->
+<div class="dh_bg">
+	<div class="dh_main">
+		<ul>
+			<li><a href="index.html">网站首页</a></li>
+			<li class="cur"><a href="about.html">关于我们</a></li>
+			<li><a href="productslist.html">产品中心</a></li>
+			<li><a href="productslist.html">案例展示</a></li>
+			<li><a href="newslist.html">新闻中心</a></li>
+			<li><a href="contact.html">联系我们</a></li>
+        </ul>
+	</div>
+</div>
+
+<!--banner图-->
+<div class="zy_banner">
+	<img src="images/zy_banner.jpg">
+</div>
+
+<!--zy_con-->
+<div class="zy_con_wid">
+	<div class="zy_title">
+		<h1>
+			<p>a</p>
+			<p>
+				<span>关于我们</span>
+				<a>bout us</a>
+			</p>
+		</h1>
+	</div>
+	<div class="zy_con_bg">
+		<img src="images/zy_con_bg.png">
+	</div>
+	<div class="zy_conbox">
+		<div class="zy_nav_left">
+			<ul>
+				<li class="cur"><a href="#">公司简介</a></li>
+				<li><a href="#">企业文化</a></li>
+				<li><a href="#">发展历程</a></li>
+				<li><a href="#">企业荣誉</a></li>
+			</ul>
+			<dl>
+				<dt><a>c</a><span>联系我们</span></dt>
+				<dd>地址：贵阳市云岩区下合群路达亨大厦16-6号</dd>
+				<dd>电话：0851-86576299</dd>
+				<dd>联系人：Bill先生</dd>
+			</dl>
+		</div>
+		<div class="zy_con_right">
+			<div class="weizhi">
+				<h1>
+					当前位置：<a href="index.html">首页</a> > <a href="about.html">关于我们</a> > <span>公司简介</span>
+				</h1>
+			</div>
+			<div class="zy_con_about">
+				<div class="play" id="play">
+					<a href="javascript:" id="next">>><div class="nextImg"><img width="80" height="54" /></div></a>
+					<a href="javascript:" id="prev"><<<div class="prevImg"><img width="80" height="54" /></div></a>
+					<ol></ol>
+					<ul>
+						<li><img src="images/about_pic01.jpg" /></li>
+						<li><img src="images/about_pic01.jpg" /></li>
+						<li><img src="images/about_pic01.jpg" /></li>
+					</ul>
+				</div>
+				<script type="text/javascript">
+					$(function(){
+						var oDiv = $("#play");  //外部盒子
+						var count = $("#play ul li").length;  //内部图片数量
+						var countwidth = $("#play ul li").width();  //图片边框宽度
+						var oUl = $("#play ul").css("width",count*countwidth);  //ul li总宽度
+						var now = 0;
+						var next = $("#next");
+						var prev = $("#prev");
+						//点击按钮数量
+						for(var i = 0; i < count; i++){
+							$("#play ol").append("<li>" + Number(i+1) + "</li>");
+							$("#play ol li:first").addClass("active");
+						}
+						//左右点击图片获取
+						var nI = $("#play ul li:nth-child(2)").find("img").attr("src");
+						$(".nextImg img").attr("src",nI);
+						var pI = $("#play ul li:last-child").find("img").attr("src");
+						$(".prevImg img").attr("src",pI);
+						//按钮点击事件
+						var aBtn = $("#play ol li");
+						aBtn.each(function(index){
+							$(this).click(function(){
+								clearInterval(timer);
+								tab(index);
+								nextImg();
+								prevImg();
+								timer=setInterval(autoRun,3000);
+							});
+						});
+						//图片循环事件
+						function tab(index){
+							now = index;
+							aBtn.removeClass("active");
+							aBtn.eq(index).addClass("active");
+							oUl.stop(true,false).animate({"left":-countwidth * now},400);
+						}
+						//下一张按钮图片切换
+						function nextImg(){
+							var d = $("#play ul li").find("img").eq(now+1).attr("src");
+							var nI = $("#play ul li:nth-child(1)").find("img").attr("src");
+							$(".nextImg").find("img").attr("src",d);
+							if(now==count-1){
+								$(".nextImg").find("img").attr("src",nI);
+							}
+						}
+						//上一张图片按钮切换
+						function prevImg(){
+							var f = $("#play ul li").find("img").eq(now-1).attr("src");
+							$(".prevImg").find("img").attr("src",f);
+						}
+						
+						//下一张点击事件
+						next.click(function(){
+							clearInterval(timer);
+							now++;
+							if(now==count){
+								now=0;
+							}
+							tab(now);
+							nextImg();
+							prevImg();
+							timer=setInterval(autoRun, 3000);
+						});
+						//上一张点击事件
+						prev.click(function(){
+							clearInterval(timer);
+							now--;
+							if(now==-1){
+								now=count-1;
+							}
+							tab(now);
+							nextImg();
+							prevImg();
+							timer=setInterval(autoRun, 3000);
+						});
+						//自动轮播定义
+						function autoRun(){
+							now++;
+							if(now==count){
+								now=0;
+							}
+							tab(now);
+							nextImg();
+							prevImg();
+						};
+						var timer=setInterval(autoRun, 3000);
+					});
+				</script>
+				<div class="zy_con_txtbox">
+					<p>蓝天豚绿色建筑新材料有限公司，简称（湖南蓝天豚）是集研发、生产、销售、教学一体的高新技术企业。注册于湖南长沙市岳麓高新园区，2015年下半年动工兴建的湖南硅藻泥新材料千亿产业园（简称中国硅谷）座落长沙北郊湖南轻工产业园。“中国硅谷”规划用地3000亩，生产生活办公建筑面积31万㎡，项目总投资50.9亿元人民币。主要产品为绿色建筑装饰材料：硅藻泥内墙、外墙功能性涂料、建筑隔热防火保温材料、墙体结构材料、轻质隔墙材料、墙体腻子及硅藻泥化妆品、功能性摆件挂件、内饰艺术品等。2020年全线完工之后，年工业产值达千亿元，可吸纳近6000人就业蓝天豚绿色建筑新材料有限公司，简称（湖南蓝天豚）是集研发、生产、销售、教学一体的高新技术企业。
+					</p>
+					<p>注册于湖南长沙市岳麓高新园区，2015年下半年动工兴建的湖南硅藻泥新材料千亿产业园（简称中国硅谷）座落长沙北郊湖南轻工产业园。“中国硅谷”规划用地3000亩，生产生活办公建筑面积31万㎡，项目总投资50.9亿元人民币。主要产品为绿色建筑装饰材料：硅藻泥内墙、外墙功能性涂料、建筑隔热防火保温材料、墙体结构材料、轻质隔墙材料、墙体腻子及硅藻泥化妆品、功能性摆件挂件、内饰艺术品等。2020年全线完工之后，年工业产值达千亿元，可吸纳近6000人就业。
+					</p>
+					<p>已经动工的一期工程投资约6.5亿元，占地300亩，建筑面积9万平方米，除厂房之外，园区内将有12000平方的职业学校，4000平米的专家楼（院士工作站），8000平米的硅藻泥博物馆（产品展示中心）等等。2015年年底一期工程将完全建成投产，年产量100万吨，年产值300亿元，蓝天豚硅藻泥千亿产业园将成为集产、学、研于一体的绿色建筑装饰材料硅藻泥新材料基地。湖南蓝天豚目前已经开始市场优质企业及优质品牌的并购。
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--底部-->
+<div class="endbg">
+	<div class="endmain">
+		<div class="endfoot">
+			<dl>
+				<dt>关于我们</dt>
+				<dd><a href="#">公司简介</a></dd>
+				<dd><a href="#">企业文化</a></dd>
+				<dd><a href="#">发展历程</a></dd>
+				<dd><a href="#">企业荣誉</a></dd>
+			</dl>
+			<dl>
+				<dt>产品中心</dt>
+				<dd><a href="#">平湖系列</a></dd>
+				<dd><a href="#">小肌理系列</a></dd>
+				<dd><a href="#">硅藻布系列</a></dd>
+				<dd><a href="#">硅藻砖系列</a></dd>
+			</dl>
+			<dl>
+				<dt>新闻中心</dt>
+				<dd><a href="#">公司动态</a></dd>
+				<dd><a href="#">行业知识</a></dd>
+				<dd><a href="#">行业新闻</a></dd>
+			</dl>
+			<dl>
+				<dt>案例展示</dt>
+				<dd><a href="#">内墙案例展示</a></dd>
+				<dd><a href="#">外墙案例展示</a></dd>
+				<dd><a href="#">家居案例展示</a></dd>
+			</dl>
+			<dl>
+				<dt>在线留言</dt>
+				<dd><a href="#">在线留言</a></dd>
+			</dl>
+			<dl>
+				<dt>联系我们</dt>
+				<dd><a href="#">联系我们</a></dd>
+			</dl>
+			<h1>
+				<span>免费服务热线</span>
+				<a>XXX</a>
+			</h1>
+		</div>
+		<p><span>联系地址：XXX</span><span>ICP备案信息：XXX</span><span>技术支持：<a href="#">XXX</a>&nbsp;&nbsp;&nbsp;<a href="#">即时通管理</a>&nbsp;&nbsp;&nbsp;<a href="#">后台登录</a></span>
+		</p>
+		<p>访问统计：浏览总量17195次 /今日浏览13次&nbsp;&nbsp;&nbsp;建议(1024*768) IE9.0以上浏览器浏览本站 </p>
+		<p><a href="#">触屏版</a>丨<a href="#">电脑版</a></p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<title>绿色的农产品贸易公司官网静态html模板</title>
+<meta name="keywords" content="<?php echo $webkey?>" />
+<meta name="description" content="<?php echo $webms?>" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	function timer(opj){
+		$(opj).find('ul').animate({
+			marginTop : "-80px"  
+			},500,function(){  
+			$(this).css({marginTop : "0rem"}).find("li:first").appendTo(this);  
+		})  
+	}
+	$(function(){ 
+		var num = $('.notice_active').find('li').length;
+		if(num > 1){
+		   var time=setInterval('timer(".notice_active")',3500);
+			$('.gg_more a').mousemove(function(){
+				clearInterval(time);
+			}).mouseout(function(){
+				time = setInterval('timer(".notice_active")',3500);
+			}); 
+		}
+		
+		$(".news_ck").click(function(){
+			location.href = $(".notice_active .notice_active_ch").children(":input").val();
+		})
+	});
+</script>
+<SCRIPT language=javascript src="js/Designer.js"></SCRIPT>
+</head>
+<body>
+<div class="box">
+  <div class="top_box">
+    <div class="top">
+      <div class="logo"><img src="images/logo.jpg" alt="XXX" title="XXX"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">网站首页</a></li>
+          <li><a href="news_list.html">新闻资讯</a></li>
+          <li><a href="about.html">公司简介</a></li>
+          <li><a href="product.html">可富产品</a></li>
+          <li><a href="ryzz.html">荣誉资质</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="banner fl"></div>
+
+<div class="clear"></div>
+<div class="box fl">
+  <div class="page_route"> 当前位置 > <a href="index.html">网站首页</a> > <a href="about.html">公司简介</a></div>
+  <div class="page_title">科富产品<span>Kefu Products</span></div>
+  <div class="page_contact">
+    <div class="product_list">
+      <ul>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li><li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+        <li id="product_bg"><a href="zzy.html"><span>产品名称</span></a><b>产品名称产品名称产品名称产品名称产品名称产品名称</b><i><img src="images/tu.jpg" alt="XXX" title="XXX" /></i></li>
+      </ul>
+    </div>
+    <div class="page_1 fl"><a href="#">上一页</a><a href="#">首页</a><a href="#">尾页</a><a href="#">下一页</a></div>
+</div>
+<div class="bottom fl">
+  <div class="bottom_topbox"><div class="bottom_leftbox"><img src="images/bottom_logo.jpg" alt="XXX" title="XXX" /><span>经销地址：XXX <br />
+    生产地址：XXX<br />
+    联系电话：XXX </span></div>
+    <div class="bottom_rightbox"><img src="images/erweima.jpg" alt="XXX" title="XXX"/><img src="images/erweima.jpg" alt="XXX" title="XXX"/></div>
+  </div>
+  <div class="bottom_bottombox fl">版权所有：XXX | 备案号：0000000000号 <br />
+    技术支持：XXX</div>
+</div>
+</body></html>

@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>教师查询</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body>
+		<!--top-->
+		<div class="box" id="top">
+			<div class="w1200 clearfloat">
+				<div class="topLeft clearfloat">
+					<a href=""><span class="topIcon1"></span>手机版</a>
+					<a href=""><span class="topIcon2"></span>登录</a>
+				</div>
+				<div class="topRight clearfloat">
+					<div class="topRightLaug"><a href=""><span class="topIcon3"></span>English</a><i></i></div>
+					<div class="topRightPeople">开通人数:3680<em>|</em></div>
+				</div>
+			</div>
+		</div>
+		<!--/top-->
+		
+		<!--logo-->
+		<div class="box bgFFF" id="logoBox">
+			<div class="w1200 clearfloat">
+				<div class="logoLeft">
+					<a href=""><img src="images/logo.png"/></a>
+					
+				</div>
+				<div class="logoRight clearfloat">
+					<div class="logoRightWrap">
+						<span class="logoIcon1"></span>
+						<div class="logoRightInner">
+							<h3>电话</h3>
+							<p>010-88888888</p>
+						</div>
+					</div>
+					<div class="logoRightWrap">
+						<span class="logoIcon2"></span>
+						<div class="logoRightInner">
+							<h3>地址</h3>
+							<p>XXX</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/logo-->
+		
+		<!--nav-->
+		<div class="box" id="nav">
+			<div class="w1200 clearfloat">
+				<div class="navWrap">
+					<ul class="clearfloat">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="talent.html">杰出人才</a></li>
+						<li><a href="unit.html">学院列表</a></li>
+						<li><a href="displine.html">学科列表</a></li>
+						<li class="active"><a href="teacher.html">教师查询</a></li>
+						<li><a href="information.html">教研信息</a></li>
+						<li><a href="contact.html">关于主页</a></li>
+					</ul>
+				</div>
+				<div class="navSearch">
+					<input class="txt" type="text" name="" id="search" value="请输入关键字"/>
+					<input class="sub" type="submit" name="" id="" value="" />
+				</div>
+			</div>
+		</div>
+		<!--/nav-->
+		
+		<!--banner-->
+		<div class="box" id="bannerBox">
+			<img src="temp/banner_cont.jpg"/>
+		</div>
+		<!--/banner-->
+		
+		<!--main-->
+		<div class="box">
+			<div class="contTit">
+				<div class="w1200">
+					<div class="contTitWrap">
+						<h2>教师查询</h2>
+						<h3>Teacher inquiry</h3>
+					</div>
+				</div>
+			</div>
+			<div class="w1200">
+				<div class="teachSearch teachSearch1 clearfloat">
+					<p>学院：</p>
+					<select class="teachSearchDown">
+						<option value="">-不限-</option>
+						<option value="">材料科学与工程学院</option>
+						<option value="">交通运输学院</option>
+						<option value="">管理学院</option>
+						<option value="">土木工程学院</option>
+						<option value="">生态环境与城市建设学院</option>
+						<option value="">体育教研部</option>
+						<option value="">数理学院</option>
+						<option value="">马克思主义学院</option>
+					</select>
+					<p>学科专业：</p>
+					<select class="teachSearchDown">
+						<option value="">-不限-</option>
+						<option value="">材料科学与工程学院</option>
+						<option value="">交通运输学院</option>
+						<option value="">管理学院</option>
+						<option value="">土木工程学院</option>
+						<option value="">生态环境与城市建设学院</option>
+						<option value="">体育教研部</option>
+						<option value="">数理学院</option>
+						<option value="">马克思主义学院</option>
+						<option value="">马克思主义学院</option>
+						<option value="">马克思主义学院</option>
+					</select>
+					<p>招生专业：</p>
+					<select class="teachSearchDown">
+						<option value="">-不限-</option>
+						<option value="">材料科学与工程学院</option>
+						<option value="">交通运输学院</option>
+						<option value="">管理学院</option>
+						<option value="">管理学院</option>
+						<option value="">管理学院</option>
+						<option value="">管理学院</option>
+						<option value="">管理学院</option>
+						<option value="">土木工程学院</option>
+						<option value="">土木工程学院</option>
+						<option value="">生态环境与城市建设学院</option>
+						<option value="">体育教研部</option>
+						<option value="">数理学院</option>
+						<option value="">数理学院</option>
+						<option value="">马克思主义学院</option>
+					</select>
+				</div>
+				
+				<div class="teachSearch teachSearch2 clearfloat">
+					<p>职称：</p>
+					<div class="teachChoose teachZc clearfloat">
+						<span>不限</span><span>教授 </span><span>副教授</span><span>讲师</span><span>助教</span>
+						<span>研究员</span><span>副研究员</span><span>助理研究员</span><span>研究实习员</span><span>高级工程师 </span>
+						<span>工程师</span><span>助理工程师</span><span>其他</span>
+					</div>
+				</div>
+				
+				<div class="teachSearch teachSearch3 clearfloat">
+					<p>荣誉：</p>
+					<div class="teachChoose teachRy clearfloat">
+						<span>不限</span><span>中国工程院院士</span><span>中国科学院院士</span><span>国务院学科评议组成员</span><span>长江学者特聘教授</span>
+						<span>长江学者讲座教授</span><span>青年长江学者</span><span>国家级突出贡献专家</span><span>世纪百千万人才工程</span><span>国家杰出青年科学基金获得者 </span>
+						<span>全国高等学校百名教学名师奖获得者</span><span>教育部跨世纪优秀人才基金获得者</span><span>教育部跨世纪优秀人才基金获得者</span><span>重庆高等学校学科拔尖人才</span><span>省中青年学科带头人</span>
+					</div>
+				</div>
+				
+				<div class="teachSearch teachSearch4 clearfloat">
+					<p>字母：</p>
+					<div class="teachChoose teachZm clearfloat">
+						<span>不限</span><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span>
+						<span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span>
+						<span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
+					</div>
+				</div>
+				
+				<div class="teachSearch teachSearch5 clearfloat">
+					<p>字母：</p>
+					<div class="teachSearchDown">
+						<div class="selectW"><input type="text" name="" id="" value="" /></div>
+					</div>
+					<p>研究方向：</p>
+					<div class="teachSearchDown">
+						<div class="selectW"><input type="text" name="" id="" value="" /></div>
+					</div>
+					<button class="teachSure">确定</button>
+					<button class="teachClose">重置</button>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="box bgFFF" id="teacher">
+			<div class="w1200">
+				<ul class="talentList clearfloat">
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img1.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img2.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img3.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img4.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img5.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img6.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img7.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+						<li><a href="">
+							<div class="talentPic"><img src="temp/cont_ten_img8.jpg"/></div>
+							<div class="talentInner">
+								<h2><span>张明远</span>特聘教授</h2>
+								<h3>简介：</h3>
+								<p>
+	         				<span>
+	         				 	张明远，1957-，男，汉族，广东揭阳人，工学博士。现任中南大学资源与安全工程学院教授、博士生导师，一级安全评价师；国务院政府津贴获得者...
+	         				</span>
+								</p>
+							</div>
+						</a></li>
+					</ul>
+					
+					<div class="page">
+						<p>共155条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第<span>1</span>页/<span>24</span></p>
+						<em>首页</em>
+						<i>上一页</i>
+						<i>下一页</i>
+						<em>尾页</em>
+						<p>转到 <input class="txt" type="text" name="" id="" value="15" /> 页  <input class="sub" type="submit" name="" id="" value="GO" /></p> 
+					</div>
+			</div>
+			
+		</div>
+		<!--/main-->
+		
+		<!--footer-->
+		<div class="box" id="footer">
+			<div class="w1200 clearfloat">
+				<div class="footerLeft">
+					<p>总访问量： 711723	</p>
+					<p>今日访问量：3425</p>
+					<p>Copyright © <a href="http://www.adminbuy.cn/" title="17sucai">网站模板</a>   XXX   </p>
+					<p>XXX 350118</p>
+				</div>
+				<div class="footerRight">
+					<img src="images/ewm.jpg"/>
+				</div>
+			</div>
+		</div>
+		<!--/footer-->
+	</body>
+</html>

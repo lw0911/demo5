@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>神经外科</title>
+    <meta name="keywords" content="神经外科" />
+    <meta name="description" content="神经外科" />
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--<link rel="stylesheet" href="css/swiper.min.css">-->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bai.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/selectivizr-min.js"></script>
+    <script>
+       (function() {
+         if (!
+         /*@cc_on!@*/
+         0) return;
+         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+         var i= e.length;
+         while (i--){
+             document.createElement(e[i])
+         }
+    })()
+    </script>
+    <![endif]-->
+
+
+</head>
+<script> 
+$(function(){
+    var hei=($('.art_patient .nav_patient').offset().top)-10;
+    var left=$('.art_patient .nav_patient' ).offset().left;
+     $(document).on("scroll",function(){
+            var scroll_top=$(this).scrollTop();
+            if(scroll_top>hei){
+                $('.nav_patient').css({"position":"fixed",'top':'10px','left':left });
+            }else{$('.nav_patient').css({"position":"absolute",'top':'40px','left':'0'});
+        }
+     })
+})
+   </script>
+
+<body>
+    
+
+<div class="header container"  style="position:fixed ;top:0;left:0;right:0;">
+    <a href="index.html" class="logo pull_left" style="width:200px;height:100px;">
+        <img src="img/icon/logo.png" alt="" >
+    </a>
+    <div class="pull_right">
+        <ul class="main_nav content">
+            
+            <li class="main_li" index="关于XXX">
+                <p><a href="about.html">关于XXX</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="about.html">公司简介</a></li>
+                    
+                    <li><a href="items.html">代理项目</a></li>
+                    
+                    <li><a href="partner.html">合作伙伴</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="hzzx" index="患者中心">
+                <p><a href="patient.html">患者中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">心胸外科</a></li>
+                    
+                    <li><a href="patient-1.html">神经外科</a></li>
+                    
+                    <li><a href="patient-2.html">颌面外科</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" id="cpzx" index="产品中心">
+                <p><a href="patient.html">产品中心</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="patient.html">胸骨固定产品</a></li>
+                    
+                    <li><a href="patient.html">漏斗胸产品</a></li>
+                    
+                    <li><a href="patient.html">神经外内科固定产品</a></li>
+                    
+                    <li><a href="patient.html">颌面外科系列产品</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="新闻动态">
+                <p><a href="news.html">新闻动态</a><span>•</span></p>
+                <ul class="sec_nav">
+                    <li><a href="news.html">公司新闻</a></li>
+                    
+                    <li><a href="news.html">展会信息</a></li>
+                    
+                    <li><a href="news.html">行业资讯</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="main_li" index="联系我们">
+                <p><a href="contact.html">联系我们</a></p>
+            </li>
+            
+        </ul>
+    </div>
+    <a href="#" class="lang">EN</a>
+    <div class="brush"></div>
+</div>
+
+<script>
+$('#hzzx,#cpzx').each(function(){
+    $(this).find(' p > a').eq(0).attr('href',$(this).find(' ul > li > a').eq(0).attr('href'))
+})
+</script>
+
+
+    <div class="banner ban_patient"></div>
+    <div class="show container relative">
+        <div class="title">
+    <h3>神经外科</h3>
+    <ul class="content currentpage">
+        <li class="home_current"><a href="">首页</a></li> <span>></span> <li><a href="patient/index.html">患者中心</a></li> <span>></span> <li><a href="patient/p2/index.html" class="current">神经外科</a>
+    </ul>
+</div>
+
+<script>
+$('.home_current a').html('<img src="img/icon/icon02.png" alt="" />')
+var tophead=$('.main_li[index="患者中心"]');
+if(tophead.find('.sec_nav li a').size()>1){
+	$('.currentpage li').last().addClass('hid_nav');
+	$('.hid_nav').append('<div class="hid"></div>');
+	tophead.find('.sec_nav li a').each(function() {
+		if($(this).text()=='神经外科')return;
+		$('.hid_nav .hid').append('<a href="'+$(this).attr('href')+'">'+$(this).text()+'</a>')
+	})
+}
+</script>
+        <script>
+        $('.currentpage').each(function(){
+            $(this).find(' a ').eq(1).attr('href',$('#hzzx').find(' ul > li > a').eq(0).attr('href'))
+        })
+        </script>
+        <div class="art_patient relative">
+            <div class="nav_patient">
+                <ul>
+                    <li><a href="#cc_902">骨骼系统</a></li>
+                    
+                    <li><a href="#cc_905">循环系统</a></li>
+                    
+                    <li><a href="#cc_909">神经系统</a></li>
+                    
+                    <li><a href="#cc_914">小儿神经外科</a></li>
+                    
+                    <li><a href="#cc_916">脊柱神经外科</a></li>
+                    
+                </ul>
+            </div>
+            <div class="cont_patient ">
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_902"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>骨骼系统</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">颅盖骨折</li>
+                                
+                                <li>颅底骨折</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p>线形骨折：本身无需处理。但若骨折线通过脑膜血管沟或静脉窦时应警惕硬膜外血肿。</p><p>凹陷骨折：手术治疗</p><p><img src="upload/2016/1122/145160426p.png" title="01.png" width="350" height="232" border="0" hspace="0" vspace="0" style="width: 350px; height: 232px;"></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p>骨折的愈合：</p><p>二期愈合（传统骨折愈合形式，通常在骨折采用非稳定性固定时出现）</p><p>一期愈合（引入坚强内固定时出现）</p><p><br/></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_905"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>循环系统</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">动脉瘤</li>
+                                
+                                <li>颅内血肿</li>
+                                
+                                <li>动静脉畸形（AVM）</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p>颅内动脉瘤系颅内动脉壁瘤样异常突起。</p><p>脑血管意外中，动脉瘤破裂出血仅次于脑血栓和高血压脑出血，居第三位。</p><p>临床表现：</p><p>★出血： 动脉瘤破裂出血，最常见为蛛网膜下腔出血，还包括脑内、脑室内和硬膜下出血。</p><p>未治的破裂动脉瘤再出血几率高：</p><p><img src="upload/2016/1122/14594040fz.jpg" title="2.jpg" width="300" height="294" border="0" hspace="0" vspace="0" style="width: 300px; height: 294px;"><span style="font-size: 20px;">&nbsp;</span></p><p>治疗：动脉瘤瘤颈夹闭术</p><p><img src="upload/2016/1122/1501082ffr.png" title="3.png" width="300" height="435" border="0" hspace="0" vspace="0" style="width: 300px; height: 435px;"><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1504zt0ljp.png" title="4.png" width="400" height="154" border="0" hspace="0" vspace="0" style="width: 400px; height: 154px;"></p><p>治疗：动脉瘤瘤颈夹闭术<span id="_baidu_bookmark_start_5" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span></p><p><img src="upload/2016/1122/15046z06d4.jpg" title="6.jpg" width="400" height="310" border="0" hspace="0" vspace="0" style="width: 400px; height: 310px;"><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1507h22bx0.png" title="7.png" width="400" height="189" border="0" hspace="0" vspace="0" style="width: 400px; height: 189px;"><span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_3" style="display: none; line-height: 0px;">‍</span></p><p>AVM是一团发育异常的病理血管，由一支或几支动脉供血，不经毛细血管床直接向静脉引流。小型畸形血管团直径不及25px，大型的可达250px，病灶内有脑组织，体积可 随人体发育而增长，其周围组织可因缺血而萎缩，呈胶质增生带，有时伴陈旧性出血。颅内AVM可发生在大脑、小脑和脑干的任何部位。</p><p>临床表现：颅内出血、癫痫、头痛、神经功能缺损。</p><p><br/></p><p>治疗：手术切除为治疗颅内AVM的最彻底方法，不仅能杜绝病变出血，阻止畸形血管盗血，改善脑血供，还能控制癫痫发作。</p><p><span style="font-size:16px"><span id="_baidu_bookmark_end_10" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1508zn0008.png" title="8.png" width="400" height="301" border="0" hspace="0" vspace="0" style="width: 400px; height: 301px;"></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_909"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>神经系统</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">癫痫</li>
+                                
+                                <li>颅内肿瘤</li>
+                                
+                                <li>脑损伤</li>
+                                
+                                <li>三叉神经痛</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p>不同病因所引起，脑部神经元高度同步化异常放电所导致，由不同症状和体征组成的发作性、短暂性、通常也是刻板性的临床现象称为癫痫发作。</p><p>症状：</p><p>（1）全身强直-痉挛发作</p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_22" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_24" style="display: none; line-height: 0px;">‍</span>意识丧失，跌倒→全身肌肉强直→全身肌肉抽搐→慢慢恢复正常<span id="_baidu_bookmark_end_25" style="display: none; line-height: 0px;">‍</span><span style="font-size:16px"><span id="_baidu_bookmark_end_23" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_21" style="display: none; line-height: 0px;">‍</span><span style="font-size:16px"><span id="_baidu_bookmark_end_19" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1552hbf8b6.png" title="14..png" width="300" height="222" border="0" hspace="0" vspace="0" style="width: 300px; height: 222px;"></p><p>（2）失神发作</p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_31" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_33" style="display: none; line-height: 0px;">‍</span>活动突然停止，发呆、呼之不应、手中物体落地。意识丧失，醒后不能回忆<span id="_baidu_bookmark_end_34" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_32" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_30" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_28" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1554bz62bz.png" title="15.png" width="300" height="294" border="0" hspace="0" vspace="0" style="width: 300px; height: 294px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_36" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_38" style="display: none; line-height: 0px;">‍</span>治疗：病因治疗、药物治疗、手术治疗或物理疗法。</p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_40" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_42" style="display: none; line-height: 0px;">‍</span>手术方法：<span id="_baidu_bookmark_end_43" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_41" style="display: none; line-height: 0px;">‍</span></span></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_44" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_46" style="display: none; line-height: 0px;">‍</span>（1）颞叶切除：治疗顽固性颞叶癫痫的一种经典而最常用的手术方法，治疗效果良好。</p><p><span style="font-size:16px;font-family:等线"><span id="_baidu_bookmark_start_48" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_50" style="display: none; line-height: 0px;">‍</span>（2）选择性海马杏仁核切除：多年的经验和研究表明，颞叶内侧结构，尤其是海马杏仁在颞叶癫痫的发生中起着重要的作用。<span id="_baidu_bookmark_end_51" style="display: none; line-height: 0px;">‍</span><span style="font-size:16px;font-family:等线"><span id="_baidu_bookmark_end_49" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_47" style="display: none; line-height: 0px;">‍</span><span style="font-size:16px;font-family:等线"><span id="_baidu_bookmark_end_45" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_end_39" style="display: none; line-height: 0px;">‍</span><span style="font-size:16px;font-family:等线"><span id="_baidu_bookmark_end_37" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1556l0p4x4.png" title="16.png" width="300" height="395" border="0" hspace="0" vspace="0" style="width: 300px; height: 395px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_53" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_55" style="display: none; line-height: 0px;">‍</span>（3）多处软脑膜下横纤维切断术&nbsp;<span id="_baidu_bookmark_end_56" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_54" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1557r8vjdv.png" title="17.png" width="300" height="156" border="0" hspace="0" vspace="0" style="width: 300px; height: 156px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_58" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_60" style="display: none; line-height: 0px;">‍</span>（4）胼胝体切开术：防止大脑的异常放电传播至对侧大脑。<span id="_baidu_bookmark_end_61" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_59" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/155768448t.png" title="18.png" width="300" height="190" border="0" hspace="0" vspace="0" style="width: 300px; height: 190px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_63" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_65" style="display: none; line-height: 0px;">‍</span>（5）迷走神经电刺激术 是近年来被用于治疗难治性复杂部分性癫痫或继发性全身性的癫痫的一种新的治疗。</p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/1516jfxb46.jpg" title="9.jpg" width="300" height="323" border="0" hspace="0" vspace="0" style="width: 300px; height: 323px;"></p><p>发生于颅腔内的神经系统肿瘤。</p><p>颅内肿瘤症状：头痛、呕吐、头晕与眩晕、癫痫、复视、精神及意识障碍</p><p>治疗：颅内肿瘤总治疗原则是以手术为主、辅以放射和化学药物治疗的综合治疗。目前来说，治疗方法以手术为主。可分为两大类：一类是肿瘤直接手术，包括肿瘤切除术、开放活检术；另一类是姑息性手术，包括内减亚术、外减压术、脑脊液分流术，目的仅为暂时降低颅内压，缓解病情。</p><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/15452804p8.jpg" title="10.jpg" width="350" height="177" border="0" hspace="0" vspace="0" style="width: 350px; height: 177px;"></p><p>脑损伤发生机制：</p><p>（1）外力作用于头部，由于颅骨内陷和迅速回弹或颅骨骨折引起</p><p>（2）头部遭受外力的瞬间，脑与颅骨间的相对运动造成着力部位对侧的损伤，即对冲伤</p><p>脑损伤分类：</p><p>（1）脑震荡：伤时出现短暂意识丧失，但基本没有器质性损伤</p><p>（2）脑挫裂伤：外伤造成脑器质性损伤</p><p><br/></p><p>治疗：颅脑损伤患者的预后除了取决于损伤严重程度及年龄等客观因素外，手术时机的掌握、伤后早期呼吸循环紊乱、高血糖、高热以及合并症、并发症的防治均不容忽视。闭合性脑损伤的手术治疗主要是针对颅内血肿或重度脑挫裂伤合并脑水肿引起的颅内压增高和脑疝，其次为颅内血肿引起的局灶性脑损害。常用的手术方式有以下几种：开颅血肿清除术、去骨瓣减压术、脑室外引流术、钻孔引流术。</p><p><br/></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_end_2" style="display: none; line-height: 0px;">‍</span></span></p><p><br/></p>
+                                </div> 
+                                
+                                <div class="ol">
+                                    <p><img src="upload/2016/1122/154700jt60.png" title="11.png" width="370" height="262" border="0" hspace="0" vspace="0" style="float: left; width: 370px; height: 262px;"></p><p>三叉神经分布区内反复发作的阵发性、短暂、剧烈疼痛而不伴三叉神经功能破坏的症状，称三叉神经痛。常于40岁后起病，女性较多。</p><p>病因：原发性三叉神经痛的病因尚未明确。目前认为三叉神经在脑桥被异行扭曲的血管压迫三叉神经后根，局部产生脱髓鞘变化而导致疼痛发作。</p><p>临床表现：三叉神经痛为骤然发生的剧烈疼痛，但严格限于三叉神经感觉支配区内。发作时患者常紧按患侧面部或用力擦面部减轻疼痛，可致局部皮肤粗糙，眉毛脱落。有的发作时不断做咀嚼动作，严重者可伴有同侧面部肌肉的反射性抽搐，所以又称“痛性抽搐”。</p><p>治疗：继发性三叉神经痛者应针对病因治疗。原发性三叉神经痛目前还缺乏绝对有效的治疗方法，治疗原则以止痛为目的，药物治疗为主，无效时可用神经阻滞疗法或手术治疗。主要的手术治疗方法有：微血管减压术、三叉神经切断术。&nbsp;</p><p><br/></p><p><br/></p><p><br/></p><p>微血管减压术：用涤纶片隔离三叉神经与邻近血管。<br/></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_end_87" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/15508j40r6.jpg" title="12.jpg" width="300" height="300" border="0" hspace="0" vspace="0" style="width: 300px; height: 300px;"></p><p><span style="font-size: 16px"><span id="_baidu_bookmark_start_91" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_93" style="display: none; line-height: 0px;">‍</span>三叉神经切断术<span id="_baidu_bookmark_end_94" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px"><span id="_baidu_bookmark_end_92" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1550p44lnh.png" title="13.png" width="300" height="333" border="0" hspace="0" vspace="0" style="width: 300px; height: 333px;"></p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_914"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>小儿神经外科</h4>
+                            
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                                <li class="active">颅缝早闭(狭颅症)</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                                <div class="ol">
+                                    <p>由于在生长发育过程中颅缝过早闭合，以致颅腔狭小不能适应脑的正常发育。狭小的颅腔压迫和限制了正在迅速发育中的脑组织，引起颅内压增高和各种神经功能障碍。</p><p>临床表现：</p><p><span id="_baidu_bookmark_start_15" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_17" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_19" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_21" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_23" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_25" style="display: none; line-height: 0px;">‍</span>（1）矢状缝早闭——舟状头（最常见）<span id="_baidu_bookmark_end_26" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_24" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_22" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_20" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_18" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_16" style="display: none; line-height: 0px;">‍</span></p><p><img src="upload/2016/1122/1604pn66lt.png" title="20.png" width="400" height="339" border="0" hspace="0" vspace="0" style="width: 400px; height: 339px;"></p><p><span style="font-size: 16px;"><span style="font-stretch: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;"><span id="_baidu_bookmark_start_28" style="display: none; line-height: 0px;">‍</span></span></span><span id="_baidu_bookmark_start_30" style="display: none; line-height: 0px;">‍</span>（2）单侧冠状缝早闭——斜形头<span id="_baidu_bookmark_end_31" style="display: none; line-height: 0px;">‍</span><span style="font-size: 16px;"><span id="_baidu_bookmark_end_29" style="display: none; line-height: 0px;">‍</span></span></p><p><img src="upload/2016/1122/1605rflbt2.png" title="21.png" width="400" height="339" border="0" hspace="0" vspace="0" style="width: 400px; height: 339px;"></p><p><span id="_baidu_bookmark_start_33" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_35" style="display: none; line-height: 0px;">‍</span>（3）双侧冠状缝早闭——短头</p><p><img src="upload/2016/1122/16064b2h82.png" title="22.png" width="400" height="213" border="0" hspace="0" vspace="0" style="width: 400px; height: 213px;"></p><p>（4）额缝早闭——三角头</p><p><img src="upload/2016/1122/1607b24t2l.png" title="23.png" width="400" height="252" border="0" hspace="0" vspace="0" style="width: 400px; height: 252px;"></p><p>（5）单侧人字缝早闭——不等边四边形状头颅</p><p><img src="upload/2016/1122/1607h88b0h.png" title="24.png" width="400" height="204" border="0" hspace="0" vspace="0" style="width: 400px; height: 204px;"></p><p>（6）全颅缝早闭——尖头或塔状头</p><p><img src="upload/2016/1122/1608xpb60f.png" title="25.png" width="400" height="265" border="0" hspace="0" vspace="0" style="width: 400px; height: 265px;"></p><p>治疗：手术治疗方法比较普遍</p><p>★原则：早发现早治疗</p><p>（1）切除过早闭合的骨缝，再造新的骨缝</p><p>（2）切除大块骨质以减压和有利于脑的发育</p>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="hurt">
+                    <a href="javascript:;" name="cc_916"></a>
+                    <div class="content">
+                    
+                        <div >
+                            <h4>脊柱神经外科</h4>
+                            <p>椎管内肿瘤是指发生于脊髓本身及椎管内与脊髓邻近的组织的原发性肿瘤或转移性肿瘤的总称，有时又称为脊髓肿瘤。</p><p>临床表现：肿瘤对脊髓持续的压迫是椎管内肿瘤出现临床症状的基础。由于肿瘤进行性压迫而损害脊髓和神经根，其临床表现可分为三个阶段：1.刺激期：此期肿瘤较小，主要表现为相应结构的刺激症状，此期最常见症状是神经根痛；2.脊髓部分受压期：随着肿瘤生长，体积增大，脊髓受到挤压而逐渐出现脊髓传导束受压的症状。典型体征为脊髓半切综合征；3。脊髓瘫痪期：脊髓半切综合征或不完全性瘫痪逐渐加重，最终引起安全性瘫痪。</p><p>治疗：椎管内肿瘤目前唯一有效的治疗手段是手术切除。鉴于3/4的椎管内肿瘤为良性，一般全部切除肿瘤后，预后良好。治疗效果与脊髓受压的时间、肿瘤的部位、性质和脊髓受累的范围、大小有关。恶性肿瘤可行肿瘤大部切除并做外减压，术后辅以放射治疗，能使病情得到一定程度的缓解。椎管内肿瘤除非转移癌、原发病灶不能切除或已有广泛转移或患者处于衰竭状态不能承受手术者，一般均应尽早行手术治疗。</p><p><br/></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_nav">
+                            <ul class="content">
+                            </ul>
+                        </div>
+                        <div class="tab_content">
+                            <div class="content relative " style="width:200%;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    
+             <div class="section footer fp-auto-height" >
+                 <div class="container relative foot-link">
+                    <div>
+                        <ul class="content">
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">关于XXX</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司简介</a></li>
+                                    
+                                    <li><a href="#">代理项目</a></li>
+                                    
+                                    <li><a href="#">合作伙伴</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">患者中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">心胸外科</a></li>
+                                    
+                                    <li><a href="#">神经外科</a></li>
+                                    
+                                    <li><a href="#">颌面外科</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">产品中心</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">胸骨固定产品</a></li>
+                                    
+                                    <li><a href="#">漏斗胸产品</a></li>
+                                    
+                                    <li><a href="#">神经外内科固定产品</a></li>
+                                    
+                                    <li><a href="#">颌面外科系列产品</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">新闻动态</a></p>
+                                <ul class="foot_sec_nav">
+                                    <li><a href="#">公司新闻</a></li>
+                                    
+                                    <li><a href="#">展会信息</a></li>
+                                    
+                                    <li><a href="#">行业资讯</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="f_main_nav">
+                                <p><a href="#">联系我们</a></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot_code">
+                        <img src="img/icon/code.png" alt="">    
+                        <p class="link_num">XXX</p>
+                    </div>
+                </div>
+                <div class="copy" >
+                     <p class="container">© Copyright 2020 all right PTY Medical  <span class="pull_right"> <a href="#." class=" share"></a>
+                     <a href="#." class=" share chat"></a></span></p>
+                </div>
+             </div>
+
+</body>
+
+</html>

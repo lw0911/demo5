@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content="云路由"/>
+    <meta name="keywords" content="云路由"/>
+    <title>登录2</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/css.css" rel="stylesheet"/>
+    <link href="css/sign_in2.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="lib/bootstrap/html5shiv.min.js"></script>
+    <script src="lib/bootstrap/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/wow/wow.js"></script>
+    <script type="text/javascript" src="js/comm.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container wow fadeInDown" data-wow-delay="0.5s">
+        <img src="img/logo-01.png" alt="" class="pull-left">
+        <img src="img/sign_in2_hotline.png" alt="" class=" col-right">
+    </div>
+</div>
+<div id="main">
+    <div class="nav container"><a href="" class="pull-right">&gt;&gt;返回首页</a></div>
+    <div class="main-container container">
+        <div class="content center-block">
+            <div class="tab-par">
+                <ul class="tabs clearfix center-block" role="tablist">
+                    <li role="presentation" class="active col-xs-6"><a href="#register" aria-controls="register"
+                                                                       role="tab" data-toggle="tab">我要注册</a></li>
+                    <li role="presentation " class=" col-xs-6"><a href="#sign-in" aria-controls="sign-in" role="tab"
+                                                                  data-toggle="tab">登录</a></li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane  active" id="register">
+                    <div class="progress-speed">
+                        <div class="row">
+                            <div class="col-md-4 pro-1"><i>1</i><span>验证用户</span></div>
+                            <div class="col-md-4 pro-2"><i>2</i><span>上传营业执照</span></div>
+                            <div class="col-md-4 pro-3"><i>3</i><span>完成注册</span></div>
+                        </div>
+                    </div>
+                    <div class="tab-content" style="padding-top:0;">
+                        <!--1验证账户-->
+                        <div role="tabpanel" class="tab-pane  active step1">
+                            <form class="form-horizontal">
+                              <div class="form-group">
+                                <label for="user-name1" class="col-sm-2 control-label">用户名:</label>
+                                <div class="col-sm-10">
+                                  <input type="email" class="form-control input-style" id="user-name1" placeholder="请输入您的用户名">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="tel1" class="col-sm-2 control-label">输入手机号:</label>
+                                <div class="col-sm-10">
+                                  <input type="email" class="form-control input-style" id="tel1" placeholder="请输入您的手机号码">
+                                </div>
+                              </div>
+                              <div class="form-group form-group-pcode">
+                                  <div class="input-par code-par code-par2 clearfix">
+                                      <input type="text" class="form-control pull-left " id="ver-code1" placeholder="请输入验证码">
+                                      <div class="pull-left get-ver-code  text-center">获取验证码</div>
+                                  </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="user-pwd1" class="col-sm-2 control-label">请输入新密码;</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control input-style" id="user-pwd1" placeholder="请输入新密码">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="user-pwd2" class="col-sm-2 control-label">再次输入新密码:</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control input-style" id="user-pwd2" placeholder="请再次输入新密码">
+                                </div>
+                              </div>
+                              <div class="input-par code-par  code-par3 clearfix">
+                                      <input type="text" class="form-control pull-left" id="ver-code2" placeholder="请输入验证码">
+                                      <div class="pull-left code-img"><img src="img/sign_in_code.jpg" alt="" class=" ">
+                                      </div>
+                                  </div>
+                              <div class="form-group agree">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox"> 我已阅读并同意授权云路由
+                                            <a href="" class="service-agreement"> 《服务协议》 </a>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                  <button type="submit" class="btn btn-default step1-next">下一步</button>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                        <!--2上传营业执照-->
+                        <div role="tabpanel" class="tab-pane  step2">
+                            <div class="prompt">以下需上传电子版资质仅支持 JPG 、GIF、PNG格式的图片，大小不超过1M</div>
+                            <div style="font-size:18px;color:#666666;margin-bottom: 43px;">营业执照（副本）</div>
+                            <div class="row business-license">
+                                <div class="col-md-3 title1">组织机构代码证电子版</div>
+                                <div class="col-md-3 upload">
+                                    <dl>
+                                        <dt>上传</dt>
+                                        <dd><img src="img/sign_in2_03.png" alt=""></dd>
+                                    </dl>
+                                </div>
+                                <div class="col-md-3  " style="padding-right: 0;color:#666;">填入组织机构代码电子版，并加盖企业彩色公章</div>
+                                <div class="col-md-3 show-big-img clearfix pull-right">
+                                    <dl class="pull-right">
+                                        <dt><img src="img/sign_in_small-img.jpg" alt=""></dt>
+                                        <dd class="text-center">查看大图</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="action clearfix">
+                                <div class="skip text-center pull-left">跳过</div>
+                                <div class="continue text-center pull-left">提交并继续</div>
+                            </div>
+                        </div>
+                        <!--3完成注册-->
+                        <div role="tabpanel" class="tab-pane   step3">
+                            <div class="congratulations center-block">
+                                 <div class="center-block text-center"><img src="img/sign_in2_step3.png" alt="">恭喜您完成注册!</div>
+                            </div>
+                            <div class="text-center">尊敬的用户，您已成功注册中国生物能网，请<a class="go-sign-in" href="#sign-in" style="color:#3579CD">点击登录！</a></div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div role="tabpanel" class="tab-pane sign-in-panel  center-block " id="sign-in">
+                    <div>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="name" class="label1 pull-left control-label">用户名:</label>
+                                <div class=input-par>
+                                    <input type="text" class="form-control" id="name" placeholder="admin" style="background-color:#F6F6F6;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="label2 pull-left  control-label">密码:</label>
+                                <div class=input-par>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="输入密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-par code-par clearfix">
+                                    <input type="text" class="form-control pull-left" id="ver-code"
+                                           placeholder="请输入验证码">
+                                    <div class="pull-left code-img"><img src="img/sign_in_code.jpg" alt="" class=" ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class=" rem-pwd">
+                                    <div class="checkbox">
+                                        <label class="label3">
+                                            <input type="checkbox"> <span style="padding-left: 7px ">记住密码</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="">
+                                    <button type="submit" class="btn btn-default sign-in-btn">登录</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="footer">
+    CopyRight© 2013-2016 ico All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+    //第一步完成
+    $(".step1-next").click(function(e){
+        e.preventDefault();
+        $("#register .step1,#register .step3").hide();
+        $("#register .step2").show();
+        $("#main #register .progress-speed .pro-1").css({"color":"#666","background-image":"url('img/sign_in2_pro1.png')"});
+        $("#main #register .progress-speed .pro-2").css({"color":"#fff","background-image":"url('img/sign_in2_pro2b.png')"});
+        $("#main #register .progress-speed .pro-3").css({"color":"#666","background-image":"url('img/sign_in2_pro3.png')"});
+        $("body").scrollTop(0)
+    });
+    //第二部完成
+    $(".skip,.continue").click(function(e){  
+        e.preventDefault();
+        $("#register .step1,#register .step2").hide();
+        $("#register .step3").show();
+        $("#main #register .progress-speed .pro-2").css({"color":"#666","background-image":"url('img/sign_in2_pro2.png')"});
+        $("#main #register .progress-speed .pro-3").css({"color":"#fff","background-image":"url('img/sign_in2_pro3b.png')"});
+    });
+    //第3步部点击登录
+    $(".go-sign-in").click(function(){
+        $('#main .tab-par li:eq(1) a').tab('show');
+    })
+
+})
+</script>
+</body>
+</html>
+<script type="text/javascript">
+    wow = new WOW(
+            {
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            }
+    )
+    wow.init();
+</script>

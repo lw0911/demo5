@@ -1,0 +1,844 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
+		<meta name="keyword" content="">
+		<title>XXX</title>
+		<link href="css/common.min.css" type="text/css" rel="stylesheet" />
+		<link href="css/video-js.min.css" rel="stylesheet">
+		<link href="css/teacher.css" type="text/css" rel="stylesheet" />
+		<link href="css/index.css" type="text/css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <link href="static/css/IE8.css" rel="stylesheet">
+        <![endif]-->
+		<style>
+			.student-player .video-js .vjs-fullscreen-control {
+				display: none;
+			}
+			
+			.video-player {
+				position: relative;
+				padding: 0;
+				height: 0;
+				overflow: hidden;
+			}
+			
+			.layui-layer-wrap.video-player {
+				padding: 20px;
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="r-doc">
+			<div class="r-hd">
+				<div class="line">
+					<div class="r-hd-box f-cb">
+						<ul class="contact f-fl" id="lineMenu">
+							<div class="inf">
+								<div class="phone"><i class="iconfont">&#xe622;</i>XXX</div>
+
+							</div>
+						</ul>
+						<div class="slogan f-fr">
+							<a class="login" href="">登录</a>
+							<a class="top-register">免费注册</a>
+							<span>现在就体验纯正外语口语教学</span>
+						</div>
+					</div>
+				</div>
+				<div class="nav r-hd-box f-cb">
+					<div class="nav-brand">
+						<a>
+							<img src="images/logo.png">
+						</a>
+
+					</div>
+					<div class="nav-lists">
+						<ul class="f-cb">
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="about.html">关于我们</a>
+							</li>
+							<li>
+								<a href="course.html">课程体系</a>
+							</li>
+							<li>
+								<a href="live.html">免费公开课</a>
+							</li>
+							<li class="active">
+								<a href="teacher.html">师资风采</a>
+							</li>
+							<li>
+								<a href="liuxue.html">海外留学</a>
+							</li>
+							<li>
+								<a href="peixun.html">企业培训</a>
+							</li>
+							<li>
+								<a href="it.html">IT就业</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="r-bd">
+				<!--幻灯片 -->
+				<section>
+
+					<a><img src="images/banner3.jpg" alt="" style="width: 100%;"></a>
+
+				</section>
+				<div class="m-section assess">
+					<div class="m-container f-tac">
+						<div class="m-hd">
+							<h1>我们对教师有严格的管理制度<i></i></h1>
+							<p>我们拥有一批高质量专业教学及教务团队、优质的教学资源<br>拥有完善的专业服务体系，为学员提供全程、专业的在线语言教育服务。XXX的中外教不仅教学经验丰富、风趣幽默<br>更善于激发学员的学习潜能、改善学员的学习方法，帮助学员快速提高外语能力。</p>
+						</div>
+						<div class="m-bd f-cb">
+							<div class="tab-assess">
+								<ul class="navbar f-cb">
+									<li>
+										<a href="#asnav1">应试</a>
+									</li>
+									<li>
+										<a href="#asnav2">初试</a>
+									</li>
+									<li>
+										<a href="#asnav3">岗前培训</a>
+									</li>
+									<li>
+										<a href="#asnav4">入职考核</a>
+									</li>
+									<li>
+										<a href="#asnav5">OJT</a>
+									</li>
+									<li class="dbline">
+										<a href="#asnav6">课堂<br>实时测评</a>
+									</li>
+									<li class="dbline last">
+										<a href="#asnav7">团队<br>定期总结</a>
+									</li>
+								</ul>
+								<div class="ascon f-cb">
+									<div id="asnav1" class="asbox">
+										<div class="img-group">
+											<img src="images/about5.jpg">
+										</div>
+										<div class="text-group">
+											<p>必须具有英语教育学位证书，三到五年远程教学经验，怀有对英语在线教育的热情，积极投身于教学事业中。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+									<div id="asnav2" class="asbox">
+										<div class="img-group">
+											<img src="images/about6.jpg">
+										</div>
+										<div class="text-group">
+											<p>一轮笔试+二轮面试，留下有真才实学的优秀老师，要求口音纯正，谈吐幽默，英语知识广博，专业领域能力突出，筛选出一批有才能有魅力的人才。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+									<div id="asnav3" class="asbox">
+										<div class="img-group">
+											<img src="images/about7.jpg">
+										</div>
+										<div class="text-group">
+											<p>接受全面培训，掌握前沿的教学方法。听课程录音、总结、归纳笔记、报告、进行课前试讲，从教学框架到亲和力、语速、语调、互动都要掌控到位。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+									<div id="asnav4" class="asbox">
+										<div class="img-group">
+											<img src="images/about5.jpg">
+										</div>
+										<div class="text-group">
+											<p>进过紧张的培训，最终将由专业的审核团队对教师进行综合能力和专业能力两大版块的考核，考核采用一票否决制度，确保最终录用的老师能精准的把控课堂，满足学员们的英语需求。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+									<div id="asnav5" class="asbox">
+										<div class="img-group">
+											<img src="images/about6.jpg" alt="为了保证教学质量，教师入职后的在职培训也必不可少。密集的培训中心，洛基的老师们专业性得到了极大的提升，教学资源也始终走在最前沿。">
+										</div>
+										<div class="text-group">
+											<p>为了保证教学质量，教师入职后的在职培训也必不可少。密集的培训中心，XXX的老师们专业性得到了极大的提升，教学资源也始终走在最前沿。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+									<div id="asnav6" class="asbox">
+										<div class="img-group">
+											<img src="images/about7.jpg" alt="讲师讲课会录成影像资料，审核团队随时抽查，学生可以评分、提建议以供讲师课后归纳总结，沟通解决学员学习过程中发生的各种问题与误会，提升课堂质量。">
+										</div>
+										<div class="text-group">
+											<p>讲师讲课会录成影像资料，审核团队随时抽查，学生可以评分、提建议以供讲师课后归纳总结，沟通解决学员学习过程中发生的各种问题与误会，提升课堂质量。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+									<div id="asnav7" class="asbox">
+										<div class="img-group">
+											<img src="images/about5.jpg" alt="定期团队讨论汇总，讲师们之间进行课堂互相观摩学习与交流，分享彼此经验，进行自我反思自我提升。">
+										</div>
+										<div class="text-group">
+											<p>定期团队讨论汇总，讲师们之间进行课堂互相观摩学习与交流，分享彼此经验，进行自我反思自我提升。</p>
+											<button class="btn">尝试我们的课程?</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-section teacher">
+					<div class="m-container f-tac">
+						<div class="m-hd">
+							<h1>We are rocky 明星中教团队<i></i></h1>
+							<p>我们的每一位中外教老师都经过XXX的严格筛选，至少拥有4-5年口语教学经验<br>专业8级，发音纯正，拥有大型会议翻译、口译经验，英语比赛冠亚军得主。他们经验丰富<br>熟知外语语学习的重点、难点，帮助学员轻松扫清学习中的障碍，让学员口语水平得到最大幅度的提升。 </p>
+						</div>
+						<div class="m-bd f-cb">
+							<div class="list carolist">
+								<ul>
+									<li>
+										<ol>
+											<li>
+												<div class="imgbox">
+													<img src="images/about1.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>刘老师</h3>
+														<p>上海XXX外语高级讲师 , 专业外语八级 , 高级BEC证书、上海市高级口译证书持有者 , 5年口语教学经验</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about2.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>韩老师</h3>
+														<p>上海XXX外语高级讲师 ，获得剑桥商务英语高级证书。教学模式灵活，让你在潜移默化中突破哑巴英语。</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about1.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>刘老师</h3>
+														<p>上海XXX外语高级讲师 , 专业外语八级 , 高级BEC证书、上海市高级口译证书持有者 , 5年口语教学经验</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about2.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>韩老师</h3>
+														<p>上海XXX外语高级讲师 ，获得剑桥商务英语高级证书。教学模式灵活，让你在潜移默化中突破哑巴英语。</p>
+
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="imgbox">
+													<img src="images/about1.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>刘老师</h3>
+														<p>上海XXX外语高级讲师 , 专业外语八级 , 高级BEC证书、上海市高级口译证书持有者 , 5年口语教学经验</p>
+
+													</div>
+												</div>
+											</li>
+										</ol>
+									</li>
+
+									<li>
+										<ol>
+											<li>
+												<div class="imgbox">
+													<img src="images/about2.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>韩老师</h3>
+														<p>上海XXX外语高级讲师 ，获得剑桥商务英语高级证书。教学模式灵活，让你在潜移默化中突破哑巴英语。</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about1.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>刘老师</h3>
+														<p>上海XXX外语高级讲师 , 专业外语八级 , 高级BEC证书、上海市高级口译证书持有者 , 5年口语教学经验</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about2.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>韩老师</h3>
+														<p>上海XXX外语高级讲师 ，获得剑桥商务英语高级证书。教学模式灵活，让你在潜移默化中突破哑巴英语。</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about1.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>刘老师</h3>
+														<p>上海XXX外语高级讲师 , 专业外语八级 , 高级BEC证书、上海市高级口译证书持有者 , 5年口语教学经验</p>
+
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about2.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>韩老师</h3>
+														<p>上海XXX外语高级讲师 ，获得剑桥商务英语高级证书。教学模式灵活，让你在潜移默化中突破哑巴英语。</p>
+
+													</div>
+												</div>
+											</li>
+										</ol>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="m-ft">
+							<button type="button" class="btn btn-rocky register">
+              <span>立即体验课程</span>
+          </button>
+						</div>
+					</div>
+				</div>
+				<div class="m-section teacher en">
+					<div class="m-container f-tac">
+						<div class="m-hd">
+							<h1>We are rocky 资深外教团队<i></i></h1>
+							<p>每一位外教老师都经过严格的OJT培训，经多方面考核达到授课要求的、资深的一对一授课老师。<br>他们拥有纯正的口语，极具亲和力，致力于为学员打造纯正的母语环境，让学员在纯英文环境学会口语思维。</p>
+						</div>
+						<div class="m-bd f-cb">
+							<div class="list carolist">
+								<ul>
+									<li>
+										<ol>
+											<li>
+												<div class="imgbox">
+													<img src="images/about3.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about4.jpg" alt="">
+												</div>
+
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about3.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about4.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li class="last">
+												<div class="imgbox">
+													<img src="images/about3.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<ol>
+											<li>
+												<div class="imgbox">
+													<img src="images/about4.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about3.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about4.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="imgbox">
+													<img src="images/about3.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+											<li class="last">
+												<div class="imgbox">
+													<img src="images/about4.jpg" alt="">
+												</div>
+												<div class="textbox">
+													<div class="shade"></div>
+													<div class="text">
+														<h3>Tom</h3>
+														<p>上海XXX口语1对1外教优秀讲师, 拥有丰富的在线授课经验，擅长“整体性教学方法”和“浸入式教学法”。</p>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="m-ft">
+							<button type="button" class="btn btn-rocky register">
+              <span>立即体验课程</span>
+          </button>
+						</div>
+					</div>
+				</div>
+				<div class="m-section totest">
+					<div class="m-container f-tac">
+						<div class="m-bd f-cb">
+							<div class="group">
+								<div class="image">
+									<img src="images/totest.jpg">
+								</div>
+								<div class="text">
+									<p>汇集世界各地名师 , 打造一流的教学服务<br>一个学员一套教学方案 , 一个学员一个教学团队<br>全方位提升学员英语“听、说、读、写、译”的实战水平！</p>
+									<a><button class="btn">进入水平测试，遇见你的专属老师</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="r-ft">
+				<div class="m-section foot-reg fixed">
+					<div class="m-container">
+						<div class="m-bd">
+							<form class="f-cb">
+								<div class="form-title">预约免费试听课</div>
+								<div class="reg-form">
+									<div class="form-group">
+										<label for="uName">姓名</label>
+										<input type="text" class="form-control" id="foot_reg_name" placeholder="您的称呼">
+									</div>
+									<div class="form-group">
+										<label for="uName">手机号码</label>
+										<input type="text" class="form-control" id="foot_reg_tel" placeholder="预约上课的手机号码">
+									</div>
+									<div class="form-group">
+										<label for="uName">年龄</label>
+										<select id="foot_reg_age" class="form-control" title="请选择您的年龄段">
+											<option value="0" disabled="" selected="">请选择您的年龄段</option>
+											<option value="15">10-15</option>
+											<option value="20">15-20</option>
+											<option value="25">20-25</option>
+											<option value="35">25-35</option>
+											<option value="45">35-45</option>
+											<option value="50">50岁以上</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="uName">您的微信号码</label>
+										<input type="text" class="form-control" id="foot_reg_wechat" placeholder="您的微信号码(选填)">
+									</div>
+									<div class="form-group submit">
+										<button class="btn" id="foot_send_info">提交信息</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="m-section foot-box">
+					<div class="m-container">
+						<div class="foot-links f-cb">
+							<div class="foot-lists f-cb">
+								<dl>
+									<dt>关于我们</dt>
+									<dd>
+										<a href="about.html">公司简介</a>
+									</dd>
+									<dd>
+										<a href="about.html">企业文化</a>
+									</dd>
+									<dd>
+										<a href="about.html">发展历程</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>课程体系</dt>
+									<dd>
+										<a href="course.html">阶段规划</a>
+									</dd>
+									<dd>
+										<a href="course.html">内容涵盖</a>
+									</dd>
+									<dd>
+										<a href="course.html">课程设置</a>
+									</dd>
+
+								</dl>
+
+								<dl>
+									<dt>我们服务</dt>
+									<dd>
+										<a href="liuxue.html">海外留学</a>
+									</dd>
+									<dd>
+										<a href="it.html">IT就业</a>
+									</dd>
+									<dd>
+										<a href="peixun.html">企业培训</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>联系我们</dt>
+									<dd>
+										<a href="index.html">合作加盟</a>
+									</dd>
+									<dd>
+										<a href="index.html">在线咨询</a>
+									</dd>
+									<dd>
+										<a href="index.html">人才招聘</a>
+									</dd>
+
+								</dl>
+								<dl>
+									<dt>新闻动态</dt>
+									<dd>
+										<a href="index.html">公司动态</a>
+									</dd>
+									<dd>
+										<a href="index.html">行业新闻</a>
+									</dd>
+									<dd>
+										<a href="index.html">专题知识</a>
+									</dd>
+
+								</dl>
+							</div>
+							<div class="foot-contact">
+								<p>服务热线：XXX
+									<span style="display:block; text-align:right;">XXX</span>
+									<span style="display:block; text-align:right;">XXX</span>
+								</p>
+
+								<p>周一至周日 9:30——18:00</p>
+
+								<div class="server">
+									<a class="online-chat btn">在线客服</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="foot-copyright f-tac">
+							<p>
+								<a href="">
+									<img style="height: 20px;" src="images/police.png"> XXX
+								</a>
+								|
+								<a>隐私保护</a>
+								|
+								<a>安全条款</a>
+								|
+								<a>服务条款</a>
+								|
+								<a>常见问答</a>
+								|
+								<a>关于学费</a>
+							</p>
+							<p>
+								经营许可 : 沪ICP备10000000号 | 工商注册号 : 900000000000000000 | Copyright&copy;TTC上海XXX学校 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>. 2020
+							</p>
+							<ul class="foot-brand f-cb f-tac">
+								<li>
+									<a>
+										<img src="images/cnnic.png" height="37" width="102" h="37" w="102">
+									</a>
+								</li>
+								<li>
+									<a>
+										<img border="0" src="images/webscan.png">
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="images/103x37.png">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="register" class="f-tac registerbox" style="display: none;">
+				<form class="reg-form f-fl" action="aa.php">
+					<div class="reg-box">
+
+						<div class="form-group">
+							<label for="username" class="form-name"></label>
+							<input type="text" id="reg_name" name="name" placeholder="请输入您的称呼" />
+						</div>
+						<div class="form-group">
+							<label for="username" class="form-tel"></label>
+							<input type="phone" id="reg_tel" name="tel" placeholder="请输入接收上课消息的手机号码" />
+						</div>
+						<div class="form-group">
+							<label for="username" class="form-age"></label>
+							<select id="reg_age" title="请选择您的年龄段">
+								<option value="0" disabled="" selected="">请选择您的年龄段</option>
+								<option value="15">10-15</option>
+								<option value="20">15-20</option>
+								<option value="25">20-25</option>
+								<option value="35">25-35</option>
+								<option value="45">35-45</option>
+								<option value="50">50岁以上</option>
+							</select>
+						</div>
+						<div class="form-group f-dn">
+							<input type="hidden" name="wechat" id="reg_wechat" />
+							<input type="hidden" name="mark" id="mark" />
+							<input type="hidden" name="keyword" id="keyword" />
+						</div>
+						<div class="form-group">
+							<button class="btn btn-default" id="send_info">申请免费试听</button>
+						</div>
+					</div>
+				</form>
+				<div class="reg-img f-fr">
+					<img src="images/register.jpg">
+				</div>
+			</div>
+			<div id="register2" class="f-tac registerbox" style="display: none;">
+				<form class="reg-form f-fl">
+					<div class="reg-box" style="padding-top: 25px;">
+						<div class="title" style="font-size: 16px;">
+							免费注册
+						</div>
+						<div class="form-group">
+							<label for="username" class="form-name"></label>
+							<input type="text" id="sign_name" name="name" placeholder="用户名" />
+						</div>
+						<div class="form-group">
+							<label for="username" class="form-tel"></label>
+							<input type="password" id="sign_pass" name="pass" placeholder="密码" />
+						</div>
+						<div class="form-group">
+							<label for="username" class="form-tel"></label>
+							<input type="password" id="sign_repass" name="repass" placeholder="重复密码" />
+						</div>
+						<div class="form-group">
+							<label for="username" class="form-tel"></label>
+							<input type="phone" id="sign_tel" name="phone" placeholder="请输入接收上课消息的手机号码" />
+						</div>
+						<div class="form-group">
+							<button class="btn btn-default" id="sign_up">立刻注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="youfu">
+			<ul>
+				<li>
+					<a href=""><img src="images/zxzx1.gif"><br>在线咨询</a>
+				</li>
+				<li>
+					<a id="b1" href=""><img src="images/whxq.gif"><br>总校咨询</a>
+				</li>
+				<li>
+					<a id="b2" href=""><img src="images/nmzx.gif"><br>分销咨询</a>
+				</li>
+				<li>
+					<a id="b3" href=""><img src="images/zxbm.gif"><br>在线报名</a>
+				</li>
+				<li class="b4_1">
+					<a id="b4" href=""><img src="images/dhzx.gif"><br>电话咨询</a>
+				</li>
+				<li class="hong">
+					<a href=""><img src="images/dhzx1.gif" style="vertical-align:middle;">XXX</a>
+				</li>
+				<li class="gotop">
+					<a href="#top"><img src="images/zx_bg1.png"><br>返回顶部</a>
+				</li>
+			</ul>
+		</div>
+		<script src="js/scripts.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/html5media.min.js"></script>
+
+		<script type="text/javascript">
+			var playBtns = $('.v-play');
+			for(var i = 0; i < playBtns.length; i++) {
+				playBtns.eq(i).on('click', function() {
+					var vPlayer = $('.video-player'),
+						src = '/Public/video/teacher/' + $(this).data('name') + '.mp4';
+					$('#my-video_html5_api').attr('src', src)
+					$('#my-video').attr('src', src);
+					layer.open({
+						type: 1,
+						title: false,
+						skin: 'student-player', //样式类名
+						area: ['680px', '520px'],
+						closeBtn: 2, //不显示关闭按钮
+						anim: 2,
+						shadeClose: true, //开启遮罩关闭
+						content: vPlayer,
+						success: function() {
+							vPlayer.attr('autoplay', 'true');
+						}
+					});
+				});
+			}
+		</script>
+		<script>
+			$(document).ready(function() {
+
+				$("#b1").mouseover(function() {
+					$("#b1>img").attr("src", "images/whxq1.gif");
+				});
+				$("#b1").mouseout(function() {
+					$("#b1>img").attr("src", "images/whxq.gif");
+				});
+
+				$("#b2").mouseover(function() {
+					$("#b2>img").attr("src", "images/nmzx1.gif");
+				});
+				$("#b2").mouseout(function() {
+					$("#b2>img").attr("src", "images/nmzx.gif");
+				});
+
+				$("#b3").mouseover(function() {
+					$("#b3>img").attr("src", "images/zxbm1.gif");
+				});
+				$("#b3").mouseout(function() {
+					$("#b3>img").attr("src", "images/zxbm.gif");
+				});
+				$(".b4_1").mouseover(function() {
+					$(".hong").show();
+				});
+				$(".b4_1").mouseout(function() {
+					$(".hong").hide();
+				});
+				$(".hong").mouseover(function() {
+					$(".hong").show();
+				});
+				$(".hong").mouseout(function() {
+					$(".hong").hide();
+				});
+			});
+		</script>
+	</body>
+
+</html>

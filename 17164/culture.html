@@ -1,0 +1,134 @@
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>企业精神_北京市XX信息咨询有限公司</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/global.css" rel="stylesheet" type="text/css">    
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="site_head">
+	<div class="head_cont wth1200">
+		<a href="index.html"><img src="pictures/logo.png" class="fl"></a>
+		<ul class="head_nav fr">
+			<li><a href="index.html">首页</a></li>
+			
+			<li><a href="about.html">关于我们</a></li>
+			
+			<li><a href="culture.html" class="navon">企业精神</a></li>
+			
+			<li><a href="course.html">发展历程</a></li>
+			
+			<li><a href="team.html">管理团队</a></li>
+			
+			<li><a href="news.html">公司动态</a></li>
+			
+			<li><a href="contact.html">联系我们</a></li>
+			
+            <li><a href="chaxun.html">员工查询</a></li>
+		</ul>
+	</div>
+</div>
+    <!--内容-->   
+	<div class="culture_banner_box">
+		<div class="wth1200 culture_banner relative">
+			<img src="pictures/mission00.png" class="equality00 absolute">
+			<img src="pictures/equality1.png" class="equality01 absolute">
+			<img src="pictures/equality2.png" class="equality02 absolute">
+			<img src="pictures/equality3.png" class="equality03 absolute" >
+			<img src="pictures/equality4.png" class="equality04 absolute">
+			<img src="pictures/equality5.png" class="equality05 absolute" >
+			<img src="pictures/equality6.png" class="equality06 absolute" >
+		</div>
+	</div>
+	<div class="culture_mission_box">
+		<div class="wth1200 culture_mission relative">
+			<img src="pictures/mission01.png" class="mission01 absolute">
+			<div class="mission02 absolute">
+				<dl>
+					<dt>XX使命</dt>
+					<dd>北京市XX信息咨询有限公司致力于让每个工程师都能发挥自己的才华，让每家企业都能找到最适合自己的人才。 <br>
+					我们是一群有着共同想法、共同信念的人，在黑暗中摸索，没有成功与失败的教训可以借鉴，一起开辟新时代，传递我们的光和热，把这个世界变得更美好。我们不忘初心，永远年轻，永远热泪盈眶！<br>
+					日月既往，不可复追。我们深知一刻也不能停歇，这些将要解决的问题，已经让我们明白任重而道远。
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<div class="culture_concept_box">
+		<div class="culture_concept wth1200 relative">
+			<img src="pictures/mission02.png" class="concept01 absolute">
+			<div class="concept02 absolute">
+				<dl>
+					<dt>经营理念</dt>
+					<dd>在将来XX将改变更多人的前景，<br>帮助更多有梦想的年轻人实现经济自由，<br>为社会的进步和发展做贡献。</dd>
+					<br />
+					<dt>做事原则</dt>
+					<dd>将正确的事情以正确的方式贯彻到底。</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<div class="culture_spirit_box">
+		<div class="culture_spirit wth1200 relative">
+			<img src="pictures/mission03.png" class="spirit01 absolute">
+			<img src="pictures/mission04.png" class="spirit02 absolute">
+			<img src="pictures/mission05.png" class="spirit03 absolute">
+		</div>
+	</div>
+    <script type="text/javascript">
+	    $(function(){
+	    	$('#culturePage').addClass("selected");
+	    	$(".equality00").animate({opacity:"1"},1000);
+	    	$(".equality06").animate({opacity:"1"},1000);
+	    	$(".equality01").delay(400).animate({opacity:"1"},1000);
+	    	$(".equality02").delay(1000).animate({opacity:"1"},1000);
+	    	$(".equality03").delay(600).animate({opacity:"1"},1000);
+	    	$(".equality04").delay(200).animate({opacity:"1"},1000);
+	    	$(".equality05").delay(800).animate({opacity:"1"},1000);
+	    	$(".mission01").delay(1000).animate({top:"75px",opacity:"1"},1000);
+	    	$(".mission02").delay(1000).animate({opacity:"1"},1000);
+	    });
+
+		$(window).scroll(function(){
+			var $concept = $(".culture_concept_box").offset().top;
+			var $spirit = $(".culture_spirit_box").offset().top;
+			var wid = $(window).height();		
+			var $scrolltop = $(this).scrollTop();
+
+			if($concept<$scrolltop+wid-200){
+				$(".concept01").animate({bottom:"0",opacity:"1"},1000);	
+				$(".concept02").animate({opacity:"1"},1000);
+			}
+			if($spirit<$scrolltop+wid-200){
+				$(".spirit01").animate({top:"123px",opacity:"1"},1000);	
+				$(".spirit02").delay(500).animate({left:"140px",opacity:"1"},1000);
+				$(".spirit03").delay(500).animate({left:"760px",opacity:"1"},1000);
+			}
+			else{
+				return false;
+			}
+		});
+    </script>
+<!--底部-->
+
+<!--底部-->
+<div class="site_food">
+	<div class="link">
+    	<div class="wth1200 center">
+	    		友情链接：	    		<a href='http://www.17sucai.com/' target='_blank'>17素材网</a>
+
+	    	</div>
+	</div>
+</div>
+<div class="center copyright">
+	Copyright © 2020 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> HelloWorld  备案号：桂ICP备XXXXXXXX号
+</div>
+</body>
+</html>

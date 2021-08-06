@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="css/css.css">
+
+<title>无标题文档</title>
+
+</head>
+
+<body>
+
+<div class="top">
+
+  <div class="topcon clear">
+
+    <div class="top_txt left">戏缘官方网站欢迎您！<span><img src="images/huico.png" alt="">您好！</span></div>
+
+    <div class="top_tb right"><a href="#"><img src="images/qq.png" alt="QQ" /></a><a href="#"><img src="images/wx.png" alt="微信" /></a><a href="#"><img src="images/wb.png" alt="微博" /></a></div>
+
+  </div>
+
+</div>
+
+<!-- top end -->
+
+<div class="menubox">
+
+  <div class="menucon clear">
+
+    <div class="logo mt10 left"><img src="images/logo.png" alt="河南恒品文化传播有限公司"></div>
+
+    <div class="nav mt30 right">
+
+      <ul>
+
+        <li><a href="index.html">首页</a></li>
+
+        <li><a href="xzxy.html">下载戏缘</a></li>
+
+        <li><a href="xjjs.html">戏缘介绍</a></li>
+
+        <li><a href="gnjs.html">功能介绍</a></li>
+
+        <li><a href="xysp.html">视频及新闻发布</a></li>
+
+        <li><a href="gzs.html">艺术家工作室</a></li>
+
+        <li class="li_on"><a href="lxwm.html">联系我们</a></li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- menubox end -->
+
+<div class="banner">
+
+  <div class="bancon"><a href="#" class="btn_xz"><span class="download_icon"></span>&nbsp;&nbsp;下载戏缘</a><a href="#" class="newreader">新手指南</a></div>
+
+</div>
+
+<!-- banner end -->
+
+<div class="ny_navbox">
+
+  <div class="ny_nav"> <span class="place"><a href="index.html">网站首页</a> &gt; <a href="#">联系我们</a></span>
+
+    <h2>联系我们</h2>
+
+  </div>
+
+</div>
+
+<!-- ny_navbox end -->
+
+<div class="conbox">
+
+  <div class="ny_tit">
+
+    <div class="titcon">CONTACT US<span>联系我们</span></div>
+
+  </div>
+
+  <div class="jjbox clear">
+
+    <div class="lx_left left">
+
+      <p style="font-size:20px;">天合科技有限公司</p>
+
+      <p style="font-size:15px;"><br />联系人：白经理 <br />
+
+        13588888888</br>
+
+      邮箱：*******@126.com</br>
+
+      网址：www.*******.com</br>
+
+      地址：江苏省南京市玄武区玄武湖</p>
+
+    </div>
+
+    <div class="lx_right right" style="width:590px;height: 300px;" id="dituContent">
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- conbox end -->
+
+<div class="footer">
+
+  <div class="footcon">
+
+    <div class="f_nav"><a href="index.html">首页</a><b>|</b><a href="xjjs.html">戏缘介绍</a><b>|</b><a href="gnjs.html">功能介绍</a><b>|</b><a href="xysp.html">视频及新闻发布</a><b>|</b><a href="gzs.html">艺术家工作室</a><b>|</b><a href="lxwm.html">联系我们</a></div>
+
+    <div class="f_tel">0371-66666666</div>
+
+    <p>Copyright @ 2019 www.adminbuy.cn. 技术支持：AB模板网<br />
+
+      联系人：白经理   电话：13588888888  地址：江苏省南京市玄武区玄武湖</p>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="other/.com/api?v=2.0&ak=SHw5Gg8TpuZxblmnggKkFWMqkzvjRstp&s=1"></script>
+
+<script type="text/javascript">
+
+  //创建和初始化地图函数：
+
+  function initMap(){
+
+      createMap();//创建地图
+
+      setMapEvent();//设置地图事件
+
+      addMapControl();//向地图添加控件
+
+  }
+
+  
+
+  //创建地图函数：
+
+  function createMap(){
+
+      var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+
+      var point = new BMap.Point(113.813898,34.800451);//定义一个中心点坐标
+
+      map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中
+
+      window.map = map;//将map变量存储在全局
+
+  }
+
+  
+
+  //地图事件设置函数：
+
+  function setMapEvent(){
+
+      map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+
+      map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+
+      map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+
+      map.enableKeyboard();//启用键盘上下左右键移动地图
+
+  }
+
+  
+
+  //地图控件添加函数：
+
+  function addMapControl(){
+
+      //向地图中添加缩放控件
+
+var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+
+map.addControl(ctrl_nav);
+
+      //向地图中添加缩略图控件
+
+var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+
+map.addControl(ctrl_ove);
+
+      //向地图中添加比例尺控件
+
+var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+
+map.addControl(ctrl_sca);
+
+  }
+
+  
+
+  
+
+  initMap();//创建和初始化地图
+
+</script>
+
+
+
+</body>
+
+</html>
+

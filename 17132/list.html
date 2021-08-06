@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文章列表</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"  src="js/nav.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="contentbox">
+    	<div class="hd_txt">欢迎光临XXX！</div>
+        <div class="hd_right">
+        	<a href="#"><img src="images/topicon1.png" />网站首页</a>
+            <a href="#"><img src="images/topicon2.png" />关于我们</a>
+            <a href="#" onclick="javascript:addFavorite2()"><img src="images/topicon3.png" />加入收藏</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="menulogo">
+	<div class="contentbox">
+    	<div class="logo"><a href="#"><img src="images/logo.png" /></a></div>
+        <div class="nav">
+        	<ul class="cl">
+            	<li><a href="index.html" class="cur">网站首页</a></li>
+                <li><a href="about.html">企业介绍</a></li>
+                <li><a href="imglist.html">产品展示</a></li>
+                <li><a href="list.html">行业动态</a></li>
+                <li><a href="info.html">合作伙伴</a></li>
+                <li><a href="info.html">人才招聘</a></li>
+                <li><a href="list.html">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="flexslider">
+	<ul class="slides">
+		<li style="background:url(images/img1.jpg) 50% 0 no-repeat;"></li>
+		<li style="background:url(images/img2.jpg) 50% 0 no-repeat;"></li>
+	</ul>
+</div>
+<div class="bg_b">
+	<div class="pst">
+    	您当前的位置：<a href="">首页</a>&gt; <a href="">新闻动态</a>
+    </div>
+</div>
+<div class="nymain">
+	<div class="scd cl">
+	<div class="scd_l">
+    	<div class="l_name">新闻动态</div>
+        <ul class="s_nav">
+        	<li class="on">
+            	<a href="">公司新闻</a>
+            </li>
+            <li>
+            	<a href="">行业动态</a>
+            </li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="r_top"><span>公司新闻</span></div>
+        <div class="scd_m">
+        	<ul class="list">
+            	<li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+                <li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+                <li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+                <li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+                <li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+                <li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+                <li>
+                	<a href="">+ 是不是只能是固定的那几个练习车辆路线，不可以自己选？</a>
+                </li>
+            </ul>
+            <div class="space_hx">&nbsp;</div>
+            <div class="pages">
+            	<a href="">首页</a>
+                <a href="">上一页</a>
+                <a href="" class="cur">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a href="">10</a>
+                <a href="">…</a>
+                <a href="">下一页</a>
+                <a href="">尾页</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer">
+	<div class="ftmenu">
+    	<a href="#" target="_blank">企业简介</a>
+        <a href="#" target="_blank">产品展示 </a>
+        <a href="#" target="_blank">行业动态 </a>
+        <a href="#" target="_blank">合伙伙伴 </a>
+        <a href="#" target="_blank">人才招聘 </a>
+        <a href="#" target="_blank">在线留言 </a>
+        <a href="#" target="_blank">联系我们 </a>
+    </div>
+    <div class="ft_txt">
+    	地址：XXX   电话：18934516667   E-mail:XXX<br />版权所有：XXX<a href="#">苏ICP备：88888888888</a>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.flexslider').flexslider({
+		directionNav: true,
+		pauseOnAction: false
+	});
+});
+
+</script>
+
+
+<script>
+function addFavorite2() {
+    var url = window.location;
+    var title = document.title;
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf("360se") > -1) {
+        alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+    }
+    else if (ua.indexOf("msie 8") > -1) {
+        window.external.AddToFavoritesBar(url, title); //IE8
+    }
+    else if (document.all) {
+  try{
+   window.external.addFavorite(url, title);
+  }catch(e){
+   alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+  }
+    }
+    else if (window.sidebar) {
+        window.sidebar.addPanel(title, url, "");
+    }
+    else {
+  alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+    }
+}
+</script>
+
+
+</body>
+</html>

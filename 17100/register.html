@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="page-common">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册_捷阅</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+		<link rel="stylesheet" href="assets/css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/main-index.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+
+	<body class="page-common">
+		<header id="header">
+			<div class="header-container header-other no-shadow">
+				<div class="head">
+					<div class="head-left">
+						<a href="index.html"><img src="images/logo_b2.png" /></a>
+					</div>
+					<div class="head-right">
+						<a href="index.html#index" class="a_normal ">首页</a>
+						<a href="index.html#intro" class="a_normal">产品介绍</a>
+						<a href="index.html#select" class="a_normal">内容案例</a>
+						<a href="download.html" class="a_normal">下载</a>
+						<a href="help.html" class="a_normal">帮助</a>
+						<a href="login.html" class="login">登录</a>
+						<a href="register.html" class="register">免费注册</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<h1 class="h1-style">注 册</h1>
+		<div class="wrapper radius10px" id="j-wrapper">
+			<div class="step step1"></div>
+			<form action="" method="post" class="m-register">
+				<div class="row tc">
+					<input type="text" class=" box-sizing" id="username" autofocus="autofocus" autocomplete="off" placeholder="请填写邮箱地址" maxlength="30" />
+				</div>
+				<div class="row tc">
+					<input type="password" class=" box-sizing " id="password" autocomplete="off" placeholder="请填写密码" maxlength="20" />
+				</div>
+				<div class="row tc">
+					<input type="password" class=" box-sizing" id="confirmPassowrd" autocomplete="off" placeholder="请填写确认密码" maxlength="20" />
+				</div>
+				
+				<div class="row box">
+					<div class="drag-box"  id="dragEle"></div>
+					<div class="tips">>>拖动滑块验证<<</div>					
+				</div>
+				
+				<div class="row" style="padding-left: 60px;">
+					<input type="checkbox" checked="checked" id="chk" class="chk" /> 同意并阅读
+					<a href="terms.html" target="_blank" class="sc-1" tabindex="-1">"服务条款"</a>
+				</div>
+				
+					<div class="row">
+						<div class="error-msg hide" id="errorMsg">此帐号已存在</div>
+					</div>
+					<div class="row tc mt-10">
+						<button type="button" class="btn btn-login" id="submit">注 册</button>
+					</div>
+			</form>
+			<div class="u-redirect mt-10">
+				<a href="login.html">已有帐号？<span class="text-link">直接登录</span></a>
+			</div>
+			</div>
+			<script src="assets/js/jquery-1.9.0.min.js"></script>
+			<script src="assets/js/register.js"></script>
+			<script src="assets/js/autoComplete.js"></script>
+	</body>
+
+</html>

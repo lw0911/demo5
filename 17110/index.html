@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>XXX校园招聘</title>
+	<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/public.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav_con">
+			<a href="http://www.XXX.com/"><img class="logo" src="images/logo.png" width="13%"/></a>
+			<ul class="nav_ul">
+				<li class="nav_li"><a href="index.html" class="active_hover">校招首页</a><div></div></li>
+				<li class="nav_li"><a href="about.html">走进XXX</a><div></div></li>
+				<li class="nav_li"><a href="plan.html">职业发展规划</a><div></div></li>
+				<li class="nav_li"><a href="product.html">产品介绍</a><div></div></li>
+				<li class="li_ep">校招流程
+					<div class="li_list"><a href="process.html">招聘流程</a></div>
+					<div class="li_list"><a href="faq.html">校招FAQ</a></div>
+					<div class="li_list"><a href="join.html">校招岗位</a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="lunbanner">
+		<a class="lunbo_a" href="http://fantasy.XXX.com/">
+			<div class="lunbo">
+			</div>
+		</a>
+		<div class="lun_list">
+			<ul>
+				<li class="foucus_list"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lafite_nav">
+		<div class="lafite_nav_content">
+			<ul>
+				<li><div class="l_nav_c_pic"><img src="./images/indexicon0.png"></div><div class="l_nav_c_font"><a href="plan.html">游戏精英训练营计划</a></div></li>
+				<li><div class="l_nav_c_pic"><img src="./images/indexicon1.png"></div><div class="l_nav_c_font"><a href="plan.html">培训发展</a></div></li>
+				<li><div class="l_nav_c_pic"><img src="./images/indexicon2.png"></div><div class="l_nav_c_font"><a href="process.html">校招行程</a></div></li>
+				<li><div class="l_nav_c_pic"><img src="./images/indexicon3.png"></div><div class="l_nav_c_font"><a href="faq.html">校招FAQ</a></div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="index_list">
+		<a href="join.html">
+			<div class="index_list_content">
+				<ul>
+					<li>
+						<div class="last_c_pic">
+							<img src="./images/lastpic1.png"/>
+						</div>
+						<div class="last_c_font">
+							<div class="last_title">开发类</div>
+							<div class="last_c_infro">服务端开发<br>客服端开发</div>
+						</div>
+					</li>
+					<li>
+						<div class="last_c_pic">
+							<img src="./images/lastpic2.png"/>
+						</div>
+						<div class="last_c_font">
+							<div class="last_title">策划类</div>
+							<div class="last_c_infro">手机游戏策划</div>
+						</div>
+					</li>
+					<li>
+						<div class="last_c_pic">
+							<img src="./images/lastpic3.png"/>
+						</div>
+						<div class="last_c_font">
+							<div class="last_title">运营商务类</div>
+							<div class="last_c_infro">运营专员 商务专员<br>市场策划专员</div>
+						</div>
+					</li>
+					<li>
+						<div class="last_c_pic">
+							<img src="./images/lastpic4.png"/>
+						</div>
+						<div class="last_c_font">
+							<div class="last_title">职能类</div>
+							<div class="last_c_infro">人事专员</div>
+						</div>
+					</li>
+					<li>
+						<div class="last_c_pic">
+							<img src="./images/lastpic5.png"/>
+						</div>
+						<div class="last_c_font">
+							<div class="last_title">特招岗位</div>
+							<div class="last_c_infro">总经理助理<br>管培生</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="footer">
+		<div class="footer-infro">
+			广州XXX信息科技有限公司版权所有<br>Copyright © 2020 XXX.com All Right<br>
+			广州XXX信息科技有限公司 粤ICP备XXX 
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	$(function() {
+		function play() {
+			this.a = -1;
+			this.url = ["schoolpic1.jpg","schoolpic2.jpg","schoolpic3.jpg"];
+			this.aurl = ["join.html","plan.html","join.html"];
+		};
+		play.prototype = {
+			Lun:function() {
+				$(".lunbanner .lunbo_a").attr("href",Play.aurl[Play.a]);
+				$(".lunbanner .lunbo").css({"background":"url(./images/"+Play.url[Play.a]+") no-repeat center"},"backgroundSize","auto 100%");
+				if(Play.a > 1) {
+					Play.a = -1;
+				}
+				Play.a++;
+				$(".lun_list ul li").removeClass("foucus_list");
+				$(".lun_list ul li").eq(Play.a-1).addClass("foucus_list");
+
+				// console.log(Play.a);
+			},
+			Inval:function() {
+				setInterval(Play.Lun(),2000);
+			},
+			Click:function() {
+				$(".lun_list ul li").click(function() {
+					console.log($(this).index());
+					$(".lun_list ul li").removeClass("foucus_list");
+					$(".lun_list ul li").eq($(this).index()).addClass("foucus_list");
+					Play.a = $(this).index();
+					$(".lunbo").css({"background":"url(./images/"+Play.url[Play.a]+") no-repeat center"},"backgroundSize","100%");
+					$(".lunbanner .lunbo_a").attr("href",Play.aurl[Play.a]);
+
+				});
+			},
+			NavHover:function() {
+				$(".nav_li").hover(function() {
+					$(this).find('div').stop().animate({"width":"100%"},300);
+				},function() {
+					$(this).find('div').stop().animate({"width":"0px"},200);
+				});
+			},
+			Video:function(a,b) {
+				$(a).click(function() {
+					console.log($(this).find("video"));
+					$(b).fadeIn();
+					$(this).parent().parent().find("video")[0].play();
+				});
+			}
+		}
+		var Play = new play()
+		Play.Lun();
+		Play.Inval();
+		setInterval(Play.Inval,5000);
+		Play.Click();
+		Play.NavHover();
+		Play.Video(".video_play2",".play_video2");
+		Play.Video(".video_play",".play_video");
+	})
+</script>

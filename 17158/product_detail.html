@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="agent-pc theme-w theme-wred">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>产品内容页-艺术品展览类模板</title>
+		<meta name="keywords" content="网站模板,企业模板,企业网站">
+		<meta name="description" content="艺术品展览类模板. XXX ">
+		<meta name="author" content="www.wangdahai.cn">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name=renderer content=webkit>
+		<link rel="stylesheet" type="text/css" href="./statics/css/lib2.css">
+		<link rel="stylesheet" type="text/css" href="./statics/css/style.5486.css">
+		<link rel="stylesheet" type="text/css" href="./statics/css/wred.css" id="themeCssPath">
+		<link rel="stylesheet" type="text/css" href="./statics/css/5486.css" id="ucssurl">
+		<script type="text/javascript" src="./statics/js/jquery.min.js"></script>
+		<script type="text/javascript" src="./statics/js/org.1494058893.js" data-main="postMain"></script>
+		<script type="text/javascript" src="./statics/js/5486.js"></script>
+	</head>
+
+	<body id="longPage" class="gh0  longPage  bodylistpost bodyproject cn">
+		<div class="bodyMask"></div>
+		<div id="header">
+			<div class="wrapper">
+				<div class="content">
+					<div id="headTop">
+						<a href="javascript:;" id="logo"><img src="./statics/images/1510889980838.png" height="44" /></a>
+
+						<div id="hcontact" class="fr"><i class="fa fa-phone"></i>
+							<p><span class="telNum">XXX</span><br />
+								<a href="javascript:;">XXX</a>
+							</p>
+						</div>
+						<div id="search-header" class="searchGroup">
+							<div class="search_wrap">
+								<div class="searchOnOff">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</div>
+								<div class="searchBox">
+									<div class="searchFormGroup">
+										<input type="text" aria-label="搜索" placeholder="搜索" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" />
+										<div class="searchSub"><span>搜索</span><i class="fa fa-search" aria-hidden="true"></i></div>
+									</div>
+									<div class="searchClose"><i class="fa fa-times" aria-hidden="true"></i></div>
+								</div>
+							</div>
+						</div>
+						<div id="openBtn" class="fl btn">
+							<div class="lcbody">
+								<div class="lcitem top">
+									<div class="rect top"></div>
+								</div>
+								<div class="lcitem center hide">
+									<div class="rect bottom"></div>
+								</div>
+								<div class="lcitem bottom">
+									<div class="rect bottom"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="navWrapper">
+
+						<div class="content">
+							<ul class="nav movedx" data-movedx-mid="1">
+								<li class="navitem">
+									<a href="./index.html" target="_self"> <span data-title="首页">首页</span> </a>
+								</li>
+								<li class="navitem">
+									<a href="./news.html" target="_self"> <span data-title="最新展览">最新展览</span> </a>
+								</li>
+								<li class="navitem">
+									<a class="active" href="./product.html" target="_self"> <span data-title="馆藏精选">馆藏精选</span> </a>
+								</li>
+								<li class="navitem">
+									<a href="./artist.html" target="_self"> <span data-title="艺术家">艺术家</span> </a>
+								</li>
+								<li class="navitem">
+									<a href="javascript:;" target=""> <span data-title="关于">关于</span> <i class="fa fa-angle-down"></i></a>
+									<ul class="subnav">
+										<li>
+											<a href="./about_us.html" target="_self">关于我们</a>
+										</li>
+										<li>
+											<a href="./partners.html" target="_self">合作伙伴</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navitem">
+									<a href="./contact.html" target="_self"> <span data-title="联系">联系</span> </a>
+								</li>
+							</ul>
+
+							<div id="search-nav" class="searchGroup">
+								<div class="search_wrap">
+									<div class="searchOnOff">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</div>
+									<div class="searchBox">
+										<div class="searchFormGroup">
+											<input type="text" aria-label="搜索" placeholder="搜索" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" />
+											<div class="searchSub"><span>搜索</span><i class="fa fa-search" aria-hidden="true"></i></div>
+										</div>
+										<div class="searchClose"><i class="fa fa-times" aria-hidden="true"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="sitecontent" class="ff_sitecontent">
+			<script>
+				var searchAddr = window.location.origin + '/search/s/';
+
+				function jumpToSearch($el) {
+					var searchInfor = encodeURIComponent(encodeURIComponent($el.val())) + '/';
+					window.open(searchAddr + searchInfor);
+				}
+				$('.searchGroup .searchSub').click(function() {
+
+					jumpToSearch($(this).parent().find('input'));
+					return false;
+				});
+				$('.searchGroup input').on({
+					'keydown': function(ev) {
+						if(ev.keyCode == 13) {
+							jumpToSearch($(this));
+						}
+					},
+					'blur': function() {
+						var _this = this;
+						setTimeout(function() {
+							$(_this).val("");
+						}, 200);
+					}
+				});
+
+				$(function() {
+					$('#topSlider video').each(function(i, v) {
+						if(v.paused) {
+							v.play();
+						}
+					})
+				});
+			</script>
+			<div class="npagePage post ff_postPage">
+				<div id="pageTarget" class="ff_pageTarget module">
+					<div class="module_container">
+						<div class="container_target wow">您的位置：
+							<a href="javascript:;">首页</a><i class="fa fa-angle-right"></i>
+							<a href="javascript:;">馆藏精选</a><i class="fa fa-angle-right"></i>
+							<a href="javascript:;">艺术家姓名</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="mlistpost project module">
+						<div class="module_container">
+							<div class="container_content">
+								<div class="content_wrapper">
+									<div id="postWrapper">
+
+										<div id="postSlider" class="postSlider mlist">
+											<div class="tab_content">
+												<div class="item_block item_block_0">
+													<div class="wrapper">
+														<div class="item_img">
+															<img src="./statics/images/1520320740905.jpg" />
+														</div>
+													</div>
+												</div>
+												<div class="item_block item_block_1">
+													<div class="wrapper">
+														<div class="item_img">
+															<img src="./statics/images/1520319826297.jpg" />
+														</div>
+													</div>
+												</div>
+												<div class="item_block item_block_2">
+													<div class="wrapper">
+														<div class="item_img">
+															<img src="./statics/images/1520322532986.jpg" />
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tab_button">
+												<div class="item_block_0 item_block active" data-tab-index="0">
+													<div class="wrapper">
+														<div class="item_img">
+															<img src="./statics/images/1520320740905.jpg" />
+														</div>
+													</div>
+												</div>
+												<div class="item_block_1 item_block" data-tab-index="1">
+													<div class="wrapper">
+														<div class="item_img">
+															<img src="./statics/images/1520319826297.jpg" />
+														</div>
+													</div>
+												</div>
+												<div class="item_block_2 item_block" data-tab-index="2">
+													<div class="wrapper">
+														<div class="item_img">
+															<img src="./statics/images/1520322532986.jpg" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="postContent">
+											<div class="postInfo">
+												<div class="mainInfor">
+													<p class="title">梦笔生花 — 全国中国画作品展</p>
+													<p class="subtitle">规格：144×367cm</p>
+													<p class="usetdate">
+														<span class="year">2016</span><i class="time-connect">-</i><span class="m">12</span><i class="time-connect">-</i><span class="d">14</span>
+													</p>
+												</div>
+												<div class="description">
+													<p>创作年代：不详/规格：34×27cm/材质：石版画</p>
+												</div>
+											</div>
+											<div class="postbody">
+												<p style="white-space: normal;">Micaela Lattanzio在该作品中探讨了一些社会性问题，比如人口激增，全球沙漠化，提醒人类去反思我们对生态环境的影响。与其他批判性作品不同，该系列只是艺术家对世界认知，是她对这种认知的回应。人类是生态系统中非常重要的组成部分，人类与万物一样也需要进化，而在这个过程中，我们需要找到一种平衡。</p>
+												<p style="white-space: normal;"><br/></p>
+												<p style="white-space: normal;">Micaela Lattanzio explores socio-political themes such as overpopulation and globe desertification, asking a fundamental question: what is the impact that our society has on the environment? The series is not a criticism, but rather a reflection on understanding the world, human being is an integral part of a complex system that is facing an evolutionary process in which it is imperative to find a necessary equilibrium.</p>
+												<p><br/></p>
+											</div>
+										</div>
+										<div class="listWrap">
+											<div id="listContent" class="listContent_post">
+												<h3>相关内容</h3>
+												<div class="item_tags">
+													<a href="javascript:;" target="_blank">艺术演讲</a>
+													<a href="javascript:;" target="_blank">展览</a>
+													<a href="javascript:;" target="_blank">艺术品</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<p>
+				<span class="ellipsis">
+            COPYRIGHT (©) 2020 - 艺术品展览类模板. XXX
+        </span>
+				<a class="beian" href="javascript:;" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank">
+
+				</a>
+			</p>
+		</div>
+		<div id="shares">
+			<a href="javascript:;" target="_blank" id="sweibo">
+				<i class="fa fa-weibo"></i>
+			</a>
+			<a href="javascript:;" id="sweixin">
+				<i class="fa fa-mobile"></i>
+			</a>
+			<a href="javascript:;" id="gotop">
+				<i class="fa fa-angle-up"></i>
+			</a>
+		</div>
+		<div class="fixed" id="fixed_weixin">
+			<div class="fixed-container">
+				<div id="qrcode"></div>
+				<p>扫描二维码分享到微信</p>
+			</div>
+		</div>
+		<div id="online_open">
+			<i class="fa fa-comments-o"></i>
+		</div>
+		<div id="online_lx">
+			<div id="olx_head">在线咨询
+				<i class="fa fa-times fr" id="online_close"></i>
+			</div>
+			<ul id="olx_qq">
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-qq"></i>986482
+					</a>
+				</li>
+			</ul>
+			<div id="olx_tel">
+				<div>
+					<i class="fa fa-phone"></i> 联系电话
+				</div>
+				<p>
+					XXX<br/> </p>
+			</div>
+		</div>
+		<a id="openAssist" href="javascript:;">
+			<i class="icon iconfont icon-add"></i>
+		</a>
+		<div id="assistBtn">
+			<a href="javascript:;" onclick="$('html,body').scrollTop(0);return false;">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<a class="_fa-tel" href="javascript:;">
+				<i class="fa fa-phone"></i>
+			</a>
+			<a class="_fa-qq" href="javascript:;">
+				<i class="fa fa-qq"></i>
+			</a>
+		</div>
+	</body>
+
+</html>
