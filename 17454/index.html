@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XXX墙纸</title>
+<link href="conment.css" rel="stylesheet">
+<script src="jquery.js"></script>
+<style>
+.banner{ margin-top:15px;}
+.bannerbox{ width:1280px; margin-left:auto; margin-right:auto;height:406px; overflow:hidden;}
+
+.productbig{ margin-top:30px;}
+.productbox{ width:1000px; margin-left:auto; margin-right:auto;}
+.producttop{ margin-bottom:30px;}
+.producttop h1{ float:left; font-family:"微软雅黑"; font-size:20px; letter-spacing:4px; color:#74542d;}
+.producttop h1 span{ font-family:Arial; margin-top:8px;  letter-spacing:0px; font-size:16px; color:#74542d;}
+.producttop a{ float:right; margin-top:20px;}
+
+.productdetailbig{}
+.productdetailbox{ width:1000px; margin-left:auto; margin-right:auto;}
+.productdetail{ float:left; width:318px; height:400px; overflow:hidden; margin-right:23px; margin-bottom:23px;}
+.productdetail img{ width:318px; height:225px; overflow:hidden;}
+.productdetailtextbox{ width:278px; height:135px; overflow:hidden; padding:20px; background-color:#f1f1f1;}
+.productdetailtextbox h1{ font-family:"微软雅黑"; font-size:18px; color:#74542d; margin-top:0px;}
+.productdetailtextbox p{ color:#605d5d; text-indent:2em; line-height:20px;}
+.productdetailtextbox a{ display:block; padding-left:12px; background-image:url(images/sanjiao.png); background-position:left center; background-repeat:no-repeat;  font-family:"微软雅黑"; font-size:12px; color:#74542d;}
+.productdetailtextboxother{ width:276px; background-color:#FFF; border:solid 1px #CCCCCC; border-bottom:none; background-color:#f1f1f1;}
+.productdetailtextboxother a{ display:block; padding-left:12px; background-image:url(images/sanjiao11.png); background-position:left center; background-repeat:no-repeat;  font-family:"微软雅黑"; font-size:12px; color:#74542d;}
+.productdetailmaginR{ margin-right:0px;}
+
+.aboutbig{ background-color:#f1f1f1; margin-top:23px;}
+.aboutbox{  width:1000px; margin-left:auto; margin-right:auto;}
+.abouttext{ float:left; width:360px; overflow:hidden; margin-top:50px;}
+.abouttext h1{ width:360px;float:left; font-family:"微软雅黑"; font-size:20px; letter-spacing:4px; color:#74542d;}
+.abouttext h1 span{ font-family:Arial; margin-top:8px;  letter-spacing:0px; font-size:16px; color:#74542d;}
+.abouttext p{ color:#605d5d; text-indent:2em; line-height:24px;}
+.abouttext a{ display:block; padding-left:12px; background-image:url(images/sanjiao1.png); background-position:left center; background-repeat:no-repeat;  font-family:"微软雅黑"; font-size:12px; color:#74542d; float:right; margin-top:30px;}
+.aboutimg{ width:500px; height:353px; float:right;}
+
+.invitebig{ width:1280px; margin-left:auto; margin-right:auto; height:200px; overflow:hidden; background-image:url(images/invite.png); background-repeat:no-repeat;  margin-top:46px; }
+.invitebox{  width:1000px; margin-left:auto; margin-right:auto; text-align:center; margin-top:20px;}
+.invitebox h1{ font-family:"宋体"; font-size:30px; color:#74542d;}
+.invitebox h2{ font-family:"宋体"; font-size:26px; color:#74542d;}
+.invitebox a{ font-family:"宋体"; font-size:14px; display:block; background-image:url(images/sanjiao1.png); padding-left:70px; background-position: center; background-repeat:no-repeat; color:#74542d; }
+
+.newsbig{ background-color:#f1f1f1; margin-top:46px;}
+.newsbox{ width:1000px; margin-left:auto; margin-right:auto;}
+.newstextbox{ float:left; width:243px; margin-top:50px;}
+.newstextbox h1{ width:243px;float:left; font-family:"微软雅黑"; font-size:20px; letter-spacing:4px; color:#74542d;}
+.newstextbox h1 span{ font-family:Arial; margin-top:8px;  letter-spacing:0px; font-size:16px; color:#74542d;}
+.newstextbox p{color:#605d5d; }
+.newstextbox a{display:block; padding-left:12px; background-image:url(images/sanjiao1.png); background-position:left center; background-repeat:no-repeat;  font-family:"微软雅黑"; font-size:12px; color:#74542d; float:right; margin-right:30px; margin-top:4px; }
+.newsboximgbox{ float:left; width:757px; overflow:hidden; margin-top:30px;}
+.newsboximgbox *{ float:left; margin-bottom:15px; }
+.newsboximgmagin{ margin-right:17px;}
+.newsboximg3{ }
+ 
+.casebig{ background-color:#f1f1f1; margin-top:46px;}
+.casebox{ width:1000px; margin-left:auto; margin-right:auto;}
+.casetextbox{ float:left; width:235px; margin-top:20px;}
+.casetextbox h1{ font-family:"微软雅黑"; font-size:20px; letter-spacing:4px; color:#74542d;}
+.casetextbox h2{ font-family:Arial; font-size:16px; color:#74542d; margin-left:60px; margin-top:-12px;}
+.casetextbox a img{ margin-left:150px;}
+.caseimgbox{ position:relative; float:left; width:250px; height:230px; margin-left:5px;  text-align:center; margin-top:30px;  margin-bottom:30px; cursor: pointer;}
+.caseimgbox img{ height:200px; overflow:hidden;}
+.caseimgbox a{ line-height:30px; font-family:"微软雅体"; font-size:14px; color:#74542d;}
+.caseimgboxtm img{ position:absolute; width:100%; height:100%;}
+</style>
+</head>
+
+<body>
+<div class="top">
+    <div class="topbox overH">
+        <div class="topright overH">
+            <input>           
+            <a href="#">中文版&nbsp;|</a>
+            <a href="#">英文版</a>
+        </div>
+        <div class="logo"><img src="images/logo.png"></div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="navbox overH">
+        <div class="navlink">
+            <a href="index.html"><span class="current">网站首页</span></a>
+            <a href="about.html">关于我们</a>
+            <a href="product.html">产品鉴赏</a>
+            <a href="case.html">经典案例</a>
+            <a href="news.html">新闻中心</a>
+            <a href="sales.html">网络销售</a>
+            <a href="invite.html">诚邀加盟</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </div>
+</div>
+
+<div class="banner">
+    <div class="bannerbox"><img src="images/indexbanner1.png"></div>
+</div>
+
+<div class="productbig">
+    <div class="productbox overH">
+        <div class="producttop">
+            <h1>产品鉴赏&nbsp;|&nbsp;<span>PRODUCTS</span></h1>
+            <a href="#"><img src="images/jia.png"></a>
+        </div>
+    </div>
+</div>
+
+<div class="productdetailbig">
+    <div class="productdetailbox overH">
+        <div class="productdetail overH">
+            <img src="images/indexproduct_03.png">
+            <div class="productdetailtextbox">
+                <h1>非洲风情2015系列</h1>
+                <p>非洲风情2015系列以全新的视角展示了动物的皮毛设计。该系列描绘的非洲之旅是狩猎征服与魅力的融合相表现出从古代...</p>
+                <a href="#">进入产品系列</a>
+            </div>
+        </div>
+        <div class="productdetail overH">
+            <div class="productdetailtextbox productdetailtextboxother">
+                <h1>浓情美式乡村系列</h1>
+                <p>花型与颜色风格的完美融合营造出和谐的视觉体验,采用天然成分油墨优质环保花型与颜色风格的完美融合营造出和谐的视...</p>
+                <a href="#">进入产品系列</a>
+            </div>
+            <img src="images/indexproduct_08.png">            
+        </div>
+        <div class="productdetail productdetailmaginR overH">
+            <img src="images/indexproduct_05.png">
+            <div class="productdetailtextbox">
+                <h1>英伦绅士风系列</h1>
+                <p>斑驳的图案，加上洒金撒银的工艺，将美妙的纹理打造出玻璃与水晶一贯的光泽，呈现出淡雅或绚丽的色泽平分秋色...</p>
+                <a href="#">进入产品系列</a>
+            </div>
+        </div>
+        <div class="productdetail overH">
+            <div class="productdetailtextbox productdetailtextboxother">
+                <h1>法式温馨田园系列</h1>
+                <p>花枝缠绕，发泡带来的立体视觉效果使整体层次更加分明，浅静的配色，颇有“墙上花枝笑独眠”之觉伴着满室的美入睡...</p>
+                <a href="#">进入产品系列</a>
+            </div>
+            <img src="images/indexproduct_14.png">            
+        </div>
+        <div class="productdetail productdetailmagin overH">
+            <img src="images/indexproduct_13.png">
+            <div class="productdetailtextbox">
+                <h1>极简轻奢主义系列</h1>
+                <p>时尚亮面混搭充满诗意的柔美，给人带来自在的放松轻松营造温馨家居空间时尚亮面混搭充满诗意的柔美轻松营造温馨家居空间设计...</p>
+                <a href="#">进入产品系列</a>
+            </div>
+        </div>
+        <div class="productdetail productdetailmaginR overH">
+            <div class="productdetailtextbox productdetailtextboxother">
+                <h1>浪漫地中海系列</h1>
+                <p>天然健康的原木风与浪漫地中海的时尚配搭，延伸空间的同时也接近了人与自然的距离，钟爱古朴静逸家居风格相表现出从古代...</p>
+                <a href="#">进入产品系列</a>
+            </div>
+            <img src="images/indexproduct_15.png">            
+        </div>       
+    </div>
+</div>
+
+<div class="aboutbig">
+    <div class="aboutbox overH">
+        <div class="abouttext">
+            <h1>关于我们&nbsp;|&nbsp;<span>ABOUT&nbsp;US</span></h1>
+            <p>XXX2006年创立于常州，经多年的飞速发展，现已成为最具规模的中国壁纸品牌之一，XXX壁纸以推动行业发展为己任，致力于通过高品位、高质量、绿色环保、设计多元的壁纸，在吸取西方文化艺术的同时，融合了东方特色的雅致与秀美，追求审美情趣和实用功能完美结合，带来全新的潮流体验和更健康的生活方式，让人们在无形中感受到艺术和审美的熏陶。</p>
+            <a href="#">查看更多</a>
+        </div>
+        <div class="aboutimg"><img src="images/about.png"></div>
+    </div>
+</div>
+
+<div class="invitebig">     
+    <div class="invitebox overH">
+        <h1>全国招商热线：XXX</h1>
+        <h2>官方网址：XXX</h2>
+        <a href="#">立即加盟</a>
+    </div>
+</div>
+
+<div class="newsbig">
+    <div class="newsbox overH">
+        <div class="newstextbox">
+            <h1>新闻中心&nbsp;｜&nbsp;<span>NEWS</span></h1>
+            <p>第一站 2010年3月XXX进入壁画行...
+            <p> 第二站 2010年上海展会成功引...</p>
+            <p>     第三站 2011年北京展会成功累...</p>
+            <p>     第四站 2011年5月旗舰店月发货...</p>
+            <p>     第五站 2011年8月上海展会累...</p>
+            <p>    第六站 XXX旗舰店在壁画行业...</p>
+            <p>     第七站 2012年1月XXX以独特的...</p>
+            <p>     第八站 2012年6月荣获“2012年...</p>
+            <p>    第九站 2012年12月中国墙纸市场...</p>
+            <a href="#">查看更多</a>
+        </div>
+        <div class="newsboximgbox overH">
+             <div class="newsboximgmagin"><img src="images/news_03.png"></div>
+             <div><img src="images/news_05.png"></div>
+             <div class="newsboximg3">
+                <img src="images/news_091.png">
+             </div>                   
+        </div>
+    </div>
+</div>
+
+<div class="casebig">
+    <div class="casebox overH">
+        <div class="casetextbox">
+            <h1>经典案例</h1>
+            <h2>CASE</h2>
+            <a href="#"><img src="images/sanjiao2.png"></a>
+        </div>    
+        <div class="caseimgbox overH">
+            <div class="caseimgboxtm"><img src="images/caseimgboxtouming.png"></div>
+            <img src="images/case_03.png">             
+            <a href="#">宜居客厅</a>           
+      </div>
+        <div class="caseimgbox overH">
+            <div class="caseimgboxtm"><img src="images/caseimgboxtouming.png"></div>
+            <img src="images/case_05.png">             
+            <a href="#">温馨卧室</a>
+        </div>
+        <div class="caseimgbox overH">
+            <div class="caseimgboxtm"><img src="images/caseimgboxtouming.png"></div>
+            <img src="images/case_07.png">             
+            <a href="#">典雅书房</a>
+        </div>
+    </div>
+</div>
+
+<div class="footerbig">
+    <div class="footerbox overH">
+        <div class="footerleft">
+            <ul>品牌简介
+                <li><a href="#">品牌理念</a></li>
+                <li><a href="#">品牌内涵</a></li>
+                <li><a href="#">品牌文化</a></li>
+                <li><a href="#">墙纸知识</a></li>
+            </ul>
+            <ul>品牌案例
+                <li><a href="#">产品中心</a></li>
+                <li><a href="#">产品鉴赏</a></li>
+                <li><a href="#">最新产品</a></li>
+                <li><a href="#">墙纸分类</a></li>
+            </ul>
+            <ul>新闻中心
+                <li><a href="#">企业动态</a></li>
+                <li><a href="#">行业动态</a></li>
+                <li><a href="#">潮流前线</a></li>
+                <li><a href="#">热门资料</a></li>
+            </ul>
+            <ul>服务中心
+                <li><a href="#">客服电话</a></li>
+                <li><a href="#">回馈中心</a></li>
+                <li><a href="#">售前联系</a></li>
+                <li><a href="#">售后中心</a></li>
+            </ul>
+        </div>
+        <div class="footerright">
+            <p>上班时间：9:00-12:00  14:00-18:00</p>
+            <p>联系方式：XXX</p>
+            <p>加盟热线：XXX</p>
+            <p>地址：XXX</p>
+        </div>
+    </div>
+    <div>   
+  </div>
+</div>
+
+<div class="copyrightbox">
+    <div class="copyright overH"> 
+        <p>Copyright  2020XXX壁纸（mesu）All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>   粤ICP备XXX号 增值电信业务经营许可 电信与信息服务经营许可证</p>
+        <a><img src="images/logo3.png"></a>
+        <a><img src="images/logo2.png"></a>
+        <a><img src="images/logo1.png"></a>
+    </div>
+</div>  
+<div class="back"><img src="images/back.png"></div>
+
+<script>
+$(document).scroll(
+	function(){
+		if(toppos>10){
+			$(".back").fadeIn();	
+		}else if(toppos==0){
+			$(".back").fadeOut();	
+		}
+	}
+)
+$(".back").click(
+	function(){
+		/*$(document).scrollTop(0);*/	
+		$("html,body").animate({scrollTop:0})
+	}
+)
+
+$(".productdetailtextbox p").mouseenter(
+                          function(){
+							  $(this).addClass("mouseentercolor").siblings().removeClass("mouseentercolor");
+							  } 
+)
+ 
+$(".caseimgboxtm img").mouseenter(
+                 function(){
+					 $(this).css({"top":"250px"});
+					 }
+)                     .mouseleave(
+                 function(){
+					 $(this).css({"top":"0px"})
+					 }
+)
+
+</script>
+
+</body>
+</html>

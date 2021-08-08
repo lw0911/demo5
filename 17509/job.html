@@ -1,0 +1,485 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" itemscope>
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>招聘-XXX科技</title><meta name='keywords' content='企业网站建设,上海网站建设,上海做网站,网站建设服务,网站建设公司,网站建设价格,网站制作公司,专业网站建设,上海网站建设公司,上海网站设计公司,上海网站制作公司' /><meta name='description' content='XXX品牌是专业的上海网站建设公司,是知名的上海网站设计公司,提供包括网站策划、网站设计、网站制作、微信开发、移动端开发在内的多项网站建设服务,联系电话：XXX。'/> 
+
+<meta name="author" content="上海XXX信息科技有限公司提供技术支持," />
+
+
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="css/import.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link href="css/job.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#item .title").click(function() {
+                if (!$(this).hasClass("cur")) {
+                    $(this).addClass("cur");
+                    $(this).parents("#item").find(".txt").slideDown(800);
+                    $(".white").css("background-color", "#ebebeb");
+                }
+                else {
+                    $(this).removeClass("cur");
+                    $(this).parents("#item").find(".txt").slideUp(800);
+                    $(".white").css("background-color", "#ffffff");
+                }
+
+
+            }).eq(0).click();
+
+
+            $(".btn").click(function() {
+
+                var isPhone = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if ($("#realname").val() == "") {
+                    alert("请先输入姓名");
+                    return;
+                }
+                if ($("#tel").val() == "") {
+                    alert("请先输入手机号");
+                    return;
+                }
+
+                if ($("#job").val() == "") {
+                    alert("请先输入职位");
+                    return;
+                }
+
+                if (!isPhone.test($("#tel").val())) {
+                    alert("请输入正确的手机号");
+                    return;
+                }
+                $.ajax({
+                    url: '/ashx/request.aspx',
+                    data: 'action=resume&name=' + $("#realname").val() + "&tel=" + $("#tel").val() + "&job=" + $("#job").val() + "&intro=" + $("#into").val() + "&content=" + $("#content").val(),
+                    cache: false,
+                    type: 'POST',
+                    success: function(data) {
+                        alert(data);
+                    }
+                })
+            })
+
+
+        });
+    </script>
+
+</head>
+<body>
+<img src="images/logo_big.png" style="position:absolute;top:-9999em;left:-9999em;" />
+    <!-- preloader / loading gif is located in ../img/ 
+change background color in style.css -->
+    <div id="preloader">
+        <div id="status">
+            &nbsp;
+        </div>
+    </div>
+    <!-- Navigation header -->
+    
+<!-- Navigation header -->
+<header class="main custom-scroll">
+<!-- #header-scrollarea adds custom scrollbar for header -->
+	<div id="header-scrollarea">
+	<!-- sliding-header logo will not display on mobile devices -->
+        <div class="logo">
+            <img src="images/logo.png" alt="logo" gumby-retina>
+        </div>
+	<!-- navigation -->
+		<nav class="main-nav">
+			<ul class="site-nav">
+			<!-- li class active for active page link
+				add gumby-trigger=#id to target drawer with child navigation -->
+				<li class="active"><a href="index.html">首页<span>Home</span></a></li>
+				<li class="active"><a href="app.html">APP开发<span>App Develop</span></a></li>
+				<li class="active"><a href="case.html">案例分享<span>Case Sharing</span></a></li>
+                <li class="active"><a href="service.html">服务范围<span>Services</span></a></li>
+                <li class="active"><a href="news.html">新闻资讯<span>News</span></a></li>
+                <li class="active"><a href="job.html">招聘<span>Recruit</span></a></li>
+                <li class="active"><a href="about.html">关于XXX<span>About Us</span></a></li>
+                <li class="active"><a href="contact.html">联系我们<span>Contact Us</span></a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<!-- header trigger -->
+<div class="trigger">
+    <div class="trigger-box" id="trigger">
+        <a class="switch open-header" gumby-trigger="header.main"><i class="fa fa-bars"></i>
+        </a><a class="switch close-header" gumby-trigger="|header.main"><i class="fa fa-times">
+        </i></a>
+    </div>
+    <!-- side logo mark  -->
+    <div class="side-logo">
+    </div>
+    <!-- back to top button displays after 850px 
+		vertical scroll value in ../js/main.js -->
+    <div class="back-to-top">
+        <a id="top-trigger"><i class="fa fa-angle-up"></i></a>
+    </div>
+</div>
+
+    <!-- Main content block - all page content -->
+    <div class="content custom-scroll">
+        <!-- blocker active with active header -->
+        <div class="blocker">
+        </div>
+        <!-- #scrollarea adds custom scrollbar for main content -->
+        <div id="scrollarea">
+            <!-- action class for animating page content when header is active -->
+            <div class="action step-right">
+                <!-- #crumbs for page title bar and top navigation -->
+                
+<!-- #crumbs for page title bar and top navigation 
+add abs class to make crumbs stick to top(background slideshow) -->
+
+
+<div id="crumbs" class="white">
+    <div class="row large">
+        <div class="eight columns">
+            <!-- page title -->
+            <h6 class="sub-heading"></h6>
+        
+        </div>
+        <div class="four columns text-right">
+            <!-- top on-page nav -->
+            <ul class="nav-icon-list">
+                <li><a class="planner-btn" href="contact.html"><span>我有需求</span><i class="fa fa-book"></i></a></li>
+                <li><a class="search-btn"><span>搜索</span><i class="fa fa-search"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- search modal -->
+<div class="search-modal">
+    <div class="search-field">
+        <input class="search input" type="search" placeholder="请输入您要查找的内容...">
+    </div>
+    <a class="remove-search"><i class="fa fa-times"></i></a>
+</div>
+
+                <!-- begin notes -->
+                <section class="white">
+				<div class="two-third do-equal">
+					<!-- begin posts -->
+					<ul class="grid alt-posts" id="posts">
+						<!-- post -->
+						<li class="post">
+						    <div class="post-info">
+						        <a href="note-single-sidebar.html" title="Read Post"><h1 class="grid-title">才华横溢的你在哪里？</h1></a>
+							    <div class="post-content">
+								    <p class="intro">
+									    轻松愉悦的工作氛围，简单纯粹的伙伴关系，超越同业的薪酬待遇，<br />
+    当然也少不了极富挑战的挑剔客户……
+								    </p>
+							    </div>
+						    </div>
+						</li>
+					</ul>
+					<!-- end posts -->
+					
+					<div id="contents">
+			            
+			    
+			   
+					<div id="item">
+					    <div class="title">
+				          <p class="cn">资深设计师</p>
+				          <p class="en">Senior Designer</p>
+				       </div> 
+					    <div class="txt">
+                        	<div class="img_fl fl">
+                            	<img  src="images/photo.jpg" />
+                            </div>
+					        
+					        <p class="fr">
+					            资深设计师 Senior Designer<br />
+                                工作区域: 上海 闸北区<br />
+                                发布时间: 2016-02-14<br />
+                                所属职能: 创意/设计<br />
+                                职位级别: 5-10年<br />
+                                薪资待遇: 面议<br />
+                                职位类型: 全职
+					        </p>
+					        <div class="clearfix"></div>
+					        <h3>职位描述 Job Description</h3>
+					        
+					        <p class="into">
+					            【职位描述】<br />
+1、负责公司大客户项目web页面及移动端的整体视觉设计，包含良好的交互与体验。<br />
+2、有品牌客户网站、移动端及APP方面的设计经验。<br />
+3、负责对网站整体表现风格的定位及对用户视觉感受的整体把握。<br />
+<br />
+【职位要求】<br />
+1、美术设计类、广告学及相关专业，本科学历，3年以上网页或平面设计相关工作经验。<br />
+2、精通Photoshop、Illustrator等设计软件，设计符合产品定位。<br />
+3、有扎实的美术功底，较强的设计管理能力和沟通能力，熟练掌握平面设计的各种技能，对设计有一定的创意及深度的理解力。<br />
+4、善于与人沟通，良好的团队合作精神和高度的责任感，能够承受压力，有创新精神，保证工作质量。<br />
+5、对文案及策略有较强理解力，作品富有创意，色彩把握及整体构成有良好运用能力。<br />
+6、应聘时请带上您的个人作品。<br />
+					        </p>
+					        
+					          <p class="tag clearfix">
+						        <span>Tag:</span><br />
+						        <a>网站设计</a><a>移动端设计</a><a>UI设计</a><a>互动设计</a>
+						        
+                        
+					        </p>
+					           <p class="mail clearfix">
+					        
+					            <img src="images/mail.jpg" />
+					            <span class="url clearfix">请发送简历至：<a href="mailto:career@irealtech.com">career@irealtech.com</a></span>
+					            <br />
+					            <span class="tit">邮件标题格式为：应聘+职位名称</span>     
+					        </p>
+					        
+					    </div>
+					</div>
+					
+					 
+			    
+			   
+					<div id="item">
+					    <div class="title">
+				          <p class="cn">设计师</p>
+				          <p class="en">Designer</p>
+				       </div> 
+					    <div class="txt">
+                        	<div class="img_fl fl">
+                            	<img  src="images/photo.jpg" />
+                            </div>
+					        
+					        <p class="fr">
+					            设计师 Designer<br />
+                                工作区域: 上海 闸北区<br />
+                                发布时间: 2016-02-14<br />
+                                所属职能: 创意/设计<br />
+                                职位级别: 1-3年<br />
+                                薪资待遇: 面议<br />
+                                职位类型: 全职
+					        </p>
+					        <div class="clearfix"></div>
+					        <h3>职位描述 Job Description</h3>
+					        
+					        <p class="into">
+					            【职位描述】<br />
+1、负责常规企业级网站项目web页面及移动端的整体视觉设计，包含良好的交互与体验。<br />
+2、有品牌网站、电商网站、平台网站、营销型网站、移动端及APP方面至少3种网站类型的设计经验。<br />
+3、根据项目要求配合项目经理完成项目的创意设计。<br />
+4、负责对网站整体表现风格的定位及对用户视觉感受的整体把握。<br />
+<br />
+【职位要求】<br />
+1、美术设计类、广告学及相关专业，专科及以上学历，2年以上网页设计相关工作经验。<br />
+2、精通Photoshop、Illustrator等设计软件，设计符合产品定位。<br />
+3、有扎实的美术功底，较强的设计管理能力和沟通能力，熟练掌握平面设计的各种技能，对设计有一定的创意及深度的理解力。<br />
+4、善于与人沟通，良好的团队合作精神和高度的责任感，能够承受压力，有创新精神，保证工作质量。<br />
+5、对文案及策略有较强理解力，作品富有创意，色彩把握及整体构成有良好运用能力。<br />
+6、有自适应流体网格布局设计优先。<br />
+7、应聘时请带上您的个人作品。<br />
+					        </p>
+					        
+					          <p class="tag clearfix">
+						        <span>Tag:</span><br />
+						        <a>网站设计</a><a>移动端设计</a><a>EDM设计</a>
+						        
+                        
+					        </p>
+					           <p class="mail clearfix">
+					        
+					            <img src="images/mail.jpg" />
+					            <span class="url clearfix">请发送简历至：<a href="mailto:career@irealtech.com">career@irealtech.com</a></span>
+					            <br />
+					            <span class="tit">邮件标题格式为：应聘+职位名称</span>     
+					        </p>
+					        
+					    </div>
+					</div>
+					
+					 
+				        
+                        <br />
+					</div>	
+				</div>
+				
+				<!-- sidebar -->
+				<aside class="one-third grey do-equal">
+				    <div id="sidebar">
+					<!-- category widget -->
+					<div class="widget">
+						<h4 class="stripe-heading">简历在线提交</h4>
+						<div class="widget-content">
+						<form method="post" action="#">
+							<ul class="categories">
+								<li><span>您的姓名（必填）</span>
+								<input type="text" id="realname" value="" />
+								</li>
+								<li><span>手机号码（必填）</span>
+									<input type="text" id="tel" />
+								</li>
+								<li><span>申请的职位（必填）</span>
+								<input type="text" id="job" />
+								</li>
+								<li><span>个人信息简要描述</span>
+								<textarea rows="0" id="into"></textarea>
+								</li>
+									<li><span>案例作品在线浏览地址</span>
+								<textarea rows="0" id="content"></textarea>
+								</li>
+								<li>
+								    <a href="javascript:;" class="btn">提交</a>
+								</li>
+							</ul>
+							</form>
+						</div>
+					</div>
+				</div>
+				</aside>
+				<!-- clear floats -->
+				<div class="clear">
+				</div>
+			</section>
+                <!-- widgetized footer -->
+                
+<!-- widgetized footer -->
+<style type="text/css">
+.row .four.columns{width:23.3%;}
+.link_line{padding-top:10px;}
+</style>
+<footer class="widget-ftr stripe-bg" id="footer_top">
+	<div class="content-block dark">
+    	<div class="row large midtoppadding">
+        	<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading"><img src="images/footerLogo.png" /></h6>
+            	<h5 class="style_1">我们很乐意倾听您的声音！<br />即刻与我们取得联络，成为日后肩并肩<br />合作的伙伴。</h5>
+                <dl class="footer_link clearfix">
+                	<dd><a href="service.html">新业务</a></dd>
+                    <dd><a href="news_details.html#216172782113783808">新闻+ VIEWS</a></dd>
+                    <dd><a href="job.html">招聘</a></dd>                    
+                </dl>
+        	</div>
+        	<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading title_1">新闻资讯</h6>
+            	<ul class="news_list">
+            	    
+            	        <li>
+                    	<span>2018年04月16日</span>
+            			<a href="news_details.html#989/72057594037927936">上海网站建设需要提供哪些信息</a>
+                    </li>
+            	        
+            	        <li>
+                    	<span>2016年04月25日</span>
+            			<a href="news_details.html#128/72057594037927936">上海造币厂2016微信/微店运营案例</a>
+                    </li>
+            	        
+            	        <li>
+                    	<span>2016年03月03日</span>
+            			<a href="news_details.html#122/72057594037927936">安川电机官网正式上线</a>
+                    </li>
+            	        
+                	
+            	</ul>
+                <p><a href="news.html" class="col_f00">查看更多</a></p>
+        	</div>
+			<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading title_1">友情链接</h6>
+            	<p class="link_line">
+            	    <a target="_blank" href="http://www.vdongchina.com ">小程序开发</a>，<a target="_blank" href="http://www.nnit30.com">南宁网络公司</a>，<a href="http://www.yopwork.com">crm软件</a>，<a target="_blank" href="http://www.ebbang.com">电子商务解决方案</a>，<a target="_blank" href="http://www.asktempo.com">一体化数据分析</a>，<a target="_blank" href="http://www.xbjianzhan.com">成都网站建设</a>，<a target="_blank" href="http://www.soyikj.com">微信小程序开发</a>，<a target="_blank" href="http://www.ntzero.cn">南通网站建设</a>，<a target="_blank" href="https://www.suchengapp.com">微信小程序开发</a>，<a target="_blank" href="http://www.teletest.cn">以太网测试仪 </a>，<a target="_blank" href="http://www.zuoji-scm.com/">精益管理咨询</a>，<a target="_blank" href="http://www.zhongweibbs.com">中卫网</a>，<a target="_blank" href="http://www.gm029.com">西安做网站</a>，<a target="_blank" href="http://www.andisk.com">在线培训系统</a>，<a href="http://www.51aya.com">远程控制</a>，<a href="http://www.nnsoe.com">南宁网站建设</a>，<a href="http://www.nklcm.com">全网营销</a>，<a href="http://www.shuaiming.com">域名抢注</a>，<a target="_blank" href="http://www.uibaba.com">UI设计</a>，<a target="_blank" href="http://www.voidcn.com">程序园</a>
+            	
+            	
+				<br />
+				   
+            	        
+            			<a href="news_details.html#1118/144115188075855872">上海网站建设为什么要使用CDN?</a>
+                   
+            	        
+				</p>
+				
+        	</div>
+        	<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading title_1">和我们取得联系</h6>
+                <h3>XXX</h3>
+            	<p class="greytext midmargin meta">
+                 	XXX
+            	</p>
+                <p>
+                	工作时间售后热线：XXX<br />
+					或传真：XXX
+                </p>
+            	<p class="greytext midmargin meta">
+                 	<a href="mailto:XXX" class="col_f00">XXX</a>
+            	</p>
+        	</div>
+        	
+    	</div>
+	</div>
+</footer>
+<!-- site credit -->
+<footer id="colophon">
+	<div class="row large">
+		<div class="six columns">
+    		<p>
+         		&copy; 2020. All Rights Reserved
+   	 		</p>
+		</div>
+		<div class="six columns">
+            <!-- social network links -->
+            <div class="text-right">
+                <p>浙ICP备XXX号</p>
+            </div>
+		</div>
+	</div>
+</footer>
+
+ 
+
+            </div>
+            <!-- action -->
+        </div>
+        <!-- scrollarea -->
+    </div>
+    <!-- end div.content -->
+
+    <script src="js/jquery-2.0.2.min.js"></script>
+
+    <script src="js/gumby.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+
+    <script src="js/main.js"></script>
+
+    
+<!-- only include animate.js on 
+	pages you want to use animations on
+	<script src="js/animate.js"></script> -->
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+</body>
+</html>

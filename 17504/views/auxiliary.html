@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="powerd by ylzlk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/auxiliary.css" />
+    <title>慢病管理平台</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+         <div class="navbar-inner">
+           <div class="container">
+               <div class="navbar-header">
+                 <!-- <a class="navbar-brand" style="line-height: 60px;">
+                    厦门医联康信息技术有限公司
+                 </a> -->
+               </div>
+               <div class="blur"></div>
+               <div class="collapse navbar-collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                       <li><a href="./home.html ">首页</a></li>
+                       <li><a href="./medicalManage.html">慢病管理服务</a></li>
+                       <li><a href="./knowBase.html">慢病知识库</a></li>
+                       <li><a href="#" class="active">慢病辅助诊疗</a></li>
+                       <li><a href="./monitor.html">慢病监测分析</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+     </nav>
+     <main>
+       <div class="container">
+         <div class="img-container">
+             <img  src="../images/header-img.png" class="header-img" />
+         </div>
+         <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">慢病管理服务</a></li>
+            <li class="active">慢病辅助诊疗</li>
+          </ol>
+          <!-- <div>
+            <div style="width:30%;height:200px;display: inline-block;margin:20px 1% 20px 3%;text-align:center;">
+              <div style="display: inline-block;position: relative;height:200px;width:360px;cursor: pointer;">
+                <img src="../images/auxiliary1.png" style="height:200px;width:360px;"/>
+                <div style="font-size: 28px;color: #fafafa;line-height: 28px;position: absolute;top: 48px;right: 60px;">慢病诊疗助手</div>
+              </div>
+            </div><div style="width:30%;height:200px;display: inline-block;margin:20px 1%;text-align:center;">
+              <div style="display: inline-block;position: relative;height:200px;width:360px;">
+                <img src="../images/auxiliary2.png" style="height:200px;width:360px;cursor: pointer;"/>
+                <div style="font-size: 28px;color: #fafafa;line-height: 28px;position: absolute;top: 48px;right: 60px;">慢病用药助手</div>
+              </div>
+            </div><div style="width:30%;height:200px;display: inline-block;margin:20px 3% 20px 1%;text-align:center;">
+              <div style="display: inline-block;position: relative;height:200px;width:360px;">
+                <img src="../images/auxiliary3.png" style="height:200px;width:360px;cursor: pointer;"/>
+                <div style="font-size: 28px;color: #fafafa;line-height: 28px;position: absolute;top: 48px;right: 60px;">健康计划助手</div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="panel panel-info" style="margin-top:60px" id="treatment">
+            <div class="panel-heading">慢病诊疗助手</div>
+            <div class="panel-body">
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-bottom: 10px;">高血压</div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px">病因</span></h2>
+                  </div>
+                  <div class="para" label-module="para"><b>1.遗传因素</b></div>
+                  <div class="para" label-module="para">大约60%的半数高血压患者有家族史。目前认为是多基因遗传所致，30%～50%的高血压患者有遗传背景。<b></b></div>
+                  <div class="para" label-module="para"><b>2.精神和环境因素</b></div>
+                  <div class="para" label-module="para">发病率有随着年龄增长而增高的趋势，40岁以上者发病率高。<b></b></div>
+                  <div class="para" label-module="para"><b>3.年龄因素</b></div>
+                  <div class="para" label-module="para">发病率有随着年龄增长而增高的趋势，40岁以上者发病率高。<b></b></div>
+                  <div class="para" label-module="para"><b>4.生活习惯因素</b></div>
+                  <div class="para" label-module="para">膳食结构不合理，如过多的钠盐、低钾饮食、大量饮酒、摄入过多的饱和脂肪酸均可使血压升高。吸烟可加速动脉粥样硬化的过程，为高血压的危险因素。<b></b></div>
+                  <div class="para" label-module="para"><b>5.药物的影响</b></div>
+                  <div class="para" label-module="para">避孕药、激素、消炎止痛药等均可影响血压。<b></b></div>
+                  <div class="para" label-module="para"><b>6.其他疾病的影响</b></div>
+                  <div class="para" label-module="para">肥胖、糖尿病、睡眠呼吸暂停低通气综合征、甲状腺疾病、肾动脉狭窄、肾脏实质损害、肾上腺占位性病变、嗜铬细胞瘤、其他神经内分泌肿瘤等。</div>
+                </div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px">临床表现</span></h2>
+                  </div>
+                  <div class="para" label-module="para">
+                    高血压的症状因人而异。早期可能无症状或症状不明显，常见的是头晕、头痛、颈项板紧、疲劳、心悸等。仅仅会在劳累、精神紧张、情绪波动后发生血压升高，并在休息后恢复正常。随着病程延长，血压明显的持续升高，逐渐会出现各种症状。此时被称为缓进型高血压病。缓进型高血压病常见的临床症状有头痛、头晕、注意力不集中、记忆力减退、肢体麻木、夜尿增多、心悸、胸闷、乏力等。高血压的症状与血压水平有一定关联，多数症状在紧张或劳累后可加重，清晨活动后血压可迅速升高，出现清晨高血压，导致心脑血管事件多发生在清晨。
+                  </div>
+                  <div class="para" label-module="para">
+                    当血压突然升高到一定程度时甚至会出现剧烈头痛、呕吐、心悸、眩晕等症状，严重时会发生神志不清、抽搐，这就属于急进型高血压和高血压危重症，多会在短期内发生严重的心、脑、肾等器官的损害和病变，如中风、心梗、肾衰等。症状与血压升高的水平并无一致的关系。
+                  </div>
+                  <div class="para" label-module="para">
+                    继发性高血压的临床表现主要是有关原发病的症状和体征，高血压仅是其症状之一。继发性高血压患者的血压升高可具有其自身特点，如主动脉缩窄所致的高血压可仅限于上肢；嗜铬细胞瘤引起的血压增高呈阵发性。
+                  </div>
+                </div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px">治疗</span></h2>
+                  </div>
+                  <div class="para" label-module="para"><b>（一）原发性高血压的治疗</b><b></b></div>
+                  <div class="para" label-module="para"><b>1.治疗目的及原则</b></div>
+                  <div class="para" label-module="para">治疗的主要目标是血压达标，降压治疗的最终目的是最大限度地减少高血压患者心、脑血管病的发生率和死亡率。降压治疗应该确立血压控制目标值。另一方面，高血压常常与其他心、脑血管病的危险因素合并存在，例如高胆固醇血症、肥胖、糖尿病等，协同加重心血管疾病危险，治疗措施应该是综合性的。不同人群的降压目标不同，一般患者的降压目标为140/90mmHg以下，对合并糖尿病或肾病等高危患者，应酌情降至更低。对所有患者，不管其他时段的血压是否高于正常值，均应注意清晨血压的监测，有研究显示半数以上诊室血压达标的患者，其。<b></b></div>
+                  <div class="para" label-module="para"><b>（1）改善生活行为</b> ①减轻并控制体重。②减少钠盐摄入。③补充钙和钾盐。④减少脂肪摄入。⑤增加运动。⑥戒烟、限制饮酒。⑦减轻精神压力，保持心理平衡。<b></b></div>
+                  <div class="para" label-module="para"><b>（2）血压控制标准个体化</b> 由于病因不同，高血压发病机制不尽相同，临床用药分别对待，选择最合适药物和剂量，以获得最佳疗效。<b></b></div>
+                  <div class="para" label-module="para"><b>（3）多重心血管危险因素协同控制</b> 降压治疗后尽管血压控制在正常范围，血压升高以外的多种危险因素依然对预后产生重要影响。<b></b></div>
+                  <div class="para" label-module="para"><b>2.降压药物治疗</b></div>
+                  <div class="para" label-module="para">对检出的高血压患者，应使用推荐的起始与维持治疗的降压药物，特别是每日给药1次能控制24小时并达标的药物，具体应遵循4项原则，即小剂量开始，优先选择长效制剂，联合用药及个体化。<b></b></div>
+                  <div class="para" label-module="para"><b>（1）降压药物种类</b> ①利尿药。②β受体阻滞剂。③钙通道阻滞剂。④血管紧张素转换酶抑制剂。⑤血管紧张素Ⅱ受体阻滞剂。</div>
+                  <div class="para" label-module="para" style="margin-left: 20px;">应根据患者的危险因素、靶器官损害及合并临床疾病的情况，选择单一用药或联合用药。选择降压药物的原则如下：</div>
+                  <div class="para" label-module="para" style="margin-left: 40px;">1）使用半衰期24小时以及以上、每日一次服药能够控制24小时的血压药物，如氨氯地平等，避免因治疗方案选择不当导致的医源性清晨血压控制不佳；</div>
+                  <div class="para" label-module="para" style="margin-left: 40px;">2）使用安全、可长期坚持并能够控制每一个24小时血压的药物，提高患者的治疗依从性；</div>
+                  <div class="para" label-module="para" style="margin-left: 40px;">3）使用心脑获益临床试验证据充分并可真正降低长期心脑血管事件的药物，减少心脑血管事件，改善高血压患者的生存质量。<b></b></div>
+                  <div class="para" label-module="para"><b>（2）治疗方案</b> 大多数无并发症或合并症患者可以单独或者联合使用噻嗪类利尿剂、β受体阻滞剂等。治疗应从小剂量开始，逐步递增剂量。临床实际使用时，患者心血管危险因素状况、靶器官损害、并发症、合并症、降压疗效、不良反应等，都会影响降压药的选择。2级高血压患者在开始时就可以采用两种降压药物联合治疗。<b></b></div>
+                  <div class="para" label-module="para"><b>（二）继发性高血压的治疗</b></div>
+                  <div class="para" label-module="para">主要是针对原发病的治疗，如嗜铬细胞瘤引起的高血压，肿瘤切除后血压可降至正常；肾血管性高血压可通过介入治疗扩张肾动脉。对原发病不能手术根治或术后血压仍高者，除采用其他针对病因的治疗外，还应选用适当的降压药物进行降压治疗。</div>
+                </div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px">预防</span></h2>
+                  </div>
+                  <div class="para" label-module="para">高血压是一种可防可控的疾病，对血压130～139/85～89mmHg正常高值阶段、超重/肥胖、长期高盐饮食、过量饮酒者应进行重点干预，定期健康体检，积极控制危险因素。</div>
+                  <div class="para" label-module="para">针对高血压患者，应定期随访和测量血压，尤其注意清晨血压的管理，积极治疗高血压（药物治疗与生活方式干预并举），减缓靶器官损害，预防心脑肾并发症的发生，降低致残率及死亡率。</div>
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-bottom: 10px;margin-top:40px;">糖尿病</div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px">病因</span></h2>
+                  </div>
+                  <div class="para" label-module="para"><b>1．遗传因素</b></div>
+                  <div class="para" label-module="para">1型或blank2型糖尿病均存在明显的遗传异质性。糖尿病存在家族发病倾向，1/4～1/2患者有糖尿病家族史。临床上至少有60种以上的遗传综合征可伴有糖尿病。有多个DNA位点参与发病，其中以HLA抗原基因中DQ位点多态性关系最为密切。在2型糖尿病已发现多种明确的基因突变，如胰岛素基因、胰岛素受体基因、葡萄糖激酶基因、线粒体基因等。</div>
+                  <div class="para" label-module="para"><b>2．环境因素</b></div>
+                  <div class="para" label-module="para">进食过多，体力活动减少导致的肥胖是2型糖尿病最主要的环境因素，使具有2型糖尿病遗传易感性的个体容易发病。1型糖尿病患者存在免疫系统异常，在某些病毒如柯萨奇病毒，风疹病毒，腮腺病毒等感染后导致自身免疫反应，破坏胰岛素β细胞。</div>
+                </div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px">临床表现</span></h2>
+                  </div>
+                  <div class="para" label-module="para"><b>1．多饮、多尿、多食和消瘦</b></div>
+                  <div class="para" label-module="para">严重高血糖时出现典型的“三多一少”症状，多见于1型糖尿病。发生酮症或酮症酸中毒时“三多一少”症状更为明显。</div>
+                  <div class="para" label-module="para"><b>2．疲乏无力，肥胖</b></div>
+                  <div class="para" label-module="para">多见于2型糖尿病。2型糖尿病发病前常有肥胖，若得不到及时诊断，体重会逐渐下降。</div>
+                </div>
+                <div>
+                  <div class="para-title level-2" label-module="para-title">
+                    <h2 class="title-text"><span class="title-prefix" style="margin-left:10px;">治疗</span></h2>
+                  </div>
+                  <div class="para" label-module="para">目前尚无根治糖尿病的方法，但通过多种治疗手段可以控制好糖尿病。主要包括5个方面：糖尿病患者的教育，自我监测血糖，饮食治疗，运动治疗和药物治疗。</div>
+                  <div class="para" label-module="para"><b>（一）一般治疗</b></div>
+                  <div class="para" label-module="para"><b>1．教育</b></div>
+                  <div class="para" label-module="para">要教育糖尿病患者懂得糖尿病的基本知识，树立战胜疾病的信心，如何控制糖尿病，控制好糖尿病对健康的益处。根据每个糖尿病患者的病情特点制定恰当的治疗方案。</div>
+                  <div class="para" label-module="para"><b>2．自我监测血糖</b></div>
+                  <div class="para" label-module="para">随着小型快捷血糖测定仪的逐步普及，病人可以根据血糖水平随时调整降血糖药物的剂量。1型糖尿病进行强化治疗时每天至少监测4次血糖（餐前），血糖不稳定时要监测8次（三餐前、后、晚睡前和凌晨3：00）。强化治疗时空腹血糖应控制在7.2毫摩尔/升以下，餐后两小时血糖小于10mmol/L，HbA1c小于7%。2型糖尿病患者自我监测血糖的频度可适当减少。</div>
+                  <div class="para" label-module="para"><b>（二）药物治疗</b></div>
+                  <div class="para" label-module="para"><b>1．口服药物治疗</b></div>
+                  <div class="para" label-module="para"><b>（1）磺脲类药物 </b>2型DM患者经饮食控制，运动，降低体重等治疗后，疗效尚不满意者均可用磺脲类药物。因降糖机制主要是刺激胰岛素分泌，所以对有一定胰岛功能者疗效较好。对一些发病年龄较轻，体形不胖的糖尿病患者在早期也有一定疗效。但对肥胖者使用磺脲类药物时，要特别注意饮食控制，使体重逐渐下降，与双胍类或α-葡萄糖苷酶抑制剂降糖药联用较好。下列情况属禁忌证：一是严重肝、肾功能不全；二是合并严重感染，创伤及大手术期间，临时改用胰岛素治疗；三是糖尿病酮症、酮症酸中毒期间，临时改用胰岛素治疗；四是糖尿病孕妇，妊娠高血糖对胎儿有致畸形作用，早产、死产发生率高，故应严格控制血糖，应把空腹血糖控制在105毫克/分升（5.8毫摩尔/升）以下，餐后2小时血糖控制在120毫克/分升（6.7毫摩尔/升）以下，但控制血糖不宜用口服降糖药；五是对磺脲类药物过敏或出现明显不良反应。</div>
+                  <div class="para" label-module="para"><b>（2）双胍类降糖药 </b>降血糖的主要机制是增加外周组织对葡萄糖的利用，增加葡萄糖的无氧酵解，减少胃肠道对葡萄糖的吸收，降低体重。<b>①适应证</b>肥胖型2型糖尿病，单用饮食治疗效果不满意者；2型糖尿病单用磺脲类药物效果不好，可加双胍类药物；1型糖尿病用胰岛素治疗病情不稳定，用双胍类药物可减少胰岛素剂量；2型糖尿病继发性失效改用胰岛素治疗时，可加用双胍类药物，能减少胰岛素用量。<b>②禁忌证</b>严重肝、肾、心、肺疾病，消耗性疾病，营养不良，缺氧性疾病；糖尿病酮症，酮症酸中毒；伴有严重感染、手术、创伤等应激状况时暂停双胍类药物，改用胰岛素治疗；妊娠期。<b>③不良反</b><b>应</b>一是胃肠道反应。最常见、表现为恶心、呕吐、食欲下降、腹痛、腹泻，发生率可达20%。为避免这些不良反应，应在餐中、或餐后服药。二是头痛、头晕、金属味。三是乳酸酸中毒，多见于长期、大量应用降糖灵，伴有肝、肾功能减退，缺氧性疾病，急性感染、胃肠道疾病时，降糖片引起酸中毒的机会较少。</div>
+                  <div class="para" label-module="para"><b>（3）α葡萄糖苷酶抑制剂 </b>1型和2型糖尿病均可使用，可以与磺脲类，双胍类或胰岛素联用<b>。①伏格列波糖</b>餐前即刻口服。<b>②阿卡波糖</b>餐前即刻口服。主要不良反应有：腹痛、肠胀气、腹泻、肛门排气增多。</div>
+                  <div class="para" label-module="para"><b>（4）胰岛素增敏剂 </b>有增强胰岛素作用，改善糖代谢。可以单用，也可用磺脲类，双胍类或胰岛素联用。有肝脏病或心功能不全者者不宜应用。</div>
+                  <div class="para" label-module="para"><b>（</b><b>5）格列奈类胰岛素促分泌剂</b><b>①瑞格列奈</b>为快速促胰岛素分泌剂，餐前即刻口服，每次主餐时服，不进餐不服。<b>②那格列奈</b>作用类似于瑞格列奈。</div>
+                  <div class="para" label-module="para"><b>2．胰岛素治疗</b></div>
+                  <div class="para" label-module="para">胰岛素制剂有动物胰岛素、人胰岛素和胰岛素类似物。根据作用时间分为短效、中效和长效胰岛素，并已制成混合制剂，如诺和灵30R，优泌林70/30。</div>
+                  <div class="para" label-module="para"><b>（1）1型糖尿病 </b>需要用胰岛素治疗。非强化治疗者每天注射2～3次，强化治疗者每日注射3～4次，或用胰岛素泵治疗。需经常调整剂量。</div>
+                  <div class="para" label-module="para"><b>（2）2型糖尿病 </b>口服降糖药失效者先采用联合治疗方式，方法为原用口服降糖药剂量不变，睡前晚10∶00注射中效胰岛素或长效胰岛素类似物，一般每隔3天调整1次，目的为空腹血糖降到4.9～8.0毫摩尔/升，无效者停用口服降糖药，改为每天注射2次胰岛素。</div>
+                  <div class="para" label-module="para">胰岛素治疗的最大不良反应为低血糖。</div>
+                  <div class="para" label-module="para"><b>（三）运动治疗</b></div>
+                  <div class="para" label-module="para">增加体力活动可改善机体对胰岛素的敏感性，降低体重，减少身体脂肪量，增强体力，提高工作能力和生活质量。运动的强度和时间长短应根据病人的总体健康状况来定，找到适合病人的运动量和病人感兴趣的项目。运动形式可多样，如散步，快步走、健美操、跳舞、打太极拳、跑步、游泳等。</div>
+                  <div class="para" label-module="para"><b>（四）饮食治疗</b></div>
+                  <div class="para" label-module="para">饮食治疗是各种类型糖尿病治疗的基础，一部分轻型糖尿病患者单用饮食治疗就可控制病情。</div>
+                  <div class="para" label-module="para"><b>1.总热量　</b></div>
+                  <div class="para" label-module="para">总热量的需要量要根据患者的年龄、性别、身高、体重、体力活动量、病情等综合因素来确定。首先要算出每个人的标准体重，可参照下述公式：标准体重（kg）=身高（cm）-105或标准体重（kg）=[身高（cm）-100]×0.9；女性的标准体重应再减去2kg。也可根据年龄、性别、身高查表获得。算出标准体重后再依据每个人日常体力活动情况来估算出每千克标准体重热量需要量。</div>
+                  <div class="para" label-module="para">根据标准体重计算出每日所需要热卡量后，还要根据病人的其他情况作相应调整。儿童、青春期、哺乳期、营养不良、消瘦以及有慢性消耗性疾病应酌情增加总热量。肥胖者要严格限制总热量和脂肪含量，给予低热量饮食，每天总热量不超过1500千卡，一般以每月降低0.5～1.0kg为宜，待接近标准体重时，再按前述方法计算每天总热量。另外，年龄大者较年龄小者需要热量少，成年女子比男子所需热量要少一些。</div>
+                  <div class="para" label-module="para"><b>2.碳水化合物　</b></div>
+                  <div class="para" label-module="para">碳水化合物每克产热4千卡，是热量的主要来源，现认为碳水化合物应占饮食总热量的55%～65%，可用下面公式计算：</div>
+                  <div class="para" label-module="para">根据我国人民生活习惯，可进主食（米或面）250～400g，可作如下初步估计，休息者每天主食200～250g，轻度体力劳动者250～300g，中度体力劳动者300～400g，重体力劳动者400g以上。</div>
+                  <div class="para" label-module="para"><b>3.蛋白质</b></div>
+                  <div class="para" label-module="para">蛋白质每克产热量4千卡。占总热量的12%～15%。蛋白质的需要量在成人每千克体重约1g。在儿童，孕妇，哺乳期妇女，营养不良，消瘦，有消耗性疾病者宜增加至每千克体重1.5～2.0g。糖尿病肾病者应减少蛋白质摄入量，每千克体重0.8g，若已有肾功能不全，应摄入高质量蛋白质，摄入量应进一步减至每千克体重0.6g。</div>
+                  <div class="para" label-module="para"><b>4.脂肪　</b></div>
+                  <div class="para" label-module="para">脂肪的能量较高，每克产热量9千卡。约占总热量25%，一般不超过30%，每日每千克体重0.8～1g。动物脂肪主要含饱和脂肪酸。植物油中含不饱和脂肪酸多，糖尿病患者易患动脉粥样硬化，应采用植物油为主。</div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <div class="panel panel-info" style="margin-top:60px;padding-bottom: 40px;" id="drug">
+            <div class="panel-heading">慢病用药助手</div>
+            <div class="panel-body" >
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-bottom: 10px;">高血压常用药</div>
+                <section class="cd-table" style="margin:auto">
+                  <header class="cd-table-column">
+                    <h2>名称</h2>
+                    <ul>
+                      <li>类别</li>
+                      <li>用法</li>
+                      <li>用量</li>
+                      <li>主要不良反应</li>
+                      <li>注意事项</li>
+                    </ul>
+                  </header>
+                  <div class="cd-table-container">
+                    <div class="cd-table-wrapper">
+                      <div class="cd-table-column">
+                        <h2>氢氯噻嗪</h2>
+                        <ul>
+                          <li>利尿剂</li>
+                          <li>口服</li>
+                          <li>25~50mg/次，1~2次</li>
+                          <li>乏力、尿量增多</li>
+                          <li>痛风患者等禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>美托洛尔</h2>
+                        <ul>
+                          <li>β受体阻滞剂</li>
+                          <li>口服</li>
+                          <li>100～200mg/次，1~2次</li>
+                          <li>心动过缓、乏力、发冷</li>
+                          <li>急性心力衰竭等禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>硝苯地平</h2>
+                        <ul>
+                          <li>钙通道阻滞剂</li>
+                          <li>嚼碎服或舌下含服</li>
+                          <li>0～30mg/次，3～4次</li>
+                          <li>心率增快、头痛</li>
+                          <li>心血管疾病患者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>卡托普利</h2>
+                        <ul>
+                          <li>血管紧张素转换酶抑制剂</li>
+                          <li>口服</li>
+                          <li>25mg～50mg/次，3次</li>
+                          <li>干咳和血管性水肿</li>
+                          <li>高钾血症患者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>氯沙坦</h2>
+                        <ul>
+                          <li>血管紧张素Ⅱ受体抑制剂</li>
+                          <li>口服</li>
+                          <li>50mg/次，1次</li>
+                          <li>头痛，上呼吸道感染</li>
+                          <li>肾功能不全者禁用</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;margin-bottom: 10px;">糖尿病常用药</div>
+                <section class="cd-table" style="margin:auto">
+                  <header class="cd-table-column">
+                    <h2>名称</h2>
+                    <ul>
+                      <li>类别</li>
+                      <li>用法</li>
+                      <li>用量</li>
+                      <li>主要不良反应</li>
+                      <li>注意事项</li>
+                    </ul>
+                  </header>
+                  <div class="cd-table-container">
+                    <div class="cd-table-wrapper">
+                      <div class="cd-table-column">
+                        <h2>格列吡嗪</h2>
+                        <ul>
+                          <li>磺脲类促泌剂</li>
+                          <li>口服</li>
+                          <li>2.5~20mg/次，1~3次</li>
+                          <li>恶心,上腹胀满,头痛等</li>
+                          <li>避免饮酒</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>二甲双胍</h2>
+                        <ul>
+                          <li>二甲双胍类</li>
+                          <li>口服</li>
+                          <li>2.5~20mg/次，1~2次</li>
+                          <li>恶心、呕吐、腹泻、腹痛</li>
+                          <li>肝及肾功能不全禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>罗格列酮</h2>
+                        <ul>
+                          <li>胰岛素增敏剂</li>
+                          <li>口服</li>
+                          <li>4mg/次，1~2次</li>
+                          <li>肝功能异常、头晕、腹泻</li>
+                          <li>心血管疾病患者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>阿卡波糖</h2>
+                        <ul>
+                          <li>α-糖苷酶抑制剂</li>
+                          <li>口服</li>
+                          <li>50mg～100mg/次，3次</li>
+                          <li>胃肠胀气和肠鸣音</li>
+                          <li>消化和吸收障碍患者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>艾塞那肽</h2>
+                        <ul>
+                          <li>GLP-1受体激动剂</li>
+                          <li>口服</li>
+                          <li>5ug/次，1次</li>
+                          <li>轻到中度恶心</li>
+                          <li>对本产品过敏的患者</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;margin-bottom: 10px;">脑卒中常用药</div>
+                <section class="cd-table" style="margin: auto">
+                  <header class="cd-table-column">
+                    <h2>名称</h2>
+                    <ul>
+                      <li>类别</li>
+                      <li>用法</li>
+                      <li>用量</li>
+                      <li>主要不良反应</li>
+                      <li>注意事项</li>
+                    </ul>
+                  </header>
+                  <div class="cd-table-container">
+                    <div class="cd-table-wrapper">
+                      <div class="cd-table-column">
+                        <h2>氢氯噻嗪</h2>
+                        <ul>
+                          <li>利尿剂</li>
+                          <li>口服</li>
+                          <li>25~50mg/次，1~2次</li>
+                          <li>乏力、尿量增多</li>
+                          <li>痛风患者等禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>美托洛尔</h2>
+                        <ul>
+                          <li>β受体阻滞剂</li>
+                          <li>口服</li>
+                          <li>100～200mg/次，1~2次</li>
+                          <li>心动过缓、乏力、发冷</li>
+                          <li>急性心力衰竭等禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>硝苯地平</h2>
+                        <ul>
+                          <li>钙通道阻滞剂</li>
+                          <li>嚼碎服或舌下含服</li>
+                          <li>0～30mg/次，3～4次</li>
+                          <li>心率增快、头痛</li>
+                          <li>心血管疾病患者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>卡托普利</h2>
+                        <ul>
+                          <li>血管紧张素转换酶抑制剂</li>
+                          <li>口服</li>
+                          <li>25mg～50mg/次，3次</li>
+                          <li>干咳和血管性水肿</li>
+                          <li>高钾血症患者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>氯沙坦</h2>
+                        <ul>
+                          <li>血管紧张素Ⅱ受体抑制剂</li>
+                          <li>口服</li>
+                          <li>50mg/次，1次</li>
+                          <li>头痛，上呼吸道感染</li>
+                          <li>肾功能不全者禁用</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;margin-bottom: 10px;">慢阻肺常用药</div>
+                <section class="cd-table" style="margin:auto">
+                  <header class="cd-table-column">
+                    <h2>名称</h2>
+                    <ul>
+                      <li>类别</li>
+                      <li>用法</li>
+                      <li>用量</li>
+                      <li>主要不良反应</li>
+                      <li>注意事项</li>
+                    </ul>
+                  </header>
+                  <div class="cd-table-container">
+                    <div class="cd-table-wrapper">
+                      <div class="cd-table-column">
+                        <h2>沙美特罗</h2>
+                        <ul>
+                          <li>β2肾上腺素受体激动剂</li>
+                          <li>药粉吸入</li>
+                          <li>50μg~100mg/次，2次</li>
+                          <li>心悸、头痛</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>布地奈德福莫特罗</h2>
+                        <ul>
+                          <li>β2一受体激动剂</li>
+                          <li>药粉吸入</li>
+                          <li>1—2吸/次，2次</li>
+                          <li>心悸、头痛</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>茚达特罗</h2>
+                        <ul>
+                          <li>β2受体激动剂</li>
+                          <li>药粉吸入</li>
+                          <li>150µg，1次</li>
+                          <li>鼻咽炎、上呼吸道感染</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>噻托溴铵粉吸入剂</h2>
+                        <ul>
+                          <li>支气管扩张剂</li>
+                          <li>药粉吸入</li>
+                          <li>18µg/次，1次</li>
+                          <li>口干</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>沙丁胺醇气雾剂</h2>
+                        <ul>
+                          <li>β2肾上腺素能受体激动剂</li>
+                          <li>药粉吸入</li>
+                          <li>1～2喷/次，3~4次</li>
+                          <li>恶心、头晕、心悸</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;margin-bottom: 10px;">慢性肾病常用药</div>
+                <section class="cd-table" style="margin:auto">
+                  <header class="cd-table-column">
+                    <h2>名称</h2>
+                    <ul>
+                      <li>类别</li>
+                      <li>用法</li>
+                      <li>用量</li>
+                      <li>主要不良反应</li>
+                      <li>注意事项</li>
+                    </ul>
+                  </header>
+                  <div class="cd-table-container">
+                    <div class="cd-table-wrapper">
+                      <div class="cd-table-column">
+                        <h2>吗替麦考酚酯片</h2>
+                        <ul>
+                          <li>抗炎免疫抑制剂</li>
+                          <li>口服</li>
+                          <li>1g/次，2次</li>
+                          <li>腹泻、呕吐</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>尿毒清颗粒</h2>
+                        <ul>
+                          <li>排毒药</li>
+                          <li>温开水冲服</li>
+                          <li>1袋/次，4次</li>
+                          <li>对肝脏损害</li>
+                          <li>忌豆类食品</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>别嘌醇</h2>
+                        <ul>
+                          <li>抗尿酸</li>
+                          <li>口服</li>
+                          <li>50mg/次，1~2次</li>
+                          <li>腹泻、恶心、呕吐</li>
+                          <li>肾功能不全者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>呋塞米</h2>
+                        <ul>
+                          <li>利尿剂</li>
+                          <li>口服</li>
+                          <li>20～40mg/次，1次</li>
+                          <li>电解质紊乱</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                      <div class="cd-table-column">
+                        <h2>阿魏酸哌嗪片</h2>
+                        <ul>
+                          <li>抗凝药</li>
+                          <li>口服</li>
+                          <li>100～200mg/次，3次</li>
+                          <li>尚不明确</li>
+                          <li>对本产品过敏者禁用</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+          </div>
+
+          <div class="panel panel-info" style="margin-top:60px" id="health">
+            <div class="panel-heading">健康计划助手</div>
+            <div class="panel-body">
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;">健康计划目标</div>
+                <div style="margin: 0 2% 15px 2%;background: #ffffff;text-indent:25px;color: #3594cb;;padding: 1em;font-size: 20px;line-height: 1.8;border-radius: 5px;">
+                  32%居民每周30分钟以上运动不少于3次；人均体育场地面积不少于1.5平方米财；政投入基础设施和相关活动；鼓励学校体育设施向公众开放。促进营养均衡发展；多吃水果蔬菜；控盐控油；坚持食物数量与质量并重。
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;">运动计划</div>
+                <ul class="cbp_tmtimeline">
+                    <li>
+                      <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>运动类型：</h3>
+                        <p>以有氧运动和耐力运动为主，比如瑜伽、走路、骑车、慢跑、做操、游泳、跳舞、爬山、滑雪、滑冰等，以及各种球类运动如乒乓球、羽毛球、足篮排等等。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cbp_tmicon cbp_tmicon-screen"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>运动强度:</h3>
+                        <p>当然是以中等强度为主，能量消耗率大致为4~7kcal/min，相当于最大信心率的60~70%。自觉疲劳程度为有一点累或稍累。每天运动消耗的能量为150~300kcal。耐力性中等强度有氧运动有利于改善脂质代谢，减少腹部脂肪，高强度运动对改善心、肺功能有良好的作用。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cbp_tmicon cbp_tmicon-mail"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>运动时间</h3>
+                        <p>每天30~60min，每周150min以上。每天运动时间可以累计计算，但是每次运动时间应在10min以上，例如：每天30min，每天3次完成，每次10min。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>运动频率</h3>
+                        <p>每周运动5~7天，每天运动1次。关键是养成每天都有一定身体活动的良好运动习惯，即有规律的运动。这是因为一方面平时缺乏身体活动的人，只有经过一段时间规律适量的运动积累，才能出现相应的健康效应。</p>
+                      </div>
+                    </li>
+                  </ul>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;">饮食计划</div>
+                <ul class="cbp_tmtimeline">
+                    <li>
+                      <time class="cbp_tmtime"><span>30岁</span></time>
+                      <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>吃菜好色护皮肤</h3>
+                        <p>到了30岁，生活压力越来越大。每餐吃一些全谷物和富含蛋白质的食物，避免垃圾食品，有助于缓解力 、平衡糖且要继续补充B族维生素。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <time class="cbp_tmtime"><span>40岁</span></time>
+                      <div class="cbp_tmicon cbp_tmicon-screen"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>多吃绿菜护好肝</h3>
+                        <p>这个年纪，生活和作压力比较大，而当压力增人的时候，人体内镁元素的水平会降低，可以通过食用大锩的绿叶蔬菜或者膳食补充剂来补充镁，它可以帮助放松肌肉、改善睡眠 、平衡荷尔蒙 。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <time class="cbp_tmtime"><span>50岁</span></time>
+                      <div class="cbp_tmicon cbp_tmicon-mail"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>多吃黄色食物</h3>
+                        <p>通常，心脏的健康问题在这个年龄段很容易凸显，建议这个年龄的人群，多进行规律的运动，警惕膳食中食盐的摄入量 ，吃大量的蔬菜水果以摄取膳食纤维和抗抗化物质，对于保护心脏健康尤为重要。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <time class="cbp_tmtime"><span>60岁</span></time>
+                      <div class="cbp_tmicon cbp_tmicon-mail"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>多吃海产品护神经</h3>
+                        <p>到了60岁，骨骼强度开始下降。钙和维生素D对于骨骼的强健尤为重要。除了在乳制品 、绿色蔬菜和坚果中摄取钙，膳食补冲也是不错的选择。年龄大的人通常容易缺维生素Bl2，它能保护神经细胞 、促进大脑功能。</p>
+                      </div>
+                    </li>
+                    <li>
+                      <time class="cbp_tmtime"><span>70岁</span></time>
+                      <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                      <div class="cbp_tmlabel">
+                        <h3>多吃鱼蛋健健脑</h3>
+                        <p>到了70岁，肌肉强度锐减导致行动迟缓，保持活力，比如走路 、跳舞 、网球或其他任何你喜欢的运动，继续保持吃鱼油和姜黄的习惯能够帮助减缓炎症 ，增加的灵活性  </p>
+                      </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <footer>
+       <div class="footer-section">
+         <img  src="../images/logo21.png" class="footer-img" />
+         <div class="footer-row">
+           <span class="footer-span">xxxxxx </span>
+         </div>
+         <div class="footer-row">
+           <span class="footer-span">xxx</span>
+         </div>
+         <div class="footer-row">
+         <span class="footer-span" style="font-size:13px">xxx</span>
+         </div>
+         <!-- <div class="footer-row">
+           <span class="footer-span" style="font-size:13px">增值电信业务许可证号:京-2-4-20100000</span>
+         </div> -->
+       </div>
+     </footer>
+   </main>
+
+   <script src="../lib/jquery-3.3.1.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="../scripts/auxiliary.js"></script>
+   <script src="../lib/modernizr.custom.js"></script>
+ </body>
+
+</html>

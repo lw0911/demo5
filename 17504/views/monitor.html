@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="powerd by ylzlk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/monitor.css" />
+    <title>慢病管理平台</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+         <div class="navbar-inner">
+           <div class="container">
+               <div class="navbar-header">
+                 <!-- <a class="navbar-brand" style="line-height: 60px;">
+                    厦门医联康信息技术有限公司
+                 </a> -->
+               </div>
+               <div class="blur"></div>
+               <div class="collapse navbar-collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                       <li><a href="./home.html">首页</a></li>
+                       <li><a href="./medicalManage.html">慢病管理服务</a></li>
+                       <li><a href="./knowBase.html">慢病知识库</a></li>
+                       <li><a href="./auxiliary.html">慢病辅助诊疗</a></li>
+                       <li><a href="#" class="active">慢病监测分析</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+     </nav>
+     <main>
+       <div class="container">
+         <div class="img-container">
+             <img  src="../images/header-img.png" class="header-img" />
+         </div>
+         <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">慢病管理服务</a></li>
+            <li class="active">慢病监测分析</li>
+          </ol>
+
+          <div class="panel panel-info">
+            <div class="panel-heading">慢病监管决策分析</div>
+            <div class="panel-body">
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartHabit1"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      吸烟会大幅增加肺部疾病、心血管疾病等疾病的患病率；吸烟导致慢病死亡的六分之一,还是导致肺癌的首要危险因素，已成为继高血压之后的第二号全球杀手。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartHabit2"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      饮酒会大幅增加高血压、糖尿病和肝部等疾病的患病率;酒精使用导致每年230万人死亡，饮酒频率越高则慢性病的患病风险越大。
+                  </div>
+                </div>
+              </div>
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartDiet1"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                       食盐和高血压紧密相关，高盐引起心血管疾病、胃癌等疾病，而这些疾病不仅是危害健康，对人的生命也有一定威胁的。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartDiet2"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      油脂摄入量过多，除了会造成肥胖外，还引发糖尿病、高血脂、高血压、心血管疾病等慢性疾病的发生。
+                  </div>
+                </div>
+              </div>
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartMotion"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      有氧耐力运动可以增进心肺功能,降低血压、血脂和血糖水平,增加胰岛素敏感性,改善糖、脂代谢和调节内分泌系统,提高骨密度,减少体内脂肪蓄积。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartObesity"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      肥胖人群里，接近40%的超重或肥胖者中至少患有一种慢性疾病，尤其以高血压，高血脂，血糖异常或高血糖及其由此引起的心脑血管疾病最为常见。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info">
+            <div class="panel-heading">慢病分析预测</div>
+            <div class="panel-body">
+              <div style="height:440px;">
+                <div style="height:440px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartOverall"  style="height:280px;width:100%;margin-top:20px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:90px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      各慢病人数均逐年增加，面临形势依旧严峻，慢病管理刻不容缓。
+                  </div>
+                </div>
+                <div style="height:440px;width:49%;display: inline-block;overflow: hidden;">
+                   <div id="pieChartOverall"  style="height:280px;width:50%;display: inline-block;overflow: hidden;"></div>
+                   <div style="height:260px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;">
+                     <div>
+                       <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">高血压</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">30.6%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">3.7%</div>
+                       <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">糖尿病</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">12.3%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">5.2%</div>
+                       <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">脑卒中</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">9.2%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">8.7%</div>
+                       <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢阻肺</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">10.4%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">11.6%</div>
+                       <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢性肾病</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">7.8%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">10.3%</div>
+                       <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                  </div>
+                  <div style="height:90px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      慢阻肺和慢性肾病增长迅速，需加大重视，采取针对性措施。
+                  </div>
+                </div>
+              </div>
+              <div style="height:440px;">
+                <div style="height:440px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartOverall"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:90px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      慢病患病率仍逐年增长，但增速减缓。
+                  </div>
+                </div>
+                <div style="height:440px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartOverall2"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:90px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      慢病知晓率、治疗率、控制率、治疗控制率均逐年增加，慢病管理初见成效。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info">
+            <div class="panel-heading">慢病管理成效分析</div>
+            <div class="panel-body">
+              <div style="height:320px;">
+                <div id="lineChartHypertense"  style="height:280px;width:50%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                <div id="HistogramChartHypertense"  style="height:280px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+              </div>
+              <div style="height:320px;">
+                <div id="lineChartDiabete"  style="height:280px;width:50%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                <div id="HistogramChartDiabete"  style="height:280px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+              </div>
+              <div style="height:320px;">
+                <div id="lineChartBrain"  style="height:280px;width:50%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                <div id="HistogramChartBrain"  style="height:280px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+              </div>
+              <div style="height:320px;">
+                <div id="lineChartLung"  style="height:280px;width:50%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                <div id="HistogramChartLung"  style="height:280px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+              </div>
+              <div style="height:320px;">
+                <div id="lineChartKidney"  style="height:280px;width:50%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                <div id="HistogramChartKidney"  style="height:280px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info">
+            <div class="panel-heading">诊疗助手成效分析</div>
+            <div class="panel-body">
+
+            </div>
+          </div>
+
+
+
+
+
+          <!-- <div class="panel panel-info">
+            <div class="panel-heading">慢病监管决策分析</div>
+            <div class="panel-body">
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartHabit1"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      吸烟会大幅增加肺部疾病、心血管疾病等疾病的患病率；吸烟导致慢病死亡的六分之一,还是导致肺癌的首要危险因素，已成为继高血压之后的第二号全球杀手。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartHabit2"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      饮酒会大幅增加高血压、糖尿病和肝部等疾病的患病率;酒精使用导致每年230万人死亡，饮酒频率越高则慢性病的患病风险越大。
+                  </div>
+                </div>
+              </div>
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartDiet1"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                       食盐和高血压紧密相关，高盐引起心血管疾病、胃癌等疾病，而这些疾病不仅是危害健康，对人的生命也有一定威胁的。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartDiet2"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      油脂摄入量过多，除了会造成肥胖外，还引发糖尿病、高血脂、高血压、心血管疾病等慢性疾病的发生。
+                  </div>
+                </div>
+              </div>
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartMotion"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      有氧耐力运动可以增进心肺功能,降低血压、血脂和血糖水平,增加胰岛素敏感性,改善糖、脂代谢和调节内分泌系统,提高骨密度,减少体内脂肪蓄积。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartObesity"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      肥胖人群里，接近40%的超重或肥胖者中至少患有一种慢性疾病，尤其以高血压，高血脂，血糖异常或高血糖及其由此引起的心脑血管疾病最为常见。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+       </div>
+
+      <footer>
+       <div class="footer-section">
+         <img  src="../images/logo21.png" class="footer-img" />
+         <div class="footer-row">
+           <span class="footer-span">xxx</span>
+         </div>
+         <div class="footer-row">
+           <span class="footer-span">xxxx</span>
+         </div>
+         <div class="footer-row">
+         <span class="footer-span" style="font-size:13px">xxx</span>
+         </div>
+         <!-- <div class="footer-row">
+           <span class="footer-span" style="font-size:13px">增值电信业务许可证号:京-2-4-20100000</span>
+         </div> -->
+       </div>
+     </footer>
+   </main>
+
+   <script src="../lib/jquery-3.3.1.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="../lib/echarts.min.js"></script>
+    <script src="../scripts/monitor.js"></script>
+ </body>
+
+</html>

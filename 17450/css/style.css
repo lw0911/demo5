@@ -1,0 +1,344 @@
+/* CSS Document */
+li:after,
+ul:after,
+.casecon:after,
+#mian:after,
+.nymain:after{
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	content: '';
+}
+/*********************分页样式属性****************************/
+#pages{ margin-top:10px;}
+#pages a{ padding:0px 5px;}
+/******************顶部样式***************************/
+.topcen li a { padding:0px 5px;}
+.topcen li{ float:left; line-height:28px;}
+/************************幻灯片样式****************************/
+.slideBox{ height:428px; overflow:hidden; position:relative; border-bottom:1px solid #ddd;  }
+.slideBox .hd{ height:15px; overflow:hidden; position:absolute; left:45%; bottom:25px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{ 
+	float:left; 
+	margin-right:2px;  
+	line-height:14px; 
+	text-align:center; 
+	background-color: #FFFFFF;
+	cursor:pointer; 
+	width: 15px;
+	height: 15px;
+	float: left;
+	border-radius: 50% 50% 50% 50%;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 4px;
+	overflow: hidden;
+	text-indent: -999px
+}
+.slideBox .hd ul li.on{ background:#215993; color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd img{ width:100%; height:428px; display:block;  }
+.slideBox .prev,
+.slideBox .next{ 
+    position:absolute; left:3%; top:50%; 
+	margin-top:-25px; 
+	display:block; 
+	width:32px; 
+	height:40px;
+	background:url(../images/slider-arrow.png) -110px 5px no-repeat; 
+	filter:alpha(opacity=50);opacity:0.5;   
+}
+.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+.slideBox .prev:hover,
+.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+.slideBox .prevStop{ display:none;  }
+.slideBox .nextStop{ display:none;  }
+/*******************************************/
+#center {Z-INDEX: 2; POSITION: absolute; }
+#slider {Z-INDEX: 1;  POSITION: absolute;  WIDTH: 1000px; HEIGHT:442px;OVERFLOW: hidden; }
+#slider .slide {
+	Z-INDEX: 10;
+	 POSITION: absolute; 
+	 BORDER-LEFT: #000 1px solid;
+	  background:#FFF;
+	  WIDTH: 596px;
+	  HEIGHT: 442px; 
+	  OVERFLOW: hidden;  
+	  CURSOR: default; 
+	  text-align:left; 
+	  background:#000;
+}
+#slider .title {
+	COLOR: #f80; FONT-SIZE: 1.2em; FONT-WEIGHT: bold; MARGIN-RIGHT: 1.5em; TEXT-DECORATION: none
+}
+#slider .text {
+    POSITION: absolute; 
+	TEXT-ALIGN: justify; 
+	WIDTH: 470px; 
+	DISPLAY: none; 
+	FONT-FAMILY: verdana, arial, Helvetica, sans-serif; 
+	COLOR: #fff; 
+	FONT-SIZE: 0.9em; 
+	TOP: 100%; 
+	LEFT: 10px
+}
+#slider .diapo {POSITION: absolute; FILTER: alpha(opacity=100); VISIBILITY: visible; opacity: 1}
+#apDiv1 {Z-INDEX: 1; POSITION: absolute; BACKGROUND-COLOR: #000000; WIDTH: 920px; HEIGHT: 30px; OVERFLOW: hidden; TOP: 0px; LEFT: 0px}
+#apDiv2 {	Z-INDEX: 3; POSITION: absolute; WIDTH: 960px; HEIGHT: 35px; OVERFLOW: hidden; TOP: 216px; LEFT: -429px}
+.pagenext {	POSITION: relative; WIDTH: 920px; HEIGHT: 37px}
+A.pn:link {	Z-INDEX: 4; POSITION: absolute; WIDTH: 47px; FONT: 12px  "Microsoft YaHei"; COLOR: #666; TOP: 15px; RIGHT: 33px; TEXT-DECORATION: none}
+A.pn:visited {	Z-INDEX: 4; POSITION: absolute; WIDTH: 47px; FONT: 12px "Microsoft YaHei"; COLOR: #666; TOP: 15px; RIGHT: 33px; TEXT-DECORATION: none}
+A.pn:hover {COLOR: #fff}
+A.pn:active {COLOR: #fff}
+/***************************团队，简介样式图层***********************/
+.left_Elite{ width:390px; float:left; margin-right:10px; margin-top:50px;}
+.left_Elite .title_name{ background:url(../images/title_10.png) no-repeat; height:30px; width:230px; margin-bottom:10px;}
+.left_Elite ul{ margin-bottom:20px;width:390px;}
+.left_Elite ul li{ float:left; line-height:26px;}
+.left_Elite ul  .img{ margin-right:10px;}
+.left_Elite ul li img{ width:164px; height:200px; border:3px solid #C6C6C6; padding:1px;}
+.right_Introduction{ width:600px; float:right;margin-top:50px;}
+/* 双重slide-文本滚动效果 */ 
+#doubleSlideTxt{ width:600px; zoom:1; position:relative; text-align:left;  } 
+#doubleSlideTxt .parHd{ position:absolute; z-index:1; top:10px; left:570px; width:30px;  } 
+#doubleSlideTxt .parHd li{ 
+    width:30px;
+	padding:20px 0px;
+	border-left:3px solid #999999; 
+	cursor:pointer;	
+} 
+#doubleSlideTxt .parHd 	.Column_Profile{ height:194px; background:url(../images/title_17.png) no-repeat; width:25px;}
+#doubleSlideTxt .parHd 	.Column_Advantage{ height:194px; background:url(../images/title_07.png) no-repeat; width:25px;}
+#doubleSlideTxt .parHd li.on{ 
+    font-weight:bold; 
+	color:#367399;  
+	border-left:3px solid  #000000;   
+    margin-left:0px; 
+	position:relative;
+	z-index:100;
+	width:30px;
+} 
+#doubleSlideTxt .parHd li.on em{ 
+    background:url(../images/img_06.png) no-repeat;
+	 width:14px; 
+	 height:27px; 
+	 padding:7px 13px; 
+	 position:absolute;
+	 top:50%;
+	 left:-15px; 
+	 z-index:101 
+}	
+#doubleSlideTxt .parBd .slideTxtBox .contect{ padding:20px 10px; line-height:30px; font-size:14px;}
+#doubleSlideTxt .parBd .slideTxtBox .contect a{ color:#CCCCCC}
+#doubleSlideTxt .parBd .slideTxtBox .bg_Profile{ background:url(../images/bgs_03.png) no-repeat; height:560px; height:120px;}
+#doubleSlideTxt .parBd{ position:relative;  z-index:0; width:570px; left:0px;} 
+#doubleSlideTxt .parBd .slideTxtBox{width:570px; border:0;     } 
+#doubleSlideTxt .parBd .slideTxtBox .Advantage{ background:url(../images/title_13.png) no-repeat center; height:460px}
+#doubleSlideTxt .parBd .slideTxtBox .hd{ background:#fff;  } 
+/********************************************/
+.Cooperation{ background:url(../images/title_29.png) no-repeat center; width:1000px; height:40px; border-bottom:1px solid #a2a2a2; }
+.Partner_logo img{ width:150px; height:60px; border:1px solid #E3E3E3}
+.Partner_logo{ padding-bottom:20px; border-bottom:1px solid #a2a2a2}
+/* 本例子css */
+.multipleColumn{ overflow:hidden; position:relative; width:1000px;   }
+.multipleColumn .hd{ overflow:hidden; margin-top:20px;  }
+.multipleColumn .hd .prev,
+.multipleColumn .hd .next{ 
+	display:block;  
+	font-size:36px;
+	float:right; 
+	overflow:hidden;
+	cursor:pointer;
+	position:absolute;
+	top:45%;
+ }
+.multipleColumn .hd .next{ font-size:36px; font-family:"新宋体"; font-weight:normal }
+.multipleColumn .hd .prev{ margin-left:980px;font-family:"新宋体"; font-weight:normal}
+.multipleColumn .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
+.multipleColumn .hd ul li.on{ background-position:0 0; }
+.multipleColumn .bd{ overflow:hidden; width:960px; margin-left:20px;  }
+.multipleColumn .bd ul{ overflow:hidden; zoom:1; width:1000px;  float:left; _display:inline;  }
+.multipleColumn .bd ul li{ margin:4px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+.multipleColumn .bd ul li .pic{ text-align:center; }
+.multipleColumn .bd ul li .pic img{ width:150px; height:60px; display:block;  padding:0px; border:1px solid #ccc; }
+.multipleColumn .bd ul li .pic a:hover img{ border-color:#999;  }
+.multipleColumn .bd ul li .title{ line-height:24px;   }
+.page_index .contact em{ background:url(../images/QQ_03.png) no-repeat center; padding:9px 18px;}
+.LC{ height:auto; float:left;margin-top:-4px; position:relative;}
+.LC li{ width:180px;height:656px;float:left; position:relative;overflow:hidden;}
+.toll_img66{ width:170px; height:200px;padding-top:30px;font-size:22px;color:#351608;padding-left:50px;}
+.toll_info66{ 
+    height:570px;
+	width:178px;
+	padding-top:-16px; 
+	border:1px solid #CCCCCC; 
+	top:-20px; 
+	background:#fff;
+	font-family:"Microsoft YaHei"; 
+	position: absolute; 
+	display:none;
+	z-index:1003;
+	}
+.toll_info66 img{width:180px;height:118px;}
+.LC li a{text-decoration:none; position:absolute; top:0; left:0; display:block; cursor:pointer;width:180px;}
+.toll_info66 .content{ padding:0px 2px; color:#000000}
+.toll_info66 .title{ font-size:18px; font-weight:bold; text-align:center;font-family:"Microsoft YaHei"; color:#FF6600}
+.toll_info66 p span{ display:block;width:125px;padding:10px 0 20px;padding-left:30px; background:url(../images/liucheng_12.jpg) no-repeat left 10px;font-size:14px;font-family:"Microsoft YaHei";}
+.toll_info66 p font{padding-left:20px; display:block;font-family:"Microsoft YaHei";font-size:14px;}
+.Service .title_name{ background:url(../images/Service_title.png) no-repeat center; position:relative; top:0px; width:720px; margin-bottom:40px; height:87px; }
+.liucheng1{ background:url(../images/Service_15.png) no-repeat }
+.liucheng2{ background:url(../images/Service_17.png) no-repeat; padding-left:59px;color:#ffeecf;}
+.liucheng3{ background:url(../images/Service_18.png) no-repeat; padding-left:59px;}
+.liucheng4{ background:url(../images/Service_21.png) no-repeat; padding-left:30px;}
+.liucheng5{ background:url(../images/Service_26.png) no-repeat; padding-left:30px;color:#ffeecf;}
+.LC .liuC5 .toll_info66,.LC .liuC4 .toll_info66,.LC .liuC6 .toll_info66,.LC .liuC7 .toll_info66,.LC .liuC8 .toll_info66{height:450px;*height:330px;}
+.LC .liuC5{ position:absolute;top:99px;right:0px;}
+.LC .liuC6{ position:absolute;top:240px;right:0px;}
+.LC .liuC7{ position:absolute;top:240px;right:189px;}
+.LC .liuC8{ position:absolute;top:240px;right:378px;}
+.chanpinList{width:876px;height:auto;overflow:hidden; margin:53px auto;}
+.chanpinList li{width:288px;height:164px; float:left;line-height:164px; text-align:center;margin-top:8px;}
+.chanpinList li a{font-size:20px;color:#361609;}
+.chanpinList .two{ background:url(../images/list_04.png) no-repeat;}
+.chanpinList .three{ background:#dfdfdf;margin-left:8px;}
+.chanpinList .four{margin-left:0;margin-right:8px;}
+.chanpinList .five{ background:url(../images/list_08.png) no-repeat;}
+/******************************相册***********************************/
+.gallery{ padding:5px; text-align:left; width:620px; margin:0 auto; margin-top:20px; } 
+.gallery .bd li .pic{ line-height:0px;  } 
+.gallery .bd li .bg,.gallery .bd li .title{ display:none;  } 
+.gallery .bd li img{ width:618px; height:458px;   } 
+.gallery .hd{ position:relative; padding:0 15px; margin-top:10px; zoom:1; } 
+.gallery .hd .tempWrap{ margin-left:8px;  } 
+.gallery .hd ul{ overflow:hidden; zoom:1; } 
+.gallery .hd li{ width:135px; padding-top:4px; text-align:center; cursor:pointer; margin:0px 4px; } 
+.gallery .hd li img{ width:133px; height:90px; border:1px solid #ddd; padding:1px;   } 
+.gallery .hd li.on{ background:url("../images/icoUp.gif") no-repeat center 0;  } 
+.gallery .hd li.on img{ border:1px solid #f60; background:#fff;   } 
+.gallery .hd .sNext,.gallery .hd .sPrev{ 
+	text-align:center;  
+	width:15px; 
+	font-size:18px;
+	height:90px; 
+	line-height:90px;  
+	border:1px solid #ddd; 
+	cursor:pointer; 
+	position:absolute;  
+	left:0px; 
+	top:4px;
+	font-family:"新宋体";
+} 
+.gallery .hd .sNext{ left:auto; right:0px; } 
+.gallery .hd .sNext:hover,.gallery .hd .sPrev:hover{ text-decoration:none; border:1px solid #f60;  } 
+/****************************详情案例样式***************************/
+.casecontenttit,.case_show .casecontenttit2{ 
+	height:30px; 
+	margin:10px 0px; 
+	background:#e5e5e5; 
+	color:#751f1f; 
+	line-height:30px; 
+	font-weight:bold; 
+	font-size:14px; 
+	padding-left:20px;
+	border-bottom:1px solid #751f1f
+}
+.case_show .Return{ margin-left:600px; position:absolute;}
+.case_show .Return a{ background:url(../images/btn_img_03.png) no-repeat; width:130px; height:30px; padding:15px 70px;}
+/****************************留言样式***********************************/
+.Message{}
+.Message table{ width:728px; line-height:40px; margin-top:20px; color:#FF0000;}
+.Message table .title_message{ width:80px; font-size:14px; color:#000000}
+.Message table .text{ width:200px; height:30px; line-height:30px; font-size:12px; padding-left:10px; border:1px solid #CCCCCC; margin-right:10px;}
+.Message table span{ font-size:14px; color:#000000;}
+.Message table .List{ line-height:30px; margin:0px 10px;}
+.Message table label{font-size:14px; color:#000000; padding:0px 10px;}
+.Message table .textarea{ width:500px; height:150px; border:1px solid #CCCCCC; margin-right:10px;}
+.Message table .submit_btn{
+   font-family:"Microsoft YaHei"; 
+   width:100px; 
+   font-size:14px; 
+   background:#751f1f; 
+   height:40px; 
+   line-height:40px; 
+   color:#FFFFFF; 
+   line-height:40px; 
+   border:0;
+   cursor:pointer
+}
+.Message table .reset_btn{   font-family:"Microsoft YaHei"; 
+   width:100px; 
+   font-size:14px; 
+   background:#CCCCCC; 
+   height:40px; 
+   line-height:40px; 
+   color:#FFFFFF; 
+   line-height:40px; 
+   border:0;
+   cursor:pointer
+}
+/***************************合作伙伴样式*******************************************/
+.partner_list{ width:728px; margin:0 auto; margin-top:20px;}
+.partner_list li{ display: block;float: left;width: 220px;height: 120px;padding-right: 20px; margin-bottom:20px;}
+.partner_list li img:hover{ border:2px solid  #FF9900}
+.partner_list li img{ width:218px; border:2px solid #CCCCCC; padding:1px; height:120px;}
+/****************************设计师简介**************************************/
+.abouttop{ height:417px; }
+.abouttop .abouttopleft{width:260px; float:left}
+.abouttop .ahouttopright{ width:420px; padding-right:15px; float:right;font-size: 14px;}
+.abouttop .ahouttopright p{ line-height:20px;}
+.aboutbot{ padding-top:10px;font-size: 14px;}
+/*******************************************************/
+.grid {
+max-width: 100%;
+list-style: none;
+margin: 25px auto 20px auto;
+font-size: 0.85em;
+}
+.grid li {
+display: block;
+float: left;
+padding: 7px;
+width: 30%;
+width: 210px;
+margin: 0;
+border: 5px solid #d2d2d2;
+background-color: #fff;
+}
+.appreciatebox li:hover .imgout img {
+-webkit-transform: scale(1.2);
+-moz-transform: scale(1.2);
+-o-transform: scale(1.2);
+}
+appreciatebox li .imgout img {
+-webkit-transition: all 0.5s ease-in-out;
+}
+.appreciatebox h2, .appreciatebox .imgout {
+ overflow: hidden;
+ text-align:center; 
+ padding:10px 0px;
+ color:#751f1f
+}
+.appreciatebox li:hover {
+opacity: 1;
+border: 5px solid #9F0900;
+color: #CCC;
+background: #9F0900;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out;
+}
+.grid li a, .grid li img {
+outline: none;
+border: none;
+display: block;
+width: 100%;
+max-width: 100%;
+ color:#751f1f
+}
+.appreciatebox li:hover a {
+color: #FFF;
+}

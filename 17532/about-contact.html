@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
+		<title>联系我们</title>
+		<link rel="stylesheet" href="static/css/style2.css" />
+		<script type="text/javascript" src="static/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="static/js/about.js"></script>
+		<link rel="stylesheet" href="static/css/fonts.css" />
+		<script type="text/javascript" src="static/js/rightcon.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+      
+        <header class="mnav mnav-sb">
+		    		<div>
+			    		<div>
+				    		<img src="static/images/logo.png"/>
+				    		<nav>
+				    			<ul>
+				    				<li class="active"><a href="index.html"><img src="static/images/nav/nav1.png"></a></li>
+				    				<li ><a href="about.html"><img src="static/images/nav/nav2.png"></a></li>
+				    				<li ><a href="case_yx.html"><img src="static/images/nav/nav3.png"></a></li>
+				    				<li ><a href="service.html"><img src="static/images/nav/nav4.png"></a></li>
+				    				<li ><a href="case-mobile.html" ><img src="static/images/nav/nav5.png"></a></li>
+				    				<li ><a href="news.html"><img src="static/images/nav/nav6.png"></a></li>
+				    			</ul>
+				    		</nav>
+			    		</div>
+		    		</div>
+		    	
+          
+        <!--子类目-->
+        <ul class="childer">
+          <li>
+            <a href="about.html">关于我们</a>
+          </li>
+          <li>
+            <a href="about-news.html">XXX动态</a>
+          </li>
+          <li>
+            <a href="about-join.html">加入我们</a>
+          </li>
+          <li style="border: none;">
+            <a href="about-contact.html">联系我们</a>
+          </li>
+        </ul>
+      </header>
+		<div class="con_right">
+    		<div class="con_nav">
+    			<ul>
+    				<li class="icon-chevron-up"></li>
+    				<li class="icon-qq"></li>
+    				<li class="icon-contact"></li>
+    				<li class="icon-wechat"></li>
+    				<li class="icon-chevron-down"></li>
+    			</ul>
+    			<a class="icon-cancel-circle"></a>
+    		</div>
+    		<div class="con_intr">
+	    		<div class="con_zx">
+	    			<ul>
+		    			<li>
+		    				<a>售前咨询
+		    					<iframe style="display:none;"  class="sq" src=""></iframe>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a>售中咨询
+		    					<iframe style="display:none;"  class="sz" src=""></iframe>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a>售后咨询
+		    					<iframe style="display:none;"  class="sh" src=""></iframe>
+		    				</a>
+		    			</li>
+	    			</ul>
+	    		</div>
+	    		<div class="con_pho">
+	    			<p>XXX</p>
+	    		</div>
+	    		<div class="con_gw">
+	    			<img src="static/images/gw.jpg"/>
+	    		</div>
+    		</div>
+    	</div>
+		<section class="contact-map clear_float">
+			<div class="map-sn clear_float">
+				<div class="cont_zi clear_float">
+					<div class="contact_map clear_float">
+						<script type="text/javascript" src="api.map.baidu.com/api-v=2.0&ak=6d88e38ab7f507ee19cec46443691d95"></script>
+						<div id="map">
+						</div>
+						<script type="text/javascript">
+							// 百度地图API功能
+							var map = new BMap.Map("map"); // 创建Map实例
+							var point = new BMap.Point(120.900483, 31.410253); //坐标拾取
+
+							var marker = new BMap.Marker(point); // 创建标注
+							var mapStyle = {
+								style: "normal"
+							};
+							map.setMapStyle(mapStyle);
+
+							var top_left_control = new BMap.ScaleControl({
+								anchor: BMAP_ANCHOR_BOTTOM_LEFT
+							}); // 左上角，添加比例尺
+							var top_left_navigation = new BMap.NavigationControl(); //左上角，添加默认缩放平移控件
+
+							marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+							map.centerAndZoom(point, 18); // 初始化地图,设置中心点坐标和地图级别
+							map.addOverlay(marker); // 将标注添加到地图中
+							map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+							map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+							map.setCurrentCity("昆山"); // 设置地图显示的城市 
+
+							window.onresize = function() {
+
+								map.centerAndZoom(point, 15); // 重置窗口的时候 重新获取中心点坐标的位置
+
+							}
+
+							map.addControl(top_left_control);
+							map.addControl(top_left_navigation);
+							/*map.addControl(top_right_navigation);  */
+						</script>
+						<!--div class="map-img">
+							<img src="static/images/logo1.png"/>
+						</div-->
+						<div class="map-zb">
+							<p> 昆山总部 TEL:XXX
+								<br>地址：昆山市祖冲之南路<br>1699号南楼一楼 <br>公司邮箱：hr@ponsever.com
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="map-sma clear_float">
+			<div class="sma-shuye clear_float">
+				<div class="map-sma-a clear_float">
+					<img src="static/images/shuye.png" />
+				</div>
+				<div class="map-sma-b clear_float">
+					<h2>我们随时欢迎您的到来！</h2>
+				</div>
+				<div class="map-sma-c clear_float">
+					<img src="static/images/shuye.png" />
+				</div>
+			</div>
+			<!--
+            	
+			<div class="shuye-xa"></div>
+			-->
+		</section>	
+		<footer>
+      <section class="footera">
+        <div class="footera-article">
+          <div class="footera-sa"><span>＜</span></div>
+          <div class="footera-sm">
+            <ul class="clear_float">
+              <li>
+                <a href="index.html">首页</a>
+              </li>
+              <li>
+                <a href="about.html">关于</a>
+              </li>
+              <li>
+                <a href="case_yx.html">方案</a>
+              </li>
+              <li>
+                <a href=""><img src="static/images/logoa.png"></a>
+              </li>
+              <li>
+                <a href="service.html">服务</a>
+              </li>
+              <li>
+                <a href="case-pc.html">案例</a>
+              </li>
+              <li>
+                <a href="news.html">洞察</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footera-sg">
+            <p class="footera-sgp">公司名称：昆山XXX网络科技有限公司&nbsp;&nbsp;&nbsp;联系电话：XXX&nbsp;&nbsp;&nbsp;地址：XXX</p>
+            <p class="footera_p">@2020 昆山XXX网络科技有限公司苏ICP备XXX号&nbsp;&nbsp;& 版权所有</p>
+
+          </div>
+        </div>
+      </section>
+    </footer>
+	</body>
+
+</html>

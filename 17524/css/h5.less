@@ -1,0 +1,468 @@
+@import "global";
+.trait_list{
+  margin:0 -0.26rem 0.3rem 0;
+  text-align: center;
+  .trait_item{
+    .width(2.75rem);
+    .height(3.8rem);
+    margin:0 0.26rem 0.26rem 0;
+    display: inline-block;
+    vertical-align: middle;
+    .bgColor(#fff);
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,.1);
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    .trait_top{
+      width:100%;
+      height:1.84rem;
+      position: relative;
+      .top_bg{
+        width:100%;
+        height:1rem;
+        background: url("../images/H5/top_bg.png") center top no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        display: block;
+      }
+      .trait_circle{
+        position: absolute;
+        .widthHeight(1.5rem,1.5rem);
+        .lineHeight(1.5rem);
+        .textAlign(center);
+        .borderRadius(50%);
+        .bgColor(#fbc111);
+        left:50%;
+        margin-left:-0.75rem;
+        bottom:0.04rem;
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        -moz-box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        .iconfont{
+          font-size:50px;
+          color: #fff;
+        }
+      }
+    }
+    .trait_info{
+      .padding(0,0.3rem,0,0.3rem);
+      .trait_name{
+        text-align: center;
+        border-bottom:1px solid #e5e5e5;
+        line-height:0.56rem;
+        color: #1a81d2;
+        position: relative;
+      }
+      .trait_name:before{
+        content: '';
+        width:0.14rem;
+        height:0.03rem;
+        .bgColor(#1a81d2);
+        position: absolute;
+        left:50%;
+        bottom:-0.015rem;
+        margin-left:-0.07rem;
+      }
+      .trait_dec{
+        font-size:14px;
+        color: #666;
+        line-height:0.32rem;
+        padding-top:0.16rem;
+        text-align: left;
+        height:1.6rem;
+      }
+    }
+  }
+  .trait_item.active{
+    .bgColor(#fbc111);
+    .trait_top{
+      .trait_circle{
+        .bgColor(#ffffff);
+        .iconfont{
+          font-size:50px;
+          color: #1a81d2;
+        }
+      }
+    }
+    .trait_info{
+      .trait_name{
+        color: #fff;
+      }
+      .trait_name:before{
+        .bgColor(#fff);
+      }
+      .trait_dec{
+        color: #fff;
+
+      }
+    }
+
+  }
+}
+
+//优势功能
+.strengths_box{
+  min-height:5.64rem;
+  .bgColor(#f5f5f5);
+  padding:0.47rem 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .strengths_right{
+    width:6.78rem;
+    .strengths_item{
+      border-bottom:1px dashed #dcdcdc;
+      line-height:0.3rem;
+      padding:0.25rem 0;
+      margin-bottom:0.15rem;
+      font-size: 16px;
+
+      a{
+        width:1.6rem;
+        display: inline-block;
+      }
+      .num{
+        width:0.3rem;
+        height:0.3rem;
+        line-height:0.3rem;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        display: inline-block;
+        color: #fff;
+        margin-right:0.05rem;
+      }
+      .num_blue{
+      .bgColor(#1a81d2);
+      }
+      .num_yellow{
+        .bgColor(#fbc111);
+      }
+    }
+  }
+}
+//系统组成
+.system_box{
+  padding-top:0.4rem;
+  padding-bottom:0.7rem;
+  .system_l{
+    width:4.63rem;
+    .system_l_tit{
+      padding:0.36rem 0 0.16rem 0;
+      border-bottom:1px solid #dcdcdc;
+      font-size:18px;
+      color: #999;
+      span{
+        font-size:22px;
+        color: #333;
+      }
+    }
+    .system_l_list{
+      padding-top:0.24rem;
+      line-height: 0.38rem;
+      font-size:14px;
+      color: #666;
+    }
+  }
+  .system_mid{
+    width:1.5rem;
+    height:4.2rem;
+    background: url("../images/H5/tab_bg.png") no-repeat;
+    margin:0 0.6rem 0;
+    padding:0.15rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .system_mid_in{
+      height:100%;
+      width:100%;
+      background: url("../images/H5/tab_bg_in.png") no-repeat;
+      .item{
+        display: block;
+        font-size:16px;
+        color: #333;
+        line-height:0.96rem;
+        text-align: center;
+      }
+    }
+  }
+  .system_r{
+    margin-top:0.46rem;
+    width:4.5rem;
+    height:3.75rem;
+    position: relative;
+    .handle_box{
+      width:100%;
+      position: absolute;
+      top:1.14rem;
+      left:0;
+      text-align: center;
+      height:0.4rem;
+      a{
+        display: inline-block;
+        width:1.5rem;
+        height:0.4rem;
+        line-height:0.4rem;
+        .bgColor(#fbc111);
+        color: #fff;
+        font-size:16px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        margin:0 0.1rem;
+      }
+      a:hover{
+        .bgColor(#ffba00);
+      }
+    }
+  }
+}
+//产品价格
+.products_sale_box{
+
+  background: #f5f5f5;
+  padding:0.3rem 0 0.8rem 0;
+  .sale_table{
+    margin-bottom:0.5rem;
+    .textAlign(center);
+    .bgColor(#fff);
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 15px rgba(0,0,0,.1);
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    thead th{
+      line-height:50px;
+      .bgColor(#1a81d2);
+      color: #fff;
+      font-weight:normal;
+      font-size:16px;
+      border-right:1px solid #489adb;
+    }
+    tbody td{
+      font-size:14px;
+      padding:0.2rem 0;
+      border:1px solid #eeeeee;
+      .iconfont{
+        font-size:18px;
+      }
+      .check_btn{
+        display: inline-block;
+        width:98px;
+        height:28px;
+        line-height:28px;
+        text-align: center;
+        border:1px solid #d1e6f6;
+        color: #1a81d2;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+      }
+      .check_btn:hover{
+        .bgColor(#1a81d2);
+        color: #fff;
+      }
+    }
+    tbody tr:nth-child(2n){
+      .bgColor(#e8f2fa);
+    }
+    .name{
+      width:1.7rem;
+    }
+    .support{
+      width:1.39rem;
+    }
+    .combo{
+      width:5.88rem;
+    }
+    .sale{
+      width:1.39rem;
+    }
+    .system{
+      width:1.79rem;
+    }
+  }
+}
+
+//服务提示
+.service_tips{
+  width:100%;
+  .bgColor(#fff url("../images/H5/tips_bg.png") right bottom no-repeat);
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 0 15px rgba(0,0,0,.1);
+  box-shadow: 0 0 15px rgba(0,0,0,.1);
+  padding:0.85rem 0.42rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height:32px;
+  font-size:14px;
+  position: relative;
+  .service_tips_tit{
+    width:2.52rem;
+    height:0.6rem;
+    background: url("../images/service/tips.png") no-repeat;
+    position: absolute;
+    left:50%;
+    margin-left:-1.26rem;
+    top:-0.15rem;
+  }
+}
+/*媒体查询*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+  .strengths_left{
+    float: none;
+    margin:0 auto;
+    width:4.28rem;
+    height:3.93rem;
+  }
+  .strengths_box .strengths_right{
+    width:80%;
+  }
+  .system_box .system_l{
+    width:100%;
+    float: none;
+    margin:0 auto 0.2rem;
+  }
+  .system_box .system_mid{
+    float: none;
+    margin:0 auto;
+    display: none;
+  }
+  .system_box .system_r{
+    float: none;
+    margin:0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 750px;
+  }
+  .system_box .system_l{
+    width:100%;
+    float: none;
+    margin:0 auto 0.2rem;
+  }
+  .system_box .system_mid{
+    float: none;
+    margin:0 auto;
+    display: none;
+  }
+  .system_box .system_r{
+    float: none;
+    margin:0 auto;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 0.1rem;
+  }
+  .system_box .system_l{
+    width:100%;
+    float: none;
+    margin:0 auto 0.2rem;
+  }
+  .system_box .system_mid{
+    float: none;
+    margin:0 auto;
+    display: none;
+  }
+  .system_box .system_r{
+    float: none;
+    margin:0 auto;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+
+  .system_box .system_l{
+    width:100%;
+    float: none;
+    margin:0 auto 0.2rem;
+  }
+  .system_box .system_mid{
+    float: none;
+    margin:0 auto;
+    display: none;
+  }
+  .system_box .system_r{
+    float: none;
+    margin:0 auto;
+  }
+
+}
+
+@media (max-width: 479px) {
+  body {
+    font-size: 12px;
+  }
+  .strengths_box .strengths_right{
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .strengths_box .strengths_right .strengths_item{
+    padding:0.06rem 0;
+  }
+  .strengths_box .strengths_right .strengths_item a{
+    width:100%;
+    margin-bottom:0.1rem;
+    padding-left:0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .system_box .system_l{
+    width:100%;
+    float: none;
+    margin:0 auto 0.2rem;
+  }
+  .system_box .system_mid{
+    float: none;
+    margin:0 auto;
+    display: none;
+  }
+  .system_box .system_r{
+    float: none;
+    margin:0 auto;
+    width:90%;
+    height:auto;
+  }
+  .system_box .system_l .system_l_list{
+    line-height:0.3rem;
+  }
+  .system_box .system_l .system_l_tit{
+    padding:0rem 0 0.16rem;
+  }
+  .system_box .system_r .handle_box{
+    top:0.6rem;
+  }
+  .system_box .system_r .handle_box a{
+    width:40%;
+  }
+  .service_tips{
+    padding:0.85rem 0.15rem;
+  }
+}

@@ -1,0 +1,535 @@
+@import "about";
+#fn_list{
+  height:0;
+  opacity:0;
+  overflow: hidden;
+}
+.service_list{
+  width:2.2rem;
+  margin-right:1px;
+  .service_tit{
+    .height(0.5rem);
+    .lineHeight(0.5rem);
+    .textAlign(center);
+    .colorFont(#333,16px);
+    .bgColor(#e3f0fa);
+  }
+  .service_item{
+    height:0.5rem;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    line-height:0.5rem;
+    text-align: center;
+    .colorFont(#666,14px);
+  }
+  .service_dec{
+    .height(1.28rem);
+    padding:0.12rem 0.4rem 0;
+    line-height:0.3rem;
+    position: relative;
+    font-size:14px;
+  }
+}
+.service_class{
+  width:5.1rem;
+  .service_item{
+    color: #333;
+  }
+  position: relative;
+  .service_tit{
+    .bgColor(#1a81d2);
+    color: #fff;
+  }
+}
+.service_list_in,.service_list_other{
+  li:nth-child(2n+1){
+    .bgColor(#e3f0fa);
+  }
+}
+//主要
+.main_fn{
+  .main_fn_name{
+    width:0.88rem;
+    height:3.6rem;
+    text-align: center;
+    .colorFont(#333,16px);
+    font-weight:bold;
+    position: relative;
+    padding-top:2.8rem;
+  }
+  .main_fn_list{
+    width:4.2rem;
+  }
+}
+.service_icon{
+  position: relative;
+  i{
+    width:0.24rem;
+    height:0.24rem;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-0.12rem;
+    margin-top:-0.12rem;
+    background: url("../images/service/service_icon.png") 0 0 no-repeat;
+  }
+  .error{
+    background-position: 0 -0.34rem;
+  }
+}
+
+
+//服务套餐
+#list{
+  padding-top:1.2rem;
+  .swiper-pagination-bullets{
+    bottom:0.66rem;
+  }
+}
+.list{
+  .bgColor(#fafafa);
+
+  padding-top:0.9rem;
+  height:2.3rem;
+  .border(1px,solid,#eeeeee);
+  .borderRadius(5px);
+  position: relative;
+  margin-bottom:1.2rem;
+  .list_top{
+    position: absolute;
+    top:-1.07rem;
+    .bgColor(#fafafa);
+    border-top:1px solid #eee;
+    height:2.15rem;
+    width:100%;
+      .borderRadius(50%);
+      .list_top_circle{
+        width:1.3rem;
+        height:1.3rem;
+        background: #e3eef6;
+        margin:26px auto 0;
+        .borderRadius(50%);
+        padding:0.1rem;
+        .list_top_circle_in{
+          width:1.3rem;
+          height:1.3rem;
+          line-height:1.3rem;
+          text-align: center;
+          background: #1a81d2;
+          color: #fff;
+          display: block;
+          .borderRadius(50%);
+          margin:0 auto;
+          i{
+            font-size:50px;
+          }
+        }
+      }
+  }
+  .list_bottom{
+    position: relative;
+    z-index:99;
+  }
+  .list_name{
+    font-size:18px;
+    color: #1a81d2;
+    text-align: center;
+    font-weight:normal;
+    margin-bottom:0.15rem;
+  }
+  .list_dec{
+    text-align: center;
+    line-height:0.32rem;
+    padding:0 0.15rem;
+    font-size:14px;
+  }
+
+}
+
+.list.hover{
+  .bgColor(#1a81d2);
+  .list_top{
+    .bgColor(#1a81d2);
+    .list_top_circle{
+      .bgColor(#318ed7);
+      .list_top_circle_in{
+        .bgColor(#ffffff);
+        color: #1a81d2;
+      }
+    }
+  }
+  .list_dec{
+    color: #a8c7e9;
+  }
+  .list_name{
+    color: #fff;
+  }
+
+}
+.yellow_list{
+  .list_top{
+      .list_top_circle{
+        .bgColor(#faf4e2);
+        .list_top_circle_in{
+          .bgColor(#fbc111);
+        }
+      }
+  }
+  .list_name{
+    color:#fbc111;
+  }
+}
+
+//服务提示
+.service_tips{
+  min-height:4.6rem;
+  width:100%;
+  .bgColor(url(../images/service/service_bg.png) no-repeat);
+  -webkit-background-size:cover;
+  background-size:cover;
+  padding:0.85rem 0.42rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height:32px;
+  font-size:14px;
+  position: relative;
+  .service_tips_tit{
+    width:2.52rem;
+    height:0.6rem;
+    background: url("../images/service/tips.png") no-repeat;
+    position: absolute;
+    left:50%;
+    margin-left:-1.26rem;
+    top:-0.15rem;
+  }
+}
+//联系我
+.contact_type{
+  margin-bottom:0.4rem;
+  dl{
+    display: inline-block;
+    margin-right:0.5rem;
+    font-size:14px;
+    dt{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    dd{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+.add_contact{
+  overflow: hidden;
+  .add_item{
+    height:1.68rem;
+    width:50%;
+    float: left;
+    overflow: hidden;
+    background: #1a81d2;
+    padding:0.22rem 0.32rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .add_info{
+      display: inline-block;
+      vertical-align: middle;
+      width:80%;
+      color: #fff;
+      line-height:0.28rem;
+    }
+    .add_code{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .add_item_qq{
+    .bgColor(#eebe0c);
+  }
+}
+.map{
+  margin:0.3rem auto;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,.2);
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+.form_box{
+  background: url("../images/contact/form_bg.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-bottom:0.6rem;
+  .form_title{
+    text-align: center;
+    padding:0.5rem 0 0.4rem;
+    font-size:20px;
+    color: #201f1f;
+  }
+  .form_in{
+    .form_in_item{
+      margin-right:-0.3rem;
+    }
+    .input_md{
+      width:5.7rem;
+      height:0.56rem;
+      line-height:0.56rem;
+      padding:0 0 0 0.16rem;
+      font-size: 14px;
+      color: #999;
+      margin:0 0.2rem 0.3rem 0;
+      border:none;
+    }
+    .area{
+      width:100%;
+      border:none;
+      padding:0.16rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size:14px;
+    }
+    .area_box,.yzm_box{
+      margin-bottom:0.3rem;
+    }
+    .input_code{
+      width:4.2rem;
+      height:0.56rem;
+      border:none;
+      display: inline-block;
+      vertical-align: middle;
+      padding:0 0 0 0.15rem;
+      margin:0 auto;
+      font-size:14px;
+    }
+    .code_img{
+      width:1.86rem;
+      height:0.56rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left:0.15rem;
+    }
+    .sub_btn{
+      width:2.7rem;
+      height:0.54rem;
+      line-height:0.54rem;
+      text-align: center;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      .bgColor(#1a81d2);
+      color: #fff;
+      font-size:16px;
+      display: block;
+      border: none;
+      cursor: pointer;
+      margin:0 auto;
+    }
+  }
+}
+/*媒体查询*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+  .service_list{
+    width:80%;
+    margin:0 auto 0.1rem;
+    float: none;
+    border-right:1px solid #e3f0fa;
+    border-left:1px solid #e3f0fa;
+  }
+  .main_fn .main_fn_name{
+    width:20%;
+  }
+  .main_fn .main_fn_list{
+    width:80%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+//  联系我们
+  .add_contact .add_item .add_info{
+    width:70%;
+  }
+  .form_box .form_in .input_md{
+    width:100%;
+  }
+  .service_table{
+    display: none;
+  }
+  #fn_list{
+    height:auto;
+    opacity:1;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 750px;
+  }
+  .list .list_top{
+    width:100%;
+  }
+  .service_list{
+    width:80%;
+    margin:0 auto 0.1rem;
+    float: none;
+    border-right:1px solid #e3f0fa;
+    border-left:1px solid #e3f0fa;
+  }
+  .main_fn .main_fn_name{
+    width:20%;
+  }
+  .main_fn .main_fn_list{
+    width:80%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  //  联系我们
+  .add_contact .add_item{
+    padding:0.15rem;
+  }
+  .add_contact .add_item .add_info{
+    width:60%;
+  }
+  .form_box .form_in .input_md{
+    width:100%;
+  }
+  .service_table{
+    display: none;
+  }
+  #fn_list{
+    height:auto;
+    opacity:1;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 0.1rem;
+  }
+  .service_list{
+    width:80%;
+    margin:0 auto 0.1rem;
+    float: none;
+    border-right:1px solid #e3f0fa;
+    border-left:1px solid #e3f0fa;
+  }
+  .main_fn .main_fn_name{
+    width:20%;
+  }
+  .main_fn .main_fn_list{
+    width:80%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .service_list .service_dec{
+    height:auto;
+    padding-bottom:0.2rem;
+  }
+  //  联系我们
+  .add_contact .add_item{
+    padding:0.15rem;
+    height:auto;
+  }
+  .add_contact .add_item .add_info>img{
+    width:0.43rem;
+    height:0.43rem;
+    margin:0 auto;
+  }
+  .add_contact .add_item .add_code{
+    text-align: center;
+    width:100%;
+    img{
+      display: inline-block;
+    }
+  }
+  .add_contact .add_item .add_info{
+    width:100%;
+    text-align: center;
+  }
+  .form_box .form_in .input_md{
+    width:100%;
+  }
+  .contact_type dl{
+    width:100%;
+    margin:0 0 0.2rem 0;
+  }
+
+  .contact_type dl dt{
+    width:20%;
+  }
+  .contact_type dl dd{
+    width:76%;
+  }
+  .form_box .form_in .input_code{
+    width:50%;
+  }
+  .form_box .form_in .code_img{
+    width:30%;
+  }
+  .form_box .form_in .input_md{
+    margin-bottom:0.15rem;
+  }
+  .service_table{
+    display: none;
+  }
+  #fn_list{
+    height:auto;
+    opacity:1;
+    overflow: hidden;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+  .service_table{
+    display: none;
+  }
+  #fn_list{
+    height:auto;
+    opacity:1;
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 479px) {
+  body {
+    font-size: 12px;
+  }
+  .service_list{
+    width:100%;
+  }
+  .list .list_top{
+    width:100%;
+  }
+  .service_table{
+    display: none;
+  }
+  #fn_list{
+    height:auto;
+    opacity:1;
+    overflow: hidden;
+  }
+
+}

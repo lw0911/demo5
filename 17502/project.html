@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目详情-项目融资平台</title>
+<meta name="keywords" content="关键词,关键词">
+<meta name="description" content="这是站点描述!">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/html5.js"></script>
+<script>
+$(document).ready(function(){
+	//TAB
+	$(".wide_area .pro_cont").eq(0).show().siblings(".pro_cont").hide();
+	$(".pro_cont_nav li a").eq(0).addClass("curr_btm");
+	$(".pro_cont_nav li a").click(function(){
+	var liindex = $(".pro_cont_nav li a").index(this);
+	$(this).addClass("curr_btm").parent().siblings().find("a").removeClass("curr_btm");
+	$(".wide_area .pro_cont").eq(liindex).fadeIn(150).siblings(".wide_area .pro_cont").hide();
+	});
+	//预约投资
+	$(".yy_btn").click(function(){
+		location.href="pre_investment.html";
+		});
+	//立即投资
+	$(".now_btn").click(function(){
+		location.href="invest_money.html";
+		});
+});
+</script>
+</head>
+<body>
+    <header class="public_header">
+        <aside>
+          <div class="wrap">
+             <ul class="fl top_log">
+              <li>
+               <a href="login.html" title="登录" class="txtcol">亲，请登录</a>
+               <a href="register.html" title="注册">免费注册</a>
+              </li>
+             </ul>
+             <ul class="fr">
+              <li><a href="user_center.html" title="用户中心">用户中心</a></li>
+              <li><a href="my_financing.html" title="我的融资">我的融资</a></li>
+              <li><a href="my_investment.html" title="我的投资">我的投资</a></li>
+              <li><a href="article_list.html" title="帮助中心" class="help_icon iconfont">帮助中心</a></li>
+              <li><a href="tel:XXX" title="服务热线：XXX" class="tel_icon iconfont">服务热线：XXX</a></li>
+             </ul>
+          </div>
+        </aside>
+        <section class="wrap">
+          <h1><a><img src="images/logo.png" title="站点名称"/></a></h1>
+          <form action="#" class="search_area">
+           <input type="text" placeholder="查找融资项目..." class="text_box"/>
+           <input type="submit" value="搜索" class="sub_btn"/>
+          </form>
+        </section>
+       </header>
+       <nav class="menu">
+        <ul class="wrap">
+         <li><a href="index.html" title="首页">首页</a></li>
+         <li><a href="create_financing.html" title="项目融资">创建融资</a></li>
+         
+         <li><a href="investor.html" title="投资人">投资人</a></li>
+         <li><a href="investor.html" title="投资管理公">投资管理公司</a></li>
+    
+         <li><a href="article_list.html" title="投资资讯">投资资讯</a></li>
+    
+         <li><a href="read_article.html" title="关于我们">关于我们</a></li>
+        </ul>
+       </nav>
+      <script>
+      $(document).ready(function(){
+        //current nav bg
+        $("nav li a").each(function(){
+            if($(this).attr('href') == window.location.pathname){
+             $(this).css('background-color','#f52b00');
+            }
+          });
+        });
+      </script>
+<aside class="wrap nav_link overflow">
+ <ul>
+  <li class="i_link_icon next_icon"><a href="index.html">首页</a></li>
+  <li class="next_icon"><a href="project_list.html">热门项目</a></li>
+  <li class="next_icon"><a href="project.html">全球首款现金奖励的OBD车载</a></li>
+ </ul>
+</aside>
+<section class="wrap overflow" style="margin:8px auto;position:relative;">
+ <div class="fl">
+ <div class="pro_detail_img fl">
+  <img src="upload/list_002.jpg"/>
+ </div>
+ <div class="pro_detail_infor">
+  <h2>风雅钱塘项目名称融资启动</h2>
+  <ul class="tj_data">
+   <li>
+    <em class="price_icon">5000000</em>
+    <strong>目标金额</strong>
+   </li>
+   <li>
+    <em class="price_icon">5000000</em>
+    <strong>已融资金额</strong>
+   </li>
+   <li>
+    <em class="price_icon">100000</em>
+    <strong>最小投资金额</strong>
+   </li>
+   <li>
+    <em class="per_unit">12</em>
+    <strong>已投资人数</strong>
+   </li>
+   <li>
+    <em>50%</em>
+    <strong>投资已达</strong>
+   </li>
+  </ul>
+  <p class="tag_word">关键词：<span>移动广告</span><span>网络视频广告</span></p>
+  <p>投资金额：￥<input type="number" value="100000" min="100000" class="text_box"/></p>
+  <p style="margin:15px 0;">
+   <input type="button" value="预约投资" class="yy_btn"/>
+   <input type="button" value="立即投资" class="now_btn"/>
+  </p>
+  <p><a class="gz_icon">关注（158）</a><a class="dz_icon">点赞（1785）</a></p>
+ </div>
+ </div>
+ <div class="pro_related_infor">
+  <dl>
+   <dt>热门投资项目</dt>
+   <dd>
+    <a href="project.html" title="项目名称">
+     <img src="upload/list_001.jpg"/>
+     <em>梦想众筹第一季股权融资</em>
+    </a>
+   </dd>
+   <dd>
+    <a href="project.html" title="项目名称">
+     <img src="upload/list_003.jpg"/>
+     <em>松岛枫艾弗股权融资</em>
+    </a>
+   </dd>
+  </dl>
+ </div>
+</section>
+<section class="wrap overflow">
+ <div class="fl wide_area" style="width:900px;">
+  <ul class="pro_cont_nav overflow">
+   <li><a>项目简介</a></li>
+   <li><a>项目动态</a></li>
+   <li><a>公司信息</a></li>
+   <li><a>融资信息说明</a></li>
+   <li><a>在线问答</a></li>
+   <li><a>附件资料</a></li>
+   <li><a>投资公司</a></li>
+  </ul>
+  <div class="pro_cont">
+<img src="upload/details-img30.jpg" style="display:block;margin:5px auto;"/>
+请您认购前下载此项目《合伙协议》，本协议内容为最终签约版，协议中条款、数值、比例均已确定(不予修改)，请您下载后认真阅读， 确认并知晓私募股权融资（无保本）投资风险，认购即认同本协议内容。认购后您将不能更改投资人姓名，也不能代他人认购和转让他人 ，只以您在人人投平台上身份认证时提交的身份证为准进行投资合同文本签署和工商注册办理.如认购后申请退出，需支付相应反悔金．请勿相信任何非 人人投官方对外公布的承诺或非官方发布的协议。对此，人人投将不承担任何法律责任，如需核实信息请拨打官方 客服电话：400-070-5286。
+<img src="upload/list_004.jpg" style="display:block;margin:5px auto;"/>
+请您认购前下载此项目《合伙协议》，本协议内容为最终签约版，协议中条款、数值、比例均已确定(不予修改)，请您下载后认真阅读， 确认并知晓私募股权融资（无保本）投资风险，认购即认同本协议内容。认购后您将不能更改投资人姓名，也不能代他人认购和转让他人 ，只以您在人人投平台上身份认证时提交的身份证为准进行投资合同文本签署和工商注册办理.如认购后申请退出，需支付相应反悔金．请勿相信任何非 人人投官方对外公布的承诺或非官方发布的协议。对此，人人投将不承担任何法律责任，如需核实信息请拨打官方 客服电话：400-070-5286。
+  </div>
+  <div class="pro_cont">2后台输出即可</div>
+  <div class="pro_cont">3后台输出即可</div>
+  <div class="pro_cont">4后台输出即可</div>
+  <div class="pro_cont">
+   <dl>
+    <dt class="questioner"><a href="#" title="李浩然">李浩然</a><time>2012-06-18 10:35:59</time></dt>
+    <dd class="question">请问这个项目情景怎么样？</dd>
+    <dt class="answer"><em>管理员回复：</em><time>2012-06-18 10:59:59</time></dt>
+    <dd class="answer_cont">这个项目依目前形势而言，还是相当不错的。</dd>
+   </dl>
+     <!--如果达到N条信息则翻页-->
+     <aside class="paging">
+      <a>第一页</a>
+      <a class="curr_bg">1</a>
+      <a>2</a>
+      <a>3</a>
+      <a>4</a>
+      <a>5</a>
+      <a>最后一页</a>
+     </aside>
+   <form>
+    <dl class="question_form">
+     <dt>在线提问：</dt>
+     <dd>
+      <textarea placeholder="请详细描述您的问题..."></textarea>
+     </dd>
+     <dd><input type="submit" value="提交问题"/></dd>
+    </dl>
+   </form>
+  </div>
+  <div class="pro_cont">6</div>
+  <div class="pro_cont">7</div>
+ </div>
+ <div class="narrow_area overflow" style="margin-left:930px;">
+  <dl class="aside_creator_investor_pic">
+   <dt>创建者：<a href="investor_gr.html" class="name">马云</a><a class="gz_link">关注</a></dt>
+   <dd>
+    <a href="investor_gr.html" class="investor_pic"><img src="upload/huiyun001.png"/></a>
+    <p>这里调用一句话或个人简介，总之呢多则截取字符串这里调用一句话或个人简介，总之呢多则截取字符串</p>
+    <address>陕西省 · 西安市</address>
+   </dd>
+  </dl>
+  <dl class="aside_creator_investor_pic">
+   <dt class="tzr_icon">已投资人列表</dt>
+   <dd>
+    <a href="investor_gr.html" class="investor_pic">
+     <img src="upload/huiyuan003.png"/>
+     <strong class="per_name">马化腾</strong>
+    </a>
+   </dd>
+   <dd>
+    <a href="investor_gr.html" class="investor_pic">
+     <img src="upload/huiyuan002.png"/>
+     <strong class="per_name">马化腾</strong>
+    </a>
+   </dd>
+  </dl>
+ </div>
+</section>
+<footer>
+    <ul class="wrap help">
+     <li>
+      <dl>
+       <dt>关于项目融资平台</dt>
+       <dd><a href="read_article.html">公司简介</a></dd>
+       <dd><a href="read_article.html">联系方式</a></dd>
+       <dd><a href="read_article.html">加入我们</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>新手帮助</dt>
+       <dd><a href="read_article.html">新手指南</a></dd>
+       <dd><a href="read_article.html">常见问题</a></dd>
+       <dd><a href="read_article.html">注册协议</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>用户帮助</dt>
+       <dd><a href="read_article.html">如何融资</a></dd>
+       <dd><a href="read_article.html">如何投资</a></dd>
+       <dd><a href="read_article.html">提现充值</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>关于项目融资平台</dt>
+       <dd><a href="read_article.html">公司简介</a></dd>
+       <dd><a href="read_article.html">联系方式</a></dd>
+       <dd><a href="read_article.html">加入我们</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>关于项目融资平台</dt>
+       <dd><a href="read_article.html">公司简介</a></dd>
+       <dd><a href="read_article.html">联系方式</a></dd>
+       <dd><a href="read_article.html">加入我们</a></dd>
+      </dl>
+     </li>
+    </ul>
+    <p class="wrap btm_infor">
+     Copyright (C) 2020, All Rights Reserved<br/>
+     互联网药品信息服务资格证编号：(京)-非经营性-XXX 京公网安备XXX号<br/>
+     出版物经营许可证 新出发京批字第直0673号
+    </p>
+   </footer>
+</body>
+</html>

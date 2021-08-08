@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>新闻中心</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; height: 430px; }
+    .banners-pc .mode { padding-top: 230px; }
+    .banners-pc .mode .br1 { margin-left: -44px; position: relative; }
+    .banners-pc .mode .mode1 { margin-top: -46px; text-align: center; }
+    .banners-pc .mode .mode1 .p1 { margin-bottom: 20px; font-size: 32px; color: #fff; }
+    .banners-pc .mode .mode1 .p2 { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .banners-pc .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+    .banners-mb { display: none; clear: both; height: 430px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { position: relative; }
+    .banners-mb .frame .mode { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); text-align: center; height: auto; }
+    .banners-mb .frame .mode .mode1 { position: absolute; margin-top: -41px; top: 50%; left: 0; right: 0; height: auto; }
+    .banners-mb .frame .mode .mode1 .p1 { margin-bottom: 20px; font-size: 40px; color: #fff; }
+    .banners-mb .frame .mode .mode1 .p2 { font-size: 16px; color: rgba(255,255,255,0.6); }
+    .banners-mb .frame .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+    }
+
+    @media (max-width: 1024px) {
+        .top_nav .nav_a li { width: 33.33%; }
+    }
+
+    @media (max-width: 667px) {
+        .top_nav .nav_a li { width: 50%; }
+    }
+
+
+
+    .news_c { }
+    .news_c .left { margin-left: -25px; }
+    .news_c .left .list { display: inline-block; }
+    .news_c .left .list li { margin-bottom: 25px; padding-left: 25px; width: 33.33%; float: left; }
+    .news_c .left .list li .box { padding: 20px; border: solid #e0e0e0 1px; display: block; }
+    .news_c .left .list li .box .date { margin-bottom: 15px; font-size: 14px; font-weight: 600; color: #808080; }
+    .news_c .left .list li .box .date span { font-size: 32px; font-weight: 600; color: #1a1a1a; }
+    .news_c .left .list li .box .p1 { margin-bottom: 10px; font-size: 18px; color: #1a1a1a; height: 1.5em; overflow: hidden; line-height: 24px; }
+    .news_c .left .list li .box .p2 { font-size: 14px; color: #808080; height: 3em; overflow: hidden; line-height: 24px; }
+
+    .news_c .left .list li .box:hover .p1 { color: #ff5e14; transition: ease .3s; }
+
+    @media (max-width: 1024px) {
+        .news_c .left { margin-left: -10px; }
+        .news_c .left .list li { padding-left: 10px; }
+        .news_c .left .list li .box .p1 { color: #ff5e14; transition: ease .3s; }
+    }
+
+    @media (max-width: 800px) {
+        .news_c .left .list li { width: 50%; }
+    }
+
+    @media (max-width: 667px) {
+        .news_c .left .list li { width: 100%; }
+        .news_c .left .list li .box .p2 { height: auto; }
+    }
+
+
+    .g_page { margin-top: 40px; text-align: center; }
+    .g_page ul { }
+    .g_page ul li { margin: 0 10px; display: inline-block; }
+    .g_page ul li a { padding: 8px 12px; border: solid #d9d9d9 1px; font-size: 14px; color: #333333; display: inline-block; }
+    .g_page ul li .prev { padding: 8px 12px; border: solid #d9d9d9 1px; font-size: 14px; color: #333333; }
+    .g_page ul li .next { padding: 8px 12px; border: solid #d9d9d9 1px; font-size: 14px; color: #333333; }
+    .g_page ul li a:hover { background: #ff5e14; color: #fff; border: solid #ff5e14 1px; transition: ease .3s; }
+    .g_page ul li .on { background: #ff5e14; border: solid #ff5e14 1px; color: #fff; transition: ease .3s; }
+    }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class="">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class=" on">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：XXX<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="banners-pc">
+
+        <div class="" style="background:url(img/bn1.jpg)no-repeat center center; background-size: cover;width:100%; height:430px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <div class="mode1">
+                        <p class="p1">新闻中心</p>
+                        <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>新闻中心<i class="fa fa-angle-right"></i>通知公告</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="banners-mb" zoom-width="1024" zoom-heigh="430">
+        <div class="frame" style=" background:url(img/bn2.jpg) no-repeat center center; background-size:cover; width:100%;">
+            <div class="mode">
+                <div class="mode1">
+                    <p class="p1">新闻中心</p>
+                    <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>新闻中心<i class="fa fa-angle-right"></i>通知公告</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            $('.banners-pc, .banners-mb').slick({ arrows: true, dots: false, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+        })();
+    </script>
+
+
+
+    <div class="news_c">
+        <div class="top_nav">
+            <div class="g_cw">
+                <ul class="nav_a">
+                    <li><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></li>
+                    <li><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></li>
+                    <li><a class="box on" href="notice.html?_ct">通知公告</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g_cw g_mt g_mb">
+            <div class="left">
+                <ul class="list">
+
+                    <li>
+                        <a class="box">
+                            <div class="buc">
+                                <p class="date"><span>15</span>/2019-11</p>
+                                <p class="p1">建筑房地产世界级巨子中国建筑IPO今日正式启动</p>
+                                <p class="p2">2009年7月13日，北京，经中国证监会核准，中国建筑(6.39,-0.20,-3.04%)股份有限公司（以下简称“中国建筑”）今日刊登首次公开发行A股股票的招股意向书，拟发行不超过120亿股A股。</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="buc">
+                                <p class="date"><span>15</span>/2019-11</p>
+                                <p class="p1">实录：2013中国建筑业房地产业全国会议</p>
+                                <p class="p2">满怀对2013年新机遇、新挑战的憧憬，让我们一起回顾总结一下2012，2012年涌现出了一些优秀企业和优秀个人。他们是行业的标杆，是行业的领跑者。下面进入此次大会的中心环节——颁奖典礼。</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="buc">
+                                <p class="date"><span>15</span>/2019-11</p>
+                                <p class="p1">中国建筑整合地产业务 中海地产受托接手操盘</p>
+                                <p class="p2">中国建筑今日发布一则关于拟研究调整直营地产业务经营方式的公告，计划将普通直营房地产开发业务注入公司控股的香港上市子公司中国海外发展有限公司(00688.HK)，或委托其管理一事，进行研究磋商，但目前尚</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="buc">
+                                <p class="date"><span>15</span>/2019-11</p>
+                                <p class="p1">惊人！中国碳排放量40%来自房地产建筑业</p>
+                                <p class="p2">6月10日，中国房地产业协会副会长苗乐如在“2017中国绿色科技地产高峰论坛”表示，“目前，我们国家的住宅基本已达到城镇人均35平米、户均一套住房的水平。在经济新常态下房地产发展也要进入到绿色低碳、节</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="buc">
+                                <p class="date"><span>15</span>/2019-11</p>
+                                <p class="p1">莱芜2017年度建筑行业与房地产行业优秀企业评选结果公布</p>
+                                <p class="p2">莱芜市住房和城建局官方网站消息，为鼓励建筑行业与房地产行业企业做优做强，莱芜市建设局经研究决定，拟评选山东正顺建设集团有限公司等20家企业为2017年度全市优秀建筑业企业，</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="buc">
+                                <p class="date"><span>15</span>/2019-11</p>
+                                <p class="p1">全球建筑及房地产业的科技盛会iTWO World 2018报名启动</p>
+                                <p class="p2">全球建筑及房地产业的年度科技盛会 iTWO World 2018 报名正式启动！iTWO World 2018 全球峰会将于11月7-8日在广州四季酒店举行，并于11月9日在广州iTWO 5D实验室开</p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="g_page">
+                <ul>
+
+
+
+                    <li><a href="?_ct=&_pi=1" class="on box1"> 1</a></li>
+
+
+
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

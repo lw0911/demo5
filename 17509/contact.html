@@ -1,0 +1,562 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" itemscope>
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>联系我们-XXX科技</title><meta name='keywords' content='企业网站建设,上海网站建设,上海做网站,网站建设服务,网站建设公司,网站建设价格,网站制作公司,专业网站建设,上海网站建设公司,上海网站设计公司,上海网站制作公司' /><meta name='description' content='XXX品牌是专业的上海网站建设公司,是知名的上海网站设计公司,提供包括网站策划、网站设计、网站制作、微信开发、移动端开发在内的多项网站建设服务,联系电话：XXX。'/> 
+
+<meta name="author" content="上海XXX信息科技有限公司提供技术支持," />
+
+
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="css/import.css">
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    
+    <script src="js/jquery-2.0.2.min.js"></script>
+
+    <style type="text/css">
+        .iw_poi_title
+        {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap;
+        }
+        .iw_poi_content
+        {
+            font: 12px arial,sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+
+    
+
+    <script type="text/javascript">
+        $(function() {
+
+            $("#submit").click(function() {
+                var isPhone = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+
+                var isTel = /^(?:(?:0\d{2,3})-)?(?:\d{7,8})(-(?:\d{3,}))?$/
+
+                var isMail = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+                var name = $("#your-name").val();
+                var email = $("#your-email").val();
+                var tel = $("#your-subject").val();
+
+                var intro = $("#select_ul").find("option:selected").text();
+                var con = $(".con").val();
+                var pattern = new RegExp("[~'!@#$%^&*()-+_=:]");  
+                if (name == "") {
+                    alert("请输入您的姓名");
+                    return false;
+                }
+
+
+                if (pattern.test(name)) {
+                    alert("姓名带有非法字符！");
+                    return false;
+                }  
+
+                if (email == "") {
+                    alert("请输入您的邮箱地址");
+                    return;
+                }
+                if (!isMail.test(email)) {
+                    alert("请输入正确的邮箱地址");
+                    return;
+                }
+
+                if (tel == "") {
+                    alert("请输入您的联系电话");
+                    return;
+                }
+                if (isPhone.test(tel) || isTel.test(tel)) {
+
+                }
+                else {
+                    alert("请输入正确的电话号码");
+                    return;
+                }
+
+
+                if (intro == "请选择您需要的业务类型") {
+                    alert("请选择您需要的业务类型");
+                    return;
+                }
+
+                if (con == "") {
+                    alert("请简要描述您的要求");
+                    return;
+                }
+                $.ajax({
+                    url: '/ashx/request.aspx',
+                    data: 'action=messge&name=' + name + '&email=' + email + '&tel=' + tel + '&intro=' + intro + '&con=' + con,
+                    cache: false,
+                    type: 'POST',
+                    success: function(data) {
+
+                        if (data == '留言成功') {
+                            location.href = "/contact/thanks.html";
+                        }
+                    }
+                })
+
+            })
+
+        });
+
+  
+    </script>
+
+</head>
+<body>
+
+    <!-- preloader / loading gif is located in ../images/ 
+change background color in style.css -->
+    <div id="preloader">
+        <div id="status">
+            &nbsp;
+        </div>
+    </div>
+    
+<!-- Navigation header -->
+<header class="main custom-scroll">
+<!-- #header-scrollarea adds custom scrollbar for header -->
+	<div id="header-scrollarea">
+	<!-- sliding-header logo will not display on mobile devices -->
+        <div class="logo">
+            <img src="images/logo.png" alt="logo" gumby-retina>
+        </div>
+	<!-- navigation -->
+		<nav class="main-nav">
+			<ul class="site-nav">
+			<!-- li class active for active page link
+				add gumby-trigger=#id to target drawer with child navigation -->
+				<li class="active"><a href="index.html">首页<span>Home</span></a></li>
+				<li class="active"><a href="app.html">APP开发<span>App Develop</span></a></li>
+				<li class="active"><a href="case.html">案例分享<span>Case Sharing</span></a></li>
+                <li class="active"><a href="service.html">服务范围<span>Services</span></a></li>
+                <li class="active"><a href="news.html">新闻资讯<span>News</span></a></li>
+                <li class="active"><a href="job.html">招聘<span>Recruit</span></a></li>
+                <li class="active"><a href="about.html">关于XXX<span>About Us</span></a></li>
+                <li class="active"><a href="contact.html">联系我们<span>Contact Us</span></a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<!-- header trigger -->
+<div class="trigger">
+    <div class="trigger-box" id="trigger">
+        <a class="switch open-header" gumby-trigger="header.main"><i class="fa fa-bars"></i>
+        </a><a class="switch close-header" gumby-trigger="|header.main"><i class="fa fa-times">
+        </i></a>
+    </div>
+    <!-- side logo mark  -->
+    <div class="side-logo">
+    </div>
+    <!-- back to top button displays after 850px 
+		vertical scroll value in ../js/main.js -->
+    <div class="back-to-top">
+        <a id="top-trigger"><i class="fa fa-angle-up"></i></a>
+    </div>
+</div>
+
+    <!-- Main content block - all page content -->
+    <div class="content custom-scroll">
+        <!-- blocker active with active header -->
+        <div class="blocker">
+        </div>
+        <!-- #scrollarea adds custom scrollbar for main content -->
+        <div id="scrollarea">
+            <!-- action class for animating page content when header is active -->
+            <div class="action step-right">
+                
+                <!-- img header -->
+                <section class="page-header img-section dark" style="background-image: url(images/contact_bg.jpg);position:relative;">
+                
+<!-- #crumbs for page title bar and top navigation 
+add abs class to make crumbs stick to top(background slideshow) -->
+<div id="crumbs" class="abs">
+    <div class="row large dark">
+    <div class="six columns">
+        <!-- page title/statement -->
+        <h6 class="sub-heading"></h6>
+    </div>
+    <div class="six columns text-right">
+        <!-- top on-page nav -->
+        <ul class="nav-icon-list">
+            <li><a class="planner-btn" href="contact.html"><span>我有需求</span><i class="fa fa-book"></i></a></li>
+            <li><a class="search-btn"><span>搜索</span><i class="fa fa-search"></i></a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+<!-- search modal -->
+<div class="search-modal">
+    <div class="search-field">
+        <input class="search input" type="search" placeholder="请输入您要查找的内容...">
+    </div>
+    <a class="remove-search"><i class="fa fa-times"></i></a>
+</div>
+
+
+<script type="text/javascript">
+    $(function() {
+        $('.search').bind('keypress', function(event) {
+            if (event.keyCode == "13") {
+                var key = $('.search').val();
+                $.ajax({
+                    url: '/ashx/request.aspx',
+                    data: 'action=sel&key=' + key,
+                    cache: false,
+                    type: 'POST',
+                    success: function(data) {
+                        window.location.href = "case_details.html";
+                    }
+                })
+
+
+
+            }
+        });
+    });
+</script>
+
+				<div class="content-block black-tint">
+					
+					<!-- page statement -->
+					<div class="row bigtoppadding">
+						<div class="twelve columns text-center">
+							<h1 id="contact_tit" class="block-heading">客户服务热线<br/><span class="light">XXX</span></h1>
+                            <div class="midtoppadding">
+                                <a class="purple fill-button" href="/contact/default.html#contact_out">
+                                    <i class="fa fa-book"></i> &nbsp; 在线咨询</a> 
+                                
+                            </div>
+						</div>
+					</div>
+				</div>
+			</section>
+                <section class="grey">
+				<!-- two third / left side -->
+				<div class="two-third white">
+					<div id="contact-page">
+						<div class="content-block" id="contact_out">
+							<div class="row" id="contact_row">
+								<!-- page title / description -->
+								<h3 class="">联系我们</h3>
+								<h5 class="pt20">如果您有相关业务需要和我们接洽，请填写信息给我们，我们将很高兴为您提供咨询服务！</h5>
+								<hr class="thin grey">
+							</div>
+							<div class="row" id="contact_row">
+								<!-- contact form -->
+								<form method="post" action="#" id="contact-form">
+									<ul>
+										<li>
+										<p>* 以下输入框均为必填项。</p>
+										</li>
+										<li class="field"><input class="input" type="text" placeholder="请输入您的姓名" name="name" id="your-name"></li>
+										<li class="field"><input class="input" type="email" placeholder="请输入您的邮箱地址" name="email" id="your-email"></li>
+										<li class="field"><input class="input" type="text" placeholder="请输入您的联系电话" name="subject" id="your-subject"></li>									
+                                        <li class="field">
+                                        	<div class="default">
+                                                <select class="simple_S" id="select_ul" style="width:100%;">
+                                                    <option value="APP设计开发">APP设计开发</option>
+                                                    <option value="设计企业网站">设计企业网站</option>
+                                                    <option value="现有网站改版">现有网站改版</option>
+                                                    <option value="电商网站开发">电商网站开发</option>
+                                                    <option value="三维虚拟演示制作">三维虚拟演示制作</option>
+                                                    <option value="微信开发及运营">微信开发及运营</option>
+                                                </select>
+                                            </div>
+                                        </li>
+										<li class="field"><input class="input con" type="text" placeholder="请简要描述您的需求" 
+                                        	name="subject" id="your-subject"></li>
+										<!-- submit button -->
+										
+									<a class="black submit" id="submit">发送</a>
+										</li>
+									</ul>
+								</form>
+								<div id="email-msg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- one third sidebar -->
+				<aside class="one-third grey" id="contact_out_right">
+				<!-- map -->
+				<div id="map">
+                	<div style="width:100%;height:350px;" id="dituContent"></div>
+				</div>
+				<div id="sidebar">
+					<!-- contact widget -->
+					<div class="widget">
+						<h5 class="stripe-heading fz_1625">如何找到我们</h5>
+						<div class="widget-content">
+                        	<h4 class="col_red_1">免费服务热线：<span class="tel"> XXX</span></h4>
+							<p class="contact-info" id="contact_right">
+								 上海服务电话：XXX | XXX | 021-35110763<br>
+								 地址：上海市延长中路801号新华文化科技园A座7009-7017室<br>
+								传真：86-21-35110762<br>
+								邮件：<a href="mailto:XXX">XXX</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				</aside>
+				<!-- clear floats -->
+				<div class="clear">
+				</div>
+			</section>
+                <!-- widgetized footer -->
+                
+<!-- widgetized footer -->
+<style type="text/css">
+.row .four.columns{width:23.3%;}
+.link_line{padding-top:10px;}
+</style>
+<footer class="widget-ftr stripe-bg" id="footer_top">
+	<div class="content-block dark">
+    	<div class="row large midtoppadding">
+        	<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading"><img src="images/footerLogo.png" /></h6>
+            	<h5 class="style_1">我们很乐意倾听您的声音！<br />即刻与我们取得联络，成为日后肩并肩<br />合作的伙伴。</h5>
+                <dl class="footer_link clearfix">
+                	<dd><a href="service.html">新业务</a></dd>
+                    <dd><a href="news_details.html#216172782113783808">新闻+ VIEWS</a></dd>
+                    <dd><a href="job.html">招聘</a></dd>                    
+                </dl>
+        	</div>
+        	<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading title_1">新闻资讯</h6>
+            	<ul class="news_list">
+            	    
+            	        <li>
+                    	<span>2018年04月16日</span>
+            			<a href="news_details.html#989/72057594037927936">上海网站建设需要提供哪些信息</a>
+                    </li>
+            	        
+            	        <li>
+                    	<span>2016年04月25日</span>
+            			<a href="news_details.html#128/72057594037927936">上海造币厂2016微信/微店运营案例</a>
+                    </li>
+            	        
+            	        <li>
+                    	<span>2016年03月03日</span>
+            			<a href="news_details.html#122/72057594037927936">安川电机官网正式上线</a>
+                    </li>
+            	        
+                	
+            	</ul>
+                <p><a href="news.html" class="col_f00">查看更多</a></p>
+        	</div>
+			<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading title_1">友情链接</h6>
+            	<p class="link_line">
+            	    <a target="_blank" href="http://www.vdongchina.com ">小程序开发</a>，<a target="_blank" href="http://www.nnit30.com">南宁网络公司</a>，<a href="http://www.yopwork.com">crm软件</a>，<a target="_blank" href="http://www.ebbang.com">电子商务解决方案</a>，<a target="_blank" href="http://www.asktempo.com">一体化数据分析</a>，<a target="_blank" href="http://www.xbjianzhan.com">成都网站建设</a>，<a target="_blank" href="http://www.soyikj.com">微信小程序开发</a>，<a target="_blank" href="http://www.ntzero.cn">南通网站建设</a>，<a target="_blank" href="https://www.suchengapp.com">微信小程序开发</a>，<a target="_blank" href="http://www.teletest.cn">以太网测试仪 </a>，<a target="_blank" href="http://www.zuoji-scm.com/">精益管理咨询</a>，<a target="_blank" href="http://www.zhongweibbs.com">中卫网</a>，<a target="_blank" href="http://www.gm029.com">西安做网站</a>，<a target="_blank" href="http://www.andisk.com">在线培训系统</a>，<a href="http://www.51aya.com">远程控制</a>，<a href="http://www.nnsoe.com">南宁网站建设</a>，<a href="http://www.nklcm.com">全网营销</a>，<a href="http://www.shuaiming.com">域名抢注</a>，<a target="_blank" href="http://www.uibaba.com">UI设计</a>，<a target="_blank" href="http://www.voidcn.com">程序园</a>
+            	
+            	
+				<br />
+				   
+            	        
+            			<a href="news_details.html#1118/144115188075855872">上海网站建设为什么要使用CDN?</a>
+                   
+            	        
+				</p>
+				
+        	</div>
+        	<!-- widget -->
+        	<div class="four columns widget-block">
+            	<h6 class="widget-heading title_1">和我们取得联系</h6>
+                <h3>XXX</h3>
+            	<p class="greytext midmargin meta">
+                 	XXX
+            	</p>
+                <p>
+                	工作时间售后热线：XXX<br />
+					或传真：XXX
+                </p>
+            	<p class="greytext midmargin meta">
+                 	<a href="mailto:XXX" class="col_f00">XXX</a>
+            	</p>
+        	</div>
+        	
+    	</div>
+	</div>
+</footer>
+<!-- site credit -->
+<footer id="colophon">
+	<div class="row large">
+		<div class="six columns">
+    		<p>
+         		&copy; 2020. All Rights Reserved
+   	 		</p>
+		</div>
+		<div class="six columns">
+            <!-- social network links -->
+            <div class="text-right">
+                <p>浙ICP备XXX号</p>
+            </div>
+		</div>
+	</div>
+</footer>
+
+ 
+
+            </div>
+            <!-- action -->
+        </div>
+        <!-- scrollarea -->
+    </div>
+    <!-- end div.content -->
+
+    
+    
+    <script src="js/jquery.selectbox.js"></script>
+
+    <script src="js/gumby.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+
+    <script src="js/main.js"></script>
+    <!-- contact form -->
+	<script type="text/selectbox" id="J_SelectBoxHtml"></script>
+    <script>
+		$(function(){
+			$("#select_ul").selectbox();	
+		});
+		
+        
+    </script>
+
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap(); //创建地图
+            setMapEvent(); //设置地图事件
+            addMapControl(); //向地图添加控件
+            addMarker(); //向地图中添加marker
+        }
+
+        //创建地图函数：
+        function createMap() {
+            var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
+            var point = new BMap.Point(121.451282, 31.27275); //定义一个中心点坐标
+            map.centerAndZoom(point, 18); //设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map; //将map变量存储在全局
+        }
+
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+            map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard(); //启用键盘上下左右键移动地图
+        }
+
+        //地图控件添加函数：
+        function addMapControl() {
+        }
+
+        //标注点数组
+        var markerArr = [{ title: "XXX信息科技有限公司", content: "免费服务热线：XXX", point: "121.451268|31.27329", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5} }
+		 ];
+        //创建marker
+        function addMarker() {
+            for (var i = 0; i < markerArr.length; i++) {
+                var json = markerArr[i];
+                var p0 = json.point.split("|")[0];
+                var p1 = json.point.split("|")[1];
+                var point = new BMap.Point(p0, p1);
+                var iconImg = createIcon(json.icon);
+                var marker = new BMap.Marker(point, { icon: iconImg });
+                var iw = createInfoWindow(i);
+                var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+                marker.setLabel(label);
+                map.addOverlay(marker);
+                label.setStyle({
+                    borderColor: "#808080",
+                    color: "#333",
+                    cursor: "pointer"
+                });
+
+                (function() {
+                    var index = i;
+                    var _iw = createInfoWindow(i);
+                    var _marker = marker;
+                    _marker.addEventListener("click", function() {
+                        this.openInfoWindow(_iw);
+                    });
+                    _iw.addEventListener("open", function() {
+                        _marker.getLabel().hide();
+                    })
+                    _iw.addEventListener("close", function() {
+                        _marker.getLabel().show();
+                    })
+                    label.addEventListener("click", function() {
+                        _marker.openInfoWindow(_iw);
+                    })
+                    if (!!json.isOpen) {
+                        label.hide();
+                        _marker.openInfoWindow(_iw);
+                    }
+                })()
+            }
+        }
+        //创建InfoWindow
+        function createInfoWindow(i) {
+            var json = markerArr[i];
+            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+            return iw;
+        }
+        //创建一个Icon
+        function createIcon(json) {
+            var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+            return icon;
+        }
+
+        initMap(); //创建和初始化地图
+    </script>
+    
+
+    
+<!-- only include animate.js on 
+	pages you want to use animations on
+	<script src="js/animate.js"></script> -->
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+</body>
+</html>

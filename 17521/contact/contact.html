@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻列表</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="XXXXXX">
+	<meta name="description" content="XXXXXXXXX">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+	
+	<script type="text/javascript" src="../js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+	<script src="../js/baidumap.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="w1200 prelat">
+		<!-- 联系电话 -->
+		<div class="company">
+			<p>上海XXX餐饮管理有限公司<br>XXX</p>
+		</div>
+		<!-- logo部分 -->
+		<div class="logo">
+			<a href="index.html">
+				<img src="../images/logo.png">
+			</a>
+		</div>
+		<!-- 联系电话 -->
+		<div class="tel">
+			<p>全国加盟<br>咨询热线<span>XXX</span></p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="fengge"></div>
+<div class="menu wow animated fadeInRight">
+	<div class="w1200">
+		<div class="menum">
+			
+		</div>
+	</div>
+</div>
+<div class="banner wow animated fadeInLeft"></div>
+
+<div class="main">
+	<div class="w1200 prelat">
+		<div class="contacttit wow animated fadeInDown"><img src="../images/contact_tit.png" alt=""></div> 
+		<div class="contain_tit wow animated fadeInDown">歡迎各位吃貨小夥伴的尋找和加入<br>
+      楽堂口——手工拉茶的締造者,港式奶茶店的原創者,關註國人消費健康,傳播香港地域文化
+                                          
+                                   <h2>就在這裏</h2></div>
+		<div class="contact_us_info">
+			<p>地址：<span>上海市閔行區聯航路1688號旭輝浦江國際二號樓</span></p>
+			<p>电话热线:<span class="span1">XXX <br>021-34750066</span></p>
+			<p>公司网址: <span>XXX</span><br>
+			投诉建议:  <span>tousu@letangkou.com</span></p>
+		</div>
+		<div class="contact_us_map">
+					<div style="width:1200px;height:350px;font-size:12px" id="map"></div>
+					<script type="text/javascript">
+					    //创建和初始化地图函数：
+					    function initMap(){
+					      createMap();//创建地图
+					      setMapEvent();//设置地图事件
+					      addMapControl();//向地图添加控件
+					      addMapOverlay();//向地图添加覆盖物
+					    }
+					    function createMap(){ 
+					      map = new BMap.Map("map"); 
+					      map.centerAndZoom(new BMap.Point(117.157959,31.872967),16);
+					    }
+					    function setMapEvent(){
+					      map.enableScrollWheelZoom();
+					      map.enableKeyboard();
+					      map.enableDragging();
+					      map.enableDoubleClickZoom()
+					    }
+					    function addClickHandler(target,window){
+					      target.addEventListener("click",function(){
+					        target.openInfoWindow(window);
+					      });
+					    }
+					    function addMapOverlay(){
+					      var markers = [
+					        {content:"我的备注",title:"渠道网络",imageOffset: {width:-46,height:-21},position:{lat:31.872775,lng:117.157654}}
+					      ];
+					      for(var index = 0; index < markers.length; index++ ){
+					        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+					        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+					          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+					        })});
+					        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+					        var opts = {
+					          width: 200,
+					          title: markers[index].title,
+					          enableMessage: false
+					        };
+					        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+					        marker.setLabel(label);
+					        addClickHandler(marker,infoWindow);
+					        map.addOverlay(marker);
+					      };
+					    }
+					    //向地图添加控件
+					    function addMapControl(){
+					      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+					      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+					      map.addControl(scaleControl);
+					      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+					      map.addControl(navControl);
+					      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+					      map.addControl(overviewControl);
+					    }
+					    var map;
+					    initMap();
+					</script>
+				</div>
+		<div class="contact_from">
+			<form id="lxwm">
+				<div class="foot_c2">
+					<div class="foot_c2_inp fl">姓名:<input id="book_username" name="book_username" type="text"><span>*</span></div>
+					<div class="foot_c2_inp fl">地址:<input id="book_address" name="book_address" type="text"></div>
+					<div class="foot_c2_inp fl">手机:<input id="book_telephone" name="book_telephone" type="text"><span>*</span></div>
+					<div class="foot_c2_inp fl">邮箱:<input id="book_email" name="book_email" type="text"></div>
+				</div>
+				<div class="clear"></div>
+				<div class="foot_c2">
+					
+					<div class="foot_c2_inp2 fl">留言:<textarea name="" name="book_content" id="book_content" type="text"></textarea></div>
+				</div>
+				<div class="clear"></div>
+				<button class="foot_but" id="save">提交留言</button>
+		    </form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="footer">
+</div>
+<script type="text/javascript" src="../js/ltk.js"></script>
+
+
+</body>  
+</html>

@@ -1,0 +1,1382 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; height: 860px; }
+    .banners-pc .mode { padding-top: 230px; }
+    .banners-pc .mode .br1 { position: relative; }
+    .banners-pc .mode .mode1 { margin-top: -80px; }
+    .banners-pc .mode .mode1 .p1 { margin-bottom: 45px; font-size: 44px; font-weight: bold; color: #fff; text-align: left; }
+    .banners-pc .mode .mode1 .p1 span { display: block; }
+    .banners-pc .mode .mode1 .btn { float: left; }
+    .banners-pc .mode .mode1 .btn .box { padding: 15px 37px; font-size: 14px; color: #fff; display: inline-block; }
+    .banners-pc .mode .mode1 .btn1 { margin-right: 20px; }
+    .banners-pc .mode .mode1 .btn1 .box { background: #ff5e14; }
+    .banners-pc .mode .mode1 .btn2 .box { background: #0043ac; }
+
+    .banners-pc .mode .mode1 .btn .box:hover { background: #fff; color: #1a1a1a; transition: ease .3s; }
+
+    .banners-pc .slick-prev { opacity: 0.7; }
+    .banners-pc .slick-next { opacity: 0.7; }
+
+    .banners-pc .slick-prev:hover { background: #ff5e14; opacity: 1; }
+    .banners-pc .slick-next:hover { background: #ff5e14; opacity: 1; }
+
+    .banners-mb { display: none; clear: both; height: 860px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { }
+    .banners-mb .frame .mode { position: relative; height: 100%; }
+    .banners-mb .frame .mode .br1 { margin-top: -95px; position: absolute; top: 30%; left: 0; right: 0; text-align: center; }
+    .banners-mb .frame .mode .br1 img { max-width: 100%; display: inline-block; }
+    .banners-mb .frame .mode .mode1 { }
+    .banners-mb .frame .mode .mode1 .p1 { margin-top: -70px; position: absolute; top: 50%; left: 0; right: 0; margin-bottom: 20px; font-size: 48px; color: #fff; text-align: center; }
+    .banners-mb .frame .mode .mode1 .p1 span { display: block; }
+    .banners-mb .frame .mode .mode1 .btn { position: absolute; top: 70%; left: 0; right: 0; text-align: center; }
+    .banners-mb .frame .mode .mode1 .btn .box { margin: 0 10px; padding: 15px 37px; font-size: 14px; color: #fff; }
+    .banners-mb .frame .mode .mode1 .btn .btn1 { background: #ff5e14; }
+    .banners-mb .frame .mode .mode1 .btn .btn2 { background: #0043ac; }
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { padding: 0 10px; font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+    }
+
+    @media (max-width: 400px) {
+        .banners-mb .frame .mode .br1 { display: none; }
+    }
+
+    .business { }
+    .business .left { margin-left: -100px; }
+    .business .left .list { }
+    .business .left .list li { margin-bottom: 70px; padding-left: 100px; width: 33.33%; float: left; }
+    .business .left .list li:nth-child(3n+1) { clear: both; }
+    .business .left .list li .box { }
+    .business .left .list .l2 .box { padding-top: 15px; display: inline-block; }
+    .business .left .list li .box .ico { margin-bottom: 10px; height: 60px; line-height: 60px; }
+    .business .left .list li .box .ico .ico1 { display: none; }
+    .business .left .list li .box .ico .ico1 img { vertical-align: middle; }
+    .business .left .list li .box .ico .ico2 { }
+    .business .left .list li .box .ico .ico2 img { vertical-align: middle; }
+    .business .left .list li .box .mode .ck { margin-bottom: 15px; font-size: 12px; color: #808080; }
+    .business .left .list li .box .mode .ck .fa { margin-left: 15px; font-size: 16px; }
+    .business .left .list li .box:hover .mode .ck { color: #ff5e14; transition: ease .3s; font-weight: bold; }
+    .business .left .list li .box:hover .mode .ck .fa { }
+    .business .left .list li .box .mode .p1 { margin-bottom: 15px; font-size: 24px; color: #1a1a1a; }
+    .business .left .list li .box .mode .p2 { font-size: 14px; color: #666666; line-height: 24px; }
+
+
+    .business .left .one { display: none; }
+    .business .left .list .two { }
+
+    @media (max-width: 1024px) {
+        .business .left { margin-left: -50px; }
+        .business .left .one { margin-left: 50px; display: block; }
+        .business .left .list .two { display: none; }
+        .business .left .list li:nth-child(3n+1) { clear: none; }
+        .business .left .list .l2 { padding-left: 50px; }
+        .business .left .list li .box .mode .p2 { height: 5em; overflow: hidden; }
+    }
+
+    @media (max-width: 667px) {
+        .business .left { margin-left: -10px; }
+        .business .left .one { margin-left: 10px; }
+        .business .left .list .l2 { padding-left: 10px; width: 50%; }
+        .business .left .list li .box { padding: 0 20px; text-align: center; }
+    }
+
+    @media (max-width: 500px) {
+        .business .left .list .l2 { width: 100%; }
+        .business .left .list li .box .mode .p2 { height: auto; }
+    }
+
+    .about { }
+    .about .left { margin-right: 50px; float: left; }
+    .about .right { }
+    .about .right .buc { }
+    .about .right .buc .p1 { margin-bottom: 65px; font-size: 14px; color: #666666; line-height: 24px; height: 7em; overflow: hidden; }
+    .about .right .buc .btn { }
+    .about .right .buc .btn .box { padding: 15px 40px; font-size: 14px; color: #fff; background: #ff5e14; display: inline-block; }
+
+
+    .project { padding: 60px 0; position: relative; background: #00235a; overflow: hidden; }
+    .project .g_title .p1 { color: #e6e6e6; opacity: 0.1; }
+    .project .g_title .p2 { color: #fff; }
+    .project .pr_lt { margin-bottom: 100px; margin-left: -20px; }
+    .project .pr_lt .list { }
+    .project .pr_lt .list li { padding-left: 20px; width: 33.33%; float: left; }
+    .project .pr_lt .list li .box { }
+    .project .pr_lt .list li .box .pic { margin-bottom: 20px; background: no-repeat center center; background-size: cover; height: 320px; overflow: hidden; }
+    .project .pr_lt .list li .box .buc .lm { margin-bottom: 14px; font-size: 14px; color: #ff5e14; }
+    .project .pr_lt .list li .box .buc .p1 { margin-bottom: 14px; font-size: 18px; color: #fff; height: 1.5em; line-height: 24px; overflow: hidden; }
+    .project .pr_lt .list li .box:hover .buc .p1 { font-weight: bold; color: #ff5e14; transition: ease .3s; }
+
+    .project .pr_lt .list li .box .buc .p2 { margin-bottom: 30px; font-size: 14px; color: #b8b8b8; line-height: 24px; height: 5em; overflow: hidden; }
+    .project .pr_lt .list li .box .buc .btn { font-size: 14px; color: #fff; line-height: 20px; }
+    .project .pr_lt .list li .box .buc .btn span { margin-left: 20px; background: #ff5e14; text-align: center; width: 20px; display: inline-block; }
+
+    .project .pr_lt .slick-prev { opacity: 1; background: #0043ac; top: 115%; width: 120px; height: 40px; left: 40%; }
+    .project .pr_lt .slick-next { opacity: 1; background: #0043ac; top: 115%; width: 120px; height: 40px; right: 40%; }
+    .project .pr_lt .slick-prev:before { content: '上一页'; font-size: 14px; }
+    .project .pr_lt .slick-next:before { content: '下一页'; font-size: 14px; }
+    .project .pr_lt .slick-prev:hover { background: #ff5e14; }
+    .project .pr_lt .slick-next:hover { background: #ff5e14; }
+
+    .project .one { }
+    .project .two { display: none; }
+
+
+    @media (max-width: 1024px) {
+        .project .one { display: none; }
+        .project .two { margin-left: -10px; display: block; }
+        .project .two .list li { margin-bottom: 20px; padding-left: 10px; }
+        .project .two .list li .box .buc .p1 { font-weight: bold; color: #ff5e14; }
+    }
+
+    @media (max-width: 800px) {
+        .project .two .list li { width: 50%; }
+    }
+
+    @media (max-width: 500px) {
+        .project .two .list li { width: 100%; }
+    }
+
+    .news { }
+    .news .g_title { display: block; text-align: center; }
+    .news .g_title .t_ct { margin: 0 auto; }
+    .news .left { width: 610px; height: 440px; float: left; }
+    .news .left .pic_lt li .box { position: relative; width: 100%; display: inline-block; }
+    .news .left .pic_lt li .box .pic { background: no-repeat center center; background-size: cover; width: 610px; height: 440px; font-size: 0; }
+    .news .left .pic_lt li .box .bt { padding: 13px; position: absolute; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); height: 50px; }
+    .news .left .pic_lt li .box .bt .p1 { font-size: 18px; color: #fff; line-height: 24px; width: 350px; height: 1.5em; overflow: hidden; }
+    .news .left .slick-dots { right: 10px; bottom: 22px; text-align: right; }
+    .news .left .slick-dots li { top: 25%; }
+
+    .news .right { width: 615px; float: right; }
+    .news .right .list { }
+    .news .right .list li { }
+    .news .right .list li:nth-child(5n) .box { margin-bottom: 0; padding-bottom: 14px; border-bottom: solid #e0e0e0 1px; }
+    .news .right .list li .box { margin-bottom: 15px; padding-top: 15px; border-top: solid #e0e0e0 1px; display: inline-block; }
+    .news .right .list li .box .pic { display: none; background: no-repeat center center; background-size: cover; width: 610px; height: 440px; font-size: 0; }
+    .news .right .list li .box .date { margin-right: 30px; float: left; text-align: center; font-size: 12px; color: #666; }
+    .news .right .list li .box .date span { margin-bottom: 5px; font-size: 32px; color: #1a1a1a; display: block; }
+    .news .right .list li .box .p1 { margin-bottom: 9px; font-size: 18px; color: #1a1a1a; height: 1.5em; overflow: hidden; line-height: 24px; }
+    .news .right .list li .box .p2 { font-size: 14px; color: #666666; height: 1.5em; overflow: hidden; line-height: 24px; }
+
+
+    .news .left .pic_lt li .box:hover .bt .p1 { color: #ff5e14; transition: ease .3s; }
+    .news .right .list li .box:hover .date { font-weight: bold; color: #ff5e14; transition: ease .3s; }
+    .news .right .list li .box:hover .date span { color: #ff5e14; transition: ease .3s; }
+    .news .right .list li .box:hover .p1 { color: #ff5e14; transition: ease .3s; }
+
+    .news .one { display:; }
+    .news .two { display: none; }
+
+    @media (max-width: 1024px) {
+        .news .one { display: none; }
+        .news .two { display: block; margin-left: -20px; }
+        .news .two .right { width: 100%; float: none; }
+        .news .two .right .list li { margin-bottom: 10px; padding-left: 20px; width: 50%; float: left; }
+        .news .two .right .list li .box { padding-top: 0; padding-bottom: 15px; border-top: none; border-bottom: solid #e0e0e0 1px; display: block; }
+        .news .two .right .list li:nth-child(6n) .box { margin-bottom: 0; padding-bottom: 14px; border-bottom: solid #e0e0e0 1px; }
+        .news .two .right .list li .box .pic { margin-bottom: 15px; display: block; width: 100%; height: 340px; }
+    }
+
+    @media (max-width: 550px) {
+        .news .two .right .list li { width: 100%; }
+    }
+
+    .jump { }
+    .jump .ju_lt { margin-left: -60px; }
+    .jump .ju_lt .list { }
+    .jump .ju_lt .list li { padding-left: 60px; width: 50%; float: left; }
+    .jump .ju_lt .list li .box { position: relative; width: 100%; display: inline-block; }
+    .jump .ju_lt .list li .box .pic { background: no-repeat center center; background-size: cover; width: 470px; height: 321px; float: right; }
+    .jump .ju_lt .list li .box .bt { margin-top: -90px; position: absolute; top: 50%; padding: 60px 0 0 40px; background: rgba(255,94,20,1); width: 220px; height: 180px; }
+    .jump .ju_lt .list li .box .bt .p1 { margin-bottom: 15px; font-size: 24px; color: #fff; font-weight: bold; }
+    .jump .ju_lt .list li .box .bt .p2 { font-size: 16px; color: #fff; opacity: 0.7; letter-spacing: -1px; }
+    .jump .ju_lt .list li:nth-child(2n+2) .box .bt { background: rgba(0,35,90,1); }
+
+
+    @media (max-width: 1024px) {
+        .jump .ju_lt { margin-left: -10px; }
+        .jump .ju_lt .list li { padding-left: 10px; }
+        .jump .ju_lt .list li .box .pic { width: auto; float: none; }
+        .jump .ju_lt .list li .box .bt { margin-top: 0; padding: 120px 0 0 0; top: 10px; right: 10px; bottom: 10px; left: 10px; width: auto; height: auto; background: rgba(255,94,20,0.8); text-align: center; }
+        .jump .ju_lt .list li:nth-child(2n+2) .box .bt { background: rgba(0,35,90,0.8); }
+    }
+
+    @media (max-width: 667px) {
+        .jump .ju_lt .list li { width: 100%; font-size: 0; }
+        .jump .ju_lt .list li:nth-child(2n) { margin-top: -1px; }
+    }
+
+    .g_page { text-align: center; }
+    .g_page ul { }
+    .g_page ul li { margin: 0 10px; display: inline-block; }
+    .g_page ul li .box { }
+    .g_page ul li .box .ico { display: inline-block; }
+    .g_page ul li .box .ico2 { display: none; }
+
+    .g_page ul li .box:hover .ico1 { display: none; transition: ease .3s; }
+    .g_page ul li .box:hover .ico2 { display: inline-block; transition: ease .3s; }
+    .g_page ul li .on .ico1 { display: none; transition: ease .3s; }
+    .g_page ul li .on .ico2 { display: inline-block; transition: ease .3s; }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class=" on">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：XXX<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="banners-pc">
+
+
+        <div class="" style="background:url(img/b1.jpg)no-repeat center center; background-size: cover;width:100%; height:860px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <p class="br1"><img src="img/br1.png"></p>
+                    <div class="mode1">
+                        <p class="p1">荣获<span>年度卓越影响力地产企业</span></p>
+                        <p class="btn btn1"><a class="box" href="about.html">查看更多</a></p>
+                        <p class="btn btn2"><a class="box" href="contact.html">联系我们</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="" style="background:url(img/b1.jpg)no-repeat center center; background-size: cover;width:100%; height:860px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <p class="br1"><img src="img/br1.png"></p>
+                    <div class="mode1">
+                        <p class="p1">荣获<span>年度卓越影响力地产企业</span></p>
+                        <p class="btn btn1"><a class="box" href="about.html">查看更多</a></p>
+                        <p class="btn btn2"><a class="box" href="contact.html">联系我们</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="banners-mb" zoom-width="1024" zoom-heigh="860">
+        <div class="frame" style=" background:url(img/b2.jpg) no-repeat center center; background-size:cover; width:100%;">
+            <div class="mode">
+                <p class="br1"><img src="img/br1.png"></p>
+                <div class="mode1">
+                    <p class="p1">荣获<span>年度卓越影响力地产企业</span></p>
+                    <p class="btn"><a class="box btn1" href="about.html">查看更多</a><a class="box btn2" href="contact.html">联系我们</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="frame" style=" background:url(img/b2.jpg) no-repeat center center; background-size:cover; width:100%;">
+            <div class="mode">
+                <p class="br1"><img src="img/br1.png"></p>
+                <div class="mode1">
+                    <p class="p1">荣获<span>年度卓越影响力地产企业</span></p>
+                    <p class="btn"><a class="box btn1" href="about.html">查看更多</a><a class="box btn2" href="contact.html">联系我们</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            $('.banners-pc, .banners-mb').slick({ arrows: true, dots: false, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+        })();
+    </script>
+
+
+    <div class="business g_mt g_mb">
+        <div class="g_cw">
+            <div class="left">
+
+                <div class="g_title one">
+                    <p class="p1">BUSINESS</p>
+                    <p class="p2">业务领域</p>
+                    <p class="t_ct"></p>
+                </div>
+
+                <ul class="list">
+                    <li class="l1 two">
+                        <a class="box" href="businessdetails.html" target="_blank">
+                            <div class="g_title">
+                                <p class="p1">BUSINESS</p>
+                                <p class="p2">业务领域</p>
+                                <p class="t_ct"></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="l2">
+                        <a class="box" href="businessdetails.html?_ct=地产开发" target="_blank">
+                            <div class="ico">
+                                <p class="ico2"><img src="img/bu1a.svg"></p>
+                            </div>
+                            <div class="mode">
+                                <p class="ck">查看详细<i class="fa fa-angle-right"></i></p>
+                                <p class="p1">地产开发</p>
+                                <p class="p2">26年品牌 , 行业知名公司 , 服务机构 , 市场调研 , 行业佼佼者 , 中研世纪 , 一站式服务公司 , 行业领跑者</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="l2">
+                        <a class="box" href="businessdetails.html?_ct=酒店发展" target="_blank">
+                            <div class="ico">
+                                <p class="ico2"><img src="img/bu2a.svg" width="40"></p>
+                            </div>
+                            <div class="mode">
+                                <p class="ck">查看详细<i class="fa fa-angle-right"></i></p>
+                                <p class="p1">酒店发展</p>
+                                <p class="p2">26年品牌 , 行业知名公司 , 服务机构 , 市场调研 , 行业佼佼者 , 中研世纪 , 一站式服务公司 , 行业领跑者</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="l2">
+                        <a class="box" href="businessdetails.html?_ct=文体旅游" target="_blank">
+                            <div class="ico">
+                                <p class="ico2"><img src="img/bu3a.svg" width="45"></p>
+                            </div>
+                            <div class="mode">
+                                <p class="ck">查看详细<i class="fa fa-angle-right"></i></p>
+                                <p class="p1">文体旅游</p>
+                                <p class="p2">26年品牌 , 行业知名公司 , 服务机构 , 市场调研 , 行业佼佼者 , 中研世纪 , 一站式服务公司 , 行业领跑者</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="l2">
+                        <a class="box" href="businessdetails.html?_ct=医养健康" target="_blank">
+                            <div class="ico">
+                                <p class="ico2"><img src="img/bu4a.svg" width="40"></p>
+                            </div>
+                            <div class="mode">
+                                <p class="ck">查看详细<i class="fa fa-angle-right"></i></p>
+                                <p class="p1">医养健康</p>
+                                <p class="p2">26年品牌 , 行业知名公司 , 服务机构 , 市场调研 , 行业佼佼者 , 中研世纪 , 一站式服务公司 , 行业领跑者</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="l2">
+                        <a class="box" href="businessdetails.html?_ct=设计建造" target="_blank">
+                            <div class="ico">
+                                <p class="ico2"><img src="img/bu5a.svg" width="40"></p>
+                            </div>
+                            <div class="mode">
+                                <p class="ck">查看详细<i class="fa fa-angle-right"></i></p>
+                                <p class="p1">设计建造</p>
+                                <p class="p2">26年品牌 , 行业知名公司 , 服务机构 , 市场调研 , 行业佼佼者 , 中研世纪 , 一站式服务公司 , 行业领跑者</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about g_mt g_mb">
+        <div class="g_cw">
+            <div class="left">
+                <p class="pic" style="background-image:url(img/ne1.jpg);"></p>
+            </div>
+            <div class="right">
+                <div class="g_title">
+                    <p class="p1">ABOUT US</p>
+                    <p class="p2">关于我们</p>
+                    <p class="t_ct"></p>
+                </div>
+                <div class="buc">
+                    <p class="p1">
+                        26年品牌 , 行业知名公司 , 服务机构 , 市场调研 , 行业佼佼者 , 中研世纪 , 一站式服务公司 , 行业领跑者，今年二季度以来,房地产调控在金融供给侧发力,不
+                        仅对前期融资规模过大的部分房企控制信托融资,同时对房企海外发债风险进行管控。在一城一策落实方面，今年二季度以来,房地产调控在金融供给侧发力,不仅对前期融资规模过大的部分房企控制信托融...
+                    </p>
+                    <p class="btn"><a class="box" href="about.html" target="_blank">查看更多</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="project g_mt g_mb">
+        <div class="g_cw">
+            <div class="g_title">
+                <p class="p1">PROJECTS</p>
+                <p class="p2">经典项目</p>
+                <p class="t_ct"></p>
+            </div>
+            <div class="pr_lt one">
+                <ul class="list">
+
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10056" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/etl05b355cvoq7t.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造5</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10055" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ri9r0wprwy3ktw4.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造4</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10054" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/b885jnt62dozwfm.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造3</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10053" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ersgoubbv4km31x.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造2</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10052" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/2cqig12mt8ewucr.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造1</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10051" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/u7pf7mqs915fy62.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10050" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/0wi0qwy9ehjva1c.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">医养健康</p>
+                                <p class="p1">医养3</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10049" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/9hjk5lj856ok9w0.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">医养健康</p>
+                                <p class="p1">医养2</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10048" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/2ugesed5ak8i3wv.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">医养健康</p>
+                                <p class="p1">医养1</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10047" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/wrbl1il4fy2a0on.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">医养健康</p>
+                                <p class="p1">医养</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10046" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/mhlivrrppfdkucx.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">文体旅游</p>
+                                <p class="p1">千禧旅游5</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10045" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/eozt4krxa6r0gio.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">文体旅游</p>
+                                <p class="p1">千禧旅游4</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10044" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/6ilqxd4rrensjlg.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">文体旅游</p>
+                                <p class="p1">千禧旅游3</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10043" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/7uevkm2vf2f9vmm.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">文体旅游</p>
+                                <p class="p1">千禧旅游2</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10042" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ldb055uo4m7mqw4.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">文体旅游</p>
+                                <p class="p1">千禧旅游1</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10041" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/rsbz9tjtfr6k1sj.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">文体旅游</p>
+                                <p class="p1">千禧旅游</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10040" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/sgw63tki0kbdsd3.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店6</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10039" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/35s2a1is52zd2eq.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店5</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10038" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/xyw4q3khvtiz23d.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店4</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10037" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/gxqf9gnbx91k08d.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店3</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10036" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/609ee3tr6vr4jbu.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店2</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10035" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/n6r12doqgxi1xus.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店1</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10034" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ccxlp9yd5i5q90j.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">酒店发展</p>
+                                <p class="p1">千禧酒店</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10033" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/l0p65g1b6dlmqu9.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘7</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10032" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/1wh7txi01mfa0vt.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘6</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10031" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/2hu1tley8zk0aax.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘5</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10030" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/b1pc5l2wnjpi1j0.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘4</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10029" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/bxphtgstdmgdki8.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘3</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10028" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/d4fxzkalt29pdq1.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘2</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10027" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ahvskk0fiaqkit8.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">地产开发</p>
+                                <p class="p1">千禧盘1</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <script>
+                (function () {
+                    $('.pr_lt .list').slick({ arrows: true, dots: false, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+                })();
+            </script>
+
+
+            <div class="pr_lt two">
+                <ul class="list">
+
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10056" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/etl05b355cvoq7t.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造5</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10055" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ri9r0wprwy3ktw4.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造4</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10054" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/b885jnt62dozwfm.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造3</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10053" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/ersgoubbv4km31x.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造2</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10052" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/2cqig12mt8ewucr.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造1</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="projectdetails.html?_id=10051" target="_blank">
+                            <p class="pic" style="background-image:url(/r/data/u7pf7mqs915fy62.jpg);"></p>
+                            <div class="buc">
+                                <p class="lm">设计建造</p>
+                                <p class="p1">设计建造</p>
+                                <p class="p2">
+                                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+
+                                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。
+                                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包 括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或 土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                                </p>
+                                <p class="btn">查看更多<span>+</span></p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="news g_mt g_mb">
+        <div class="g_cw">
+            <div class="g_title">
+                <p class="p1">NEWS</p>
+                <p class="p2">新闻中心</p>
+                <p class="t_ct"></p>
+            </div>
+
+            <div class="one">
+
+                <div class="left">
+                    <ul class="pic_lt">
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10026" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/wd8aicf6qiyrrzw.jpg);"></p>
+                                <div class="bt">
+                                    <p class="p1">高层建筑的出现会影响今后的房地产发展吗？</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10025" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/87kk24gm4ldsrx5.jpg);"></p>
+                                <div class="bt">
+                                    <p class="p1">国资委：建筑、房地产行业央企混改比例已超八成</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10024" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/azymj7wxzq3fzpk.jpg);"></p>
+                                <div class="bt">
+                                    <p class="p1">我区建筑业和房地产业发展迅速</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <script>
+                    (function () {
+                        $('.left .pic_lt').slick({ arrows: false, dots: true, slidesToShow: 1, slidesToScroll: 1, autoplay: false, autoplaySpeed: 5000, speed: 500 });
+                    })();
+                </script>
+
+                <div class="right">
+                    <ul class="list">
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10023" target="_blank">
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">中建政研：建筑房地产行业进入理性发展时代</p>
+                                <p class="p2">2 0 1 6 年建筑业将继续面临经济下行的压力，建筑房地产产业继续面临产业结构调整。2011年到2014年，</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10022" target="_blank">
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">NEXT建筑事务所：从设计角度看中国房产！</p>
+                                <p class="p2">NEXT建筑事务所-作为一家建筑设计单位，从建筑设计角度看：中国房产不仅受消费者经济水平影响，也受房产自身的建筑设计因素影响。</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10021" target="_blank">
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">建筑及房地产行业盛事：2019 iTWO World全球峰会正式官宣！</p>
+                                <p class="p2">筑动全球的建筑及房地产行业盛事 - 2019年第七届iTWO World全球峰会正式宣布峰会将于11月13-14日在中国香港君悦酒店举行！</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10020" target="_blank">
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">装配式建筑在房地产领域的应用</p>
+                                <p class="p2">装配式建筑，构件之间的节点连接等非常关键，应在突破钢结构中围护体系、楼面体系、节点连接以及钢结构、抗裂隔音、露梁露柱等共性关键难题和技术瓶颈的基础上进行大力推广应用</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10019" target="_blank">
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">加快建筑和房地产业发展 一起看看他们将怎么干？</p>
+                                <p class="p2">7月19日，我县召开建筑和房地产业发展大会，总结2018年以来建筑和房地产业发展情况，部署全县建筑和房地产业高质量发展工作。会上，县建设局、县房地产协会、浙江龙嘉控股集团有限公司负责人分别作表态发言</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="two">
+                <div class="right">
+                    <ul class="list">
+
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10026" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/wd8aicf6qiyrrzw.jpg);"></p>
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">高层建筑的出现会影响今后的房地产发展吗？</p>
+                                <p class="p2">随着楼市的不断发展和城市土地资源的日益紧张，楼房的高度也开始逐渐的增加。从起初的多层到小高层再到现在的高层和超高层。楼层的增加解决了土地资源有限的问题。</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10025" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/87kk24gm4ldsrx5.jpg);"></p>
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">国资委：建筑、房地产行业央企混改比例已超八成</p>
+                                <p class="p2">记者从14日召开的国务院国资委新闻发布会上获悉：党的十八大以来，我国国有企业混合所有制改革步伐加快、领域拓宽，多数国企已在资本层面实现混合。</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10024" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/azymj7wxzq3fzpk.jpg);"></p>
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">我区建筑业和房地产业发展迅速</p>
+                                <p class="p2">本报拉萨10月6日讯（记者 王菲）日前，记者从自治区住建厅了解到，党的十八大以来，我区出台系列政策措施，积极营造良好市场氛围，</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10023" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/jraegjv3rnv66lr.jpg);"></p>
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">中建政研：建筑房地产行业进入理性发展时代</p>
+                                <p class="p2">2 0 1 6 年建筑业将继续面临经济下行的压力，建筑房地产产业继续面临产业结构调整。2011年到2014年，</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10022" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/za7vt2z5ayld9q8.jpg);"></p>
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">NEXT建筑事务所：从设计角度看中国房产！</p>
+                                <p class="p2">NEXT建筑事务所-作为一家建筑设计单位，从建筑设计角度看：中国房产不仅受消费者经济水平影响，也受房产自身的建筑设计因素影响。</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="newsdetails.html?_id=10021" target="_blank">
+                                <p class="pic" style="background-image: url(/r/data/eiwdo9r8xplqrt7.jpg);"></p>
+                                <p class="date"><span>15</span>2019-11</p>
+                                <p class="p1">建筑及房地产行业盛事：2019 iTWO World全球峰会正式官宣！</p>
+                                <p class="p2">筑动全球的建筑及房地产行业盛事 - 2019年第七届iTWO World全球峰会正式宣布峰会将于11月13-14日在中国香港君悦酒店举行！</p>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="jump g_mt g_mb">
+        <div class="g_cw">
+            <div class="ju_lt">
+                <ul class="list">
+                    <li>
+                        <a class="box" href="about.html?_ct" target="_blank">
+                            <p class="pic" style="background-image: url(img/tz1.jpg);"></p>
+                            <div class="bt">
+                                <p class="p1">公司简介</p>
+                                <p class="p2">COMPANY CULTURE</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="box" href="recruit.html?_ct" target="_blank">
+                            <p class="pic" style="background-image: url(img/tz2.jpg);"></p>
+                            <div class="bt">
+                                <p class="p1">人才招聘</p>
+                                <p class="p2">RECRUITMENT</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

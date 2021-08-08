@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目列表-项目融资平台</title>
+<meta name="keywords" content="关键词,关键词">
+<meta name="description" content="这是站点描述!">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/html5.js"></script>
+<script>
+$(document).ready(function(){
+	$(".selection .more").click(function(){
+		$(this).nextAll("li").fadeIn(1500);
+		$(this).hide();
+		});
+	//测试效果
+	//预约投资
+	$(".yy_btn").click(function(){
+		location.href="pre_investment.html";
+		});
+	//立即投资
+	$(".now_btn").click(function(){
+		location.href="invest_money.html";
+		});
+	});
+</script>
+</head>
+<body>
+        <header class="public_header">
+                <aside>
+                  <div class="wrap">
+                     <ul class="fl top_log">
+                      <li>
+                       <a href="login.html" title="登录" class="txtcol">亲，请登录</a>
+                       <a href="register.html" title="注册">免费注册</a>
+                      </li>
+                     </ul>
+                     <ul class="fr">
+                      <li><a href="user_center.html" title="用户中心">用户中心</a></li>
+                      <li><a href="my_financing.html" title="我的融资">我的融资</a></li>
+                      <li><a href="my_investment.html" title="我的投资">我的投资</a></li>
+                      <li><a href="article_list.html" title="帮助中心" class="help_icon iconfont">帮助中心</a></li>
+                      <li><a href="tel:XXX" title="服务热线：XXX" class="tel_icon iconfont">服务热线：XXX</a></li>
+                     </ul>
+                  </div>
+                </aside>
+                <section class="wrap">
+                  <h1><a><img src="images/logo.png" title="站点名称"/></a></h1>
+                  <form action="#" class="search_area">
+                   <input type="text" placeholder="查找融资项目..." class="text_box"/>
+                   <input type="submit" value="搜索" class="sub_btn"/>
+                  </form>
+                </section>
+               </header>
+               <nav class="menu">
+                <ul class="wrap">
+                 <li><a href="index.html" title="首页">首页</a></li>
+                 <li><a href="create_financing.html" title="项目融资">创建融资</a></li>
+                 
+                 <li><a href="investor.html" title="投资人">投资人</a></li>
+                 <li><a href="investor.html" title="投资管理公">投资管理公司</a></li>
+            
+                 <li><a href="article_list.html" title="投资资讯">投资资讯</a></li>
+            
+                 <li><a href="read_article.html" title="关于我们">关于我们</a></li>
+                </ul>
+               </nav>
+              <script>
+              $(document).ready(function(){
+                  //current nav bg
+                  $("nav li a").each(function(){
+                          if($(this).attr('href') == window.location.pathname){
+                           $(this).css('background-color','#f52b00');
+                          }
+                      });
+                  });
+              </script>
+<aside class="wrap nav_link overflow">
+ <ul>
+  <li class="i_link_icon next_icon"><a href="index.html">首页</a></li>
+  <li class="next_icon"><a href="article_list.html">项目列表</a></li>
+ </ul>
+</aside>
+<div class="wrap">
+ <ul class="selection">
+  <li>
+      <dl>
+       <dt>时间筛选：</dt>
+       <dd><label><input type="checkbox"/>全部</label></dd>
+       <dd><label><input type="checkbox"/>本周</label></dd>
+       <dd><label><input type="checkbox"/>本月</label></dd>
+      </dl>
+  </li>
+  <li>
+      <dl>
+       <dt>省市筛选：</dt>
+       <dd>
+        <select>
+         <option>全部</option>
+         <option>陕西省</option>
+        </select>
+       </dd>
+       <dd>
+        <select>
+         <option>全部</option>
+         <option>西安市</option>
+        </select>
+       </dd>
+      </dl>
+  </li>
+  <li>
+      <dl>
+       <dt>融资方式：</dt>
+       <dd><label><input type="checkbox"/>股权融资</label></dd>
+       <dd><label><input type="checkbox"/>预售融资</label></dd>
+       <dd><label><input type="checkbox"/>公益融资</label></dd>
+       <dd><label><input type="checkbox"/>全部</label></dd>
+      </dl>
+  </li>
+  <li>
+      <dl>
+       <dt>融资方式：</dt>
+       <dd><label><input type="checkbox"/>股权融资</label></dd>
+       <dd><label><input type="checkbox"/>预售融资</label></dd>
+       <dd><label><input type="checkbox"/>公益融资</label></dd>
+       <dd><label><input type="checkbox"/>全部</label></dd>
+      </dl>
+  </li>
+  <li class="more"><a>更多条件</a></li>
+  <li style="display:none;">
+      <dl>
+       <dt>投资需求：</dt>
+       <dd><label><input type="radio" name="xuqiu"/>5万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>10万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>15万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>20万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>25万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>30万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>35万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>40万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>45万</label></dd>
+       <dd><label><input type="radio" name="xuqiu"/>50万</label></dd>
+      </dl>
+  </li>
+  <li style="display:none;">
+      <dl>
+       <dt>出让股份：</dt>
+       <dd><label><input type="radio" name="gufen"/>5%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>10%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>15%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>20%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>25%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>30%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>35%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>40%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>45%</label></dd>
+       <dd><label><input type="radio" name="gufen"/>50%</label></dd>
+      </dl>
+  </li>
+  <li style="display:none;">
+      <dl>
+       <dt>现有投资人：</dt>
+       <dd><label><input type="radio" name="touziren"/>5人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>10人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>15人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>20人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>25人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>30人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>35人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>40人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>45人</label></dd>
+       <dd><label><input type="radio" name="touziren"/>50人</label></dd>
+      </dl>
+  </li>
+  <li style="display:none;">
+      <dl>
+       <dt>完成比例：</dt>
+       <dd><label><input type="radio" name="bili"/>5%</label></dd>
+       <dd><label><input type="radio" name="bili"/>10%</label></dd>
+       <dd><label><input type="radio" name="bili"/>15%</label></dd>
+       <dd><label><input type="radio" name="bili"/>20%</label></dd>
+       <dd><label><input type="radio" name="bili"/>25%</label></dd>
+       <dd><label><input type="radio" name="bili"/>30%</label></dd>
+       <dd><label><input type="radio" name="bili"/>35%</label></dd>
+       <dd><label><input type="radio" name="bili"/>40%</label></dd>
+       <dd><label><input type="radio" name="bili"/>45%</label></dd>
+       <dd><label><input type="radio" name="bili"/>50%</label></dd>
+      </dl>
+  </li>
+ </ul>
+</div>
+<section class="wrap overflow">
+ <!--链接或导航跳转过来对应链接，使用动态ajax处理，当前状态标题为红色-->
+ <dl class="projectList">
+  <dt>
+   <a><strong style="color:red;">预热项目</strong></a>
+   <a><strong>最新投资机会</strong></a>
+   <a><strong>成功融资项目</strong></a>
+  </dt>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_005.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">全球首款现金奖励的OBD车载...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:52%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">5000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_002.jpg"/>
+   </a>
+   <h2><a href="project.html" title="瑞士级智能腕表预售融资">瑞士级智能腕表预售融资...</a></h2>
+   <p>
+   瑞士级智能腕表一块（标配） 感谢您的支持！为回报您的支持，我们以...
+   </p>
+   <div class="prgs">
+    <span style="width:10%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">10000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_003.jpg"/>
+   </a>
+   <h2><a href="project.html" title="梦想众筹第一季股权融资">梦想众筹第一季股权融资...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:25%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">8300000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_004.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">松岛枫艾弗股权融资...</a></h2>
+   <p>
+   城里人已经很难尝到正宗土鸡蛋的味道了，儿时的蛋香味正渐渐离我们而去...
+   </p>
+   <div class="prgs">
+    <span style="width:98%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">7200000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">690000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">300000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_005.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">全球首款现金奖励的OBD车载...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:52%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">5000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_002.jpg"/>
+   </a>
+   <h2><a href="project.html" title="瑞士级智能腕表预售融资">瑞士级智能腕表预售融资...</a></h2>
+   <p>
+   瑞士级智能腕表一块（标配） 感谢您的支持！为回报您的支持，我们以...
+   </p>
+   <div class="prgs">
+    <span style="width:10%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">10000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_003.jpg"/>
+   </a>
+   <h2><a href="project.html" title="梦想众筹第一季股权融资">梦想众筹第一季股权融资...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:25%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">8300000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_004.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">松岛枫艾弗股权融资...</a></h2>
+   <p>
+   城里人已经很难尝到正宗土鸡蛋的味道了，儿时的蛋香味正渐渐离我们而去...
+   </p>
+   <div class="prgs">
+    <span style="width:98%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">7200000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">690000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">300000</strong>
+    </li>
+   </ul>
+   <p class="form_infor overflow">
+    <input type="text" placeholder="最小投资￥10000"/>
+    <input type="button" value="预约投资" class="yy_btn"/>
+    <input type="button" value="现在投资" class="now_btn"/>
+   </p>
+  </dd>
+ </dl>
+ <aside class="paging">
+  <a>第一页</a>
+  <a class="curr_bg">1</a>
+  <a>2</a>
+  <a>3</a>
+  <a>4</a>
+  <a>5</a>
+  <a>最后一页</a>
+ </aside>
+</section>
+<footer>
+        <ul class="wrap help">
+         <li>
+          <dl>
+           <dt>关于项目融资平台</dt>
+           <dd><a href="read_article.html">公司简介</a></dd>
+           <dd><a href="read_article.html">联系方式</a></dd>
+           <dd><a href="read_article.html">加入我们</a></dd>
+          </dl>
+         </li>
+         <li>
+          <dl>
+           <dt>新手帮助</dt>
+           <dd><a href="read_article.html">新手指南</a></dd>
+           <dd><a href="read_article.html">常见问题</a></dd>
+           <dd><a href="read_article.html">注册协议</a></dd>
+          </dl>
+         </li>
+         <li>
+          <dl>
+           <dt>用户帮助</dt>
+           <dd><a href="read_article.html">如何融资</a></dd>
+           <dd><a href="read_article.html">如何投资</a></dd>
+           <dd><a href="read_article.html">提现充值</a></dd>
+          </dl>
+         </li>
+         <li>
+          <dl>
+           <dt>关于项目融资平台</dt>
+           <dd><a href="read_article.html">公司简介</a></dd>
+           <dd><a href="read_article.html">联系方式</a></dd>
+           <dd><a href="read_article.html">加入我们</a></dd>
+          </dl>
+         </li>
+         <li>
+          <dl>
+           <dt>关于项目融资平台</dt>
+           <dd><a href="read_article.html">公司简介</a></dd>
+           <dd><a href="read_article.html">联系方式</a></dd>
+           <dd><a href="read_article.html">加入我们</a></dd>
+          </dl>
+         </li>
+        </ul>
+        <p class="wrap btm_infor">
+         Copyright (C) 2020, All Rights Reserved<br/>
+         互联网药品信息服务资格证编号：(京)-非经营性-XXX 京公网安备XXX号<br/>
+         出版物经营许可证 新出发京批字第直0673号
+        </p>
+       </footer>
+</body>
+</html>

@@ -1,0 +1,319 @@
+/*
+*  author: AUI
+*  base.css
+*  http://azenui.com/
+*  http://www.a-ui.cn/
+*/
+::-moz-placeholder {
+	color: #3f3f3f;
+}
+
+::-webkit-input-placeholder {
+	color: #3f3f3f;
+}
+
+:-ms-input-placeholder {
+	color: #3f3f3f;
+}
+
+html {
+	color: #333;
+}
+
+html,body {
+	background: #e5e5e5;
+	margin: 0;
+	height: 100%;
+	font-family: core, "Avenir Next", "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi MicroHei", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	outline: none;
+}
+
+hr {
+	height: 1px;
+	background: #ccc;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+}
+
+img {
+	border: 0;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+audio,canvas,progress,video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+a {
+	text-decoration: none;
+	color: #08acee;
+}
+
+a:active,a:hover {
+	outline: 0;
+}
+
+mark {
+	color: #000;
+	background: #ff0;
+}
+
+small {
+	font-size: 80%;
+}
+
+img {
+	border: 0;
+}
+
+button,input,optgroup,select,textarea {
+	margin: 0;
+	font: inherit;
+	color: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+i {
+	font-style: normal;
+}
+
+a {
+	color: #666;
+}
+
+a:hover {
+	color: #333;
+}
+
+em {
+	font-style: normal;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+}
+
+.clearfix::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+}
+
+#moquu_top,#moquu_wxin,#moquu_wshare {
+	z-index: 2;
+	width: 60px;
+	height: 74px;
+	right: 10px;
+	position: fixed;
+	cursor: pointer;
+	_position: absolute;
+	_bottom: auto;
+	_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))
+}
+
+#moquu_wxin {
+	top: 124px;
+	right: 20px;
+}
+
+#moquu_wxin a {
+	background: url(../img/icon/sbtn.png) 0 0px;
+	right: 0;
+	float: left;
+	width: 60px;
+	height: 80px;
+	text-indent: -9999px
+}
+
+#moquu_wxin a:hover {
+	background: url(../img/icon/sbtn.png) -60px -0px
+}
+
+#moquu_wshare {
+	top: 204px;
+	right: 20px;
+}
+
+#moquu_wshare a {
+	background: url(../img/icon/sbtn.png) 0 -80px no-repeat;
+	width: 60px;
+	height: 72px;
+	right: 0;
+	float: left;
+	text-indent: -9999px
+}
+
+#moquu_wshare a:hover {
+	background: url(../img/icon/sbtn.png) -60px -80px no-repeat;
+}
+
+.moquu_wxin,.moquu_wshare {
+	position: relative;
+	z-index: 2
+}
+
+.moquu_wxin a:hover .moquu_wxinh,.moquu_wshare a:hover .moquu_wshareh {
+	display: block
+}
+
+.moquu_wxin .moquu_wxinh {
+	position: absolute;
+	display: none;
+	right: 75px;
+	bottom: -25px;
+	width: 149px;
+	height: 140px;
+	background: url(../img/icon/souyue.png) 0 0 no-repeat;
+	background-size:cover;
+}
+
+.moquu_wshare .moquu_wshareh {
+	position: absolute;
+	display: none;
+	right: 75px;
+	bottom: -20px;
+	width: 149px;
+	height: 140px;
+	background: url(../img/icon/weixin.png) no-repeat;
+	background-size:cover;
+}
+
+#topcontrol {
+	height: 60px;
+	width: 60px;
+	border-radius: 4px;
+}
+
+/* sliderbox */
+.sliderbox {
+	background: #b5b5b5;
+	width: 1280px;
+	height: 189px;
+	overflow: hidden;
+	margin: 0 auto
+}
+
+.arrow-btn {
+	display: inline;
+	background: url(../img/icon/arrow-btn.png) no-repeat center;
+	width: 50px;
+	height: 189px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#btn-left {
+	float: left;
+	background-position: 0 0;
+}
+
+#btn-left.dasabled {
+	background-position: 0 -189px;
+}
+
+#btn-right {
+	float: right;
+	cursor: pointer;
+	background-position: -50px 0;
+}
+
+#btn-right.dasabled {
+	background-position: -50px -189px;
+}
+
+.slider {
+	width: 1140px;
+	overflow: hidden;
+	position: relative;
+	height: 189px;
+	float: left;
+	margin: 0 20px;
+}
+
+.slider ul {
+	position: absolute;
+	left: 0px;
+	top: 12px;
+	width: 1800px;
+	height: 189px;
+	list-style: none;
+}
+
+.slider li {
+	float: left;
+	width: 190px;
+	height: 131px;
+}
+
+.slider a {
+	display: block;
+	text-decoration: none;
+	color: #073a5e;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+	background:#fff;
+	margin:0 2px;
+}
+
+.slider img {
+	width: 131px;
+	display: inline-block!important;
+}
+
+.pane {
+	display: none;
+}
+
+.panes {
+	width: 620px;
+	float: right;
+}
+
+.live-scene-left {
+	float: left;
+}
+
+.live-orange {
+	background: #ffa532;
+}
+
+.live-fl{
+	float:left;
+	width:630px;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='TTUNION_verify' content='b846c3c2b85efabc496d2a2b8399cd62'>
+        <meta name="sogou_site_verification" content="gI1bINaJcL"/>
+        <meta name="360-site-verification" content="37ae9186443cc6e270d8a52943cd3c5a"/>
+        <meta name="baidu_union_verify" content="99203948fbfbb64534dbe0f030cbe817">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="keywords" content="XXX。">
+        <meta name="description" content="XXX">
+        <meta name="author" content="AUI, a-ui.com">
+        <meta name="baidu-site-verification" content="ZVPGgtpUfW"/>
+        <title>XXX--关于我们</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+        <link type="text/css" rel="stylesheet" href="themes/css/base.css">
+        <link type="text/css" rel="stylesheet" href="themes/css/home.css">
+        <script type="text/javascript" src="themes/js/jquery.js"></script>
+
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=67jMQ5DmYTe1TLMBKFUTcZAR"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>
+                <a href="index.html">
+                    <div class="logo">
+                        <img class="full_height" src="themes/img/logo.png" alt="XXX"/>
+                    </div>
+                </a>
+            </h1>
+            <div class="page-tab">
+                <div class="hoverUnderLine"></div>
+                <ul class="first-menu">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="risk.html">智能风控服务</a>
+                    </li>
+                    <li>
+                        <a href="receive.html">智能获客服务</a>
+                    </li>
+                    <li>
+                        <a href="data.html">征信数据服务</a>
+                    </li>
+                    <li class="active">
+                        <a href="about.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="aui-Wrapper">
+            <div class="aui-about-bg">
+                <div class="aui-content">
+                    <div class="aui-content-region">
+                        <span class="aui-icon-left"></span>
+                        <h2>XXX与您共创辉煌</h2>
+                        <span class="aui-icon-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="aui-content-text">
+                <h3>关于我们</h3>
+                <p>北京XXX科技有限公司是专注于大数据智能风控和智能获客服务的一支新生力量，基于公司创始团队在大数据公司、征信机构、金融机构的丰富的工作履历与经验，公司创立伊始即获得数家客户的肯定与支持，XXX公司将不忘初心，奋发向上，为新时代大数据经济贡献一己之力。
+                </p>
+            </div>
+        </div>
+        <!-- map begin -->
+        <div class="auo-map-box">
+            <div id="map">
+                <div style="width: 100%; height: 400px;" id="allmap"></div>
+            </div>
+            <iframe style="display: none;" id="geoPage" width="100%" height="30%" frameborder=0 scrolling="no" src="https://apis.map.qq.com/tools/geolocation?key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp&effect=zoom"></iframe>
+            <script type="text/javascript">
+                function ShowMap(zuobiao, name, addrsee, phone, chuanzhen, zoom) {
+                    var arrzuobiao = zuobiao.split(',');
+                    var map = new BMap.Map("allmap");
+                    map.addControl(new BMap.OverviewMapControl());
+                    map.centerAndZoom(new BMap.Point(arrzuobiao[0],arrzuobiao[1]), zoom);
+                    map.addControl(new BMap.NavigationControl());
+                    var marker = new BMap.Marker(new BMap.Point(arrzuobiao[0],arrzuobiao[1]));
+                    map.addOverlay(marker);
+                    var infoWindow = new BMap.InfoWindow('<p style="color: #bf0008;font-size:14px;">' + name + '</p><p style="font-size:13px;">地址：' + addrsee + '</p><p style="font-size:12px;">电话：' + phone + '</p> ');
+                    marker.addEventListener("click", function() {
+                        this.openInfoWindow(infoWindow);
+                    });
+                    marker.openInfoWindow(infoWindow);
+                }
+
+                var loc;
+                var isMapInit = false;
+                //监听定位组件的message事件
+                window.addEventListener('message', function(event) {
+                    loc = event.data;
+                    // 接收位置信息
+                    //console.log('location', loc);
+                    if (loc && loc.module == 'geolocation') {
+                        //定位成功,防止其他应用也会向该页面post信息，需判断module是否为'geolocation'
+                        var markUrl = 'https://apis.map.qq.com/tools/poimarker' + '?marker=coord:' + loc.lat + ',' + loc.lng + ';title:我的位置;addr:' + (loc.addr || loc.city) + '&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp';
+                        //给位置展示组件赋值
+                        // document.getElementById('markPage').src = markUrl;
+                        var lng = loc.lng
+                        //经度
+                        var lat = loc.lat
+                        //维度
+                        console.log(lng)
+                        ShowMap('116.425079,40.040445', '北京XXX科技有限公司', 'XXX', 'XXX', '', '20');
+                    } else {
+                        console.log('定位失败');
+                    }
+                }, false);
+            </script>
+        </div>
+        <!-- map end -->
+        <div class="footerWrapper">
+            <div class="title font-32" style="padding:45px 0 0 0;">联系我们</div>
+            <div style="font-size:17px;color:#4d4d4d;text-align:center;padding:10px 0 50px 0;">XXX与您共创辉煌</div>
+            <div class="footer">
+                <div class="top">
+                    <div class="item">
+                        <ul class="cursor_default">
+                            <li>
+                                <a>
+                                    <span class="footerIcons footerPhone"></span>
+                                    <span>北京XXX科技有限公司</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="footerIcons footerAfterSale"></span>
+                                    <span>XXX</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="footerIcons footerBusiness"></span>
+                                    <span>XXX</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="footerIcons footerMedia"></span>
+                                    <span>XXX</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="adcodeArea">
+                        <div class="icon_adcode">
+                            <img class="full_height" src="themes/img/aui-code.jpg" alt="微信公众账号"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tipmsgArea">
+                <div class="content">
+                    <div class="name">
+                        Copyright © 2018 北京XXX科技有限公司  备案号：京ICP备xxxxxx号   
+                        
+                        
+                        
+                        <em>
+                            <img src="themes/img/icon-ga.png" width="20" height="20" alt="">公网安备 京ICP备xxxxx号-3
+                        
+                        
+                        
+                        </em>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mask">
+            <div class="layer"></div>
+            <div class="content">
+                <img src="themes/img/maskLayer.png" alt="低于ie8提示"/>
+                <a class="google" href="https://www.google.cn/intl/zh-CN/chrome/browser/desktop/" target=_blank>谷歌 Chrome</a>
+                <a class="firefox" href="http://www.firefox.com.cn/" target=_blank>火狐 Firefox</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="themes/js/js.js"></script>
+        <script type="text/javascript">
+
+            $('.aui-list-grids').click(function(e) {
+
+                $(this).addClass('this-card').siblings().removeClass('this-card');
+
+                $('#type-amount').html($(this).find('.cardAmount').html());
+
+            })
+        </script>
+    </body>
+</html>

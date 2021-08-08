@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>XXX</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<script type="text/javascript" src="../js/jquery1.42.min.js"></script>
+	<script type="text/javascript" src="../js/wow.min.js"></script>
+	<script type="text/javascript" src="../js/jz.js"></script>
+	<script src="../js/baidumap.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+</head>
+<body>
+	<!-- 头部导航 -->
+	<div class="header" id="header_box">	
+	</div>
+	<!-- banner -->
+	<div class="banner">
+		<img src="../images/banner_02.png">
+	</div>
+	<!-- 导航 -->
+	<div class="navigate wow animated fadeInLeft">
+		<div class="w1200">
+			<span>您的位置：</span>
+			<a href="../index.php">首页</a>>
+			<a href="contact.html">联系我们</a>>
+			<a href="contact.html">联系我们</a>
+		</div>
+	</div>
+	<!-- 内容部分 -->
+	<div class="contain w1200">
+		<div class="contain_tit wow animated fadeInRight">
+			<h2>联系我们<span>CONTACT US</span></h2>
+			<div class="ficat">
+				<a href="contact.html" class="on">联系我们</a>
+			</div>
+		</div>
+		<!-- 左侧内容 -->
+		<div class="left-contain wow animated fadeInUp">
+			<div class="contact_us">
+				<div class="contact_us_info">
+					<p>咨询热线：XXX<br/>招商热线：18002296776；13710039568</p>
+					<p>邮箱：wangmk@3guu.com</p>
+					<p>公 司 地 址：广东省广州市天河区天府路233号华建大厦A座15层<br/>旗舰店地址：广东省广州市海珠区新港中路354号珠影星光城 星光侠VR+互娱地带</p>
+				</div>
+				<div class="contact_us_fom">
+					 <form action="../news/bbs.php?action=add" method="post" name="lybform" id="lybform" onsubmit="return d_check()">
+						<div class="form_group">
+							<label>姓名：</label><input type="text" name="username" id="username" placeholder="请输入用户名" class="inp"><i>*</i>
+						</div>
+						<div class="form_group">
+							<label>邮箱：</label><input type="email" name="email" id="email" placeholder="请输入您的邮箱" class="inp">
+						</div>
+						<div class="form_group">
+							<label>手机：</label><input type="tel" name="phone" id="phone" placeholder="请输入您的手机号" class="inp"><i>*</i>
+						</div>
+						<div class="form_group">
+							<label>地址：</label><input type="text" name="address" id="address" placeholder="请输入您的地址" class="inp">
+						</div>
+						<div class="form_group w100">
+							<label>留言：</label><textarea  name="content" placeholder="请输入留言内容" rows="6"></textarea>
+						</div>
+						<div class="form_group w100">
+							<input type="submit" value="提交留言" class="btn">
+							<input type="reset" value="重新填写" class="btn btn2">
+						</div>
+					</form>
+				</div>
+				<div class="contact_us_map">
+					<div style="width:782px;height:350px;font-size:12px" id="map"></div>
+					 <script type="text/javascript">
+					    //创建和初始化地图函数：
+					    function initMap(){
+					      createMap();//创建地图
+					      setMapEvent();//设置地图事件
+					      addMapControl();//向地图添加控件
+					      addMapOverlay();//向地图添加覆盖物
+					    }
+					    function createMap(){ 
+					      map = new BMap.Map("map"); 
+					      map.centerAndZoom(new BMap.Point(113.366831,23.137936),12);
+					    }
+					    function setMapEvent(){
+					      map.enableScrollWheelZoom();
+					      map.enableKeyboard();
+					      map.enableDragging();
+					      map.enableDoubleClickZoom()
+					    }
+					    function addClickHandler(target,window){
+					      target.addEventListener("click",function(){
+					        target.openInfoWindow(window);
+					      });
+					    }
+					    function addMapOverlay(){
+					      var markers = [
+					        {content:"我的备注",title:" 旗舰店地址：广东省广州市海珠区新港中路354号珠影星光城 星光侠VR+互娱地带",imageOffset: {width:0,height:3},position:{lat:23.102212,lng:113.325102}},
+					        {content:"我的备注",title:"XXX信息技术有限公司<br/>公 司 地 址：广东省广州市天河区天府路233号华建大厦A座15层",imageOffset: {width:0,height:3},position:{lat:23.138247,lng:113.366988}}
+					      ];
+					      for(var index = 0; index < markers.length; index++ ){
+					        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+					        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+					          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+					        })});
+					        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+					        var opts = {
+					          width: 200,
+					          title: markers[index].title,
+					          enableMessage: false
+					        };
+					        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+					        marker.setLabel(label);
+					        addClickHandler(marker,infoWindow);
+					        map.addOverlay(marker);
+					      };
+					    }
+					    //向地图添加控件
+					    function addMapControl(){
+					      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+					      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+					      map.addControl(scaleControl);
+					      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+					      map.addControl(navControl);
+					      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+					      map.addControl(overviewControl);
+					    }
+					    var map;
+					      initMap();
+					</script>
+				</div>
+			</div>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="right-contain wow animated fadeInDown">
+			
+		</div>
+	</div>
+	<!-- footer部分 -->
+	<div class="footer wow animated fadeInUp">
+		
+	</div>
+	<div class="record">
+		<div class="w1200">
+			<span class="fl">版权所有 XXX信息技术有限公司</span>
+			<span class="fr">ALL RIGHTS RESERVED 沪 ICP 备 XXX 号 - 10</span>
+		</div>
+	</div>
+</body>
+</html>

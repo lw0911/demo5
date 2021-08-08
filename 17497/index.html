@@ -1,0 +1,1021 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>某某装饰官网</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+    <style>
+        .banners-pc { clear: both; height: 800px; }
+        .banners-pc .frame { height: 800px; background: no-repeat center center; background-size: cover; }
+
+        .banners-mb { display: none; clear: both; height: 700px; }
+        .banners-mb div { height: 100%; }
+        .banners-mb .frame { height: 100%; background: no-repeat center center; background-size: cover; }
+
+        @media (max-width: 1024px) {
+            .banners-pc { display: none; }
+            .banners-mb { display: block; }
+        }
+
+
+        .about { margin-top: 66px; margin-bottom: 100px; }
+        .about .ab_con { position: relative; }
+        .about .intro { max-width: 705px; }
+        .about .intro .p1 { font-size: 12px; color: #666666; line-height: 26px; }
+        .about .intro .h1 { padding: 34px 0 13px 0; }
+        .about .intro .list { margin-left: -35px; margin-bottom: -20px; margin-top: 28px; }
+        .about .intro .list > li { float: left; padding-left: 35px; padding-bottom: 20px; }
+        .about .intro .list > li .box { display: block; text-align: center; padding: 16px 48px; background: #f4f4f4; }
+        .about .intro .list > li .box .ico img { height: 30px; }
+        .about .intro .list > li .box .font { font-size: 12px; color: #666; padding-top: 10px; }
+        .about .infor { background: #f4f4f4; position: absolute; bottom: 0; right: 0; }
+        .about .infor .obtain { padding: 30px 47px 30px 41px; background: #d5231b; color: #ffffff; }
+        .about .infor .obtain .ico img { width: 56px; }
+        .about .infor .obtain .line { width: 2px; height: 26px; background: #333333; margin: 13px 20px 0 20px; }
+        .about .infor .obtain .p1 { font-size: 12px; padding-top: 3px; }
+        .about .infor .obtain .p1 .h1 { display: block; font-size: 18px; padding-bottom: 10px; }
+        .about .infor .tab > li { padding: 0 52px; }
+        .about .infor .tab > li .box { border-bottom: 1px solid #999; }
+        .about .infor .tab > li .input_1 { border: 0; margin-top: 40px; width: 100%; height: 34px; background: none; }
+        .about .infor .tab > li .text_a { border: 0; height: 82px; width: 100%; margin-top: 40px; background: none; }
+        .about .infor .tab > li .submit { display: block; text-align: center; background: #333; color: #fff; padding: 20px 0; margin: 44px 0 37px 0; }
+
+        @media (max-width: 1024px) {
+            .about .intro { max-width: none; float: none; margin-bottom: 50px; }
+            .about .intro .list > li { width: 25%; }
+            .about .infor { position: initial; clear: both; }
+        }
+
+        @media (max-width: 750px) {
+            .about .intro .list > li { width: 33.33%; }
+        }
+
+        @media (max-width: 600px) {
+            .about .intro .list > li { width: 50%; }
+        }
+
+        .sort { margin-left: -10px; margin-bottom: -10px; margin-top: 26px; }
+        .sort > li { float: left; padding-left: 10px; padding-bottom: 10px; }
+        .sort > li .box { padding: 8px 13px; background: #f4f4f4; display: block; }
+        .sort > li .box:hover { background: #d5231b; color: #ffffff; }
+        .sort > li .on { background: #d5231b; color: #ffffff; }
+
+
+        @media (max-width: 1024px) {
+            .g_title { float: none; }
+            .sort { float: none; }
+        }
+
+        .case .offset { margin-left: -30px; margin-bottom: -30px; margin-top: 48px; }
+        .case .offset .list > li { float: left; width: 33.33%; padding-left: 30px; padding-bottom: 30px; box-sizing: border-box; }
+        .case .offset .list > li .box { display: block; position: relative; }
+        .case .offset .list > li .box .pic img { max-width: 100%; display: block; }
+        .case .offset .list > li .box .fbox { position: absolute; left: 0; right: 0; top: 0; bottom: 0; opacity: 0; transition: .3s ease; background: rgba(213,35,27,.7); }
+        .case .offset .list > li .box .fbox .font { border: 1px solid #ffffff; position: absolute; left: 13px; right: 13px; top: 13px; bottom: 13px; text-align: center; color: #ffffff; padding-top: 20%; }
+        .case .offset .list > li .box .fbox .font .p1 { font-size: 12px; }
+        .case .offset .list > li .box .fbox .font .p2 { font-size: 16px; font-weight: bold; padding: 10px 0; }
+        .case .offset .list > li .box .fbox .font .p3 { font-size: 24px; }
+        .case .offset .list > li .box:hover .fbox { opacity: 1; }
+
+
+        @media (max-width: 1024px) {
+            .case .offset .list { margin: 0 10px; }
+            .case .offset .list > li { width: 50%; padding-bottom: 10px; }
+            .case .offset .list > li .box .pic img { width: 100%; }
+        }
+
+        @media (max-width: 500px) {
+            .case .offset .list > li { float: none; width: 100%; }
+            .case .offset .list > li .box .fbox { opacity: 1; }
+        }
+
+        .see_btn { text-align: center; margin-top: 50px; }
+        .see_btn .see_con { display: inline-block; padding: 11px 23px; border: 2px solid #666666; color: #333; }
+
+
+        .youshi { }
+        .youshi .left { width: 50%; }
+        .youshi .left .list { margin-left: -2px; margin-bottom: -2px; }
+        .youshi .left .list > li { float: left; width: 50%; padding-left: 2px; padding-bottom: 2px; }
+        .youshi .left .list > li .box { display: block; padding:; height: 299px; text-align: center; background: #f4f4f4; position: relative; }
+        .youshi .left .list > li .box .ico { padding-top: 70px; }
+        .youshi .left .list > li .box .ico img { height: 39px; }
+        .youshi .left .list > li .box .ico .img2 { display: none; }
+        .youshi .left .list > li .box .p1 { color: #333; font-weight: bold; padding: 13px 0 21px 0; }
+        .youshi .left .list > li .box .p2 { color: #666; font-size: 12px; line-height: 24px; padding: 0 70px; }
+        .youshi .left .list > li .box .line { position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 1px solid #ffffff; opacity: 0; }
+        .youshi .left .list > li .box:hover { background: #d5231b; }
+        .youshi .left .list > li .box:hover .ico .img1 { display: none; }
+        .youshi .left .list > li .box:hover .ico .img2 { display: inline-block; }
+        .youshi .left .list > li .box:hover .p1 { color: #ffffff; }
+        .youshi .left .list > li .box:hover .p2 { color: #ffffff; }
+        .youshi .left .list > li .box:hover .line { opacity: 1; }
+        .youshi .right { width: 50%; height: 600px; background: url(img/index-img1.jpg) no-repeat left center; background-size: cover; }
+
+        @media (max-width: 1024px) {
+            .youshi .left { float: none; width: auto; }
+            .youshi .right { float: none; width: 100%; }
+        }
+
+        @media (max-width: 600px) {
+            .youshi .left .list > li { float: none; width: auto; }
+        }
+
+        .team .list li { }
+        .team .list li .left { width: 573px; height: 573px; overflow: hidden; }
+
+        .team .list li .right_t { float: left; }
+        .team .list li .right_t .intro { background: #f4f4f4; color: #666; padding: 42px 69px 50px 60px; }
+        .team .list li .right_t .intro .h1 { font-size: 20px; font-weight: bold; }
+        .team .list li .right_t .intro .h2 { font-size: 16px; padding: 16px 0 20px 0; }
+        .team .list li .right_t .intro .p1 { font-size: 12px; line-height: 24px; padding-bottom: 10px; max-width: 498px; }
+        .team .list li .right_t .intro .p2 { font-size: 12px; line-height: 24px; padding-bottom: 10px; max-width: 498px; height: 12.5em; overflow: hidden; }
+        .team .list li .right_t .intro .sort { margin-top: 32px; }
+
+        .team .one { }
+        .team .two { display: none; }
+        .team .list ._slick1 .slick-prev { left: 0; }
+        .team .list ._slick1 .slick-next { right: 0; }
+
+        @media (max-width: 667px) {
+            .team .list li .left { width: auto; height: auto; }
+        }
+
+
+
+        @media (max-width: 1024px) {
+            .team .one { display: none; }
+            .team .two { display: block; }
+            .team .two .list li { margin-bottom: 50px; }
+            .team .two .list li .left { float: none; text-align: center; margin: 0 auto; }
+            .team .two .list li .left img { dislpay: inline-block; }
+            .team .two .list li .right_t { float: none; margin-top: 50px; }
+            .team .two .list li .right_t .intro { text-align: center; }
+            .team .list li .right_t .intro .p1 { max-width: none; }
+            .team .list li .right_t .intro .p2 { max-width: none; }
+            .team .two .list li .right_t .intro .sort > li { float: none; text-align: center; }
+            .team .two .list li .right_t .intro .sort > li .box { display: inline-block; }
+        }
+
+        .blog { background: #f4f4f4; padding: 50px 0; }
+        .blog .our { margin-top: 50px; }
+        .blog .our .list { margin-left: -30px; margin-bottom: -30px; }
+        .blog .our .list > li { float: left; width: 33.33%; padding-left: 30px; padding-bottom: 30px; }
+        .blog .our .list > li:nth-child(3n+1) { clear: both; }
+        .blog .our .list > li .box { display: block; border: 3px solid #dedede; font-size: 12px; }
+        .blog .our .list > li .box img { width: 100%; }
+        .blog .our .list > li .box .fbox { padding: 20px 24px 17px 24px; line-height: 24px; }
+        .blog .our .list > li .box .fbox .p1 { font-weight: bold; }
+        .blog .our .list > li .box .fbox .p2 { color: #666666; padding: 10px 0; }
+        .blog .our .list > li .box .fbox .time .left { color: #666; }
+        .blog .our .list > li .box .fbox .time .right { color: #999; }
+        .blog .our .list > li .box:hover { border: 3px solid #d5231b; }
+        .blog .our .list > li .box:hover .fbox .p1 { color: #d5231b; }
+
+        @media (max-width: 1024px) {
+            .blog .our .list > li { width: 50%; }
+            .blog .our .list > li:nth-child(n) { clear: none; }
+            .blog .our .list > li:nth-child(2n+1) { clear: both; }
+        }
+
+        @media (max-width: 900px) {
+            .blog .sort > li { width: 100%; text-align: center; }
+            .blog .sort > li .box { display: inline-block; }
+        }
+
+        @media (max-width: 600px) {
+            .blog .our .list > li { width: 100%; }
+        }
+
+        .contact .left .g_title { margin-bottom: 40px; }
+        .contact .left .p1 { line-height: 30px; font-size: 12px; color: #666; }
+        .contact .left .fenxiang { margin-top: 70px; }
+        .lx_share .m { display: inline-block; padding-right: 20px; height: 18px; line-height: 30px; text-align: center; color: #999; }
+        .fenxiang_s { display: none; }
+        .lx_font .lxwm { font-size: 12px; color: #333; font-weight: bold; display: block; }
+        .lx_font table { color: #666; }
+
+        @media (max-width: 1024px) {
+            .contact .left { float: none; }
+            .contact .right { float: none; margin-top: 50px; text-align: center; }
+        }
+    </style>
+    <script>
+		$(function () {
+		});
+    </script>
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<body>
+    <style>
+        .g_header .main .top_r .s_nav li .on { color: #d5231b; }
+        .g_header .main .top_r .nav .navContent li .on { background: #d5231b; color: #ffffff; }
+    </style>
+
+    <div class="g_header">
+        <div class="main clearfix">
+            <div class="top_l left clearfix">
+                <p class="logo left"><a href="index.html"><img src="img/logo.png" class="g_imgf" /></a></p>
+                <div class="zx left clearfix">
+                    <p class="left">咨询<br />热线</p>
+                    <p class="numb left"><span>:</span>400-0000-000</p>
+                </div>
+            </div>
+            <div class="top_r right clearfix">
+                <ul class="s_nav left">
+                    <li>
+                        <a href="designlist.html" class="">某某设计</a>
+                    </li>
+                    <li>
+                        <a href="caselist.html" class="">实景案例</a>
+                    </li>
+                    <li>
+                        <a href="newslist.html" class="">装修日记</a>
+                    </li>
+                </ul>
+                <p class="daohang right">
+                    <a href="#" class="menu"><span class="ico left"><img src="img/menu.svg" /></span><span class="right" style="padding:2px 0 0 8px;">导航</span></a>
+                </p>
+                <div class="nav">
+                    <p class="close"><a href="#"><img src="img/close.svg" style="width:20px;" /></a></p>
+                    <ul class="navContent">
+                        <li>
+                            <a href="about.html" class="">关于我们</a>
+                        </li>
+                        <li>
+                            <a href="designlist.html" class="">某某设计</a>
+                        </li>
+                        <li>
+                            <a href="caselist.html" class="">实景案例</a>
+                        </li>
+                        <li>
+                            <a href="project.html" class="">规范工程</a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="">服务流程</a>
+                        </li>
+                        <li>
+                            <a href="newslist.html" class="">装修日记</a>
+                        </li>
+                    </ul>
+                    <p class="search clearfix">
+                        <span class="left"><input placeholder="搜索" type="text" class="input_1"></span>
+                        <span class="right"><img src="img/ico-search.svg" style="height:20px;" /></span>
+                    </p>
+                    <p class="tubiao">
+                        <a href="#" class="m ico1"><i class="fa fa-qq"></i></a>
+                        <a href="#" class="m ico2"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="m ico3"><i class="fa fa-weixin"></i></a>
+                    </p>
+                    <p class="p1">获取更多专业装修信息，欢迎来电咨询！</p>
+                    <p class="p2">XXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="banners-pc">
+        <div class="frame" style="background-image:url(img/banner.jpg);"></div>
+        <div class="frame" style="background-image:url(img/banner.jpg);"></div>
+    </div>
+    <div class="banners-mb" zoom-width="1024" zoom-heigh="700">
+        <div class="frame" style="background-image:url(img/banner-m.jpg);"></div>
+        <div class="frame" style="background-image:url(img/banner-m.jpg);"></div>
+    </div>
+    <script>
+		(function () {
+			$('.banners-pc, .banners-mb').slick({ arrows: true, dots: true, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+		})();
+    </script>
+    <!--主体内容-->
+    <div class="about clearfix">
+        <div class="g_cw ab_con">
+            <div class="intro left">
+                <div class="g_title">
+                    <p class="l1"></p>
+                    <p class="l2">ABOUT US</p>
+                    <p class="l3">关于我们</p>
+                </div>
+                <p class="p1" style="padding-top:25px;">成都某某装饰有限公司是一家工程将客户的需求放在第一位的专业家居装饰公司。独创的“零项目经理”的全新模式，把“装修”转变为一种 “作品”进行完美展现，在美化家居的同时，既为客户节省施工资金，又保证了施工质量，更高效、高质的服务及其无转包工程的经营模式，让公司受到了客户的一致好评。</p>
+                <p class="p1" style="padding-top:22px;">某某装饰把客户的利益落到实处，真正让消费者享受物超所值所带来的装修快乐，为你打造最舒适的专享感观体验。某某装饰，竭诚欢迎社会各界朋友前来咨询合作，我们定会用最优质的服务，为您打造永久的幸福殿堂！</p>
+                <p class="h1">我们的服务</p>
+                <p class="p1">我们提供专业、优质、高效的服务，为您打造永久的幸福殿堂！</p>
+                <ul class="list clearfix">
+                    <li>
+                        <a class="box">
+                            <p class="ico"><img src="img/ico-kehu.svg" /></p>
+                            <p class="font">客户服务</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="box">
+                            <p class="ico"><img src="img/ico-sheji.svg" /></p>
+                            <p class="font">设计服务</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="box">
+                            <p class="ico"><img src="img/ico-gc.svg" /></p>
+                            <p class="font">工程服务</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="box">
+                            <p class="ico"><img src="img/ico-shouhou.svg" /></p>
+                            <p class="font">售后服务</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="infor">
+                <div class="obtain clearfix">
+                    <p class="ico left"><img src="img/ico-woshou.svg" /></p>
+                    <p class="line left"></p>
+                    <p class="p1 left">
+                        <span class="h1">获取装修方案</span>
+                        欢迎咨询我们，我们将真诚为您服务
+                    </p>
+                </div>
+                <ul class="tab">
+                    <li><p class="box"><input placeholder="您的姓名" type="text" class="input_1"></p></li>
+                    <li><p class="box"><input placeholder="您的邮箱" type="text" class="input_1"></p></li>
+                    <li><p class="box"><input placeholder="您的电话" type="text" class="input_1"></p></li>
+                    <li><p class="box"><textarea placeholder="您想咨询的内容" name="text" class="text_a"></textarea></p></li>
+                    <li><a href="#" class="submit">提交信息</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--实景案例-->
+
+    <div class="case g_mb">
+        <div class="g_cw">
+            <div class="top clearfix">
+                <div class="g_title left">
+                    <p class="l1"></p>
+                    <p class="l2">EXCELLENT CASE</p>
+                    <p class="l3">实景案例</p>
+                </div>
+                <ul class="sort right clearfix">
+                    <li><a href="caselist.html?_ct=简美" class=" box">简美</a></li>
+                    <li><a href="caselist.html?_ct=现代美式" class=" box">现代美式</a></li>
+                    <li><a href="caselist.html?_ct=简约混搭" class=" box">简约混搭</a></li>
+                    <li><a href="caselist.html?_ct=东南亚" class=" box">东南亚</a></li>
+                    <li><a href="caselist.html?_ct=欧式混搭" class=" box">欧式混搭</a></li>
+                    <li><a href="caselist.html?_ct=日式" class=" box">日式</a></li>
+                    <li><a href="caselist.html?_ct=原木" class=" box">原木</a></li>
+                    <li><a href="caselist.html?_ct=北欧小清新" class=" box">北欧小清新</a></li>
+                </ul>
+            </div>
+
+            <div class="offset">
+                <ul class="list clearfix">
+
+                    <li>
+                        <a class="box" href="casedetail.html?_id=10060" target="_blank">
+                            <p class="pic img1"><img src="img/q5ujyqesj669q61.jpg"></p>
+                            <div class="fbox">
+                                <div class="font">
+                                    <p class="p1">简美</p>
+                                    <p class="p2">美丽湖南</p>
+                                    <p class="p3">+</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="casedetail.html?_id=10059" target="_blank">
+                            <p class="pic img1"><img src="img/ilv1rp5qsp3353s.jpg"></p>
+                            <div class="fbox">
+                                <div class="font">
+                                    <p class="p1">简约混搭</p>
+                                    <p class="p2">美丽广州</p>
+                                    <p class="p3">+</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="casedetail.html?_id=10058" target="_blank">
+                            <p class="pic img1"><img src="img/tyiuh8un0cbuxgv.jpg"></p>
+                            <div class="fbox">
+                                <div class="font">
+                                    <p class="p1">欧式混搭</p>
+                                    <p class="p2">美丽安徽</p>
+                                    <p class="p3">+</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="casedetail.html?_id=10057" target="_blank">
+                            <p class="pic img1"><img src="img/4usgaopxb05yais.jpg"></p>
+                            <div class="fbox">
+                                <div class="font">
+                                    <p class="p1">北欧小清新</p>
+                                    <p class="p2">美丽安徽</p>
+                                    <p class="p3">+</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="casedetail.html?_id=10056" target="_blank">
+                            <p class="pic img1"><img src="img/efcl7061miv0z09.jpg"></p>
+                            <div class="fbox">
+                                <div class="font">
+                                    <p class="p1">东南亚</p>
+                                    <p class="p2">美丽广东</p>
+                                    <p class="p3">+</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="casedetail.html?_id=10055" target="_blank">
+                            <p class="pic img1"><img src="img/s7zlfgsi8v52zst.jpg"></p>
+                            <div class="fbox">
+                                <div class="font">
+                                    <p class="p1">原木</p>
+                                    <p class="p2">美丽广州</p>
+                                    <p class="p3">+</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                <p class="see_btn"><a href="caselist.html?_ct" class="see_con" target="_blank">更多案例 +</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!--实景案例 end-->
+    <div class="youshi g_mb clearfix">
+        <div class="left">
+            <ul class="list clearfix">
+                <li>
+                    <a class="box">
+                        <p class="ico"><img src="img/ico-zhifu.svg" class="img1" /><img src="img/ico-zhifu-b.svg" class="img2" /></p>
+                        <p class="p1">第三方支付</p>
+                        <p class="p2">由第四城社区装友会进行担保工程款，阶段性验收满意通过后您才付款，让你的资金用的放心。</p>
+                        <p class="line"></p>
+                    </a>
+                </li>
+                <li>
+                    <a class="box">
+                        <p class="ico"><img src="img/ico-fujia.svg" class="img1" /><img src="img/ico-fujia-b.svg" class="img2" /></p>
+                        <p class="p1">零附加项</p>
+                        <p class="p2">我们向您承诺，除了个性水电工程和因开发商建筑质量问题导致增加项目外，合同价=结算价。</p>
+                        <p class="line"></p>
+                    </a>
+                </li>
+                <li>
+                    <a class="box">
+                        <p class="ico"><img src="img/ico-jianguan.svg" class="img1" /><img src="img/ico-jianguan-b.svg" class="img2" /></p>
+                        <p class="p1">第三方监管</p>
+                        <p class="p2">由成都最具人气的四川论坛 - 第四城社区装友会提供监管服务。您也可以外聘第三方监理团队进行监管。</p>
+                        <p class="line"></p>
+                    </a>
+                </li>
+                <li>
+                    <a class="box">
+                        <p class="ico"><img src="img/ico-zhibao.svg" class="img1" /><img src="img/ico-zhibao-b.svg" class="img2" /></p>
+                        <p class="p1">超长质保</p>
+                        <p class="p2">我们选用优质的材料进行装修，并向广大客户承诺，基础整体质保3年，隐蔽工程质保5年。</p>
+                        <p class="line"></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+
+    <!--设计师-->
+    <div class="team g_mb">
+
+        <div class="g_cw">
+
+            <div class="one">
+
+                <ul class="list">
+                    <div class="_slick1" style="width:1200px;">
+
+                        <li>
+                            <a href="designdetail.html?_id=10062" target="_blank">
+                                <div class="left">
+                                    <img src="img/10fmyrcj6ibo357.jpg" class="g_imgf" />
+                                </div>
+                            </a>
+                            <div class="right_t">
+                                <div class="g_title" style="padding:0 0 52px 62px;">
+                                    <p class="l1"></p>
+                                    <p class="l2">PROFESSIONAL TEAM</p>
+                                    <p class="l3">某某设计</p>
+                                </div>
+                                <div class="intro">
+                                    <p class="h1">首席设计师</p>
+                                    <p class="h2">- 高某某</p>
+                                    <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                    <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                    <ul class="sort clearfix">
+                                        <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="designdetail.html?_id=10061" target="_blank">
+                                <div class="left">
+                                    <img src="img/a9ertnt3egdtxp1.jpg" class="g_imgf" />
+                                </div>
+                            </a>
+                            <div class="right_t">
+                                <div class="g_title" style="padding:0 0 52px 62px;">
+                                    <p class="l1"></p>
+                                    <p class="l2">PROFESSIONAL TEAM</p>
+                                    <p class="l3">某某设计</p>
+                                </div>
+                                <div class="intro">
+                                    <p class="h1">首席设计师</p>
+                                    <p class="h2">- 赵某某</p>
+                                    <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                    <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                    <ul class="sort clearfix">
+                                        <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="designdetail.html?_id=10034" target="_blank">
+                                <div class="left">
+                                    <img src="img/q03cjyd56g7nf1e.jpg" class="g_imgf" />
+                                </div>
+                            </a>
+                            <div class="right_t">
+                                <div class="g_title" style="padding:0 0 52px 62px;">
+                                    <p class="l1"></p>
+                                    <p class="l2">PROFESSIONAL TEAM</p>
+                                    <p class="l3">某某设计</p>
+                                </div>
+                                <div class="intro">
+                                    <p class="h1">首席设计师</p>
+                                    <p class="h2">- 戴某某</p>
+                                    <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                    <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                    <ul class="sort clearfix">
+                                        <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="designdetail.html?_id=10033" target="_blank">
+                                <div class="left">
+                                    <img src="img/13xi77rn55hr7n9.jpg" class="g_imgf" />
+                                </div>
+                            </a>
+                            <div class="right_t">
+                                <div class="g_title" style="padding:0 0 52px 62px;">
+                                    <p class="l1"></p>
+                                    <p class="l2">PROFESSIONAL TEAM</p>
+                                    <p class="l3">某某设计</p>
+                                </div>
+                                <div class="intro">
+                                    <p class="h1">首席设计师</p>
+                                    <p class="h2">- 张某某</p>
+                                    <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                    <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                    <ul class="sort clearfix">
+                                        <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="designdetail.html?_id=10032" target="_blank">
+                                <div class="left">
+                                    <img src="img/7k1bq8bjeqfsyeo.jpg" class="g_imgf" />
+                                </div>
+                            </a>
+                            <div class="right_t">
+                                <div class="g_title" style="padding:0 0 52px 62px;">
+                                    <p class="l1"></p>
+                                    <p class="l2">PROFESSIONAL TEAM</p>
+                                    <p class="l3">某某设计</p>
+                                </div>
+                                <div class="intro">
+                                    <p class="h1">首席设计师</p>
+                                    <p class="h2">- 王某某</p>
+                                    <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                    <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                    <ul class="sort clearfix">
+                                        <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="designdetail.html?_id=10031" target="_blank">
+                                <div class="left">
+                                    <img src="img/tqxnzshz6s2mrso.jpg" class="g_imgf" />
+                                </div>
+                            </a>
+                            <div class="right_t">
+                                <div class="g_title" style="padding:0 0 52px 62px;">
+                                    <p class="l1"></p>
+                                    <p class="l2">PROFESSIONAL TEAM</p>
+                                    <p class="l3">某某设计</p>
+                                </div>
+                                <div class="intro">
+                                    <p class="h1">首席设计师</p>
+                                    <p class="h2">- 李某某</p>
+                                    <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                    <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                    <ul class="sort clearfix">
+                                        <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </div>
+                </ul>
+                <script>
+				$('._slick1').slick({ arrows: true, dots: false, slidesToShow: 1, slidesToScroll: 1, autoplay: false, autoplaySpeed: 5000, speed: 500 });
+                </script>
+
+            </div>
+
+            <div class="two">
+
+                <ul class="list">
+
+                    <li>
+                        <a href="designdetail.html?_id=10062" target="_blank">
+                            <div class="left">
+                                <img src="img/10fmyrcj6ibo357.jpg" class="g_imgf" />
+                            </div>
+                        </a>
+                        <div class="right_t">
+                            <div class="g_title" style="padding:0 0 52px 62px;">
+                                <p class="l1"></p>
+                                <p class="l2">PROFESSIONAL TEAM</p>
+                                <p class="l3">某某设计</p>
+                            </div>
+                            <div class="intro">
+                                <p class="h1">首席设计师</p>
+                                <p class="h2">- 高某某</p>
+                                <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                <ul class="sort clearfix">
+                                    <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="designdetail.html?_id=10061" target="_blank">
+                            <div class="left">
+                                <img src="img/a9ertnt3egdtxp1.jpg" class="g_imgf" />
+                            </div>
+                        </a>
+                        <div class="right_t">
+                            <div class="g_title" style="padding:0 0 52px 62px;">
+                                <p class="l1"></p>
+                                <p class="l2">PROFESSIONAL TEAM</p>
+                                <p class="l3">某某设计</p>
+                            </div>
+                            <div class="intro">
+                                <p class="h1">首席设计师</p>
+                                <p class="h2">- 赵某某</p>
+                                <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                <ul class="sort clearfix">
+                                    <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="designdetail.html?_id=10034" target="_blank">
+                            <div class="left">
+                                <img src="img/q03cjyd56g7nf1e.jpg" class="g_imgf" />
+                            </div>
+                        </a>
+                        <div class="right_t">
+                            <div class="g_title" style="padding:0 0 52px 62px;">
+                                <p class="l1"></p>
+                                <p class="l2">PROFESSIONAL TEAM</p>
+                                <p class="l3">某某设计</p>
+                            </div>
+                            <div class="intro">
+                                <p class="h1">首席设计师</p>
+                                <p class="h2">- 戴某某</p>
+                                <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                <ul class="sort clearfix">
+                                    <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="designdetail.html?_id=10033" target="_blank">
+                            <div class="left">
+                                <img src="img/13xi77rn55hr7n9.jpg" class="g_imgf" />
+                            </div>
+                        </a>
+                        <div class="right_t">
+                            <div class="g_title" style="padding:0 0 52px 62px;">
+                                <p class="l1"></p>
+                                <p class="l2">PROFESSIONAL TEAM</p>
+                                <p class="l3">某某设计</p>
+                            </div>
+                            <div class="intro">
+                                <p class="h1">首席设计师</p>
+                                <p class="h2">- 张某某</p>
+                                <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                <ul class="sort clearfix">
+                                    <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="designdetail.html?_id=10032" target="_blank">
+                            <div class="left">
+                                <img src="img/7k1bq8bjeqfsyeo.jpg" class="g_imgf" />
+                            </div>
+                        </a>
+                        <div class="right_t">
+                            <div class="g_title" style="padding:0 0 52px 62px;">
+                                <p class="l1"></p>
+                                <p class="l2">PROFESSIONAL TEAM</p>
+                                <p class="l3">某某设计</p>
+                            </div>
+                            <div class="intro">
+                                <p class="h1">首席设计师</p>
+                                <p class="h2">- 王某某</p>
+                                <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                <ul class="sort clearfix">
+                                    <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="designdetail.html?_id=10031" target="_blank">
+                            <div class="left">
+                                <img src="img/tqxnzshz6s2mrso.jpg" class="g_imgf" />
+                            </div>
+                        </a>
+                        <div class="right_t">
+                            <div class="g_title" style="padding:0 0 52px 62px;">
+                                <p class="l1"></p>
+                                <p class="l2">PROFESSIONAL TEAM</p>
+                                <p class="l3">某某设计</p>
+                            </div>
+                            <div class="intro">
+                                <p class="h1">首席设计师</p>
+                                <p class="h2">- 李某某</p>
+                                <p class="p1">中国室内装饰协会会员，编号：ZB21413791，国家注册室内设计师</p>
+                                <pre class="p2">从业时间：8年
+设计理念：设计就是色彩线条材质的交集。
+设计感悟：设计就是传达你对生活的领悟!
+擅长风格：美式(现代美式，美式乡村)北欧，现代(台式现代，港式)，地中海，简欧。
+近期作品：彩叠园，华侨城，华润凤凰城、蓝谷地、中海兰亭、华银美景、慕和南道、华宇蓉国府、卓锦城</pre>
+                                <ul class="sort clearfix">
+                                    <li><a href="designdetail.html?_ct" class="box on">查看作品+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--设计师 end-->
+    <!--装修日记-->
+    <div class="blog g_mb clearfix">
+        <div class="g_cw">
+            <div class="top clearfix">
+                <div class="g_title left">
+                    <p class="l1"></p>
+                    <p class="l2">OUR BLOG</p>
+                    <p class="l3">装修日记</p>
+                </div>
+                <ul class="sort right clearfix">
+                    <li><a href="newslist.html?_ct" class="box on" target="_blank">查看所有+</a></li>
+                </ul>
+            </div>
+
+            <div class="our">
+                <ul class="list clearfix">
+
+                    <li>
+                        <a class="box" href="newsdetail.html?_id=10043" target="_blank">
+                            <p class="pic" style="background:url(img/d9awcetjy4yjla0.jpg) no-repeat center center; background-size:cover; height:260px;"></p>
+                            <div class="fbox">
+                                <p class="p1">如何选择装修公司，怎样辨别装修公司？</p>
+                                <p class="p2">在面对市场上各种不同报价的装修公司时，业主们一般都会感到很苦</p>
+                                <div class="time clearfix">
+                                    <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                    <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                                    <p class="right">2019-02-18 &nbsp;12:09</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="newsdetail.html?_id=10042" target="_blank">
+                            <p class="pic" style="background:url(img/r3m4idly9gw5tov.jpg) no-repeat center center; background-size:cover; height:260px;"></p>
+                            <div class="fbox">
+                                <p class="p1">第二次装修，我坚持“加装”了这6样东西！</p>
+                                <p class="p2">要说装修，真的不容易，完成一套房子的装修就像经过一片雷区，不</p>
+                                <div class="time clearfix">
+                                    <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                    <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                                    <p class="right">2019-02-18 &nbsp;12:08</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box" href="newsdetail.html?_id=10041" target="_blank">
+                            <p class="pic" style="background:url(img/zzdcv0xy0xjolag.jpg) no-repeat center center; background-size:cover; height:260px;"></p>
+                            <div class="fbox">
+                                <p class="p1">装修的时候，这5个地方不要多花钱，来自老师傅的忠告</p>
+                                <p class="p2">这些地方不仅可以省钱，而且如果你要是在这些地方多花钱的话那可</p>
+                                <div class="time clearfix">
+                                    <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                    <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                                    <p class="right">2019-02-18 &nbsp;12:07</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--装修日记 end-->
+    <!--联系我们-->
+    <div class="contact g_mb clearfix">
+        <div class="g_cw">
+            <div class="left">
+                <div class="g_title">
+                    <p class="l1"></p>
+                    <p class="l2">CONTACT US</p>
+                    <p class="l3">联系我们</p>
+                </div>
+
+
+                <p class="p1">热线：XXX</p>
+                <p class="p1">地址：XXX</p>
+                <p class="p1">邮箱：XXX</p>
+                <p class="p1">电话：XXX</p>
+                <p class="p1">手机：XXX</p>
+
+
+                <div class="fenxiang">
+                    <p class="lx_font">
+                        <span class="lxwm">关注我们</span>
+                    </p>
+                    <p></p>
+                    <p class="lx_share">
+                        <a href="#" class="m ico1"><i class="fa fa-qq"></i></a>
+                        <a href="#" class="m ico2"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="m ico3"><i class="fa fa-weixin"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <p><img src="img/ditu.jpg" class="g_imgf" /></p>
+            </div>
+        </div>
+    </div>
+    <!--联系我们 end-->
+    <!--主体内容 end-->
+
+
+
+    <div class="g_footer">
+        <div class="g_cw">
+            <div class="left">
+                <p class="logo"><img src="img/f_logo.png"></p>
+                <p class="p1">成都某某装饰有限公司是一家工程将客户的需求放在第一位<br />的专业家居装饰公司。</p>
+                <p class="p2"><a href="#" class="li1">实景案例</a>       <a href="#" class="li1">某某设计</a>       <a href="#" class="li1">装修日记</a></p>
+            </div>
+            <div class="right">
+                <p class="p1">装修服务热线 ：</p>
+                <p class="p2">400-0000-000</p>
+                <p class="p3">（联系我们获取更多装修资讯，某某装饰您的最佳选择）</p>
+                <p class="p4">Copyright @ 2018 某某装饰有限公司 版权所有 技术支持: <a href="javascript:void(0)" target="_blank">xxxxxxx</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--右侧悬浮-->
+    <ul class="g_tool">
+        <li><a href="#" onclick="return false;" class="top show" title="返回顶部"><i class="ico_top"><img src="img/top.svg"></i></a></li>
+    </ul>
+    <script>if (typeof $ != 'undefined') $(function () { if (typeof _g != 'undefined') { _g.finish(function () { $(window).scroll(); }); _g.finish(); } });</script>
+    <!--右侧悬浮 end-->
+</body>
+</html>
+

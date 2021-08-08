@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>融资-项目融资平台</title>
+<meta name="keywords" content="关键词,关键词">
+<meta name="description" content="这是站点描述!">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/html5.js"></script>
+</head>
+<body>
+    <header class="public_header">
+        <aside>
+          <div class="wrap">
+             <ul class="fl top_log">
+              <li>
+               <a href="login.html" title="登录" class="txtcol">亲，请登录</a>
+               <a href="register.html" title="注册">免费注册</a>
+              </li>
+             </ul>
+             <ul class="fr">
+              <li><a href="user_center.html" title="用户中心">用户中心</a></li>
+              <li><a href="my_financing.html" title="我的融资">我的融资</a></li>
+              <li><a href="my_investment.html" title="我的投资">我的投资</a></li>
+              <li><a href="article_list.html" title="帮助中心" class="help_icon iconfont">帮助中心</a></li>
+              <li><a href="tel:XXX" title="服务热线：XXX" class="tel_icon iconfont">服务热线：XXX</a></li>
+             </ul>
+          </div>
+        </aside>
+        <section class="wrap">
+          <h1><a><img src="images/logo.png" title="站点名称"/></a></h1>
+          <form action="#" class="search_area">
+           <input type="text" placeholder="查找融资项目..." class="text_box"/>
+           <input type="submit" value="搜索" class="sub_btn"/>
+          </form>
+        </section>
+       </header>
+       <nav class="menu">
+        <ul class="wrap">
+         <li><a href="index.html" title="首页">首页</a></li>
+         <li><a href="create_financing.html" title="项目融资">创建融资</a></li>
+         
+         <li><a href="investor.html" title="投资人">投资人</a></li>
+         <li><a href="investor.html" title="投资管理公">投资管理公司</a></li>
+    
+         <li><a href="article_list.html" title="投资资讯">投资资讯</a></li>
+    
+         <li><a href="read_article.html" title="关于我们">关于我们</a></li>
+        </ul>
+       </nav>
+      <script>
+      $(document).ready(function(){
+        //current nav bg
+        $("nav li a").each(function(){
+            if($(this).attr('href') == window.location.pathname){
+             $(this).css('background-color','#f52b00');
+            }
+          });
+        });
+      </script>
+<ul class="financing_progress">
+ <li>开始之前</li>
+ <li>项目信息</li>
+ <li>发起人信息</li>
+ <li>融资信息</li>
+ <li class="current_active">项目信息确认</li>
+ <li>签署协议</li>
+ <li>成功</li>
+</ul>
+  <form action="signed_agreement.html">
+  <dl class="wrap personal" style="width:950px;border:1px #e8e8e8 solid;padding:10px;margin:20px auto;box-shadow:0 2px 5px #d2d2d2;">
+   <dt>项目信息</dt>
+   <dd>
+    <div class="li_title">项目编号</div>
+    <div class="li_cont">
+     <input type="text" value="P17958623" class="textbox"/>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">项目名称</div>
+    <div class="li_cont">
+     <input type="text" value="奥利奥融资项目" class="textbox"/>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">上传项目封面</div>
+    <div class="li_cont" style="height:68px;line-height:68px;">
+     <span class="user_pic fl"><img src="upload/list_004.jpg"></span>
+     <label class="upload_btn"><input type="file" style="display:none;"/>修改</label>
+     <span class="tips">建议头像尺寸：285px*150px(等比)</span>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">所属行业</div>
+    <div class="li_cont">
+     <select style="width:150px;height:35px;">
+      <option>科技</option>
+     </select>
+     <select style="width:150px;height:35px;">
+      <option>IT互联网</option>
+     </select>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">项目投资总额（单位：元）</div>
+    <div class="li_cont">
+     <input type="text" value="1000000" class="textbox"/>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">项目简介</div>
+    <div class="li_cont">
+     <textarea placeholder="简明扼要介绍项目...">
+     我们对不同的产品设计不同的保证金要求，包括担保机构保证金、镑客保证金、核心企业保证金等等。为实现投资人能第一时间实现债权，融资平台依据对各方的考察与评估结果要求部分担保机构、部分核心企业缴纳一定比例、金额的保证金，以便在融资人未能及时履行债务的情形下及时启动代偿。同时，上述保证金由第三方进行监管并接受权威机构审计，实现资金安全的同时为投资人提供有效还款保障。哦
+     </textarea>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">项目介绍</div>
+    <div class="li_cont">
+     <textarea placeholder="详细说明项目...">
+     我们对不同的产品设计不同的保证金要求，包括担保机构保证金、镑客保证金、核心企业保证金等等。为实现投资人能第一时间实现债权，融资平台依据对各方的考察与评估结果要求部分担保机构、部分核心企业缴纳一定比例、金额的保证金，以便在融资人未能及时履行债务的情形下及时启动代偿。同时，上述保证金由第三方进行监管并接受权威机构审计，实现资金安全的同时为投资人提供有效还款保障。
+     </textarea>
+    </div>
+   </dd>
+   <dd>
+    <div class="li_title">地区</div>
+    <div class="li_cont">
+     <select style="width:150px;height:35px;">
+      <option>陕西省</option>
+     </select>
+     <select style="width:150px;height:35px;">
+      <option>西安市</option>
+     </select>
+    </div>
+   </dd>
+   <dd><input type="submit" value="确认无误进入下一步"  class="submit_btn"/></dd>
+  </dl>
+  </form>
+  <footer>
+      <ul class="wrap help">
+       <li>
+        <dl>
+         <dt>关于项目融资平台</dt>
+         <dd><a href="read_article.html">公司简介</a></dd>
+         <dd><a href="read_article.html">联系方式</a></dd>
+         <dd><a href="read_article.html">加入我们</a></dd>
+        </dl>
+       </li>
+       <li>
+        <dl>
+         <dt>新手帮助</dt>
+         <dd><a href="read_article.html">新手指南</a></dd>
+         <dd><a href="read_article.html">常见问题</a></dd>
+         <dd><a href="read_article.html">注册协议</a></dd>
+        </dl>
+       </li>
+       <li>
+        <dl>
+         <dt>用户帮助</dt>
+         <dd><a href="read_article.html">如何融资</a></dd>
+         <dd><a href="read_article.html">如何投资</a></dd>
+         <dd><a href="read_article.html">提现充值</a></dd>
+        </dl>
+       </li>
+       <li>
+        <dl>
+         <dt>关于项目融资平台</dt>
+         <dd><a href="read_article.html">公司简介</a></dd>
+         <dd><a href="read_article.html">联系方式</a></dd>
+         <dd><a href="read_article.html">加入我们</a></dd>
+        </dl>
+       </li>
+       <li>
+        <dl>
+         <dt>关于项目融资平台</dt>
+         <dd><a href="read_article.html">公司简介</a></dd>
+         <dd><a href="read_article.html">联系方式</a></dd>
+         <dd><a href="read_article.html">加入我们</a></dd>
+        </dl>
+       </li>
+      </ul>
+      <p class="wrap btm_infor">
+       Copyright (C) 2020, All Rights Reserved<br/>
+       互联网药品信息服务资格证编号：(京)-非经营性-XXX 京公网安备XXX号<br/>
+       出版物经营许可证 新出发京批字第直0673号
+      </p>
+     </footer>
+</body>
+</html>

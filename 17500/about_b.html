@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>关于我们</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; height: 430px; }
+    .banners-pc .mode { padding-top: 230px; }
+    .banners-pc .mode .br1 { margin-left: -44px; position: relative; }
+    .banners-pc .mode .mode1 { margin-top: -46px; text-align: center; }
+    .banners-pc .mode .mode1 .p1 { margin-bottom: 20px; font-size: 32px; color: #fff; }
+    .banners-pc .mode .mode1 .p2 { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .banners-pc .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+    .banners-mb { display: none; clear: both; height: 430px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { position: relative; }
+    .banners-mb .frame .mode { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); text-align: center; height: auto; }
+    .banners-mb .frame .mode .mode1 { position: absolute; margin-top: -41px; top: 50%; left: 0; right: 0; height: auto; }
+    .banners-mb .frame .mode .mode1 .p1 { margin-bottom: 20px; font-size: 40px; color: #fff; }
+    .banners-mb .frame .mode .mode1 .p2 { font-size: 16px; color: rgba(255,255,255,0.6); }
+    .banners-mb .frame .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+    }
+
+
+    .about_b { }
+    .about_b .left { }
+    .about_b .left .list { position: relative; width: 100%; height: 100%; display: inline-block; }
+    .about_b .left .list .axis { position: absolute; left: 50%; border: solid #e0e0e0 0.5px; height: 100%; display: inline-block; }
+    .about_b .left .list .ico1 { margin-right: -15.5px; width: 30px; height: 30px; line-height: 30px; border-radius: 30px; background: #ff5e14; text-align: center; position: absolute; bottom: 0; right: 50%; }
+    .about_b .left .list .ico1 img { margin-top: -4px; width: 19px; vertical-align: middle; }
+    .about_b .left .list li { width: 100%; float: left; }
+    .about_b .left .list li .box { position: relative; padding: 40px 0 50px 0; width: 50%; float: left; }
+    .about_b .left .list li .box .tb { position: absolute; top: 47px; right: -6.5px; width: 13px; height: 13px; border-radius: 13px; border: solid #e0e0e0 1px; background: #fff; }
+    .about_b .left .list li .box .mode { }
+    .about_b .left .list li .box .mode .pic { margin-bottom: 30px; margin-right: 60px; background: no-repeat center center; background-size: cover; width: 340px; height: 220px; float: left; }
+    .about_b .left .list li .box .mode .date .p1 { font-size: 24px; font-weight: bold; color: #1a1a1a; float: left; }
+    .about_b .left .list li .box .mode .date .p1 .hx { margin-top: 13px; margin-left: 10px; border: solid #e0e0e0 0.5px; width: 60px; border-bottom: solid #e0e0e0 0.5px; display: block; float: right; }
+    .about_b .left .list li .box .mode .buc { padding-right: 90px; clear: both; }
+    .about_b .left .list li .box .mode .buc .p2 { font-size: 14px; color: #4c4c4c; line-height: 24px; }
+
+
+    .about_b .left .list li:nth-child(2n+2) { float: right; }
+    .about_b .left .list li:nth-child(2n+2) .box { float: right; }
+    .about_b .left .list li:nth-child(2n+2) .box .tb { left: -6.5px; }
+    .about_b .left .list li:nth-child(2n+2) .box .mode .pic { margin-right: 0; margin-left: 60px; float: right; }
+    .about_b .left .list li:nth-child(2n+2) .box .mode .date .p1 { margin-right: 0; margin-left: 10px; float: right; }
+    .about_b .left .list li:nth-child(2n+2) .box .mode .buc { padding-right: 0; padding-left: 90px; }
+    .about_b .left .list li .box:hover .tb { background: #ff5e14; border: #ff5e14; transition: ease .6s; }
+    .about_b .left .list li .box:hover .mode .date .p1 { color: #ff5e14; transition: ease .3s; }
+    .about_b .left .list li .on .tb { background: #ff5e14; border: #ff5e14; }
+    .about_b .left .list li .on .mode .date .p1 { color: #ff5e14; transition: ease .3s; }
+
+
+    @media (max-width: 1024px) {
+        .about_b .left .list .axis { left: 0; }
+        .about_b .left .list li .box { padding: 40px 0 50px 50px; width: 100%; }
+        .about_b .left .list li .box .tb { left: -6.5px; right: 0; }
+        .about_b .left .list li .box .mode .pic { margin-right: 0; float: none; }
+        .about_b .left .list li .box .tb { background: #ff5e14; border: #ff5e14; }
+        .about_b .left .list li .box .mode .date .p1 { color: #ff5e14; transition: ease .3s; }
+        .about_b .left .list li .box .mode .buc { padding: 0; }
+
+        .about_b .left .list li:nth-child(2n+2) { float: left; }
+        .about_b .left .list li:nth-child(2n+2) .box { float: left; }
+        .about_b .left .list li:nth-child(2n+2) .box .tb { left: -6.5px; right: 0; }
+        .about_b .left .list li:nth-child(2n+2) .box .mode .pic { margin-right: 0; margin-left: 0; float: none; }
+        .about_b .left .list li:nth-child(2n+2) .box .mode .date .p1 { margin-right: 0; margin-left: 0; float: none; }
+        .about_b .left .list li:nth-child(2n+2) .box .mode .buc { padding-right: 0; padding-left: 0; }
+        .about_b .left .list li .box .mode .date .p1 .hx { margin-top: 0; margin-bottom: 7px; float: none; display: inline-block; }
+
+        .about_b .left .list .ico1 { bottom: -40px; }
+    }
+
+    @media (max-width: 667px) {
+        .about_b .left .list li .box .mode .pic { width: 100%; }
+    }
+
+
+
+    .g_page { text-align: center; }
+    .g_page ul { }
+    .g_page ul li { margin: 0 10px; display: inline-block; }
+    .g_page ul li .box { }
+    .g_page ul li .box .ico { display: inline-block; }
+    .g_page ul li .box .ico2 { display: none; }
+
+    .g_page ul li .box:hover .ico1 { display: none; transition: ease .3s; }
+    .g_page ul li .box:hover .ico2 { display: inline-block; transition: ease .3s; }
+    .g_page ul li .on .ico1 { display: none; transition: ease .3s; }
+    .g_page ul li .on .ico2 { display: inline-block; transition: ease .3s; }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class="">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class=" on">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：XXX<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="banners-pc">
+
+        <div class="" style="background:url(img/bn1.jpg)no-repeat center center; background-size: cover;width:100%; height:430px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <div class="mode1">
+                        <p class="p1">关于我们</p>
+                        <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>关于我们<i class="fa fa-angle-right"></i>发展历史</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="banners-mb" zoom-width="1024" zoom-heigh="430">
+        <div class="frame" style=" background:url(img/bn2.jpg) no-repeat center center; background-size:cover; width:100%;">
+            <div class="mode">
+                <div class="mode1">
+                    <p class="p1">关于我们</p>
+                    <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>关于我们<i class="fa fa-angle-right"></i>发展历史</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            $('.banners-pc, .banners-mb').slick({ arrows: true, dots: false, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+        })();
+    </script>
+
+
+
+    <div class="about_b">
+        <div class="top_nav">
+            <div class="g_cw">
+                <ul class="nav_a">
+                    <li><a class="box" href="about.html">公司简介</a></li>
+                    <li><a class="box on" href="about_b.html">发展历史</a></li>
+                    <li><a class="box" href="about_c.html">荣誉资质</a></li>
+                    <li><a class="box">企业文化</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g_cw g_mt g_mb">
+            <div class="left">
+
+                <ul class="list">
+                    <div class="axis"></div>
+                    <div class="ico1"><img src="img/ab_ico1.svg"></div>
+
+                    <li>
+                        <a class="box">
+                            <div class="tb"></div>
+                            <div class="mode">
+                                <p class="pic" style="background-image:url(/r/data/g5ewfd5qcpfcyel.jpg);"></p>
+                                <div class="date">
+                                    <p class="p1">2012-05<span class="hx"></span></p>
+                                </div>
+                                <div class="buc">
+                                    <p class="p2">2012年（壬辰年），全国房地产开发投资71804亿元，比上年名义增长16.2%扣除价格因素实际增长14.9%，增速比1-11月份回落0.5个百分点，比2011年回落11.9个百分点。其中，住宅投资49374亿元，增长11.4%，增速比1-11月份回落0.5个百分点，占房地产开发投资的比重为68.8%。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="tb"></div>
+                            <div class="mode">
+                                <p class="pic" style="background-image:url(/r/data/pb8l9bply7rfme3.jpg);"></p>
+                                <div class="date">
+                                    <p class="p1">2013-07<span class="hx"></span></p>
+                                </div>
+                                <div class="buc">
+                                    <p class="p2">2013年，东部地区房地产开发投资40541亿元，比上年增长13.9%，增速比1-11月份回落0.9个百分点；中部地区房地产开发投资15763亿元，增长18.3%，增速回落1.1个百分点；西部地区房地产开发投资15500亿元，增长20.4%，增速提高0.9个百分点。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="tb"></div>
+                            <div class="mode">
+                                <p class="pic" style="background-image:url(/r/data/50kstu3vwtixhed.jpg);"></p>
+                                <div class="date">
+                                    <p class="p1">2013-08<span class="hx"></span></p>
+                                </div>
+                                <div class="buc">
+                                    <p class="p2">2013年，房地产开发企业房屋施工面积573418万平方米，比上年增长13.2%，增速比1-11月份回落0.1个百分点；其中，住宅施工面积428964万平方米，增长10.6%。房屋新开工面积177334万平方米，下降7.3%，降幅比1-11月份扩大0.1个百分点；其中，住宅新开工面积130695万平方米，下降11.2%。房屋竣工面积99425万平方米，增长7.3%，增速比1-11月份回落6.8个百分点；其中，住宅竣工面积79043万平方米，增长6.4%。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="tb"></div>
+                            <div class="mode">
+                                <p class="pic" style="background-image:url(/r/data/n3cdodvlb8i2eoq.jpg);"></p>
+                                <div class="date">
+                                    <p class="p1">2015-07<span class="hx"></span></p>
+                                </div>
+                                <div class="buc">
+                                    <p class="p2">2013年，东部地区房地产开发投资40541亿元，比上年增长13.9%，增速比1-11月份回落0.9个百分点；中部地区房地产开发投资15763亿元，增长18.3%，增速回落1.1个百分点；西部地区房地产开发投资15500亿元，增长20.4%，增速提高0.9个百分点。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="box">
+                            <div class="tb"></div>
+                            <div class="mode">
+                                <p class="pic" style="background-image:url(/r/data/3uftn17jgs17ex3.jpg);"></p>
+                                <div class="date">
+                                    <p class="p1">2016-05<span class="hx"></span></p>
+                                </div>
+                                <div class="buc">
+                                    <p class="p2">2012年（壬辰年），全国房地产开发投资71804亿元，比上年名义增长16.2%扣除价格因素实际增长14.9%，增速比1-11月份回落0.5个百分点，比2011年回落11.9个百分点。其中，住宅投资49374亿元，增长11.4%，增速比1-11月份回落0.5个百分点，占房地产开发投资的比重为68.8%。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

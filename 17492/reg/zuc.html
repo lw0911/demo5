@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery可切换主题的注册表单</title>
+<link href="static/css/member/vip.css" rel="stylesheet" type="text/css" />
+<link href="static/css/member/skin_01.css" rel="stylesheet" type="text/css" id="skin">
+</head>
+<body>
+<div class="main">
+<div class="main_t"></div>
+<div class="main_m">
+    <div class="main_bd">
+        <div class="run"><a href="javascript:void(0)" class="a1 run_skin" title="皮肤设置"></a><a href="javascript:void(0)" class="a2 run_tm" title="透明度设置"></a></div>
+        <div class="yskj step1">
+            <div class="yskj_tt"><b>会员注册</b></div>
+            <form method="post">
+                <input type="hidden" name="pid" value="10046">
+                <input type="hidden" name="parentid" value="">
+                <div class="yskj_bd">
+                    <ul class="ul">
+                        <li><label>账户名称：</label><input id="account" name="account" type="text" class="txt1 txt" placeholder="请输入5位数字ID或者邮箱"></li>
+                        <li><label>设置密码：</label><input id="password" name="password" type="password" class="txt1 txt" /></li>
+                        <li><label>确认密码：</label><input id="passwordto" name="passwordto" type="password" class="txt1 txt" /></li>
+                                                <li id="captchas" class="dn"><label>短信验证码：</label><input name="captcha" class="txt1 txt" style=" width:130px;" /><a id="gsc" href="javascript:void(0);" class="u-btn-red ml10">获取短信验证码</a></li>
+                    </ul>
+                    <div class="reg"><input type="submit" name="dosubmit" value="立即注册" class="btn2"><a href="?app=member" class="btn3">已有账号</a></div>
+                    <div class="other_login" style="margin-left:140px;">
+                    其他账号登陆：
+                    <a href="api/oauth.php?action=geturl"><img src="static/css/member/images/login/qq_big.png" height="16"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="main_bg opcity"></div>
+    </div>
+</div>
+<div class="main_b"></div>
+</div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>
+<script type="text/javascript" src="static/javascript/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="static/javascript/jquery.lqper.js"></script>
+<script type="text/javascript" src="static/javascript/login.js"></script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="static/javascript/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.main_t,.main_m,.main_b,.run a');
+</script>
+<![endif]-->

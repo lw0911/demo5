@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>Template</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./lib/Swiper/dist/css/swiper.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./less/main.css"/>
+
+</head>
+<body>
+<!--顶部固定栏-->
+<div class="top_big_box" style="z-index:10000;width: 100%;">
+    <!--顶部通栏-->
+    <div class="fw_topBar">
+        <div class="container">
+            <div class="row">
+                <!-- 小屏模式 不分-->
+                <div class="col-xs-12 hidden-xs fw_topBar_item">
+                    <a href="javascript:;"><img src="./images/bs_05.jpg" alt=""/><span>Enhgilsh</span></a>
+                    <a href="javascript:;"><img src="./images/bs_03.jpg" alt=""/><span>中文版</span></a>
+                </div>
+                <!-- 超小屏结构及样式-->
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg fw_topBar_item_mb">
+                    <a class="call_pic" href="javascript:;"><img src="./images/logo.png" alt=""/></a>
+
+                    <div class="cn_wab_ng_wab">
+                        <a href="javascript:;">中文</a>
+                        <a class="ng_wab" href="javascript:;">英文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--小平模式 分84分-->
+                <div class="col-xs-8 fw_logo hidden-xs">
+                    <a href="javascript:;"><img src="./images/logo.png" alt="XXX玻璃"/></a>
+                </div>
+                <div class="col-xs-4 fw_line hidden-xs">
+                    <a href="javascript:;"><img src="./images/dianhua.png" alt="全国电话热线"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--导航栏-->
+    <nav class="navbar fw_nav" role="navigation">
+        <!--除了超小屏其他显示-->
+        <div class="container hidden-xs">
+            <div class="navbar-header">
+                <!--切换按钮-->
+                <!--
+                    class="navbar-toggle collapsed"  是一个导航切换按钮  collapsed 折叠组件
+                    data-toggle="collapse" 用来初始化折叠组件
+                    data-target="#bs-example-navbar-collapse-1" 指定控制的是那个标签
+                -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--超小屏下显示-->
+                <!--<a class="navbar-brand hidden-lg hidden-md hidden-sm" href="javascript:;">-->
+                <!--</a>-->
+            </div>
+            <!--导航条内容-->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li class="active"><a href="javascript:;">关于XXX</a></li>
+                    <li><a href="javascript:;">产品展示</a></li>
+                    <li><a href="javascript:;">新闻动态</a></li>
+                    <li class="hidden-sm"><a href="javascript:;">人才招聘</a></li>
+                    <li class="hidden-sm hidden-md"><a href="javascript:;">联系我们</a></li>
+                    <li class="hidden-sm hidden-md"><a href="javascript:;">在线留言</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--超小屏显示，其他隐藏-->
+        <div class="container fw_nav_xs_bg hidden-md hidden-sm hidden-lg">
+            <div class="col-xs-12">
+                <div class="fw_nav_xs">
+                    <div class="row">
+                        <ul>
+                            <li><a href="javascript:;">关于XXX</a></li>
+                            <li><a href="javascript:;">产品展示</a></li>
+                            <li><a href="javascript:;">新闻动态</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="fw_nav_xs">
+                    <div class="row">
+                        <ul>
+                            <li><a href="javascript:;">人才招聘</a></li>
+                            <li><a href="javascript:;">联系我们</a></li>
+                            <li><a href="javascript:;">在线留言</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--轮播图-->
+<div class="myBigCarousel hidden-xs">
+    <div class="container-fluid">
+        <div class="row">
+            <div role="tabpanel" class="tab-pane" id="profiles">
+                <div class="bs-example" data-example-id="carousel-with-captions">
+                    <div id="carousel-example-captions_one" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="hidden-xs item_pic" alt="" src="images/banner1.jpg"
+                                     data-holder-rendered="true">
+                                <img class="hidden-lg hidden-sm hidden-md" alt="" src="images/1.jpg"
+                                     data-holder-rendered="true">
+                            </div>
+                            <div class="item">
+                                <img class="hidden-xs item_pic" alt="" src="images/banner2.jpg"
+                                     data-holder-rendered="true">
+                                <img class="hidden-lg hidden-sm hidden-md" alt="" src="images/2.jpg"
+                                     data-holder-rendered="true">
+
+                            </div>
+                            <div class="item">
+                                <img class="hidden-xs item_pic" alt="" src="images/banner3.jpg"
+                                     data-holder-rendered="true">
+                                <img class="hidden-lg hidden-sm hidden-md" alt="900x500" src="images/3.jpg"
+                                     data-holder-rendered="true">
+
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-captions_one" role="button"
+                           data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-captions_one" role="button"
+                           data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--超小屏触屏产品轮播-->
+<div class="swiper-container hidden-sm hidden-md hidden-lg" id="al">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide new_app">
+            <div class=" new_bgColor clearfix">
+                <div class="new_pic">
+                    <a href="javascript:;">
+                        <img src="./images/1.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide new_app">
+            <div class=" new_bgColor clearfix">
+                <div class="new_pic">
+                    <a href="javascript:;">
+                        <img src="./images/2.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide new_app">
+            <div class=" new_bgColor clearfix">
+                <div class="new_pic">
+                    <a href="javascript:;">
+                        <img src="./images/3.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--产品展示-->
+<div class="productShow ">
+    <div class="show_top">
+        <div class="container">
+            <div class="row">
+                <div class="show_top_bg_pic">
+                    <!--<img src="./images/chanpinzhanshi.png" alt=""/>  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="show_left">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 product_classify">
+                    <div class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <div class="classify_name">
+                                <img src="./images/chanpinfenlei.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 hidden-xs">
+                            <div class="classify_list">
+                                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                    <button type="button" class="btn btn-default">新款玻璃瓶</button>
+                                    <button type="button" class="btn btn-default">罐头瓶系列</button>
+                                    <button type="button" class="btn btn-default">蜂蜜瓶系列</button>
+                                    <button type="button" class="btn btn-default">酱菜瓶系列</button>
+                                    <button type="button" class="btn btn-default">酒瓶系列</button>
+                                    <button type="button" class="btn btn-default">调料瓶系列</button>
+                                    <button type="button" class="btn btn-default">麻油瓶系列</button>
+                                    <button type="button" class="btn btn-default">工艺烛台系列</button>
+                                    <button type="button" class="btn btn-default">保健品系列</button>
+                                    <button type="button" class="btn btn-default">口杯系列</button>
+                                    <button type="button" class="btn btn-default">把子杯系列</button>
+                                    <button type="button" class="btn btn-default">组培菌苗瓶系列</button>
+                                    <button type="button" class="btn btn-default">饮料玻璃瓶</button>
+                                    <button type="button" class="btn btn-default">香水玻璃瓶</button>
+                                    <button type="button" class="btn btn-default">小玻璃瓶</button>
+                                    <button type="button" class="btn btn-default">精油瓶</button>
+                                    <button type="button" class="btn btn-default">玻璃工艺品</button>
+                                    <button type="button" class="btn btn-default">玻璃器皿</button>
+                                    <button type="button" class="btn btn-default">玻璃制品</button>
+                                    <button type="button" class="btn btn-default">化妆品瓶</button>
+                                    <button type="button" class="btn btn-default">瓶盖系列</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 hidden-xs hidden-lg hidden-md hidden-sm">
+                            <div class="bs-example">
+                                <nav id="navbar-example" class="navbar navbar-default navbar-static">
+                                    <div class="container-fluid">
+                                        <div class="navbar-header">
+                                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+                                                    data-target=".bs-example-js-navbar-collapse">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href="#">产品菜单</a>
+                                        </div>
+                                        <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
+                                            <ul class="nav navbar-nav">
+                                                <li class="dropdown">
+                                                    <a id="drop1" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        新款玻璃瓶
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop2" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        罐头瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop3" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        蜂蜜瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop4" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        酱菜瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop5" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        酒瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop6" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        调料瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop7" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        麻油瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop8" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        工艺烛台系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop9" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        保健品系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop10" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        口杯系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop11" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        把子杯系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop12" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        组培菌苗瓶系列
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop13" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        饮料玻璃瓶
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop14" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        香水玻璃瓶
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop15" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        小玻璃瓶
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop16" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        精油瓶
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop17" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        玻璃工艺品
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop18" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        玻璃器皿
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop19" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        玻璃制品
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop20" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        化妆品瓶
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a id="drop21" href="#" class="dropdown-toggle"
+                                                       data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                       aria-expanded="false">
+                                                        瓶盖系列
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- /.nav-collapse -->
+                                    </div>
+                                    <!-- /.container-fluid -->
+                                </nav>
+                                <!-- /navbar-example -->
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 tabs_big">
+                    <div class="col-sm-12">
+                        <div class="product_top">
+                            <div>
+                                <!-- 产品nav-tabs轮播图切换 -->
+                                <ul class="nav nav-tabs clearfix" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">精品展示</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">新品展示</a>
+                                    </li>
+                                </ul>
+                                <!-- 产品轮播图精品展示内容 -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="home">
+                                        <div class="bs-example hidden-xs" data-example-id="carousel-with-captions">
+                                            <div id="carousel-example-captions" class="carousel slide"
+                                                 data-ride="carousel">
+                                                <div class="carousel-inner" role="listbox">
+                                                    <div class="item active">
+                                                        <img data-src="holder.js/900x500/auto/#777:#777" alt="900x500"
+                                                             src="./images/porducts/tab_Carousel01.jpg"
+                                                             data-holder-rendered="true">
+
+                                                        <div class="carousel-caption">
+                                                            <h3>蜂蜜瓶23</h3>
+
+                                                            <p>有翠绿透明，淡黄透明，纯透明</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <img data-src="holder.js/900x500/auto/#666:#666" alt="900x500"
+                                                             src="./images/porducts/tab_Carousel02.jpg"
+                                                             data-holder-rendered="true">
+
+                                                        <div class="carousel-caption">
+                                                            <h3>蜂蜜瓶23</h3>
+
+                                                            <p>有翠绿透明，淡黄透明，纯透明</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <img data-src="holder.js/900x500/auto/#555:#555" alt="900x500"
+                                                             src="./images/porducts/tab_Carousel03.jpg"
+                                                             data-holder-rendered="true">
+
+                                                        <div class="carousel-caption">
+                                                            <h3>蜂蜜瓶23</h3>
+
+                                                            <p>有翠绿透明，淡黄透明，纯透明</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="left carousel-control" href="#carousel-example-captions"
+                                                   role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"
+                                                          aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel-example-captions"
+                                                   role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"
+                                                          aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--超小屏触屏产品轮播-->
+                                        <div class="swiper-container hidden-sm hidden-md hidden-lg" id="al_01">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide new_app">
+                                                    <div class=" new_bgColor clearfix">
+                                                        <div class="new_pic">
+                                                            <a href="javascript:;">
+                                                                <img src="./images/1.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide new_app">
+                                                    <div class=" new_bgColor clearfix">
+                                                        <div class="new_pic">
+                                                            <a href="javascript:;">
+                                                                <img src="./images/2.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide new_app">
+                                                    <div class=" new_bgColor clearfix">
+                                                        <div class="new_pic">
+                                                            <a href="javascript:;">
+                                                                <img src="./images/3.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpane2" class="tab-pane" id="profile">
+                                        <div class="bs-example hidden-xs" data-example-id="carousel-with-captions">
+                                            <div id="carousel-example-captionss" class="carousel slide"
+                                                 data-ride="carousel">
+                                                <div class="carousel-inner" role="listbox">
+                                                    <div class="item active">
+                                                        <img data-src="holder.js/900x500/auto/#777:#777" alt="900x500"
+                                                             src="./images/porducts/tab_Carousel01.jpg"
+                                                             data-holder-rendered="true">
+
+                                                        <div class="carousel-caption">
+                                                            <h3>蜂蜜瓶23</h3>
+
+                                                            <p>有翠绿透明，淡黄透明，纯透明</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <img data-src="holder.js/900x500/auto/#666:#666" alt="900x500"
+                                                             src="./images/porducts/tab_Carousel02.jpg"
+                                                             data-holder-rendered="true">
+
+                                                        <div class="carousel-caption">
+                                                            <h3>蜂蜜瓶23</h3>
+
+                                                            <p>有翠绿透明，淡黄透明，纯透明</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <img data-src="holder.js/900x500/auto/#555:#555" alt="900x500"
+                                                             src="./images/porducts/tab_Carousel03.jpg"
+                                                             data-holder-rendered="true">
+
+                                                        <div class="carousel-caption">
+                                                            <h3>蜂蜜瓶23</h3>
+
+                                                            <p>有翠绿透明，淡黄透明，纯透明</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="left carousel-control" href="#carousel-example-captionss"
+                                                   role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"
+                                                          aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel-example-captionss"
+                                                   role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"
+                                                          aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--超小屏触屏产品轮播-->
+                                        <div class="swiper-container hidden-sm hidden-md hidden-lg" id="al_last">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide new_app">
+                                                    <div class=" new_bgColor clearfix">
+                                                        <div class="new_pic">
+                                                            <a href="javascript:;">
+                                                                <img src="./images/1.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide new_app">
+                                                    <div class=" new_bgColor clearfix">
+                                                        <div class="new_pic">
+                                                            <a href="javascript:;">
+                                                                <img src="./images/2.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide new_app">
+                                                    <div class=" new_bgColor clearfix">
+                                                        <div class="new_pic">
+                                                            <a href="javascript:;">
+                                                                <img src="./images/3.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="product_bottom">
+                            <div class="row ">
+                                <div class="col-sm-4">
+                                    <div class="prod_pic page02">
+                                        <ul style="-webkit-padding-start: 0px;">
+                                            <li class="li01">
+                                                <a href="javascript:;" title="" rel="nofollow">
+                                                    <img alt="" src="./images/porducts/prod_Carousel01.jpg"/>
+                                                    <big>
+                                                        <tt></tt>
+                                                        <em>
+                                                            <ins></ins>
+                                                            <i>玻璃瓶</i>
+                                                        </em>
+                                                    </big>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="prod_pic">
+                                        <div class="prod_pic page02">
+                                            <ul style="-webkit-padding-start: 0px;">
+                                                <li class="li01">
+                                                    <a href="javascript:;" title="" rel="nofollow">
+                                                        <img alt="" src="./images/porducts/prod_Carousel02.jpg"/>
+                                                        <big>
+                                                            <tt></tt>
+                                                            <em>
+                                                                <ins></ins>
+                                                                <i>玻璃瓶</i>
+                                                            </em>
+                                                        </big>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="prod_pic">
+                                        <div class="prod_pic page02">
+                                            <ul style="-webkit-padding-start: 0px;">
+                                                <li class="li01">
+                                                    <a href="javascript:;" title="" rel="nofollow">
+                                                        <img alt="" src="./images/porducts/prod_Carousel03.jpg"/>
+                                                        <big>
+                                                            <tt></tt>
+                                                            <em>
+                                                                <ins></ins>
+                                                                <i>玻璃瓶</i>
+                                                            </em>
+                                                        </big>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+<!--公司简介-->
+<div class="fw_company">
+    <div class="container">
+        <div class="row">
+            <!-- 小屏模式 不分-->
+            <div class="fw_company_parent hidden-xs">
+                <div class="col-xs-12">
+                    <div class="fw_company_item">
+                        <div class="fw_company_text">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徐州丰玻璃制品有限公司是一件集开发、生产、销售中高档玻璃瓶等产品服务于一体，经国家相关部门比准注册的企业。公司凭着良好的信用口碑、精致的产品和周到的服务于多家国内外客商建立良好的合作关系。公司拥有自营进出口权，系列产品出口尼泊尔、澳大利亚、欧美等多个国家和地区</p>
+
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司位于江苏省徐州市马坡镇玻璃制品工业园区，主要生产饮料瓶、罐头瓶、蜂蜜瓶、酒瓶、保健瓶、香水瓶、口杯、工艺烛台、组培菌苗瓶等各类生活用瓶，同时生产瓶盖等相关配套产品。玻璃瓶制品经内质检严格把关，质量检查层层闭环，保证了产品的高品质。公司还可以按客户要求设计加工或来样定制，同时提供按照授权印刷制作商标贴纸等相关配套服务。XXX玻璃制品有限公以“满足客户的需求”为中心，全体员工将以最真挚的热情欢迎广大客户亲临指导、来样订货。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 超小屏模式-->
+            <div class="fw_company_parent_mb hidden-sm hidden-md hidden-lg">
+                <div class="col-xs-12 fw_company_text">
+                    <!--<div class="fw_company_item">-->
+                        <div>
+                            <p class="fw_company_text_p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徐州丰玻璃制品有限公司是一件集开发、生产、销售中高档玻璃瓶等产品服务于一体，经国家相关部门比准注册的企业。公司凭着良好的信用口碑、精致的产品和周到的服务于多家国内外客商建立良好的合作关系。公司拥有自营进出口权，系列产品出口尼泊尔、澳大利亚、欧美等多个国家和地区</p>
+
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司位于江苏省徐州市马坡镇玻璃制品工业园区，主要生产饮料瓶、罐头瓶、蜂蜜瓶、酒瓶、保健瓶、香水瓶、口杯、工艺烛台、组培菌苗瓶等各类生活用瓶，同时生产瓶盖等相关配套产品。玻璃瓶制品经内质检严格把关，质量检查层层闭环，保证了产品的高品质。公司还可以按客户要求设计加工或来样定制，同时提供按照授权印刷制作商标贴纸等相关配套服务。XXX玻璃制品有限公以“满足客户的需求”为中心，全体员工将以最真挚的热情欢迎广大客户亲临指导、来样订货。</p>
+                        </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--新闻动态和标签-->
+<div class="fw_new">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 fw_new_left">
+                <div class="row">
+                    <div class="col-xs-12 fw_new_left_one">
+                        <div class="row ">
+                            <p>新闻动态</p><span>NEWS INFORMATION</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 fw_new_left_two">
+                        <div class="row">
+                            <div class="col-xs-5 fw_new_left_two_left">
+                                <img src="./images/porducts/tab_Carousel02.jpg" alt=""/>
+                            </div>
+                            <div class="col-xs-7 fw_new_left_two_right">
+                                <h3>&nbsp;&nbsp;&nbsp;市场回暖双向选择 玻璃瓶也谈轻量化</h3>
+
+                                <p>
+                                    随着技术的发展，近年来塑料罐等成本更低的包装材料出现，对玻璃罐包装形成了挑战，减重和降低成本这两个方面是玻璃罐今后需要重视的，玻璃罐头外形看上去往往都比较笨重，但是在讲究轻量化包装的今天，我们在超市的货架上可以看到，玻璃罐头包装依旧占据着很大的市场份额，这与玻璃罐头包装自身的一些优势是分不开的。第一个，玻璃罐头于马口铁盖的密封包装，密封性能极佳，与塑料瓶盖等其他密封性能比较，马口铁盖在非常注重食品安全另一的包装占据着很大优势。第二，玻璃罐往往瓶口较大，......<a
+                                        href="javascript:;">【查看详情】</a></p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 fw_new_left_three">
+                    <div class="row">
+                        <div class="col-xs-12 new_list_01">
+                            <a href="javascript:;">酱菜瓶，酱菜长期存储还是玻璃瓶为宜</a>
+                            <i>2014/7/18</i>
+                            <span></span>
+                        </div>
+                        <div class="col-xs-12 new_list_02">
+                            <a href="javascript:;">自制玻璃瓶罐简易相框</a>
+                            <i>2014/7/18</i>
+                            <span></span>
+                        </div>
+                        <div class="col-xs-12 new_list_03">
+                            <a href="javascript:;">玻璃瓶在食品包装中的地位</a>
+
+                            <i>2013/7/13</i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 hidden-xs fw_new_right">
+                <div class="box01">
+                    <img src="./images/inic_01.png" alt=""/>
+                    <i></i>
+
+                    <div class="box01_talent">
+                        <a href="javascript:;">人才招聘</a>
+
+                        <p class="small_text">TALENT RECRUITMENT</p>
+                    </div>
+                </div>
+                <div class="box02">
+                    <img src="./images/inic_02.png" alt=""/>
+                    <i></i>
+
+                    <div class="box01_talent">
+                        <a href="javascript:;">联系我们</a>
+
+                        <p class="small_text">CONTACT US</p>
+                    </div>
+                </div>
+                <div class="box03">
+                    <img src="./images/inic_03.png" alt=""/>
+                    <i></i>
+
+                    <div class="box01_talent">
+                        <a href="javascript:;">在线留言</a>
+
+                        <p class="small_text">ONLINE MESSAGE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg fw_new_right_mb">
+                <div class="row">
+                    <div class="box01">
+                        <div class="box_all">
+                            <img src="./images/inic_01.png" alt=""/>
+                            <i></i>
+                            <div class="box01_talent">
+                                <a href="javascript:;">人才招聘</a>
+
+                                <p class="small_text">TALENT RECRUITMENT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box02">
+                        <div class="box_all">
+                            <img src="./images/inic_02.png" alt=""/>
+                            <i></i>
+                            <div class="box01_talent">
+                                <a href="javascript:;">联系我们</a>
+
+                                <p class="small_text">CONTACT US</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box03">
+                        <div class="box_all">
+                            <img src="./images/inic_03.png" alt=""/>
+                            <i></i>
+                            <div class="box01_talent">
+                                <a href="javascript:;">在线留言</a>
+                                <p class="small_text">ONLINE MESSAGE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部栏目-->
+<div class="fw_footer">
+    <!--友情链接-->
+    <div class="fw_footer_up">
+        <div class="container">
+            <div class="row">
+                <div class="fw_footer_top">
+                    <div class="col-sm-2"><img src="./images/youqinglianjie.png" alt=""/></div>
+                    <div class="col-sm-10">
+                        <ul>
+                            <li><a href="javascript:;">精英瓶</a></li>
+                            <li><a href="javascript:;">玻璃工艺品</a></li>
+                            <li><a href="javascript:;">玻璃花瓶</a></li>
+                            <li><a href="javascript:;">青白料玻璃瓶</a></li>
+                            <li><a href="javascript:;">玻璃烛台</a></li>
+                            <li><a href="javascript:;">橄榄油瓶</a></li>
+                            <li><a href="javascript:;">泡酒坛</a></li>
+                            <li><a href="javascript:;">储物罐系列</a></li>
+                            <li><a href="javascript:;">香薰瓶系列</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fw_footer_center"></div>
+    <!--版权-->
+    <div class="fw_footer_down">
+        <div class="container">
+            <div class="row">
+                <div class="fw_footer_bottom">
+                    <p>Copyright 2020 徐州XXX玻璃制品有限公司 版权所有 技术支持 XXX 苏ICP备XXX</p>
+
+                    <p>
+                        公司地址：XXX&nbsp;&nbsp;&nbsp;&nbsp;联系电话：XXX&nbsp;&nbsp;&nbsp;&nbsp;QQ:XXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./js/index.js"></script>
+<script src="./lib/Swiper/dist/js/swiper.jquery.min.js"></script>
+<script>
+    var mySwiper = new Swiper('#al', {
+        loop: true,
+    });
+    var mySwiper01 = new Swiper('#al_01', {
+        loop: true,
+         observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    observeParents:true,//修改swiper的父元素时，自动初始化swiper
+    });
+
+    var mySwiper02 = new Swiper('#al_last', {
+        loop: true,
+         observer:true,//修改swiper自己或子元素时，自动初始化swiper
+   		 observeParents:true,//修改swiper的父元素时，自动初始化swiper
+    });
+    
+
+    
+  
+	
+</script>
+</body>
+</html>

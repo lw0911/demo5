@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name = "format-detection" content = "telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>irealtech</title>
+<meta name='keywords' content='irealtech' />
+<meta name='description' content='irealtech' />
+<meta name="author" content="上海XXX信息科技有限公司提供技术支持," />
+
+
+
+
+
+<link href="css/reset.css" type="text/css" rel="stylesheet" /><link href="css/layout.css" type="text/css" rel="stylesheet" /><link href="css/common.css" type="text/css" rel="stylesheet" /><link href="css/index2.css" type="text/css" rel="stylesheet" /><link href="css/media.css" type="text/css" rel="stylesheet" /><link href="css/animate.css" type="text/css" rel="stylesheet" /><link href="css/wookmark.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/jquery.imagesloaded.js"></script>
+<script type="text/javascript" src="js/jquery.wookmark.js"></script>
+<script type="text/javascript" src="js/index_list.js"></script>
+<!--[if lt IE 9]>
+<script src="bts/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bts/js/respond.min.js"></script>
+<![endif]-->
+<title>
+
+</title></head>
+
+<body>
+
+	
+
+<script src="https://use.typekit.net/onl2png.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<style type="text/css">
+.outside_font{
+  font-family: "source-han-sans-simplified-c";
+  font-weight:100;
+  }
+</style>
+
+<script type="text/javascript">
+$(function(){
+	wow = new WOW({
+		animateClass: 'animated',
+		offset:100,
+		callback:function(box){
+		}
+	  }
+	);
+	wow.init();
+});
+</script>
+<script type="text/javascript">
+$(function(){
+	
+	$('header .nav_list li a').click(function () {
+    	$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top - 100 + "px"
+			}, {
+				duration: 500,
+				easing: "swing"
+			});
+		return false;
+	});
+
+	
+	$(".mobile_menu_ico").click(function(){
+		$(".page_mask").fadeIn();
+		$(".mobile_pop_menu_body").animate({"right":"0"},300);
+	});
+	$(".page_mask").click(function(){
+		$(".page_mask").fadeOut();
+		$(".mobile_pop_menu_body").animate({"right":"-100%"},300);
+	});
+	$(".mobile_pop_menu_body ul li a").click(function(){
+		
+		$(".page_mask").fadeOut();
+		$(".mobile_pop_menu_body").animate({"right":"-100%"},300);
+		
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top - 50 + "px"
+			}, {
+				duration: 1000,
+				easing: "swing"
+			});
+		return false;
+	});
+});
+</script>
+
+<header>
+	<div class="warp">
+		<a href="index.html"><img src="images/logo.jpg" class="logo fl" /></a>
+		<ul class="nav_list clearfix fr">
+			<li><a href="#company">COMPANY</a></li>
+			<li><a href="#protfolio">PORTFOLIO</a></li>
+			<li><a href="#clients">CLIENTS</a></li>
+			<li><a href="#contacts">CONTACTS</a></li>
+			<li><a href="index.html">HOME</a></li>
+		</ul> 
+		<a href="javascript:;" class="mobile_menu_ico fr pc_hide"></a>                         
+	</div>
+</header>
+
+
+<div class="page_mask"></div>
+<div class="mobile_pop_menu_body pc_hide">
+	<ul>
+		<li><a href="#company"><i></i><span>COMPANY</span></a></li>
+		<li><a href="#protfolio"><i></i><span>PORTFOLIO</span></a></li>
+		<li><a href="#clients"><i></i><span>CLIENTS</span></a></li>
+		<li><a href="#contacts"><i></i><span>CONTACTS</span></a></li>
+		<li><a href="index.html"><i></i><span>HOME</span></a></li>
+	</ul>
+</div>
+	
+	<div class="out_body">
+		<section class="index_top_body" id="company">
+			<div class="warp">
+				<h3 class="outside_font wow fadeInUpSmall" data-wow-delay="0.3s">
+					我们帮助企业<br />从用户的需求出发<br />将繁复的流程转变为简单易用的<br />随身工具！
+				</h3>
+				<p class="outside_font wow fadeInUpSmall" data-wow-delay="0.4s">
+					<span class="mobile_hide">
+						XXX是一家提供移动端开发服务的供应商，我们专注于APP原生开发、微信小程序、H5专题定制、微电商实施及运营。<br />
+						将创新与数字技术相结合，帮助品牌和企业转化其创意概念到产品落地。
+					</span>
+					<span class="pc_hide">
+						XXX是一个专业的移动端开发供应商，
+						<br />我们专注于APP原生开发、微信小程序、H5专题定制、
+						<br />微电商实施及运营。将创新与数字技术相结合，
+						<br />帮助品牌和企业转化其创意概念到产品落地。
+					</span>
+				</p>
+			</div>
+		</section>
+
+
+		<section class="index_list_body" id="protfolio">
+			<div class="warp">
+				<div id="main" role="main">
+					<ul id="tiles">
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.2s">
+							<div class="img_out">
+								<img src="images/index_img_1.jpg" />
+								<div class="mask">
+									<h3>BEKO</h3>
+									<p>2015 - Website</p>
+									<p>2016 - WebChat</p>
+									<p>2017 - iOS</p>
+								</div>
+							</div>	
+						</li>
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.3s">
+							<div class="img_out">
+								<img src="images/index_img_2.jpg" />
+								<div class="mask">
+									<h3>OMRON</h3>
+									<p>2017 - iOS / WebChat / Website</p>
+								</div>
+							</div>	
+						</li>
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.4s">
+							<div class="img_out">
+								<img src="images/index_img_3.jpg" />
+								<div class="mask">
+									<h3>ART OF MUSIC</h3>
+									<p>2017 - iPhone Application</p>
+								</div>
+							</div>	
+						</li>
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.5s">
+							<div class="img_out">
+								<img src="images/index_img_4.jpg" />
+								<div class="mask">
+									<h3>RICKY CHEN</h3>
+									<p>2016 - Website</p>
+									<p>2017 - WeChat / iOS</p>
+								</div>
+							</div>	
+						</li>
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.6s">
+							<div class="img_out">
+								<img src="images/index_img_5.jpg" />
+								<div class="mask mobile_txt_style">
+									<h3>SHANGHAI <br />MINT</h3>
+									<p>2015 - Website</p>
+									<p>2016 - WeChat</p>
+									<p>2017 - B2C</p>
+								</div>
+							</div>	
+						</li>
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.7s">
+							<div class="img_out">
+								<img src="images/index_img_6.jpg" />
+								<div class="mask">
+									<h3>TOTO Product</h3>
+									<p>2016 - Website<p>
+									<p>2017 - iPad<p>
+									<p>2018 - iOS / Android</p>
+								</div>
+							</div>	
+						</li>
+						<!-- -->
+						<li class="wow fadeInUpSmall" data-wow-delay="0.8s">
+							<div class="img_out">
+								<img src="images/index_img_7.jpg" />
+								<div class="mask black mobile_txt_style">
+									<h3>SAIC VOLKSWAGEN</h3>
+									<p>2016 - WeChat / Website<p>
+								</div>
+							</div>	
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="index_customer_body" id="clients">
+			<div class="warp">
+				<h3 class="tit outside_font">我们有幸合作的品牌</h3>
+				<ul class="clearfix">
+					<li class="wow zoomIn" data-wow-delay="0.2s"><img src="images/logo_1.png" /></li>
+					<li class="wow zoomIn" data-wow-delay="0.3s"><img src="images/logo_2.png" /></li>
+					<li class="wow zoomIn" data-wow-delay="0.4s"><img src="images/logo_3.png" /></li>
+					<li class="wow zoomIn" data-wow-delay="0.5s"><img src="images/logo_4.png" /></li>
+					<li class="wow zoomIn" data-wow-delay="0.6s"><img src="images/logo_5.png" /></li>
+					<li class="wow zoomIn" data-wow-delay="0.7s"><img src="images/logo_6.png" /></li>
+					<li class="wow zoomIn" data-wow-delay="0.8s"><img src="images/logo_7.png" /></li>
+				</ul>
+			</div>
+		</section>
+
+
+
+		
+
+<footer id="contacts">
+	<div class="warp">
+		<div class="top_body">
+			<div class="fl">
+				<h3>He我们取得联系</h3>
+				<p>留下您的联系信息，我们将与您联系以讨论您的项目！</p>
+			</div>
+			<a href="contact.html" target="_blank" class="fr">与我们联系</a>
+		</div>
+		<ul class="clearfix mobile_hide">
+			<li>
+				<div class="in">
+					<p>销售热线：</p>
+					<h5>400 123 4467</h5>
+				</div>
+			</li>
+			<li>
+				<div class="in">
+					<p>地址：</p>
+					<p>北京市 朝阳区 北京西路999号立海大厦19楼<br />1193-4566</p>
+				</div>
+			</li>
+			<li>
+				<div class="in">
+					<p>客户服务：</p>
+					<p>售后服务：038 - 1234 5678  /  1234 5678</p>
+					<p>电子邮件：<a href="mailto:XXX">XXX</a></p>
+				</div>
+			</li>
+		</ul>
+		<div class="address_body pc_hide">
+				<h3><a href="tel:400 123 4467">400 123 4467</a></h3>
+				<p>上海市 静安区 延长中路801号新华园A座 7009-7017</p>
+				<br />
+				<p>售后服务：<a href="tel:35110761">86 21  1234 5678</a>  /  <a href="tel:35110762">1234 5678</a></p>
+				<p>电子邮件：<a href="mailto:">info@17sucai.com</a></p>
+			</div>
+		<div class="copyright_body">
+			<p class="fl">© IREAL 2010. ALL RIGHTS RESERVED</p>
+			<p class="fr">浙ICP备XXX号</p>
+		</div>
+	</div>
+</footer>
+	</div>
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>实景案例-某某装饰官网</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+    <style>
+        .chid-banner { background: url(img/case_banner.jpg) no-repeat center center; background-size: cover; height: 400px; }
+
+        .case { margin-bottom: 60px; overflow: hidden; }
+        .case .case_nav .list > li .box .on { background: #d5231b; color: #fff; }
+        .case .case_nav .list > li .box .on .wz:before { background: #fff; }
+
+
+        .case .tuwen { max-width: 940px; width: 100%; }
+        .case .tuwen .list { margin-left: -50px; }
+        .case .tuwen .list > li { float: left; width: 33.33%; padding-left: 50px; margin-bottom: 60px; }
+        .case .tuwen .list > li .box { display: block; position: relative; width: 100%; }
+        .case .tuwen .list > li .box .pic { position: relative; }
+        .case .tuwen .list > li .box .pic img { display: block; width: 100%; }
+        .case .tuwen .list > li .box .pic .add { position: absolute; left: 45%; top: 30%; display: block; opacity: 0; }
+        .case .tuwen .list > li .box .pic .add img { width: 30px; }
+        .case .tuwen .list > li .box .pic:after { content: ''; position: absolute; left: 10px; right: 10px; top: 8px; bottom: 8px; opacity: 0; transition: .3s ease; border: 1px solid #fff; }
+        .case .tuwen .list > li .box .pic:before { content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; opacity: 0; transition: .3s ease; background: rgba(213,35,27,.5); }
+        .case .tuwen .list > li .box:hover .pic .add, .case .tuwen .list > li .box:hover .pic:after, .case .tuwen .list > li .box:hover .pic:before { opacity: 1; }
+        .case .tuwen .list > li .box .font { position: absolute; font-size: 12px; color: #666; width: 100%; padding-left: 14px; }
+        .case .tuwen .list > li .box .font .p1 { padding: 14px 0 12px 0; }
+        .case .tuwen .list > li .box .font .p2 { display: none; }
+        .case .tuwen .list > li .box:hover .font { background: #fff; margin-top: -50px; transition: ease .3s; }
+        .case .tuwen .list > li .box:hover .font .p2 { display: block; }
+
+        @media (max-width: 1024px) {
+            .case .case_nav { float: none; }
+            .case .tuwen { float: none; max-width: none; width: 100%; margin-top: 30px; }
+            .case .tuwen .list { margin-left: -20px; }
+            .case .tuwen .list > li { float: left; width: 33.33%; padding-left: 20px; margin-bottom: 60px; }
+            .case .tuwen .list > li .box .pic .add { opacity: 1; }
+            .case .tuwen .list > li .box .pic:after { opacity: 1; }
+            .case .tuwen .list > li .box .pic:before { opacity: 1; }
+            .case .tuwen .list > li .box .font { margin-top: -50px; background: #fff; }
+            .case .tuwen .list > li .box .font .p2 { display: block; }
+        }
+
+        @media (max-width: 900px) {
+            .case .tuwen .list > li { width: 50%; }
+        }
+
+        @media (max-width: 667px) {
+
+            .case .tuwen .list > li { width: 100%; float: none; }
+        }
+
+        .pages { margin: 60px 0; text-align: center; clear: both; width: 100%; }
+        .pages ul { display: inline-block; }
+        .pages ul li { display: inline-block; }
+        .pages ul li a { margin: 0px 10px; padding: 5px 10px; }
+        .pages ul li a:hover { background: #d5231b; color: #fff; }
+        .pages ul li .on { background: #d5231b; color: #fff; }
+    </style>
+    <script>
+		$(function () {
+		});
+    </script>
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<body>
+    <style>
+        .g_header .main .top_r .s_nav li .on { color: #d5231b; }
+        .g_header .main .top_r .nav .navContent li .on { background: #d5231b; color: #ffffff; }
+    </style>
+
+    <div class="g_header">
+        <div class="main clearfix">
+            <div class="top_l left clearfix">
+                <p class="logo left"><a href="index.html"><img src="img/logo.png" class="g_imgf" /></a></p>
+                <div class="zx left clearfix">
+                    <p class="left">咨询<br />热线</p>
+                    <p class="numb left"><span>:</span>400-0000-000</p>
+                </div>
+            </div>
+            <div class="top_r right clearfix">
+                <ul class="s_nav left">
+                    <li>
+                        <a href="designlist.html" class="">某某设计</a>
+                    </li>
+                    <li>
+                        <a href="caselist.html" class=" on">实景案例</a>
+                    </li>
+                    <li>
+                        <a href="newslist.html" class="">装修日记</a>
+                    </li>
+                </ul>
+                <p class="daohang right">
+                    <a href="#" class="menu"><span class="ico left"><img src="img/menu.svg" /></span><span class="right" style="padding:2px 0 0 8px;">导航</span></a>
+                </p>
+                <div class="nav">
+                    <p class="close"><a href="#"><img src="img/close.svg" style="width:20px;" /></a></p>
+                    <ul class="navContent">
+                        <li>
+                            <a href="about.html" class="">关于我们</a>
+                        </li>
+                        <li>
+                            <a href="designlist.html" class="">某某设计</a>
+                        </li>
+                        <li>
+                            <a href="caselist.html" class=" on">实景案例</a>
+                        </li>
+                        <li>
+                            <a href="project.html" class="">规范工程</a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="">服务流程</a>
+                        </li>
+                        <li>
+                            <a href="newslist.html" class="">装修日记</a>
+                        </li>
+                    </ul>
+                    <p class="search clearfix">
+                        <span class="left"><input placeholder="搜索" type="text" class="input_1"></span>
+                        <span class="right"><img src="img/ico-search.svg" style="height:20px;" /></span>
+                    </p>
+                    <p class="tubiao">
+                        <a href="#" class="m ico1"><i class="fa fa-qq"></i></a>
+                        <a href="#" class="m ico2"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="m ico3"><i class="fa fa-weixin"></i></a>
+                    </p>
+                    <p class="p1">获取更多专业装修信息，欢迎来电咨询！</p>
+                    <p class="p2">XXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="chid-banner">
+        <div class="mask">
+            <p class="h1">EXCELLENT CASE</p>
+            <p class="p1">
+                <span class="line"></span>
+                <span class="font">实景案例</span>
+                <span class="line"></span>
+            </p>
+        </div>
+    </div>
+
+    <!--主体内容-->
+    <div class="g_cw">
+        <div class="page_nav">
+            <p>当前位置：<a href="index.html">首页</a> &gt; <a href="caselist.html" class="on">实景案例</a></p>
+        </div>
+        <div class="case">
+            <div class="case_nav left">
+                <p class="bt">案例风格分类</p>
+                <ul class="list">
+                    <li><a href="?_ct=简美" class=" box on"><p class="wz">简美</p></a></li>
+                    <li><a href="?_ct=现代美式" class=" box"><p class="wz">现代美式</p></a></li>
+                    <li><a href="?_ct=简约混搭" class=" box"><p class="wz">简约混搭</p></a></li>
+                    <li><a href="?_ct=欧式混搭" class=" box"><p class="wz">欧式混搭</p></a></li>
+                    <li><a href="?_ct=北欧小清新" class=" box"><p class="wz">北欧小清新</p></a></li>
+                    <li><a href="?_ct=东南亚" class=" box"><p class="wz">东南亚</p></a></li>
+                    <li><a href="?_ct=原木" class=" box"><p class="wz">原木</p></a></li>
+                    <li><a href="?_ct=地中海" class=" box"><p class="wz">地中海</p></a></li>
+                    <li><a href="?_ct=日式" class=" box"><p class="wz">日式</p></a></li>
+                </ul>
+            </div>
+
+
+            <div class="tuwen right">
+                <div class="lt">
+                    <ul class="list clearfix">
+
+                        <li>
+                            <a class="box" href="casedetail.html?_id=10060" target="_blank">
+                                <p class="pic">
+                                    <img src="img/q5ujyqesj669q61.jpg" class="g_imgf" />
+                                    <span class="add"><img src="img/add2.svg" /></span>
+                                </p>
+                                <div class="font">
+                                    <p class="p1">美丽湖南 - 简美</p>
+                                    <p class="p2">设计师：高某某</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="casedetail.html?_id=10052" target="_blank">
+                                <p class="pic">
+                                    <img src="img/insf27xmkohy5e6.jpg" class="g_imgf" />
+                                    <span class="add"><img src="img/add2.svg" /></span>
+                                </p>
+                                <div class="font">
+                                    <p class="p1">美丽江西 - 简美</p>
+                                    <p class="p2">设计师：赵某某</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="casedetail.html?_id=10009" target="_blank">
+                                <p class="pic">
+                                    <img src="img/u9x3u7j6ekhtbof.jpg" class="g_imgf" />
+                                    <span class="add"><img src="img/add2.svg" /></span>
+                                </p>
+                                <div class="font">
+                                    <p class="p1">美丽郑州 - 简美</p>
+                                    <p class="p2">设计师：王某某</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="box" href="casedetail.html?_id=10000" target="_blank">
+                                <p class="pic">
+                                    <img src="img/pksc2s048uiwg9z.jpg" class="g_imgf" />
+                                    <span class="add"><img src="img/add2.svg" /></span>
+                                </p>
+                                <div class="font">
+                                    <p class="p1">美丽湘江 - 简美</p>
+                                    <p class="p2">设计师：张某某</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="pages">
+                    <ul>
+
+
+
+
+                        <li><a href="?_ct=简美&_pi=1" class="on"> 1</a></li>
+
+
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <!--主体内容 end-->
+
+
+
+
+    <div class="g_footer">
+        <div class="g_cw">
+            <div class="left">
+                <p class="logo"><img src="img/f_logo.png"></p>
+                <p class="p1">成都某某装饰有限公司是一家工程将客户的需求放在第一位<br />的专业家居装饰公司。</p>
+                <p class="p2"><a href="#" class="li1">实景案例</a>       <a href="#" class="li1">某某设计</a>       <a href="#" class="li1">装修日记</a></p>
+            </div>
+            <div class="right">
+                <p class="p1">装修服务热线 ：</p>
+                <p class="p2">400-0000-000</p>
+                <p class="p3">（联系我们获取更多装修资讯，某某装饰您的最佳选择）</p>
+                <p class="p4">Copyright @ 2018 某某装饰有限公司 版权所有 技术支持: <a href="javascript:void(0)" target="_blank">xxxxxxx</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!--右侧悬浮-->
+    <ul class="g_tool">
+        <li><a href="#" onclick="return false;" class="top show" title="返回顶部"><i class="ico_top"><img src="img/top.svg"></i></a></li>
+    </ul>
+    <script>if (typeof $ != 'undefined') $(function () { if (typeof _g != 'undefined') { _g.finish(function () { $(window).scroll(); }); _g.finish(); } });</script>
+    <!--右侧悬浮 end-->
+</body>
+</html>

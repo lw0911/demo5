@@ -1,0 +1,505 @@
+@import "global";
+
+.selling_list{
+  padding:0 0.5rem;
+  margin-right:-1.54rem;
+  .selling_item{
+    margin-bottom:0.24rem;
+    margin-right:1.54rem;
+    cursor: pointer;
+    float: left;
+    .selling_pic{
+      padding:0.18rem;
+      border:1px solid #d7e9f7;
+      width:2.24rem;
+      height:2.24rem;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius:50%;
+      position: relative;
+      img{
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius:50%;
+        width:100%;
+        height:100%;
+      }
+      .selling_icon{
+        width:0.8rem;
+        height:0.8rem;
+        background: url("../images/prosuct/list_icon.png") 0 0 no-repeat;
+        position: absolute;
+        right:0;
+        bottom:0;
+        z-index:100;
+      }
+      .selling_icon2{
+        background-position: 0 -90px;
+      }
+      .selling_icon3{
+        background-position: 0 -180px;
+      }
+      .selling_icon4{
+        background-position: 0 -270px;
+      }
+      .selling_icon5{
+        background-position: 0 -360px;
+      }
+      .selling_icon6{
+        background-position: 0 -450px;
+      }
+      .check_selling{
+
+        display: none;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius:50%;
+        position: absolute;
+        width:100%;
+        height:100%;
+        line-height:260px;
+        text-align: center;
+        background: rgba(251,193,17,.9);
+        left:0;
+        top:0;
+        z-index:99;
+        i{
+          font-size:40px;
+          color: #fff;
+        }
+      }
+    }
+    p{
+      text-align: center;
+      margin:0.26rem 0;
+      font-size:18px;
+    }
+  }
+  .selling_item.active{
+    color: #1a81d2;
+    .selling_pic{
+      .check_selling{
+        display: block;
+      }
+    }
+  }
+}
+.product_moban{
+  height:8.73rem;
+  padding-top:0.4rem;
+  background: #1a81d2;
+  .product_tit{
+    color: #fff;
+  }
+  .product_moban_text{
+    text-align: center;
+    color: #fff;
+    font-size:16px;
+    line-height:0.3rem;
+  }
+}
+.moban_banner{
+  padding:0.36rem 0;
+  .moban_item{
+    width:4.06rem;
+  }
+  .moban_prev,.moban_next{
+    width:0.45rem;
+    height:0.45rem;
+    background: url("../images/prosuct/moban_arrow.png") 0 0 no-repeat;
+  }
+  .moban_next{
+    background-position: 0 -55px;
+  }
+}
+
+//混服管理
+.admin_mixture{
+  padding-top:0.42rem;
+  .admin_dec{
+    .textAlign(center);
+    font-size:14px;
+    color: #333;
+    line-height:0.36rem;
+  }
+  .handle_btn{
+    text-align: center;
+    a{
+      display: inline-block;
+      .widthHeight(1.4rem,0.34rem);
+      .lineHeight(0.34rem);
+      .bgColor(#1a81d2);
+      .textAlign(center);
+      color: #fff;
+      .borderRadius(30px);
+      margin: 0 0.2rem;
+      border:1px solid #1a81d2;
+    }
+    a:hover{
+      background: none;
+      border:1px solid #8dcee9;
+      color: #666;
+    }
+  }
+  .admin_pic{
+    margin:0.4rem 0 0 0;
+    text-align: center;
+    img{
+      display: inline-block;
+    }
+  }
+  .admin_icon_list{
+    margin:0.4rem auto;
+    text-align: center;
+    .icon{
+      display: inline-block;
+      width:0.6rem;
+      height:0.6rem;
+      margin:0 0.3rem;
+      background: url("../images/prosuct/product_icn.png") no-repeat;
+    }
+    .icon1{
+      background-position: 0 0;
+    }
+    .icon2{
+      background-position: 0 -70px;
+    }
+    .icon3{
+      background-position: 0 -140px;
+    }
+    .icon4{
+      background-position: 0 -210px;
+    }
+    .icon5{
+      background-position: 0 -280px;
+    }
+    .icon6{
+      background-position: 0 -350px;
+    }
+    .icon7{
+      background-position: 0 -420px;
+    }
+    .icon8{
+      background-position: 0 -490px;
+    }
+    .icon9{
+      background-position: 0 -560px;
+    }
+    .icon10{
+      background-position: 0 -630px;
+    }
+  }
+}
+
+//独立推广员
+.extension{
+  background: #eeeeee;
+  .handle_btn{
+    margin:0.26rem 0;
+  }
+}
+.game_box{
+  padding-bottom:3.4rem;
+  background: url("../images/prosuct/admin_bg3.png") center bottom no-repeat;
+}
+//H5联运
+.H5{
+  background: #1a9cd2;
+  .handle_btn{
+    padding:0.26rem 0;
+  }
+  .product_tit,.admin_dec{
+    color: #fff;
+  }
+  color: #fff;
+  .handle_btn{
+    a{
+      background: none;
+      border:1px solid #8dcee9;
+    }
+    a:hover{
+      background: #1a81d2;
+      color: #fff;
+    }
+  }
+}
+
+.selling_wrap{
+  .bgColor(#f5f5f5);
+  padding:0.9rem 0 0.6rem 0;
+  .more_fn{
+    display: block;
+    margin:0 auto;
+    width:3rem;
+    height:0.6rem;
+    line-height:0.6rem;
+    .bgColor(#1a81d2);
+    color: #fff;
+    font-size:20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+  }
+}
+.product_detail{
+  padding: 0 0 0.85rem 0;
+  position: relative;
+  .arrow_icon{
+    .widthHeight(0.8rem,0.8rem);
+    position: absolute;
+    left:50%;
+    bottom:-1.2rem;
+    margin-left:-0.4rem;
+    background: url("../images/arr_down.png") no-repeat;
+  }
+  .detail_table{
+    tr:nth-child(2n){
+      background: #e3f0fa;
+    }
+    td{
+      font-size:14px;
+      color: #333;
+      line-height:0.5rem;
+      border:1px solid #dcdcdc;
+      padding:0 0 0 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .iconfont{
+        color: #1a81d2;
+      }
+    }
+    .detail_dec{
+      line-height:0.3rem;
+      padding:0.1rem 0 0.1rem 0.3rem;
+    }
+  }
+}
+.w160{
+  width:1.6rem;
+}
+.w210{
+  width:2.1rem;
+}
+#detail_slide{
+  position: relative;
+  .next,.prev{
+    width:0.34rem;
+    height:0.34rem;
+    line-height:0.34rem;
+    text-align: center;
+    color: #fff;
+    background: #cccccc;
+    margin-top:0;
+    bottom:0;
+    top:auto;
+  }
+  .next:hover,.prev:hover{
+    background: #489adb;
+  }
+  .next{
+    right:0;
+  }
+  .prev{
+    right:0.36rem;
+    left:auto;
+  }
+}
+.detail_slide_box{
+  width:4.6rem;
+  height:3rem;
+  overflow: hidden;
+  margin-left:0.4rem;
+  .swiper-slide{
+    height:3rem;
+    overflow: hidden;
+    width:5.9rem;
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+}
+/*媒体查询*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+
+
+  //  产品中心
+  .selling_list{
+    margin:0 auto;
+    text-align: center;
+  }
+  .selling_list .selling_item{
+    display: inline-block;
+    float: none;
+    margin:0 0.3rem;
+  }
+//  产品详情
+  .detail_table{
+    float: none;
+    width:80%;
+    margin:0 auto 0.2rem;
+    table{
+      width:100%;
+    }
+  }
+  .detail_slide_box{
+    width:50%;
+    float: none;
+    margin:0 auto;
+  }
+  #detail_slide{
+    width:100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 750px;
+  }
+  //  产品中心
+  .selling_list{
+    margin:0 auto;
+    text-align: center;
+  }
+  .selling_list .selling_item{
+    display: inline-block;
+    float: none;
+    margin:0 0.3rem;
+  }
+  //  产品详情
+  .detail_table{
+    float: none;
+    width:80%;
+    margin:0 auto 0.2rem;
+    table{
+      width:100%;
+    }
+  }
+  .detail_slide_box{
+    width:60%;
+    float: none;
+    margin:0 auto;
+  }
+  #detail_slide{
+    width:100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 0.1rem;
+  }
+
+  //  产品中心
+  .selling_list{
+    margin:0 auto;
+    padding:0;
+    text-align: center;
+  }
+  .selling_list .selling_item{
+    display: inline-block;
+    float: none;
+    margin:0 0.3rem;
+  }
+
+  .product_moban{
+    height: auto;
+  }
+  .handle_btn{
+    a{
+      background: none;
+      border:1px solid #8dcee9;
+      margin-bottom:0.2rem !important;
+    }
+
+  }
+  //  产品详情
+  .detail_table{
+    float: none;
+    width:100%;
+    margin:0 auto 0.2rem;
+    table{
+      width:100%;
+    }
+  }
+  .detail_slide_box{
+    width:90%;
+    float: none;
+    margin:0 auto;
+  }
+  #detail_slide{
+    width:100%;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+
+  //  产品中心
+  .selling_list{
+    margin:0 auto;
+    padding:0;
+    text-align: center;
+  }
+  .selling_list .selling_item{
+    display: inline-block;
+    float: none;
+    margin:0 0.3rem;
+  }
+}
+
+@media (max-width: 479px) {
+  body {
+    font-size: 12px;
+  }
+
+  //  产品中心
+  .selling_list{
+    padding:0;
+    margin:0 auto;
+    text-align: center;
+  }
+  .selling_list .selling_item{
+    display: inline-block;
+    float: none;
+    margin:0;
+  }
+  .product_moban{
+    height: auto;
+  }
+  .detail_slide_box{
+    width:100%;
+  }
+  .product_detail .detail_table td{
+    padding:0;
+    font-size:13px;
+    line-height:0.3rem;
+    text-align: center;
+    i{
+      display: block;
+      text-align: center;
+    }
+  }
+  .product_detail .detail_table .detail_dec{
+    text-align: left;
+  }
+}
+

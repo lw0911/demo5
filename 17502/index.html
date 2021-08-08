@@ -1,0 +1,980 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目融资平台</title>
+<meta name="keywords" content="关键词,关键词">
+<meta name="description" content="这是站点描述!">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/html5.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+  $(document).ready(function(){
+	var mySwiper = new Swiper('.swiper-container',{
+		  autoplay:5000,
+		  visibilityFullFit : true,
+		  loop:true,
+		  pagination : '.pagination',
+		  paginationClickable :true,
+	  });
+	//TAB
+	$(".e_list_cont dd").eq(0).show().siblings("dd").hide();
+	$(".e_list_cont dt strong").eq(0).addClass("currStyle");
+	$(".e_list_cont dt strong").click(function(){
+	var liindex = $(".e_list_cont dt strong").index(this);
+	$(this).addClass("currStyle").siblings().removeClass("currStyle");
+	$(".e_list_cont dd").eq(liindex).fadeIn(150).siblings(".e_list_cont dd").hide();
+	});
+	//zoomImg
+	$("#thumbnail li a").click(function(){
+		$(".zoompic img").hide().attr({ "src": $(this).attr("href"), "title": $("> img", this).attr("title") });
+		$("#thumbnail li.current").removeClass("current");
+		$(this).parents("li").addClass("current");
+		return false;
+	});
+	$(".zoompic>img").load(function(){
+		$(".zoompic>img:hidden").show();
+	});
+	var $slider = $('.slider ul');
+	var $slider_child_l = $('.slider ul li').length;
+	var $slider_width = $('.slider ul li').width();
+	$slider.width($slider_child_l * $slider_width);
+	var slider_count = 0;
+	if ($slider_child_l < 5) {
+		$('#btn-right').css({cursor: 'auto'});
+		$('#btn-right').removeClass("dasabled");
+	}
+	$('#btn-right').click(function() {
+		if ($slider_child_l < 5 || slider_count >= $slider_child_l - 5) {
+			return false;
+		}
+		slider_count++;
+		$slider.animate({left: '-=' + $slider_width + 'px'}, 'fast');
+		slider_pic();
+	});
+	$('#btn-left').click(function() {
+		if (slider_count <= 0) {
+			return false;
+		}
+		slider_count--;
+		$slider.animate({left: '+=' + $slider_width + 'px'}, 'fast');
+		slider_pic();
+	});
+	function slider_pic() {
+		if (slider_count >= $slider_child_l - 5) {
+			$('#btn-right').css({cursor: 'auto'});
+			$('#btn-right').addClass("dasabled");
+		}
+		else if (slider_count > 0 && slider_count <= $slider_child_l - 5) {
+			$('#btn-left').css({cursor: 'pointer'});
+			$('#btn-left').removeClass("dasabled");
+			$('#btn-right').css({cursor: 'pointer'});
+			$('#btn-right').removeClass("dasabled");
+		}
+		else if (slider_count <= 0) {
+			$('#btn-left').css({cursor: 'auto'});
+			$('#btn-left').addClass("dasabled");
+		}
+	}
+  });
+</script>
+</head>
+<body>
+  <header class="public_header">
+    <aside>
+      <div class="wrap">
+         <ul class="fl top_log">
+          <li>
+           <a href="login.html" title="登录" class="txtcol">亲，请登录</a>
+           <a href="register.html" title="注册">免费注册</a>
+          </li>
+         </ul>
+         <ul class="fr">
+          <li><a href="user_center.html" title="用户中心">用户中心</a></li>
+          <li><a href="my_financing.html" title="我的融资">我的融资</a></li>
+          <li><a href="my_investment.html" title="我的投资">我的投资</a></li>
+          <li><a href="article_list.html" title="帮助中心" class="help_icon iconfont">帮助中心</a></li>
+          <li><a href="tel:XXX" title="服务热线：XXX" class="tel_icon iconfont">服务热线：XXX</a></li>
+         </ul>
+      </div>
+    </aside>
+    <section class="wrap">
+      <h1><a><img src="images/logo.png" title="站点名称"/></a></h1>
+      <form action="#" class="search_area">
+       <input type="text" placeholder="查找融资项目..." class="text_box"/>
+       <input type="submit" value="搜索" class="sub_btn"/>
+      </form>
+    </section>
+   </header>
+   <nav class="menu">
+    <ul class="wrap">
+     <li><a href="index.html" title="首页">首页</a></li>
+     <li><a href="create_financing.html" title="项目融资">创建融资</a></li>
+     <li><a href="investor.html" title="投资人">投资人</a></li>
+     <li><a href="investor.html" title="投资管理公">投资管理公司</a></li>
+
+     <li><a href="article_list.html" title="投资资讯">投资资讯</a></li>
+
+     <li><a href="read_article.html" title="关于我们">关于我们</a></li>
+    </ul>
+   </nav>
+  <script>
+  $(document).ready(function(){
+    //current nav bg
+    $("nav li a").each(function(){
+        if($(this).attr('href') == window.location.pathname){
+         $(this).css('background-color','#f52b00');
+        }
+      });
+    });
+  </script>
+ <!--slide-->
+ <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+         <a href="read_article.html">
+         <img src="upload/slide001.jpg"/>
+         </a>
+        </div>
+        <div class="swiper-slide">
+         <a href="project.html">
+         <img src="upload/slide002.jpg"/>
+         </a>
+        </div>
+    </div>
+    <div class="pagination"></div> 
+ </div>
+ <ul class="wrap statistics">
+  <li class="user_count"><strong>6258</strong></li>
+  <li class="project_count"><strong>689725</strong></li>
+  <li class="tv_count"><strong>30945</strong></li>
+  <li class="probono_count"><strong>28369</strong></li>
+ </ul>
+<!--zoomImg-->
+<section class="wrap overflow" style="margin:20px auto;">
+ <div class="zoombox">
+    <div class="zoompic"><img src="upload/3427.jpg" width="684" height="394" alt="美女配奥迪A4L墙纸" /></div>
+    <div class="sliderbox">
+        <div id="btn-left" class="arrow-btn dasabled"></div>
+        <div class="slider" id="thumbnail">
+            <ul>
+                <li class="current"><a href="upload/3427.jpg" target="_blank"><img src="upload/3427.jpg" alt="美女配奥迪A4L墙纸01" /></a></li>
+                <li><a href="upload/52347.jpg" target="_blank"><img src="upload/52347.jpg" alt="美女配奥迪A4L墙纸02" /></a></li>
+                <li><a href="upload/23463.jpg" target="_blank"><img src="upload/23463.jpg" alt="美女配奥迪A4L墙纸03" /></a></li>
+                <li><a href="upload/3247.jpg" target="_blank"><img src="upload/3247.jpg" alt="美女配奥迪A4L墙纸04" /></a></li>
+                <li><a href="upload/26547.jpg" target="_blank"><img src="upload/26547.jpg" alt="美女配奥迪A4L墙纸05" /></a></li>
+            </ul>
+        </div>
+        <div id="btn-right" class="arrow-btn"></div>
+    </div>
+ </div>
+ <!--推荐类文章图文封面-->
+ <div class="img_atc_li">
+  <ul class="overflow">
+   <li>
+    <a href="read_article.html" title="文章标题" class="atcImg"><img src="upload/list_002.jpg"/></a>
+    <h2><a href="read_article.html" title="文章标题">淘宝众筹吸引90后创业者12...</a></h2>
+   </li>
+   <li>
+    <a href="read_article.html" title="文章标题" class="atcImg"><img src="upload/list_002.jpg"/></a>
+    <h2><a href="read_article.html" title="文章标题">马云油画处女作拍出3600事业...</a></h2>
+   </li>
+   <li>
+    <a href="read_article.html" title="文章标题" class="atcImg"><img src="upload/list_002.jpg"/></a>
+    <h2><a href="read_article.html" title="文章标题">习近平出席的中美企业家座谈会有...</a></h2>
+   </li>
+   <li>
+    <a href="read_article.html" title="文章标题" class="atcImg"><img src="upload/list_002.jpg"/></a>
+    <h2><a href="read_article.html" title="文章标题">阿里联手魅力惠发力轻奢领域 ...</a></h2>
+   </li>
+  </ul>
+ </div> 
+</section>
+ <!--金牌项目-->
+ <dl class="wrap projectList">
+  <dt>
+   <strong class="jp_icon">金牌项目</strong>
+   <a href="project_list.html" title="更多" class="more">查看更多</a>
+  </dt>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_005.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">全球首款现金奖励的OBD车载...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:52%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">5000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_002.jpg"/>
+   </a>
+   <h2><a href="project.html" title="瑞士级智能腕表预售融资">瑞士级智能腕表预售融资...</a></h2>
+   <p>
+   瑞士级智能腕表一块（标配） 感谢您的支持！为回报您的支持，我们以...
+   </p>
+   <div class="prgs">
+    <span style="width:10%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">10000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_003.jpg"/>
+   </a>
+   <h2><a href="project.html" title="梦想众筹第一季股权融资">梦想众筹第一季股权融资...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:25%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">8300000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_004.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">松岛枫艾弗股权融资...</a></h2>
+   <p>
+   城里人已经很难尝到正宗土鸡蛋的味道了，儿时的蛋香味正渐渐离我们而去...
+   </p>
+   <div class="prgs">
+    <span style="width:98%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">7200000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">690000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">300000</strong>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <!--经典预告-->
+ <dl class="wrap projectList">
+  <dt>
+   <strong class="tq_icon">经典预告</strong>
+   <a href="project_list.html" title="更多" class="more">查看更多</a>
+  </dt>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_005.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">全球首款现金奖励的OBD车载...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:52%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">5000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_002.jpg"/>
+   </a>
+   <h2><a href="project.html" title="瑞士级智能腕表预售融资">瑞士级智能腕表预售融资...</a></h2>
+   <p>
+   瑞士级智能腕表一块（标配） 感谢您的支持！为回报您的支持，我们以...
+   </p>
+   <div class="prgs">
+    <span style="width:10%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">10000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_003.jpg"/>
+   </a>
+   <h2><a href="project.html" title="梦想众筹第一季股权融资">梦想众筹第一季股权融资...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:25%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">8300000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_004.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">松岛枫艾弗股权融资...</a></h2>
+   <p>
+   城里人已经很难尝到正宗土鸡蛋的味道了，儿时的蛋香味正渐渐离我们而去...
+   </p>
+   <div class="prgs">
+    <span style="width:98%;"></span>
+   </div>
+   <p class="time">25天 06时 12分 46秒</p>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">7200000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">690000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">300000</strong>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <!--经典预告-->
+ <dl class="wrap projectList">
+  <dt>
+   <strong class="cg_icon">成功融资项目</strong>
+   <a href="project_list.html" title="更多" class="more">查看更多</a>
+  </dt>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_005.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">全球首款现金奖励的OBD车载...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:100%;"></span>
+   </div>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">5000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_002.jpg"/>
+   </a>
+   <h2><a href="project.html" title="瑞士级智能腕表预售融资">瑞士级智能腕表预售融资...</a></h2>
+   <p>
+   瑞士级智能腕表一块（标配） 感谢您的支持！为回报您的支持，我们以...
+   </p>
+   <div class="prgs">
+    <span style="width:100%;"></span>
+   </div>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">10000000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_003.jpg"/>
+   </a>
+   <h2><a href="project.html" title="梦想众筹第一季股权融资">梦想众筹第一季股权融资...</a></h2>
+   <p>
+   您将获得适配大众车型的车挣盒子1个，终身免费支持GPRS。10个工作日内按要求...
+   </p>
+   <div class="prgs">
+    <span style="width:100%;"></span>
+   </div>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">8300000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">250000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">120000</strong>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <a href="project.html" title="项目名称">
+    <img src="upload/list_004.jpg"/>
+   </a>
+   <h2><a href="project.html" title="全球首款现金奖励的OBD车载智能设备股权融资">松岛枫艾弗股权融资...</a></h2>
+   <p>
+   城里人已经很难尝到正宗土鸡蛋的味道了，儿时的蛋香味正渐渐离我们而去...
+   </p>
+   <div class="prgs">
+    <span style="width:100%;"></span>
+   </div>
+   <ul class="s_infor">
+    <li>
+     <em>融资金额</em>
+     <strong class="price_icon">7200000</strong>
+    </li>
+    <li>
+     <em>已融资</em>
+     <strong class="price_icon">690000</strong>
+    </li>
+    <li>
+     <em>单笔金额</em>
+     <strong class="price_icon">300000</strong>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <!--活跃投资者-->
+ <dl class="e_list_cont wrap i_e_list_cont" style="">
+  <dt>
+   <strong>活跃投资公司</strong>
+   <strong>活跃投资人</strong>
+  </dt>
+  <dd>
+   <ul>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb002.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a class="gz_icon">关注</a>
+        <a class="dz_icon">点赞</a>
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb006.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb003.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb002.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb002.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb001.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb005.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gs.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/hzhb001.jpg"/>
+      </a>
+      <h2 class="qiye_icon"><a href="investor_gs.html" title="三秦网络科技有限公司">三秦网络科技有限公司</a></h2>
+      <p class="s_p">
+        <span>
+         <i>立项数量</i>
+         <em>5</em>
+        </span>
+        <span>
+         <i>发起融资</i>
+         <em>8</em>
+        </span>
+        <span>
+         <i>融资总额</i>
+         <em>50万</em>
+        </span>
+      </p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gs.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+   </ul>
+  </dd>
+  <dd>
+   <ul>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyun001.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="马云">马云</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyuan002.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="李彦宏">李彦宏</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyun001.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="马云">马云</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyuan003.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="马化腾">马化腾</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyun001.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="马云">马云</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyun001.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="马云">马云</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyuan002.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="李彦宏">李彦宏</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+    <li>
+      <a href="investor_gr.html" class="pic_icon" title="三秦网络科技有限公司">
+       <img src="upload/huiyuan003.png"/>
+      </a>
+      <h2 class="geren_icon"><a href="investor_gr.html" title="马化腾">马化腾</a></h2>
+      <p class="ph_p"><span>投资偏好：[ 移动互联网 ][ IT行业 ]</span></p>
+      <p class="a_word"><q class="ellipsis">这里仅仅只是一句话！</q></p>
+      <p class="btm_infor overflow">
+       <span class="fl"><a class="dw_icon" style="color:#666;">内蒙古-巴彦淖尔市</a></span>
+       <span class="fr">
+        <a href="investor_gr.html" class="xq_icon">详情</a>
+       </span>
+      </p>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <!--合作伙伴-->
+ <dl class="wrap partners">
+  <dt>合作伙伴</dt>
+  <dd>
+   <ul>
+    <li>
+     <a href="#" title="这里可以输出合作伙伴的文字标识">
+      <img src="upload/hzhb001.jpg"/>
+     </a>
+    </li>
+    <li>
+     <a href="#" title="这里可以输出合作伙伴的文字标识">
+      <img src="upload/hzhb002.jpg"/>
+     </a>
+    </li>
+    <li>
+     <a href="#" title="这里可以输出合作伙伴的文字标识">
+      <img src="upload/hzhb003.jpg"/>
+     </a>
+    </li>
+    <li>
+     <a href="#" title="这里可以输出合作伙伴的文字标识">
+      <img src="upload/hzhb004.jpg"/>
+     </a>
+    </li>
+    <li>
+     <a href="#" title="这里可以输出合作伙伴的文字标识">
+      <img src="upload/hzhb005.jpg"/>
+     </a>
+    </li>
+    <li>
+     <a href="#" title="这里可以输出合作伙伴的文字标识">
+      <img src="upload/hzhb006.jpg"/>
+     </a>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl class="friendLink wrap">
+  <dt>友情链接</dt>
+  <dd><a href="http://www.deathghost.cn" title="链接title" target="_blank">百度</a></dd>
+  <dd><a href="http://www.deathghost.cn" title="链接title" target="_blank">谷歌</a></dd>
+  <dd><a href="http://www.deathghost.cn" title="链接title" target="_blank">雅虎</a></dd>
+  <dd><a href="http://www.deathghost.cn" title="链接title" target="_blank">新浪</a></dd>
+  <dd><a href="http://www.deathghost.cn" title="链接title" target="_blank">阿里巴巴</a></dd>
+  <dd><a href="http://www.deathghost.cn" title="链接title" target="_blank">腾讯</a></dd>
+ </dl>
+ <footer>
+    <ul class="wrap help">
+     <li>
+      <dl>
+       <dt>关于项目融资平台</dt>
+       <dd><a href="read_article.html">公司简介</a></dd>
+       <dd><a href="read_article.html">联系方式</a></dd>
+       <dd><a href="read_article.html">加入我们</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>新手帮助</dt>
+       <dd><a href="read_article.html">新手指南</a></dd>
+       <dd><a href="read_article.html">常见问题</a></dd>
+       <dd><a href="read_article.html">注册协议</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>用户帮助</dt>
+       <dd><a href="read_article.html">如何融资</a></dd>
+       <dd><a href="read_article.html">如何投资</a></dd>
+       <dd><a href="read_article.html">提现充值</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>关于项目融资平台</dt>
+       <dd><a href="read_article.html">公司简介</a></dd>
+       <dd><a href="read_article.html">联系方式</a></dd>
+       <dd><a href="read_article.html">加入我们</a></dd>
+      </dl>
+     </li>
+     <li>
+      <dl>
+       <dt>关于项目融资平台</dt>
+       <dd><a href="read_article.html">公司简介</a></dd>
+       <dd><a href="read_article.html">联系方式</a></dd>
+       <dd><a href="read_article.html">加入我们</a></dd>
+      </dl>
+     </li>
+    </ul>
+    <p class="wrap btm_infor">
+     Copyright (C) 2020, All Rights Reserved<br/>
+     互联网药品信息服务资格证编号：(京)-非经营性-XXX 京公网安备XXX号<br/>
+     出版物经营许可证 新出发京批字第直0673号
+    </p>
+   </footer>
+</body>
+</html>

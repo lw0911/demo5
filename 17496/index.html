@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>智能家具</title>
+	<link rel="stylesheet" href="images/css/jquery.fullpage.css" />
+	<link rel="stylesheet" href="images/css/main.css" />
+	<link rel="stylesheet" href="images/css/media.css" />
+	<link rel="stylesheet" href="images/css/index.css" />
+
+
+	<script type="text/javascript" src="images/js/jquery.min.js"></script>
+	<script type="text/javascript" src="images/js/myfullpage.js"></script>
+	<script type="text/javascript" src="images/js/wow.min.js"></script>
+	<script type="text/javascript" src="images/js/main.js"></script>
+
+
+</head>
+
+<body class="index" style="padding-top: 0">
+	<h1 class="logo"><a href="#"><img src="images/logo.png" /></a></h1>
+	<div class="menu clear">
+		<p>导 航</p>
+		<div id="menu-handler" class="menu-handler">
+			<span class="burger burger-1 trans"></span>
+			<span class="burger burger-2 trans-fast"></span>
+			<span class="burger burger-3 trans"></span>
+		</div>
+	</div>
+	<div class="nav-box">
+		<div class="nav-center">
+			<div class="nav-list">
+				<ul class="clear">
+					<li class="li1">
+						<div class="nav-icon"></div>
+						<div class="nav-page">
+							<div class="nav-con">
+								<span>全屋产品</span>
+								<p><a href="list_product.html">产品系列</a></p>
+								<p><a href="list_product.html">配套产品</a></p>
+							</div>
+						</div>
+					</li>
+					<li class="li2">
+						<div class="nav-icon"></div>
+						<div class="nav-page">
+							<div class="nav-con">
+								<span>招商加盟</span>
+								<p><a href="zhaoshang.html">品牌招商</a></p>
+								<p><a href="case.html">工程案例</a></p>
+							</div>
+						</div>
+					</li>
+					<li class="li3">
+						<div class="nav-icon"></div>
+						<div class="nav-page">
+							<div class="nav-con">
+								<span>无醛环保</span>
+								<p><a href="wuhb.html">无醛环保</a></p>
+								<p><a href="wuban.html">无醛板</a></p>
+							</div>
+						</div>
+					</li>
+					<li class="li4">
+						<div class="nav-icon"></div>
+						<div class="nav-page">
+							<div class="nav-con">
+								<span>定制攻略</span>
+								<p><a href="list_book.html">定制专题</a></p>
+								<p><a href="list_article2.html">定制解答</a></p>
+							</div>
+						</div>
+					</li>
+					<li class="li5">
+						<div class="nav-icon"></div>
+						<div class="nav-page">
+							<div class="nav-con">
+								<span>了解XXX</span>
+								<p><a href="pinpai.html">品牌介绍</a></p>
+								<p><a href="企业新闻.html">企业新闻</a></p>
+								<p><a href="lxwm.html">联系我们</a></p>
+								<p><a href="shouhou.html">售后服务</a></p>
+								<p><a href="mendian.html">门店查询</a></p>
+							</div>
+						</div>
+					</li>
+					<li class="li6">
+						<div class="nav-icon"></div>
+						<div class="nav-page">
+							<div class="nav-con">
+								<span><a href="#" target="_blank">商城</a></span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<h3 class="tel_number">全国免费服务热线：XXX</h3>
+			<a href="javascript:;" class="nav-close"></a>
+		</div>
+	</div>
+
+	<!--左侧导航-->
+	<ul id="floatMenu">
+		<li data-menuanchor="section-2" class="">
+			<p>全屋生态定制</p><a href="#section-2"></a>
+		</li>
+		<li data-menuanchor="section-3" class="">
+			<p>无醛板材</p><a href="#section-3"></a>
+		</li>
+		<li data-menuanchor="section-4" class="">
+			<p>定制攻略</p><a href="#section-4"></a>
+		</li>
+		<li data-menuanchor="section-5" class="">
+			<p>0元预约量尺</p><a href="#section-5"></a>
+		</li>
+		<li data-menuanchor="section-6" class="">
+			<p>招商加盟</p><a href="#section-6"></a>
+		</li>
+		<li data-menuanchor="section-7" class="">
+			<p>关于XXX</p><a href="#section-7"></a>
+		</li>
+	</ul>
+
+	<div id="fullpage">
+		<!--1-->
+		<div class="section section1">
+			<div class="mouseBox">
+				<span class="mouseIco"><i></i></span>
+			</div>
+			<div class="overturn">
+				<div class="banner">
+					<a href="#">
+						<img src="images/banner.jpg" />
+					</a>
+					<a href="#">
+						<img src="images/banner.jpg" />
+					</a>
+					<a href="#">
+						<img src="images/banner.jpg" />
+					</a>
+				</div>
+			</div>
+			<script>
+				var $window = $(window);
+				var banA = $('.banner a');
+				var len = banA.length;
+				var i = 0;
+				function ban() {
+					var banW = 1902 * $window.height() / 890;
+					var w = $window.width();
+					var left = w / 2 - banW / 2;
+					banA.find('img').css({
+						width: banW,
+						marginLeft: left
+					});
+				}
+				ban();
+				$window.resize(function () {
+					ban();
+				});
+				setTimeout(function () {
+					banA.eq(0).addClass('active');
+				}, 10);
+				setInterval(function () {
+					i++;
+					if (i > len - 1) {
+						i = 0
+					}
+					banA.eq(i).addClass('active').siblings().removeClass('active');
+				}, 7000);
+			</script>
+		</div>
+
+		<!--2-->
+		<div class="section section2">
+			<div class="xx01">
+				<div class="xx01-top"><img src="images/index-section2-img.png"></div>
+				<div class="clear xx01-bot">
+					<a class="fl lxfljal relative" href="#" target="_blank" style="width: 44%">
+						<img src="images/index-section2-kefu.png" alt="">
+						<i><img src="images/index-section2-kefu-ico.png" alt=""></i>
+					</a>
+					<div class="fr shaohou relative" style="width: 44%">
+						<i><img src="images/index-section2-goutong-ico.png" alt=""></i>
+						<img src="images/index-section2-goutong.png" alt="">
+					</div>
+				</div>
+			</div>
+			<script>
+				$('.shaohou').click(function () {
+					$('.xx01').hide()
+				});
+			</script>
+			<div class="overturn">
+				<div class="page-table">
+					<div class="page-table-cell">
+						<ul class="made clear">
+							<li class="trans-3d li1">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz1"></i>
+												<p>全屋产品</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="trans-3d deep_color li2">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz2"></i>
+												<p>定制客餐厅</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="trans-3d li3">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz3"></i>
+												<p>定制衣柜</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="trans-3d deep_color li4">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz4"></i>
+												<p>定制书房</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="trans-3d li5">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz5"></i>
+												<p>定制榻榻米</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+						</ul>
+						<ul class="made made_middle clear">
+							<li class="trans-3d deep_color li6">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz8"></i>
+												<p>配套产品</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="threeBig dz_title trans-3d li7">
+								<div class="table_middle">
+									<div class="table_inner">
+										<h2>全屋生态定制</h2>
+										<span>为环保家居设计，1000多个灵感产品</span>
+									</div>
+								</div>
+							</li>
+							<li class="deep_color trans-3d li8">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz6"></i>
+												<p>定制儿童房</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+						</ul>
+						<ul class="made clear">
+							<li class="trans-3d li9">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz11"></i>
+												<p>XXX床垫</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="trans-3d li10">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz7"></i>
+												<p>定制卧室</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="trans-3d deep_color li11">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz10"></i>
+												<p>定制衣帽间</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+							<li class="li12"></li>
+							<li class="trans-3d li13">
+								<a href="list_product.html">
+									<div class="scroll-prev">
+										<div class="table_middle">
+											<div class="table_inner">
+												<i class="dz9"></i>
+												<p>最新系列</p>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-back"></div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--3-->
+		<div class="section section3">
+			<div class="overturn">
+				<div class="page-table">
+					<div class="page-table-cell">
+						<div class="protection_box">
+							<div class="protection fl">
+								<div class="protection_con">
+									<div class="protection_midle">
+										<h2 class="slide_Left">无醛生活</h2>
+										<p class="slide_Left">你健康，才是家...</p>
+										<p class="slide_Left">陪你长大，随你变老，你健康依然</p>
+										<div class="line slide_Left"><i></i></div>
+										<span class="toBig"><a href="wuhb.html"></a></span>
+									</div>
+								</div>
+							</div>
+							<div class="protection fr">
+								<div class="protection_con">
+									<div class="protection_midle">
+										<h2 class="slide_Left">无醛板</h2>
+										<p class="slide_Left">甲醛零添加</p>
+										<p class="slide_Left">板材自造，环保的最高品质</p>
+										<div class="line slide_Left"><i></i></div>
+										<span class="toBig"><a href="wuban.html"></a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 4-->
+		<div class="section section4">
+			<div class="overturn">
+				<div class="page-table">
+					<div class="page-table-cell">
+						<div class="protection_box">
+							<div class="protection">
+								<div class="protection_con">
+									<div class="protection_midle">
+										<h2>定制攻略</h2>
+										<p>拒走弯路</p>
+										<p>我们帮你搞定定制家居的复杂真相</p>
+										<div class="line"></div>
+										<span><a href="list_book.html"></a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--5-->
+		<div class="section section5">
+			<div class="overturn">
+				<div class="page-table">
+					<div class="page-table-cell">
+						<div class="appiontment">
+							<h2>预约0元量尺设计</h2>
+							<ul class="app_list clear">
+								<li class="li1">
+									<i></i>
+									<span>定制流程</span>
+								</li>
+								<li class="li2 show_yuyue">
+									<div class="warpp">
+										<div class="app_con trans-pre">
+											<i></i>
+											<span>①免费</span>
+											<p>在线预约&nbsp;上门量尺</p>
+											<div class="line"></div>
+										</div>
+										<div class="app_con trans-back">
+											<i></i>
+											<span>①免费</span>
+											<p>在线预约&nbsp;上门量尺</p>
+											<div class="line"></div>
+										</div>
+									</div>
+								</li>
+								<li class="li3 show_yuyue">
+									<div class="warpp">
+										<div class="app_con trans-pre">
+											<i></i>
+											<span>②免费</span>
+											<p>到店看方案&nbsp;个性化定制</p>
+											<div class="line"></div>
+										</div>
+										<div class="app_con trans-back">
+											<i></i>
+											<span>②免费</span>
+											<p>到店看方案&nbsp;个性化定制</p>
+											<div class="line"></div>
+										</div>
+									</div>
+								</li>
+								<li class="li4 show_yuyue">
+									<div class="warpp">
+										<div class="app_con trans-pre">
+											<i></i>
+											<span>③免费</span>
+											<p>签订合同&nbsp;免费运输安装</p>
+											<div class="line"></div>
+										</div>
+										<div class="app_con trans-back">
+											<i></i>
+											<span>③免费</span>
+											<p>签订合同&nbsp;免费运输安装</p>
+											<div class="line"></div>
+										</div>
+									</div>
+								</li>
+								<li class="li5 show_yuyue">
+									<div class="warpp">
+										<div class="app_con trans-pre">
+											<i></i>
+											<span>④免费</span>
+											<p>5年质保&nbsp;终身维护</p>
+											<div class="line"></div>
+										</div>
+										<div class="app_con trans-back">
+											<i></i>
+											<span>④免费</span>
+											<p>5年质保&nbsp;终身维护</p>
+											<div class="line"></div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<a class="at_once" href="#"><span></span>
+								<p>立即抢先预约</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--6-->
+		<div class="section section6">
+			<div class="overturn">
+				<div class="page-table">
+					<div class="page-table-cell">
+						<div class="join">
+							<div class="join_title">
+								<h2>招商加盟</h2>
+							</div>
+							<div class="join_page join_y join1">
+								<a href="zhaoshang.html">
+									<div class="trans-pre">
+										<div class="join_con">
+											<b></b>
+											<span>要做 <br />就做大品牌</span>
+										</div>
+									</div>
+									<div class="trans-back">
+										<div class="join_con">
+											<b></b>
+											<span>要做 <br />就做大品牌</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="join_page join_x join2">
+								<a href="zhaoshang.html">
+									<div class="trans-pre">
+										<b></b>
+										<span>交货快 <br />真本事</span>
+									</div>
+									<div class="trans-back">
+										<b></b>
+										<span>交货快 <br />真本事</span>
+									</div>
+								</a>
+							</div>
+							<div class="join_page join_y join3">
+								<a href="zhaoshang.html">
+									<div class="trans-pre">
+										<div class="join_con">
+											<b></b>
+											<span>6000亿 <br />市场销售策略</span>
+										</div>
+									</div>
+									<div class="trans-back">
+										<div class="join_con">
+											<b></b>
+											<span>6000亿 <br />市场销售策略</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="join_page join_x join4">
+								<a href="zhaoshang.html">
+									<div class="trans-pre">
+										<b></b>
+										<span>八大支持 <br />开店就挣钱</span>
+									</div>
+									<div class="trans-back">
+										<b></b>
+										<span>八大支持 <br />开店就挣钱</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--7-->
+		<div class="section section7">
+			<div class="" style="height: 100%;">
+				<div class="protection_box">
+					<div class="protection">
+						<div class="protection_con">
+							<div class="protection_midle">
+								<h2>关于XXX</h2>
+								<h3>XXX家居，16年品牌</h3>
+								<p>XXX家居集团成立于2003年，始终专注于定制领域，并以打造生态环保家居为目标。</p>
+								<p>历经衣柜定制、全屋定制、全屋生态定制发展过程，</p>
+								<p>实现“定制”“全屋”“生态”的完全整合。</p>
+								<span><a href="pinpai.html"></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--8-->
+		<div class="section section8" id="section-footer">
+			<div id="footer-text">
+				<div class="footer_top">
+					<div class="page_center clear">
+						<dl>
+							<dt>全屋产品</dt>
+							<dd><a href="list_product.html">产品系列</a></dd>
+							<dd><a href="list_product.html">配套产品</a></dd>
+						</dl>
+						<dl>
+							<dt>招商加盟</dt>
+							<dd><a href="zhaoshang.html">品牌招商</a></dd>
+							<dd><a href="case.html">工程案例</a></dd>
+						</dl>
+						<dl>
+							<dt>无醛环保</dt>
+							<dd><a href="wuhb.html">无醛环保</a></dd>
+							<dd><a href="wuban.html">XXX无醛板</a></dd>
+						</dl>
+						<dl>
+							<dt>定制攻略</dt>
+							<dd><a href="list_book.html">定制专题</a></dd>
+							<dd><a href="list_article2.html">定制解答</a></dd>
+						</dl>
+						<dl>
+							<dt>了解XXX</dt>
+							<dd><a href="pinpai.html">品牌介绍</a></dd>
+							<dd><a href="list_article.html">企业新闻</a></dd>
+							<dd><a href="lxwm.html">联系我们</a></dd>
+							<dd><a href="shouhou.html">售后服务</a></dd>
+							<dd><a href="mendian.html">门店查询</a></dd>
+						</dl>
+						<dl class="dy_shop">
+							<dt>XXX家居旗舰店</dt>
+							<dd class="clear">
+								<a class="tm" target="_blank" href="#"></a>
+								<a class="tb" target="_blank" href="#"></a>
+							</dd>
+						</dl>
+						<dl class="code">
+							<dt>XXX官方二维码</dt>
+							<div class="weChat">
+								<div class="code_box"><img src="images/nopic.jpg"></div>
+							</div>
+						</dl>
+					</div>
+				</div>
+				<div class="footer_bot bgColor">
+					<div class="page_center clear">
+						<div class="bot_l fl">
+							<p><a href="#">XXX家居，全屋生态定制</a></p>
+							<p>GUANGZHOU YIJIA FURNITURE CO.,LTD <a href="http://beian.miit.gov.cn" target="_blank">粤ICP备1234****号
+								</a></p>
+						</div>
+						<div class="bot_r fr">
+							<i><img src="images/icon-tel.png" /></i>
+							<div class="fr">
+								<p>全国免费服务热线</p>
+								<b>XXX</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="myMusic">
+		<audio id="music" autoplay controls loop src="images/test.mp3"></audio>
+	</div>
+	<div class="musicBtn"></div>
+	<!--右侧侧浮动-->
+	<div class="fixed_left">
+		<ul>
+			<li class="li1">
+				<a href="#" target="_blank">
+					<i></i>
+					<p>在线咨询</p>
+				</a>
+			</li>
+			<li class="li6">
+				<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank">
+					<i></i>
+					<p>在线QQ</p>
+				</a>
+			</li>
+			<li class="li2">
+				<a href="zhaoshang.html" target="_blank">
+					<i></i>
+					<p>加盟政策</p>
+				</a>
+			</li>
+			<li class="li3">
+				<a href="javascript:;">
+					<i></i>
+					<p>预约定制</p>
+				</a>
+			</li>
+			<li class="li4">
+				<a href="shouhou.html">
+					<i></i>
+					<p>售后服务</p>
+				</a>
+			</li>
+			<li class="li5">
+				<a href="javascript:;">
+					<i></i>
+					<p>官方微信</p>
+				</a>
+				<div class="ff_code"><img src="images/nopic.jpg"></div>
+			</li>
+		</ul>
+		<a class="retrun_top" href="#"><i></i></a>
+	</div>
+
+	<!-- 预约弹窗 -->
+	<div class="apointment_show yyform">
+		<div class="apionment_con">
+			<a class="app_close" href="javascript:;"></a>
+			<div class="app_title">
+				<h3>我要预约</h3>
+				<span>0元量尺、设计服务</span>
+			</div>
+			<div class="app_text clear">
+				<span class="fl">您的姓名:</span>
+				<input name="name" type="text fl" class="text" />
+			</div>
+			<div class="app_text clear">
+				<span class="fl">您的电话:</span>
+				<input name="tel" type="text fl" class="text" />
+			</div>
+			<div class="app_choose clear state">
+				<div class="app_sl fl">
+					<p>省份</p>
+					<ul>
+						<li><a href="javascript:yycity(2,'s')">北京</a></li>
+						<li><a href="javascript:yycity(3,'s')">安徽</a></li>
+						<li><a href="javascript:yycity(4,'s')">福建</a></li>
+						<li><a href="javascript:yycity(5,'s')">甘肃</a></li>
+						<li><a href="javascript:yycity(6,'s')">广东</a></li>
+						<li><a href="javascript:yycity(7,'s')">广西</a></li>
+					</ul>
+				</div>
+				<div class="app_sl fr city">
+					<p>城市</p>
+					<ul></ul>
+				</div>
+			</div>
+			<a class="yy_now" href="javascript:;">立即预约</a>
+		</div>
+	</div>
+
+
+	<!--加盟底-->
+	<div id='showBottom2' class="float_bottom float_other zsjm on">
+		<div class="float_bottom_box clear">
+			<div class="float_bottom_left fl"><img src="images/bottom-img.png" /></div>
+			<div class="float_bottom_max fl clear">
+				<input name="name" class="text" type="text" placeholder="您的姓名" />
+				<input name="tel" class="text" type="text" placeholder="您的手机号" />
+				<div class="float_bottom_choose fl clear">
+					<div class="bottom_choose_list fl state">
+						<p>省份</p>
+						<ul>
+							<li><a href="javascript:jmcity(2,'s')">北京</a></li>
+							<li><a href="javascript:jmcity(3,'s')">安徽</a></li>
+							<li><a href="javascript:jmcity(4,'s')">福建</a></li>
+							<li><a href="javascript:jmcity(5,'s')">甘肃</a></li>
+							<li><a href="javascript:jmcity(6,'s')">广东</a></li>
+						</ul>
+					</div>
+					<div class="bottom_choose_list fl city">
+						<p>城市</p>
+						<ul></ul>
+					</div>
+				</div>
+				<a class="submit jmsubmit active">提交加盟</a>
+			</div>
+			<div class="float_bottom_right"><img src="images/bottom-left-1.png" />
+				<p>在线加盟</p>
+			</div>
+			<div class="bottom_close">
+				<i></i>
+				<b></b>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="images/js/public.js"></script>
+
+	<script>
+		new WOW().init();
+		$('#fullpage').fullpage({
+			anchors: ['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6', 'section-7', 'footer'],
+			menu: '#floatMenu',
+			normalScrollElements: '.app_sl ul,.bottom_choose_list ul,.nav-box',
+			afterRender: function () {
+				$('.section').show();
+			},
+			afterLoad: function (anchorLink, index) {
+				var float_bottom = $('#showBottom2');
+				if (anchorLink == 'section-1' || anchorLink == "footer") {
+					$('#floatMenu').hide();
+					$('.fixed_left').hide();
+
+				} else {
+					$('#floatMenu').show();
+					$('.fixed_left').show();
+				}
+				if (anchorLink == "footer") {
+					$('.fixed_left').show();
+				}
+
+				if (anchorLink == "section-2") {
+					float_bottom.removeClass('on');
+				}
+
+				if (anchorLink != "section-1") {
+					//不是第一屏
+					$('.xx01').show();
+
+				} else {
+					//是第一屏
+					float_bottom.removeClass('in');
+					float_bottom.addClass("on");
+				}
+				$('.retrun_top').click(function () {
+					$.fn.fullpage.moveTo(1, 0);
+				});
+			}
+		});
+
+
+	</script>
+
+</body>
+
+</html>

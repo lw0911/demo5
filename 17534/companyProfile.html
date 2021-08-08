@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>Template</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <!--[if lt IE 9]>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./less/main.css"/>
+    <link rel="stylesheet" href="./less/companyProfile.css"/>
+</head>
+<body>
+
+<!--超小屏隐藏菜单-->
+<div class="big_classify_fill">
+    <div class="classify_fill hidden-sm hidden-md hidden-lg">
+        <div class="classify_fill_hide">
+            <div  id="left" class="classify_fill_bnt">》</div>
+            <div  id="left_fixed" class="classify_fill_fixed">》</div>
+            <div id="right" class="classify_fill_cot">
+                <div class="classify_list">
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                        <button type="button" class="btn btn-default">首页</button>
+                        <button type="button" class="btn btn-default">公司简介</button>
+                        <button type="button" class="btn btn-default">企业文化</button>
+                        <button type="button" class="btn btn-default">荣誉资质</button>
+                        <button type="button" class="btn btn-default">生产设备</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--顶部固定栏-->
+<div class="top_big_box" style="z-index:10000;width: 100%;">
+    <!--顶部通栏-->
+    <div class="fw_topBar">
+        <div class="container">
+            <div class="row">
+                <!-- 小屏模式 不分-->
+                <div class="col-xs-12 hidden-xs fw_topBar_item">
+                    <a href="javascript:;"><img src="./images/bs_05.jpg" alt=""/><span>Enhgilsh</span></a>
+                    <a href="javascript:;"><img src="./images/bs_03.jpg" alt=""/><span>中文版</span></a>
+                </div>
+                <!-- 超小屏结构及样式-->
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg fw_topBar_item_mb">
+                    <a class="call_pic" href="javascript:;"><img src="./images/logo.png" alt=""/></a>
+
+                    <div class="cn_wab_ng_wab">
+                        <a href="javascript:;">中文</a>
+                        <a class="ng_wab" href="javascript:;">英文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--小平模式 分84分-->
+                <div class="col-xs-8 fw_logo hidden-xs">
+                    <a href="javascript:;"><img src="./images/logo.png" alt="XXX玻璃"/></a>
+                </div>
+                <div class="col-xs-4 fw_line hidden-xs">
+                    <a href="javascript:;"><img src="./images/dianhua.png" alt="全国电话热线"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--导航栏-->
+    <nav class="navbar fw_nav" role="navigation">
+        <!--除了超小屏其他显示-->
+        <div class="container hidden-xs">
+            <div class="navbar-header">
+                <!--切换按钮-->
+                <!--
+                    class="navbar-toggle collapsed"  是一个导航切换按钮  collapsed 折叠组件
+                    data-toggle="collapse" 用来初始化折叠组件
+                    data-target="#bs-example-navbar-collapse-1" 指定控制的是那个标签
+                -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--超小屏下显示-->
+                <!--<a class="navbar-brand hidden-lg hidden-md hidden-sm" href="javascript:;">-->
+                <!--</a>-->
+            </div>
+            <!--导航条内容-->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li class="active"><a href="javascript:;">关于XXX</a></li>
+                    <li><a href="javascript:;">产品展示</a></li>
+                    <li><a href="javascript:;">新闻动态</a></li>
+                    <li class="hidden-sm"><a href="javascript:;">人才招聘</a></li>
+                    <li class="hidden-sm hidden-md"><a href="javascript:;">联系我们</a></li>
+                    <li class="hidden-sm hidden-md"><a href="javascript:;">在线留言</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--超小屏显示，其他隐藏-->
+        <div class="container fw_nav_xs_bg hidden-md hidden-sm hidden-lg">
+            <div class="col-xs-12">
+                <div class="fw_nav_xs">
+                    <div class="row">
+                        <ul>
+                            <li><a href="javascript:;">关于XXX</a></li>
+                            <li><a href="javascript:;">产品展示</a></li>
+                            <li><a href="javascript:;">新闻动态</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="fw_nav_xs">
+                    <div class="row">
+                        <ul>
+                            <li><a href="javascript:;">人才招聘</a></li>
+                            <li><a href="javascript:;">联系我们</a></li>
+                            <li><a href="javascript:;">在线留言</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--轮播图-->
+<div class="myBigCarousel hidden-xs">
+    <div class="container-fluid">
+        <div class="row">
+            <div role="tabpanel" class="tab-pane" id="profiles">
+                <div class="bs-example" data-example-id="carousel-with-captions">
+                    <div id="carousel-example-captions_one" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="hidden-xs item_pic" alt="" src="images/banner1.jpg"
+                                     data-holder-rendered="true">
+                                <img class="hidden-lg hidden-sm hidden-md" alt="" src="images/1.jpg"
+                                     data-holder-rendered="true">
+                            </div>
+                            <div class="item">
+                                <img class="hidden-xs item_pic" alt="" src="images/banner2.jpg"
+                                     data-holder-rendered="true">
+                                <img class="hidden-lg hidden-sm hidden-md" alt="" src="images/2.jpg"
+                                     data-holder-rendered="true">
+
+                            </div>
+                            <div class="item">
+                                <img class="hidden-xs item_pic" alt="" src="images/banner3.jpg"
+                                     data-holder-rendered="true">
+                                <img class="hidden-lg hidden-sm hidden-md" alt="900x500" src="images/3.jpg"
+                                     data-holder-rendered="true">
+
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-captions_one" role="button"
+                           data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-captions_one" role="button"
+                           data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--产品展示-->
+<div class="productShow ">
+    <div class="show_top ">
+        <div class="container">
+            <div class="row">
+                <img class="hidden-xs hidden-sm hidden-md hidden-lg " src="./images/neiyegongsijianjie.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="show_left">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 product_classify">
+                    <div class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <div class="new_list_pc">
+                                <img class="new_list_trends" src="./images/neiyegongsijianjie.jpg" alt=""/>
+                                <a class="new_trends_title" href="javascript:;">公司简介</a>
+                                <a class="new_trends_title" href="javascript:;">企业文化</a>
+                                <a class="new_trends_title" href="javascript:;">荣誉资质</a>
+                                <a class="new_trends_title" href="javascript:;">生产设备</a>
+                                <img class="new_list_fenlan" src="./images/neiyefenleizhuangshi.png" alt=""/>
+                                <img class="new_list_top" src="./images/neiyexinwendongtai.jpg" alt=""/>
+                                <ul>
+                                    <li><a href="javascript:;">酱菜瓶，酱菜长期存储还是玻璃瓶为宜</a></li>
+                                    <li><a href="javascript:;">自制玻璃罐简易相框</a></li>
+                                    <li><a href="javascript:;">玻璃瓶在食品包装中的地位</a></li>
+                                    <li><a href="javascript:;">高温喷漆后玻璃起泡的原因和解决方法</a></li>
+                                    <li><a href="javascript:;">如何鉴别玻璃瓶的质量</a></li>
+                                    <li><a href="javascript:;">朝个性化发展的玻璃瓶包装</a></li>
+                                    <li><a href="javascript:;">酱菜瓶，酱菜长期存储还是玻璃瓶为宜</a></li>
+                                    <li><a href="javascript:;">自制玻璃罐简易相框</a></li>
+                                    <li><a href="javascript:;">玻璃瓶在食品包装中的地位</a></li>
+                                </ul>
+                                <img class="new_list_bottom" src="./images/neiyelianxiwomen.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="col-xs-12 fw_new_left_three">
+                        <div class="row ">
+                            <div class="col-xs-12">
+                                <img class="myWherePic" src="./images/inic_where.png" alt=""/>
+                                <div class="myWherePath">
+                                    &nbsp;&nbsp;当前位置：<a href="javascript:;">首页</a>&nbsp;>&nbsp;<a href="javascript:;">公司简介</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 hidden-xs">
+                                <div class="row">
+                                    <div class="profile_pic">
+                                        <div class="col-sm-6">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_01.jpg" alt=""/></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_02.jpg" alt=""/></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_03.jpg" alt=""/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 hidden-xs">
+                                <div class="row">
+                                    <div class="profile_pic_btm">
+                                        <div class="col-sm-2 col-xs-6">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_04.jpg" alt=""/></a>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_05.jpg" alt=""/></a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_06.jpg" alt=""/></a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a class="companyProfile" href="javascript:;"><img
+                                                    src="./images/companyProfile/pic_07.jpg" alt=""/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="profile_text">XXX玻璃有限公司是目前海南较大的一家钢化玻璃生产公司，是一家综合实力较强的玻璃钢化厂，公司注资引进国内较先进的技术，主要有设备：钢化玻璃生产线、夹层玻璃生产线、中空玻璃生产线等，可定制生产钢化、中空、夹层、防火、防弹、镀膜、节能、LOW-E、超白、丝印、烤漆等建筑专用玻璃制品。公司以“独特性能、卓越品质”提供各种技术支持，可能按照 ......</p>
+                        <p class="profile_text">XXX玻璃有限公司是目前海南较大的一家钢化玻璃生产公司，是一家综合实力较强的玻璃钢化厂，公司注资引进国内较先进的技术，主要有设备：钢化玻璃生产线、夹层玻璃生产线、中空玻璃生产线等，可定制生产钢化、中空、夹层、防火、防弹、镀膜、节能。</p>
+                        <p class="profile_text">XXX玻璃有限公司是目前海南较大的一家钢化玻璃生产公司，是一家综合实力较强的玻璃钢化厂，公司注资引进国内较先进的技术，主要有设备：钢化玻璃生产线、夹层玻璃生产线、中空玻璃生产线等，可定制生产钢化。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部栏目-->
+<div class="fw_footer">
+    <!--友情链接-->
+    <div class="fw_footer_up">
+        <div class="container">
+            <div class="row">
+                <div class="fw_footer_top">
+                    <div class="col-sm-2"><img src="./images/youqinglianjie.png" alt=""/></div>
+                    <div class="col-sm-10">
+                        <ul>
+                            <li><a href="javascript:;">精英瓶</a></li>
+                            <li><a href="javascript:;">玻璃工艺品</a></li>
+                            <li><a href="javascript:;">玻璃花瓶</a></li>
+                            <li><a href="javascript:;">青白料玻璃瓶</a></li>
+                            <li><a href="javascript:;">玻璃烛台</a></li>
+                            <li><a href="javascript:;">橄榄油瓶</a></li>
+                            <li><a href="javascript:;">泡酒坛</a></li>
+                            <li><a href="javascript:;">储物罐系列</a></li>
+                            <li><a href="javascript:;">香薰瓶系列</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fw_footer_center"></div>
+    <!--版权-->
+    <div class="fw_footer_down">
+        <div class="container">
+            <div class="row">
+                <div class="fw_footer_bottom">
+                    <p>Copyright 2020 徐州XXX玻璃制品有限公司 版权所有 技术支持 XXX 苏ICP备XXX</p>
+
+                    <p>
+                        公司地址：XXX&nbsp;&nbsp;&nbsp;&nbsp;联系电话：XXX&nbsp;&nbsp;&nbsp;&nbsp;QQ:XXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./js/companyProfile.js"></script>
+</body>
+</html>

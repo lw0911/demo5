@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>经典项目</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; overflow: hidden; }
+    .banners-pc .frame { padding: 45px 0; }
+    .banners-pc .frame .mode { }
+    .banners-pc .frame .mode .left { float: left; }
+    .banners-pc .frame .mode .left .pic { background: no-repeat center center; background-size: cover; width: 680px; height: 448px; }
+    .banners-pc .frame .mode .right { width: 600px; height: 448px; float: right; background: #fff; }
+    .banners-pc .frame .mode .right .tle { padding: 15px 30px; background: #ff5e14; overflow: hidden; }
+    .banners-pc .frame .mode .right .tle .p1 { margin-bottom: 10px; font-size: 24px; color: #fff; float: left; }
+    .banners-pc .frame .mode .right .tle .p2 { font-size: 14px; clear: both; display: inline-block; float: left; }
+    .banners-pc .frame .mode .right .tle .p2 span { margin-right: 5px; padding: 3px 10px; font-size: 14px; color: #fff; display: inline-block; }
+    .banners-pc .frame .mode .right .tle .p2 .sp1 { background: #d1e0ae; }
+    .banners-pc .frame .mode .right .tle .p2 .sp2 { background: #aee0d0; }
+    .banners-pc .frame .mode .right .tle .p2 .sp3 { background: #aeb4e0; }
+    .banners-pc .frame .mode .right .tle .sta { margin-top: -23px; font-size: 24px; float: right; color: #fff; }
+
+    .banners-pc .frame .mode .right .mode { padding: 40px 25px; }
+    .banners-pc .frame .mode .right .mode .p3 { margin-bottom: 25px; font-size: 14px; color: #333333; }
+    .banners-pc .frame .mode .right .mode .p3 span { margin: 0 5px 0 3px; font-size: 32px; color: #ff5e14; }
+    .banners-pc .frame .mode .right .mode .p4 { margin-bottom: 25px; font-size: 14px; color: #808080; }
+    .banners-pc .frame .mode .right .mode .p4 span { color: #4c4c4c; }
+    .banners-pc .frame .mode .right .mode .ico { height: 25px; line-height: 25px; }
+    .banners-pc .frame .mode .right .mode .ico .sp1 { margin-right: 15px; background: #00bc0d; width: 25px; height: 25px; border-radius: 25px; text-align: center; display: inline-block; }
+    .banners-pc .frame .mode .right .mode .ico .sp2 { background: #dd4846; width: 25px; height: 25px; border-radius: 25px; text-align: center; display: inline-block; }
+    .banners-pc .frame .mode .right .mode .ico .sp1 .fa1 { color: #fff; font-size: 14px; vertical-align: middle; }
+    .banners-pc .frame .mode .right .mode .ico .sp2 .fa2 { color: #fff; font-size: 14px; vertical-align: middle; }
+
+
+    .pr_det .mode1 { margin-bottom: 40px; }
+    .pr_det .mode1 .p1 { margin-bottom: 25px; font-size: 24px; color: #1a1a1a; }
+    .pr_det .mode1 .p1 span { margin-bottom: -4px; margin-right: 10px; border: solid #ff5e14 2px; display: inline-block; height: 24px; }
+    .pr_det .mode1 .p2 { font-size: 14px; color: #4c4c4c; line-height: 24px; }
+    .pr_det .mode2 { }
+
+    .pr_det .mode2 { margin-bottom: 40px; }
+    .pr_det .mode2 .p1 { margin-bottom: 25px; font-size: 24px; color: #1a1a1a; }
+    .pr_det .mode2 .p1 span { margin-bottom: -4px; margin-right: 10px; border: solid #ff5e14 2px; display: inline-block; height: 24px; }
+    .pr_det .mode2 .left { }
+    .pr_det .mode2 .left .list { }
+    .pr_det .mode2 .left .list li { padding: 0 12px; float: left; width: 33.33%; }
+    .pr_det .mode2 .left .list li .box { }
+    .pr_det .mode2 .left .list li .box .pic { background: no-repeat center center; background-size: cover; height: 270px; }
+
+    .pr_det .mode2 .left .slick-prev { left: -30px; }
+    .pr_det .mode2 .left .slick-next { right: -30px; }
+
+
+
+    .banners-mb { display: none; clear: both; height: 540px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { padding: 45px 0; width: 100%; height: 540px; }
+    .banners-mb .frame .mode { }
+    .banners-mb .frame .mode .left { float: left; }
+    .banners-mb .frame .mode .left .pic { background: no-repeat center center; background-size: cover; width: 680px; height: 448px; }
+    .banners-mb .frame .mode .right { width: 600px; height: 448px; float: right; background: #fff; }
+    .banners-mb .frame .mode .right .tle { padding: 15px 30px; background: #ff5e14; overflow: hidden; }
+    .banners-mb .frame .mode .right .tle .p1 { margin-bottom: 10px; font-size: 24px; color: #fff; float: left; }
+    .banners-mb .frame .mode .right .tle .p2 { font-size: 14px; clear: both; display: inline-block; float: left; }
+    .banners-mb .frame .mode .right .tle .p2 span { margin-right: 5px; padding: 3px 10px; font-size: 14px; color: #fff; display: inline-block; }
+    .banners-mb .frame .mode .right .tle .p2 .sp1 { background: #d1e0ae; }
+    .banners-mb .frame .mode .right .tle .p2 .sp2 { background: #aee0d0; }
+    .banners-mb .frame .mode .right .tle .p2 .sp3 { background: #aeb4e0; }
+    .banners-mb .frame .mode .right .tle .sta { margin-top: -23px; font-size: 24px; float: right; color: #fff; }
+
+    .banners-mb .frame .mode .right .mode { padding: 40px 25px; }
+    .banners-mb .frame .mode .right .mode .p3 { margin-bottom: 25px; font-size: 14px; color: #333333; }
+    .banners-mb .frame .mode .right .mode .p3 span { margin: 0 5px 0 3px; font-size: 32px; color: #ff5e14; }
+    .banners-mb .frame .mode .right .mode .p4 { margin-bottom: 25px; font-size: 14px; color: #808080; }
+    .banners-mb .frame .mode .right .mode .p4 span { color: #4c4c4c; }
+    .banners-mb .frame .mode .right .mode .ico { height: 25px; line-height: 25px; }
+    .banners-mb .frame .mode .right .mode .ico .sp1 { margin-right: 15px; background: #00bc0d; width: 25px; height: 25px; border-radius: 25px; text-align: center; display: inline-block; }
+    .banners-mb .frame .mode .right .mode .ico .sp2 { background: #dd4846; width: 25px; height: 25px; border-radius: 25px; text-align: center; display: inline-block; }
+    .banners-mb .frame .mode .right .mode .ico .sp1 .fa1 { color: #fff; font-size: 14px; vertical-align: middle; }
+    .banners-mb .frame .mode .right .mode .ico .sp2 .fa2 { color: #fff; font-size: 14px; vertical-align: middle; }
+
+
+
+    .two { display: none; }
+    .two .tle { padding: 15px 30px; background: #ff5e14; overflow: hidden; }
+    .two .tle .p1 { margin-bottom: 10px; font-size: 24px; color: #fff; float: left; }
+    .two .tle .p2 { font-size: 14px; clear: both; display: inline-block; float: left; }
+    .two .tle .p2 span { margin-right: 5px; padding: 3px 10px; font-size: 14px; color: #fff; display: inline-block; }
+    .two .tle .p2 .sp1 { background: #d1e0ae; }
+    .two .tle .p2 .sp2 { background: #aee0d0; }
+    .two .tle .p2 .sp3 { background: #aeb4e0; }
+    .two .tle .sta { margin-top: -23px; font-size: 24px; float: right; color: #fff; }
+    .two .mode { padding: 40px 25px; }
+    .two .mode .p3 { margin-bottom: 25px; font-size: 14px; color: #333333; }
+    .two .mode .p3 span { margin: 0 5px 0 3px; font-size: 32px; color: #ff5e14; }
+    .two .mode .p4 { margin-bottom: 25px; font-size: 14px; color: #808080; }
+    .two .mode .p4 span { color: #4c4c4c; }
+    .two .mode .ico { height: 25px; line-height: 25px; }
+    .two .mode .ico .sp1 { margin-right: 15px; background: #00bc0d; width: 25px; height: 25px; border-radius: 25px; text-align: center; display: inline-block; }
+    .two .mode .ico .sp2 { background: #dd4846; width: 25px; height: 25px; border-radius: 25px; text-align: center; display: inline-block; }
+    .two .mode .ico .sp1 .fa1 { color: #fff; font-size: 14px; vertical-align: middle; }
+    .two .mode .ico .sp2 .fa2 { color: #fff; font-size: 14px; vertical-align: middle; }
+
+    .pr_det .one { }
+    .pr_det .two { display: none; }
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+
+        .banners-mb .frame { height: auto; overflow: hidden; }
+        .banners-mb .frame .mode .left { width: 50%; }
+        .banners-mb .frame .mode .left .pic { width: 100%; }
+
+        .banners-mb .frame .mode .right { width: 50%; }
+        .banners-mb .frame .mode .right .tle { height: auto; }
+
+
+        .pr_det .one { display: none; }
+        .pr_det .two { display: block; }
+        .pr_det .two .left .list li { margin-bottom: 10px; padding-left: 10px; padding-right: 0; }
+        .pr_det .two .left .list li:nth-child(4n) { margin-bottom: 0; }
+        .pr_det .two .left .list li:nth-child(5n) { margin-bottom: 0; }
+        .pr_det .two .left .list li:nth-child(6n) { margin-bottom: 0; }
+        .pr_det .two .left { margin-left: -10px; }
+    }
+
+    @media (max-width: 800px) {
+        .banners-mb { font-size: 0; display: inline; }
+        .banners-mb .frame .mode .left { width: 100%; }
+        .banners-mb .frame .mode .right { display: none; }
+        .two { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+
+        .pr_det .two .left .list li { width: 50%; }
+        .pr_det .two .left .list li:nth-child(4n) { margin-bottom: 10px; }
+    }
+
+    @media (max-width: 750px) {
+        .pr_det .two .left .list li { width: 50%; }
+        .pr_det .two .left .list li:nth-child(4n) { margin-bottom: 10px; }
+        .pr_det .two .left .list li:nth-child(5n) { margin-bottom: 10px; }
+    }
+
+    @media (max-width: 500px) {
+        .pr_det .two .left .list li { width: 100%; }
+        .pr_det .two .left .list li:nth-child(4n) { margin-bottom: 10px; }
+        .pr_det .two .left .list li:nth-child(5n) { margin-bottom: 10px; }
+    }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class="">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class=" on">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：13865925620<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="banners-pc">
+
+        <div class="frame" style="background:url(img/pr_dt1.jpg)no-repeat center center; background-size: cover;width:100%; height:540px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <div class="left">
+                        <p class="pic" style=" background-image:url(/r/data/etl05b355cvoq7t.jpg);"></p>
+                    </div>
+                    <div class="right">
+                        <div class="tle">
+                            <p class="p1">设计建造5</p>
+                            <p class="p2"><span class="sp1">临地铁</span><span class="sp2">临商圈</span><span class="sp3"></span></p>
+                            <p class="sta">暂无</p>
+                        </div>
+                        <div class="mode">
+                            <p class="p3">参考价格：<span class="sp4">27600</span>元/㎡</p>
+                            <p class="p4">楼盘地址：<span class="sp5">合肥市长江西路699号金濠广场B4-30层</span></p>
+                            <p class="p4">售楼处地址：<span class="sp5">合肥市长江西路699号金濠广场B4-30层</span></p>
+                            <p class="p4">开盘时间：<span class="sp5">暂无</span></p>
+                            <p class="p4">电话咨询：<span class="sp5">13865925620</span></p>
+                            <p class="ico">
+                                <span class="sp1"><i class="fa fa-weixin fa1"></i></span>
+                                <span class="sp2"><i class="fa fa-weibo fa2"></i></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="banners-mb">
+        <div class="frame" style="background:url(img/pr_dt1.jpg)no-repeat center center; background-size: cover;">
+            <div class="g_cw">
+                <div class="mode">
+                    <div class="left">
+                        <p class="pic" style=" background-image:url(/r/data/etl05b355cvoq7t.jpg);"></p>
+                    </div>
+                    <div class="right">
+                        <div class="tle">
+                            <p class="p1">设计建造5</p>
+                            <p class="p2"><span class="sp1">临地铁</span><span class="sp2">临商圈</span><span class="sp3"></span></p>
+                            <p class="sta">暂无</p>
+                        </div>
+                        <div class="mode">
+                            <p class="p3">参考价格：<span class="sp4">27600</span>元/㎡</p>
+                            <p class="p4">楼盘地址：<span class="sp5">合肥市长江西路699号金濠广场B4-30层</span></p>
+                            <p class="p4">售楼处地址：<span class="sp5">合肥市长江西路699号金濠广场B4-30层</span></p>
+                            <p class="p4">开盘时间：<span class="sp5">暂无</span></p>
+                            <p class="p4">电话咨询：<span class="sp5">13865925620</span></p>
+                            <p class="ico">
+                                <span class="sp1"><i class="fa fa-weixin fa1"></i></span>
+                                <span class="sp2"><i class="fa fa-weibo fa2"></i></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right two">
+        <div class="tle">
+            <p class="p1">设计建造5</p>
+            <p class="p2"><span class="sp1">临地铁</span><span class="sp2">临商圈</span><span class="sp3"></span></p>
+            <p class="sta">暂无</p>
+        </div>
+
+
+        <div class="mode">
+            <p class="p3">参考价格：<span class="sp4">27600</span>元/㎡</p>
+            <p class="p4">楼盘地址：<span class="sp5">合肥市长江西路699号金濠广场B4-30层</span></p>
+            <p class="p4">售楼处地址：<span class="sp5">合肥市长江西路699号金濠广场B4-30层</span></p>
+            <p class="p4">开盘时间：<span class="sp5">暂无</span></p>
+            <p class="p4">电话咨询：<span class="sp5">13865925620</span></p>
+            <p class="ico">
+                <span class="sp1"><i class="fa fa-weixin fa1"></i></span>
+                <span class="sp2"><i class="fa fa-weibo fa2"></i></span>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="pr_det g_mt g_mb">
+        <div class="g_cw">
+            <div class="mode1">
+                <p class="p1"><span></span>楼盘简介</p>
+                <p class="p2">
+                    房地产是一个综合的较为复杂的概念，从实物现象看，它是由建筑物与土地共同构成。土地可以分为未开发的土地和已开发的土地，建筑物依附土地而存在，与土地结合在一起。建筑物是指人工建筑而成的产物，包括房屋和构筑物两大类。
+                    <br />
+                    <br />
+                    对于房地产的概念，应该从两个方面来理解：房地产既是一种客观存在的物质形态，同时也是一项法律权利。<br />
+                    作为一种客观存在的物质形态，房地产是指房产和地产的总称，包括土地和土地上永久建筑物及其所衍生的权利。房产是指建筑在土地上的各种房屋，包括住宅商铺、厂房、仓库以及办公用房等。地产是指土地及其上下一定的空间，包
+                    括地下的各种基础设施、地面道路等。房地产由于其自己的特点即位置的固定性和不可移动性，在经济学上又被称为不动产。可以有三种存在形态：即土地、建筑物、房地合一。在房地产拍卖中，其拍卖标的也可以有三种存在形态，即土地（或
+                    土地使用权）、建筑物和房地合一状态下的物质实体及其权益。
+                </p>
+            </div>
+
+            <div class="mode2 one">
+                <p class="p1"><span></span>楼盘相册</p>
+                <div class="left">
+
+                    <ul class="list">
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy1.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy2.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy3.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy4.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy5.jpg);"></p></a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <script>
+                (function () {
+                    $('.mode2 .list').slick({ arrows: true, dots: false, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+                })();
+            </script>
+
+            <div class="mode2 two">
+                <p class="p1"><span></span>楼盘相册</p>
+                <div class="left">
+
+                    <ul class="list">
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy1.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy2.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy3.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy4.jpg);"></p></a></li>
+
+                        <li><a class="box"><p class="pic" style="background-image:url(/r/data/2d559ndg52v0qoy5.jpg);"></p></a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

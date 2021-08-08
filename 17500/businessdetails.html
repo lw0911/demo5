@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>业务领域</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; height: 430px; }
+    .banners-pc .mode { padding-top: 230px; }
+    .banners-pc .mode .br1 { margin-left: -44px; position: relative; }
+    .banners-pc .mode .mode1 { margin-top: -46px; text-align: center; }
+    .banners-pc .mode .mode1 .p1 { margin-bottom: 20px; font-size: 32px; color: #fff; }
+    .banners-pc .mode .mode1 .p2 { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .banners-pc .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+    .banners-mb { display: none; clear: both; height: 430px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { position: relative; }
+    .banners-mb .frame .mode { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); text-align: center; height: auto; }
+    .banners-mb .frame .mode .mode1 { position: absolute; margin-top: -41px; top: 50%; left: 0; right: 0; height: auto; }
+    .banners-mb .frame .mode .mode1 .p1 { margin-bottom: 20px; font-size: 40px; color: #fff; }
+    .banners-mb .frame .mode .mode1 .p2 { font-size: 16px; color: rgba(255,255,255,0.6); }
+    .banners-mb .frame .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+    }
+
+    @media (max-width: 1024px) {
+        .top_nav .nav_a li { margin-bottom: 10px; }
+        .top_nav .nav_a li:nth-child(5n) { margin-bottom: 0; }
+        .top_nav .nav_a li:nth-child(6n) { margin-bottom: 0; }
+    }
+
+    @media (max-width: 667px) {
+        .top_nav .nav_a li:nth-child(3n) { margin-bottom: 10px; }
+        .top_nav .nav_a li:nth-child(4n) { margin-bottom: 10px; }
+        .top_nav .nav_a li:nth-child(5n) { margin-bottom: 10px; }
+    }
+
+    .businessdetails { }
+    .businessdetails .details { }
+    .businessdetails .details .p1 { margin-bottom: 40px; font-size: 24px; color: #1a1a1a; font-weight: bold; }
+    .businessdetails .details .p2 { font-size: 14px; color: #4c4c4c; line-height: 24px; }
+
+
+
+    .g_page { margin-top: 40px; text-align: center; }
+    .g_page ul { }
+    .g_page ul li { margin: 0 10px; display: inline-block; }
+    .g_page ul li .box { padding: 8px 12px; border: solid #d9d9d9 1px; font-size: 14px; color: #333333; display: inline-block; }
+    .g_page ul li .prev { padding: 8px 12px; border: solid #d9d9d9 1px; font-size: 14px; color: #333333; }
+    .g_page ul li .next { padding: 8px 12px; border: solid #d9d9d9 1px; font-size: 14px; color: #333333; }
+    .g_page ul li a:hover { background: #ff5e14; color: #fff; border: solid #ff5e14 1px; transition: ease .3s; }
+    .g_page ul li .on { background: #ff5e14; border: solid #ff5e14 1px; color: #fff; transition: ease .3s; }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class="">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class=" on">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：XXX<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="banners-pc">
+
+        <div class="" style="background:url(img/bn1.jpg)no-repeat center center; background-size: cover;width:100%; height:430px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <div class="mode1">
+                        <p class="p1">业务领域</p>
+                        <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>业务领域</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="banners-mb" zoom-width="1024" zoom-heigh="430">
+        <div class="frame" style=" background:url(img/bn2.jpg) no-repeat center center; background-size:cover; width:100%;">
+            <div class="mode">
+                <div class="mode1">
+                    <p class="p1">业务领域</p>
+                    <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>业务领域</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            $('.banners-pc, .banners-mb').slick({ arrows: true, dots: false, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+        })();
+    </script>
+
+
+
+    <div class="businessdetails">
+        <div class="top_nav">
+            <div class="g_cw">
+                <ul class="nav_a">
+                    <li><a href="?_ct=地产开发" class=" box  ">地产开发</a></li>
+                    <li><a href="?_ct=物业服务" class=" box  ">物业服务</a></li>
+                    <li><a href="?_ct=设计建造" class=" box  ">设计建造</a></li>
+                    <li><a href="?_ct=医养健康" class=" box  ">医养健康</a></li>
+                    <li><a href="?_ct=酒店发展" class=" box  ">酒店发展</a></li>
+                    <li><a href="?_ct=文体旅游" class=" box  on  ">文体旅游</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g_cw g_mt g_mb">
+
+
+
+            <div class="details">
+                <p class="p1">文体旅游</p>
+                <pre class="p2">“旅”是旅行，外出，即为了实现某一目的而在空间上从甲地到乙地的行进过程；“游”是外出游览、观光、娱乐，即为达到这些目的所作的旅行。二者合起来即旅游。所以，旅行偏重于行，旅游不但有“行”，且有观光、娱乐含义。
+
+在旅行作为一种社会行为，古代即以存在，中国是世界文明古国之一，旅行活动的兴起同样居世界前列，中国早在公元前22世纪就有了。当时最典型的旅行家大概要数大禹了，他为了疏浚九江十八河，游览了大好河山。之后，就是春秋战国时的老子、孔子二人了。老子传道，骑青牛西去。孔子讲学周游列国。汉时张骞出使西域，远至波斯，今伊朗和叙利亚。唐时玄奘取经到印度，明时郑和七下西洋，远至东非海岸，还有大旅行家徐霞客作了游记。</pre>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

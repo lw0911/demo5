@@ -1,0 +1,111 @@
+@charset "utf-8";
+/*
+说明：首页CSS样式
+时间：2016-02-03
+作者：weiJuwis
+ */
+
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+   	font-size: 12px; font-family: "微软雅黑";
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol,li { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+input{outline: none;
+	border:0;
+	border:none;
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+/*clearfix*/
+.clearfix:after{content:''; display:table; clear:both;}
+.clearfix{*zoom:1;}
+
+/*cssSpriteImg*/
+.icon-img{ background-image:url(../images/cssSprite.png);}
+
+
+/*common-header*/
+.common-header{width: 100%; overflow: hidden; zoom:1; height: 127px; border-bottom: 3px solid #009bde;}
+.common-header-all{ width: 1000px; margin: 0px auto;}
+
+/*common-header-top*/
+.common-header-all .common-header-top{ width:100%;overflow: hidden; zoom:1; padding: 24px 0;}
+.common-header-all .common-header-top h1{float: left;}
+.common-header-all .common-header-top span{ float: right; width: 337px; height: 38px; background: url(../images/header_sreach.jpg);}
+.common-header-all .common-header-top span input{ float: left;}
+.common-header-all .common-header-top span input.header-text{ width: 249px; height: 34px; line-height:34px; text-indent:1em;margin:2px 0 0 2px;overflow: hidden; zoom:1;*display:inline;}
+.common-header-all .common-header-top span input.header-submit{width: 81px;  height: 38px; background: none; cursor: pointer;}
+
+/*common-header-bottom*/
+.common-header-all .common-header-bottom{width:100%;}
+.common-header-all .common-header-bottom ul{overflow: hidden; zoom: 1; float: left;}
+.common-header-all .common-header-bottom ul li{  height: 33px; line-height: 33px; float: left; text-align: center; cursor: pointer;}
+.common-header-all .common-header-bottom ul li a{ font-size: 16px; color: #121212; padding: 0 40px;}
+.common-header-all .common-header-bottom ul li:hover,.common-header-all .common-header-bottom ul li.active{ background: #009bde;}
+.common-header-all .common-header-bottom ul li:hover a,.common-header-all .common-header-bottom ul li.active a{ text-decoration: none; color: #FFF;}
+.common-header-bottom .common-bottom-user{ float: right; font-size: 0; padding-top: 5px; cursor: pointer;}
+.common-header-bottom .common-bottom-user .user-img{ background-position: 0 0; width: 23px; height: 23px; display: inline-block;vertical-align: middle;*display:inline;*zoom:1;}
+.common-header-bottom .common-bottom-user p{ display: inline-block; font-size: 14px; color: #de9b09; vertical-align: middle; padding-left: 10px;*display:inline;*zoom:1;}
+
+
+/*common-footer*/
+.common-footer{width: 100%; height: 60px; background: #4d5457;}
+.common-cont{ width: 1000px; overflow: hidden; zoom: 1; margin: 0 auto; padding-top: 12px;}
+.common-cont a{float: left;}
+.common-cont p{ float: right; color: #bbbbbb; line-height: 20px;}

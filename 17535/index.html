@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="author" content="http://www.wangdahai.cn">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" type="text/css" href="statics/css/lib.css">
+		<link rel="stylesheet" type="text/css" href="statics/css/style.css">
+		<link rel="stylesheet" type="text/css" href="statics/css/1305.css">
+		<script type="text/javascript" src="statics/js/jquery-1.11.3.min.js"></script>
+		<script>
+			$(function() {
+				if(!$("#mindex").length) {
+					$('body').addClass('sscreen')
+				}
+			})
+		</script>
+		<script type="text/javascript" src="statics/js/org.min.js" data-main="indexMain"></script>
+		<title>首页</title>
+	</head>
+
+	<body>
+		<div class="bodyMask"> </div>
+		<div id="header" class="index_nav">
+
+			<div class="content">
+				<a href="index.html" id="logo"><img src="statics/images/1481008626154.png" height="40" /></a>
+				<ul id="nav">
+					<li class="navitem">
+						<a class="nav-a  active " href="index.html" target="_self"><span data-title="首页">首页</span></a>
+					</li>
+					<li class="navitem">
+						<a class="nav-a " href="product_list.html" target="_self"><span data-title="行业咨询">行业咨询</span></a>
+					</li>
+					<li class="navitem">
+						<a class="nav-a " href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
+						<ul class="subnav">
+							<li>
+								<a href="about_us.html" target="_self"><span data-title="集团介绍">集团介绍</span><i class="fa fa-angle-right"></i></a>
+							</li>
+							<li>
+								<a href="about_chairman.html" target="_self"><span data-title="董事长致辞">董事长致辞</span><i class="fa fa-angle-right"></i></a>
+							</li>
+							<li>
+								<a href="about_history.html" target="_self"><span data-title="大事件">大事件</span><i class="fa fa-angle-right"></i></a>
+							</li>
+						</ul>
+					</li>
+					<li class="navitem">
+						<a class="nav-a " href="product_list2.html" target="_self"><span data-title="咨询业务">咨询业务</span></a>
+					</li>
+					<li class="navitem">
+						<a class="nav-a " href="team.html" target="_self"><span data-title="精英团队">精英团队</span></a>
+					</li>
+					<li class="navitem">
+						<a class="nav-a " href="news.html" target="_self"><span data-title="最新动态">最新动态</span></a>
+					</li>
+					<li class="navitem">
+						<a class="nav-a " href="contact.html" target="_self"><span data-title="联系我们">联系我们</span></a>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<a id="headSHBtn" href="javascript:;"><i class="fa fa-bars"></i></a>
+		</div>
+		<div id="sitecontent">
+			<div id="indexPage">
+				<div id="mslider" class="module">
+					<script type="text/javascript">
+						$(function() {
+							$("#mslider li video").each(function(index, element) {
+								element.play();
+							});
+						})
+					</script>
+					<ul class="slider" data-options-height="650" data-options-auto="1" data-options-mode="0" data-options-pause="4" data-options-ease="ease-out">
+						<li style="background-image:url(statics/images/1481081724598.jpg)" class="active">
+							<div id="tempImage_0"></div><img style="display:none" src="statics/images/1481081724598.jpg" alt="" />
+							<div class="mask"></div>
+							<a target="_blank">
+								<div>
+									<p class="title ellipsis"></p>
+								</div>
+								<div class="sliderArrow fa fa-angle-down"></div>
+							</a>
+						</li>
+						<li style="background-image:url(statics/images/1481008362869.jpg)">
+							<div id="tempImage_1"></div><img style="display:none" src="statics/images/1481008362869.jpg" alt="" />
+							<div class="mask"></div>
+							<a target="_blank">
+								<div>
+									<p class="title ellipsis"></p>
+								</div>
+								<div class="sliderArrow fa fa-angle-down"></div>
+							</a>
+						</li>
+						<li style="background-image:url(statics/images/148100672992.jpg)">
+							<div id="tempImage_2"></div><img style="display:none" src="statics/images/148100672992.jpg" alt="" />
+							<div class="mask"></div>
+							<a target="_blank">
+								<div>
+									<p class="title ellipsis"></p>
+								</div>
+								<div class="sliderArrow fa fa-angle-down"></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="mindex" data-options-ease="Expo.easeInOut" data-options-speed="1" data-options-sscreen="0"></div>
+				<div id="mnews" class="module">
+					<div class="bgmask"></div>
+					<div class="content layoutnone">
+						<div class="header wow">
+							<p class="title">最新动态</p>
+							<p class="subtitle">News Center</p>
+						</div>
+						<div class="module-content" id="newslist">
+							<div class="wrapper">
+								<ul class="content_list" data-options-sliders="6" data-options-margin="0" data-options-ease="1" data-options-speed="0.5" data-options-mode="horizontal" data-options-wheel="0">
+									<li id="newsitem_0" class="wow newstitem left">
+										<a class="newscontent" target="_blank" href="#">
+											<div class="news_wrapper">
+												<div class="newsbody">
+													<p class="date"><span class="md">2015<span>-</span></span><span class="year">10-19</span></p>
+													<p class="title">洞察企业转型之道 助力企业转型之举的主线</p>
+													<div class="separator"></div>
+													<p class="description">等了这么久，勤劳的技术哥哥马不停蹄的敲着代码，终于WEB的后台于今日初步完成，已经 ...</p>
+												</div>
+											</div>
+											<div class="newsimg" style="background-image:url(statics/images/1482133948355.jpg)"></div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="newsitem_1" class="wow newstitem right">
+										<a class="newscontent" target="_blank" href="http://mo004_1305.mo4.line1.uemo.net/news/post/8226/">
+											<div class="news_wrapper">
+												<div class="newsbody">
+													<p class="date"><span class="md">2015<span>-</span></span><span class="year">09-18</span></p>
+													<p class="title">全新集团GROUP北京科技园正式落成启用</p>
+													<div class="separator"></div>
+													<p class="description">每一套设计我们都细心研究，集体讨论。从美观度到延展性，从体验度到适用性。技术哥哥前端姐姐提出的中肯建议，设计师们都虚心接受，悉心改良。</p>
+												</div>
+											</div>
+											<div class="newsimg" style="background-image:url(statics/images/1482134136667.jpg)"></div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="newsitem_2" class="wow newstitem left">
+										<a class="newscontent" target="_blank" href="http://mo004_1305.mo4.line1.uemo.net/news/post/8225/">
+											<div class="news_wrapper">
+												<div class="newsbody">
+													<p class="date"><span class="md">2015<span>-</span></span><span class="year">08-05</span></p>
+													<p class="title">CFM航空发动机维修培训中心庆祝成立20周年</p>
+													<div class="separator"></div>
+													<p class="description">千呼万唤始出来，千树万树梨花开。等了这么久，勤劳的技术哥哥马不停蹄的敲着代码，终于WEB的后台于今日初步完成 ...</p>
+												</div>
+											</div>
+											<div class="newsimg" style="background-image:url(statics/images/1482135314156.jpg)"></div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="newsitem_3" class="wow newstitem right">
+										<a class="newscontent" target="_blank" href="#">
+											<div class="news_wrapper">
+												<div class="newsbody">
+													<p class="date"><span class="md">2015<span>-</span></span><span class="year">07-30</span></p>
+													<p class="title">天津水电基地为拉脱维亚里加项目完成</p>
+													<div class="separator"></div>
+													<p class="description">经过多年的研究与调查，从今年的6月开工设计至今，勤劳的设计精英们已完成二十余套企业版WEB ...</p>
+												</div>
+											</div>
+											<div class="newsimg" style="background-image:url(statics/images/1482134804985.jpg)"></div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="newsitem_4" class="wow newstitem left">
+										<a class="newscontent" target="_blank" href="#">
+											<div class="news_wrapper">
+												<div class="newsbody">
+													<p class="date"><span class="md">2015<span>-</span></span><span class="year">06-18</span></p>
+													<p class="title">成功开发饮用水AL高通量反渗透膜</p>
+													<div class="separator"></div>
+													<p class="description">从2012年起我们就有打造WEB的想法，这几年我们致力于对模板的研究与调查，于是在2014年7月我们最先在平台上推出了针对设计师的WEB...</p>
+												</div>
+											</div>
+											<div class="newsimg" style="background-image:url(statics/images/1482133754612.jpg)"></div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<a href="news.html" class="more wow">MORE<i class="fa fa-angle-right"></i></a>
+						<div style="height:0">&nbsp;</div>
+					</div>
+				</div>
+				<div id="mservice" class="module">
+					<div class="bgmask"></div>
+					<div class="content layoutslider">
+						<div class="header wow fw" data-wow-delay=".1s">
+							<p class="title">咨询业务</p>
+							<p class="subtitle">Consulting</p>
+						</div>
+						<div class="module-content fw" id="servicelist">
+							<div class="wrapper">
+								<ul class="content_list" data-options-sliders="1" data-options-margin="40" data-options-ease="1" data-options-speed="1">
+									<li id="serviceitem_0" class="serviceitem wow">
+										<a href="#" target="_blank">
+											<p class="service_img"><img src="statics/images/148100202198.jpg" width="320" height="120" alt="战略规划管理咨询" /></p>
+											<div class="service_info">
+												<p class="title">战略规划管理咨询</p>
+												<p class="description">从定价策略到品牌定位，再到数字化营销。我们丰富的经验确保定制方案，市场营销是在创造/沟通交换产品中... </p>
+											</div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="serviceitem_1" class="serviceitem wow">
+										<a href="#" target="_blank">
+											<p class="service_img"><img src="statics/images/1481005223993.jpg" width="320" height="120" alt="市场营销咨询" /></p>
+											<div class="service_info">
+												<p class="title">市场营销咨询</p>
+												<p class="description">战略咨询是咨询最具优势的咨询服务之一。我们已经在500多个战略项目中支持和帮助超过企业完成完整的 ...</p>
+											</div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="serviceitem_2" class="serviceitem wow">
+										<a href="#" target="_blank">
+											<p class="service_img"><img src="statics/images/1481010419651.jpg" width="320" height="120" alt="集团管控咨询" /></p>
+											<div class="service_info">
+												<p class="title">集团管控咨询</p>
+												<p class="description">每年我们的顾问和专家都会致力于多项“管理知识体系”的研发工作, 并直接用于我们客户的拥有国内顶级专家团队 ... </p>
+											</div>
+										</a>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<a href="#" class="more wow">MORE<i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div id="mproject" class="module">
+					<div class="bgmask"></div>
+					<div class="content layoutslider">
+						<div class="header wow">
+							<p class="title">行业咨询</p>
+							<p class="subtitle">All Product</p>
+						</div>
+						<div id="category" class="hide wow">
+							<a href="#">战略规划</a>
+							<a href="#">金融行业</a>
+							<a href="#">风险内控</a>
+							<a href="#">电子制造</a>
+							<a href="#">其他</a>
+						</div>
+						<!--yyLayout masonry-->
+						<div class="module-content" id="projectlist">
+							<div class="projectSubList" id="projectSubList_">
+								<div class="projectSubHeader">
+									<p class="title"></p>
+									<p class="subtitle"></p>
+								</div>
+								<div class="wrapper">
+									<ul class="content_list" data-options-sliders="4" data-options-margin="20" data-options-ease="1" data-options-speed="1">
+										<li id="projectitem_0" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481263123883.jpg" alt="战略与商业模式设计" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">战略与商业模式设计</p>
+															<p class="subtitle">Business Innovation</p>
+															<p class="description hide">我们在中国继续向高端医疗市场提供领先的医疗解决方案，实现从产品和 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_1" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481263293885.jpg" alt="效能型集团管控模式" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">效能型集团管控模式</p>
+															<p class="subtitle">通行组织形式</p>
+															<p class="description hide">什么样的合作伙伴，才能助您实现业务转型,她要对行业了如指掌，善于发掘富 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_2" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481262960405.jpg" alt="KARUGAMO WORKS" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">KARUGAMO WORKS</p>
+															<p class="subtitle">创新实验室</p>
+															<p class="description hide">咨询服务不但能够迅速、明确地交付业务成果，而且可以帮助您妥善 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_3" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1482139585595.jpg" alt="新业务营销模式设计" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">新业务营销模式设计</p>
+															<p class="subtitle">专项/ 系统解决方案</p>
+															<p class="description hide">我们帮助这些企业实现了显著的业务成果 — 亿滋国际已节约10亿美元 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_4" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481525797485.jpg" alt="创新人才管理体系" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">创新人才管理体系</p>
+															<p class="subtitle">人力资源管理</p>
+															<p class="description hide">我们帮助这些企业实现了显著的业务成果 — 亿滋国际已节约10亿美元 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_5" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481527163654.jpg" alt="事业合伙人机制解决方案" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">事业合伙人机制解决方案</p>
+															<p class="subtitle">专项/ 系统解决方案</p>
+															<p class="description hide">我们帮助这些企业实现了显著的业务成果 — 亿滋国际已节约10亿美元 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_6" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481527283766.jpg" alt="360°business innovation" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">360°business innovation</p>
+															<p class="subtitle">低碳和智能的能源格局</p>
+															<p class="description hide">我们帮助这些企业实现了显著的业务成果 — 亿滋国际已节约10亿美元 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li id="projectitem_7" class="projectitem wow">
+											<a href="#" class="projectitem_content" target="_blank">
+												<div class="projectitem_wrapper">
+													<div class="project_img"><img src="statics/images/1481602482401.jpg" alt="中国式阿米巴经营" width="650" height="385" /></div>
+													<div class="project_info">
+														<div>
+															<p class="title">中国式阿米巴经营</p>
+															<p class="subtitle">生态服务产品</p>
+															<p class="description hide">我们帮助这些企业实现了显著的业务成果 — 亿滋国际已节约10亿美元 ...</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!--wrapper-->
+							</div>
+							<!--projectSubList-->
+							<a href="product_list.html" class="more wow">MORE<i class="fa fa-angle-right"></i></a>
+						</div>
+						<!--projectlist-->
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!--project-->
+				<div id="mpage" class="module">
+					<div class="bgmask"></div>
+					<div class="content">
+						<div class="module-content">
+							<div class="wrapper">
+								<ul class="slider one">
+									<li>
+										<div class="header wow" data-wow-delay=".2s">
+											<p class="title">集团介绍</p>
+											<p class="subtitle">ABOUT</p>
+										</div>
+										<div class="des-wrap">
+											<p class="description wow" data-wow-delay=".3s">作为全球领先的数字工业公司，长期致力于通过与客户共同拓展本土及海外市场的长期合作，助力产业转型和升级。2008年，总面积达到88,000平方米的中国科技园在上海张江高科技园区正式建成使用，而此次北京科技园的落成使用是在进一步实现本土化 ...</p>
+										</div>
+										<a href="about_us.html" class="more wow" data-wow-delay=".5s">MORE<i class="fa fa-angle-right"></i></a>
+										<div class="fimg wow" style="background-image:url(statics/images/1481532920648.jpg)"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="mteam" class="module">
+					<div class="bgmask"></div>
+					<div class="content layoutslider">
+						<div class="header wow">
+							<p class="title">精英团队</p>
+							<p class="subtitle">Team</p>
+						</div>
+						<div class="module-content fw">
+							<div class="wrapper">
+								<ul class="content_list" data-options-sliders="2" data-options-margin="20" data-options-ease="1" data-options-speed="0.5">
+									<li id="teamitem_0" class="wow">
+										<div class="header wow" data-wow-delay=".2s">
+											<a href="#" target="_blank"><img src="statics/images/1481614452815.jpg" alt="王璞" width="180" height="180" /></a>
+										</div>
+										<div class="summary wow">
+											<p class="title">
+												<a href="#">王璞</a>
+											</p>
+											<p class="subtitle">首席咨询师</p>
+											<p class="description wow">北京大学光华管理学院 首届MBA，协助策划公司线上线下产品推广和市场宣传活动，并具体执行 ...
+											</p>
+										</div>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="teamitem_1" class="wow">
+										<div class="header wow" data-wow-delay=".2s">
+											<a href="#" target="_blank"><img src="statics/images/1481614919163.jpg" alt="杨振涛" width="180" height="180" /></a>
+										</div>
+										<div class="summary wow">
+											<p class="title">
+												<a href="#">杨振涛</a>
+											</p>
+											<p class="subtitle">八级咨询师</p>
+											<p class="description wow">北京航空航天大学 工商管理硕士 ,FLASH开发在代码中体验完美生活,汇总客户反馈意见 ...</p>
+										</div>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="teamitem_2" class="wow">
+										<div class="header wow" data-wow-delay=".2s">
+											<a href="#" target="_blank"><img src="statics/images/1481767184458.jpg" alt="刘庆韬" width="180" height="180" /></a>
+										</div>
+										<div class="summary wow">
+											<p class="title">
+												<a href="#">刘庆韬</a>
+											</p>
+											<p class="subtitle">九级咨询师</p>
+											<p class="description wow">华中理工大学经济管理学院经济学士 1990-1994、日本电通、联想集团具有创业精神，能承受一定的工作压力量居内蒙古自治区盟市 ...</p>
+										</div>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="teamitem_3" class="wow">
+										<div class="header wow" data-wow-delay=".2s">
+											<a href="#" target="_blank"><img src="statics/images/1481771175368.jpg" alt="陈江" width="180" height="180" /></a>
+										</div>
+										<div class="summary wow">
+											<p class="title">
+												<a href="#">陈江</a>
+											</p>
+											<p class="subtitle">九级咨询师</p>
+											<p class="description wow">中国人民大学财政金融学院经济学硕士 1997-2000，曾服务雅虎、腾讯、搜狐、新浪、民生银行,具备良好的执行力，较强的沟通表达能力和协调能力</p>
+										</div>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li id="teamitem_4" class="wow">
+										<div class="header wow" data-wow-delay=".2s">
+											<a href="#" target="_blank"><img src="statics/images/1481771247362.jpg" alt="李强" width="180" height="180" /></a>
+										</div>
+										<div class="summary wow">
+											<p class="title">
+												<a href="#">李强</a>
+											</p>
+											<p class="subtitle">七级咨询师</p>
+											<p class="description wow">北方工业大学 工业电气自动化工学学士/7年互联网经验，曾服务于搜狐火炬传递、北京建筑设计研究院、日本电通</p>
+										</div>
+										<a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<a href="http://mo004_1305.mo4.line1.uemo.net/team/" class="more wow">MORE<i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div id="mpartner" class="module">
+					<div class="bgmask"></div>
+					<div class="content layoutslider">
+						<div class="header wow fw" data-wow-delay=".1s">
+							<p class="title">合作伙伴</p>
+							<p class="subtitle">partner</p>
+						</div>
+						<div class="module-content fw">
+							<div class="wrapper">
+								<ul class="content_list" data-options-ease="1" data-options-speed="1">
+									<li id="partneritem_0" class="wow">
+										<a href="https://www.baidu.com/" title="WEB1" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1460532929454.png" width="160" height="80" alt="WEB1" /></p>
+											<p class="par_title">WEB1</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="合作伙伴logo1" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451038650682.png" width="160" height="80" alt="合作伙伴logo1" /></p>
+											<p class="par_title">合作伙伴logo1</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="合作伙伴logo4" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451039311523.png" width="160" height="80" alt="合作伙伴logo4" /></p>
+											<p class="par_title">合作伙伴logo4</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="合作伙伴logo2" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451038889783.png" width="160" height="80" alt="合作伙伴logo2" /></p>
+											<p class="par_title">合作伙伴logo2</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="合作伙伴logo3" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451038998591.png" width="160" height="80" alt="合作伙伴logo3" /></p>
+											<p class="par_title">合作伙伴logo3</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="Google" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451039355850.png" width="160" height="80" alt="Google" /></p>
+											<p class="par_title">Google</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="合作伙伴logo" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451037714851.png" width="160" height="80" alt="合作伙伴logo" /></p>
+											<p class="par_title">合作伙伴logo</p>
+
+										</a>
+										<a href="https://www.baidu.com/" title="合作伙伴logo5" target="_blank">
+
+											<p class="par_img"><img src="statics/images/1451039609622.png" width="160" height="80" alt="合作伙伴logo5" /></p>
+											<p class="par_title">合作伙伴logo5</p>
+
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="mcontact" class="module">
+					<div class="bgmask"></div>
+					<div class="content">
+						<div class="header wow fadeInUp fw" data-wow-delay=".1s">
+							<p class="title">联系</p>
+							<p class="subtitle">Contact</p>
+						</div>
+						<div id="contactlist" class="fw">
+							<div id="contactinfo" class="fl wow" data-wow-delay=".2s">
+
+								<h3 class="ellipsis name">网站建设文化传播有限公司</h3>
+								<p class="ellipsis add"><span>地点：</span>中国地区XX分区5A写字楼8-88室</p>
+								<p class="ellipsis zip"><span>邮编：</span>100000</p>
+								<p class="ellipsis tel"><span>电话：</span>XXX</p>
+								<p class="ellipsis mobile"><span>手机：</span>XXX</p>
+								<p class="ellipsis fax"><span>传真：</span>XXX</p>
+								<p class="ellipsis email"><span>邮箱：</span>XXX</p>
+								<div>
+									<a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a>
+									<a class="fl" target="_blank" href="tencent://message/?uin=40080000&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a>
+									<a id="mpbtn" class="fl" href="statics/images/1449307546350.jpg"><i class="fa fa-weixin"></i></a>
+								</div>
+							</div>
+							<div id="contactform" class="fr wow" data-wow-delay=".2s">
+								<form action="http://mo004_1305.mo4.line1.uemo.net/message/" method="post">
+									<p>
+										<input type="text" class="inputtxt name" name="name" placeholder="姓名" autocomplete="off" />
+									</p>
+									<p>
+										<input type="text" class="inputtxt email" name="email" placeholder="邮箱" autocomplete="off" />
+									</p>
+									<p>
+										<input type="text" class="inputtxt tel" name="tel" placeholder="电话" autocomplete="off" />
+									</p>
+									<p>
+										<textarea class="inputtxt cont" name="content" placeholder="内容" autocomplete="off"></textarea>
+									</p>
+									<p>
+										<input class="inputsub" type="submit" value="提交" />
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>COPYRIGHT (©) 2018 管理咨询类/企业集团类模板.
+				<a class="beian" href="http://www.miitbeian.gov.cn/" style="display:inline; width:auto; color:#8e8e8e" target="_blank"></a>
+			</p>
+		</div>
+		<div id="shares">
+			<a id="sshare"><i class="fa fa-share-alt"></i></a>
+			<a href="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i class="fa fa-weibo"></i></a>
+			<a href="javascript:;" id="sweixin"><i class="fa fa-weixin"></i></a>
+			<a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a>
+		</div>
+		<div class="fixed" id="fixed_weixin">
+			<div class="fixed-container">
+				<div id="qrcode"></div>
+				<p>扫描二维码分享到微信</p>
+			</div>
+		</div>
+		<div class="hide">
+		<!--cnzz-->
+		</div>
+	</body>
+
+</html>

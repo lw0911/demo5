@@ -1,0 +1,486 @@
+
+.top{
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    position: fixed;
+    z-index: 999;
+
+}
+.top .top_in{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.top_in .top_left{
+    margin-top: 20px;
+    float: left;
+    height: 100%;
+    width: 140px;
+
+
+}
+.top_in .top_right{
+    float: right;
+    height: 100%;
+    width: 740px;
+}
+.top_left>h1{
+    width: 100%;
+    height: 100%;
+}
+.top_left>h1>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../image/233.png") no-repeat;
+}
+
+.top_right .top_nav{
+    float: left;
+    width: 550px;
+    height: 100%;
+
+}
+.top_right .top_nav>li{
+    float: left;
+}
+.top_right .top_nav>li>a{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-left: 40px;
+}
+
+.top_right ul>li>a:hover{
+    color: #e82c07;
+}
+
+.top_right .top_login{
+    float: right;
+    width: 150px;
+    height: 100%;
+
+}
+.top_right .top_login>li{
+    float: left;
+    line-height: 60px;
+    margin-left: 10px;
+}
+.top_right .top_login>li>a{
+    color: #ccc;
+}
+.top_right .top_login>li:nth-child(3){
+    width: 30px;
+    height: 30px;
+    background: url("../image/nubia-syb-all.png");
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+.banner{
+
+    height: 860px;
+    width: 100%;
+}
+.banner #nav_out{
+   margin-top: 60px;
+    z-index: 998;
+    position: absolute;
+    width: 100%;
+    height: 121px;
+    background-color: white;
+    display: none;
+
+}
+
+.banner .nav{
+    left: 50%;
+    position: absolute;
+    margin-left: -600px;
+    width: 1200px;
+    height: 121px;
+}
+.banner .nav>ul{
+    padding-left: 75px;
+    padding-right: 75px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.banner .nav>ul>li{
+    width: 150px;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+.banner .nav>ul>li:hover{
+    border-bottom: 2px solid red;
+    box-sizing: border-box;
+}
+.banner .nav>ul>li img{
+    margin-top: 15px;
+    width: 120px;
+    height: 80px;
+}
+
+.banner .figure{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.swiper-slide{
+
+    background:url("../image/banner_01.jpg")no-repeat center center;
+   background-size: 1900px auto;
+}
+.made{
+
+    background:url("../image/banner_02.jpg")no-repeat center center;
+    background-size: 1900px auto;
+}
+
+.swiper-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-pagination-bullet, .swiper-pagination-bullet-active{
+    background: #999999;
+    width: 8px;
+    height: 8px;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+.swiper-pagination-bullet:hover{
+    border: 2px solid red;
+    background-color: transparent;
+    transform: scale(1.2,1.2);
+}
+
+
+.banner .figure img{
+    height: 100%;
+    margin:0 -100%
+}
+
+.banner .figure>ol>li{
+    background-color: #999999;
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+.banner .figure>ol>li:hover{
+    border: 2px solid red;
+    background-color: transparent;
+    transform: scale(1.2,1.2);
+
+
+}
+
+.banner .video{
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+     background-color: #999999;
+    margin-top: 10px;
+}
+
+.banner .video>ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+}
+.banner .video>ul li{
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 396px;
+    height: 250px;
+    background: black;
+    overflow: hidden;
+
+}
+.banner .video>ul li:hover >img{
+    opacity: 0.5;
+}
+.banner .video>ul li:hover .vide_info>img{
+    animation: sport 2s 0.5s ease-in-out infinite;
+}
+
+    @keyframes sport {
+        20%{transform: scale(0.8);}
+        40%{transform: scale(1.2);}
+        60%{transform: scale(0.9);}
+        80%{transform: scale(1);}
+        100%{transform: scale(1);}
+    }
+
+.banner .video>ul>li>img{
+    height: 100%;
+    margin: 0 -100%;
+}
+.banner .video .vide_info{
+    height: 155px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+}
+.banner .video>ul>li:hover .vide_info{
+    opacity: 1;
+
+}
+.banner .video .vide_info>h3{
+    font-size: 16px;
+    color: white;
+    line-height: 40px;
+}
+.banner .video .vide_info>p{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.content{
+    height: 1883px;
+    width: 100%;
+
+    overflow: hidden;
+
+
+}
+.content>dl{
+    width: 1200px;
+    height: 100%;
+
+    margin: 0 auto;
+    text-align: center;
+}
+.content>dl>dt{
+    margin-top: 40px;
+    width: 1200px;
+    height: 90px;
+    margin-bottom: 30px;
+}
+.content>dl h3{
+    font-size: 35px;
+    color: #333;
+}
+.content>dl>dt>p{
+    margin-top: 20px;
+   color: #e82c07;
+}
+
+.content .content_phone{
+    width: 1200px;
+    height: 1200px;
+
+}
+.content .content_phone>li{
+    cursor: pointer;
+
+    background-color: white;
+    float: left;
+}
+.content .content_phone>li:nth-child(1){
+
+    width: 1200px;
+    height: 395px;
+
+    margin-bottom: 10px;
+}
+.content .content_phone>li:nth-child(2){
+
+    width: 395px;
+    height: 795px;
+
+    margin-bottom: 10px;
+}
+.content .content_phone>li:nth-child(3){
+
+    margin-bottom: 10px;
+     width: 795px;
+     height: 390px;
+
+    margin-left: 10px;
+ }
+.content .content_phone>li:nth-child(4){
+    margin-left: 10px;
+
+    width: 390px;
+    height: 395px;
+
+}
+.content .content_phone>li:nth-child(5){
+    margin-left: 10px;
+
+    width: 395px;
+    height: 395px;
+
+}
+
+.content .content_phone>li>img{
+    transition: all 1s;
+    width: 100%;
+}
+.content .content_phone>li{
+    overflow: hidden;
+    position: relative;
+}
+.content .content_phone>li:nth-child(1)>img{
+    margin-left: -100px;
+    margin-top: 60px;
+}
+.content .content_phone>li:nth-child(3)>img{
+    margin-left: 100px;
+
+}
+.content .content_phone>li:nth-child(3):hover>img{
+    margin-left: 0;
+}
+.content .content_phone>li:nth-child(1):hover>img{
+    margin-left: 0;
+}
+.content .content_phone>li:hover .sell{
+    transform: scale(1.2,1.2);
+
+}
+.content .content_phone>li:nth-child(1) .content_pre{
+    left:0 ;
+    margin-left: 800px;
+      bottom: 150px;
+}
+.content .content_phone .content_pre{
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    margin-bottom: 10px;
+
+}
+.content .content_phone .content_pre>h4{
+    font-size: 20px;
+    color: #000000;
+}
+.content .content_phone .content_pre>p{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #999999;
+}
+.content .content_phone .content_pre>span{
+    display: inline-block;
+    width: 108px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+.content .content_acc p{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -50px;
+}
+.content .content_acc{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.content .content_acc>li{
+    background-color: white;
+    position: relative;
+     overflow: hidden;
+    width: 295px;
+    height: 100%;
+    float: left;
+}
+.content .content_acc li img{
+    cursor: pointer;
+
+    transition: all 1s;
+    width: 100%;
+}
+.content .content_acc>li:hover img{
+    transform: scale(1.2,1.2);
+}
+.footer{
+    width: 100%;
+    height: 396px;
+    background-color: #f5f5f5;
+}
+.footer .footer_top{
+    margin: 0 auto;
+
+    width: 1200px;
+    height: 50px;
+}
+.footer .footer_top p{
+    line-height: 40px;
+}
+.footer .footer_content{
+
+    margin: 0 auto;
+    width: 1200px;
+    height: 150px;
+}
+.footer .footer_content dl{
+    float: left;
+    width: 200px;
+}
+.footer .footer_content dl>dt a{
+    font-size: 14px;
+    color: #000000;
+}
+.footer .footer_bottom{
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer .footer_bottom .footer_bottom_1 li{
+    float: left;
+}
+.footer .footer_bottom span{
+    margin-left: 50px;
+}
+
+
+
+
+

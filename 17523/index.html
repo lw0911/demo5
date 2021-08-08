@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>Template</title>
+    <link rel="stylesheet" href="all/bootstrap.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="all/html5shiv.min.js"></script>
+    <script src="all/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="all/common.css"/>
+    <link rel="stylesheet" type="text/css" href="all/index.css"/>
+    <link rel="stylesheet" href="all/swiper.min.css"/>
+    <script src="all/jquery.min.js"></script>
+    <script src="all/bootstrap.min.js"></script>
+    <script src="all/swiper.min.js"></script>
+</head>
+<body>
+<!--top_navbar顶部导航-->
+<div class="top_navbar">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="row">
+                <!-- logo和切换到移动端的按钮组 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:;">
+                        <img src="images/logo.jpg" alt="XXX装饰"/>
+                    </a>
+                    <div class="mb_inic_tel hidden-sm hidden-md hidden-lg">
+                        <img src="./images/mb_inic_tel.jpg" alt=""/>
+                        <a href="javascript:;">XXX</a>
+                    </div>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="javascript:;">公司介绍 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="javascript:;">企业动态</a></li>
+                        <li><a href="javascript:;">案例展示</a></li>
+                        <li><a href="javascript:;">联系我们</a></li>
+                        <li><a href="javascript:;">人才招聘</a></li>
+                        <li><a class="li_last" href="javascript:;">在线留言</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right hidden-md hidden-sm hidden-xs">
+                        <li class="navbar_right_first">
+                            <a class="li_last " href="javascript:;"><img src="images/inic_tel.jpg"/></a>
+                        </li>
+                        <li class="navbar_right_second">
+                            <a class="li_last" href="javascript:;">XXX</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--轮播图-->
+<div class="myBigCarousel hidden-xs">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="hidden-xs item_pic" alt="" src="images/banner1.png"
+                             data-holder-rendered="true">
+                        <div class="carousel-caption">
+                            <!--这里可以写内容-->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="hidden-xs item_pic" alt="" src="images/banner1.png"
+                             data-holder-rendered="true">
+                        <div class="carousel-caption">
+                            <!--这里可以写内容-->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="hidden-xs item_pic" alt="" src="images/banner1.png"
+                             data-holder-rendered="true">
+                        <div class="carousel-caption">
+                            <!--这里可以写内容-->
+                        </div>
+                    </div>
+                    <!--这里可以写内容-->
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><img src="images/inic_left.png" alt=""/></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><img src="images/inic_right.png" alt=""/></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--移动端轮播myMbCarousel-->
+<div class="myMbCarousel">
+    <div class="container">
+        <div class="row">
+            <div class="swiper-container newbox swiper-container-horizontal hidden-sm hidden-md hidden-lg" id="swiper-container2">
+                <div class="swiper-wrapper newboxUl">
+                    <div class="swiper-slide blue-slide newbox">
+                        <a href="javascript:;">
+                            <img src="images/mb_banner.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide blue-slide">
+                        <a href="javascript:;">
+                            <img src="images/mb_banner.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide blue-slide">
+                        <a href="javascript:;">
+                            <img src="images/mb_banner.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide blue-slide">
+                        <a href="javascript:;">
+                            <img src="images/mb_banner.jpg" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--公司简介和企业动态-->
+<div class="companyProfile">
+    <!--公司简介-->
+    <div class="container hidden-xs">
+        <div class="row">
+            <div class="companyProfile_pic">
+                <i class=""></i>
+                <tt class="  "></tt>
+                <ins class=" "></ins>
+                <a class="" href="javascript:;"></a>
+
+                <p class="essay_tilte">公司简介</p>
+
+                <p class="essay_small_tilte">COMPANY PROFILE</p>
+
+                <p class="transverse_line"></p>
+
+                <div class="essay_content">
+                    <p style="text-indent: 2em;" class="">
+                        徐州XXX建筑装饰工程有限公司，成立于2005年，多年来专心致力于店面等商业化装饰设计。在行业内独树一帜，是目前徐州市唯一一家店面装饰设计的先驱品牌企业，公司始终坚持多年只做一件事，店面装饰设计专家。</p>
+
+                    <p style="text-indent: 2em;">
+                        服务的范围有：美容美发店，婚纱摄影店，餐饮店，服装店，KTV，娱乐会所，售楼处，办公楼等商业化场所，曾先后服务的城市遍布徐州六县：邳州市，新沂市，睢宁，丰县，沛县，贾汪，安徽萧县等。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--超小屏公司简介-->
+    <!--
+        此处结构由所调整
+        1、图片外面套了个盒子small_mb_pic设置了固定高度、宽度继承容器宽度
+        不同设备宽度略微变化，苹果4、5宽290px,苹果6款345px，6plus宽384px;
+        2、图片高度自适应、宽度继承父盒子宽度
+
+        以上已经测试不同图片大小和不同浏览器
+    -->
+    <div class="small_mb">
+        <div class="container hidden-sm hidden-md hidden-lg">
+            <div class="row">
+                <div class="col-xs-12 column"><p>公司简介</p></div>
+                <div class="col-xs-12 column_ng"><p>COMPANY PROFILE</p></div>
+                <div class="col-xs-12">
+                    <div class="small_mb_pic">
+                        <img src="images/mb_1.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="small_mb_text">
+                        徐州XXX建筑装饰工程有限公司，成立于2005年，多年来专心致力于店面等商业化装饰设计。
+                        在行业内独树一帜，是目前徐州市唯一一家店面装饰设计的先驱品牌企业，
+                        公司始终坚持多年只做一件事，店面装饰设计专家。
+                    </div>
+                </div>
+                <div class="col-xs-12"><a href="#">了解更多</a></div>
+            </div>
+        </div>
+    </div>
+    <!--企业动态-->
+    <!--
+        此处样式由所调整结构没变
+        pc端：
+        1、父盒子固定高324px宽555px
+        2、图片继承高宽100%自适应
+        3、标题宽高限制范围
+        手机端：
+        1、图片外面套的个盒子设置了固定高度、宽度继承容器宽度
+        不同设备宽度略微变化，苹果4、5宽290px,苹果6款345px，6plus宽384px;
+        2、图片高度自适应、宽度继承父盒子宽度
+        3、标题宽度限制190px，超出隐藏！
+
+        以上已经测试不同图片大小和不同浏览器
+    -->
+    <div class="container ">
+        <div class="row">
+            <div class="company_news">
+                <div class="col-sm-12 hidden-xs">
+                    <div class="company_news_top">
+                        <img src="images/conpany_sports.png" alt=""/>
+                    </div>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg column"><p>企业动态</p></div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg column_ng"><p>ENTERPRISE DYNAMIC</p></div>
+                <div class="col-sm-6">
+                    <a class="company_news_cnt_pic" href="#">
+                        <img src="images/ceshi03.jpg" class="company_news_prd"  alt=""/>
+                    </a>
+                </div>
+                <!--循环部分-->
+                <div class="col-sm-6">
+                    <a href="javascript:;" class="company_news_btm">
+                        <span></span>
+                        <h4>美发店装修：购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识</h4>
+                        <i>2015-12-22</i>
+                        <div class="company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障选择质量好的瓷砖具有安全保障选择质量好的瓷砖具有安全保障选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="javascript:;" class="company_news_btm">
+                        <span></span>
+                        <h4>美发店装修：购买瓷砖的常识</h4>
+                        <i>2015-12-22</i>
+                        <div class="company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="javascript:;" class="company_news_btm">
+                        <span></span>
+                        <h4>美发店装修：购买瓷砖的常识</h4>
+                        <i>2015-12-22</i>
+                        <div class="company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="javascript:;" class="company_news_btm">
+                        <span></span>
+                        <h4>美发店装修：购买瓷砖的常识</h4>
+                        <i>2015-12-22</i>
+                        <div class="company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--案例展示-->
+<div class="caseshow">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 hidden-xs"><img src="images/caseshow.png" alt=""/></div>
+            <!--超小屏栏目-->
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg column"><p>企业动态</p></div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg column_ng"><p>ENTERPRISE DYNAMIC</p></div>
+            <!--pc端展示-->
+            <div class="col-sm-12 hidden-xs">
+                <div class="caseshow_Carousel">
+                    <div class="swiper-container" id="all_case">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/ceshi01.jpg" alt=""/></a>
+                                <p>天缘海景</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_02.jpg" alt=""/></a>
+                                <p>碧海家园</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_03.jpg" alt=""/></a>
+                                <p>蓝色畅想</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_04.jpg" alt=""/></a>
+                                <p>丽君家园</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_05.jpg" alt=""/></a>
+                                <p>小康人家</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_06.jpg" alt=""/></a>
+                                <p>汇源置地</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_07.jpg" alt=""/></a>
+                                <p>万达广场</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_08.jpg" alt=""/></a>
+                                <p>湖滨家园</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;"><img src="./images/product_small_09.jpg" alt=""/></a>
+                                <p>大龙湖边</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next hidden-xs"></div>
+                    <div class="swiper-button-prev hidden-xs"></div>
+                </div>
+            </div>
+            <!--超小屏下案例展示-->
+            <div class="myMbCarousel">
+                <div class="container">
+                    <div class="row">
+                        <div class="swiper-container hidden-sm hidden-md hidden-lg" id="al003">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_01.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_02.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_03.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_04.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_05.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_06.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide new_app">
+                                    <div class="col-xs-12">
+                                        <a href="javascript:;">
+                                            <img src="./images/product_small_07.jpg" alt=""/>
+                                        </a>
+                                        <p>美容院</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--人才招聘-->
+<div class="Hr_recruit">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 hidden-xs">
+                <div class="Hr_recruit_top"><img src="images/Hr_recruit.png" alt=""/></div>
+            </div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg column"><p>人才招聘</p></div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg column_ng"><p>TALNET RECRUITMENT</p></div>
+            <div class="col-sm-12">
+                <div class="Hr_recruit_bmt">
+                    <div class="row">
+                        <div class="col-sm-4 hidden-xs"><img src="images/Careers.png" alt=""/></div>
+                        <div class="col-sm-8">
+                            <!--循环部分-->
+                            <div class="Hr_recruit_bmt_right">
+                            <a href="javascript:;"><h4>招聘室内设计师（有大中型项目经验者优先考虑）</h4></a>
+                            <div class="Hr_recrui_cnt">
+                                1.三年以上相关工作经验，有大中型项目设计经验者优先考虑;2.善于沟通，表达能力强，有团队精神;3.学习能力强、热爱设计工作、有创新精神;4.能够熟悉AutoCAD,Photoshop,3D
+                                MAX等设计软件;5.富有创意及执行力，有责任感、表达能力强。
+                            </div>
+                            <i class="hidden-xs"></i>
+                        </div>
+                            <div class="Hr_recruit_bmt_right">
+                                <a href="javascript:;"><h4>招聘室内设计师（有大中型项目经验者优先考虑）</h4></a>
+                                <div class="Hr_recrui_cnt">
+                                    1.三年以上相关工作经验，有大中型项目设计经验者优先考虑;2.善于沟通，表达能力强，有团队精神;3.学习能力强、热爱设计工作、有创新精神;4.能够熟悉AutoCAD,Photoshop,3D
+                                    MAX等设计软件;5.富有创意及执行力，有责任感、表达能力强。
+                                </div>
+                                <i class="hidden-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--在线留言-->
+<div class="messageUs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 hidden-xs"><img src="images/line_message.png" alt=""/></div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg column"><p>在线留言</p></div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg column_ng"><p>ONLINE MESSAGE</p></div>
+            <div class="col-xs-12">
+                <div class="messageUs_bigbox">
+                    <div class="messageUs_list"><span>留言标题：</span><input type="text"/></div>
+                    <div class="messageUs_list"><span>您的姓名：</span><input type="text"/></div>
+                    <div class="messageUs_list"><span>联系方式：</span><input type="text"/></div>
+                    <div class="messageUs_list"><span>留言内容：</span><input type="text"/></div>
+                    <div class="messageUs_list messageUs_list_last"><span>验证码：</span><input type="text"/>
+                        <button>7776</button>
+                    </div>
+                    <div class="messageUs_enter">
+                        <a href="javascript:;">确认提交</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--版权声明-->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-xs-12">
+                <p>版权所有：WREGFGRFG@2020 徐州XXX建筑装饰工程有限公司。DSTFGRSDGRHTRH 苏ICP备XXX号</p>
+                <p>手机：XXX &nbsp;&nbsp;&nbsp;&nbsp;联系人：赵经理&nbsp;&nbsp;&nbsp;&nbsp;地址：XXX</p>
+            </div>
+            <div class="col-sm-4 btm_logo">
+                <img src="images/logo_btm.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--首页轮播图-->
+<script type="text/javascript">
+    $('.carousel').carousel({
+        interval: 2000
+    });
+    //超小屏轮播
+    var mySwiper = new Swiper('#swiper-container2',{
+//        shortSwipes : false,
+        autoplay: 2500,//定时轮播
+        loop: true,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true//修改swiper的父元素时，自动初始化swiper
+    })
+
+</script>
+<!--超小屏展示产品-->
+<script type="text/javascript">
+    var mySwiper = new Swiper('#al003', {
+        loop: true,
+        autoplay: 2500,//定时轮播
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true//修改swiper的父元素时，自动初始化swiper
+    });
+</script>
+<!--案例展示-->
+<script>
+    var appendNumber = 4;
+    var prependNumber = 1;
+    var swiper = new Swiper('#all_case', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 3,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: 1500,//定时轮播
+        autoplayDisableOnInteraction: false
+
+    });
+    document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.prependSlide([
+            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+        ]);
+    });
+    document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+    });
+    document.querySelector('.append-slide').addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+    });
+    document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.appendSlide([
+            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+        ]);
+    });
+</script>
+
+<!--js替换成菜单滑入滑出-->
+<script>
+    var num=true;
+    $(".collapsed").on("click",function () {
+        if(num){
+            $(".nav").slideDown(500);
+            num=false;
+        }else{
+            $(".nav").slideUp(500);
+            num=true
+        };
+    });
+</script>
+
+
+
+</body>
+</html>

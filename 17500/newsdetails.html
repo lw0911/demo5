@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>新闻中心</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link href="css/newsdetails.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; height: 430px; }
+    .banners-pc .mode { padding-top: 230px; }
+    .banners-pc .mode .br1 { margin-left: -44px; position: relative; }
+    .banners-pc .mode .mode1 { margin-top: -46px; text-align: center; }
+    .banners-pc .mode .mode1 .p1 { margin-bottom: 20px; font-size: 32px; color: #fff; }
+    .banners-pc .mode .mode1 .p2 { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .banners-pc .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+    .banners-mb { display: none; clear: both; height: 430px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { position: relative; }
+    .banners-mb .frame .mode { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); text-align: center; height: auto; }
+    .banners-mb .frame .mode .mode1 { position: absolute; margin-top: -41px; top: 50%; left: 0; right: 0; height: auto; }
+    .banners-mb .frame .mode .mode1 .p1 { margin-bottom: 20px; font-size: 40px; color: #fff; }
+    .banners-mb .frame .mode .mode1 .p2 { font-size: 16px; color: rgba(255,255,255,0.6); }
+    .banners-mb .frame .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+    }
+
+    @media (max-width: 1024px) {
+        .top_nav .nav_a li { width: 33.33%; }
+    }
+
+    @media (max-width: 667px) {
+        .top_nav .nav_a li { width: 50%; }
+    }
+
+
+
+
+    .newsdetails { }
+    .newsdetails .mode .tel { margin-bottom: 40px; text-align: center; }
+    .newsdetails .mode .tel .p1 { margin-bottom: 15px; font-size: 24px; color: #1a1a1a; }
+    .newsdetails .mode .tel .p2 { font-size: 12px; color: #808080; }
+    .newsdetails .mode .tel .p2 span { margin: 0 10px; }
+    .newsdetails .mode .g_content { margin-bottom: 100px; }
+
+
+
+    .page { margin-top: 40px; }
+    .page ul { float: left; }
+    .page ul li { margin-bottom: 20px; overflow: hidden; }
+    .page ul li:nth-child(2n) { margin-bottom: 0; }
+    .page ul li .prev { font-size: 14px; color: #1a1a1a; float: left; }
+    .page ul li .next { font-size: 14px; color: #1a1a1a; float: left; clear: both; display: block; }
+    .page .ret { margin-top: 9px; padding: 10px 25px; border: solid #e0e0e0 1px; float: right; }
+    .page .ret:hover { border: solid #ff5e14 1px; background: #ff5e14; color: #fff; }
+    .page a:hover span { color: #ff5e14; transition: ease .3s; }
+
+    @media (max-width: 500px) {
+        .page ul { float: none; }
+        .page ul li { padding: 10px 25px; border: solid #e0e0e0 1px; width: 100%; }
+        .page ul li:nth-child(2n) { margin-bottom: 20px; }
+        .page ul li a { height: 1.5em; overflow: hidden; line-height: 24px; }
+        .page ul li .prev { width: 100%; float: none; display: inline-block; }
+        .page ul li .next { width: 100%; float: none; display: inline-block; }
+        .page .ret { margin-top: 0; float: none; display: inline-block; text-align: center; width: 100%; border: solid #ff5e14 1px; background: #ff5e14; color: #fff; }
+    }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class="">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class=" on">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：XXX<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="banners-pc">
+
+        <div class="" style="background:url(img/bn1.jpg)no-repeat center center; background-size: cover;width:100%; height:430px;">
+            <div class="g_cw">
+                <div class="mode">
+                    <div class="mode1">
+                        <p class="p1">新闻中心</p>
+                        <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>新闻中心</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="banners-mb" zoom-width="1024" zoom-heigh="430">
+        <div class="frame" style=" background:url(img/bn2.jpg) no-repeat center center; background-size:cover; width:100%;">
+            <div class="mode">
+                <div class="mode1">
+                    <p class="p1">新闻中心</p>
+                    <p class="p2">您的位置：首页<i class="fa fa-angle-right"></i>新闻中心</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            $('.banners-pc, .banners-mb').slick({ arrows: true, dots: false, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 5000, speed: 500 });
+        })();
+    </script>
+
+
+
+    <div class="newsdetails">
+        <div class="top_nav">
+            <div class="g_cw">
+                <ul class="nav_a">
+                    <li><a class=" box on " href="news.html?_ct=公司新闻">公司新闻</a></li>
+                    <li><a class=" box" href="news.html?_ct=行业资讯">行业资讯</a></li>
+                    <li><a class="box" href="notice.html?_ct">通知公告</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g_cw g_mt g_mb">
+
+            <div class="mode">
+                <div class="tel">
+                    <p class="p1">房地产大咖就建筑安全、质量等展开讨论</p>
+                    <p class="p2">
+                        <span>阅读次数：4次</span>
+                        <span>时间：2019-11-15</span>
+                    </p>
+                </div>
+                <div class="g_content">
+                    <p class="p3"><p>10月26日上午，助力“大岳阳 大发展”房地产行业企业家座谈会在南湖宾馆召开。此次活动由岳阳市住房和城乡建设局、岳阳市工商业联合会主办，岳阳市房地产业协会、北京东方雨虹防水技术股份有限公司承办，旨在通过国内防水龙头企业普及防水专业知识，促进房企相互交流，进一步提升建筑安全环保意识，优化民生安居问题。</p><p>座谈会上，岳阳20多家房地产企业家及主管部门负责人踊跃发言，就建筑安全、质量等话题展开热烈讨论。</p><p>座谈会发言摘要&gt;&gt;&gt;</p><p>岳阳市住房和城乡建设局局长周金龙：首先我想谈谈对房地产行业的三点认识。一、房地产代表城市的形象。因为人们对一座城市最深刻的印象就是建筑。二、房地产是市民的日子。过日子就是衣食住行，住就是指房子。所以，这是很重要的一件事。三、房地产是企业家的事业和舞台。这三点加在一起，实际上就是你我他的社会财富。只有在基本层面上认识房地产，才能增加我们工作的自觉性和主动性。</p><p>再来谈谈安全这个话题。一是房屋质量安全首先取决于房屋材料安全。今天有东方雨虹给我们推介防水材料，那么今后还会有类似东方雨虹这样的企业给我们推介钢筋材料、粉饰材料。房地产企业要敢于和善于运用新材料、新工艺。二是房屋的价格安全源于品质品牌与服务。同样是一部手机，为什么山寨的卖不起价，品牌的却抢不到手？房地产企业一定要提升品牌影响力，提升服务水平。三是房屋的销售安全源于诚信。企业要有社会公德感，要按价格规律办事。不仅要做有形的物化的产品，还要做无形的服务的产品。这样才能维护价格安全、市场安全和社会安定。四是房地产市场的安全来源于按市场规律办事。大房企进驻岳阳后铺设的几个点为什么这么成功？其实，是因为它们对市场规律有正确地把握。</p><p>另外，安全还来源于我们不断地自我创新。一定要提高对房地产行业的认识和站位；提高企业的实力，在不断的市场奋进中走向兴旺；要不断提高住建行业的服务水平；不断提高房地产企业为社会提供产品的本领。同时，希望能继续加强联系，拓宽视野，有更多的新产品、新材料、新设计、新房屋、新服务走进我们的生活，服务我们的事业，为岳阳的大城市建设助力发展，确保安全，贡献我们的一份努力和辛勤。</p><p>岳阳日报社总编辑冯元满：参加这次座谈会我有三点感受。第一个感受，“安得广厦千万间，大庇天下寒士俱欢颜”，这是一种初心，也是一种使命。房子是用来住的，做房子的人一定是有情怀，管房子的人也必须有责任感。第二个感受，现在的房地产业可谓“大江东去，潮起潮落”，房地产人是“无险无难无事业，有风有雨有精神”。这既是一种胆识，也是一种情怀。我有幸接触了一些房地产人，老板、建设者及普通的打工者都有，我们的报纸也经常把视角和触角放在了房地产这个行业。确实，做房地产不容易，但也很有成就感。第三个感受，是“东边日出西边雨，道是无晴却有晴”，筹办这次房交会好事多磨，虽然一再延迟，但今年是做得最好的一次，去年是18家企业参加，今年是23家。</p><p>岳阳市工商联副主席郑叶新：借此机会，结合工商联工作的实际，我提三点希望，与大家共勉：一是要在抢抓机遇中实现更大抱负；二是要在服务产业发展中积极作为；三是要在经济合作中实现互利共赢。今天，我们在这里举办这个活动，目的就是为了加强房地产业上下游企业的深度合作。市工商联作为民营企业的‘家人’，将一如既往地为大家搭建好交流合作的平台，加强与相关职能部门的整体联动，积极整合资源，搞好各方面的协调工作，促进企业间的联系沟通，努力形成企业间有效对接、良性互动、共同发展的格局。</p><p>岳阳市房地产业协会理事长刘佳琪：近年来，在我市住建部门的领导和支持下，城市建设日新月异，房地产质量监督治理整顿收效明显，管理手段日趋科学，服务行为更加规范，为营造安全人居环境创造了良好的条件。虽然进步明显，但与省市要求以及兄弟城市的水平，还有一些差异，进步空间还有。比如对建筑安全的重视程度，建设过程中的施工标准化，对房屋质量的自我监督意识都还需提升与加强。从2019年下半年起，房市进入强监管环境，成交量有所放缓，在即将到来的市场考验面前，我们只能更加重视房屋的品质与安全，才能保证岳阳的房市异军突起，度过难关。</p><p>东方雨虹建材（广东有限公司）华南区总经理黄姣：建筑防水是一项涉及建筑安全、百姓民生、环境保护、建筑节能的重要产品和技术。岳阳东方雨虹是集团第三大生产基地，在地方贡献税收累积3.25亿元，解决就业240余个，随着投资的进一步扩大，2019年度岳阳东方雨虹的产值将突破20亿元。东方雨虹作为防水行业的龙头企业，一直希望承担起优化行业发展环境的责任，多年来不遗余力地研发防水高新技术产品及创新施工工法，希望今后运用雨虹优势，进一步搭建政府及行业相关机构平台，提升行业整体形象，达到企业与地方的双赢。</p><p>岳阳市玉鑫地产董事长伍玉龙：东方雨虹是一家有大情怀的企业，进驻岳阳后，做了很多公益活动，比如扶贫济困、捐资助学等，其中捐资助学200万元，传递了正能量。东方雨虹还是一家有大视野的企业，在岳阳总投资20多亿元，这充分证明了他们对岳阳未来的发展充满信心。对于东方雨虹的产品质量，我深有感触，因为我们公司与东方雨虹有合作，他们的防水产品价格略高，但有3道工序层层把控，确保不漏水。再加上东方雨虹的售后服务好，施工队伍是专业的正规军，能够做到随喊随到。因此，总体来说，用东方雨虹的产品没有后顾之忧，房地产企业和住户都能放心。</p><p>岳阳天伦房地产开发有限公司常务副总经理上官汉尧：房地产行业与防水产业是密不可分的上下游，确保广大购房者的美好生活是我们的共同使命。住宅渗漏后翻修成本高，且存在难于查找漏点，容易反复渗漏，将严重影响客户的居住体验。作为开发企业，我们一定要坚定履行好质量主体责任，防水工程是建筑质量的基础工程，也是良心工程，我们必须高度重视，精心施工，为岳阳大城市建设贡献一份力量，为信任我们的广大业主尽一份责任。</p><p><br /></p></p>
+                </div>
+            </div>
+            <div class="page">
+                <ul class="list">
+                    <li><a class="box prev" href="newsdetails.html?_id=10016"><span>上一篇：</span>法学会 | 浙江首个地市级建筑与房地产法学研究会在绍兴成立</a></li>
+                    <li><a class="box next" href="newsdetails.html?_id=10014"><span>下一篇：</span>特色房企天保集团：建筑、地产业务深度联动下的优质发展之路</a></li>
+                </ul>
+                <a class="ret" href="news.html?_ct=公司新闻">返回列表</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

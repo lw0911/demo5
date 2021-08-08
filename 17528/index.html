@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>Template</title>
+
+    <!--核心组建-->
+    <link rel="stylesheet" href="all/bootstrap.min.css"/>
+    <link rel="stylesheet" href="all/swiper.min.css"/>
+    <script src="all/jquery.min.js"></script>
+    <script src="all/bootstrap.min.js"></script>
+    <script src="all/swiper.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="all/html5shiv.min.js"></script>
+    <script src="all/respond.min.js"></script>
+    <![endif]-->
+
+    <!--自己的样式-->
+    <link rel="stylesheet" type="text/css" href="all/common.css"/>
+    <link rel="stylesheet" type="text/css" href="all/index.css"/>
+    <link rel="stylesheet" type="text/css" href="all/index_mb.css"/>
+</head>
+<body>
+<!--固定顶部-->
+<div class="top_bar hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="top_bar_left">
+                    <a href="javascript:;"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <div class="top_bar_right">
+                    <a href="tel:XXX"><img src="images/te_topl.png" alt=""/></a>
+                    <span>全国统一热线：</span>
+                    <a href="tel:XXX">XXX</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--顶部导航-->
+    <!--导航内增加隐藏类名hidden-xs--==================================改-->
+<div class="top_navbar">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="row">
+                <!-- logo和切换到移动端的按钮组 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand hidden-lg hidden-md hidden-sm" >
+                        <img src="./images/logo.png" alt=""/>
+                        <!--此处修改加了个隐藏类名hidden-xs-->
+                        <img class="mb_top_tel hidden-xs" src="./images/mb_top_tel.png" alt=""/>
+                    </a>
+                    <!--此处添加了隐藏类名hidden-lg hidden-md hidden-sm-->
+                    <a href="tel:0516-87733388" class="nabar_tel hidden-lg hidden-md hidden-sm"><img src="images/mb_tel.fw.png" alt=""/></a>
+                </div>
+                <!--此处增加一个隐藏类名hidden-xs-->
+                <div class="navbar-collapse hidden-xs" >
+                    <ul class="nav navbar-nav">
+                        <li> <a href="index.html" class="nav_first">首页</a></li>
+                        <li class="dropdown dropdown_one">
+                            <a href="companySynopsis.html">走进畅显 </a>
+                            <ul class="dropdown-menu item_one">
+                                <li class="dropdown-menu_one ">
+                                    <a href="companySynopsis.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="companySynopsis.html" class="dropdown-menu_title"><h4>公司简介</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="companySynopsis_next.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="companySynopsis_next.html" class="dropdown-menu_title"><h4>人才招聘</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown_two">
+                            <a href="projectCase.html" >工程案例</a>
+                            <ul class="dropdown-menu item_two">
+                                <li class="dropdown-menu_one ">
+                                    <a href="projectCase.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="projectCase.html" class="dropdown-menu_title"><h4>设计风格</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="projectCase_next.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="projectCase_next.html" class="dropdown-menu_title"><h4>室内效果</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">设计精英</a></li>
+                        <li class="dropdown dropdown_three">
+                            <a href="companyDyanmicc.html">新闻资讯</span></a>
+                            <ul class="dropdown-menu item_three">
+                                <li class="dropdown-menu_one ">
+                                    <a href="companyDyanmicc.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="companyDyanmicc.html" class="dropdown-menu_title"><h4>公司新闻</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="companyDyanmicc_next.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="companyDyanmicc_next.html" class="dropdown-menu_title"><h4>行业动态</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown_four">
+                            <a href="projectCase.html">装修课堂</a>
+                            <ul class="dropdown-menu item_four">
+                                <li class="dropdown-menu_one ">
+                                    <a href="DetailPages.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="DetailPages.html" class="dropdown-menu_title"><h4>装修知识</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="DetailPages.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="DetailPages.html" class="dropdown-menu_title"><h4>装修指南</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="contactUs.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!--此处增加一个隐藏类名hidden-xs--==================================改-->
+<div class="navbar_btm hidden-xs"></div>
+    <!--超小屏下顶部导航--=============================================增-->
+<div class="mb_top_navbar  hidden-sm hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <ul class="mb_nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li class="mb_hit_01">
+                    <a href="#">走进畅显</a>
+                    <ul class="mb_ulShow_01">
+                        <li><a href="companySynopsis.html">公司简介</a></li>
+                        <li><a href="companySynopsis_next.html">人才招聘</a></li>
+                    </ul>
+                </li>
+                <li class="mb_hit_02">
+                    <a href="#">工程案例</a>
+                    <ul class="mb_ulShow_02">
+                        <li><a href="projectCase.html">设计风格</a></li>
+                        <li><a href="projectCase_next.html">室内效果</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">设计精英</a></li>
+                <li class="mb_hit_03">
+                    <a href="#">新闻资讯</a>
+                    <ul class="mb_ulShow_03">
+                        <li><a href="companyDyanmicc.html">公司新闻</a></li>
+                        <li><a href="companyDyanmicc_next.html">行业动态</a></li>
+                    </ul>
+                </li>
+                <li class="mb_hit_04">
+                    <a href="#">装修课堂</a>
+                    <ul class="mb_ulShow_04">
+                        <li><a href="DetailPages.html">装修知识</a></li>
+                        <li><a href="DetailPages.html">装修指南</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactUs.html">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!--此处增加手机菜单展开特效——页面刷新也放到这里了========================================增-->
+<script>
+    //<!--设备切换自动刷新一次============================================增-->
+    $("window").resize(function(){
+        var width=$(Window).width();
+        if(width>768){
+            location.reload();
+        };
+    })
+    //<!--超小屏下点击菜单展开-->
+    //外层滑入滑出
+    $(".navbar-toggle").on("click",function () {
+        $(".mb_nav").slideToggle(500);
+    });
+    //子菜单滑入滑出
+    function toggle_slide(all,item){
+        all.on("click",function () {
+            item.slideToggle(500);
+        });
+    }
+    toggle_slide($(".mb_hit_01"),$(".mb_ulShow_01"));
+    toggle_slide($(".mb_hit_02"),$(".mb_ulShow_02"));
+    toggle_slide($(".mb_hit_03"),$(".mb_ulShow_03"));
+    toggle_slide($(".mb_hit_04"),$(".mb_ulShow_04"));
+</script>
+
+
+
+
+<!--轮播图>
+<!--pc端：轮播-->
+<div class="myBigCarousel hidden-xs">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="hidden-xs item_pic" alt="" src="images/banner1.jpg"
+                             data-holder-rendered="true">
+
+                        <div class="carousel-caption">
+                            <!--这里可以写内容-->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="hidden-xs item_pic" alt="" src="images/banner1.jpg"
+                             data-holder-rendered="true">
+
+                        <div class="carousel-caption">
+                            <!--这里可以写内容-->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="hidden-xs item_pic" alt="" src="images/banner1.jpg"
+                             data-holder-rendered="true">
+
+                        <div class="carousel-caption">
+                            <!--这里可以写内容-->
+                        </div>
+                    </div>
+                    <!--这里可以写内容-->
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" >
+                        <img src="images/inic_left.png" alt=""/>
+                    </span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic"  data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right">
+                        <img src="images/inic_right.png" alt=""/>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--移动端轮播-->
+<div class="myMbCarousel">
+    <div class="container">
+        <div class="row">
+            <div class="swiper-container hidden-sm hidden-md hidden-lg" id="al">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide new_app">
+                        <div class=" new_bgColor clearfix">
+                            <div class="new_pic">
+                                <a href="DetailPages.html">
+                                    <img src="./images/mb_banner.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide new_app">
+                        <div class=" new_bgColor clearfix">
+                            <div class="new_pic">
+                                <a href="DetailPages.html">
+                                    <img src="./images/mb_banner.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide new_app">
+                        <div class=" new_bgColor clearfix">
+                            <div class="new_pic">
+                                <a href="DetailPages.html">
+                                    <img src="./images/mb_banner.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--标签隔离带-->
+<!--此处增加一个隐藏类名hidden-xs--==================================改-->
+<div class="center_inico hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="center_inico_text">一站式服务体验</div>
+                <div class="center_inico_text">包设计、包施工、包主材、包辅材、家具、电器</div>
+                <div class="center_inico_text">在一个地方统统搞定</div>
+            </div>
+            <div class="col-sm-12 ">
+                <a href="javascript:;">
+                    <img src="images/inico_1.png" alt=""/>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/inico_2.png" alt=""/>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/inico_3.png" alt=""/>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/inico_4.png" alt=""/>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/inico_5.png" alt=""/>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/inico_6.png" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--超小屏下标签隔离带--=========================================增-->
+<div class="mb_center_inico hidden-sm hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="center_inico_text">
+                一站式服务体验
+                <br/>
+                包设计、包施工、包主材、包辅材、家具、电器
+                <br/>
+                在一个地方统统搞定
+            </div>
+
+            <!--循环部分-->
+            <div class="col-xs-4">
+                <a href="javascript:;">
+                    <img src="images/inico_1.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;">
+                    <img src="images/inico_2.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;">
+                    <img src="images/inico_3.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;">
+                    <img src="images/inico_4.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;">
+                    <img src="images/inico_5.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;">
+                    <img src="images/inico_6.png" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--工程案例-->
+<!--pc端有一处改动：里面增加了一个隐藏类名hidden-xs--==================改-->
+<div class="projectCase">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>工程案例</h2>
+                <h6>NEWS INFORMATION</h6>
+            </div>
+            <!--循环部分-->
+            <!--此处增加了一个隐藏类名 hidden-xs-->
+            <div class="col-sm-12 hidden-xs">
+                <div class="row">
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                    <a href="DetailPages.html" class="projectCase_prd">
+                        <span>-室内设计-</span>
+                        <img src="images/case_01.png" alt=""/>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!--超小屏下工程案例--===========================================增-->
+<div class="mb_projectCase hidden-sm hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <!--循环部分-->
+            <div class="col-xs-6">
+                <a href="DetailPages.html" class="mb_projectCase_01">
+                    <img src="images/case_01.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-6">
+                <a href="DetailPages.html" class="mb_projectCase_01">
+                    <img src="images/case_01.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-6">
+                <a href="DetailPages.html" class="mb_projectCase_01">
+                    <img src="images/case_01.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-6">
+                <a href="DetailPages.html" class="mb_projectCase_01">
+                    <img src="images/case_01.png" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--新闻资讯-->
+<div class="information">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>新闻资讯</h2>
+                <h6>NEWS INFORMATION</h6>
+            </div>
+            <div class="col-sm-12">
+                <!-- 产品nav-tabs切换 -->
+                <ul class="nav_a nav-tabs_a">
+                    <li class="tab-item active"><a href="javascript:;" >公司新闻</a></li>
+                    |
+                    <li class="tab-item tab_line"><a href="javascript:;">行业动态</a></li>
+                </ul>
+                <!-- 内容 -->
+                <div class="tab-content">
+                    <div class="tab-pane selected">
+                        <div class="company_news">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a class="company_news_cnt_pic" href="javascript:;">
+                                        <img class="company_news_prd" src="images/product_01.jpg" alt=""/>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_cnt_pic_text">
+                                        <div class="tilte_new_left">
+                                            <h4>美发店装修：购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，
+                                                辐射也会控制在国家允许的范围内，选择质量好的瓷砖具有安全保障，选择质量好的瓷砖具有安全保障，
+                                                购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--循环部分-->
+                                <div class="col-sm-6">
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>热门</span>
+                                            <h4>美发店装修：购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>热门</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>热门</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>热门</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tab-pane">
+                        <div class="company_news">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a class="company_news_cnt_pic" href="javascript:;"><img class="company_news_prd" src="images/product_01.jpg" alt=""/></a>
+                                    <a href="javascript:;" class="company_news_cnt_pic_text">
+                                        <div class="tilte_new_left">
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--循环部分-->
+                                <div class="col-sm-6">
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>新闻</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>新闻</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>新闻</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" class="company_news_btm">
+                                        <div class="tilte_new">
+                                            <span>新闻</span>
+                                            <h4>美发店装修：购买瓷砖的常识</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 company_news_btm_cnt">美发店装修时，选择质量好的瓷砖具有安全保障，辐射也会控制在国家允许的范围内，购买时可通过一试、二比、三看、四听辨别瓷砖好坏。</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--新闻资讯table切换-- 这里修改了适应电脑的同时也适应手机==============改-->
+<script>
+    var $tabItem=$(".tab-item");
+    var $tabPane=$(".tab-pane");
+    $tabItem.mouseenter(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        var  index=$(this).index();
+        $tabPane.eq(index).addClass("selected").siblings().removeClass("selected");
+    })
+    $tabItem.click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        var  index=$(this).index();
+        $tabPane.eq(index).addClass("selected").siblings().removeClass("selected");
+    })
+
+</script>
+
+
+<!--设计精英开始-->
+    <!--设计精英修改(您已经调过)-->
+<div class="desingElite">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>设计精英</h2>
+                <h6>DESIGN ELITE</h6>
+                <P>我们愿与您共筑品质生活</P>
+            </div>
+            <!--pc端展示-->
+            <div class="col-sm-12 hidden-xs">
+                <div class="swiper-container" id="swiper_prod">
+                    <div class="swiper-wrapper">
+                        <!--循环部分-->
+                        <!--要求图片头像尺寸宽高大于200px，且宽高相同-->
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide_bg">
+                                <div class="swiper-slide_box">
+                                    <a href="javascript:;">
+                                        <img src="images/designer.jpg" alt=""/>
+                                    </a>
+                                </div>
+                                <a href="javascript:;">
+                                    <h4>杨玉莹</h4>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 添加滚动条 -->
+                    <div class="swiper-scrollbar hidden-xs hidden-sm hidden-md hidden-lg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--超小屏设计精英-----==========================================增-->
+<div class="mb_desingElite">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="swiper-container hidden-sm hidden-md hidden-lg" id="al003">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide new_app">
+                            <div href="javascript:;" class="swiperSlide_bigBox">
+                                <div class="swiper-slide_box">
+                                    <img src="images/designer.png" alt=""/>
+                                </div>
+                                <h4>杨玉莹</h4>
+                                <div class="swiper-slide_box_text">
+                                    设计理念：享受生活，享受设计！艺术生活就是生活的艺术，全国优秀设计师，
+                                    国家注册高级室内建筑设计师，2012全国住宅装饰设计资深设计师，2015年全国优秀设计师
+                                </div>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--设计精英结束-->
+
+<!--公司简介-->
+<div class="company_profile">
+    <div class="container">
+        <div class="row">
+            <div class="new_left">
+                <div class="col-xs-12">
+                    <span>公司简介</span>
+                    <b>COMPANY PROFILE</b>
+                    <a class="new_left_more" href="javascript:;">MORE</a>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="big_pic"><img src="images/co_int.png" alt=""/></div>
+            </div>
+            <div class="col-sm-7">
+                <div class="company_profile_text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徐州畅显装饰工程有限公司（简称“畅显装饰”）成立于2007年，注册资金：100万元整。位于江苏省徐州市。是一家集装饰设计、工程施工、材料配送、木门、地板、装饰品开发为一体的装饰企业。主要从事住宅、公寓、办公、商业、酒店、学校、医院等场所的装修设计和施工。
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司实行从咨询开始，为您提供创意草案，测量，设计；精心的选材，施工，装饰配置；定期回访，三年保修，终生维修的全程服务。专业服务，全程同步。我们将精心为您营造一个温馨，舒适，环保的工作生活环境。将经济、实用、功能融于美，艺术，文化的创造之中，奉献给您生息，劳动的氛围与空间，将给您带来无穷的人生品味。
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司拥有一批精致而专业的管理团队和施工队伍，材料都是由公司统一配送。有固定办公场所，从根本上彻底解决业主施工质量和售后服务无保障等后顾之忧。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--版权声明>
+<!--pc端-->
+<div class="copyright hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 pull-left">
+                <div class="top_bar_right">
+                    <a href="javascript:;"><img src="images/inico_tel.png" alt=""/></a>
+                    <span>全国统一热线：</span>
+                    <a href="tel:XXX" class="tel_btm">XXX</a>
+                </div>
+                <div class="cent_bar">
+                    <span>手机号：XXX</span>
+                    <span>电话：XXX</span>
+                    <span>邮箱：XXX</span>
+                    <span>公司地址：XXX</span>
+                </div>
+            </div>
+            <div class="col-xs-2 ">
+                <div class="pull-right"><img src="images/btm_logo.png" alt=""/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--移动端-->
+<div class="mb_copyright hidden-lg hidden-md hidden-sm">
+    <div class="container">
+        <div class="row">
+            <div class="pull-right"><img src="images/btm_logo.png" alt=""/></div>
+            <div class=" col-xs-12 top_bar_right">
+                <a href="javascript:;"><img src="images/inico_tel.png" alt=""/></a>
+                <span>全国统一热线：</span>
+                <a href="tel:XXX" class="tel_btm">XXX</a>
+            </div>
+            <div class="col-xs-12 cent_bar">
+                <span>手机号：XXX</span>
+                <span>电话：XXX</span>
+                <span>邮箱：XXX</span>
+                <span>公司地址：XXX</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航table鼠标经过显示-->
+<script>
+    $(".dropdown_one").mouseenter(function () {
+        $(".item_one").css({
+            "display":"block"
+        });
+        $(".navbar_btm").css({
+            "display":"block"
+        });
+    })
+    $(".dropdown_one").mouseleave(function () {
+        $(".item_one").css({
+            "display":"none"
+        });
+        $(".navbar_btm").css({
+            "display":"none"
+        });
+    })
+    $(".dropdown_two").mouseenter(function () {
+        $(".item_two").css({
+            "display":"block"
+        });
+        $(".navbar_btm").css({
+            "display":"block"
+        });
+    })
+    $(".dropdown_two").mouseleave(function () {
+        $(".item_two").css({
+            "display":"none"
+        });
+        $(".navbar_btm").css({
+            "display":"none"
+        });
+    })
+    $(".dropdown_three").mouseenter(function () {
+        $(".item_three").css({
+            "display":"block"
+        });
+        $(".navbar_btm").css({
+            "display":"block"
+        });
+    })
+    $(".dropdown_three").mouseleave(function () {
+        $(".item_three").css({
+            "display":"none"
+        });
+        $(".navbar_btm").css({
+            "display":"none"
+        });
+    })
+    $(".dropdown_four").mouseenter(function () {
+        $(".item_four").css({
+            "display":"block"
+        });
+        $(".navbar_btm").css({
+            "display":"block"
+        });
+    })
+    $(".dropdown_four").mouseleave(function () {
+        $(".item_four").css({
+            "display":"none"
+        });
+        $(".navbar_btm").css({
+            "display":"none"
+        })
+    })
+</script>
+
+<!--首页轮播图-->
+<script type="text/javascript">
+    $('.carousel').carousel({
+        interval: 2000
+    });
+    //超小屏轮播
+    var mySwiper = new Swiper('#al', {
+        loop: true,
+    });
+    //菜单隐藏展开
+    var width = $(window).width();
+    if (width < 768) {
+        var num = true;
+        $(".collapsed").on("click", function () {
+            if (num) {
+                $(".nav").css({
+                    "display": "block",
+                    "transitionDuration": "1s"
+                });
+                num = false;
+            } else {
+                $(".nav").css({
+                    "display": "none",
+                    "transitionDuration": "1s"
+                });
+                num = true;
+            }
+            ;
+            //在子元素上阻止冒泡
+            return false;
+        });
+        $(".nav").on("click", function () {
+            $(".nav").css({
+                "display": "block",
+            });
+            return false;
+        });
+        $(document).on("click", function () {
+
+            $(".nav").css({
+                "display": "none",
+                "transitionDuration": "1s"
+            });
+        });
+    }
+</script>
+<script>
+    //产品轮播图下面产品展示
+    //鼠标移动上去滑入阴影和放大镜效果
+    var $boxA=$(".projectCase a");
+    var $boxImg=$(".projectCase a span");
+    $boxA.hover(function () {
+        $(this).find($boxImg).animate({top: 0}, 500);
+    }, function () {
+        $(this).find($boxImg).stop().animate({top: "-100%"});
+    });
+</script>
+<!--超小屏设计精英-->
+<script type="text/javascript">
+    var mySwiper = new Swiper('#al003', {
+        loop: true,
+//        autoplay: 2500,//定时轮播
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true//修改swiper的父元素时，自动初始化swiper
+    });
+</script>
+<!--设计精英-->
+<script>
+    var swiper = new Swiper('#swiper_prod', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: false,
+        slidesPerView: 'auto',
+//        centeredSlides: true,
+        spaceBetween: 40,
+        grabCursor: true,
+        loop: true,
+        autoplay: 2000,//定时轮播
+        autoplayDisableOnInteraction: false
+    });
+</script>
+</body>
+</html>

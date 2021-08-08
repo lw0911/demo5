@@ -1,0 +1,244 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/fruit_min.css" />
+		<link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		 <script type="text/javascript" src="js/swiper.min.js" ></script> 
+		 <script type="text/javascript" src="js/jquery.min.js" ></script>
+		 <link rel="stylesheet" href="css/animate.css" />
+		
+		<style>
+			.swiper-container {
+      width: 100%;
+      height: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      position: relative;
+    }
+    .swiper-container .swiper-slide {
+      height: auto;
+       text-align: center;
+    }
+   .banner_intro{
+   	position: absolute;
+   	z-index: 2;
+   	width: 1200px;
+   	height: 100px;
+   	left: 50%;
+   	margin-left: -600px;
+   	top: 50%;
+   	margin-top:-50px;
+   	color: #FFFFFF;
+   	letter-spacing: 10px;
+   }
+    .banner_intro p{
+  margin-top: 10px;
+  	letter-spacing: 3px;
+   }
+		</style>
+		<script>
+			$(function(){
+				
+				$('#icon_list_1').mouseenter(function(){
+					$('#icon_list_1 .icon_ewm').css('display','block');
+					$('#icon_list_1 .icon_ewm').addClass('icon_ewm_anim');
+					}).mouseleave(function(){
+						$('#icon_list_1 .icon_ewm').css('display','none');
+					$('#icon_list_1 .icon_ewm').removeClass('icon_ewm_anim');
+					})
+					$('#icon_list_2').mouseenter(function(){
+					$('#icon_list_2 .icon_ewm').css('display','block');
+					$('#icon_list_2 .icon_ewm').addClass('icon_ewm_anim');
+					}).mouseleave(function(){
+						$('#icon_list_2 .icon_ewm').css('display','none');
+					$('#icon_list_2 .icon_ewm').removeClass('icon_ewm_anim');
+					})
+			})
+		</script>
+	
+	</head>
+	<body>
+		<div class="header">
+			<div class="nav">
+				<div class="logo">Logo</div>
+				<div class="nav_list">
+					<ul class=" nav_table">
+						<li class="nav_table_cell"><a class="nav_table_cell_link link_active" href="index.html">网站首页</a></li>
+						<li class="nav_table_cell"><a class="nav_table_cell_link" href="products.html">产品信息</a></li>
+						<li class="nav_table_cell"><a class="nav_table_cell_link" href="special_offer.html">优惠活动</a></li>
+						<li class="nav_table_cell"><a class="nav_table_cell_link" href="new_info.html">最新动态</a></li>
+						<li class="nav_table_cell"><a class="nav_table_cell_link" href="Pantene.html">合作加盟</a></li>
+					</ul>
+				</div>
+				<div class="header_icon">
+					<div class="icon_list">
+					<span><i class="fa fa-heart " aria-hidden="true" ></i></span>	
+						<p>收藏</p>
+					</div>
+					<div class="icon_list" id="icon_list_1">
+					<span><i class="fa fa-weibo" aria-hidden="true"></i></span>	
+						<p>微博</p>
+						<div class="icon_ewm"><img src="img/ewm.png" width="120px"/></div>
+					</div>
+					<div class="icon_list" id="icon_list_2">
+					<span><i class="fa fa-weixin" aria-hidden="true"></i></span>	
+						<p>微信</p>
+						<div class="icon_ewm"><img src="img/ewm.png" width="120px"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<!--	banner-->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      	<div class="banner_intro">
+      		<h1>健康.无公害</h1>
+      		<p>酸甜清香，我们只生产健康无公害的水果</p>
+      	</div>
+      	<img src="img/banner1.jpg" />
+      	
+      </div>
+      <div class="swiper-slide">
+      	<div class="banner_intro">
+      		<h1>健康.无公害</h1>
+      		<p>酸甜清香，我们只生产健康无公害的水果</p>
+      	</div>
+      	<img src="img/banner3.jpg" />
+      </div>
+      <div class="swiper-slide">
+      	<div class="banner_intro">
+      		<h1>健康.无公害</h1>
+      		<p>酸甜清香，我们只生产健康无公害的水果</p>
+      	</div>
+      	<img src="img/banner4.jpg" />
+      </div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-button-next" style="color: #FFFFFF;"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  
+  <!--	banner-->
+  
+	  <script>
+    var swiper = new Swiper('.swiper-container', {
+      autoHeight: true, //enable auto height
+      spaceBetween: 20,
+      loop: true,
+      effect: 'fade',
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
+<div class="new_product">
+	<p> New Products</p>
+	<h3>最新产品</h3>
+	<a class="new_product_lin" href="products.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="margin-right: 5px;"></i>查看更多</a>
+</div>
+<div class=" new_product_list">
+	<div class="new_list_table bounceInLeft wow animated" data-wow-offset="300" style="margin-right: 20px;">
+		<p> 2018/03/07</p>
+		<a>
+		<img src="img/new_pro.jpg"  width="100%"/>
+		</a>
+		<h4>新鲜西柚</h4>
+	</div>
+	<div class="new_list_table bounceInDown wow animated" data-wow-offset="300" style="margin-right: 20px;">
+		<p> 2018/03/07</p>
+		<a>
+		<img src="img/new_pro1.jpg"  width="100%"/>
+		</a>
+		<h4>新鲜柠檬</h4>
+	</div>
+	<div class="new_list_table bounceInRight wow animated" data-wow-offset="300">
+		<p> 2018/03/07</p>
+		<a>
+		<img src="img/new_pro2.jpg"  width="100%"/>
+		</a>
+		<h4>新鲜草莓</h4>
+	</div>
+</div>
+
+
+<div class="new_product">
+	<p> New information</p>
+	<h3>最新动态</h3>
+	<a class="new_product_lin" href="new_info.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="margin-right: 5px;"></i>查看更多</a>
+</div>
+
+<div class="new_info">
+	<div class="info_table  slideInLeft wow animated" data-wow-offset="300" style="margin-right: 20px;">
+		<a>
+		<img src="img/info1.jpg" />
+		<h1 class="info_table_title">健康.无公害</h1>
+      	<p class="info_table_intro">酸甜清香，我们只生产健康无公害的水果</p>
+		</a>
+		
+	</div>
+	<div class="info_table  slideInRight wow animated" data-wow-offset="300">
+		<a>
+		<img src="img/info2.jpg" />
+		<h1 class="info_table_title">健康.无公害</h1>
+      	<p class="info_table_intro">酸甜清香，我们只生产健康无公害的水果</p>
+		</a>
+	</div>
+	<div class="info_table  slideInLeft wow animated" data-wow-duration="1s" style="margin-right: 20px;">
+		<a>
+		<img src="img/info3.jpg" />
+		<h1 class="info_table_title">健康.无公害</h1>
+      	<p class="info_table_intro">酸甜清香，我们只生产健康无公害的水果</p>
+		</a>
+	</div>
+	<div class="info_table  slideInRight wow animated " data-wow-duration="1s>
+		<a href="">
+		<img src="img/info_new.jpg" />
+		</a>
+	</div>
+</div>
+<div class="footer">
+	
+	<div class="foot">
+		<p>首页 / 关于我们 / 联系我们 / 合作加盟 / 最新产品 / 优惠活动 / 联系我们 / 关于我们 / 联系我们 / 合作加盟 / 最新产品 / 优惠活动 / 联系我们</p>
+		<p>地址：XXX省XXX市XXXXXXXXXXX街道</p>
+		<p>互联网信息服务资质证书编号：陕西-（经营性）XXX</p>
+		<div class="foot-erm">
+			<img src="img/ewm.png" width="120px" />
+		</div>
+	</div>
+</div>
+ <script type="text/javascript" src="js/wow.min.js" ></script>
+		<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+      }
+    );
+    wow.init();
+  </script>
+	</body>
+</html>
+

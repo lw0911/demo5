@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>新闻列表</title> 
+  <meta name="keywords" content="合肥XXX美容整形医院,合肥整形医院,合肥美容医院,合肥XXX美容医院,XXX整形,合肥XXX美容医院,皮肤,脸部,鼻子" /> 
+  <meta name="description" content="合肥整形医院哪个好，合肥整形医院有哪些，合肥美容医院，合肥XXX美容医院，合肥XXX美容整形医院。皮肤，脸部，鼻子，胸部，眉毛，牙齿" /> 
+  <meta name="renderer" content="webkit" /> 
+  <meta http-equiv="X-UA-Comabsolutetible" content="IE=Edge,chrome=1" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <link rel="stylesheet" type="text/css" href="css/reset.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/about.css" /> 
+  <script type="text/javascript" src="js/jquery-swt.js"></script> 
+  <script src="js/jquery.SuperSlide.2.1.1.source.js"></script> 
+  <script src="js/indexApp.js"></script> 
+  <script>
+  //图片按比例缩放   
+  var   flag=false;   
+  function   DrawImage(ImgD,w,h){   
+  var   image=new   Image();   
+  var   iwidth   =   w;     //定义允许图片宽度   
+  var   iheight   =   h;     //定义允许图片高度   
+  image.src=ImgD.src;   
+  if(image.width>0   &&   image.height>0){   
+  flag=true;   
+  if(image.width/image.height>=   iwidth/iheight){   
+  if(image.width>iwidth){       
+  ImgD.width=iwidth;   
+  ImgD.height=(image.height*iwidth)/image.width;   
+  }else{   
+  ImgD.width=image.width;       
+  ImgD.height=image.height;   
+  }   
+  //ImgD.alt=image.width+"×"+image.height;   
+  }   
+  else{   
+  if(image.height>iheight){       
+  ImgD.height=iheight;   
+  ImgD.width=(image.width*iheight)/image.height;   
+  }else{   
+  ImgD.width=image.width;       
+  ImgD.height=image.height;   
+  }   
+  //ImgD.alt=image.width+"×"+image.height;   
+  }   
+  }   
+  }
+</script> 
+ </head> 
+ <body> 
+  <script src="js/wapskip.js"></script> 
+  <!--顶部--> 
+  <div id="header"> 
+   <div class="top"> 
+    <div class="topc"> 
+     <div class="cl">
+       美 &middot; 壹见分晓　连锁品牌 
+      <a href="#">合肥</a> / 
+      <a href="#" >芜湖</a> / 
+      <a href="#" >宁波</a> / 
+      <a href="#" >广州</a> / 
+      <a href="#" >顺德</a> 
+     </div> 
+     <div class="cr">
+       XXX 
+     </div> 
+     <div class="cr1">
+       门诊时间（全年无休）08:00—20:00 
+     </div> 
+     <div class="cr2"> 
+      <a class="pro-weixin" href="javascript:void(0);" onClick="openZoosUrl();">XXX微信</a> 
+      <a class="pro-weibo" href="http://weibo.com/hefeiyijiayi" >XXX微博</a> 
+      <a class="pro-qq" href="http://user.qzone.qq.com/1980847684" >XXX认证空间</a> 
+      <a class="pro-mobile" href="http://wap.hfyjy.com"  title="XXX手机站">手机站</a> 
+      <span style=""><img src="images/top_weixin.png" /></span> 
+     </div> 
+     <script type="text/javascript">
+$(function(){
+	$(".pro-weixin").hover(function(){ 
+	$(".topc .cr2 span").show(); 
+	}, 
+	function(){ 
+	$(".topc .cr2 span").hide(); 
+	})
+});
+</script> 
+    </div> 
+   </div> 
+   <div class="top1"> 
+    <div class="logo"> 
+     <a href="index.html"><img src="images/logo.jpg" /></a> 
+    </div> 
+    <div class="dh"> 
+     <ul> 
+      <li><a href="index.html">首页</a></li> 
+      <li><a href="about.html" >医院简介</a></li> 
+      <li><a href="team.html" >医师团队</a></li> 
+      <li><a href="star.html" >明星老板</a></li> 
+      <li><a href="news.html?"class="cur" >壹美动态</a></li> 
+     </ul> 
+    </div> 
+    <form method="post" action="search.html"  name="search"> 
+     <div class="search"> 
+      <div class="sl"> 
+       <input type="text" name="keyword" value="你在烦恼什么？" onFocus="if(this.value=='你在烦恼什么？') {this.value=''}" onBlur="if(this.value=='') {this.value='你在烦恼什么？'}" /> 
+      </div> 
+      <div class="sr"> 
+       <input type="image" src="images/sbtn.jpg" /> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <div class="banner"> 
+   <div class="pinpaiBanner relative" id="banner"> 
+    <div class="menu absolute"> 
+     <ul> 
+      <li class="subNav subNav10"><a href="/zt/2015bns/" ><i></i> <span data-txt="面部年轻化"></span> </a> 
+       <div class="subMenu absolute clearfix"> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox fl clearfix"> 
+         <a href="/zt/2015bns/" >注射美容抗衰老 </a> 
+         <a href="/zt/2015bns/" >面部塑形 </a> 
+         <a href="/zt/2015bns/" >除皱</a> 
+        </div> 
+       </div> </li> 
+      <li class=" subNav subNav1 "> <a href="/zt/2015syp/" ><i></i> <span data-txt="眼部整形"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox fl clearfix"> 
+         <div class="content clearfix"> 
+          <h4>眼部综合</h4> 
+          <dl class="clearfix"> 
+           <dt> 
+            <a href="/zt/2015syp/" >双眼皮</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015ybzh/" >开眼角</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015ybzh/" >眼部提肌</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015ybzh/" >眼睑下垂</a> 
+           </dt> 
+           <dt> 
+            <a href="javascript:void(0);" onClick="openZoosUrl();">卧蚕</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015ybzh/" >眼部综合整形</a> 
+           </dt> 
+          </dl> 
+         </div> 
+         <div class="content clearfix"> 
+          <h4>眼部抗衰</h4> 
+          <dl class="clearfix"> 
+           <dt> 
+            <a href="/zt/360xz/" >眼部祛脂</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015qyd/" >祛眼袋</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015hyq/" >黑眼圈</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015bns/" >眼睑松弛</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015bns/" >鱼尾纹</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015bns/" >眼部综合抗衰</a> 
+           </dt> 
+          </dl> 
+         </div> 
+         <div class="content clearfix"> 
+          <h4>眼部修复</h4> 
+          <dl class="clearfix"> 
+           <dt> 
+            <a href="/zt/2015bns/" >眼睑凹陷</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015ybzh/" >双眼皮修复</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015qyd/" >眼袋修复</a> 
+           </dt> 
+           <dt> 
+            <a href="/zt/2015ybzh/" >眼部综合修复</a> 
+           </dt> 
+          </dl> 
+         </div> 
+         <div class="content clearfix"> 
+          <h4>眼眉综合</h4> 
+          <dl class="clearfix"> 
+           <dt> 
+            <a href="javascript:void(0);" onClick="openZoosUrl();">提眉</a> 
+           </dt> 
+           <dt> 
+            <a href="javascript:void(0);" onClick="openZoosUrl();">切眉</a> 
+           </dt> 
+           <dt> 
+            <a href="javascript:void(0);" onClick="openZoosUrl();">切眉修复</a> 
+           </dt> 
+           <dt> 
+            <a href="javascript:void(0);" onClick="openZoosUrl();">眼眉综合整形</a> 
+           </dt> 
+          </dl> 
+         </div> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav2 "><a href="/zt/2015lb/" ><i></i> <span data-txt="鼻部整形"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015lb/" >综合鼻整形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >鼻梁塌</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >朝天鼻</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >鹰钩鼻/驼峰鼻</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >鼻头肥大</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >鼻翼宽</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >歪鼻</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015lb/" >鼻梁宽大</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015lb/" >鼻部修复</a> 
+          </dt> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav3 "><a href="/zt/2015fx/" ><i></i> <span data-txt="胸部整形"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015fx/" >隆胸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015fx/" >假体隆胸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015fx/" >注射隆胸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >巨乳缩小</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >乳房下垂上提</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >乳头凹陷矫正</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >乳房塑形</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >副乳</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >乳头缩小</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >乳晕缩小</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015wx/" >乳晕炫色</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015xbxf/" >乳头塑形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015wx/" >乳晕飘红</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dd> 
+           <h4>不良隆胸修复</h4> 
+          </dd> 
+          <dt> 
+           <a href="/zt/2015fx" >假体隆胸修复</a> 
+          </dt> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav4 "><a href="/zt/2015glx/" ><i></i> <span data-txt="面部轮廓"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015glx/" >颜面轮廓成形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015glx/" >长曲线下颌角</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015glx/" >下颏整形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015glx/" >轮廓修复</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/fczx/" >唇部整形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015slz/" >注射瘦脸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >丰额头</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >丰太阳穴</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >丰苹果肌</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/360xz/" >面部吸脂</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/360xz/" >双下巴</a> 
+          </dt> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav5 "><a href="/zt/360xz/" ><i></i> <span data-txt="形体雕塑"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class=" clearfix fl"> 
+          <dd class="clearfix"> 
+           <h4>吸脂塑形</h4> 
+          </dd> 
+          <div class="clearfix fl"> 
+           <div class="clearfix "> 
+            <dt> 
+             <a href="/zt/360xz/" >分层吸脂紧肤</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >面部吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >腰部吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >腹部吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >大腿吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >小腿吸脂</a> 
+            </dt> 
+           </div> 
+           <div class="clearfix "> 
+            <dt> 
+             <a href="/zt/360xz/" >手臂吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >臀部吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >背部吸脂</a> 
+            </dt> 
+            <dt> 
+             <a href="/zt/360xz/" >胸部吸脂</a> 
+            </dt> 
+           </div> 
+          </div> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav6 "><a href="/zt/2015cgnf/" ><i></i> <span data-txt="皮肤美容"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <div class="inner fl"> 
+          <dl class=" clearfix fl" style="margin-bottom:35px;"> 
+           <dd class="clearfix"> 
+            <h4>祛斑祛痣</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015shqb/" >雀斑</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015shqb/" >黄褐斑</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015shqb/" >老年斑</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015shqb/" >晒斑</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015qtj/" >胎记</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/qz/" >祛痣</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+          <dl class=" clearfix fl"> 
+           <dd class="clearfix"> 
+            <h4>完美肌肤</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015sgnf/" >水光嫩肤</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015tmj/" >脱毛</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015cgnf/" >皮肤美白</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015cgnf/" >毛孔粗大</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015hxs/" >红血丝</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015hyq/" >黑眼圈</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015qht" >祛黑头</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015cgnf/" >皮肤粗糙</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015cgnf/" >敏感肌肤</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015jzb/" >酒糟鼻</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/qyc/" >祛腋臭</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2014xws/" >洗纹身</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+         </div> 
+         <div class="inner fl"> 
+          <dl class=" clearfix fl"> 
+           <dd class="clearfix"> 
+            <h4>痘痘问题</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015qd/" >痘痘</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015qd/" >痘印</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015qd/" >粉刺</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+          <dl class=" clearfix fl" style="margin-bottom:35px;"> 
+           <dd class="clearfix"> 
+            <h4>皮肤修复</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015qbh/" >祛疤痕</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >肥胖纹</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >妊娠纹</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+          <dl class=" clearfix fl"> 
+           <dd class="clearfix"> 
+            <h4>衰老问题</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015bns/" >鱼尾纹</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >法令纹</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >抬头纹</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015bns/" >眉间纹</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >嘴角纹</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >颈纹</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015bns/" >眼部松弛</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >面颈松弛</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015bns/" >腰腹松弛</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+         </div> 
+         <div class="inner fl"> 
+          <dl class=" clearfix fl" style="margin-bottom:35px;"> 
+           <dd class="clearfix"> 
+            <h4>韩式纹绣</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015wx/" >纹眉</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015wx/" >纹眼线</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/2015wx/" >漂唇</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/2015wx/" >乳晕漂红</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+          <dl class=" clearfix fl"> 
+           <dd class="clearfix"> 
+            <h4>中医美容</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+            </div> 
+           </div> 
+          </dl> 
+         </div> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav7 "><a href="/zt/2015zstc/" ><i></i> <span data-txt="微整形"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015slz/" >瘦脸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >注射隆鼻</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >注射垫下巴</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >丰唇</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >丰太阳穴</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >祛鱼尾纹</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >祛法令纹</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >丰苹果肌</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015zstc/" >丰面颊</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >泪沟填充</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >丰额头</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015botox/" >注射瘦腿</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >祛抬头纹</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >祛眉间纹</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >祛嘴角纹</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >祛颈纹</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015botox/" >注射瘦脸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015bns/" >注射塑形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/jydb/" >注射嫩肤</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zstc/" >丰耳垂</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015fx/" >注射丰胸</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/qyc/" >祛腋臭</a> 
+          </dt> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav8 "><a href="/zt/2015smzx/" ><i></i> <span data-txt="私密整形"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015smzx/" >私密整形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/yczx/" >阴唇整形</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/ydjs/" >阴道松弛</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/yczx/" >阴蒂肥大</a> 
+          </dt> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav9 "><a href="/zt/2014zf/" ><i></i> <span data-txt="毛发种植"></span> </a> 
+       <div class="subMenu absolute clearfix "> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2014zf/" >植发</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zm/" >眉毛种植</a> 
+          </dt> 
+          <dt> 
+           <a href="/zt/2015zjm/" >睫毛种植</a> 
+          </dt> 
+          <dt> 
+           <a href="javascript:void(0);" onClick="openZoosUrl();">胡须种植</a> 
+          </dt> 
+          <dt> 
+           <a href="javascript:void(0);" onClick="openZoosUrl();">鬓角种植</a> 
+          </dt> 
+          <dt> 
+           <a href="javascript:void(0);" onClick="openZoosUrl();">疤痕种植</a> 
+          </dt> 
+          <dt> 
+           <a href="javascript:void(0);" onClick="openZoosUrl();">发际线种植</a> 
+          </dt> 
+          <dt> 
+           <a href="javascript:void(0);" onClick="openZoosUrl();">美人尖种植</a> 
+          </dt> 
+         </dl> 
+         <dl class="clearfix"> 
+          <dt> 
+           <a href="/zt/2015slz/" >私密种植</a> 
+          </dt> 
+         </dl> 
+        </div> 
+       </div> </li> 
+      <li class="subNav subNav11"><a href="http://www.hfkqzx.com" ><i></i> <span data-txt="口腔美容"></span> </a> 
+       <div class="subMenu absolute clearfix"> 
+        <div class="subMenuLogo fl"></div> 
+        <div class="subMenuLinkBox clearfix fl"> 
+         <div class="inner fl"> 
+          <dl class=" clearfix fl" style="margin-bottom:35px;"> 
+           <dd class="clearfix"> 
+            <h4>牙齿矫正</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/2015ycjz/" >牙齿矫正</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/2015ycjz/" >隐形矫正</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/2015ycjz/" >龅牙矫正</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+          <dl class=" clearfix fl"> 
+           <dd class="clearfix"> 
+            <h4>牙齿美白</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/lgmb//" >牙齿美白</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/lgmb//" >冷光美白</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/lgmb//" >贴面美白</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/lgmb/" >四环素牙</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/lgmb//" >氟斑牙</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+         </div> 
+         <div class="inner fl"> 
+          <dl class=" clearfix fl" style="margin-bottom:35px;"> 
+           <dd class="clearfix"> 
+            <h4>牙齿缺失</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/2015zzy/" >牙齿种植</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/2015zzy/" >假牙</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/2015zzy/" >镶牙</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/by/" >义齿</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+          <dl class=" clearfix fl"> 
+           <dd class="clearfix"> 
+            <h4>牙周疾病</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/xy/" >牙周炎</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/by/" >牙齿松动</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/xy/" >牙龈出血</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+         </div> 
+         <div class="inner fl"> 
+          <dl class=" clearfix fl" style="margin-bottom:35px;"> 
+           <dd class="clearfix"> 
+            <h4>牙齿修复</h4> 
+           </dd> 
+           <div class="clearfix fl"> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/kcy/" >烤瓷牙</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/2014mrg/" >美容冠</a> 
+             </dt> 
+             <dt> 
+              <a href="/zt/kq/kcy/" >全瓷牙</a> 
+             </dt> 
+            </div> 
+            <div class="clearfix "> 
+             <dt> 
+              <a href="/zt/kq/2014by/" >蛀牙补牙</a> 
+             </dt> 
+            </div> 
+           </div> 
+          </dl> 
+         </div> 
+        </div> 
+       </div> </li> 
+     </ul> 
+    </div> 
+    <div class="bannerSlide relative"> 
+     <div class="focus absolute"></div> 
+     <div class="slideBox"> 
+      <ul> 
+       <li><img src="images/pinpaiBanner.jpg" width="1922" height="322" /></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--content pinpaiContent--> 
+  <div class="pinpaiContent pubW center relative clearfix"> 
+   <script src="js/pinpai_left.js"></script> 
+   <div class="contentRight fr  relative" id="contentRight"> 
+    <div class="seoNavs absolute fonts"> 
+     <a href="index.html">首页</a> &gt; 
+     <a href="about.html" >医院简介</a> &gt; 壹美动态 
+    </div> 
+    <div class="newsWrapper"> 
+     <div class="newsLists clearfix"> 
+      <dl class="hot clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1187.html" title="XXX元月2日《麦卡锡整形外科学》安徽首发" ><span class="edge"></span><img src="images/41-1512291R6190-L.jpg" alt="XXX元月2日《麦卡锡整形外科学》安徽首发" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1187.html" title="XXX元月2日《麦卡锡整形外科学》安徽首发" >XXX元月2日《麦卡锡整形外科学》安徽首发</a></h5> 
+        <p><a href="news.html?1187.html" >XXX海外医师交流会暨《麦卡锡整形外科学》XXX签售会于元月2日将正式启动，《麦卡锡整形外科学：美容卷》历经近...</a></p> 
+        <p><span>2015-12-29</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="hot clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1097.html" title="XXX携手么么贷整形分期战略合作签约发布会" ><span class="edge"></span><img src="images/41-1512130932593E.jpg" alt="XXX携手么么贷整形分期战略合作签约发布会" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1097.html" title="XXX携手么么贷整形分期战略合作签约发布会" >XXX携手么么贷整形分期战略合作签约发布会</a></h5> 
+        <p><a href="news.html?1097.html" >12月12日，XXX携手么么贷整形分期战略合作签约发布会在XXX会议厅隆重举行，合肥XXX副总经理佘志雕、么么贷商...</a></p> 
+        <p><span>2015-12-12</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="hot clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1079.html" title="双12购美狂欢节整形分期0首付" ><span class="edge"></span><img src="images/22-151205142Z24K.jpg" alt="双12购美狂欢节整形分期0首付" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1079.html" title="双12购美狂欢节整形分期0首付" >双12购美狂欢节整形分期0首付</a></h5> 
+        <p><a href="news.html?1079.html" >分期付款买房买车、买数码产品早已不新鲜，现在，整形美容也可以 分期付款 了。合肥XXX美容医院携手国内金融机构米...</a></p> 
+        <p><span>2015-12-04</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1187.html" title="XXX元月2日《麦卡锡整形外科学》安徽首发" ><span class="edge"></span><img src="images/41-1512291R6190-L.jpg" alt="XXX元月2日《麦卡锡整形外科学》安徽首发" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1187.html" title="XXX元月2日《麦卡锡整形外科学》安徽首发" >XXX元月2日《麦卡锡整形外科学》安徽首发</a></h5> 
+        <p><a href="news.html?1187.html" >XXX海外医师交流会暨《麦卡锡整形外科学》XXX签售会于元月2日将正式启动，《麦卡锡整形外科学：美容卷》历经近2年的翻译工作，正式对外发售，合肥XXX安徽省首发。...</a></p> 
+        <p><span>2015-12-29</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1161.html" title="魏國華先生当选安徽民营医疗健康协会秘书长" ><span class="edge"></span><img src="images/41-15122G13P70-L.jpg" alt="魏國華先生当选安徽民营医疗健康协会秘书长" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1161.html" title="魏國華先生当选安徽民营医疗健康协会秘书长" >魏國華先生当选安徽民营医疗健康协会秘书长</a></h5> 
+        <p><a href="news.html?1161.html" >2月26日，以“健康之路&middot;美好安徽”为主题的的安徽省民营医疗健康产业协会成立大会在合肥隆重举行。国家卫生部，安徽省、市卫生部门的相关领导，莆田市区领导，莆田(中国)健康产业总会的部分领导以及全国各省分会领导，赞...</a></p> 
+        <p><span>2015-12-27</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1135.html" title="连续2年荣获-卫生监督量化分级A(优秀)等级单位" ><span class="edge"></span><img src="images/22-1512201G501359.jpg" alt="连续2年荣获-卫生监督量化分级A(优秀)等级单位" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1135.html" title="连续2年荣获-卫生监督量化分级A(优秀)等级单位" >连续2年荣获-卫生监督量化分级A(优秀)等级单位</a></h5> 
+        <p><a href="news.html?1135.html" > 2015年合肥市卫生局组织的，在全市一级以上民营医疗机构开展量化分级管理等级评定工作中。合肥XXX美容医院在此次卫生监督量化分级检查中凭借严格的 卫生标准、良好的医疗环境，继...</a></p> 
+        <p><span>2015-12-20</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1097.html" title="XXX携手么么贷整形分期战略合作签约发布会" ><span class="edge"></span><img src="images/41-1512130932593E.jpg" alt="XXX携手么么贷整形分期战略合作签约发布会" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1097.html" title="XXX携手么么贷整形分期战略合作签约发布会" >XXX携手么么贷整形分期战略合作签约发布会</a></h5> 
+        <p><a href="news.html?1097.html" >12月12日，XXX携手么么贷整形分期战略合作签约发布会在XXX会议厅隆重举行，合肥XXX副总经理佘志雕、么么贷商务总监耿立阳致辞后签约，数十家主流媒体共同见证医美跨入互联网...</a></p> 
+        <p><span>2015-12-12</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1082.html" title="激光祛斑多少钱" ><span class="edge"></span><img src="images/40_120515213EU0.jpg" alt="激光祛斑多少钱" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1082.html" title="激光祛斑多少钱" >激光祛斑多少钱</a></h5> 
+        <p><a href="news.html?1082.html" >对于爱美的女性来说，美白是一生的事业。但是，随着年龄的增长，肌肤问题也越来越严重，一些斑点也随之而至。除了使用一些美白祛斑护肤品以外，其实还可以通过医疗美容来实现祛斑，...</a></p> 
+        <p><span>2015-12-05</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1081.html" title="怎样去黑眼圈" ><span class="edge"></span><img src="images/40_120514542Y940.png" alt="怎样去黑眼圈" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1081.html" title="怎样去黑眼圈" >怎样去黑眼圈</a></h5> 
+        <p><a href="news.html?1081.html" >有黑眼圈怎么办 ？很多美女水汪汪的大眼睛都被黑眼圈给毁了，谁喜欢天天顶个熊猫眼呢？很多美眉表示：不喜欢又能怎么样，用了好多办法就是无法祛除。别担心，让合肥XXX的医师来教...</a></p> 
+        <p><span>2015-12-05</span></p> 
+       </dt> 
+      </dl> 
+      <dl class="clearfix"> 
+       <dd class="fl"> 
+        <a href="news.html?1079.html" title="双12购美狂欢节整形分期0首付" ><span class="edge"></span><img src="images/22-151205142Z24K.jpg" alt="双12购美狂欢节整形分期0首付" width="325" height="183" onload="javascript:DrawImage(this,325,183)" /></a> 
+       </dd> 
+       <dt class="fr fonts"> 
+        <h5><a href="news.html?1079.html" title="双12购美狂欢节整形分期0首付" >双12购美狂欢节整形分期0首付</a></h5> 
+        <p><a href="news.html?1079.html" >分期付款买房买车、买数码产品早已不新鲜，现在，整形美容也可以 分期付款 了。合肥XXX美容医院携手国内金融机构米么金服，联合推出XXX壹美贷整形美容分期付款业务。此后求美者...</a></p> 
+        <p><span>2015-12-04</span></p> 
+       </dt> 
+      </dl> 
+     </div> 
+     <div class="pageNation clearfix"> 
+      <div id="pagelink"> 
+       <a>首页</a> 
+       <a class="pn page_num page_current">1</a> 
+       <a href="6_2.html">2</a> 
+       <a href="6_3.html">3</a> 
+       <a href="6_4.html">4</a> 
+       <a href="6_5.html">5</a> 
+       <a class="page_next" href="6_2.html">下一页</a> 
+       <a href="6_99.html">末页</a> 
+       <a><span class="pageinfo">共 <strong>99</strong>页<strong>688</strong>条</span></a> 
+      </div> 
+     </div> 
+     <script src="js/pinpai_blinks.js"></script> 
+    </div> 
+   </div> 
+  </div> 
+  <!--底部--> 
+  <div id="footer"> 
+   <div class="bot"> 
+    <div class="botc"> 
+     <div class="cl"> 
+      <img src="images/bico1.jpg" /> 
+      <br />整形美容 
+     </div> 
+     <ul> 
+      <li><a href="/zt/2015fx/" >胸部整形</a></li> 
+      <li><a href="/zt/2015lb/" >定制隆鼻</a></li> 
+      <li><a href="/zt/2015syp/" >双眼皮</a></li> 
+      <li><a href="/zt/360xz/" >吸脂减肥</a></li> 
+      <li><a href="/zt/2014dxb/" >垫下巴</a></li> 
+      <li><a href="/zt/2015glx/" >改脸型</a></li> 
+      <li><a href="/zt/fczx/" >唇部整形</a></li> 
+      <li><a href="/zt/2015smzx/" >私密整形</a></li> 
+     </ul> 
+     <div class="cl"> 
+      <img src="images/bico2.jpg" /> 
+      <br />注射美容 
+     </div> 
+     <ul> 
+      <li><a href="/zt/2015cz/" >注射除皱</a></li> 
+      <li><a href="/zt/2015zstc/" >面部填充</a></li> 
+      <li><a href="/zt/2015slz/" >注射瘦脸</a></li> 
+      <li><a href="/zt/2015botox/" >注射瘦腿</a></li> 
+      <li><a href="/zt/2015zstc/" >微针注射</a></li> 
+     </ul> 
+     <div class="cl"> 
+      <img src="images/bico3.jpg" /> 
+      <br />皮肤美容 
+     </div> 
+     <ul> 
+      <li><a href="/zt/2015shqb/" >祛斑</a></li> 
+      <li><a href="/zt/2015qd/" >祛痘</a></li> 
+      <li><a href="/zt/qz/" >祛痣</a></li> 
+      <li><a href="/zt/2015hgl/" >汗管瘤</a></li> 
+      <li><a href="/zt/2015tmj/" >冰点脱毛</a></li> 
+      <li><a href="/zt/qyc/" >除腋臭</a></li> 
+     </ul> 
+     <div class="cl"> 
+      <img src="images/bico4.jpg" /> 
+      <br />口腔美容 
+     </div> 
+     <ul> 
+      <li><a href="/zt/kq/2014mrg/" >美容冠</a></li> 
+      <li><a href="/zt/kq/2015zzy/" >种植牙</a></li> 
+      <li><a href="/zt/kq/2014by/" >补牙</a></li> 
+      <li><a href="/zt/kq/ggzl/" >牙周疾病</a></li> 
+      <li><a href="/zt/kq/kcy/" >烤瓷牙</a></li> 
+      <li><a href="/zt/kq/2015ycjz/" >牙齿矫正</a></li> 
+      <li><a href="/zt/kq/ycmb/" >牙齿美白</a></li> 
+     </ul> 
+     <div class="cl" style="line-height:50px;"> 
+      <img src="images/bico5.jpg" /> 
+      <br />毛发种植 
+     </div> 
+     <ul> 
+      <li><a href="/zt/2014zf/" >头发种植</a></li> 
+      <li><a href="/zt/2015zm/" >眉毛种植</a></li> 
+      <li><a href="/zt/2015zjm/" >睫毛种植</a></li> 
+      <li><a href="javascript:void(0);" onClick="openZoosUrl();">胡须种植</a></li> 
+      <li><a href="javascript:void(0);" onClick="openZoosUrl();">鬓角种植</a></li> 
+      <li><a href="javascript:void(0);" onClick="openZoosUrl();">疤痕种植</a></li> 
+      <li><a href="javascript:void(0);" onClick="openZoosUrl();">发际线调整</a></li> 
+      <li><a href="javascript:void(0);" onClick="openZoosUrl();">美人尖种植</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="foot"> 
+    <div class="footc"> 
+     <div class="blogo"> 
+      <a href="index.html"><img src="images/blogo.jpg" /></a> 
+     </div> 
+     <div class="bcopy"> 
+      <div class="cl">
+        地址：XXX 版权所有：合肥XXX美容医院 
+       <a href="sitemap.xml"  style="color: #7c4f26;">网站地图</a> 
+       <br />备案号：皖ICP备XXX号-44 医疗广告审查证明文号：(XXX号 
+       <br />互联网医疗保健信息服务审核同意书：皖卫（中医）网审XXX号 
+       <br />网站声明：本站部分信息来源于互联网，不代表本院立场，如有涉及侵权违规，请告知我们及时处理。 
+      </div> 
+      <div class="cr"> 
+       <a href="http://wj.ahaic.gov.cn:8080/GSweb//ei/Ei!certificate.action?id=8a80812d4edd1c93014ef6a4465b006b"  rel="nofollow"><img src="images/gswj.png" /></a> 
+      </div> 
+     </div> 
+     <div class="btel"> 
+      <span>免费咨询电话</span> 
+      <br />XXX 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script src="js/sideNav.js"></script> 
+  <script type="text/javascript" src="js/swt.js"></script>  
+ </body>
+</html>

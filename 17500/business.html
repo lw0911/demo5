@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>业务领域</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<style>
+
+    .banners-pc { margin: 0 40px; clear: both; font-size: 0; height: 430px; }
+    .banners-pc .mode { padding-top: 230px; }
+    .banners-pc .mode .br1 { margin-left: -44px; position: relative; }
+    .banners-pc .mode .mode1 { margin-top: -46px; text-align: center; }
+    .banners-pc .mode .mode1 .p1 { margin-bottom: 20px; font-size: 32px; color: #fff; }
+    .banners-pc .mode .mode1 .p2 { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .banners-pc .mode .mode1 .p2 .fa { margin: 0 10px; font-size: 16px; }
+
+
+    .banners-mb { display: none; clear: both; height: 430px; clear: both; font-size: 0; }
+    .banners-mb div { height: 100%; }
+    .banners-mb .frame { }
+    .banners-mb .frame .mode .mode1 { margin-top: -80px; }
+    .banners-mb .frame .mode .mode1 .p1 { margin-bottom: 45px; font-size: 44px; font-weight: bold; color: #fff; text-align: left; }
+
+
+
+
+    @media (max-width: 1024px) {
+        .banners-pc { display: none; }
+        .banners-mb { display: block; }
+    }
+
+    @media (max-width: 667px) {
+        .banners-mb .frame .mode .br1 { padding: 0 10px; }
+        .banners-mb .frame .mode .mode1 .p1 { font-size: 40px; top: 40%; }
+        .banners-mb .frame .mode .mode1 .p1 span { display: unset; }
+    }
+
+    .business { margin: 0 40px 40px 40px; overflow: hidden; }
+    .business .left { margin-left: -5px; }
+    .business .left .list { }
+    .business .left .list li { margin-bottom: 5px; padding-left: 5px; float: left; width: 25%; }
+    .business .left .list .no { margin-bottom: 0; }
+    .business .left .list li:nth-child(6n) { width: 50%; }
+
+
+
+    .business .left .list li .box { position: relative; width: 100%; display: block; overflow: hidden; }
+    .business .left .list li .box .pic1 { background: no-repeat center center; background-size: cover; height: 870px; }
+    .business .left .list li .box .pic2 { background: no-repeat center center; background-size: cover; height: 432px; }
+    .business .left .list li .box .pic3 { background: no-repeat center center; background-size: cover; height: 432px; }
+
+    .business .left .list li .box .bt { padding: 18px 0; position: absolute; background: rgba(0,0,0,0.8); bottom: 0; left: 0; right: 0; text-align: center; }
+    .business .left .list li .box .bt .p1 { font-size: 18px; color: #fff; }
+    .business .left .list li .box .buc { padding: 80px 40px 0 40px; position: absolute; background: rgba(252,106,38,0.8); top: 0; right: 0; bottom: 0; left: 0; opacity: 0; }
+    .business .left .list li .box .buc .p2 { margin-bottom: 35px; font-size: 24px; color: #fff; }
+    .business .left .list li .box .buc .p3 { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 24px; }
+
+    .business .left .list li .box:hover .bt { bottom: -60px; transition: ease .3s; }
+    .business .left .list li .box:hover .buc { opacity: 1; transition: ease .3s; }
+
+    @media (max-width: 1024px) {
+        .business { margin: 0 auto; }
+        .business .left .list li { width: 33.33%; }
+        .business .left .list li .box .pic1 { background: no-repeat center center; background-size: cover; height: 432px; }
+        .business .left .list li .box .pic2 { background: no-repeat center center; background-size: cover; height: 432px; }
+        .business .left .list li .box .pic3 { background: no-repeat center center; background-size: cover; height: 432px; }
+        .business .left .list li:nth-child(6n) { width: 33.33%; }
+        .business .left .list li .box .bt { bottom: -60px; transition: ease .3s; }
+        .business .left .list li .box .buc { opacity: 1; transition: ease .3s; }
+    }
+
+    @media (max-width: 800px) {
+        .business .left .list li { width: 50%; }
+        .business .left .list li:nth-child(6n) { width: 50%; }
+    }
+
+
+    @media (max-width: 550px) {
+        .business .left .list li { margin-bottom: 10px; width: 100%; }
+        .business .left .list li:nth-child(6n) { margin-bottom: 0; width: 100%; }
+        .business .left .list .no { margin-bottom: 10px; }
+    }
+
+
+    .g_page { text-align: center; }
+    .g_page ul { }
+    .g_page ul li { margin: 0 10px; display: inline-block; }
+    .g_page ul li .box { }
+    .g_page ul li .box .ico { display: inline-block; }
+    .g_page ul li .box .ico2 { display: none; }
+
+    .g_page ul li .box:hover .ico1 { display: none; transition: ease .3s; }
+    .g_page ul li .box:hover .ico2 { display: inline-block; transition: ease .3s; }
+    .g_page ul li .on .ico1 { display: none; transition: ease .3s; }
+    .g_page ul li .on .ico2 { display: inline-block; transition: ease .3s; }
+</style>
+
+<body>
+    <div class="g_header">
+        <div class="bar">
+            <a href="#" class="menu"><img src="img/cd.svg" /></a>
+            <p class="logo"><a href="index.html"><img src="img/logo1.png"></a></p>
+        </div>
+        <div class="main">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            <ul class="nav">
+                <li class="">
+                    <a href="index.html">
+                        <b>首页</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="about.html">
+                        <b>关于我们</b>
+                    </a>
+                </li>
+                <li class=" on">
+                    <a href="business.html">
+                        <b>业务领域</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="project.html?_ct=地产开发">
+                        <b>经典项目</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="news.html?_ct=公司新闻">
+                        <b>新闻中心</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="recruit.html">
+                        <b>人才招聘</b>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="contact.html">
+                        <b>联系我们</b>
+                    </a>
+                </li>
+            </ul>
+            <div class="rt">
+                <p class="p1">Contact：XXX<i class="fa fa-search"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="business">
+        <div class="left">
+            <ul class="list">
+                <li class="no">
+                    <a class="box" href="businessdetails.html?_ct=地产开发">
+                        <p class="pic1" style="background-image: url(img/bu1.jpg);"></p>
+                        <div class="bt"><p class="p1">地产开发</p></div>
+                        <div class="buc">
+                            <p class="p2">地产开发</p>
+                            <p class="p3">
+                                房地产开发是指从事房地产开发的企业为了实现城市规划和城市建设（包括城市新区开发和旧区改建）而从事的土地开发和房屋建设等行为的总称。
+                                房地产是指土地、建筑物及固着在土地、建筑物上不可分离的部分及其附带的各种权益。
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="box" href="businessdetails.html?_ct=物业服务">
+                        <p class="pic2" style="background-image: url(img/bu5.jpg);"></p>
+                        <div class="bt"><p class="p1">物业服务</p></div>
+                        <div class="buc">
+                            <p class="p2">物业服务</p>
+                            <p class="p3">
+                                “物业”一词译自英语property或estate，由香港传入沿海、内地，其含义为财产、资产、地产、房地产、产业等。该词自20世纪80年代引入国内，
+                                现已形成了一个完整的概念，即：物业是指已经建成并投入使用的各类房屋及其与之相配套的设备、设施和场地。
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="box" href="businessdetails.html?_ct=设计建造">
+                        <p class="pic2" style="background-image: url(img/bu6.jpg);"></p>
+                        <div class="bt"><p class="p1">设计建造</p></div>
+                        <div class="buc">
+                            <p class="p2">设计建造</p>
+                            <p class="p3">
+                                设计建造（Design Build）是一种建筑项目的交付模式，业主将项目交给单一实体全面负责，承揽设计、采购、施工等，直至项目完成。与传统的设计－招
+                                标－建造项目交付模式相比，设计和建造业务由一个被称为设计-建造承包商的单一实体来承担；
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="box" href="businessdetails.html?_ct=医养健康">
+                        <p class="pic2" style="background-image: url(img/bu7.jpg);"></p>
+                        <div class="bt"><p class="p1">医养健康</p></div>
+                        <div class="buc">
+                            <p class="p2">医养健康</p>
+                            <p class="p3">
+                                “医养结合”就是把专业的医疗技术检查和先进设备与康复训练、日常学习、日常饮食、生活养老等专业相融合。以医疗为保障，以康复为支撑，边医边养、综合治疗。
+                                从技术上尽可能的实现疾病转归，病人的各项功能得到保持或恢复，其中，“医”主要就是重大疾病早期识别、
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="no">
+                    <a class="box" href="businessdetails.html?_ct=酒店发展">
+                        <p class="pic2" style="background-image: url(img/bu2.jpg);"></p>
+                        <div class="bt"><p class="p1">酒店发展</p></div>
+                        <div class="buc">
+                            <p class="p2">酒店发展</p>
+                            <p class="p3">
+                                一般地说来就是给宾客提供歇宿和饮食的场所。具体地说饭店是以它的建筑物为凭证，通过出售客房、餐饮及综合服务设施向客人提供服务，从而获得经济收益的组织。
+                                酒店主要为游客提供住宿服务、亦生活的服务及设施（寝前服务）、餐饮、游戏、娱乐、购物、商务中心、宴会及会议等设施。
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="no">
+                    <a class="box" href="businessdetails.html?_ct=文体旅游">
+                        <p class="pic3" style="background-image: url(img/bu3.jpg);"></p>
+                        <div class="bt"><p class="p1">文体旅游</p></div>
+                        <div class="buc">
+                            <p class="p2">文体旅游</p>
+                            <p class="p3">
+                                旅游指为了休闲、商务或其他目的离开他她们惯常环境，到某些地方并停留在那里，但连续不超过一年的活动。旅游目的包括六大类：休闲、娱乐、度假，探亲访友，商务、专业访问，健康医疗，宗教/朝拜，其他。
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fot">
+        <div class="g_cw">
+            <ul class="list">
+                <li>
+                    <p class="p1">关于我们</p>
+                    <p class="p2"><a class="box" href="about.html">公司简介</a></p>
+                    <p class="p2"><a class="box" href="about_b.html">发展历史</a></p>
+                    <p class="p2"><a class="box" href="about_c.html">荣誉资质</a></p>
+                    <p class="p2 no"><a class="box">企业文化</a></p>
+                </li>
+                <li>
+                    <p class="p1">业务领域</p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=地产开发">地产开发</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=酒店发展">酒店发展</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=文体旅游">文体旅游</a></p>
+                    <p class="p2"><a class="box" href="businessdetails.html?_ct=医养健康">医养健康</a></p>
+                    <p class="p2 no"><a class="box" href="businessdetails.html?_ct=设计建造">设计建造</a></p>
+                </li>
+                <li>
+                    <p class="p1">新闻中心</p>
+                    <p class="p2"><a class="box" href="news.html?_ct=公司新闻">公司新闻</a></p>
+                    <p class="p2"><a class="box" href="news.html?_ct=行业资讯">行业资讯</a></p>
+                    <p class="p2 no"><a class="box" href="notice.html?_ct">通知公告</a></p>
+                </li>
+                <li>
+
+                    <p class="p1">联系我们</p>
+                    <p class="p2">地址：xxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="p2">电话：XXX</p>
+                    <p class="p2 no">邮箱：XXX</p>
+
+                </li>
+                <li>
+                    <div class="gz">
+                        <p class="p1">关注我们</p>
+                        <div class="sm">
+                            <img src="img/qr_wxgz.png">
+                            <p class="p3">扫二维码关注我们</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fota">
+            <div class="g_cw">
+                <p class="p1">Copyright© 2019 建筑房地产有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</p>
+                <p class="p2">技术支持：<a href="javascript:void(0);" target="_blank">某某某</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+

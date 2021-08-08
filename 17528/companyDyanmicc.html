@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>工程案例</title>
+
+    <!--核心组建-->
+    <script src="all/jquery.min.js"></script>
+    <script src="all/bootstrap.min.js"></script>
+    <script src="all/swiper.min.js"></script>
+    <link rel="stylesheet" href="all/bootstrap.min.css"/>
+    <link rel="stylesheet" href="all/swiper.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="all/html5shiv.min.js"></script>
+    <script src="all/respond.min.js"></script>
+    <![endif]-->
+
+    <!--自己的样式-->
+    <link rel="stylesheet" type="text/css" href="all/common.css"/>
+    <link rel="stylesheet" type="text/css" href="all/index.css"/>
+    <!--此处增加了手机端样式 ==========================================增-->
+    <link rel="stylesheet" type="text/css" href="all/index_mb.css"/>
+    <!--工程案例-->
+    <link rel="stylesheet" href="all/other.css"/>
+
+</head>
+
+<body>
+<!--固定顶部------------------------------------------------------->
+<div class="top_bar hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="top_bar_left">
+                    <a href="javascript:;"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <div class="top_bar_right">
+                    <a href="javascript:;"><img src="images/te_topl.png" alt=""/></a>
+                    <span>全国统一热线：</span>
+                    <a href="tel:XXX">XXX</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--顶部导航------------------------------------------------------->
+<!--顶部导航-->
+<!--导航内增加隐藏类名hidden-xs--==================================改-->
+<div class="top_navbar">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="row">
+                <!-- logo和切换到移动端的按钮组 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--此处修改加了返回首页index.html-->
+                    <a href="index.html" class="navbar-brand hidden-lg hidden-md hidden-sm" >
+                        <img src="./images/logo.png" alt=""/>
+                        <!--此处修改加了个隐藏类名hidden-xs-->
+                        <img class="mb_top_tel hidden-xs" src="./images/mb_top_tel.png" alt=""/>
+                    </a>
+                    <!--此处添加了隐藏类名hidden-lg hidden-md hidden-sm-->
+                    <a href="tel:0516-87733388" class="nabar_tel hidden-lg hidden-md hidden-sm"><img src="images/mb_tel.fw.png" alt=""/></a>
+                </div>
+                <!--此处增加一个隐藏类名hidden-xs-->
+                <div class="navbar-collapse hidden-xs" >
+                    <ul class="nav navbar-nav">
+                        <li> <a href="index.html" class="nav_first">首页</a></li>
+                        <li class="dropdown dropdown_one">
+                            <a href="companySynopsis.html">走进畅显 </a>
+                            <ul class="dropdown-menu item_one">
+                                <li class="dropdown-menu_one ">
+                                    <a href="companySynopsis.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="companySynopsis.html" class="dropdown-menu_title"><h4>公司简介</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="companySynopsis_next.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="companySynopsis_next.html" class="dropdown-menu_title"><h4>人才招聘</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown_two">
+                            <a href="projectCase.html" >工程案例</a>
+                            <ul class="dropdown-menu item_two">
+                                <li class="dropdown-menu_one ">
+                                    <a href="projectCase.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="projectCase.html" class="dropdown-menu_title"><h4>设计风格</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="projectCase_next.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="projectCase_next.html" class="dropdown-menu_title"><h4>室内效果</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">设计精英</a></li>
+                        <li class="dropdown dropdown_three">
+                            <a href="companyDyanmicc.html">新闻资讯</span></a>
+                            <ul class="dropdown-menu item_three">
+                                <li class="dropdown-menu_one ">
+                                    <a href="companyDyanmicc.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="companyDyanmicc.html" class="dropdown-menu_title"><h4>公司新闻</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="companyDyanmicc_next.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="companyDyanmicc_next.html" class="dropdown-menu_title"><h4>行业动态</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown_four">
+                            <a href="projectCase.html">装修课堂</a>
+                            <ul class="dropdown-menu item_four">
+                                <li class="dropdown-menu_one ">
+                                    <a href="DetailPages.html"><img src="images/drap_down01.png" alt=""/></a>
+                                    <a href="DetailPages.html" class="dropdown-menu_title"><h4>装修知识</h4></a>
+                                </li>
+                                <li class="dropdown-menu_one">
+                                    <a href="DetailPages.html"><img src="images/drap_down02.png" alt=""/></a>
+                                    <a href="DetailPages.html" class="dropdown-menu_title"><h4>装修指南</h4></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="contactUs.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--此处增加一个隐藏类名hidden-xs--==================================改-->
+<div class="navbar_btm hidden-xs"></div>
+<!--设备切换自动刷新一次============================================增-->
+<script>
+    $("window").resize(function(){
+        var width=$(Window).width();
+        if(width>768){
+            location.reload();
+        };
+    })
+
+</script>
+<!--超小屏下顶部导航--=============================================增-->
+<div class="mb_top_navbar  hidden-sm hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <ul class="mb_nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li class="mb_hit_01">
+                    <a href="#">走进畅显</a>
+                    <ul class="mb_ulShow_01">
+                        <li><a href="companySynopsis.html">公司简介</a></li>
+                        <li><a href="companySynopsis_next.html">人才招聘</a></li>
+                    </ul>
+                </li>
+                <li class="mb_hit_02">
+                    <a href="#">工程案例</a>
+                    <ul class="mb_ulShow_02">
+                        <li><a href="projectCase.html">设计风格</a></li>
+                        <li><a href="projectCase_next.html">室内效果</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">设计精英</a></li>
+                <li class="mb_hit_03">
+                    <a href="#">新闻资讯</a>
+                    <ul class="mb_ulShow_03">
+                        <li><a href="companyDyanmicc.html">公司新闻</a></li>
+                        <li><a href="companyDyanmicc_next.html">行业动态</a></li>
+                    </ul>
+                </li>
+                <li class="mb_hit_04">
+                    <a href="#">装修课堂</a>
+                    <ul class="mb_ulShow_04">
+                        <li><a href="DetailPages.html">装修知识</a></li>
+                        <li><a href="DetailPages.html">装修指南</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactUs.html">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--超小屏下点击菜单展开-->
+<script>
+    //<!--设备切换自动刷新一次============================================增-->
+    $("window").resize(function(){
+        var width=$(Window).width();
+        if(width>768){
+            location.reload();
+        };
+    })
+    //<!--超小屏下点击菜单展开-->
+    //外层滑入滑出
+    $(".navbar-toggle").on("click",function () {
+        $(".mb_nav").slideToggle(500);
+    });
+    //子菜单滑入滑出
+    function toggle_slide(all,item){
+        all.on("click",function () {
+            item.slideToggle(500);
+        });
+    }
+    toggle_slide($(".mb_hit_01"),$(".mb_ulShow_01"));
+    toggle_slide($(".mb_hit_02"),$(".mb_ulShow_02"));
+    toggle_slide($(".mb_hit_03"),$(".mb_ulShow_03"));
+    toggle_slide($(".mb_hit_04"),$(".mb_ulShow_04"));
+</script>
+
+
+<!--三页面公共部分-除了联系我们-->
+<!--公共部分增加了隐藏类名hidden-xs=============================================改-->
+<div class="common">
+    <!--此处隐藏类名hidden-xs-->
+    <div class="top_bac hidden-xs">
+        <img src="images/page_big_02.jpg" alt=""/>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!--产品部分-->
+            <div class="min_nav">
+                <div class="min_nav_content">
+                    <a href="companyDyanmicc.html" class="min_nav_bnt tableActive">公司新闻</a>
+                    <a href="companyDyanmicc_next.html" class="min_nav_bnt">行业动态</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--主体部分-->
+<!--整个部分增加了隐藏类名hidden-xs=============================================改-->
+<div class="companyDyanmicc_son hidden-xs">
+    <div class="engin_content engin_content_li">
+        <div class="container">
+            <div class="row">
+                <!--循环部分-->
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html">
+                            <div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg Dyanmicc_pic">
+                                <img src="images/new_01.jpg" alt=""/>
+                            </div>
+                        </a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="rednew"></span>
+                                <h4 >11水是我们赖以生存的物质11水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="bluenew"></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="rednew"></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="bluenew"></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="rednew"></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="bluenew "></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="rednew"></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 companyDyanmicc_cot ">
+                    <div class="row">
+                        <a href="DetailPages.html"><div class="col-xs-3 col-sm-3 hidden-sm hidden-md hidden-lg"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <div class="col-xs-9 col-sm-9">
+                            <a href="DetailPages.html">
+                                <!--热点类名-->
+                                <span class="bluenew "></span>
+                                <h4 >水是我们赖以生存的物质</h4>
+                            </a>
+                            <a href="DetailPages.html">
+                                <div class="cont_p">
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康,
+                                    水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......
+                                    <b class="hidden-xs">2016-12-15</b>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="DetailPages.html"><div class="col-sm-3 hidden-xs"><img src="images/new_01.jpg" alt=""/></div></a>
+                        <a href="DetailPages.html"><div class="col-xs-12 companyDyanmicc_mb  hidden-sm hidden-md hidden-lg"></div></a>
+                    </div>
+                </div>
+
+                <!--分页-->
+                <div class="col-sm-12">
+                    <span class="pagina">
+                        分页
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--超小屏增加的结构===========================================================增-->
+<div class="companyDyanmicc hidden-sm hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 companyDyanmicc_cot">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 ">
+                        <a href="DetailPages.html">
+                            <img src="images/drap_down02.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-9">
+                        <a href="DetailPages.html">
+                            <span class=""></span>
+                            <h4 >1水是我们赖以生存的物质水是我们赖以生存的物质水是我们赖以生存的物质1</h4>
+                        </a>
+                        <a href="DetailPages.html">
+                            <p>水是我们赖以生存的物质水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 companyDyanmicc_mb"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 companyDyanmicc_cot">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 ">
+                        <a href="DetailPages.html">
+                            <img src="images/drap_down02.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-9">
+                        <a href="DetailPages.html">
+                            <span class=""></span>
+                            <h4 >水是我们赖以生存的物质</h4>
+                        </a>
+                        <a href="DetailPages.html">
+                            <p>水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 companyDyanmicc_mb"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 companyDyanmicc_cot">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 ">
+                        <a href="DetailPages.html">
+                            <img src="images/drap_down02.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-9">
+                        <a href="DetailPages.html">
+                            <span class=""></span>
+                            <h4 >水是我们赖以生存的物质</h4>
+                        </a>
+                        <a href="DetailPages.html">
+                            <p>水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 companyDyanmicc_mb"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 companyDyanmicc_cot">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 ">
+                        <a href="DetailPages.html">
+                            <img src="images/drap_down02.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-9">
+                        <a href="DetailPages.html">
+                            <span class=""></span>
+                            <h4 >水是我们赖以生存的物质</h4>
+                        </a>
+                        <a href="DetailPages.html">
+                            <p>水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 companyDyanmicc_mb"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 companyDyanmicc_cot">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 ">
+                        <a href="DetailPages.html">
+                            <img src="images/drap_down02.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-9">
+                        <a href="DetailPages.html">
+                            <span class=""></span>
+                            <h4 >水是我们赖以生存的物质</h4>
+                        </a>
+                        <a href="DetailPages.html">
+                            <p>水是我们赖以生存的物质，我们需要节约,同样干净的水资源有助于我们的身心健康......</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 companyDyanmicc_mb"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--版权声明-->
+<!--pc端-->
+<div class="copyright hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 pull-left">
+                <div class="top_bar_right">
+                    <a href="javascript:;"><img src="images/inico_tel.png" alt=""/></a>
+                    <span>全国统一热线：</span>
+                    <a href="tel:XXX" class="tel_btm">XXX</a>
+                </div>
+                <div class="cent_bar">
+                    <span>手机号：XXX</span>
+                    <span>电话：XXX</span>
+                    <span>邮箱：XXX</span>
+                    <span>公司地址：XXX</span>
+                </div>
+            </div>
+            <div class="col-xs-2 ">
+                <div class="pull-right"><img src="images/btm_logo.png" alt=""/></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--移动端-->
+<div class="mb_copyright hidden-lg hidden-md hidden-sm">
+    <div class="container">
+        <div class="row">
+            <div class="pull-right"><img src="images/btm_logo.png" alt=""/></div>
+            <div class=" col-xs-12 top_bar_right">
+                <a href="javascript:;"><img src="images/inico_tel.png" alt=""/></a>
+                <span>全国统一热线：</span>
+                <a href="tel:XXX" class="tel_btm">XXX</a>
+            </div>
+            <div class="col-xs-12 cent_bar">
+                <span>手机号：XXX</span>
+                <span>电话：XXX</span>
+                <span>邮箱：XXX</span>
+                <span>公司地址：XXX</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航table鼠标经过显示-->
+<script>
+    $(".dropdown_one").mouseenter(function () {
+        $(".item_one").css({
+            "display": "block"
+        })
+    })
+    $(".dropdown_one").mouseleave(function () {
+        $(".item_one").css({
+            "display": "none"
+        })
+    })
+    $(".dropdown_two").mouseenter(function () {
+        $(".item_two").css({
+            "display": "block"
+        })
+    })
+    $(".dropdown_two").mouseleave(function () {
+        $(".item_two").css({
+            "display": "none"
+        })
+    })
+    $(".dropdown_three").mouseenter(function () {
+        $(".item_three").css({
+            "display": "block"
+        })
+    })
+    $(".dropdown_three").mouseleave(function () {
+        $(".item_three").css({
+            "display": "none"
+        })
+    })
+    $(".dropdown_four").mouseenter(function () {
+        $(".item_four").css({
+            "display": "block"
+        })
+    })
+    $(".dropdown_four").mouseleave(function () {
+        $(".item_four").css({
+            "display": "none"
+        })
+    })
+</script>
+</body>
+
+</html>

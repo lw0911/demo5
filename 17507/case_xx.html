@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>案例详情页</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link type="text/css" media="all" rel="stylesheet" href="css/css.css">
+<script src="js/tb1.js" type=text/javascript></script>
+<!--导航js-->
+</head>
+<body>
+</head>
+<!--top-->
+<div class="top">
+  <div class="w_box">
+    <div class="logo"><a href="#"><img src="images/logo.jpg" /></a></div>
+    <div class="tel"><img src="images/tel.jpg" /></div>
+     <div class="mu">
+      <ul>
+        <li class="on"><a href="index.html">首页</a></li>
+        <li class="off"><a href="case.html">风格案例</a></li>
+        <li class="off"><a href="team.html">设计团队</a></li>
+        <li class="off"><a href="sale.html">热装楼盘</a></li>
+        <li class="off"><a href="index.html">施工工艺</a></li>
+        <li class="off"><a href="index.html">装饰资讯</a></li>
+        <li class="off"><a href="index.html">关于我们</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--con-->
+<div class="con">
+  <div class="w_box">
+    <div class="hang"><a href="#">首页</a> > <a href="#">风格案例</a> > <a href="#">欧式风格——【龙泉国际】</a></div>
+    <div class="box">
+      <div class="box_left">
+        <div id=preview>
+          <div class=jqzoom id=spec-n1 onClick="window.open('#')"><IMG height=500
+	src="images/img01.jpg" jqimg="images/img01.jpg" width=840> </div>
+          <div id=spec-n5>
+            <div class=control id=spec-left> <img src="images/left.gif" /> </div>
+            <div id=spec-list>
+              <ul class=list-h>
+                <li><a href="#"><img src="images/img01.jpg"></a> </li>
+                <li><a href="#"><img src="images/img01.jpg"></a> </li>
+                <li><a href="#"><img src="images/img01.jpg"> </a></li>
+                <li><a href="#"><img src="images/img02.jpg"></a> </li>
+                <li><a href="#"><img src="images/img01.jpg"></a> </li>
+                <li><a href="#"><img src="images/img02.jpg"> </a></li>
+                <li><a href="#"><img src="images/img01.jpg"> </a></li>
+                <li><a href="#"><img src="images/img02.jpg"></a> </li>
+                <li><a href="#"><img src="images/img01.jpg"></a> </li>
+                <li><a href="#"><img src="images/img02.jpg"></a> </li>
+                <li><a href="#"><img src="images/img01.jpg"></a> </li>
+                <li><a href="#"><img src="images/img02.jpg"> </a></li>
+              </ul>
+            </div>
+            <div class=control id=spec-right> <img src="images/right.gif" /> </div>
+          </div>
+        </div>
+        <!--jsku-->
+        <script src="js/tb2.js" type=text/javascript></script>
+        <script src="js/tb3.js" type=text/javascript></script>
+        <!--淘宝展示-->
+        <script type=text/javascript>
+	$(function(){	
+		$("#spec-list").jdMarquee({
+			deriction:"left",
+			width:840,
+			height:200,
+			step:2,
+			speed:4,
+			delay:10,
+			control:true,
+			_front:"#spec-right",
+			_back:"#spec-left"
+		});
+		$("#spec-list img").bind("mouseover",function(){
+			var src=$(this).attr("src");
+			$("#spec-n1 img").eq(0).attr({
+				src:src.replace("\/n5\/","\/n1\/"),
+				jqimg:src.replace("\/n5\/","\/n0\/")
+			});
+			$(this).css({
+				"border":"1px solid #ff6600",
+				"padding":"1px"
+			});
+		}).bind("mouseout",function(){
+			$(this).css({
+				"border":"1px solid #ffffff",
+				"padding":"1px"
+			});
+		});				
+	})
+	</script>
+      </div>
+      <div class="box_right">
+        <div class="box_1"><a href="#"><img src="images/rm.PNG" /></a>
+          <div class="wen_1"><span>许明明/首席设计师</span><br>
+            设计价值：100元/m2<br>
+            设计理念：设计源于生活，生活<br>
+            因设计而改变，成就空间和谐！</div>
+        </div>
+        <div class="box_2">
+          <div class="box_2_wen">
+            <div class="rrrr">户型：三居室<br>
+              费用：23.8万<br>
+              小区：龙泉国际</div>
+            <div class="llll"> 风格：欧式<br>
+              面积：125m2<br>
+              套系：全包</div>
+            <div class="wwww">案例简介：设计师摒弃了传统欧洲风格的繁复与臃肿，以简单的欧式线条、淡雅的色调、恰当好处的装饰呈现欧式风格。</div>
+          </div>
+        </div>
+        <div class="anniu"><a href="">预约设计</a></div>
+        <div class="anniu"><a href="">其他案例</a></div>
+      </div>
+    </div>
+    <!--tong-->
+    <div class="tujr">
+      <div class="yewq"><span>相关</span>推荐</div>
+      <div class="req">
+        <div class="LeftBotton" onMouseDown="ISL_GoUp()" onMouseUp="ISL_StopUp()" onMouseOut="ISL_StopUp()"></div>
+        <div class="RightBotton" onMouseDown="ISL_GoDown()" onMouseUp="ISL_StopDown()" onMouseOut="ISL_StopDown()"></div>
+      </div>
+    </div>
+    <div class="rollBox">
+      <div class="Cont" id="ISL_Cont">
+        <div class="ScrCont">
+          <div id="List1">
+            <!-- 图片列表 begin -->
+            <div class="pic"> <a href="#"><img src="images/1.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/2.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/1.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/2.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/1.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/2.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/1.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/2.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/1.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <div class="pic"> <a href="#"><img src="images/2.jpg" width="388" height="280" alt="【龙泉国际】中式风格125m2三室两厅23.9万" /><br>
+              【龙泉国际】中式风格125m2三室两厅23.9万</a></div>
+            <!-- 图片列表 end -->
+          </div>
+          <div id="List2"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">    
+ var Speed = 1; //速度(毫秒)
+var Space = 7; //每次移动(px)
+var PageWidth = 1218; //翻页宽度
+var fill = 0; //整体移位
+var MoveLock = false;
+var MoveTimeObj;
+var Comp = 0;
+var AutoPlayObj = null;
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+GetObj('ISL_Cont').scrollLeft = fill;
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+AutoPlay();
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay(){ //自动滚动
+ clearInterval(AutoPlayObj);
+ AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',3000); //间隔时间
+}
+function ISL_GoUp(){ //上翻开始
+ if(MoveLock) return;
+ clearInterval(AutoPlayObj);
+ MoveLock = true;
+ MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+}
+function ISL_StopUp(){ //上翻停止
+ clearInterval(MoveTimeObj);
+ if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){
+  Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+  CompScr();
+ }else{
+  MoveLock = false;
+ }
+ AutoPlay();
+}
+function ISL_ScrUp(){ //上翻动作
+ if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth}
+ GetObj('ISL_Cont').scrollLeft -= Space ;
+}
+function ISL_GoDown(){ //下翻
+ clearInterval(MoveTimeObj);
+ if(MoveLock) return;
+ clearInterval(AutoPlayObj);
+ MoveLock = true;
+ ISL_ScrDown();
+ MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+}
+function ISL_StopDown(){ //下翻停止
+ clearInterval(MoveTimeObj);
+ if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){
+  Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+  CompScr();
+ }else{
+  MoveLock = false;
+ }
+ AutoPlay();
+}
+function ISL_ScrDown(){ //下翻动作
+ if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+ GetObj('ISL_Cont').scrollLeft += Space ;
+}
+function CompScr(){
+ var num;
+ if(Comp == 0){MoveLock = false;return;}
+ if(Comp < 0){ //上翻
+  if(Comp < -Space){
+   Comp += Space;
+   num = Space;
+  }else{
+   num = -Comp;
+   Comp = 0;
+  }
+  GetObj('ISL_Cont').scrollLeft -= num;
+  setTimeout('CompScr()',Speed);
+ }else{ //下翻
+  if(Comp > Space){
+   Comp -= Space;
+   num = Space;
+  }else{
+   num = Comp;
+   Comp = 0;
+  }
+  GetObj('ISL_Cont').scrollLeft += num;
+  setTimeout('CompScr()',Speed);
+ }
+}
+    
+    
+    
+    
+    
+    
+    </script>
+    <!--左右结束-->
+  </div>
+</div>
+<!--foot-->
+<div class="foot">
+  <div class="w_box">
+    <div class="xiaomu">
+      <ul>
+        <li class="k1"><a href="#"></a></li>
+        <li class="k2"><a href="#"></a></li>
+        <li class="k3"><a href="#"></a></li>
+        <li class="k4"><a href="#"></a></li>
+        <li class="k5"><a href="#"></a></li>
+      </ul>
+    </div>
+    <div class="hhh">
+      <div class="f_q">
+        <div class="xdh"> <span>关于我们</span><br>
+          <a href="#">公司简介</a><br>
+          <a href="#">公司荣誉</a><br>
+          <a href="#">发展历程</a><br>
+          <a href="#">企业文化</a><br>
+          <a href="#">联系我们</a> </div>
+      </div>
+      <div class="f_q">
+        <div class="xdh"> <span>装饰资讯</span><br>
+          <a href="#">公司新闻</a><br>
+          <a href="#">行业动态</a><br>
+          <a href="#">装修知识</a> </div>
+      </div>
+      <div class="f_q">
+        <div class="xdh"> <span>风格案例</span><br>
+          <a href="#">欧式</a><br>
+          <a href="#">简约</a><br>
+          <a href="#">田园</a><br>
+          <a href="#">地中海</a><br>
+          <a href="#">中式</a> </div>
+      </div>
+      <div class="f_ri">
+        <div class="xdh2"> <span class="a_1">联系方式</span><br>
+          <span class="a_2">XXX</span> <span class="a_3">免费客户服务热线</span> </div>
+        <div class="weix"><img src="images/case1_r11_c14.jpg" /><br>
+          成都某某官方微信</div>
+      </div>
+    </div>
+    <div class="banquan">版权所有：成都某某装饰有限公司 备案号：川ICP备XXX号-2</div>
+  </div>
+</div>
+</body>
+</html>

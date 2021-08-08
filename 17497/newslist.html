@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>装修日记-某某装饰官网</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/g.css">
+    <link rel="stylesheet" href="css/s.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scrolloverflow.min.notransition.js"></script>
+    <script src="js/g.js"></script>
+    <style>
+        .chid-banner { background: url(img/diary_banner.jpg) no-repeat center center; background-size: cover; height: 400px; }
+
+        .diary { }
+        .diary .list { margin-bottom: -58px; }
+        .diary .list > li { float: left; width: 50%; padding-bottom: 58px; }
+        .diary .list > li .box { display: block; font-size: 12px; }
+        .diary .list > li .box .pic { padding-right: 20px; width: 260px; height: 180px; line-height: 180px; text-align: center; }
+        .diary .list > li .box .pic img { vertical-align: middle; }
+        .diary .list > li .box .font { max-width: 285px; }
+        .diary .list > li .box .font .p1 { color: #999; line-height: 20px; }
+        .diary .list > li .box .font .h1 { color: #333; font-weight: bold; line-height: 20px; margin: 5px 0 10px 0; height: 3em; overflow: hidden; }
+        .diary .list > li .box .font .p2 { color: #666; height: 3em; overflow: hidden; }
+        .diary .list > li .box .font .time { color: #666; line-height: 24px; padding: 10px 0 17px 0; }
+        .diary .list > li .box .font .more { color: #333; text-decoration: underline; }
+        .diary .list > li .box:hover .font .more { color: #d5231b; }
+
+        @media (max-width: 1024px) {
+
+            .diary .list { margin-left: -50px; }
+            .diary .list > li { padding-left: 50px; }
+            .diary .list > li .box .font { margin-top: 15px; float: none; text-align: center; max-width: none; }
+            .diary .list > li .box .pic { float: none; text-align: center; padding: 0; width: auto; height: auto; }
+            .diary .list > li .box .pic img { display: inline-block; }
+        }
+
+        @media (max-width: 600px) {
+            .diary .list > li { width: 100%; }
+            .diary .list > li .box .font { max-width: none; float: none; padding-left: 10px; padding-right: 10px; }
+            .diary .list > li .box .pic { float: none; padding: 0; text-align: center; }
+            .diary .list > li .box .pic img { display: inline-block; }
+            .diary .list > li .box .font .p1 { text-align: center; }
+        }
+
+        .pages { margin: 60px 0; text-align: center; clear: both; width: 100%; }
+        .pages ul { display: inline-block; }
+        .pages ul li { display: inline-block; }
+        .pages ul li a { margin: 0px 10px; padding: 5px 10px; }
+        .pages ul li a:hover { background: #d5231b; color: #fff; }
+        .pages ul li .on { background: #d5231b; color: #fff; }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/g/css/freedom.css?v1.18.12.14" />
+</head>
+<body>
+    <style>
+        .g_header .main .top_r .s_nav li .on { color: #d5231b; }
+        .g_header .main .top_r .nav .navContent li .on { background: #d5231b; color: #ffffff; }
+    </style>
+
+    <div class="g_header">
+        <div class="main clearfix">
+            <div class="top_l left clearfix">
+                <p class="logo left"><a href="index.html"><img src="img/logo.png" class="g_imgf" /></a></p>
+                <div class="zx left clearfix">
+                    <p class="left">咨询<br />热线</p>
+                    <p class="numb left"><span>:</span>400-0000-000</p>
+                </div>
+            </div>
+            <div class="top_r right clearfix">
+                <ul class="s_nav left">
+                    <li>
+                        <a href="designlist.html" class="">某某设计</a>
+                    </li>
+                    <li>
+                        <a href="caselist.html" class="">实景案例</a>
+                    </li>
+                    <li>
+                        <a href="newslist.html" class=" on">装修日记</a>
+                    </li>
+                </ul>
+                <p class="daohang right">
+                    <a href="#" class="menu"><span class="ico left"><img src="img/menu.svg" /></span><span class="right" style="padding:2px 0 0 8px;">导航</span></a>
+                </p>
+                <div class="nav">
+                    <p class="close"><a href="#"><img src="img/close.svg" style="width:20px;" /></a></p>
+                    <ul class="navContent">
+                        <li>
+                            <a href="about.html" class="">关于我们</a>
+                        </li>
+                        <li>
+                            <a href="designlist.html" class="">某某设计</a>
+                        </li>
+                        <li>
+                            <a href="caselist.html" class="">实景案例</a>
+                        </li>
+                        <li>
+                            <a href="project.html" class="">规范工程</a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="">服务流程</a>
+                        </li>
+                        <li>
+                            <a href="newslist.html" class=" on">装修日记</a>
+                        </li>
+                    </ul>
+                    <p class="search clearfix">
+                        <span class="left"><input placeholder="搜索" type="text" class="input_1"></span>
+                        <span class="right"><img src="img/ico-search.svg" style="height:20px;" /></span>
+                    </p>
+                    <p class="tubiao">
+                        <a href="#" class="m ico1"><i class="fa fa-qq"></i></a>
+                        <a href="#" class="m ico2"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="m ico3"><i class="fa fa-weixin"></i></a>
+                    </p>
+                    <p class="p1">获取更多专业装修信息，欢迎来电咨询！</p>
+                    <p class="p2">XXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="chid-banner">
+        <div class="mask">
+            <p class="h1">DECORATION DIARY</p>
+            <p class="p1">
+                <span class="line"></span>
+                <span class="font">装修日记</span>
+                <span class="line"></span>
+            </p>
+        </div>
+    </div>
+
+
+    <!--主体内容-->
+
+    <div class="g_cw">
+        <div class="page_nav">
+            <p>当前位置：<a href="index.html">首页</a> &gt; <a href="caselist.html" class="on">装修日记</a></p>
+        </div>
+        <div class="diary">
+            <ul class="list clearfix">
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10043" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/d9awcetjy4yjla0.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:09</p>
+                            <p class="h1">如何选择装修公司，怎样辨别装修公司？</p>
+                            <p class="p2">在面对市场上各种不同报价的装修公司时，业主们一般都会感到很苦</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10042" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/r3m4idly9gw5tov.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:08</p>
+                            <p class="h1">第二次装修，我坚持“加装”了这6样东西！</p>
+                            <p class="p2">要说装修，真的不容易，完成一套房子的装修就像经过一片雷区，不</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10041" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/zzdcv0xy0xjolag.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:07</p>
+                            <p class="h1">装修的时候，这5个地方不要多花钱，来自老师傅的忠告</p>
+                            <p class="p2">这些地方不仅可以省钱，而且如果你要是在这些地方多花钱的话那可</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10040" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/yytoehj06b31ac4.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:04</p>
+                            <p class="h1">舒适度没有上限，装修预算就没有上限</p>
+                            <p class="p2">过年回来疯狂充电，虽然放假才二十天，但是感觉错过了好几个世纪</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10039" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/hxc7t6vdg7a1nbx.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:02</p>
+                            <p class="h1">很多人装修的时候，寻求一种焕然一新的感觉，合理搭配不会显拥挤</p>
+                            <p class="p2">淡色的墙本来看上去就很优雅，再挂上几幅艺术画更有品位。大家在</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10038" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/34j2mxqwk8uqukk.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:02</p>
+                            <p class="h1">房屋装修验收注意事项，房屋装修验收葵花宝典！</p>
+                            <p class="p2">现在人们的工作都很繁忙，加上他们对于装修的事情也不了解，因此</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10037" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/59qi7z49jdhd1g7.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:01</p>
+                            <p class="h1">新房装修哪些钱没必要花？12个经典省钱妙招，一屋能省下一辆车</p>
+                            <p class="p2">装修是一件很麻烦的事情，一辈子可能也就装一两次，对于一些不懂</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="clearfix">
+                    <a class="box" href="newsdetail.html?_id=10036" target="_blank">
+                        <p class="pic left"><img class="g_imgf" src="img/hihm1gu8whxjq4f.jpg"></p>
+                        <div class="font left">
+                            <p class="p1">2019-02-18 &nbsp;12:00</p>
+                            <p class="h1">厨房装修中，20个超前卫的细节处理，厨房也可以这样温情</p>
+                            <p class="p2">品质来源于细节，细节又决定了家装的品质。今天小编要跟大家说的</p>
+                            <div class="time clearfix">
+                                <p class="left"><span class="left" style="padding:2px 6px 0 0;"><img src="img/ico-xinxi.svg"/ style="width:13px;"></span>202</p>
+                                <p class="left"><span class="left" style="padding:4px 6px 0 18px;"><img src="img/ico-eye.svg"/ style="width:16px;"></span>5909</p>
+                            </div>
+                            <p class="more">查看更多 +</p>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="pages">
+                <ul>
+
+
+
+
+                    <li><a href="?_ct=&_pi=1" class="on"> 1</a></li>
+
+                    <li><a href="?_ct=&_pi=2"> 2</a></li>
+
+
+
+                    <li><a href="?_ct=&_pi=2" class="next"> <em class="">下一页</em></a></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--主体内容 end-->
+
+
+
+
+    <div class="g_footer">
+        <div class="g_cw">
+            <div class="left">
+                <p class="logo"><img src="img/f_logo.png"></p>
+                <p class="p1">成都某某装饰有限公司是一家工程将客户的需求放在第一位<br />的专业家居装饰公司。</p>
+                <p class="p2"><a href="#" class="li1">实景案例</a>       <a href="#" class="li1">某某设计</a>       <a href="#" class="li1">装修日记</a></p>
+            </div>
+            <div class="right">
+                <p class="p1">装修服务热线 ：</p>
+                <p class="p2">400-0000-000</p>
+                <p class="p3">（联系我们获取更多装修资讯，某某装饰您的最佳选择）</p>
+                <p class="p4">Copyright @ 2018 某某装饰有限公司 版权所有 技术支持: <a href="javascript:void(0)" target="_blank">xxxxxxx</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!--右侧悬浮-->
+    <ul class="g_tool">
+        <li><a href="#" onclick="return false;" class="top show" title="返回顶部"><i class="ico_top"><img src="img/top.svg"></i></a></li>
+    </ul>
+    <script>if (typeof $ != 'undefined') $(function () { if (typeof _g != 'undefined') { _g.finish(function () { $(window).scroll(); }); _g.finish(); } });</script>
+    <!--右侧悬浮 end-->
+</body>
+</html>
+

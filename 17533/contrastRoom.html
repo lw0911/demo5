@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>对比选房</title>
+        <link rel="stylesheet" type="text/css" href="css/common.css"/>   
+        <link rel="stylesheet" type="text/css" href="css/contrastRoom.css"/>       
+		<link rel="stylesheet" href="css/jquery.bigautocomplete.css" type="text/css" />	
+		
+	 	<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+	    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+	    <!--[if lt IE 9]>
+	        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="top">
+			<div class="header wrap">
+				<img src="img/index/logo.png" alt="" class="logo fl"/>
+				<div class="header-position fl">
+					<div class="city">
+						<img src="img/index/dw.png" alt="" class="dwimg"/>北京
+					</div>
+					<ul class="city-list">
+						<li><a href="javascript:(0)">天津</a></li>
+						<li><a href="javascript:(0)">廊坊</a></li>
+						<li><a href="javascript:(0)">固安</a></li>
+						<li><a href="javascript:(0)">沈阳</a></li>
+						<li><a href="javascript:(0)">张家口</a></li>
+						<li><a href="javascript:(0)">北京</a></li>
+						<li><a href="javascript:(0)">秦皇岛</a></li>
+						<li><a href="javascript:(0)">固安</a></li>
+						<li><a href="javascript:(0)">沈阳</a></li>
+						<li><a href="javascript:(0)">张家口</a></li>
+					</ul>
+				</div>
+				<div class="login fr">
+					<img src="img/index/login.png" alt="" class="loginimg"/>
+					<a href="javascript:(0)">登录</a><span class="ceee">|</span><a href="javascript:(0)">立即注册</a>
+				</div>
+			</div>
+			<!--导航-->
+			<div class="nav-box">
+				<div class="navMenu">  
+				    <ul>  
+				        <li class="one-nav fast-select"><a href="#">快速选择</a>  
+				            <ul>
+				                <!--区域--> 
+				                <li class="two-nav">
+					         		<dl>
+					         			<a href="#"><dt>区域:</dt></a>
+					         			<a href="#"><dd>朝阳</dd></a>
+					         			<a href="#"><dd>海淀</dd></a>
+					         			<a href="#"><dd>大兴</dd></a>
+					         			<a href="#"><dd>通州</dd></a>
+					         			<a href="#"><dd>亦庄</dd></a>
+					         			<a href="#"><dd>昌平</dd></a>
+					         			<a href="#"><dd>丰台</dd></a>
+					         			<a href="#"><dd>顺义</dd></a>
+					         		</dl>
+				                    <ul>  
+				                        <li class="three-nav">
+							         		<dl>
+							         			<dt>区域:</dt>
+							         			<a href="#"><dd>朝阳</dd></a>
+							         			<a href="#"><dd>海淀</dd></a>
+							         			<a href="#"><dd>东城</dd></a>
+							         			<a href="#"><dd>西城</dd></a>
+							         			<a href="#"><dd>大兴</dd></a>
+							         			<a href="#"><dd>通州</dd></a>
+							         			<a href="#"><dd>亦庄</dd></a>
+							         			<a href="#"><dd>昌平</dd></a>
+							         			<a href="#"><dd>丰台</dd></a>
+							         			<a href="#"><dd>顺义</dd></a>
+							         			<a href="#"><dd>房山</dd></a>
+							         			<a href="#"><dd>密云</dd></a>
+							         			<a href="#"><dd>怀柔</dd></a>
+							         			<a href="#"><dd>石景山</dd></a>
+							         			<a href="#"><dd>门头沟</dd></a>
+							         			<a href="#"><dd>平谷</dd></a>
+							         			<a href="#"><dd>延庆县</dd></a>
+							         			<a href="#" class="around"><dd>北京周边</dd></a>
+							         			<div class="around-list">
+							         				<img src="img/index/top_icon.png" class="top-img"/>
+							         				<dl>
+							         					<a href="###"><dd>固安</dd></a>
+							         					<a href="###"><dd>涿州</dd></a>
+							         					<a href="###"><dd>大兴</dd></a>
+							         					<a href="###"><dd>通州</dd></a>
+							         					<a href="###"><dd>亦庄</dd></a>
+							         					<a href="###"><dd>昌平</dd></a>
+							         					<a href="###"><dd>涿州</dd></a>
+							         					<a href="###"><dd>怀柔</dd></a>
+									         			<a href="###"><dd>石景山</dd></a>
+									         			<a href="###"><dd>门头沟</dd></a>
+							         				</dl>
+							         			</div>
+							         		</dl>
+				                        </li>
+				                    </ul>  
+				                </li> 
+				                <!--地铁-->
+				                <li class="two-nav">
+						         		<dl>
+						         			<dt>地铁:</dt>  
+						         			<a href="#"><dd>1号线</dd></a>
+						         			<a href="#"><dd>2号线</dd></a>
+						         			<a href="#"><dd>4号线</dd></a>
+						         			<a href="#"><dd>5号线</dd></a>
+						         			<a href="#"><dd>6号线</dd></a>
+						         			<a href="#"><dd>7号线</dd></a>
+						         		</dl>
+				                    <ul>  
+				                        <li class="three-nav">
+							         		<dl>
+							         			<dt>地铁:</dt>
+							         			<a href="#"><dd>1号线</dd></a>
+							         			<a href="#"><dd>2号线</dd></a>
+							         			<a href="#"><dd>4号线</dd></a>
+							         			<a href="#"><dd>5号线</dd></a>
+							         			<a href="#"><dd>6号线</dd></a>
+							         			<a href="#"><dd>7号线</dd></a>
+							         		</dl>
+				                        </li>  
+				                    </ul>  
+				                </li> 
+				                <!--价格-->
+				                <li class="two-nav">
+					         		<dl>
+					         			<dt>价格:</dt>
+					         			<a href="#"><dd>1万元以下</dd></a>
+					         			<a href="#"><dd>1-1.5万元</dd></a>
+					         			<a href="#"><dd>1.5-2万元</dd></a>
+					         			<a href="#"><dd>2-2.5万元</dd></a>
+					         		</dl>
+				                    <ul>  
+				                        <li class="three-nav">
+							         		<dl>
+							         			<dt>价格:</dt>
+							         			<a href="#"><dd>1万元以下</dd></a>
+							         			<a href="#"><dd>1-1.5万元</dd></a>
+							         			<a href="#"><dd>1.5-2万元</dd></a>
+							         			<a href="#"><dd>2-2.5万元</dd></a>
+							         		</dl>
+				                        </li> 
+				                    </ul>  
+				                </li>  
+				                <!--面积-->
+				                <li class="two-nav">
+				                	
+						         		<dl>
+						         			<dt>面积:</dt>
+						         			<a href="#"><dd>50㎡</dd></a>
+						         			<a href="#"><dd>50-70㎡</dd></a>
+						         			<a href="#"><dd>70-90㎡</dd></a>
+						         			<a href="#"><dd>90-110㎡</dd></a>
+						         		</dl>
+				                    <ul>  
+				                        <li class="three-nav">
+							         		<dl>
+							         			<dt>面积:</dt>
+							         			<a href="#"><dd>50㎡</dd></a>
+							         			<a href="#"><dd>50-70㎡</dd></a>
+							         			<a href="#"><dd>70-90㎡</dd></a>
+							         			<a href="#"><dd>90-110㎡</dd></a>
+							         		</dl>
+				                        </li> 
+				                    </ul>  
+				                </li>  
+				        		<!--房屋类型-->
+				                <li class="two-nav">
+					         		<dl>
+					         			<dt>房屋类型:</dt>
+					         			<a href="#"><dd>公寓</dd></a>  
+					         			<a href="#"><dd>住宅</dd></a>  
+					         			<a href="#"><dd>别墅</dd></a>  
+					         			<a href="#"><dd>商业</dd></a>  
+					         			<a href="#"><dd>商铺</dd></a>  
+					         			<a href="#"><dd>写字楼</dd></a>  
+					         			<a href="#"><dd>产业园</dd></a>  
+					         		</dl>
+				                    <ul>  
+				                        <li class="three-nav">
+							         		<dl>
+							         			<dt>房屋类型:</dt>
+							         			<a href="#"><dd>公寓</dd></a>
+							         			<a href="#"><dd>住宅</dd></a>
+							         			<a href="#"><dd>别墅</dd></a>
+							         			<a href="#"><dd>商业</dd></a>
+							         			<a href="#"><dd>商铺</dd></a>
+							         			<a href="#"><dd>写字楼</dd></a>
+							         			<a href="#"><dd>产业园</dd></a>
+							         		</dl>
+				                        </li>   
+				                    </ul>  
+				                </li>  
+				                <!--户型-->
+				                <li class="two-nav">
+					         		<dl>
+					         			<dt>户型:</dt>
+					         			<a href="#"><dd>一居</dd></a>  
+					         			<a href="#"><dd>二居</dd></a>  
+					         			<a href="#"><dd>三居</dd></a>  
+					         			<a href="#"><dd>四居</dd></a>  
+					         			<a href="#"><dd>五居</dd></a>  
+					         			<a href="#"><dd>五居以上</dd></a>  
+					         			<a href="#"><dd>其他</dd></a>  
+					         		</dl>
+				                    <ul>  
+				                        <li class="three-nav">
+							         		<dl>
+							         			<dt>户型:</dt>
+							         			<a href="#"><dd>一居</dd></a>  
+							         			<a href="#"><dd>二居</dd></a>  
+							         			<a href="#"><dd>三居</dd></a>  
+							         			<a href="#"><dd>四居</dd></a>  
+							         			<a href="#"><dd>五居</dd></a>  
+							         			<a href="#"><dd>五居以上</dd></a>  
+							         			<a href="#"><dd>其他</dd></a>  
+							         		</dl>
+				                        </li> 
+				                    </ul>  
+				                </li> 
+				            </ul>  
+				        </li>  
+				        <li class="one-nav alone"><a href="index.html">首页</a><span>|</span></li> 
+				        <li class="one-nav alone"><a href="newHouse.html">新房</a><span>|</span></li>   
+				        <li class="one-nav alone"><a href="findHouse.html">地图找房</a><span>|</span></li> 
+				        <li class="one-nav alone"><a href="moneyCity.html">楼币商城</a><span>|</span></li>  
+				        <li class="one-nav alone"><a href="buyHouseClass.html">购房讲堂</a><span>|</span></li>  
+				        <li class="one-nav alone"><a href="activity.html">特惠活动</a></li>   
+				    </ul>  
+				</div> 
+			</div>
+		</div>
+		<div class="wrap">
+			<!--对比选房-->
+			<div class="contrast-top">
+				<div class="fl title">对比选房</div>
+				<!--检索-->
+				<div class="search-box fl">
+			 		<form action="" method="post" class="search">
+			 			<input type="text" name="search" placeholder="输入楼盘名称" class="text-input" id="tt" />
+			 			<input type="submit" value="" class="subBtn"/>
+			 		</form>
+			 		<div class="auto_hidden" id="auto"><!--自动完成 DIV--></div>
+			 	</div>
+			 	<!--返回-->
+			 	<div class="fr backHome">
+			 		<a href="###"><img src="img/member/back.png"/>返回</a>
+			 	</div>
+			</div>
+			<!--选房列表-->
+			<div class="roomList">
+				<ul>
+					<li>
+						<div class="operate-div">
+							<span class="fl number">1</span>
+							<a class="fr delete" href="###">×删除</a>
+							<a class="fr move" href="###"><<移至最前</a>
+						</div>
+						<div class="list-con">
+							<div class="imgDiv">
+								<img src="img/index/banner.png" alt="" />
+							</div>
+							<div class="text">
+								<div class="focus-name">
+									<span class="fl name">领秀慧谷</span>
+									<span class="fr area">昌平区</span>
+								</div>
+								<div class="tehui">
+									<img src="img/contrast/youhui.png"/>特惠：享购房补贴3万
+								</div>
+								<div class="focus-info">
+									<span class="cb31a1a">￥:68000</span>
+								</div>
+								<div class="focus-type">
+									<span>小户型</span><span>地铁沿线</span>
+								</div>
+								<ul class="textList">
+									<li>项目地址：京港澳高速阎村出口西行约1.5公里</li>
+									<li>物业类型：花园洋房,叠拼</li>
+									<li>周边配套：</li>
+									<li>项目特色：品牌地产</li>
+									<li>建筑类型：板楼 多层 小高层 高层</li>
+									<li>装修状况：毛坯</li>
+									<li>环线位置：</li>
+									<li>所属商圈：</li>
+									<li>容积率：1.80</li>
+									<li>绿化率：30%</li>
+									<li>开盘时间：首期已于2017年6月29日开盘顺销</li>
+									<li>交房时间：首期预计2019年9月30日交房</li>
+									<li>物业费：3.28元/㎡·月</li>
+									<li>物业公司：北京天恒置业集团有限公司</li>
+									<li>开发商：北京恒乐置业有限公司</li>
+									<li>产权年限：70年</li>
+									<li class="last">交通状况：项目北侧为京周路、南侧为府西预案小区、西侧为紫码路、东侧为紫园北路，西北侧是地铁燕房线阎村站 周边公共交通：</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="operate-div">
+							<span class="fl number">2</span>
+							<a class="fr delete" href="###">×删除</a>
+							<a class="fr move" href="###"><<移至最前</a>
+						</div>
+						<div class="list-con">
+							<div class="imgDiv">
+								<img src="img/index/banner.png" alt="" />
+							</div>
+							<div class="text">
+								<div class="focus-name">
+									<span class="fl name">领秀慧谷</span>
+									<span class="fr area">昌平区</span>
+								</div>
+								<div class="tehui">
+									<img src="img/contrast/youhui.png"/>特惠：享购房补贴3万
+								</div>
+								<div class="focus-info">
+									<span class="cb31a1a">￥:68000</span>
+								</div>
+								<div class="focus-type">
+									<span>小户型</span><span>地铁沿线</span>
+								</div>
+								<ul class="textList">
+									<li>项目地址：京港澳高速阎村出口西行约1.5公里</li>
+									<li>物业类型：花园洋房,叠拼</li>
+									<li>周边配套：</li>
+									<li>项目特色：品牌地产</li>
+									<li>建筑类型：板楼 多层 小高层 高层</li>
+									<li>装修状况：毛坯</li>
+									<li>环线位置：</li>
+									<li>所属商圈：</li>
+									<li>容积率：1.80</li>
+									<li>绿化率：30%</li>
+									<li>开盘时间：首期已于2017年6月29日开盘顺销</li>
+									<li>交房时间：首期预计2019年9月30日交房</li>
+									<li>物业费：3.28元/㎡·月</li>
+									<li>物业公司：北京天恒置业集团有限公司</li>
+									<li>开发商：北京恒乐置业有限公司</li>
+									<li>产权年限：70年</li>
+									<li class="last">交通状况：项目北侧为京周路、南侧为府西预案小区、西侧为紫码路、东侧为紫园北路，西北侧是地铁燕房线阎村站 周边公共交通：</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="operate-div">
+							<span class="fl number">3</span>
+							<a class="fr delete" href="###">×删除</a>
+							<a class="fr move" href="###"><<移至最前</a>
+						</div>
+						<div class="list-con">
+							<div class="imgDiv">
+								<img src="img/index/banner.png" alt="" />
+							</div>
+							<div class="text">
+								<div class="focus-name">
+									<span class="fl name">领秀慧谷</span>
+									<span class="fr area">昌平区</span>
+								</div>
+								<div class="tehui">
+									<img src="img/contrast/youhui.png"/>特惠：享购房补贴3万
+								</div>
+								<div class="focus-info">
+									<span class="cb31a1a">￥:68000</span>
+								</div>
+								<div class="focus-type">
+									<span>小户型</span><span>地铁沿线</span>
+								</div>
+								<ul class="textList">
+									<li>项目地址：京港澳高速阎村出口西行约1.5公里</li>
+									<li>物业类型：花园洋房,叠拼</li>
+									<li>周边配套：</li>
+									<li>项目特色：品牌地产</li>
+									<li>建筑类型：板楼 多层 小高层 高层</li>
+									<li>装修状况：毛坯</li>
+									<li>环线位置：</li>
+									<li>所属商圈：</li>
+									<li>容积率：1.80</li>
+									<li>绿化率：30%</li>
+									<li>开盘时间：首期已于2017年6月29日开盘顺销</li>
+									<li>交房时间：首期预计2019年9月30日交房</li>
+									<li>物业费：3.28元/㎡·月</li>
+									<li>物业公司：北京天恒置业集团有限公司</li>
+									<li>开发商：北京恒乐置业有限公司</li>
+									<li>产权年限：70年</li>
+									<li class="last">交通状况：项目北侧为京周路、南侧为府西预案小区、西侧为紫码路、东侧为紫园北路，西北侧是地铁燕房线阎村站 周边公共交通：</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="operate-div">
+							<span class="fl number">4</span>
+							<a class="fr delete" href="###">×删除</a>
+							<a class="fr move" href="###"><<移至最前</a>
+						</div>
+						<div class="list-con">
+							<div class="imgDiv">
+								<img src="img/index/banner.png" alt="" />
+							</div>
+							<div class="text">
+								<div class="focus-name">
+									<span class="fl name">领秀慧谷</span>
+									<span class="fr area">昌平区</span>
+								</div>
+								<div class="tehui">
+									<img src="img/contrast/youhui.png"/>特惠：享购房补贴3万
+								</div>
+								<div class="focus-info">
+									<span class="cb31a1a">￥:68000</span>
+								</div>
+								<div class="focus-type">
+									<span>小户型</span><span>地铁沿线</span>
+								</div>
+								<ul class="textList">
+									<li>项目地址：京港澳高速阎村出口西行约1.5公里</li>
+									<li>物业类型：花园洋房,叠拼</li>
+									<li>周边配套：</li>
+									<li>项目特色：品牌地产</li>
+									<li>建筑类型：板楼 多层 小高层 高层</li>
+									<li>装修状况：毛坯</li>
+									<li>环线位置：</li>
+									<li>所属商圈：</li>
+									<li>容积率：1.80</li>
+									<li>绿化率：30%</li>
+									<li>开盘时间：首期已于2017年6月29日开盘顺销</li>
+									<li>交房时间：首期预计2019年9月30日交房</li>
+									<li>物业费：3.28元/㎡·月</li>
+									<li>物业公司：北京天恒置业集团有限公司</li>
+									<li>开发商：北京恒乐置业有限公司</li>
+									<li>产权年限：70年</li>
+									<li class="last">交通状况：项目北侧为京周路、南侧为府西预案小区、西侧为紫码路、东侧为紫园北路，西北侧是地铁燕房线阎村站 周边公共交通：</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="wrap">
+				<ul>
+					<li><a href="##">新房直达:</a></li>
+					<li><a href="##">朝阳区新房</a></li>
+					<li><a href="##">海淀区新房</a></li>
+					<li><a href="##">大兴区新房</a></li>
+					<li><a href="##">通州区新房</a></li>
+					<li><a href="##">亦庄新房</a></li>
+					<li><a href="##">昌平区新房</a></li>
+					<li><a href="##">丰台区新房</a></li>
+					<li><a href="##">顺义区新房</a></li>
+					<li><a href="##">房山区新房</a></li>
+					<li><a href="##">石景山新房</a></li>
+					<li><a href="##">西城区新房</a></li>
+					<li><a href="##">东城区新房</a></li>
+					<li><a href="##">门头沟新房</a></li>
+					<li><a href="##">怀柔区新房</a></li>
+					<li><a href="##">平谷区新房</a></li>
+					<li><a href="##">延庆县新房</a></li>
+				</ul>                                    
+				<hr />
+				<ul>
+					<li>更多地区:</li>
+					<li><a href="##">保定</a></li>
+					<li><a href="##">张家口</a></li>
+					<li><a href="##">廊坊</a></li>
+					<li><a href="##">唐山</a></li>
+					<li><a href="##">常熟</a></li>
+					<li><a href="##">昆山</a></li>
+					<li><a href="##">沈阳</a></li>
+					<li><a href="##">南京</a></li>
+					<li><a href="##">大理</a></li>
+					<li><a href="##">昆明</a></li>
+					<li><a href="##">苏州</a></li>
+					<li><a href="##">常州</a></li>
+					<li><a href="##">江阴</a></li>
+					<li><a href="##">无锡</a></li>
+					<li><a href="##">上海</a></li>
+					<li><a href="##">天津</a></li>
+				</ul>                      
+			</div>
+			<div class="other">
+				<div class="wrap">
+					<ul class="oth-list1">
+						<li><a href="##">底图找房</a></li>
+						<li><a href="##">新房</a></li>
+						<li><a href="##">品牌地产</a></li>
+						<li><a href="##">楼货商城</a></li>
+						<li><a href="##">购房讲堂</a></li>
+					</ul>
+					<hr />
+					<div class="otherLink">
+						<a href="###"><img src="img/index/other1.png" alt="" /></a>
+						<a href="###"><img src="img/index/other2.png" alt="" /></a>
+						<a href="###"><img src="img/index/other3.png" alt="" /></a>
+						<a href="###"><img src="img/index/other4.png" alt="" /></a>
+						<a href="###"><img src="img/index/other5.png" alt="" /></a>
+					</div>
+					<div class="link">
+						<span>友情链接</span>
+						<ul> 
+							<li><a href="##">行宫园四里</a></li>
+							<li><a href="##">嘉瑞通小区行</a></li>
+							<li><a href="##">宫园二里行</a></li>
+							<li><a href="##">宫园四里</a></li>
+							<li><a href="##">嘉瑞通小区行</a></li>
+							<li><a href="##">宫园二里</a></li>
+							<li><a href="##">行宫园四里</a></li>
+							<li><a href="##">嘉瑞通小区行</a></li>
+							<li><a href="##">宫园二里行</a></li>
+							<li><a href="##">宫园四里</a></li>
+							<li><a href="##">宫园四里</a></li>
+							<li><a href="##">嘉瑞通小区行</a></li>
+							<li><a href="##">宫园二里</a></li>
+							<li><a href="##">行宫园四里</a></li>
+							<li><a href="##">嘉瑞通小区行</a></li>
+							<li><a href="##">宫园二里行</a></li>
+							<li><a href="##">安房产网</a></li>
+							<li><a href="##">沈阳房产网</a></li>
+							<li><a href="##">商丘房产网</a></li>
+							<li><a href="##">西安房地产门户</a></li>
+							<li><a href="##">石家庄装修网</a></li>
+							<li><a href="##">盐城房产网</a></li>
+							<li><a href="##">惠州房产网</a></li>
+							<li><a href="##">鱼台房产网</a></li>
+							<li><a href="##">宿州房产网</a></li>
+							<li><a href="##">中华写字楼网</a></li>
+							<li><a href="##">金色家园网</a></li>
+							<li><a href="##">厦门租房</a></li>
+							<li><a href="##">家居网</a></li>
+							<li><a href="##">橱柜</a></li>
+						</ul>
+					</div>
+					<hr/>
+					<span class="footerNum">Copyright © 2020 北京XXX互联网科技发展有限公司 版权所有      京ICP备XXX号</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--<script src="js/jquery1.42.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		  //移至最前
+		  var $move = $(".operate-div .move");
+		  $move.click(function(){
+			var $li = $(this).parent().parent("li");
+		    if($li.index()==0){
+			   layer.alert("已经移至最前！",{
+			   		title:false,
+			   		closeBtn:false,
+			   });
+			   return false;
+		    }else{
+			  $li.fadeOut().fadeIn();
+			  $(".roomList>ul").prepend($li);
+		    }
+		  });
+		  //删除
+		var $move = $(".operate-div .delete");
+		$move.click(function(){
+			var $li = $(this).parent().parent("li");
+			if($(".roomList>ul>li").length==1){
+			  	layer.alert("已是最后一个！", {
+				title: false,
+				closeBtn: false,
+				});
+				return false;
+			}else {
+				$li.remove();
+			}
+		});
+		$(document).ready(function () {  
+		    (function(){  
+		        var insertOptions = function(data, id) {  
+		            var result = new Array();  
+		            $.each(data, function(i, item){  
+		                result.push(item);  
+		            });  
+		            $('#' + id).autocomplete({  
+		                source: result  
+		            });  
+		        }  
+		  
+		        $('.myname').keyup(function(){  
+		            var right_id = $(this).attr('id');  
+		            var url = "http://...";  
+		            $.get(url, function(data) {  
+		                insertOptions(data, right_id);  
+		            }, "json");  
+		        });  
+		  
+		    })();  
+		});  
+
+</script>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bigautocomplete.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#tt").bigAutocomplete({
+				width:288,
+				data:[
+					{title:"领秀慧谷",result:{ff:"qq"}},
+					{title:"领秀慧谷"},
+					{title:"金樾和著"},
+					{title:"金樾和著"},
+					{title:"金樾和著"},
+					{title:"金樾和著"}
+				],
+				callback:function(data){
+//				alert(data.title);
+			}});
+		})
+	</script>
+</html>

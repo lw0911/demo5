@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文章列表-项目融资平台</title>
+<meta name="keywords" content="关键词,关键词">
+<meta name="description" content="这是站点描述!">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/html5.js"></script>
+<script>
+$(document).ready(function(){
+	//如果通过链接处理，则可删除
+	$(".art_li_tab dd").eq(0).show().siblings(".art_li_tab dd").hide();
+	$(".art_li_tab dt a").eq(0).addClass("currStyle");
+	$(".art_li_tab dt a").click(function(){
+	var liindex = $(".art_li_tab dt a").index(this);
+	$(this).addClass("currStyle").siblings().removeClass("currStyle");
+	$(".art_li_tab dd").eq(liindex).fadeIn(150).siblings(".art_li_tab dd").hide();
+	});
+
+	});
+</script>
+</head>
+<body>
+<header class="public_header">
+       <aside>
+              <div class="wrap">
+              <ul class="fl top_log">
+              <li>
+              <a href="login.html" title="登录" class="txtcol">亲，请登录</a>
+              <a href="register.html" title="注册">免费注册</a>
+              </li>
+              </ul>
+              <ul class="fr">
+              <li><a href="user_center.html" title="用户中心">用户中心</a></li>
+              <li><a href="my_financing.html" title="我的融资">我的融资</a></li>
+              <li><a href="my_investment.html" title="我的投资">我的投资</a></li>
+              <li><a href="article_list.html" title="帮助中心" class="help_icon iconfont">帮助中心</a></li>
+              <li><a href="tel:XXX" title="服务热线：XXX" class="tel_icon iconfont">服务热线：XXX</a></li>
+              </ul>
+              </div>
+       </aside>
+       <section class="wrap">
+              <h1><a><img src="images/logo.png" title="站点名称"/></a></h1>
+              <form action="#" class="search_area">
+              <input type="text" placeholder="查找融资项目..." class="text_box"/>
+              <input type="submit" value="搜索" class="sub_btn"/>
+              </form>
+       </section>
+       </header>
+       <nav class="menu">
+       <ul class="wrap">
+              <li><a href="index.html" title="首页">首页</a></li>
+              <li><a href="create_financing.html" title="项目融资">创建融资</a></li>
+              
+              <li><a href="investor.html" title="投资人">投资人</a></li>
+              <li><a href="investor.html" title="投资管理公">投资管理公司</a></li>
+         
+              <li><a href="article_list.html" title="投资资讯">投资资讯</a></li>
+         
+              <li><a href="read_article.html" title="关于我们">关于我们</a></li>
+       </ul>
+       </nav>
+       <script>
+       $(document).ready(function(){
+              //current nav bg
+              $("nav li a").each(function(){
+                            if($(this).attr('href') == window.location.pathname){
+                            $(this).css('background-color','#f52b00');
+                            }
+                     });
+              });
+       </script>
+<aside class="wrap nav_link overflow">
+ <ul>
+  <li class="i_link_icon next_icon"><a href="index.html">首页</a></li>
+  <li class="next_icon"><a href="article_list.html">投资资讯</a></li>
+ </ul>
+</aside>
+<section class="wrap overflow">
+ <div class="wide_area fl" style="margin-right:30px;width:900px">
+   <dl class="art_li_tab">
+    <dt>
+     <a>最新资讯</a>
+     <a>媒体报道</a>
+     <a>电商专区</a>
+     <a>影视知识库</a>
+    </dt>
+    <!--tab content-->
+    <dd>
+     <ul>
+      <!--article list cycle-->
+      <li>
+       <h2><a href="read_article.html">探问众筹新契机 大家投CEO李群林论道北大</a></h2>
+       <p>
+【最新资讯】在大众创新和万众创业的氛围下，众筹作为一种新型的融资模式越来越受到筹资者和投资者的青睐。11月15日举行的“北京大学互联网金融双周论坛（第七期）”，就将关注话题聚焦在了“众筹”，作为国内早期开展私募股权融资业务的平台之一，大家投应邀出席。平台创始人兼CEO李群林就社会当前关注的“股权众筹”热门话题，与行业专家学者进行了探讨...
+       </p>
+       <aside>
+        <span>发布时间：<time>2015-11-27</time></span>
+        <span>来源：人人投</span>
+       </aside>
+      </li>
+      <li>
+       <h2><a href="read_article.html">探问众筹新契机 大家投CEO李群林论道北大</a></h2>
+       <p>
+【最新资讯】在大众创新和万众创业的氛围下，众筹作为一种新型的融资模式越来越受到筹资者和投资者的青睐。11月15日举行的“北京大学互联网金融双周论坛（第七期）”，就将关注话题聚焦在了“众筹”，作为国内早期开展私募股权融资业务的平台之一，大家投应邀出席。平台创始人兼CEO李群林就社会当前关注的“股权众筹”热门话题，与行业专家学者进行了探讨...
+       </p>
+       <aside>
+        <span>发布时间：<time>2015-11-27</time></span>
+        <span>来源：人人投</span>
+       </aside>
+      </li>
+     </ul>
+    </dd>
+    <!--tab content-->
+    <dd>
+     <ul>
+      <!--article list cycle-->
+      <li>
+       <h2><a href="read_article.html">探问众筹新契机 大家投CEO李群林论道北大</a></h2>
+       <p>
+【媒体报道】在大众创新和万众创业的氛围下，众筹作为一种新型的融资模式越来越受到筹资者和投资者的青睐。11月15日举行的“北京大学互联网金融双周论坛（第七期）”，就将关注话题聚焦在了“众筹”，作为国内早期开展私募股权融资业务的平台之一，大家投应邀出席。平台创始人兼CEO李群林就社会当前关注的“股权众筹”热门话题，与行业专家学者进行了探讨...
+       </p>
+       <aside>
+        <span>发布时间：<time>2015-11-27</time></span>
+        <span>来源：人人投</span>
+       </aside>
+      </li>
+     </ul>
+    </dd>
+    <!--tab content-->
+    <dd>
+     <ul>
+      <!--article list cycle-->
+      <li>
+       <h2><a href="read_article.html">探问众筹新契机 大家投CEO李群林论道北大</a></h2>
+       <p>
+【电商专区】在大众创新和万众创业的氛围下，众筹作为一种新型的融资模式越来越受到筹资者和投资者的青睐。11月15日举行的“北京大学互联网金融双周论坛（第七期）”，就将关注话题聚焦在了“众筹”，作为国内早期开展私募股权融资业务的平台之一，大家投应邀出席。平台创始人兼CEO李群林就社会当前关注的“股权众筹”热门话题，与行业专家学者进行了探讨...
+       </p>
+       <aside>
+        <span>发布时间：<time>2015-11-27</time></span>
+        <span>来源：人人投</span>
+       </aside>
+      </li>
+     </ul>
+    </dd>
+    <!--tab content-->
+    <dd>
+     <ul>
+      <!--article list cycle-->
+      <li>
+       <h2><a href="read_article.html">探问众筹新契机 大家投CEO李群林论道北大</a></h2>
+       <p>
+【影视只是】在大众创新和万众创业的氛围下，众筹作为一种新型的融资模式越来越受到筹资者和投资者的青睐。11月15日举行的“北京大学互联网金融双周论坛（第七期）”，就将关注话题聚焦在了“众筹”，作为国内早期开展私募股权融资业务的平台之一，大家投应邀出席。平台创始人兼CEO李群林就社会当前关注的“股权众筹”热门话题，与行业专家学者进行了探讨...
+       </p>
+       <aside>
+        <span>发布时间：<time>2015-11-27</time></span>
+        <span>来源：人人投</span>
+       </aside>
+      </li>
+     </ul>
+    </dd>
+
+   </dl>
+ </div>
+ <aside class="narrow_area fr">
+  <dl class="asd_imgtxt_twocol">
+   <dt>活跃投资人</dt>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/huiyun001.png"/></span>
+     <span>马云</span>
+    </a>
+   </dd>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/huiyuan002.png"/></span>
+     <span>李彦宏</span>
+    </a>
+   </dd>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/huiyuan003.png"/></span>
+     <span>马化腾</span>
+    </a>
+   </dd>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/huiyun001.png"/></span>
+     <span>马云</span>
+    </a>
+   </dd>
+  </dl>
+  <dl class="asd_imgtxt_twocol">
+   <dt>活跃投资公司</dt>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/hzhb005.jpg"/></span>
+     <span>中国农业银行</span>
+    </a>
+   </dd>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/hzhb006.jpg"/></span>
+     <span>中国建设银行</span>
+    </a>
+   </dd>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/hzhb004.jpg"/></span>
+     <span>中国银行</span>
+    </a>
+   </dd>
+   <dd>
+    <a>
+     <span class="thumbnail"><img src="upload/hzhb001.jpg"/></span>
+     <span>腾讯</span>
+    </a>
+   </dd>
+  </dl>
+ </aside>
+</section>
+<footer>
+              <ul class="wrap help">
+               <li>
+                <dl>
+                 <dt>关于项目融资平台</dt>
+                 <dd><a href="read_article.html">公司简介</a></dd>
+                 <dd><a href="read_article.html">联系方式</a></dd>
+                 <dd><a href="read_article.html">加入我们</a></dd>
+                </dl>
+               </li>
+               <li>
+                <dl>
+                 <dt>新手帮助</dt>
+                 <dd><a href="read_article.html">新手指南</a></dd>
+                 <dd><a href="read_article.html">常见问题</a></dd>
+                 <dd><a href="read_article.html">注册协议</a></dd>
+                </dl>
+               </li>
+               <li>
+                <dl>
+                 <dt>用户帮助</dt>
+                 <dd><a href="read_article.html">如何融资</a></dd>
+                 <dd><a href="read_article.html">如何投资</a></dd>
+                 <dd><a href="read_article.html">提现充值</a></dd>
+                </dl>
+               </li>
+               <li>
+                <dl>
+                 <dt>关于项目融资平台</dt>
+                 <dd><a href="read_article.html">公司简介</a></dd>
+                 <dd><a href="read_article.html">联系方式</a></dd>
+                 <dd><a href="read_article.html">加入我们</a></dd>
+                </dl>
+               </li>
+               <li>
+                <dl>
+                 <dt>关于项目融资平台</dt>
+                 <dd><a href="read_article.html">公司简介</a></dd>
+                 <dd><a href="read_article.html">联系方式</a></dd>
+                 <dd><a href="read_article.html">加入我们</a></dd>
+                </dl>
+               </li>
+              </ul>
+              <p class="wrap btm_infor">
+               Copyright (C) 2020, All Rights Reserved<br/>
+               互联网药品信息服务资格证编号：(京)-非经营性-XXX 京公网安备XXX号<br/>
+               出版物经营许可证 新出发京批字第直0673号
+              </p>
+             </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+document.writeln('<div class="bannerSlide relative">');
+document.writeln('<a href="javascript:void(0)" class="preBtn absolute bt"><i></i></a> <a href="javascript:void(0)" class="nextBtn absolute bt"><i></i></a>');
+document.writeln('<div class="focus absolute"></div>');
+document.writeln('<div class="slideBox">');
+document.writeln('<ul>');
+document.writeln('  <li><a href="/ZT/wzxqjg/" ><img src="images/banner7.jpg" width="1920" height="500"/></a></li>');
+document.writeln('  <li><a href="javascript:void(0);" onClick="openZoosUrl();" ><img src="images/banner2.jpg" width="1920" height="500"/></a></li>');
+document.writeln('  <li><a href="javascript:void(0);" onClick="openZoosUrl();" ><img src="images/banner9.jpg" width="1920" height="500"/></a></li>');
+document.writeln('  <li><a href="/zt/zxfqhd/" ><img src="images/banner6.jpg" width="1920" height="500"/></a></li>');
+document.writeln('  <li><a href="/zt/2015shqb/" ><img src="images/banner3.jpg" width="1920" height="500"/></a></li>');
+document.writeln('  <li><a href="/zt/shmx/" >><img src="images/banner4.jpg" width="1920" height="500"/></a></li>');
+document.writeln('  <li><a href="/zt/2015jdmy/" ><img src="images/banner1.jpg" width="1920" height="500"/></a></li>');
+document.writeln('</ul>');
+document.writeln('</div>');
+document.writeln('</div>');

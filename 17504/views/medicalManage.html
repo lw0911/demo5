@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="powerd by ylzlk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/auxiliary.css" />
+    <title>慢病管理平台</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+       <div class="navbar-inner">
+         <div class="container">
+             <div class="navbar-header">
+               <!-- <a class="navbar-brand" style="line-height: 60px;">
+                  厦门医联康信息技术有限公司
+               </a> -->
+             </div>
+             <div class="blur"></div>
+             <div class="collapse navbar-collapse">
+                 <ul class="nav navbar-nav navbar-right">
+                     <li><a href="./home.html ">首页</a></li>
+                     <li><a href="#" class="active">慢病管理服务</a></li>
+                     <li><a href="./knowBase.html">慢病知识库</a></li>
+                     <li><a href="./auxiliary.html">慢病辅助诊疗</a></li>
+                     <li><a href="./monitor.html">慢病监测分析</a></li>
+                 </ul>
+             </div>
+         </div>
+       </div>
+     </nav>
+     <main>
+       <div class="container">
+         <div class="img-container">
+             <img  src="../images/header-img.png" class="header-img" />
+         </div>
+         <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">慢病监测分析</a></li>
+            <li class="active">慢病管理服务</li>
+          </ol>
+
+          <div class="panel panel-info">
+            <div class="panel-heading">慢病管理</div>
+            <div class="panel-body">
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;">血压监测</div>
+                <div style="height:340px;">
+                  <div style="height:340px;width:70%;display:inline-block;">
+                    <div id="lineChartPressure" style="height:300px;width:100%;margin-top:40px;"></div>
+                  </div>
+                  <div style="width:29%;display:inline-block;">
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                        <div>
+                          <img src="../images/greenGXY.png"  style="width:40px;height:40px" />
+                          <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">5486人</div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">93.5%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">1.8%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                      </div>
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                         <img src="../images/yellowGXY.png"  style="width:40px;height:40px" />
+                         <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">286人</div>
+                         <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">4.8%</div>
+                         <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">4.8%</div>
+                         <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                         <img src="../images/redGXY.png"  style="width:40px;height:40px" />
+                         <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">196人</div>
+                         <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">1.9%</div>
+                         <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">1.7%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;">血糖监测</div>
+                <div style="height:340px;">
+                  <div style="height:340px;width:70%;display:inline-block;">
+                    <div id="lineChartSugar" style="height:300px;width:100%;margin-top:40px;"></div>
+                  </div>
+                  <div style="width:29%;display:inline-block;">
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                        <div>
+                          <img src="../images/greenTNB.png"  style="width:40px;height:40px" />
+                          <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">2661人</div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">91.9%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;"overflow: hidden;>0.7%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+
+                      </div>
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                         <img src="../images/yellowTNB.png"  style="width:40px;height:40px" />
+                         <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">158人</div>
+                         <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">5.4%</div>
+                         <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">1.1%</div>
+                         <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                         <img src="../images/redTNB.png"  style="width:40px;height:40px" />
+                         <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">77人</div>
+                         <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">2.7%</div>
+                         <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">1.2%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;">BMI监测</div>
+                <div style="height:340px;">
+                  <div style="height:340px;width:70%;display:inline-block;">
+                    <div id="lineChartWeight" style="height:300px;width:100%;margin-top:40px;"></div>
+                  </div>
+                  <div style="width:29%;display:inline-block;">
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                        <div>
+                          <img src="../images/greenBMI.png"  style="width:40px;height:40px" />
+                          <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">11015人</div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">79.4%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">0.7%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+
+                      </div>
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                         <img src="../images/yellowBMI.png"  style="width:40px;height:40px" />
+                         <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">1752人</div>
+                         <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">12.6%</div>
+                         <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">1.0%</div>
+                         <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div style="height:100px;width:100%;text-align: center;padding:10px 0;display: inline-block;margin-right: 1%;overflow: hidden;background:#ffffff;">
+                         <img src="../images/redBMI.png"  style="width:40px;height:40px" />
+                         <div style="display: inline-block;font-size:20px;line-height:36px;margin-left:20px;width: 76px;overflow: hidden;">1097人</div>
+                         <div style="display: inline-block;font-size:18px;line-height:36px;margin-left:20px;width:66px;overflow: hidden;">8.08%</div>
+                         <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;overflow: hidden;">2.7%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info" style="margin-top:60px">
+            <div class="panel-heading">慢病报告</div>
+            <div class="panel-body">
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;">慢病死亡指标</div>
+                <div style="height:600px;">
+                  <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                    <div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                      <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 120px;">慢病死亡人数</div>
+                      <div style="text-align: center;">
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">8</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">6</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">9</div>
+                         <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">人</div>
+                      </div>
+                    </div><div style="width:30%;height:100px;display: inline-block;margin:0 1%;overflow: hidden;">
+                      <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 80px;">慢病死亡占比</div>
+                      <div style="text-align: center;">
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">8</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">2</div>
+                         <div style="width: 16px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">.</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">4</div>
+                         <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">%</div>
+                      </div>
+                    </div><div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                      <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 70px;">慢病死亡趋势</div>
+                      <div style="text-align: center;">
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                         <div style="width: 16px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">.</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">1</div>
+                         <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">%</div>
+                         <img src="../images/rise.png" style="width:24px;margin-bottom: 18px;"/>
+                      </div>
+                    </div>
+                    <div id="lineChartOverallDeath"  style="height:360px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                    <div style="height:90px;width:100%;background:#3EA5F2;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;">
+                       慢病死亡数已占总死亡数的82.4%，逐年上升；癌症、脑卒中、慢阻肺在致死疾病中排前三。
+                    </div>
+                  </div>
+                  <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                    <div style="height:300px;">
+                      <div id="pieChartOverallDeath"  style="height:280px;width:50%;display: inline-block;overflow: hidden;margin-top:20px;"></div>
+                      <div style="height:280px;width:49%;margin-top:20px;display: inline-block;overflow: hidden;">
+                        <div>
+                          <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">癌症</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">30.1%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">5.2%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">脑卒中</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">20.2%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.6%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢阻肺</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">17.8%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.8%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">糖尿病</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">1.3%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">5.6%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">其他</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">30.6%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">4.3%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                     </div>
+                    </div>
+                    <div style="height:300px;">
+                      <div id="pieChartRegionDeath"  style="height:280px;width:50%;margin-top:20px;display: inline-block;overflow: hidden;"></div>
+                      <div style="height:240px;width:49%;margin-top:60px;display: inline-block;overflow: hidden;">
+                        <div>
+                          <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">思明区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">27.6%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.8%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">湖里区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">26.8%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.0%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">集美区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">14.2%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.8%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">同安区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">14.5%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.7%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">海沧区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">3.8%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.3%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">翔安区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">13.1%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.5%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;">慢病门诊指标</div>
+                <div style="height:600px;">
+                  <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                    <div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                      <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 120px;">日均门诊人数</div>
+                      <div style="text-align: center;">
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">8</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">9</div>
+                         <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">人</div>
+                      </div>
+                    </div><div style="width:30%;height:100px;display: inline-block;margin:0 1%;overflow: hidden;">
+                      <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 80px;">慢病门诊占比</div>
+                      <div style="text-align: center;">
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">8</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                         <div style="width: 16px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">.</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">4</div>
+                         <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">%</div>
+                      </div>
+                    </div><div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                      <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 60px;">慢病门诊趋势</div>
+                      <div style="text-align: center;">
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">5</div>
+                         <div style="width: 16px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">.</div>
+                         <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">4</div>
+                         <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">%</div>
+                         <img src="../images/rise.png" style="width:24px;margin-bottom: 18px;"/>
+                      </div>
+                    </div>
+                    <div id="lineChartOverallOutpatient"  style="height:360px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                    <div style="height:90px;width:100%;background:#3EA5F2;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;">
+                        慢病门诊占比83.4%，逐年上升；其中慢阻肺增速迅速，需引起重视。
+                    </div>
+                  </div>
+                  <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                    <div style="height:300px;">
+                      <div id="pieChartOverallOutpatient"  style="height:280px;width:50%;display: inline-block;overflow: hidden;margin-top:20px;"></div>
+                      <div style="height:280px;width:49%;margin-top:20px;display: inline-block;overflow: hidden;">
+                        <div>
+                          <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">高血压</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">23.2%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.1%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">糖尿病</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">12.4%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.0%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">脑卒中</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">5.2%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.7%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢阻肺</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">13.7%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.3%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢性肾病</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">10.8%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.3%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">其他</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">34.7%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.3%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                     </div>
+                    </div>
+                    <div style="height:300px;">
+                      <div id="pieChartRegionOutpatient"  style="height:280px;width:50%;margin-top:20px;display: inline-block;overflow: hidden;"></div>
+                      <div style="height:240px;width:49%;margin-top:60px;display: inline-block;overflow: hidden;">
+                        <div>
+                          <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">思明区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">38.5%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.0%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">湖里区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">32.3%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.4%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">集美区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">11.8%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.5%</div>
+                          <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">同安区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">8.1%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.7%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">海沧区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">3.2%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.8%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                        <div>
+                          <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                          <div style="display: inline-block;font-size:18px;line-height:36px;">翔安区</div>
+                          <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">6.1%</div>
+                          <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.3%</div>
+                          <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div style="text-align: center;font-size: 24px;color: #3EA5F2;font-weight: bold;line-height: 60px;margin-top:60px;">慢病费用指标</div>
+                  <div style="height:600px;">
+                    <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                      <div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                        <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 100px;">人均门诊费用</div>
+                        <div style="text-align: center;">
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">4</div>
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">9</div>
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">8</div>
+                           <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">元</div>
+                        </div>
+                      </div><div style="width:30%;height:100px;display: inline-block;margin:0 1%;overflow: hidden;">
+                        <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 80px;">慢病费用占比</div>
+                        <div style="text-align: center;">
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">7</div>
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">2</div>
+                           <div style="width: 16px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">.</div>
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">1</div>
+                           <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">%</div>
+                        </div>
+                      </div><div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                        <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 60px;">慢病费用趋势</div>
+                        <div style="text-align: center;">
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">1</div>
+                           <div style="width: 16px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">.</div>
+                           <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">1</div>
+                           <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">%</div>
+                           <img src="../images/rise.png" style="width:24px;margin-bottom: 18px;"/>
+                        </div>
+                      </div>
+                      <div id="lineChartOverallCost"  style="height:360px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                      <div style="height:90px;width:100%;background:#3EA5F2;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;">
+                          慢病费用超医保报销70%，需加强管理；其中药占比下降、输液费下降。
+                      </div>
+                    </div>
+                    <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                      <div style="height:300px;">
+                        <div id="pieChartOverallCost"  style="height:280px;width:50%;display: inline-block;overflow: hidden;margin-top:20px;"></div>
+                        <div style="height:280px;width:49%;margin-top:20px;display: inline-block;overflow: hidden;">
+                          <div>
+                            <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">挂号费</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">0.8%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.4%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">诊疗费</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">2.3%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.0%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">药费</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">28.7%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">6.8%</div>
+                            <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">注射费</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">9.2%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.7%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">输液费</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">30.4%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">4.3%</div>
+                            <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">手术费</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">18.6%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">5.1%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                       </div>
+                      </div>
+                      <div style="height:300px;">
+                        <div id="pieChartRegionCost"  style="height:280px;width:50%;margin-top:20px;display: inline-block;overflow: hidden;"></div>
+                        <div style="height:240px;width:49%;margin-top:60px;display: inline-block;overflow: hidden;">
+                          <div>
+                            <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;">思明区</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">35.6%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.8%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;">湖里区</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">33.4%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.6%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;">集美区</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">12.8%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.8%</div>
+                            <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;">同安区</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">8.2%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.7%</div>
+                            <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;">海沧区</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">3.2%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.7%</div>
+                            <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                          <div>
+                            <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                            <div style="display: inline-block;font-size:18px;line-height:36px;">翔安区</div>
+                            <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">6.8%</div>
+                            <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.8%</div>
+                            <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info" style="margin-top:60px">
+            <div class="panel-heading">慢病评估</div>
+            <div class="panel-body">
+              <div style="height:300px;">
+                <div id="HistogramChartOverall"  style="height:280px;width:50%;margin-top:20px;display: inline-block;overflow: hidden;"></div>
+                <div style="height:280px;width:49%;display: inline-block;overflow: hidden;">
+                   <div id="pieChartOverall"  style="height:280px;width:50%;display: inline-block;overflow: hidden;"></div>
+                   <div style="height:260px;width:49%;margin-top:20px;display: inline-block;overflow: hidden;">
+                     <div>
+                       <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">高血压</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">35.1%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.4%</div>
+                       <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">糖尿病</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">22.8%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.8%</div>
+                       <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">脑卒中</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">7.6%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">3.7%</div>
+                       <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢阻肺</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">18.1%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">5.6%</div>
+                       <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                     <div>
+                       <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                       <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢性肾病</div>
+                       <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">18.1%</div>
+                       <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.3%</div>
+                       <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div style="height:320px;">
+                <div id="lineChartOverall"  style="height:280px;width:50%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                <div id="HistogramChartOverall2"  style="height:280px;width:49%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info" style="margin-top:60px">
+            <div class="panel-heading">慢病干预计划</div>
+            <div class="panel-body">
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartSmoke"  style="height:280px;width:100%;margin-top:40px;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      中国吸烟状况：中国约有2.54亿男性烟民，1200万女性烟民，青少年人群的吸烟率显著下降,调解情绪、缓解疲劳是大部分人抽烟的原因，多数人每天抽10根到一盒的香烟。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartDrink"  style="height:280px;width:100%;margin-top:40px;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      中国饮酒状况：男性高于女性，农村高于城市，45岁>45~60岁>18~45岁>15岁~18岁；男性饮酒消费者有14.6%，女性饮酒消费者有5.8%处于高危饮酒水平。
+                  </div>
+                </div>
+              </div>
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartEat"  style="height:280px;width:100%;margin-top:40px;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      中国饮食状况：世界卫生组织建议每人每日食盐量应少于6克，中国人均摄入量超标75%;中国营养学会推荐的每人每日食用油25~30克,中国人均摄入量超标82%。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartObesity"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      中国肥胖状况：中国人肥胖率为19%左右，中国成年人和儿童青少年肥胖率均在上升；中国男性肥胖人数4320万人，女性肥胖人数4640万人，总人数高居世界第一。
+                  </div>
+                </div>
+              </div>
+              <div style="height:480px;">
+                <div style="height:480px;width:50%;display: inline-block;overflow: hidden;">
+                  <div id="lineChartSleep"  style="height:280px;width:100%;margin-top:40px;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      中国睡眠状况：每天中国拥有7000万人失眠，68%表示睡不够，31.1%晚睡晚起，30.9%晚睡早起，仅有17.5%能保持早睡早起；自媒体、程序员、网络主播、医护人员、电竞从业者睡眠质量堪忧。
+                  </div>
+                </div>
+                <div style="height:480px;width:49%;display: inline-block;overflow: hidden;">
+                  <div id="HistogramChartMotion"  style="height:280px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                  <div style="height:120px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                      中国运动状况：健身走、跑步、球类是最普及的锻炼项目；大多数人的锻炼时间为30-60分钟；中国消费者参加运动的比例正在以3%-4%的速度逐年增长。
+                  </div>
+                </div>
+                </div>
+                <div style="height:100px;background:#ffffff;margin: 0 2%;padding:0px 10px;text-indent:25px;color:#3EA5F2;border-radius: 10px;font-size:18px;margin-top:40px;">
+                    以控制居民吸烟、饮酒；宣传均衡饮食，控盐、控油；提供户外运动产地，组织运动项目，增强居民体育锻炼，降低肥胖率为切入点，加大宣传力度，开展慢病知识讲座。
+                </div>
+            </div>
+          </div>
+
+          <div class="panel panel-info" style="margin-top:60px">
+            <div class="panel-heading">双向转诊建议</div>
+            <div class="panel-body">
+              <div style="height:700px;">
+                <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                  <div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                    <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 60px;">向上转诊人数</div>
+                    <div style="text-align: center;">
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">4</div>
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">6</div>
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">0</div>
+                       <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">人</div>
+                    </div>
+                  </div><div style="width:30%;height:100px;display: inline-block;margin:0 1%;overflow: hidden;">
+                    <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 60px;">向下转诊人数</div>
+                    <div style="text-align: center;">
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">0</div>
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">2</div>
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">4</div>
+                       <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">人</div>
+                    </div>
+                  </div><div style="width:30%;height:100px;display: inline-block;margin:0 2%;overflow: hidden;">
+                    <div style="font-size: 18px;color: #333333;line-height: 40px;text-align: center;padding-right: 80px;">转诊车数量</div>
+                    <div style="text-align: center;">
+                      <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">0</div>
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">3</div>
+                       <div style="width: 40px;height:60px;font-size: 36px;height: 50px;display: inline-block;background: #3EA5F2;text-align: center;line-height: 50px;color: #fafafa;overflow: hidden;">1</div>
+                       <div style="width: 40px;height:60px;font-size: 18px;height: 50px;display: inline-block;text-align: center;line-height: 50px;color: #3EA5F2;overflow: hidden;vertical-align: bottom;">辆</div>
+                    </div>
+                  </div>
+                  <div id="lineChartOverallReferral"  style="height:450px;width:100%;margin-top:40px;display: inline-block;overflow: hidden;"></div>
+                </div>
+                <div style="height:600px;width:49%;display: inline-block;overflow: hidden;">
+                  <div style="height:300px;">
+                    <div id="pieChartOverallReferral"  style="height:280px;width:50%;display: inline-block;overflow: hidden;margin-top:20px;"></div>
+                    <div style="height:280px;width:49%;margin-top:20px;display: inline-block;overflow: hidden;">
+                      <div>
+                        <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">高血压</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">16.6%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.2%</div>
+                        <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">糖尿病</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">15.3%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.0%</div>
+                        <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">脑卒中</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">29.2%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">0.8%</div>
+                        <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢阻肺</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">20.4%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.3%</div>
+                        <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;width:72px;">慢性肾病</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">18.5%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.3%</div>
+                        <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                   </div>
+                  </div>
+                  <div style="height:300px;">
+                    <div id="pieChartRegionReferral"  style="height:280px;width:50%;margin-top:20px;display: inline-block;overflow: hidden;"></div>
+                    <div style="height:240px;width:49%;margin-top:60px;display: inline-block;overflow: hidden;">
+                      <div>
+                        <div style="width:16px;height:16px;background:#3EA5F2;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;">思明区</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">32.3%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">3.2%</div>
+                        <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#EE59CC;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;">湖里区</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">31.4%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.5%</div>
+                        <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#2B8378;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;">集美区</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">14.7%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">2.8%</div>
+                        <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#CD0C62;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;">同安区</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">9.6%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">3.7%</div>
+                        <img src="../images/rise.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#CBC928;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;">海沧区</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">3.1%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.4%</div>
+                        <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                      <div>
+                        <div style="width:16px;height:16px;background:#65C762;border-radius: 10px;display: inline-block;"></div>
+                        <div style="display: inline-block;font-size:18px;line-height:36px;">翔安区</div>
+                        <div style="display: inline-block;font-size:22px;line-height:36px;margin-left:20px;width:66px;">8.9%</div>
+                        <div style="display: inline-block;font-size:16px;line-height:36px;margin-left:20px;">1.2%</div>
+                        <img src="../images/decline.png" style="width:12px;margin-bottom: 6px;"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="height:90px;width:100%;background:#3EA5F2;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;">
+                    建议建立免费转诊机制，①一家综合性医院与若干家社区医疗机构组织成一个“双向转诊”单元，配备救车辆与医护人员，负责单元内的免费“双向转诊”工作；②增加120急救中心的车辆与专业人员，专设“双向转诊”车辆与专业人员，为“双向转诊”服务；③在对“双向转诊”工作的调查基础上，对“双向转诊”工作量大的医疗机构配置车辆与专业人员。
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <footer>
+       <div class="footer-section">
+         <img  src="../images/logo21.png" class="footer-img" />
+         <div class="footer-row">
+           <span class="footer-span">xxx</span>
+         </div>
+         <div class="footer-row">
+           <span class="footer-span">xxx</span>
+         </div>
+         <div class="footer-row">
+         <span class="footer-span" style="font-size:13px">xxx</span>
+         </div>
+         <!-- <div class="footer-row">
+           <span class="footer-span" style="font-size:13px">增值电信业务许可证号:京-2-4-20100000</span>
+         </div> -->
+       </div>
+     </footer>
+   </main>
+
+   <script src="../lib/jquery-3.3.1.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="../lib/echarts.min.js"></script>
+   <script src="../scripts/medicalManage.js"></script>
+ </body>
+
+</html>

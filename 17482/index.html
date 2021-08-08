@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<link href="comment.css" rel="stylesheet"></link>
+<script src="jquery.js"></script>
+<style>
+.column{ width:1260px; height:590px; margin:0 auto; background-color:#d8c1a5; overflow:hidden;}
+.arrow_left,.arrow_right{position:absolute;width:96px;height:96px;top:50%; margin-top:-30px;}
+.arrow_left{background-image:url(images/arrow_left.png); left:0; }
+.arrow_right{background-image:url(images/arrow_right.png); right:0; }
+.btns{position:absolute;bottom:20px;left:50%;margin-left:-45px;}
+.btns a{float:left;width:24px;height:24px;background-color:#231816;color:white;margin:0 3px; text-align:center; line-height:24px;}
+.btns .current{background-color:red;color:white;}
+</style>
+<meta charset="utf-8">
+<title>那温馨那难忘的记忆</title>
+</head>
+
+<body>
+<div class="nav">
+  <div class="navbox  overflowH">
+    <div class="logo"> <img src="images/logo_03.png"></div>
+    <div class="smallnav">
+      <a> 英文版</a>
+      <a>中文版</a>
+    </div> 
+    <div class="navlink">
+      <a href="index.html"> <span class="navboxspan">首页</span></a>
+      <a href="about.html"> 关于我们</a>
+      <a href="news.html"> 新闻资讯</a>
+      <a href="product.html"> 产品中心</a>
+      <a href="project.html"> 项目案例</a>
+      <a href="service.html"> 服务中心</a>
+      <a href="about.html">关于中心</a>
+      <a href="recuitmer.html"> 人力资源</a>
+      <a href="contact.html"> 联系我们</a>
+    </div>  
+  </div>
+</div>        
+<div class="column overflowH">
+   <img src="images/culomn1_05.png">
+   <img src="images/culomn1_03.png">
+   <img src="images/culomn1_04.png">
+   <span class="arrow_left" onselectstart="return false"></span>
+    <span class="arrow_right" onselectstart="return false"></span>
+    <div class="btns">
+    	<a class="current" onselectstart="return false">1</a>
+        <a onselectstart="return false">2</a>
+        <a onselectstart="return false">3</a>
+    </div>
+</div>
+
+<div class="footer">
+  <div class="footerbox overflowH">
+    <div class="link">
+      <a href="#">在线咨询</a>
+      <a href="about.html">关于我们</a>
+      <a href="#">荣誉客户</a>
+      <a href="news.html">新闻资讯</a>
+      <a href="product.html">产品中心</a>
+      <a href="project.html">项目案例</a>
+      <a href="service.html">服务中心</a>
+      <a href="coffee.html">关于咖啡</a>
+      <a href="recuitmer.html">人力资源</a>
+      <a href="contact.html">联系我们</a>
+      <a href="#">公司视频</a>
+    </div>
+    <div class="footerlogo">
+      <a href="#"><img src="images/footer_15.png"></a>
+      <a href="#"><img src="images/footer_13.png"></a>
+      <a href="#"><img src="images/footer_11.png"></a>
+      <a href="#"><img src="images/footer_09.png"></a>
+      <a href="#"><img src="images/footer_07.png"></a>
+      <a href="#"><img src="images/footer_05.png"></a>
+      <a href="#"><img src="images/footer_18.png"></a>
+    </div>
+    <div class="copyright">地址：XXX</div>
+  </div>
+</div>
+
+<script>
+/*初始*/
+$(".column img").hide();
+$(".column img:eq(0)").show()
+/*右箭头,显示下一张图*/
+var n=0;/*记录图片下标值*/
+$(".arrow_right").click(function(){
+	if(n<$(".column img").length-1){
+		n=n+1;
+	}else{
+		n=0;
+	}
+	$(".column img").hide();
+	$(".column img:eq("+n+")").show();
+	$(".btns a").removeClass("current");
+	$(".btns a:eq("+n+")").addClass("current");
+})
+/*左箭头*/
+$(".arrow_left").click(function(){
+	if(n>0){
+		n=n-1;
+	}else{
+		n=$(".column img").length-1;
+	}
+	$(".column img").hide();
+	$(".column img:eq("+n+")").show();	
+	$(".btns a").removeClass("current");
+	$(".btns a:eq("+n+")").addClass("current");
+})
+/*数的按钮*/
+$(".btns a").click(function(){
+	n = $(".btns a").index(this);
+	$(".column img").hide();
+	$(".column img:eq("+n+")").show();
+	$(".btns a").removeClass("current");
+	$(this).addClass("current");
+})
+/*自动播放*/
+function changeN(){
+	if(n<$(".column img").length-1){
+		n=n+1;
+	}else{
+		n=0;
+	}
+	$(".column img").hide();
+	$(".column img:eq("+n+")").show();	
+	$(".btns a").removeClass("current");
+	$(".btns a:eq("+n+")").addClass("current");
+}
+var timer = setInterval(changeN,2000);
+/*控制*/
+$(".btns a,.arrow_left,.arrow_right").hover(function(){
+	clearInterval(timer);	
+},function(){
+	timer = setInterval(changeN,2000);
+})
+</script>
+
+</body>
+</html>

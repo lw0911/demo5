@@ -1,0 +1,20 @@
+﻿/*下拉样式*/
+#Menu ul li{position:relative;}
+#Menu ul li ul{position:absolute;z-index:10; left:0;display:none;background:url(image/nav-dlbg.jpg); padding-left:20px; padding-bottom:15px; border:#cccccc 1px solid; border-bottom-left-radius:10px; border-bottom-right-radius:10px;}/*一级样式*/
+#Menu ul li ul li{position:relative;width:88px;text-align:left; height:30px; line-height:28px;background:url(image/dt-11.gif) no-repeat left center; padding-left:10px;}/*li行样式*/
+#Menu ul li ul li ul{position:absolute;left:88px;top:0px;display:none;}/*二级样式*/
+#Menu ul li ul li ul li ul{position:absolute;top:0px;display:none;}/*三级样式*/
+
+
+#Menu ul li.hover{} /*鼠标经过时栏目li样式*/
+#Menu ul li.hover a.menu{}
+#Menu ul li.hover ul{display:block;} 
+#Menu ul li.hover ul li ul{display:none;} 
+#Menu ul li ul li.hover ul{display:block;}
+#Menu ul li ul li.hover{}/*鼠标经过时下拉li样式*/
+#Menu ul li ul li.hover ul li ul{display:none} 
+#Menu ul li ul li ul li.hover ul{display:block;} 
+
+
+#Menu ul li ul a{display:block!important;display:inline;height:30px;text-align:left; color:#2A3C63; font-weight:bold;overflow:hidden}/*默认a样式*/
+#Menu ul li ul a:hover{text-decoration:none; color:#2D648F;}/*鼠标经过a样式*/
