@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by dede58.com/" /><title>进入操作</title>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="Assets/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="Assets/css/login.css">
+<script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabBox_lg .tabCont_lg:first").css("display","block");
+	$(".tabBox_lg .tabNav_lg li").click(function(){
+		$(this).siblings("li").removeClass("now");
+		$(this).addClass("now");
+		$(this).parents(".tabBox_lg").find(".tabCont_lg").css("display","none");
+		var i=$(this).index();
+		$(this).parents(".tabBox_lg").find(".tabCont_lg:eq("+i+")").css("display","block");
+	});
+})
+</script>
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="Assets/css/ie.css"/>
+<script type="text/javascript" src="Assets/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="Assets/js/html5.js"></script>
+<style type="text/css">
+body{
+	behavior:url(css3pie.htc);
+    behavior:url(csshover.htc);
+    
+}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div id="login">
+	<form action="" method="post">
+	<div class="tabBox_tlg">
+    	<div class="close">&nbsp;</div>
+        <div class="tabBox_lg">
+          <ul class="tabNav_lg">
+            <li class="now">登录</li>
+            <li>快速注册</li>
+            <li>找回密码</li>
+          </ul>
+          <div class="tabCont_lg" style="display:block;">
+            <!--登录-->
+            <ul>
+            	<li class="wb">
+                	<img src="Assets/images/icon24.png" alt=""/>
+                    <input name="" type="text" placeholder="输入ID或者邮箱">
+                </li>
+                <li class="wb">
+                	<img src="Assets/images/icon25.png" alt=""/>
+                    <input name="" type="password" placeholder="密码">
+                </li>
+                <li class="rember">
+                	<input name="" checked="checked" type="checkbox" value="">
+                    <span>下次自动登录</span>
+                </li>
+                <li class="btn"><a href="">登录</a></li>
+                <li class="forget">
+                	<a href="">忘记密码？</a>
+                    <a href="">注册</a>
+                </li>
+            </ul>
+            <!--登录-->
+          </div>
+          <div class="tabCont_lg">
+          	<!--注册-->
+            <ul>
+              <li class="qwb">
+              	<input name="" type="text" placeholder="邮箱">
+              </li>
+              <li class="qwb">
+              	<input name="" type="text" placeholder="确认邮箱">
+              </li>
+              <li class="qwb">
+              	<input name="" type="text" placeholder="昵称">
+              </li>
+              <li class="qwb">
+              	<input name="" type="password" placeholder="密码">
+              </li>
+              <li class="qwb">
+              	<input name="" type="password" placeholder="确认密码">
+              </li>
+              <li class="rember">
+                	<input name="" checked="checked" type="checkbox" value="">
+                    <span>我已阅读并接受<a href="">版权申明</a>和<a href="">隐私保护</a>条款</span>
+                </li>
+                <li class="btn"><a href="">注册</a></li>
+                <div class="space_hx">&nbsp;</div>
+            </ul>
+            <!--注册-->
+          </div>
+          <div class="tabCont_lg">
+            <!--找回密码-->
+            <ul>
+            	<li class="qwb">
+                    <input name="" type="text" placeholder="注册邮箱">
+                </li>
+                <li class="qwb">
+                    <input name="" type="password" placeholder="确认邮箱">
+                </li>
+                <li class="rember">
+                	<input name="" checked="checked" type="checkbox" value="">
+                    <span>下次自动登录</span>
+                </li>
+                <li class="btn"><a href="">确定</a></li>
+                <div class="space_hx">&nbsp;</div>
+            </ul>
+            <!--找回密码-->
+          </div>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

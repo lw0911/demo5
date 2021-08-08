@@ -1,0 +1,1255 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>修改密码</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <form method="post" action="auth_addauth.php">
+
+        <div class="formzone">
+            <div class="font-weight">
+                新增管理员
+            </div>
+            <div class="tablezone">
+                <table width="100%" cellspacing="0" cellpadding="5" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="80">
+                                <div align="right">管理员类型&nbsp;&nbsp;</div>
+                            </td>
+                            <td>
+                                <select style="width:200px" class="form-control marB10" onchange="ChangeAccount(this);">
+                                    <option value="0" selected="selected">--请选择--</option>
+                                    <option value="1">超级管理员</option>
+                                    <option value="2">普通管理员</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80"><div align="right">管理员账号&nbsp;&nbsp;</div></td>
+                            <td>
+                                <input name="name" class="form-control marB10" style="width:200px" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80"><div align="right">管理员姓名&nbsp;&nbsp;</div></td>
+                            <td>
+                                <input name="name" class="form-control marB10" style="width:200px" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80"><div align="right">管理员邮箱&nbsp;&nbsp;</div></td>
+                            <td>
+                                <input name="name" class="form-control marB10" style="width:200px" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">
+                                <div align="right">管理员手机&nbsp;&nbsp;</div>
+                            </td>
+                            <td>
+                                <input name="user" class="form-control marB10" style="width:200px" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">
+                                <div align="right">初始密码&nbsp;&nbsp;</div>
+                            </td>
+                            <td>
+                                <input name="password" class="form-control marB10" style="width:200px" type="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">
+                                <div align="right">确认密码&nbsp;&nbsp;</div>
+                            </td>
+                            <td>
+                                <input name="password" class="form-control marB10" style="width:200px" type="password" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="font-weight">设置管理权限</div>
+            <div class="tablezone" id="addAcctablezone">
+
+                <table width="100%" cellspacing="0" cellpadding="5" border="0">
+                    <tbody>
+                        <tr>
+
+                            <td class="innerbiaoti" width="100" height="28">授权</td>
+                            <td class="innerbiaoti" width="180" height="28">所属模块</td>
+                            <td class="innerbiaoti" height="28">权限描述</td>
+
+                        </tr>
+						 <tr class="listAll" style="display:none;">
+                            <td height="23">
+                                <input id="selAll" name="" value="1" type="checkbox" checked="checked" disabled="disabled"/>
+                            </td>
+                            <td height="23">所有模块</td>
+                            <td height="23">全站所有功能模块</td>
+                        </tr>
+                        <tr class="list">
+                            <td colspan="2" height="23">
+                                <input id="selAll" name="" value="1" type="checkbox" />
+                                全选
+                            </td>
+                            <td height="23">&nbsp;</td>
+                            <td height="23">&nbsp;</td>
+                        </tr>
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a1" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">网站参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a2" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">修改管理密码</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a3" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">管理账户维护</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a5" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">网站排版设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a6" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">模块插件管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a7" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">软件升级更新</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a8" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">管理菜单设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a9" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">基础</td>
+
+                            <td height="23">模块安装卸载</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a11" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">菜单</td>
+
+                            <td height="23">导航菜单设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a50" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员类型设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a51" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a52" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员查询管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a53" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员资料查询</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a54" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员资料修改</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a55" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员邮件发送</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a56" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员权限管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a57" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员公告管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a58" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">模拟会员登录</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a59" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员实名认证</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a60" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员删除权限</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a61" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员区域设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a62" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员行业分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a63" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">积分规则设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a64" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员转移类型</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a65" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">重设会员密码</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a66" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">积分录入权限</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a67" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">财务收款入账</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a68" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">会员帐务查询</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a69" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">支付方法设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a70" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">会员</td>
+
+                            <td height="23">帐务查询统计</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a81" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">访问统计系统</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a82" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">投票调查系统</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a83" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">图片投票系统</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a84" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">QQ客服系统</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a85" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">51客服系统</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a86" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">51la统计系统</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a87" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">工具</td>
+
+                            <td height="23">移动短信留言</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a91" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">广告</td>
+
+                            <td height="23">网站标志管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a95" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">广告</td>
+
+                            <td height="23">网站广告管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a96" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">广告</td>
+
+                            <td height="23">友情链接管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a120" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">文章</td>
+
+                            <td height="23">文章模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a121" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">文章</td>
+
+                            <td height="23">文章分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a122" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">文章</td>
+
+                            <td height="23">文章管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a123" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">文章</td>
+
+                            <td height="23">文章专题设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a125" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">文章</td>
+
+                            <td height="23">文章发布</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a126" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">文章</td>
+
+                            <td height="23">文章修改</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a130" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">点评</td>
+
+                            <td height="23">点评模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a131" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">点评</td>
+
+                            <td height="23">点评分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a132" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">点评</td>
+
+                            <td height="23">点评管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a150" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">图片</td>
+
+                            <td height="23">图片模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a151" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">图片</td>
+
+                            <td height="23">图片分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a152" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">图片</td>
+
+                            <td height="23">图片管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a153" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">图片</td>
+
+                            <td height="23">图片专题设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a155" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">图片</td>
+
+                            <td height="23">图片发布</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a156" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">图片</td>
+
+                            <td height="23">图片修改</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a160" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">下载</td>
+
+                            <td height="23">下载模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a161" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">下载</td>
+
+                            <td height="23">下载分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a162" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">下载</td>
+
+                            <td height="23">下载管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a163" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">下载</td>
+
+                            <td height="23">下载专题设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a165" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">下载</td>
+
+                            <td height="23">下载发布</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a166" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">下载</td>
+
+                            <td height="23">下载修改</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a180" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">产品</td>
+
+                            <td height="23">产品模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a181" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">产品</td>
+
+                            <td height="23">产品分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a182" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">产品</td>
+
+                            <td height="23">产品管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a183" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">产品</td>
+
+                            <td height="23">产品专题设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a185" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">产品</td>
+
+                            <td height="23">产品发布</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a186" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">产品</td>
+
+                            <td height="23">产品修改</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a211" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">反馈</td>
+
+                            <td height="23">反馈表单设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a212" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">反馈</td>
+
+                            <td height="23">反馈留言管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a221" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">招聘</td>
+
+                            <td height="23">招聘职位发布</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a222" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">招聘</td>
+
+                            <td height="23">招聘职位管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a223" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">招聘</td>
+
+                            <td height="23">求职申请处理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a224" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">招聘</td>
+
+                            <td height="23">企业人才库查询</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a225" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">招聘</td>
+
+                            <td height="23">应聘表单设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a240" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">留言</td>
+
+                            <td height="23">互动留言模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a241" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">留言</td>
+
+                            <td height="23">互动留言分类</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a242" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">留言</td>
+
+                            <td height="23">互动留言管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a301" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">网页</td>
+
+                            <td height="23">网页分组和管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a600" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">供求</td>
+
+                            <td height="23">供求信息管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a601" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">供求</td>
+
+                            <td height="23">供求信息行业分类管理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a602" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">供求</td>
+
+                            <td height="23">供求信息批量处理</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a603" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">供求</td>
+
+                            <td height="23">供求信息模块参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a720" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">换赠</td>
+
+                            <td height="23">换赠参数设置</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a721" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">换赠</td>
+
+                            <td height="23">赠品管理权限</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a722" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">换赠</td>
+
+                            <td height="23">赠品订单管理权限</td>
+
+                        </tr>
+
+
+                        <tr class="list">
+
+                            <td width="50" height="23">
+                                <input name="a723" value="1" class="authcheckbox" type="checkbox" />
+                            </td>
+
+                            <td width="180" height="23">换赠</td>
+
+                            <td height="23">赠品换购统计权限</td>
+
+                        </tr>
+
+
+
+                        <tr>
+                            <td colspan="5">
+
+
+                                <input name="step" value="add" type="hidden" />
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="adminsubmit">
+                <input name="cc" value="提 交" class="btn btn-default" type="submit" />
+            </div>
+        </div>
+
+    </form>
+  
+</body>
+</html>

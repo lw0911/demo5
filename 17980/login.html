@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<img src="img/login_bg3.png" alt="" />
+			<div class="login_box">
+				<div class="login_con">
+					<div class="login_tit">
+						<a href="javascript:;"><img src="img/login-logo.png" alt="" /></a>
+					</div>
+					<div class="user_check">
+						<div class="username">
+							<input type="text" name="" id="username" value="请输入用户名/手机号"/>
+						</div>
+						<div class="pwd">
+							<input type="text" id="login_pwd1" value="请输入密码"/>
+							<input type="password"  id="login_pwd2" style="display:none;"/>
+						</div>
+						<a href="javascript:;">立即登录</a>
+						
+					</div>
+					<p><a href="javascript:;">？忘记密码</a><a href="register.html">马上注册</a></p>
+				</div>
+			</div>
+			<div class="copyright">
+				Copyright © 2017 乐租 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.
+			</div>
+		</div>
+	</body>
+	<script>
+		var username = document.getElementById("username");
+		var pwd =document.getElementById("login_pwd2");
+		var pwd_show = document.getElementById("login_pwd1");
+		username.onfocus = function(){
+			if(username.value == "请输入用户名/手机号" || username.value == "帐号不能为空"){
+				username.value = "";
+			}
+			username.style.color = "#333"
+		}
+		username.onblur = function(){
+			if(username.value == ""){
+				username.value = "帐号不能为空";
+				username.style.color = "#ff5454"
+			}
+		}
+		pwd_show.onfocus = function(){
+			pwd_show.style.display = "none";
+			pwd.style.display = "";
+			pwd.focus();
+		}
+		pwd.onblur = function(){
+			if(pwd.value == ""){
+				pwd_show.style.display = "";
+				pwd_show.style.color = "#ff5454";
+				pwd_show.value = "密码不能为空";
+				pwd.style.display = "none";
+			}
+		}
+	</script>
+</html>

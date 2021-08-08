@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>家天下号</title>
+<meta content="家天下号" name="keywords" />
+<meta content="家天下号" name="description" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+<link href="css/zhuce.css" rel="stylesheet" type="text/css" />
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/lrtk.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/jquery.superslide.2.1.1.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="logo"><a href="#"><img src="images/logo.png" width="194" height="55" /></a></div>
+    <div class="logo01"><a href="#"><img src="images/logo_01.png" width="368" height="40" /></a></div>
+    <div class="logo02"><a href="#"><img src="images/logo_02.png" width="387" height="45" /></a></div>
+</div>
+
+<div class="login_banner" style="overflow:hidden;">
+      <div id="full-screen-slider">
+        <ul id="slides">
+           <li style="background:url(images/login_banner.jpg) no-repeat center top"><a href="#"></a></li>
+           <li style="background:url(images/login_banner1.jpg) no-repeat center top"><a href="#"></a></li>
+           <li style="background:url(images/login_banner2.jpg) no-repeat center top"><a href="#"></a></li>
+        </ul>
+      </div>
+      <script type="text/javascript" src="js/banner.index.js"></script>
+      
+      <div class="login_main">
+      	<div id="dlcon">
+              <ul id="dltags">
+                <li class="selectTag"> <a href="javascript:void(0)" onclick="selectTag('tagContent0',this)">游客登录</a></li>
+                <li class=""> <a href="javascript:void(0)" onclick="selectTag('tagContent1',this)">同行登录</a> </li>
+    
+             </ul>
+             <div id="dltagContent">
+             <div style="display: block;" class="tagContent selectTag" id="tagContent0">
+             	<div id="denglu_l">
+                   <form action="login.php"  method="post" id="J_Form">
+                    <dl class="top_login">
+                        <dd><input type="image" class="login_image" src="images/denglu.jpg" /></dd>
+                        <dt><input type="text" onblur="if(this.value == '请输入手机号')this.value=''" onfocus="if(this.value == '请输入手机号')this.value = ''" value="请输入手机号" name="title" class="login_text" /></dt>
+                        
+                    </dl>
+                    
+                    
+                    <dl class="top_login">
+                        <dd><input type="image" class="login_image" src="images/yaoshi.jpg" /></dd>
+                        <dt><input type="text" onblur="if(this.value == '请输入密码')this.value=''" onfocus="if(this.value == '请输入密码')this.value = ''" value="请输入密码" name="title" class="login_text" /></dt>
+                        
+                    </dl>
+                    <div class="login-links">
+                        <a href="#" class="forget-pwd" target="_blank">忘记密码？</a>
+                        <a href="zhuce.html" class="register" target="_blank">还没有账号？免费<span>注册</span></a>
+                        
+                    </div>
+        
+                    <div class="ljdenglu">
+                         <input type='hidden' id="flag4" value='2' />
+                         <input class="ljdl" id="submit1" name="commit" value="立即注册"  onclick="sub()" type="button">
+                    </div>
+                    </form>
+			</div>
+       </div>         
+    <!----------------------------------------游客登录----end----------------------------------------------------------->             
+                 
+            <div style="display: none;" class="tagContent" id="tagContent1">
+             	<div id="denglu_l">
+                   <form action="login.php"  method="post" id="J_Form">
+                 
+                    <dl class="top_login">
+                        <dd><input type="image" class="login_image" src="images/denglu.jpg" /></dd>
+                        <dt><input type="text" onblur="if(this.value == '请输入手机号')this.value=''" onfocus="if(this.value == '请输入手机号')this.value = ''" value="请输入手机号" name="title" class="login_text" /></dt>
+                        
+                    </dl>
+                    
+                    
+                    <dl class="top_login">
+                        <dd><input type="image" class="login_image" src="images/yaoshi.jpg" /></dd>
+                        <dt><input type="text" onblur="if(this.value == '请输入密码')this.value=''" onfocus="if(this.value == '请输入密码')this.value = ''" value="请输入密码" name="title" class="login_text" /></dt>
+                        
+                    </dl>
+                    <div class="login-links">
+                        <a href="#" class="forget-pwd" target="_blank">忘记密码？</a>
+                        <a href="#" class="register" target="_blank">还没有账号？免费<span>注册</span></a>
+                        
+                    </div>
+        
+                    <div class="ljdenglu">
+                        <input type='hidden' id="flag4" value='2' />
+                        <input class="ljdl" id="submit1" name="commit" value="立即注册"  onclick="sub()" type="button">
+                    </div>
+                    </form>				
+			 </div>
+      </div>             
+      <!----------------------------------------同行登录----end----------------------------------------------------------->                            
+        </div>            
+      </div>
+ </div>
+	  <script type="text/javascript">
+				function selectTag(showContent,selfObj){
+					// 操作标签
+					var tag = document.getElementById("dltags").getElementsByTagName("li");
+					var taglength = tag.length;
+					for(i=0; i<taglength; i++){
+						tag[i].className = "";
+					}
+					selfObj.parentNode.className = "selectTag";
+					// 操作内容
+					for(i=0; j=document.getElementById("tagContent"+i); i++){
+						j.style.display = "none";
+					}
+					document.getElementById(showContent).style.display = "block";
+				}
+				</script>
+      </div>
+</div>
+<!--------------------------------------end------------------------------------------------------------------>
+<div class="footer">
+	<ul>
+    	<li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">员工风采</a></li>
+        <li><a href="#">网站地图</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <li><a href="#">友情链接</a></li>
+    </ul>
+</div>
+
+<div class="foot">
+山东家天下国际旅行社有限公司 旅游经营许可证：L-SD-01260<br/>
+山东交运旅游集团济南家天下分公司 旅游经营许可证号：L-SD-CJ00010 <br/>
+Copyright © 2016-2020 山东家天下国际旅行社有限公司 版权所有　管理备案号：鲁ICP备10202078号-2<br/>
+旅游局投诉电话：<span>12301</span>&nbsp;&nbsp;技术支持：<a href="http://www.jnyunchang.com/">云畅网络</a>
+<ul>
+	<li><img src="images/copyright01.jpg" width="103" height="32" alt="经营性网站 备案信息" /></li>
+    <li><img src="images/copyright02.jpg" width="103" height="32" alt="可信网站 信用评价" /></li>
+    <li><img src="images/copyright03.jpg" width="103" height="32" alt="可信网站 信用评价" /></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tabs</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			blockquote {
+				margin-top: 10px;
+			}
+			
+			table {
+				text-align: center;
+			}
+			
+			.layui-table tr th {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<div class="layui-field-box">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">名称：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">父级：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">客户标准问答</option>
+										<option value="2">业务办理总流程</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">状态：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">启用</option>
+										<option value="2">禁用</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">状态：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">启用</option>
+										<option value="2">禁用</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<button class="layui-btn layui-btn-normal" style="position:absolute;right:5%;top:14%;">搜索</button>
+					</form>
+				</div>
+			</fieldset>
+		</div>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<div class="layui-tab layui-tab-brief" lay-filter="demo1">
+				<div class="layui-col-md-offset4" style="float: right;">
+					<button class="layui-btn layui-btn-danger">添加目录</button>
+					<button class="layui-btn layui-btn-normal " data-method="setTop">批量禁用</button>
+					<button class="layui-btn layui-btn-normal " data-method="setTop">批量启用</button>
+					<button class="layui-btn layui-btn-normal " data-method="setTop">批量删除</button>
+				</div>
+				<ul class="layui-tab-title">
+					<li class="layui-this">目录管理</li>
+					<li>文章管理</li>
+				</ul>
+
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						<div class="layui-form">
+							<table class="layui-table">
+								<thead>
+									<tr>
+										<th><input type="checkbox" name="select" id="select" value="" /></th>
+										<th>目录编号</th>
+										<th>目录名称</th>
+										<th>目录层级</th>
+										<th>父级</th>
+										<th>状态</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" name="select" id="select" value="" /></td>
+										<td>0001</td>
+										<td>客户标准问答</td>
+										<td>一级</td>
+										<td>父级</td>
+										<td>启用</td>
+										<td>
+											<a href="#">编辑</a>
+											<a href="#">禁用</a>
+											<a href="#">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="select" id="select" value="" /></td>
+										<td>0001</td>
+										<td>客户标准问答</td>
+										<td>一级</td>
+										<td>父级</td>
+										<td>启用</td>
+										<td>
+											<a href="#">编辑</a>
+											<a href="#">禁用</a>
+											<a href="#">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="layui-tab-item">
+						<div class="layui-form">
+							<table class="layui-table">
+								<thead>
+									<tr>
+										<th><input type="checkbox" name="select" id="select" value="" /></th>
+										<th>目录编号</th>
+										<th>目录名称</th>
+										<th>目录层级</th>
+										<th>父级</th>
+										<th>状态</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" name="select" id="select" value="" /></td>
+										<td>0001</td>
+										<td>客户标准问答</td>
+										<td>一级</td>
+										<td>父级</td>
+										<td>启用</td>
+										<td>
+											<a href="#">编辑</a>
+											<a href="#">禁用</a>
+											<a href="#">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="select" id="select" value="" /></td>
+										<td>0001</td>
+										<td>客户标准问答</td>
+										<td>一级</td>
+										<td>父级</td>
+										<td>启用</td>
+										<td>
+											<a href="#">编辑</a>
+											<a href="#">禁用</a>
+											<a href="#">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+		layui.use(['element', 'layer', 'form'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			element.on('tab(demo1)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			element.on('tab(demo2)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+		});
+	</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="public/inspinia.css" />
+		<link href="public/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    	<link href="js/multipleselect/multiple-select.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/add_user_tree.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="../../../https@oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		    <script src="../../../https@oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+	</head>
+
+	<body>
+		<div id="wrapper" class="container">
+			<div class="wrapper wrapper-content">
+				<div class="ui-dialog" style="outline:none;height: auto; width: 500px;">
+					<div id="outer_list_container" class="ui-dialog-content" style="width: auto; min-height: 0px; max-height: none; height: 395px;">
+						<div class="two_list_container">
+							<div class="top_title_dialog"><span class="left_list_name">公司所有人</span><span class="right_list_name">已添加人员</span></div>
+							<div class="list_dialog_body">
+								<div class="left_list_con">
+									<!--<div class="dialog_title_search" style="display: block;"><input class="dialog_title_input" type="text" placeholder="搜索"></div>-->
+									<div class="multi-select-search" style="border-bottom:1px solid #ddd;">
+										<div class="multi-select-control multi-select-control-default">
+											<ul class="msc-list" id="selected_user_panel">
+
+												<li id="input_select">
+													<input onkeyup="gosearch(this)" class="search-text" type="text" placeholder="输入姓名或帐号搜索用户" style="border:none;min-width: 50px;">
+												</li>
+											</ul>
+											<div id="input_select_control_result" class="search-result" style="display: none;">
+												<ul class="sr-list" id="iscr_items"></ul>
+											</div>
+										</div>
+									</div>
+									<div class="selection_list_body">
+										<ul id="ztree" class="ztree"></ul>
+										<ul id="left_list_hidden" class="left_list_ul_hidden"></ul>
+									</div>
+								</div>
+								<div class="middle_direction">
+									<div class="middle_direction_image"></div>
+									<div class="middle_direction_image right_direction"></div>
+								</div>
+								<div class="right_list_con">
+									<ul class="right_list_ul ui-sortable"></ul>
+								</div>
+								<div class="right_arrow_icon none"><span class="up icon"></span><span class="down icon"></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="public/jquery-1.11.3.js"></script>
+		<script src="public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="public/zTree/js/jquery.ztree.all.js"></script>
+    	<script src="js/multipleselect/multiple-select.js"></script>
+    	<script src="js/add_user_tree.js"></script>
+	</body>
+
+</html>

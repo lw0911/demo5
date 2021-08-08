@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<!--head部分-->
+
+	<head>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<meta name="" content="" charset="utf-8" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-body">
+				<div class="">
+					<div class="pl36 layui-form">
+						<div class="layui-input-inline">
+							<select name="province" id="province" lay-filter="province">
+								<option value="">请选择省份</option>
+								<option th:each="area,areaStra:${areaList}" th:value="${area.code}" th:text="${area.name}"></option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="city" id="city" lay-filter="city">
+								<option value="">请选择城市</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="area" id="area" lay-filter="area">
+								<option value="">请选择区域</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<div class="layui-input-inline">
+								<input type="text" name="shopname" lay-verify="required|shopname" autocomplete="off" class="layui-input" placeholder="请输入商户名称">
+							</div>
+						</div>
+						<div class="layui-input-inline">
+							<div class="layui-btn-container idTable">
+								<button class="layui-btn" data-type="reload" id="search">搜索</button>
+							</div>
+						</div>
+						<table class="layui-table">
+							<thead>
+								<tr>
+									<th>
+										<form class="layui-form" action="">
+											<div class="layui-form-item" pane="">
+												<div class="layui-input-block">
+													<input type="checkbox" name="like1[write]" lay-skin="primary" title="写作" checked="">
+													<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+													<input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏" disabled="">
+												</div>
+											</div>
+										</form>
+									</th>
+									<th >序号</th>
+									<th >商户名称</th>
+									<th >地址</th>
+									<th >业务联系人</th>
+									<th >业务联系人电话</th>
+								</tr>
+							</thead>
+						</table>
+						<div id="demo8"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use(['laypage', 'table', 'form'], function() {
+			var table = layui.table;
+			var laypage = layui.laypage;
+			var layer = layui.layer;
+			var form = layui.form;
+			//监听表格复选框选择
+			table.on('checkbox(layTable)', function(obj) {
+				console.log(obj)
+			});
+			laypage.render({
+				elem: 'demo8',
+				count: 1000,
+				layout: ['limit', 'prev', 'page', 'next']
+			});
+			//监听工具条
+			var $ = layui.$,
+		});
+
+		function init(obj, str) {
+			obj.html("");
+			var option = $("<option>").val("").text(str);
+			obj.append(option);
+		}
+	</script>
+
+</html>

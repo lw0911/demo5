@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>楼盘详情</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+	<style>
+		.layui-form-label {
+			width: 150px;
+		}
+		
+		.layui-form-label1 {
+			float: left;
+			display: block;
+			padding: 9px 15px;
+			width: 100%;
+			font-weight: 400;
+			text-align: right;
+			min-width: 500px;
+		}
+		
+		table tr {
+			text-align: center;
+		}
+		
+		.layui-table th {
+			text-align: center;
+		}
+		
+		.message tr td:nth-child(odd) {
+			text-align: right;
+			border: none;
+		}
+		
+		.message tr td:nth-child(even) {
+			text-align: left;
+			border: none;
+		}
+		.go-back{
+			position: absolute;
+			right: 18px;
+		}
+	</style>
+
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<div class="go-back">
+				<button class="layui-btn layui-btn-normal">返回上一页</button>
+			</div>
+			<fieldset class="layui-elem-field" style="margin-top: 40px;">
+				<legend>楼盘信息</legend>
+				<!--<div class="layui-field-box">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<label class="layui-form-label">楼盘所在地区：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">河北石家庄市新华区</label>
+							</div>
+							<label class="layui-form-label">楼盘名称：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">荣鼎小区</label>
+							</div>
+							<label class="layui-form-label">建筑面积：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">10000</label>
+								<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 50px;">平方米</label>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">租赁价格：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">55</label>
+								<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">元/平米/月</label>
+							</div>
+							<label class="layui-form-label">物业费：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">2</label>
+								<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">元/平米/月</label>
+							</div>
+							<label class="layui-form-label">空调：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">中央空调</label>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">地上停车位数量：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">5000</label>
+								<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">个</label>
+							</div>
+							<label class="layui-form-label">地下停车位数量：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">2000</label>
+								<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">个</label>
+							</div>
+							<label class="layui-form-label">宽带网络：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">联通</label>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">开发商：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">联通</label>
+							</div>
+							<label class="layui-form-label">物业公司：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">联通</label>
+							</div>
+							<label class="layui-form-label">楼盘地址：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label" style="text-align: left;padding: 9px 0px;">联通</label>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">楼盘描述：</label>
+							<div class="layui-input-inline">
+								<label class="layui-form-label1" style="text-align: left;padding: 9px 0px;">咋复活哦啊死分红和爱上佛爱上覅叫师傅就哦啊发生及偶发那地方能开发能力非农和奥菲斯哦啊佛奥方式叫师傅  评价佛丁佛和及佛山东方</label>
+							</div>
+						</div>
+
+					</form>
+				</div>-->
+				<div class="layui-form message">
+					<table class="layui-table">
+						<tbody>
+							<tr>
+								<td>楼盘所在地区：</td>
+								<td>河北石家庄市新华区</td>
+								<td>楼盘名称：</td>
+								<td>荣鼎天下</td>
+								<td>建筑面积：</td>
+								<td>50平方米</td>
+							</tr>
+							<tr>
+								<td>租赁价格：</td>
+								<td>元/平米/月</td>
+								<td>物业费：</td>
+								<td>元/平米/月</td>
+								<td>空调</td>
+								<td>有</td>
+							</tr>
+							<tr>
+								<td>地上停车位数量：</td>
+								<td>0个</td>
+								<td>地下停车位数量：</td>
+								<td>0个</td>
+								<td>宽带网络：</td>
+								<td>联通</td>
+							</tr>
+							<tr>
+								<td>开发商：</td>
+								<td>河北石家庄市新华区</td>
+								<td>物业公司：</td>
+								<td>荣鼎天下</td>
+								<td>楼盘地址：</td>
+								<td>河北省石家庄市裕华区河北师范大学新校区</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="layui-form-item">
+						<label class="layui-form-label">楼盘描述：</label>
+						<div class="layui-input-inline">
+							<label class="layui-form-label1" style="text-align: left;padding: 9px 0px;">咋复活哦啊死分红和爱上佛爱上覅叫师傅就哦啊发生及偶发那地方能开发能力非农和奥菲斯哦啊佛奥方式叫师傅  评价佛丁佛和及佛山东方</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<div class="layui-field-box">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">写字楼:</label>
+						<div class="layui-input-inline">
+							<select name="city" lay-verify="required">
+								<option value=""></option>
+								<option value="0">A座</option>
+								<option value="0">B座</option>
+							</select>
+						</div>
+						<button class="layui-btn layui-btn-normal">搜索</button>
+					</div>
+				</form>
+			</div>
+			<fieldset class="layui-elem-field">
+				<legend>写字楼信息</legend>
+				<!--<div class="layui-form-item">
+					<label class="layui-form-label">楼层数：</label>
+					<div class="layui-input-inline">
+						<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">5000</label>
+						<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">个</label>
+					</div>
+					<label class="layui-form-label">地下层数：</label>
+					<div class="layui-input-inline">
+						<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">2000</label>
+						<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">层</label>
+					</div>
+					<label class="layui-form-label">地下层数：</label>
+					<div class="layui-input-inline">
+						<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">2000</label>
+						<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">层</label>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">电梯数量：</label>
+					<div class="layui-input-inline">
+						<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">5000</label>
+						<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">部</label>
+					</div>
+					<label class="layui-form-label">客梯数量：</label>
+					<div class="layui-input-inline">
+						<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">200</label>
+						<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">部</label>
+					</div>
+					<label class="layui-form-label">货梯数量：</label>
+					<div class="layui-input-inline">
+						<label class="layui-form-label" style="text-align: left;padding: 9px 0px;width: 60px;">2000</label>
+						<label for="" class="layui-form-label" style="text-align: left;padding: 9px 0px;width:90px;">部</label>
+					</div>
+				</div>-->
+				<div class="layui-form message">
+					<table class="layui-table">
+						<tbody>
+							<tr>
+								<td>楼层数：</td>
+								<td>20</td>
+								<td>地下层数：</td>
+								<td>2</td>
+								<td>地上层数：</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>电梯数量：</td>
+								<td>20</td>
+								<td>客梯数量：</td>
+								<td>16</td>
+								<td>货梯数量：</td>
+								<td>4</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</fieldset>
+			<table class="layui-table">
+				<thead>
+					<tr>
+						<th>编号</th>
+						<th>楼盘名称</th>
+						<th>写字楼名称</th>
+						<th>层数</th>
+						<th>楼层名称</th>
+						<th>房间数量</th>
+						<th>房间名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>荣鼎天下</td>
+						<td>A座</td>
+						<td>1</td>
+						<td>1层</td>
+						<td>12</td>
+						<td>101,102,103,104,105,106,107,108,109,110,111,112</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>荣鼎天下</td>
+						<td>A座</td>
+						<td>2</td>
+						<td>2层</td>
+						<td>12</td>
+						<td>101,102,103,104,105,106,107,108,109,110,111,112</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div id="demo7" style="float: right; margin-right: 150px;"></div>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script>
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'form', 'laydate', 'laypage'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate;
+			var laypage = layui.laypage;
+			//一些事件监听
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			laydate.render({
+				elem: '#date'
+			});
+			laypage.render({
+				elem: 'demo7',
+				count: 100,
+				layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+				jump: function(obj) {
+					console.log(obj)
+				}
+			});
+
+			//自定义验证规则
+
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta itemprop="name" content="TIM-专注团队沟通协作">
+    <meta name="keywords" content="TIM,tim,QQ,办公QQ,团队协作,云文件,在线文档,云盘,日程关系" />
+    <meta name="description" content="TIM，QQ办公简洁版，是一款专注于团队办公协作的跨平台沟通工具。登录后，你的QQ好友都在，提供云文件、在线文档、邮件、日程、收藏等好用的办公功能，界面简洁清晰，QQ好友和消息无缝同步。" />
+    <!--分享卡标题预埋meta-->
+    <meta name="description" itemprop="description" content="支持云文件、在线文档、邮件收发、日程等办公功能；支持QQ号登录，与QQ消息无缝同步。" />
+    <!--分享卡描述预埋meta-->
+    <!--分享卡图片URL预埋meta-->
+    <title>TIM-下载</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/download.css">
+    <script>
+        // 移动端跳转
+        var OS = function() {
+            var a = navigator.userAgent,
+                b = /(?:Android)/.test(a),
+                d = /(?:Firefox)/.test(a),
+                e = /(?:Mobile)/.test(a),
+                f = b && e,
+                g = b && !f,
+                c = /(?:iPad.*OS)/.test(a),
+                h = !c && /(?:iPhone\sOS)/.test(a),
+                k = c || g || /(?:PlayBook)/.test(a) || d && /(?:Tablet)/.test(a),
+                a = !k && (b || h || /(?:(webOS|hpwOS)[\s\/]|BlackBerry.*Version\/|BB10.*Version\/|CriOS\/)/.test(a) || d && e);
+            return {
+                android: b,
+                androidPad: g,
+                androidPhone: f,
+                ipad: c,
+                iphone: h,
+                tablet: k,
+                phone: a
+            }
+        }();
+        if (OS.phone || OS.ipad) {
+            location.href = './mobile/index.html';
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="header scrollTop">
+        <div class="h-inner">
+            <h1 class="logo">
+                <a href="./index.html"></a>
+            </h1>
+            <div class="nav">
+                <ul class="nav-ul">
+                    <li class="nav-item"><a href="./index.html">首页</a></li>
+                    <li class="nav-item"><a href="./download.html" class="active">下载</a></li>
+                    <!-- <li class="nav-item"><a href="">用户故事</a></li> -->
+                    <li class="nav-item"><a href="./support.html">支持</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="d-content">
+        <div class="a-download clear">
+            <div class="down-ietm windows">
+                <div class="down-ietm-inner">
+                    <div class="logo-area">
+                        <div class="itemlogo"></div>
+                    </div>
+                    <div class="info-area">
+                        <div class="d-item-title">Windows版</div>
+                        <div class="d-item-desc">版本2.1.0 <span class="update-time">2017-12-21</span></div>
+                        <div class="down-btn"><a href="#" onClick="tcssReport('tim.downloads.windows');">下载</a></div>
+                        <div class="d-item-log"><a href="./support.html">更新日志</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="down-ietm iphone">
+                <div class="down-ietm-inner">
+                    <div class="logo-area">
+                        <div class="itemlogo"></div>
+                    </div>
+                    <div class="info-area">
+                        <div class="d-item-title">iPhone版</div>
+                        <div class="d-item-desc">版本2.1.5 <span class="update-time">2018-02-02</span></div>
+                        <div class="down-btn"><a>下载</a></div>
+                        <div class="scan">请用手机扫码下载</div>
+                        <div class="d-item-log"><a href="./support.html">更新日志</a></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="down-ietm android">
+                <div class="down-ietm-inner">
+                    <div class="logo-area">
+                        <div class="itemlogo"></div>
+                    </div>
+                    <div class="info-area">
+                        <div class="d-item-title">Android版</div>
+                        <div class="d-item-desc">版本2.1.5 <span class="update-time">2018-01-31</span></div>
+                        <div class="down-btn"><a href="#" onClick="tcssReport('tim.downloads.android');">下载</a></div>
+                        <div class="scan">请用手机扫码下载</div>
+                        <div class="d-item-log"><a href="./support.html">更新日志</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="macqq">
+            Mac QQ 现在已支持在线文档和日程功能，<a href="#" onClick="tcssReport('tim.downloads.macqq');">立即下载</a>。
+        </div>
+    </div>
+    <div class="footer d-page">
+        <p><span class="useradjest"><a href="http://play.mobile.qq.com/yy/eim/help/serverinfo.html">用户协议</a></span><span>反馈群：</span>XXXXXXXXXXX</p>
+        <p class="copy-right">Copyright © 1998-<script>document.write(new Date().getFullYear())</script> XXX. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.  版权所有</p>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bj-report-tryjs.min.js"></script>
+    <script>
+        window.tcssReport = function(hottag, domain) { /*点击流上报*/
+            if (typeof pgvSendClick == 'function') {
+                pgvSendClick({
+                    virtualDomain: domain || "tim.qq.com",
+                    hottag: hottag
+                });
+            }
+        };
+        tcssReport('tim.downloads.pv')
+            // 不同下载hover效果
+        $('.down-ietm').hover(function() {
+            $(this).addClass('hover')
+            $(this).find('.itemlogo').addClass('animation')
+        }, function() {
+            $(this).removeClass('hover')
+            $(this).find('.itemlogo').removeClass('animation')
+        })
+
+        function initFooter() {
+            var footerTop = $('.footer').offset().top
+            var wh = $(window).height()
+            var fh = $('.footer').height()
+            if (footerTop < wh - fh) {
+                $('.footer').addClass('fixed')
+            }
+        }
+        initFooter()
+    </script>
+
+
+</body>
+
+</html>

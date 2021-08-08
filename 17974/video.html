@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>video</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			blockquote {
+				margin-top: 10px;
+			}
+			
+			.clear {
+				clear: both;
+			}
+			
+			#conte {
+				width: 1600px;
+				margin: 0 auto;
+			}
+			
+			.site-demo-button .layui-btn {
+				margin: 0 7px 10px 10px;
+			}
+			
+			.layui-row {
+				padding-top: 20%;
+			}
+			
+			.grid-demo-bg1 {
+				text-align: center;
+			}
+			
+			.grid-demo-bg1 a {
+				color: #FFFFFF;
+			}
+			
+			.btn {
+				padding-bottom: 10%;
+				margin-top: 100px;
+				text-align: center;
+			}
+			
+			.video_left {
+				float: left;
+			}
+			
+			.person {
+				position: absolute;
+				margin-top: -400px;
+				margin-left: 360px;
+			}
+			
+			.video_left {
+				width: 500px;
+				background: rgba(0, 19, 34, 1);
+				padding: 10px;
+				margin-left: 40px;
+				border-radius: 10px;
+			}
+			
+			.icon {
+				margin-top: 10px;
+			}
+			
+			.video_left1 {
+				float: left;
+				margin-left: 50px;
+				background: #D2D2D2;
+				border-radius: 10px;
+				width: 900px;
+				height: 456px;
+				padding: 1%;
+			}
+			
+			.layui-table td {
+				border: none;
+			}
+			
+			.data_commen {
+				display: inline-block;
+			}
+			
+			.table_forl {
+				float: left;
+			}
+			
+			.for1_data span {
+				display: block;
+				border-bottom: 1px solid #d2d2d2;
+			}
+			
+			.for_btm {
+				background: #FFFFFF;
+			}
+			
+			.for1_data {
+				border-left: 1px solid #d2d2d2;
+				padding-left: 40px;
+				margin-left: 50px;
+			}
+			
+			.for1_data span {
+				width: 280px;
+			}
+			
+			.for1_data span label {
+				color: #1E9FFF;
+			}
+			
+			.fuwu {
+				display: inline-block;
+				float: left;
+				margin-left: 16px;
+			}
+			
+			.fuwu button {
+				margin: 10px 0;
+				height: 45px;
+				width: 100px;
+			}
+			
+			.fuwu_list {
+				float: left;
+				margin: 20px 0 0 20px;
+			}
+			
+			.fuwu_list button {
+				width: 120px;
+				margin: 10px 22px;
+			}
+			
+			.video_left1 table {
+				border-radius: 5px;
+			}
+			
+			.video_left1 tr td span {
+				font-weight: 700;
+			}
+			
+			.for1_data span {
+				line-height: 25px;
+				color: #A1A1A1;
+				padding-left: 15px;
+			}
+			
+			.diatitle div {
+				background: #FF5722;
+				padding: 10px;
+				color: #FFFFFF;
+				border-radius: 5px 5px 0 0;
+			}
+			
+			.diabody {
+				background: #D2D2D2;
+				padding-top: 10px;
+			}
+			
+			.touxiang2 {
+				width: 32px;
+				height: 32px;
+				float: right;
+			}
+			
+			.duihuakuang {
+				background: #FFFFFF;
+				padding: 10px;
+				margin-left: 20px;
+				height: 170px;
+				overflow: auto;
+				width: 460px
+			}
+			
+			.user_in p {
+				background: url(images/dia_bg.png);
+				background-repeat: no-repeat;
+				padding: 8px 30px 8px 15px;
+				font-size: 13px;
+				display: inline-block;
+			}
+			
+			.admin_in {
+				float: right;
+			}
+			
+			.admin1_in {
+				margin-top: 10px;
+				float: right;
+			}
+			
+			.admin_in p {
+				background: url(images/dia_bg1.png);
+				background-repeat: no-repeat;
+				padding: 7px 35px 7px 15px;
+				display: inline-block;
+				color: #FFFFFF;
+			}
+			
+			.admin1_in p {
+				background: url(images/dia_bg2.png);
+				background-repeat: no-repeat;
+				padding: 2px 35px 0px 15px;
+				width: 276px;
+				line-height: 15px;
+				display: inline-block;
+				color: #FFFFFF;
+			}
+			
+			.user_in span {
+				color: #8D8D8D;
+				display: inline-block;
+				margin-top: 5px;
+				margin-left: 40px;
+			}
+			
+			.admin_in span {
+				color: #8D8D8D;
+				display: inline-block;
+				margin-top: 5px;
+				margin-right: 40px;
+			}
+			
+			.admin1_in span {
+				color: #8D8D8D;
+				display: inline-block;
+				margin-top: 5px;
+				margin-right: 40px;
+			}
+			
+			#fuwu_name {
+				margin: 10px 0 10px 20px;
+			}
+			#type button{
+				margin: 10px 20px;
+				width: 122px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="containe">
+			<img src="images/video_bg.png" style="position: fixed;left: 0;right: 0;top: 0; width: 100%;z-index: -1;" />
+			<div class="layui-container">
+				<div class="layui-row">
+					<div class="grid-demo grid-demo-bg1">
+						<a href="javascript:;"><img src="http://t.cn/RCzsdCq" class="layui-nav-img" style="width:100px;height:100px;"></a>
+						<br />
+						<br />
+						<a href="javascript:;">15232154879</a>
+						<br />
+						<br />
+						<a href="javascript:;">河北省 石家庄市</a>
+					</div>
+					<br />
+					<div class="btn">
+						<button class="layui-btn layui-btn-lg reves">接听</button>
+						<button class="layui-btn layui-btn-danger layui-btn-lg">挂断</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="padding: 15px;display: none;" class="layui-anim layui-anim-upbit" id="conte">
+			<div class="video_left">
+				<img src="images/video.png" style="width: 500px;height: 420px;" />
+				<img src="images/video1.png" class="person" />
+				<div class="icon">
+					<!--<a href=""><i class="layui-icon" style="font-size: 36px; color: #1E9FFF;font-weight: 900;">&#xe61f;</i></a>-->
+					<a href=""><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;font-weight: 900;"><img src="images/plus.png"/></i></a>
+					<a href=""><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;font-weight: 900;"><img src="images/tel.png"/></i></a>
+					<!--<a href=""><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;font-weight: 900;">&#xe65d;</i></a>-->
+					<a href=""><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;font-weight: 900;float: right;background: #1E9FFF;border-radius: 50%;padding: 2px;"><img src="images/camera.png"/></i></a>
+				</div>
+			</div>
+			<div class="video_left1">
+				<table class="layui-table" style="border: none;width: 98%;margin-left: 1%;">
+					<tbody>
+						<tr>
+							<td>手机号码:<span>13803361200</span></td>
+							<td>归属地：<span>河北省石家庄市</span></td>
+							<td rowspan="3"><img src="images/user.png" /></td>
+						</tr>
+						<tr>
+							<td>机主姓名：<span>王晓明</span></td>
+							<td>身份证：<span><input type="text" value="130106198802150716"/></span></td>
+						</tr>
+						<tr>
+							<td>机主年龄：<span>29</span></td>
+							<td>性别：<span>女</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<img src="images/photo.png" style="width: 70px;height: 70px;margin-left: 2%;" />
+				<img src="images/photo1.png" style="width: 70px;height: 70px;" />
+				<div class="for_btm">
+					<div class="layui-tab" style="padding: 10px;margin-top: 20px;">
+						<ul class="layui-tab-title">
+							<li class="layui-this" style="background: #1E9FFF;color: #ffffff;">当前工单<span>20171028587321 - 001</span></li>
+						</ul>
+						<div class="table_forl" style="margin-top: 15px;">
+							<div class="data_commen">
+								<span style="display: block;"><img src="images/user_re.png" /></span>
+								<div class="layui-btn layui-btn-normal" style="width: 100%;">
+									<p>身份识别</p>
+								</div>
+							</div>
+							<div class="data_commen">
+								<span style="display: block;"><img src="images/sign.png" /></span>
+								<div class="layui-btn layui-btn-normal" style="width: 100%;">
+									<p>签字确认</p>
+								</div>
+							</div>
+							<div class="data_commen">
+								<span style="display: block;"><img src="images/pay.png" /></span>
+								<div class="layui-btn layui-btn-normal" style="width: 100%;">
+									<p>在线支付</p>
+								</div>
+							</div>
+						</div>
+						<div class="table_forl" style="margin-top: 10px;margin-left: 10px;">
+							<div class="for1_data">
+								<span style="color: #A1A1A1;">历史工单</span>
+								<span><label for="">20170921893201 - 003</label> 补卡</span>
+								<span><label for="">20170921893201 - 002</label> 套餐变更</span>
+								<span><label for="">20170921893201 - 001</label> 查询资费</span>
+								<span><label for="">20170917893320 - 001</label> 充值</span>
+								<span><label for="">20170921663298 - 001</label> 手机购买</span>
+							</div>
+
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div style="width: 520px;margin-left: 40px;border-radius: 10px;margin-top: 20px;float: left;">
+				<div class="diatitle">
+					<div>聊天窗口</div>
+				</div>
+				<div class="diabody">
+					<div class="diabody">
+						<div class="duihuakuang">
+							<ul>
+								<li class="user_in">
+									<img src="images/touxiang1.png" />
+									<p>我的身份证号码 130105198801150638</p>
+									<br />
+									<span>2017/10/20  10:53:21</span>
+								</li>
+								<li class="admin_in">
+									<p>收到，谢谢</p>
+									<img src="images/touxiang2.png" class="touxiang2" />
+									<br />
+									<span>2017/10/20  10:53:21</span>
+								</li>
+								<div class="clear"></div>
+								<li class="admin1_in">
+									<img src="images/touxiang2.png" class="touxiang2" />
+									<p>我们将通过摄像头为您拍照，以便与您的身份证进行校验比对</p>
+									<br />
+									<span>2017/10/20  10:53:21</span>
+								</li>
+								<li class="admin1_in">
+									<p style="padding: 8px 35px 8px 15px">请您保持坐姿，不要来回摇晃，谢谢！</p>
+									<img src="images/touxiang2.png" class="touxiang2" />
+									<br />
+									<span>2017/10/20  10:53:21</span>
+								</li>
+							</ul>
+						</div>
+						<div id="fuwu_name">
+							<button class="layui-btn layui-btn-danger business layui-btn-disabled" data-method="setTop">业务受理</button>
+							<button class="layui-btn layui-btn-danger business" data-method="setTop">身份识别</button>
+							<button class="layui-btn layui-btn-danger business layui-btn-disabled" data-method="setTop">发送协议</button>
+							<button class="layui-btn layui-btn-danger business" data-method="setTop">在线收款</button>
+						</div>
+					</div>
+					<textarea style="width: 480px;height: 100px;margin-left: 20px;margin-bottom: 10px;">
+				</textarea>
+				<button class="layui-btn layui-btn-normal" data-method="setTop" style="position: absolute;margin-left: -75px;margin-top: 55px;">发送</button>
+				</div>
+				
+			</div>
+			<div style="float: left; margin-top: 22px;margin-left: 55px;background: #D2D2D2;height: 422px;border-radius: 5px;">
+				<div style="margin-left: 100px;" id="type">
+					<button class="layui-btn layui-btn-normal">手机卡</button>
+					<button class="layui-btn layui-btn-primary">购机</button>
+					<button class="layui-btn layui-btn-primary">选号充值</button>
+					<button class="layui-btn layui-btn-primary">宽带业务</button>
+					<button class="layui-btn layui-btn-primary">其他</button>
+				</div>
+				<div class="fuwu">
+					<button class="layui-btn layui-btn-normal ">关键业务</button>
+					<br />
+					<button class="layui-btn layui-btn-primary">非关键任务</button>
+					<br />
+					<button class="layui-btn layui-btn-primary ">业务查选</button>
+					<br />
+					<button class="layui-btn layui-btn-primary ">咨询类业务</button>
+					<br />
+					<button class="layui-btn layui-btn-primary ">充值缴费</button>
+				</div>
+				<div class="fuwu_list">
+					<button class="layui-btn layui-btn-primary">更改密码服务</button>
+					<button class="layui-btn layui-btn-primary">手机卡补卡</button>
+					<button class="layui-btn layui-btn-primary">手机卡过户</button>
+					<button class="layui-btn layui-btn-primary">手机卡销户</button>
+					<button class="layui-btn layui-btn-primary">实名登记</button>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use('layer', function() { //独立版的layer无需执行这一句
+			var $ = layui.jquery,
+				layer = layui.layer; //独立版的layer无需执行这一句
+
+			//触发事件
+			var active = {
+				setTop: function() {
+					var that = this;
+					//多窗口模式，层叠置顶
+					layer.open({
+						type: 2 //此处以iframe举例
+							,
+						title: '温馨提示',
+						area: ['600px', '500px'],
+						shade: 0,
+						maxmin: true,
+						offset: [ //为了演示，随机坐标
+							Math.random() * ($(window).height() - 300), Math.random() * ($(window).width() - 390)
+						],
+						content: 'business1.html',
+						btn: ['确定'] //只是为了演示
+							,
+
+						btn2: function() {
+							layer.closeAll();
+						},
+
+					});
+				}
+			};
+
+			$('.business').on('click', function() {
+				var othis = $(this),
+					method = othis.data('method');
+				active[method] ? active[method].call(this, othis) : '';
+			});
+
+		});
+
+		$("#type button").click(function() {
+			$(this).addClass('layui-btn-normal').siblings().removeClass('layui-btn-normal');
+			$(this).removeClass('layui-btn-primary').siblings().addClass('layui-btn-primary');
+		});
+		$(".fuwu button").click(function() {
+			$(this).addClass('layui-btn-normal').siblings().removeClass('layui-btn-normal');
+			$(this).removeClass('layui-btn-primary').siblings().addClass('layui-btn-primary');
+		});
+		$(".fuwu_list button").click(function() {
+			$(this).addClass('layui-btn-normal').siblings().removeClass('layui-btn-normal');
+			$(this).removeClass('layui-btn-primary').siblings().addClass('layui-btn-primary');
+			$('#fuwu_name button').addClass('business').removeClass('layui-btn-disabled');
+		});
+		$('.reves').click(function() {
+			$('.containe').hide();
+			$('#conte').show();
+		});
+	</script>
+
+</html>

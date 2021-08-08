@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>控制台</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+	<style>
+		.layui-table tr th {
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<div class="layui-field-box">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">编号：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">业务名称：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">类别：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">手机卡</option>
+										<option value="2">手机卡-关键业务</option>
+										<option value="3">手机卡-非关键业务</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">业务流程：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">已设置</option>
+										<option value="2">未设置</option>
+									</select>
+								</div>
+							</div>
+							<!--<div class="layui-inline">
+								<label class="layui-form-label">状态：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">启用</option>
+										<option value="2">禁用</option>
+									</select>
+								</div>
+							</div>-->
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">状态：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">启用</option>
+										<option value="2">禁用</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<button class="layui-btn layui-btn-normal" style="position:absolute;right:5%;top:14%;">搜索</button>
+					</form>
+				</div>
+			</fieldset>
+		</div>
+		<div class="layui-row" style="padding: 15px;">
+			<div class="layui-col-md2">
+				<button class="layui-btn layui-btn-danger plus" data-method="setTop">新增</button>
+			</div>
+			<div class="layui-col-md-offset4" style="float: right;">
+				<button class="layui-btn layui-btn-normal plus" data-method="setTop">批量禁用</button>
+				<button class="layui-btn layui-btn-normal plus" data-method="setTop">批量启用</button>
+				<button class="layui-btn layui-btn-normal plus" data-method="setTop">批量删除</button>
+			</div>
+			<!--<button class="layui-btn layui-btn-normal" style="float:right;margin-right:5%;top: 2.4%;">批量导出</button>-->
+			<div style="clear: both;"></div>
+			<div style="margin-top: 30px;" class="layui-anim layui-anim-upbit">
+				<fieldset class="layui-elem-field">
+					<div class="layui-field-box">
+						<div class="layui-form">
+							<table class="layui-table" style="text-align: center;">
+								<thead>
+									<tr>
+										<th><input type="checkbox" name="like1[read]" lay-skin="primary"></th>
+										<th>工单编号</th>
+										<th>客户信息</th>
+										<th>客服信息</th>
+										<th>发起时间</th>
+										<th>视频时长</th>
+										<th>业务数量</th>
+										<th>费用金额</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" name="like1[read]" lay-skin="primary"></td>
+										<td>1564646146749816</td>
+										<td>1523215414 张三</td>
+										<td>389157 刘明杰</td>
+										<td>2017-12-12 00：00</td>
+										<td>5：18</td>
+										<td>2</td>
+										<td>1000</td>
+										<td>
+											<a href="#" data-method="setTop" class="fllow layui-bg-blue">跟进</a>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="like1[read]" lay-skin="primary"></td>
+										<td>1564646146749816</td>
+										<td>1523215414 张三</td>
+										<td>389157 刘明杰</td>
+										<td>2017-12-12 00：00</td>
+										<td>5：18</td>
+										<td>2</td>
+										<td>1000</td>
+										<td>
+											<a href="#" data-method="setTop" class="fllow layui-bg-blue">跟进</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use('layer', function() { //独立版的layer无需执行这一句
+			var $ = layui.jquery,
+				layer = layui.layer; //独立版的layer无需执行这一句
+
+			//触发事件
+			var active = {
+				setTop: function() {
+					var that = this;
+					//多窗口模式，层叠置顶
+					layer.open({
+						type: 2 //此处以iframe举例
+							,
+						title: '新增-业务',
+						area: ['600px', '500px'],
+						shade: 0,
+						maxmin: true,
+						offset: [ //为了演示，随机坐标
+							Math.random() * ($(window).height() - 300), Math.random() * ($(window).width() - 390)
+						],
+						content: 'plus.html',
+						btn: ['保存','取消'] //只是为了演示
+							,
+
+						btn2: function() {
+							layer.closeAll();
+						},
+
+					});
+				}
+			};
+
+			$('.plus').on('click', function() {
+				var othis = $(this),
+					method = othis.data('method');
+				active[method] ? active[method].call(this, othis) : '';
+			});
+
+		});
+	</script>
+	<script>
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+
+			//日期范围
+			laydate.render({
+				elem: '#test6',
+				range: true
+			});
+
+		});
+
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'form', 'laydate'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate;
+			//一些事件监听
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			laydate.render({
+				elem: '#date'
+			});
+
+			//自定义验证规则
+			form.verify({
+				title: function(value) {
+					if(value.length < 5) {
+						return '标题至少得5个字符啊';
+					}
+				},
+				pass: [/(.+){6,12}$/, '密码必须6到12位']
+			});
+
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+
+</html>

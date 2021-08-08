@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta itemprop="name" content="TIM-专注团队沟通协作">
+    <meta name="keywords" content="TIM,tim,QQ,办公QQ,团队协作,云文件,在线文档,云盘,日程关系" />
+    <meta name="description" content="TIM，QQ办公简洁版，是一款专注于团队办公协作的跨平台沟通工具。登录后，你的QQ好友都在，提供云文件、在线文档、邮件、日程、收藏等好用的办公功能，界面简洁清晰，QQ好友和消息无缝同步。" />
+    <!--分享卡标题预埋meta-->
+    <meta name="description" itemprop="description" content="支持云文件、在线文档、邮件收发、日程等办公功能；支持QQ号登录，与QQ消息无缝同步。" />
+    <!--分享卡描述预埋meta-->
+    <!--分享卡图片URL预埋meta-->
+    <title>TIM-支持</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/support.css">
+    <script>
+        // 移动端跳转
+        var OS = function() {
+            var a = navigator.userAgent,
+                b = /(?:Android)/.test(a),
+                d = /(?:Firefox)/.test(a),
+                e = /(?:Mobile)/.test(a),
+                f = b && e,
+                g = b && !f,
+                c = /(?:iPad.*OS)/.test(a),
+                h = !c && /(?:iPhone\sOS)/.test(a),
+                k = c || g || /(?:PlayBook)/.test(a) || d && /(?:Tablet)/.test(a),
+                a = !k && (b || h || /(?:(webOS|hpwOS)[\s\/]|BlackBerry.*Version\/|BB10.*Version\/|CriOS\/)/.test(a) || d && e);
+            return {
+                android: b,
+                androidPad: g,
+                androidPhone: f,
+                ipad: c,
+                iphone: h,
+                tablet: k,
+                phone: a
+            }
+        }();
+        if (OS.phone || OS.ipad) {
+            location.href = './mobile/index.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header scrollTop">
+        <div class="h-inner">
+            <h1 class="logo">
+                <a href="./index.html"></a>
+            </h1>
+            <div class="nav">
+                <ul class="nav-ul">
+                    <li class="nav-item"><a href="./index.html">首页</a></li>
+                    <li class="nav-item"><a href="./download.html">下载</a></li>
+                    <!-- <li class="nav-item"><a href="">用户故事</a></li> -->
+                    <li class="nav-item"><a href="support.html" class="active">支持</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="support-list clear">
+        <div class="s-list-item">
+            <a href="#logs" class="target-a">
+                <div class="item1 hover-item"></div>
+                <div class="s-desc">更新日志</div>
+            </a>
+        </div>
+        <div class="s-list-item">
+            <a href="#questions" class="target-a">
+                <div class="item2 hover-item"></div>
+                <div class="s-desc">常见问题</div>
+            </a>
+        </div>
+        <div class="s-list-item">
+            <a target="_blank" href="#" class="target-a">
+                <div class="item3 hover-item"></div>
+                <div class="s-desc">安全中心</div>
+            </a>
+        </div>
+        <div class="s-list-item">
+            <a href="#" target="_blank" class="target-a">
+                <div class="item4 hover-item"></div>
+                <div class="s-desc">反馈意见</div>
+            </a>
+        </div>
+    </div>
+    <div class="l-content" id="logs">
+        <!-- <div class="content-icon">
+            <div class="icon-text">更新日志</div>
+        </div> -->
+        <div class="update-log">更新日志</div>
+        <div class="version-list">
+
+            <div class="version-item newest">
+                <div class="newversion">手机版 2.1.5 <span class="update-time">2018-02-02</span></div>
+                <div class="newfunc">
+                    <div class="newfunc-title">新功能：</div>
+                    <div class="newfunc-list">云文件新增分类导航栏，可按最近浏览、本机文件等分类快速查找文件；</div>
+                    <div class="newfunc-list">在线文档支持会议纪要、日报、项目管理信息表等Word/Excel模版，办公编辑更高效；</div>
+                    <!-- <div class="newfunc-list">群文件新增群在线文档，群成员可创建、编辑、删除在线文档，团队协作更轻松；</div> -->
+                    <div class="newfunc-list">支持聊天记录免费漫游1年，聊天消息多端存储不再丢失；</div>
+                    <div class="newfunc-list">群主、管理员可撤回群成员发送的恶意消息，不良信息更易管控。</div>
+                </div>
+                <!-- <div class="newversion">Android版 2.1.0 <span class="update-time">2017-12-28</span></div>
+                <div class="newfunc">
+                    <div class="newfunc-title">新功能：</div>
+                    <div class="newfunc-list">聊天发送的消息文字较多时，可进入文本编辑模式，支持换行编辑；</div>
+                    <div class="newfunc-list">长按聊天时收发的图片，可识别图中文字，并支持收藏、搜索、翻译；</div>
+                    <div class="newfunc-list">云文件支持接入WPS云盘，可选择云盘内的文件进行浏览、下载及发送给好友。</div>
+                </div> -->
+            </div>
+            <div class="history-version">
+                <div class="history-version-title">历史版本</div>
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">2.1.0版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 2.1.0 <span class="update-time">2018-01-05</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">聊天发送的消息文字较多时，可进入文本编辑模式，支持换行编辑；</div>
+                        <div class="newfunc-list">长按聊天时收发的图片，可识别图中文字，并支持收藏、搜索、翻译；</div>
+                        <div class="newfunc-list">云文件支持接入WPS云盘，可选择云盘内的文件进行浏览、下载及发送给好友。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">顶部搜索栏支持搜索聊天记录；</div>
+                        <div class="newfunc-list">图片和视频查看体验优化。</div>
+                    </div>
+                    <br>
+                    <div class="newversion">PC版 2.1.0 <span class="update-time">2017-12-21</span></div>
+                    <div class="newfunc">
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">云文件支持拖拽操作，拖动文件可上传及下载。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">顶部搜索栏支持搜索聊天记录；</div>
+                        <div class="newfunc-list">图片和视频查看体验优化。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">2.0.6版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">iPhone 2.0.6 <span class="update-time">2017-12-7</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">收发的Word/Excel文件可在手机上编辑，自动生成在线文档，分享发送更便捷。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">提升版本稳定性，修复部分场景下的系统兼容问题。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">2.0.5版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">iPhone 2.0.5 <span class="update-time">2017-11-09</span></div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">在线文档支持批量删除，文件管理更便捷；</div>
+                        <div class="newfunc-list">支持清理本机已下载的文件，轻松管理手机空间；</div>
+                        <div class="newfunc-list">视觉界面优化，提升iPhone X的使用体验；</div>
+                        <div class="newfunc-list">适配iOS11系统，增强性能稳定性。</div>
+                    </div>
+                    <div class="newfunc">
+                        <div class="newversion">Android 2.0.5 <span class="update-time">2017-12-07</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">可授权登录QQ邮箱，已发邮件查看、通讯录管理等功能一手掌握；</div>
+                        <div class="newfunc-list">可绑定企业邮箱，快捷查找联系人，收发工作邮件更方便；</div>
+                        <div class="newfunc-list">收发的Word/Excel文件可在手机上编辑，自动生成在线文档，分享发送更便捷。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">可批量删除在线文档，清理无用文件；</div>
+                        <div class="newfunc-list">支持清理本机已下载的文件，释放手机空间。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">2.0.1版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 2.0.1 <span class="update-time">2017-10-31</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">免费10G云盘空间，存储内容多端实时同步，文件管理更便捷；</div>
+                        <div class="newfunc-list">聊天时收发的文件可转存为云文件，重要文件长期存储，随时查看；</div>
+                        <div class="newfunc-list">聊天时可选择云文件内容直接发送，快捷高效；</div>
+                        <div class="newfunc-list">支持创建文件夹，可在文件夹中上传本地文件以及第三方云盘文件；</div>
+                        <div class="newfunc-list">在线文档迁移至云文件内，可对文件进行增、删、改等操作，管理更轻松；</div>
+                        <div class="newfunc-list">支持显示当前帐号在电脑端的登录状态，可快速传文件到电脑，并查看电脑上的文件；</div>
+                        <div class="newfunc-list">支持面对面快传文件，免流量传输更方便。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">消息列表界面右滑可进入联系人界面，操作更方便；</div>
+                        <div class="newfunc-list">云文件新增“本机文件”入口，本地文件轻松上传；</div>
+                        <div class="newfunc-list">云文件新增“微云”入口，云盘文件实时同步。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">2.0.0版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">PC版 2.0.0 <span class="update-time">2017-10-26</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">在线文档迁移至云文件内，可对文件进行增、删、改等操作，管理更轻松；</div>
+                        <div class="newfunc-list">聊天时收发的文件可转存为云文件，重要文件长期存储，随时查看；</div>
+                        <div class="newfunc-list">享受100G超大空间，随时保存文件并查看；</div>
+                        <div class="newfunc-list">支持聊天记录漫游2年，聊天消息多端存储不再丢失；</div>
+                        <div class="newfunc-list">新增福利中心，美食、出行福利多多，等你来领；</div>
+                        <div class="newfunc-list">免费10G云盘空间，存储内容多端实时同步，文件管理更便捷。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">降低内存占用，优化性能体验。</div>
+                    </div>
+                </div>
+
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 2.0.0 <span class="update-time">2017-10-14</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">免费10G云盘空间，存储内容多端实时同步，文件管理更便捷；</div>
+                        <div class="newfunc-list">聊天时收发的文件可转存为云文件，重要文件长期存储，随时查看；</div>
+                        <div class="newfunc-list">聊天时可选择云文件内容直接发送，快捷高效；</div>
+                        <div class="newfunc-list">支持创建文件夹，可在文件夹中上传本地文件以及第三方云盘文件；</div>
+
+                        <div class="newfunc-list">支持显示当前帐号在电脑端的登录状态，可快速传文件到电脑，并查看电脑上的文件；</div>
+                        <div class="newfunc-list">支持面对面快传文件，免流量传输更方便；</div>
+                        <div class="newfunc-list">新增福利中心，美食、出行福利多多，等你来领；</div>
+                        <div class="newfunc-list">在线文档迁移至云文件内，可对文件进行增、删、改等操作，管理更轻松。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">消息漫游优化，提供超长消息漫游能力；</div>
+                        <div class="newfunc-list">全新视觉风格，内容展现更清晰。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">1.2.0版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">PC版 1.2.0 <span class="update-time">2017-08-17</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">会话面板可自由调整宽度，简洁界面，办公更高效；</div>
+                        <div class="newfunc-list">日程新增周视图，一周工作轻松一览；</div>
+                        <div class="newfunc-list">加好友及加群界面精简，便捷操作，轻松添加；</div>
+                        <div class="newfunc-list">多终端同步，收到的@消息在手机端已读时，PC端不再重复提醒；</div>
+                        <div class="newfunc-list">降低内存占用，优化性能体验。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">降低内存占用，优化性能体验。</div>
+                    </div>
+                </div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 1.2.0 <span class="update-time">2017-08-16</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">新增名片夹功能，可扫描纸质名片生成电子版直接保存；</div>
+                        <div class="newfunc-list">可将聊天时收发的Word、Excel文件转为在线文档，多人实时协作共同编辑；</div>
+                        <div class="newfunc-list">邮箱功能升级，可代收多个QQ邮箱帐号的邮件；</div>
+                        <div class="newfunc-list">QQ群支持新建和分享日程，与群友一同关注重要事项；</div>
+                        <div class="newfunc-list">日程可显示农历日期，方便查看传统节日等重要日期。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">日程提醒可提前1天或2天，重要事项提前关注；</div>
+                        <div class="newfunc-list">日程功能支持缓存和增量更新，省时省流量。</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">1.1.5版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">PC 1.1.5 <span class="update-time">2017-06-09</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">资料卡增加空间入口；</div>
+                        <div class="newfunc-list">资料卡可设置备注信息、查看之前在QQ备注的信息；</div>
+                        <div class="newfunc-list">日程：支持设置重复日程，比如每周例会、每天晨会、每周给父母打电话之类场景；</div>
+                        <div class="newfunc-list">日程显示农历。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">首次使用TIM用户，会将你设置了不提醒的群默认收到不常用群聊（避免过多的群消息干扰）；</div>
+                        <div class="newfunc-list">首次使用TIM用户，消息列表只提取新消息，点击“查看历史”才显示历史消息；</div>
+                        <div class="newfunc-list">消息列表增加右键：关闭全部会话，一键清空左侧消息列表（处女座有救了）；</div>
+                        <div class="newfunc-list">解决了偶现的PC和手机消息不同步问题；</div>
+                        <div class="newfunc-list">卡顿和内存继续优化；</div>
+                        <div class="newfunc-list">更醒目的新邮件提示；</div>
+                        <div class="newfunc-list">搜索框的视觉改造；</div>
+                        <div class="newfunc-list">修复bug若干。</div>
+                    </div>
+                </div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 1.1.5 <span class="update-time">2017-06-02</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">在聊天界面点击日程时，可以新建日程和分享我的日程；</div>
+                        <div class="newfunc-list">日程界面支持周视图展示；</div>
+                        <div class="newfunc-list">新建日程时，可以设置日程重复提醒（例如：每天、每周、每月）；</div>
+                        <div class="newfunc-list">支持免费升级高级帐户，可获得100G个人办公云盘空间，2年超长消息漫游。</div>
+                    </div>
+                    <div class="optimization">
+
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">将联系人中的“我的设备”提到好友分组最前面；</div>
+                        <div class="newfunc-list">优化了邮件功能的部分细节体验；</div>
+                        <div class="newfunc-list">精简代码，缩减安装包大小；</div>
+                        <div class="newfunc-list">屏蔽了送礼物等功能和动画；</div>
+                        <div class="newfunc-list">修复bug若干。</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">1.1.0版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">PC版 1.1.0 <span class="update-time">2017-05-11</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">可查看月日历，包括节假日和休假安排；</div>
+                        <div class="newfunc-list">可安排个人日程，发送会议或活动邀请给他人；</div>
+                        <div class="newfunc-list">日程提醒，不错过重要事件；</div>
+                        <div class="newfunc-list">在聊天窗口中能智能分析，提示新建日程；</div>
+                        <div class="newfunc-list">在线文档支持权限管理，可设置特定成员的可读、可编辑权限；</div>
+                        <div class="newfunc-list">可导入Word和Excel文件到在线文档；</div>
+                        <div class="newfunc-list">支持历史记录回滚。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">聊天窗口：群组右侧栏关闭后默认显示小箭头，方便再次展开右侧栏；</div>
+                        <div class="newfunc-list">讨论组右侧hover出mini资料卡；</div>
+                        <div class="newfunc-list">初次打开不常用群聊可批量设置，以解决群太多要一个个设置的麻烦；</div>
+                        <div class="newfunc-list">屏蔽和TIM无关的一些tips，比如手机连接等；</div>
+                        <div class="newfunc-list">反馈入口在设置的第一级，方便用户反馈问题；</div>
+                        <div class="newfunc-list">快捷键补充：ESC可隐藏大面板，Alt+C可连续关闭会话；</div>
+                        <div class="newfunc-list">性能优化，减少卡顿；</div>
+                        <div class="newfunc-list">修复若干bugs。</div>
+                    </div>
+                </div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 1.1.0 <span class="update-time">2017-05-02</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">重新设计的注册、登录界面，体验更好；</div>
+                        <div class="newfunc-list">聊天界面支持快速搜索聊天记录、文件和成员；</div>
+                        <div class="newfunc-list">在线文档现在支持权限管理；</div>
+                        <div class="newfunc-list">在聊天界面可以给好友发送在线文档；</div>
+                        <div class="newfunc-list">日程功能支持月视图，支持显示系统日程，还能查看节假日信息；</div>
+                        <div class="newfunc-list">智能识别消息内容，一键创建日程。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">聊天界面的拍照和短视频合并，长按拍照就可以录短视频；</div>
+                        <div class="newfunc-list">全局搜索可以清除搜索历史；</div>
+                        <div class="newfunc-list">优化了消息列表界面细节，更简约；</div>
+                        <div class="newfunc-list">优化了在线文档的大量编辑体验；</div>
+                        <div class="newfunc-list">优化了Logo的细节；</div>
+                        <div class="newfunc-list">提高稳定性并修复bug若干。</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="history-version-item">
+                <div class="clickup">收起<span class="blue-up"></span></div>
+                <div class="history-version-item-title">1.0.5版本<span class="arrow"></span></div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">PC版 1.0.5 <span class="update-time">2017-03-10</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">安装包缩小，删减了12个不必要模块；</div>
+                        <div class="newfunc-list">性能优化：登录速度、打开消息、切换消息速度加快；</div>
+                        <div class="newfunc-list">消息列表左侧可拖动，解决部分用户觉得左侧信息偏少的问题；</div>
+                        <div class="newfunc-list">群设置改为菜单模式，增加常用快捷入口；</div>
+                        <div class="newfunc-list">资料卡优化，可以清晰看到操作按钮；</div>
+                        <div class="newfunc-list">去除遗漏的边角广告；</div>
+                        <div class="newfunc-list">修复bug若干。</div>
+                    </div>
+                </div>
+                <div class="history-version-item-content">
+                    <div class="newfunc">
+                        <div class="newversion">手机版 1.0.5 <span class="update-time">2017-03-10</span></div>
+                        <div class="newfunc-title">新功能：</div>
+                        <div class="newfunc-list">增加36个常用新表情；</div>
+                        <div class="newfunc-list">邮件可以分邮箱进行管理；</div>
+                        <div class="newfunc-list">邮件支持搜索、附件本地打开等体验优化。</div>
+                    </div>
+                    <div class="optimization">
+                        <div class="newfunc-title">优化：</div>
+                        <div class="newfunc-list">优化一级界面内容滚动时的体验，顶部栏可以缩短高度；</div>
+                        <div class="newfunc-list">优化一二级界面切换时的细节，过渡更平滑；</div>
+                        <div class="newfunc-list">大幅降低闪退几率，提高稳定性；</div>
+                        <div class="newfunc-list">优化联系人界面、资料卡上的细节体验；</div>
+                        <div class="newfunc-list">邮箱界面中没有邮件时做了体验更好的引导；</div>
+                        <div class="newfunc-list">修复bug若干。</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="questions" id="questions">
+        <!-- <div class="ques-icon"></div>
+        <div class="ques-text">常见问题</div> -->
+        <div class="dayly-ques">常见问题</div>
+        <div class="ques-list">
+            <div class="ques-item-title">如何注册、登录TIM？</div>
+            <div class="ques-item-content">如何注册：TIM是QQ的一个子品牌，使用的是QQ的帐号体系，可以直接在客户端的注册界面或QQ.com上注册QQ号。 <br>如何登录：TIM使用的是QQ帐号体系，可以直接使用你已有的QQ号，或重新注册一个QQ号来登录使用。
+            </div>
+        </div>
+        <div class="ques-list">
+            <div class="ques-item-title">什么是TIM云文件？</div>
+            <div class="ques-item-content">拥有10G免费的个人云端存储空间，多端同步；自动转存聊天中的收发文件，长期有效；更支持多人在线编辑word和excel。</div>
+        </div>
+        <div class="ques-list">
+            <div class="ques-item-title">TIM云文件会占用我的微云云盘容量吗？</div>
+            <div class="ques-item-content">不会占用，TIM云文件是由微云提供底层技术，TIM团队研发的独立的个人云空间。</div>
+        </div>
+        <div class="ques-list">
+            <div class="ques-item-title">什么是TIM在线文档？</div>
+            <div class="ques-item-content">TIM内目前已支持在线编辑word和excel，你可以自己编辑文档，更可邀请好友一同在线编辑。</div>
+        </div>
+        <div class="ques-list">
+            <div class="ques-item-title">使用在线文档能为工作带来什么？</div>
+            <div class="ques-item-content">云端存储不丢失，多人协作更便利。支持导入本地文档，支持查看修订记录。
+            </div>
+        </div>
+        <!-- <div class="ques-list">
+            <div class="ques-item-title">数据文件升级后，旧的数据文件还会保留吗？</div>
+            <div class="ques-item-content">为了防止数据异常，您的旧版本数据文件仍将保留下来，位置为~/Library/ Containers/com.XXX.qq/Data/Library/Application Support/QQ/ 您的QQ号码>文件名是Msg2.0.db.history。您可以备份或者删除这个数据文件。</div>
+        </div> -->
+        <div class="more-ques">
+            <!-- <a href="http://kf.qq.com/product/QQ.html#hid=1749" target="_blank">更多问题</a> -->
+        </div>
+    </div>
+    <!-- <div class="safe">
+        <div class="safe-icon"></div>
+        <div class="safe-text">安全中心</div>
+        <div class="safe-content">帐号出问题了？快来<a href="https://aq.qq.com/cn2/index" target="_blank">QQ安全中心</a>看看。</div>
+    </div>
+    <div class="suggest">
+        <div class="suggest-icon"></div>
+        <div class="suggest-text">反馈意见</div>
+
+        <div class="suggest-content">让TIM更好用，去<a href="http://support.qq.com/write.shtml?fid=1207&client=tim&ADPUBNO&ADUIN=2466704359&ADSESSION=1507516433&ADTAG=CLIENT.QQ.5537_MainMenu_HelpMenu.0&ADPUBNO=26693" target="_blank">反馈中心</a>提建议。</div>
+    </div> -->
+    <div class="footer">
+        <p><span class="useradjest"><a href="#">用户协议</a></span><span>反馈群：</span>XXXXXXXXXXX</p>
+        <p class="copy-right">Copyright © 1998-<script>document.write(new Date().getFullYear())</script> XXX. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.  版权所有</p>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bj-report-tryjs.min.js"></script>
+    <script>
+        window.tcssReport = function(hottag, domain) { /*点击流上报*/
+            if (typeof pgvSendClick == 'function') {
+                pgvSendClick({
+                    virtualDomain: domain || "tim.qq.com",
+                    hottag: hottag
+                });
+            }
+        };
+        tcssReport('tim.support.pv')
+        $('.history-version-item-title').click(function() {
+            $(this).parent('.history-version-item').find('.history-version-item-content').slideToggle('fast')
+            $(this).parent('.history-version-item').find('.clickup').toggleClass('show')
+            $(this).toggleClass('show')
+        })
+        $('.clickup').click(function() {
+            $(this).parent('.history-version-item').find('.history-version-item-content').slideToggle('fast')
+            $(this).parent('.history-version-item').find('.clickup').toggleClass('show')
+            $(this).parent('.history-version-item').find('.history-version-item-title').toggleClass('show')
+        })
+    </script>
+
+
+</body>

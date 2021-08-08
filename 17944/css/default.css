@@ -1,0 +1,238 @@
+﻿@charset "utf-8";
+
+* {
+    font-family: Microsoft YaHei,Helvetica,Arial,sans-serif;
+    white-space: normal;
+    padding: 0px;
+    margin: 0px;
+}
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+body {
+    font-size: 12px;
+    background-color:#EEEEEE;
+    min-width:1000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+ul, li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+a:hover {
+}
+
+a:hover, a:active, a:focus {
+    outline: 0;
+}
+
+hr {
+    margin: 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #dbd8d8;
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/***********************************index************************************/
+.menu-tab{
+    height:80px;
+    position:relative;
+}
+.menu-tab ul li{
+    display:block;
+    width:15%;
+    background-color: #fff;
+    -webkit-border-radius:10px;
+    -moz-border-radius:5px;
+    -o-border-radius:5px;
+    -ms-border-radius:5px;
+    border-radius:5px;
+    position:absolute;
+}
+.menu-tab ul li.tab-item-1{
+    top:0;
+    left:0;
+}
+.menu-tab ul li.tab-item-2{
+    top:0;
+    left:17%;
+}
+.menu-tab ul li.tab-item-3{
+    top:0;
+    left:34%;
+}
+.menu-tab ul li.tab-item-4{
+    top:0;
+    left:51%;
+}
+.menu-tab ul li.tab-item-5{
+    top:0;
+    left:68%;
+}
+.menu-tab ul li.tab-item-6{
+    top:0;
+    left:85%;
+}
+.menu-tab ul li a{
+    display:block;
+    width:100%;
+    padding: 10px 0px;
+    font-size:14px;
+    color:#333; 
+    text-align: center;
+}
+.h3-title{
+    padding-left:2px;
+    height:24px;
+    line-height:24px;
+    font-size:15px;
+    font-weight:bold;
+    color:#666666;
+    /*border-left:3px solid #363640;*/
+    margin:10px 0px;
+}
+.inner_content-box{
+    border:1px solid #f5f5f5;
+    background-color:#FFFFFF;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    -ms-border-radius:10px;
+    border-radius:10px;
+}
+.inner_content-box .table-box {
+    width:100%;
+    display: table;
+}
+.inner_content-box .table-box tbody{
+    width:100%;
+    margin:0px 20px;
+}
+.inner_content-box .table-box tr th,.inner_content-box .table-box tr td {
+    padding: 12px 0px;
+    text-align: left;
+    font-size:14px;
+    color:#666666;
+    border-top: 1px solid #EEEEEE;
+    text-indent:20px;
+}
+.inner_content-box .table-box tr th{
+    padding: 8px;
+    background-color:#E4E4E4;
+    border:none;
+}
+.inner_content-box .table-box .tr-first td,.inner_content-box .table-box .tr-first th{
+    border-top:none;
+} 
+.inner_content-box .table-box tr td .click-close{
+    padding:3px 5px;
+    background-color:#4456FF;
+    color:#FFFFFF;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    -ms-border-radius:3px;
+    border-radius:3px;
+    cursor:pointer;
+}
+/***********************************服务器************************************/
+.inner_content-box .table-box tr .tdLeft{
+	width:14%;text-align:left;text-indent: 5px;
+}
+.inner_content-box .table-box tr .tdRight{
+	width:5%; text-align:right;
+}
+/***********************************系统升级************************************/
+.timeline {
+    padding: 30px 0;
+}
+.timeline ol {
+    background: url(../images/timeline.png) repeat-y 228px 0;
+}
+.timeline ol li {
+    overflow: hidden;
+    *zoom: 1;
+    padding: 10px 0 10px 285px;
+    position: relative;
+}
+.timeline h2 {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-align: right;
+    width: 180px;
+    font-size: 15px;
+    margin-right: 105px;
+}
+ .timeline h2 span {
+    display: block;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+ .timeline .detail em, .timeline h2 em {
+    background: url(../images/sprites.png) no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+}
+ .timeline h2 em, .timeline .detail em {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: absolute;
+}
+ .timeline h2 em {
+    width: 33px;
+    height: 44px;
+    background-position: -134px 0;
+    right: -67px;
+    top: 0;
+}
+em, i {
+    font-style: normal;
+}
+.timeline .detail {
+    border: 1px solid #dedede;
+    position: relative;
+    background: #fff;
+    padding: 10px 15px;
+    color: #7f7f7f;
+}
+.timeline .detail em {
+    width: 17px;
+    height: 26px;
+    background-position: -150px -44px;
+    left: -17px;
+    _left: -32px;
+    top: 20px;
+}
+.timeline ol ul li {
+    padding: 2px 0;
+}

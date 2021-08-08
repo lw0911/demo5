@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>控制台</title>
+		<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+		<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			.layui-row {
+				margin-top: 10px;
+				padding: 0 10px;
+			}
+			
+			.layui-btn {
+				margin-left: 5px;
+			}
+			
+			hr {
+				border: none;
+				border-top: 1px #d2d2d2 dotted;
+			}
+			
+			.select {
+				padding: 0 10px;
+			}
+			.fllow{
+				color: #01AAED;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<div class="layui-row">
+			<div class="layui-col-xs10">
+				<div class="grid-demo grid-demo-bg1">
+					<div class="layui-form-item">
+						<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-xs2">
+				<div class="grid-demo">
+					<button class="layui-btn layui-btn-normal">搜索</button>
+				</div>
+			</div>
+			<hr />
+		</div>
+		<div class="layui-row">
+			<div class="layui-col-xs11">
+				<div class="select layui-col-md-offset1">
+					<button class="layui-btn layui-btn-normal">手机卡类</button>
+					<button class="layui-btn layui-btn-primary">购机类</button>
+					<button class="layui-btn layui-btn-primary">宽带类</button>
+					<button class="layui-btn layui-btn-primary">充值缴费类</button>
+					<button class="layui-btn layui-btn-primary">其他</button>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row">
+			<div class="layui-col-md1">
+				<p style="text-align: right; line-height: 40px;">二级类别：</p>
+			</div>
+			<div class="layui-col-xs11" style="margin-left: -2px;">
+				<div class="section">
+					<button class="layui-btn layui-btn-primary" id="secleAll">全部</button>
+					<button class="layui-btn layui-btn-primary part">关键业务</button>
+					<button class="layui-btn layui-btn-primary part">非关键任务</button>
+					<button class="layui-btn layui-btn-primary part">查询任务</button>
+					<button class="layui-btn layui-btn-primary part">资讯任务</button>
+				</div>
+			</div>
+		</div>
+		<table class="layui-table">
+			<thead>
+				<tr>
+					<th>知识编号</th>
+					<th>标题</th>
+					<th>浏览次数</th>
+					<th>作者</th>
+					<th>发布日期</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="#"  data-method="setTop" class="fllow">1546</a></td>
+					<td>手机卡注销业务</td>
+					<td>216</td>
+					<td>孙涛</td>
+					<td>2017-01-03</td>
+				</tr>
+				<tr>
+					<td><a href="#"  data-method="setTop" class="fllow">1546</a></td>
+					<td>手机卡注销业务</td>
+					<td>216</td>
+					<td>孙涛</td>
+					<td>2017-01-03</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		
+
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'form','laypage', 'laydate'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate;
+			var laypage = layui.laypage,
+		
+			//一些事件监听
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			laydate.render({
+				elem: '#date'
+			});
+
+			//自定义验证规则
+			form.verify({
+				title: function(value) {
+					if(value.length < 5) {
+						return '标题至少得5个字符啊';
+					}
+				},
+				pass: [/(.+){6,12}$/, '密码必须6到12位']
+			});
+
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+	<script>
+		$('.select>.layui-btn').click(function() {
+			$(this).addClass('layui-btn-normal').siblings().removeClass('layui-btn-normal');
+			$(this).removeClass('layui-btn-primary').siblings().addClass('layui-btn-primary');
+		});
+		$('#secleAll').click(function() {
+			if($(this).hasClass('layui-btn-primary')) {
+				$(this).addClass('layui-btn-normal').removeClass('layui-btn-primary');
+				$(this).siblings().addClass('layui-btn-normal').removeClass('layui-btn-primary');
+			} else {
+				$(this).addClass('layui-btn-primary').removeClass('layui-btn-normal');
+				$(this).siblings().addClass('layui-btn-primary').removeClass('layui-btn-normal');
+			}
+		});
+		$('.part').click(function() {
+			if($(this).hasClass('layui-btn-primary')) {
+				$(this).addClass('layui-btn-normal').removeClass('layui-btn-primary');
+			} else {
+				$(this).addClass('layui-btn-primary').removeClass('layui-btn-normal');
+			}
+		});	
+	</script>
+	<script>
+		layui.use('layer', function() { //独立版的layer无需执行这一句
+			var $ = layui.jquery,
+				layer = layui.layer; //独立版的layer无需执行这一句
+
+			//触发事件
+			var active = {
+				setTop: function() {
+					var that = this;
+					//多窗口模式，层叠置顶
+					layer.open({
+						type: 2 //此处以iframe举例
+							,
+						title: '这块是标题',
+						area: ['600px', '500px'],
+						shade: 0,
+						maxmin: true,
+						offset: [ //为了演示，随机坐标
+							Math.random() * ($(window).height() - 300), Math.random() * ($(window).width() - 390)
+						],
+						content: 'tanceng2.html',
+						btn: ['关闭'] //只是为了演示
+							,
+
+						btn2: function() {
+							layer.closeAll();
+						},
+
+					});
+				}
+			};
+
+			$('.fllow').on('click', function() {
+				var othis = $(this),
+					method = othis.data('method');
+				active[method] ? active[method].call(this, othis) : '';
+			});
+
+		});
+	</script>
+
+</html>

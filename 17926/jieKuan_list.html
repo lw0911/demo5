@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Bootstrap core CSS -->
+		<link href="public/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+		<link href="public/animate.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	    <script src="../../../https@oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	    <script src="../../../https@oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<!-- Custom styles for this template -->
+		<!--<link href="css/style.css" rel="stylesheet">-->
+		<script src="public/jquery-1.11.3.js"></script>
+		<!--<script type="text/javascript" src="js/5icool.org.js"></script>-->
+		<script src="public/bootstrap.min.js"></script>
+		
+		<link href="public/inspinia.css" rel="stylesheet">
+		<link href="css/new.css" rel="stylesheet">
+		<link href="css/5icool.org.css" type="text/css" rel="stylesheet" />
+		<style>
+			.create-approve-module {
+				width: 800px !important;
+				top: 15px !important;
+				bottom: 15px !important;
+			}
+			
+			.create-approve-step2 {
+				display: none;
+			}
+			
+			.create-approve-step3 {
+				display: none;
+			}
+		</style>
+		<title>信息管理系统</title>
+
+	</head>
+
+	<body>
+		<!--<div style="height:100%;" id="wrapper" class="container">
+		<div  id="list" class="wrapper wrapper-content animated fadeInRight">	-->
+		<div class="hb_tabPanel_body" id="body_001" style="display: block;">
+			<div class="approve-container">
+				<div class="approve-top-cont">
+					<ul class="approve-ul">
+						<li class="self-request selected" id="self-request">
+							<a href="#tab-item1">我的申请</a>
+						</li>
+						<li class="self-approve" id="self-approve">
+							<a href="#tab-item2">我的审批</a>
+						</li>
+					</ul>
+					<span class="new-approve crm-button-yellow"><a href="#">提交新申请</span>
+
+				</div>
+				<div class="approve-body-cont">
+					<div class="approve-left-nav">
+						<div class="left-nav-cont">
+							<ul id="tab-item1" class="tab-item active">
+								<li class="on" id="self-request-00001">
+									<a href="#daiShen">待审批</a>
+								</li>
+								<li id="self-request-00002" class="">
+									<a href="#yiPi">已批准</a>
+								</li>
+								<li id="self-request-00003" class="">
+									<a href="#yiFou">已否决</a>
+								</li>
+								<li id="self-request-00004" class="">
+									<a href="#daiQueRen">待确认</a>
+								</li>
+							</ul>
+							<ul id="tab-item2" class="tab-item hide">
+								<li class="on" id="self-approve-00001">未审批</li>
+								<li id="self-approve-00002" class="">已审批</li>
+							</ul>
+						</div>
+						<div class="content-area ps-container" data-ps-id="6767458e-af78-3912-0b48-5e998c2b8284">
+							<div class="content-unread-area"></div>
+							<div class="approve-boundary" style="display: none;">以上是未读信息</div>
+							<div class="content-read-area">
+								<div class="approve-content-block" id="block" data-state="1" data-module="3"><span class=""><img src="" alt="" style="display:none"></span>
+									<div id="daiShen" class="approve-content-item active">
+										<div class="approve-content-msg">
+											<span class="approve-person"></span>
+											<span class="approve-describe"></span>
+											<span class="approve-type">请假申请</span>
+											<span class="approve-ident">[HBQJ201610110003]</span>
+											<span class="approve-msg-tips" style="display:block">等待<strong>李文乐</strong>审批</span>
+										</div>
+										<div class="approve-content-time">2016-10-11 15:02:25</div>
+									</div>
+									<div id="yiPi" class="approve-content-item">
+										<div class="approve-content-msg">
+											<span class="approve-person"></span>
+											<span class="approve-describe"></span>
+											<span class="approve-type">请假申请</span>
+											<span class="approve-ident">[HBQJ201610110001]</span>
+											<span class="approve-msg-tips" style="display:none">等待<strong></strong>审批</span>
+										</div>
+										<div class="approve-content-time">2016-10-11 14:53:48</div>
+									</div>
+									<div id="yiFou" style="height:60px;" class="no-msg-tips">暂无数据</div>
+									<div id="daiQueRen" style="height:60px;" class="no-msg-tips">暂无数据</div>
+								</div>
+							</div>
+
+							<div class="load-container" style="display: none;"><span class="load-approve-data">加载更多</span></div>
+						</div>
+					</div>
+					<div class="approve-right-nav">
+						<div class="approve-detail-inner hide">
+							<div class="approve-detail-left">
+								<div class="approve-detail-left-inner">
+									<div class="detail_left_head"><span class="detail_left_title">请假申请</span></div>
+									<div class="approve-detail-body-inner">
+										<div class="approve-receipt-title">
+											客户编号：
+											<span class="approve-receipt-number">HBQJ201610110003</span>
+										</div>
+										<div class="approve-detail-content-area">
+											<table width="675px">
+												<tbody>
+													<tr>
+														<th style="width: 80px;">客户名称：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">刘永&nbsp;</div>
+														</td>
+														<th style="width: 80px;padding-left:10px">状态：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">2016-10-11 15:02:25&nbsp;</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<table width="675px">
+												<tbody>
+													<tr>
+														<th style="width: 80px;">客户类型：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">全公司&nbsp;</div>
+														</td>
+														<th style="width: 80px;padding-left:10px">客户区域：</th>
+														<td style="width: 255px;">
+															<input type="text" class="int" name="arType" id="arType" readonly="readonly">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<table width="675px">
+												<tbody>
+													<tr>
+														<th style="width: 80px;">客户地址：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">2016-10-11&nbsp;</div>
+														</td>
+														<th style="width: 80px;padding-left:10px">负责人：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">1:00&nbsp;</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<table width="675px">
+												<tbody>
+													<tr>
+														<th style="width: 80px;">修改时间：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">2016-10-12&nbsp;</div>
+														</td>
+														<th style="width: 80px;padding-left:10px">最后更新：</th>
+														<td style="width: 255px;">
+															<div class="bottom-grey">1:00&nbsp;</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<table width="675px">
+												<tbody>
+													<tr>
+														<th style="width: 80px;">参与人：</th>
+														<td colspan="3" style="width:590px;">
+															<div class="bottom-grey">1单位(天)&nbsp;</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="tab_list">
+											<ul class="tab_box">
+												<li class="select_tab">联系人</li>
+												<li>相关合同</li>
+												<li>设备信息</li>
+												<li>交往记录</li>
+												<li>tab5</li>
+												<li>tab6</li>
+											</ul>
+										</div>
+										<div class="top_tab_box">
+											<div class="active">
+												<table class="table table-striped table-bordered table-hover dataTables-example">
+													<thead>
+														<tr>
+															<th>索引</th>
+															<th>单据号</th>
+															<th>发生日期</th>
+															<th>费用金额</th>
+															<th>费用类型</th>
+															<th>票据类型</th>
+															<th>费用明细</th>
+															<th>创建时间</th>
+															<th>费用核定</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div>
+												<table class="table table-striped table-bordered table-hover dataTables-example">
+													<thead>
+														<tr>
+															<th>索引</th>
+															<th>单据号</th>
+															<th>发生日期</th>
+															<th>费用金额</th>
+															<th>费用类型</th>
+															<th>票据类型</th>
+															<th>费用明细</th>
+															<th>创建时间</th>
+															<th>费用核定</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div>
+												<table class="table table-striped table-bordered table-hover dataTables-example">
+													<thead>
+														<tr>
+															<th>索引</th>
+															<th>单据号</th>
+															<th>发生日期</th>
+															<th>费用金额</th>
+															<th>费用类型</th>
+															<th>票据类型</th>
+															<th>费用明细</th>
+															<th>创建时间</th>
+															<th>费用核定</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div>
+												<table class="table table-striped table-bordered table-hover dataTables-example">
+													<thead>
+														<tr>
+															<th>索引</th>
+															<th>单据号</th>
+															<th>发生日期</th>
+															<th>费用金额</th>
+															<th>费用类型</th>
+															<th>票据类型</th>
+															<th>费用明细</th>
+															<th>创建时间</th>
+															<th>费用核定</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div>
+												<table class="table table-striped table-bordered table-hover dataTables-example">
+													<thead>
+														<tr>
+															<th>索引</th>
+															<th>单据号</th>
+															<th>发生日期</th>
+															<th>费用金额</th>
+															<th>费用类型</th>
+															<th>票据类型</th>
+															<th>费用明细</th>
+															<th>创建时间</th>
+															<th>费用核定</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td>1</td>
+															<td>2016-07-27</td>
+															<td>257.50</td>
+															<td>城际交通(动车高铁)</td>
+															<td>增值税发票</td>
+															<td>邯郸到唐山市第二医院</td>
+															<td>2016-07-27</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div>
+												<div class="approve-evalate-area">
+													<div class="approve-release-block">
+														<div class="approve-release-image"><span class="crm-image-show-client" data-userid="100000363558" style="width: 40px; height: 40px; line-height: 40px; background-color: rgb(241, 188, 184);">李</span></div>
+														<div class="approve-main-info">
+															<div class="approve-release-title">
+																<span class="approve-user-title">李文乐</span>
+																<span class="approve-user-depname">李文乐查看请假申请</span>
+															</div>
+															<div class="approve-release-con">
+																<div class="approve-release-content"></div>
+															</div>
+															<div class="approve-release-file"></div>
+															<div class="approve-release-footer">
+																<a class="approve-time" href="javascript:void(0);">昨天15:13</a>
+																<a class="approve-comment" href="javascript:void(0);">评论(0)</a>
+															</div>
+														</div>
+													</div>
+													<div class="approve-release-block">
+														<div class="approve-release-image"><span class="crm-image-show-client" data-userid="100000341876" style="width: 40px; height: 40px; line-height: 40px; background-color: rgb(92, 179, 137);">刘</span></div>
+														<div class="approve-main-info">
+															<div class="approve-release-title">
+																<span class="approve-user-title">刘永</span>
+																<span class="approve-user-depname">刘永审批通过</span>
+															</div>
+															<div class="approve-release-con">
+																<div class="approve-release-content">刘永审批通过了请假申请</div>
+															</div>
+															<div class="approve-release-file"></div>
+															<div class="approve-release-footer">
+																<a class="approve-time" href="javascript:void(0);">昨天15:02</a>
+																<a class="approve-comment" href="javascript:void(0);">评论(0)</a>
+															</div>
+														</div>
+													</div>
+													<div class="approve-release-block">
+														<div class="approve-release-image"><span class="crm-image-show-client" data-userid="100000341876" style="width: 40px; height: 40px; line-height: 40px; background-color: rgb(92, 179, 137);">刘</span></div>
+														<div class="approve-main-info">
+															<div class="approve-release-title">
+																<span class="approve-user-title">刘永</span>
+																<span class="approve-user-depname">刘永提交请假申请</span>
+															</div>
+															<div class="approve-release-con">
+																<div class="approve-release-content"></div>
+															</div>
+															<div class="approve-release-file"></div>
+															<div class="approve-release-footer">
+																<a class="approve-time" href="javascript:void(0);">昨天15:02</a>
+																<a class="approve-comment" href="javascript:void(0);">评论(0)</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="approve-detail-right">
+
+								<div class="demo">
+									<div class="history">
+										<div class="history-date">
+											<ul>
+												<h2 class="first">
+													<a href="#nogo">2017年</a>
+													<!--<img src="images/img05.gif" alt="ICS计算机主板电源维修" />-->
+													华山医院
+												</h2>
+												<li class="green">
+													<h3>10.08<span>2017</span></h3>
+													<dl>
+														<dt>ICS计算机主板电源维修<span>计划工单</span></dt>
+													</dl>
+												</li>
+												<li>
+													<h3>07.19<span>2017</span></h3>
+													<dl>
+														<dt>自定义交流内容<span>交往记录 </span></dt>
+													</dl>
+												</li>
+												<li class="green">
+													<h3>07.02<span>2017</span></h3>
+													<dl>
+														<dt>合同管理<span>签订SIEMENSDURA 202球馆租赁合同</span></dt>
+													</dl>
+												</li>
+											</ul>
+										</div>
+										<div class="history-date">
+											<ul>
+												<h2 class="date02"><a href="#nogo">2011年</a></h2>
+												<li>
+													<h3>12.12<span>2016</span></h3>
+													<dl>
+														<dt>ICS计算机主板电源维修<span>电源维修</span></dt>
+													</dl>
+												</li>
+												<li class="green">
+													<h3>11.24<span>2016</span></h3>
+													<dl>
+														<dt>合同管理<span>签订SIEMENSDURA 202球馆租赁合同</span></dt>
+													</dl>
+												</li>
+											</ul>
+										</div>
+										<div class="history-date">
+											<ul>
+												<h2 class="date02"><a href="#nogo">2015年</a></h2>
+												<li>
+													<h3>12.13<span>2015</span></h3>
+													<dl>
+														<dt>ICS计算机主板电源维修<span>电源维修</span></dt>
+													</dl>
+												</li>
+												<li class="green">
+													<h3>11.24<span>2011</span></h3>
+													<dl>
+														<dt>签订SIEMENSDURA 202球馆租赁合同<span>合同管理</span></dt>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div id="none" class="approve-no-msg active">暂无数据</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--</div>
+	</div>-->
+		
+		<script type="text/javascript" src="js/5icool.org.js"></script>
+		<script>
+			
+			$(document).click(function() {
+				if($('.top_right', window.parent.document).hasClass('open')) {
+					$('.top_right', window.parent.document).removeClass('open');
+				}
+				if($('.msg', window.parent.document).hasClass('open')) {
+					$('.msg', window.parent.document).removeClass('open');
+				}
+			})
+
+			$('.approve-ul>li').click(function() {
+				$(this).addClass('selected').siblings().removeClass('selected');
+				var id = $(this).find('a').attr('href');
+				$(id).removeClass('hide').addClass('active').siblings().addClass('hide').removeClass('active');
+				$('.approve-detail-inner').removeClass('active').addClass('hide');
+				$('#none').removeClass('hide').addClass('active');
+			})
+			$('.tab-item>li').click(function() {
+				$(this).addClass('on').siblings().removeClass('on');
+				var id = $(this).find('a').attr('href');
+				$(id).addClass('active').siblings().removeClass('active');
+				$('.approve-detail-inner').removeClass('active').addClass('hide');
+				$('#none').removeClass('hide').addClass('active');
+			})
+
+			$('#block').click(function() {
+				$('#none').removeClass('active').addClass('hide');
+				$('.approve-detail-inner').removeClass('hide').addClass('active');
+				systole();
+			})
+
+			$('.tab_list>.tab_box>li').click(function() {
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var index = $(this).index();
+				$('.top_tab_box>div:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+
+</html>

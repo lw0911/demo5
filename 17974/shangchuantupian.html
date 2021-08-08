@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>上传图片</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			.layui-upload-img {
+				width: 92px;
+				height: 92px;
+				margin: 0 10px 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<legend>上传</legend>
+				<div class="layui-field-box">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<label class="layui-form-label">APP版本号</label>
+							<div class="layui-inline">
+								<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="APP版本号" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">操作系统</label>
+							<div class="layui-input-block">
+								<input type="checkbox" name="like[iOS]" title="iOS">
+								<input type="checkbox" name="like[Android]" title="Android">
+								<input type="checkbox" name="like[web]" title="web">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">APP名字</label>
+							<div class="layui-inline">
+								<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="APP名字" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">默认</label>
+							<div class="layui-input-block">
+								<input type="radio" name="pretermit" value="Y" title="是" checked="">
+								<input type="radio" name="pretermit" value="N" title="否">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label" style="padding: 9px 0; width: 103px;">Banner图片位置</label>
+							<div class="layui-input-block">
+								<select name="interest" lay-filter="aihao">
+									<option value="0">上</option>
+									<option value="1">中</option>
+									<option value="2" selected="">下</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-upload">
+							<button type="button" class="layui-btn" id="test2">上传图片</button>
+							<blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+								预览图：
+								<div class="layui-upload-list" id="demo2"></div>
+							</blockquote>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</fieldset>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script>
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'form', 'laydate', 'upload'], function() {
+			var $ = layui.jquery;
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate,
+				upload = layui.upload;
+
+			//多图片上传
+			upload.render({
+				elem: '#test2',
+				url: '/upload/',
+				multiple: true,
+				before: function(obj) {
+					var filename = '';
+					//预读本地文件示例，不支持ie8
+					obj.preview(function(index, file, result) {
+						$('#demo2').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img">')
+						filename = filename + file.name + ',';
+					});
+				},
+				done: function(res) {
+					//上传完毕
+				}
+			});
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+
+</html>

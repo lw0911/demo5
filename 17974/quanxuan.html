@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>saa</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+	<!-- 加在body标签中屏蔽右键 oncontextmenu="return false" -->
+
+	<body>
+		<!--表单区域-->
+		<div id="bd" class="layui-form layui-container" style="margin:40px auto">
+			<input type="checkbox" name="" title="写作" lay-skin="primary">
+			<input type="checkbox" name="" title="发呆" lay-skin="primary">
+			<input type="checkbox" name="" title="发呆1" lay-skin="primary">
+		</div>
+		<div class="layui-container layui-form">
+			<button class="layui-btn" id="quanxuan">全选</button>
+			<button class="layui-btn" id="fanxuan">反选</button>
+			<button class="layui-btn" id="buxuan">不选</button>
+		</div>
+
+		<!--表单区域结束-->
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use(['layer', 'form', 'element', 'jquery', 'layer'], function() {
+				var layer = layui.layer,
+					form = layui.form,
+					element = layui.element,
+					$ = layui.$,
+					layer = layui.layer;
+
+				$("#quanxuan").click(function() { //全选
+					$("#bd input[type='checkbox']").prop("checked", true);
+					form.render('checkbox');
+				})
+
+				$("#fanxuan").click(function() { //反选
+					$("#bd input[type='checkbox']").each(function() {
+						if($(this).prop("checked")) {
+							$(this).prop("checked", false);
+						} else {
+							$(this).prop("checked", true);
+						}
+					})
+					form.render('checkbox');
+				})
+
+				$("#buxuan").click(function() { //不选
+					$("#bd input[type='checkbox']").prop("checked", false);
+					form.render("checkbox");
+				})
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,569 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>XXX</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--<div class="searchzone">
+        <div id="notice" class="noticediv"></div>
+        <table width="100%" height="30" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <form id="addgroup" name="addgroup" method="post" action="">
+                            <input name="act" value="addgroup" type="hidden" />
+                            <input id="groupname" name="groupname" class="form-control"  value="请输入菜单组名称" size="22" onfocus="this.value=''" type="text" />
+                            <input name="Submit" value="新增自定义菜单组" class="btn btn-primary" type="Submit" />
+                        </form>
+                    </td>
+
+                    <td height="30" align="right">
+                        <form id="delgroup" method="post" action="">
+                            <input name="groupid" value="2" type="hidden" />
+                            <input name="act" value="delgroup" type="hidden" />
+                            <input name="Submit" value="删除当前菜单组" class="button" style="display:none" type="submit" />
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>-->
+    <div class="formzone">
+        <div class="font-weight">底部菜单</div>
+        <div class="tablezone">
+            <div class="cap">
+                <div class="td" style="width:39px">序号</div>
+                <div class="td" style="width:152px">菜单名称</div>
+                <div class="td" style="width:60px">打开方式</div>
+                <div class="td" style="width:60px">是否显示</div>
+                <div class="td" style="width:290px">链接页面</div>
+                <div class="td" style="width:33px">图标</div>
+
+
+            </div>
+
+            <div class="tr" id="tr_383" style="margin:6px 0px;padding:1px">
+                <form id="form_383" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="1" class="menuinput" type="text" />
+                    <input name="menu" value="关于我们" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+
+
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+
+                    <select id="selcoltype_383" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_383" value="http://" size="22" style="display:none;" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_383" value="page/html/company.php" size="22" style="display: inline; " type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=383'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="383" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_383" border="0" />
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="s_383">
+
+                <div class="subtr">
+                    <form id="form_1416" method="get" action="menu.php" name="colset">
+                        <input name="xuhao" style="width:38px" value="1" class="menuinput" type="text" />
+                        <input name="menu" value="菜单名称" class="menuinput" style="width:110px" type="text" />
+                        <select name="target">
+                            <option value="_self" selected="">原窗口</option>
+                            <option value="_blank">新窗口</option>
+                        </select>
+                        <select name="ifshow">
+                            <option value="1" selected="">显示</option>
+                            <option value="0">隐藏</option>
+                        </select>
+
+                        <select id="selcoltype_1416" name="selcoltype" class="selcoltype">
+                            <option value="index" selected="">站内模块</option>
+                            <option value="zn">站内网址</option>
+                            <option value="zw">站外网址</option>
+                        </select>
+                        <div class="caozuo">
+                            <input name="url" class="menuinput" id="url_selcoltype_1416" value="http://" size="22" style="" type="text" />
+
+                            <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                            <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=383'">新增三级菜单</div>  &nbsp;
+
+                            <input name="id" value="1416" type="hidden" />
+                            <input name="groupid" value="2" type="hidden" />
+                            <input name="step" value="modi" type="hidden" />
+                            <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                            <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                            
+                            &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_383" border="0" />
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="subtr">
+                    <form id="form_1417" method="get" action="menu.php" name="colset">
+                        <input name="xuhao" style="width:38px" value="2" class="menuinput" type="text" />
+                        <input name="menu" value="菜单名称" class="menuinput" style="width:110px" type="text" />
+                        <select name="target">
+                            <option value="_self" selected="">原窗口</option>
+                            <option value="_blank">新窗口</option>
+                        </select>
+                        <select name="ifshow">
+                            <option value="1" selected="">显示</option>
+                            <option value="0">隐藏</option>
+                        </select>
+
+                        <select id="selcoltype_1417" name="selcoltype" class="selcoltype">
+                            <option value="index" selected="">站内模块</option>
+                            <option value="zn">站内网址</option>
+                            <option value="zw">站外网址</option>
+                        </select>
+                        <div class="caozuo">
+                            <input name="url" class="menuinput" id="url_selcoltype_1417" value="http://" size="22" type="text" />
+                            <img src="images/icon.png" alt="..." width="30" height="30" />
+
+
+                            <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=383'">新增三级菜单</div>  &nbsp;
+
+                            <input name="id" value="1417" type="hidden" />
+                            <input name="groupid" value="2" type="hidden" />
+                            <input name="step" value="modi" type="hidden" />
+                            <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                            <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                            &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_383" border="0" />
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+
+            <div id="xs_383">
+
+                <div class="subtr subtrxs">
+                    <form id="form_1416" method="get" action="menu.php" name="colset">
+                        <input name="xuhao" style="width:38px" value="1" class="menuinput" type="text" />
+                        <input name="menu" value="菜单名称" class="menuinput" style="width:68px" type="text" />
+                        <select name="target">
+                            <option value="_self" selected="">原窗口</option>
+                            <option value="_blank">新窗口</option>
+                        </select>
+                        <select name="ifshow">
+                            <option value="1" selected="">显示</option>
+                            <option value="0">隐藏</option>
+                        </select>
+
+                        <select id="selcoltype_1416" name="selcoltype" class="selcoltype">
+                            <option value="index" selected="">站内模块</option>
+                            <option value="zn">站内网址</option>
+                            <option value="zw">站外网址</option>
+                        </select>
+                        <div class="caozuo">
+                            <input name="url" class="menuinput" id="url_selcoltype_1416" value="http://" size="22" type="text" />
+
+                            <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                            <div class="addzanwei"></div>  &nbsp;
+
+                            <input name="id" value="1416" type="hidden" />
+                            <input name="groupid" value="2" type="hidden" />
+                            <input name="step" value="modi" type="hidden" />
+                            <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                            <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                            &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_383" border="0" />
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="subtr subtrxs">
+                    <form id="form_1417" method="get" action="menu.php" name="colset">
+                        <input name="xuhao" style="width:38px" value="2" class="menuinput" type="text" />
+                        <input name="menu" value="菜单名称" class="menuinput" style="width:68px" type="text" />
+                        <select name="target">
+                            <option value="_self" selected="">原窗口</option>
+                            <option value="_blank">新窗口</option>
+                        </select>
+                        <select name="ifshow">
+                            <option value="1" selected="">显示</option>
+                            <option value="0">隐藏</option>
+                        </select>
+
+                        <select id="selcoltype_1417" name="selcoltype" class="selcoltype">
+                            <option value="index" selected="">站内模块</option>
+                            <option value="zn">站内网址</option>
+                            <option value="zw">站外网址</option>
+                        </select>
+                        <div class="caozuo">
+                            <input name="url" class="menuinput" id="url_selcoltype_1417" value="http://" size="22" type="text" />
+                            <img src="images/icon.png" alt="..." width="30" height="30" />
+
+
+                            <div class="addzanwei"></div>  &nbsp;
+
+                            <input name="id" value="1417" type="hidden" />
+                            <input name="groupid" value="2" type="hidden" />
+                            <input name="step" value="modi" type="hidden" />
+                            <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                            <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                            &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_383" border="0" />
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+
+
+            <div class="tr" id="tr_401" style="margin:6px 0px;padding:1px">
+                <form id="form_401" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="2" class="menuinput" type="text" />
+                    <input name="menu" value="服务范围" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+
+
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+
+                    <select id="selcoltype_401" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_401" value="http://" size="22" style="display:none;" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_401" value="page/html/service.php" size="22" style="display: inline; " type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=401'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="401" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_401" border="0" />
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="s_401">
+
+            </div>
+
+
+            <div class="tr" id="tr_402" style="margin:6px 0px;padding:1px">
+                <form id="form_402" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="3" class="menuinput" type="text" />
+                    <input name="menu" value="会员指南" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+
+
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+
+                    <select id="selcoltype_402" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_402" value="http://" size="22" style="display:none;" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_402" value="page/html/guide.php" size="22" style="display: inline; " type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=402'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="402" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_402" border="0" />
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="s_402">
+
+            </div>
+
+
+            <div class="tr" id="tr_386" style="margin:6px 0px;padding:1px">
+                <form id="form_386" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="4" class="menuinput" type="text" />
+                    <input name="menu" value="会员注册" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+
+
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+
+                    <select id="selcoltype_386" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_386" value="http://" size="22" style="display:none;" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_386" value="member/reg.php" size="22" style="display: inline; " type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=386'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="386" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_386" border="0" />
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="s_386">
+
+            </div>
+
+
+            <div class="tr" id="tr_384" style="margin:6px 0px;padding:1px">
+                <form id="form_384" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="5" class="menuinput" type="text" />
+                    <input name="menu" value="会员中心" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+
+
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+
+                    <select id="selcoltype_384" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_384" value="http://" size="22" style="" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_384" value="" size="22" style="display:none;" type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=384'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="384" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_384" border="0" />
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="s_384">
+
+            </div>
+
+
+            <div class="tr" id="tr_385" style="margin:6px 0px;padding:1px">
+                <form id="form_385" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="6" class="menuinput" type="text" />
+                    <input name="menu" value="联系我们" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+
+
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+
+                    <select id="selcoltype_385" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_385" value="http://" size="22" style="display:none;" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_385" value="page/html/contact.php" size="22" style="display: inline; " type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=385'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="385" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_385" border="0" />
+                    </div>
+                </form>
+            </div>
+            <div id="s_385">
+            </div>
+            <div class="tr" id="tr_1415" style="margin:6px 0px;padding:1px">
+                <form id="form_1415" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="205" class="menuinput" type="text" />
+                    <input name="menu" value="菜单名称" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+                    <select id="selcoltype_1415" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_1415" value="http://" size="22" style="" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_1415" value="" size="22" style="display:none;" type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=1415'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="1415" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_1415" border="0" />
+                    </div>
+                </form>
+            </div>
+            <div id="s_1415">
+            </div>
+            <div class="tr" id="tr_1419" style="margin:6px 0px;padding:1px">
+                <form id="form_1419" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="206" class="menuinput" type="text" />
+                    <input name="menu" value="菜单名称" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+                    <select id="selcoltype_1419" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_1419" value="http://" size="22" style="" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_1419" value="" size="22" style="display:none;" type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=1419'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="1419" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_1419" border="0" />
+                    </div>
+                </form>
+            </div>
+            <div id="s_1419">
+            </div>
+            <div class="tr" id="tr_1420" style="margin:6px 0px;padding:1px">
+                <form id="form_1420" method="get" action="menu.php" name="colset">
+                    <input name="xuhao" style="width:38px" value="207" class="menuinput" type="text" />
+                    <input name="menu" value="菜单名称" class="menuinput" style="width:152px" type="text" />
+                    <select name="target">
+                        <option value="_self" selected="">原窗口</option>
+                        <option value="_blank">新窗口</option>
+                    </select>
+                    <select name="ifshow">
+                        <option value="1" selected="">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+                    <select id="selcoltype_1420" name="selcoltype" class="selcoltype">
+                        <option value="index" selected="">站内模块</option>
+                        <option value="zn">站内网址</option>
+                        <option value="zw">站外网址</option>
+                    </select>
+                    <div class="caozuo">
+                        <input name="url" class="menuinput" id="url_selcoltype_1420" value="http://" size="22" style="" type="text" />
+                        <input name="folder" width="225" class="menuinput" id="folder_selcoltype_1420" value="" size="22" style="display:none;" type="text" />
+                        <img src="images/icon.png" alt="..." width="30" height="30" />
+
+
+                        <div class="addsub" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=1420'">新增二级菜单</div>  &nbsp;
+                        <input name="id" value="1420" type="hidden" />
+                        <input name="groupid" value="2" type="hidden" />
+                        <input name="step" value="modi" type="hidden" />
+                        <img src="images/edit.png" style="cursor:pointer" onclick="window.location='news_conmod.php?id=1135&amp;pid=all&amp;page='" />
+                        <img src="images/delete.png" style="cursor:pointer" onclick="window.location='page.php?step=del&amp;id=1&amp;groupid=&amp;page='" />
+                        &nbsp; <img src="images/arrowup.png" class="arrimg" style="cursor:pointer;" id="arr_1420" border="0" />
+                    </div>
+                </form>
+            </div>
+            <div id="s_1420">
+            </div>
+        </div>
+
+        <input value="+新增一级菜单" class="btn btn-default" type="button" onclick="window.location='menu.php?step=add&amp;groupid=2&amp;pid=0'" />
+    </div>
+   
+</body>
+</html>

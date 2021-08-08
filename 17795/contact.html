@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>金麒麟婴儿理发</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body style="background:#fde5ee;">
+ <div class="header">
+  <div class="top">
+   <h1 class="logo">
+    <a href="index.html"><img src="images/logo.png" width="283" height="87" alt="金麒麟婴儿理发" /></a>
+   </h1>
+   <ul class="nav">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="about.html">关于J&acute;KIRIN</a></li>
+    <li><a href="baby.html">宝宝理发</a></li>
+    <li><a href="jinian.html">纪念品系列</a></li>
+    <li><a href="mingjia.html">名家定制</a></li>
+    <li class="navCur"><a href="contact.html">联系我们</a></li>
+    <div class="clears"></div>
+   </ul><!--nav/-->
+   <img src="images/hengfu.png" width="205" height="22" class="hengfu" />
+   <img src="images/phone.png" width="245" height="32" class="phone" />
+  </div><!--top/-->
+ </div><!--header/-->
+ <div class="cont">
+  <div class="contLeft">
+   <div class="leftList">
+    <h2>
+     <span class="ti1">名</span><span class="ti2">家</span><span class="ti3">定</span><span class="ti4">制</span>
+    </h2>
+    <ul class="leftNav">
+     <li class="leftNavCur"><a href="#">联系我们</a></li>
+    </ul><!--leftNav/-->
+   </div><!--leftList/-->
+  </div><!--contLeft/-->
+  <div class="contMid">
+   <div class="positions">
+    &gt;&gt; <span>联系我们</span> / Contact Us
+   </div><!--positions/-->
+   <div class="contact">
+    中国 · 上海 · 普陀区曹杨路1040弄一号楼中友大厦19楼<br />
+Tel：021-31127521 <br />
+传真：021-31127521 <br />
+邮编：200000<br /><br />
+<strong>邮件联络</strong><br /><br />
+
+业务咨询：021-31127521<br />
+投诉建议：kefu@webqin.net <br />
+应聘简历：kefu@webqin.net<br /><br />
+
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<!--百度地图容器-->
+  <div style="width:538px;height:315px;border:#ccc solid 1px;" id="dituContent"></div>
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.488186,31.249409);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"金麒麟婴儿理发",content:"中国&nbsp;·&nbsp;上海&nbsp;·&nbsp;普陀区曹杨路1040弄一号楼中友大厦19楼<br/>Tel：021-31127521&nbsp;<br/>传真：021-31127521&nbsp;<br/>邮编：200000",point:"121.475538|31.24027",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+   </div><!--contact/-->
+  </div><!--contMid/-->
+  <div class="contRight">
+   <form class="login" style="position:static;">
+   <h2>预约上门理发</h2>
+   <div class="loginList">
+    <label>宝宝姓名</label>
+    <input type="text" />
+   </div><!--loginList/-->
+   <div class="loginList">
+    <label>出生日期</label>
+    <input type="text" />
+   </div><!--loginList/-->
+   <div class="loginList">
+    <label>理发日期</label>
+    <input type="text" />
+   </div><!--loginList/-->
+   <div class="loginList">
+    <label>上门地址</label>
+    <input type="text" />
+   </div><!--loginList/-->
+   <div class="loginList">
+    <label>移动电话</label>
+    <input type="text" />
+   </div><!--loginList/-->
+   <div class="sub">
+    <input type="image" src="images/sub.png" />
+   </div><!--sub/-->
+   <div class="loginText">
+    本网站承诺声明保护每位用户个人隐私
+   </div>
+  </form><!--login/-->
+  <br />
+  <embed src="http://player.youku.com/player.php/sid/XNjE0NDYwNTUy/v.swf" allowFullScreen="true" quality="high" width="244" height="200" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+  </div><!--contRight/-->
+  <div class="clears"></div>
+ </div><!--cont/-->
+ <div class="footNav">
+ <div class="footNavBox">
+  <img src="images/yuan.png" width="1201" height="17" class="yuan" />
+  <ul class="fot1">
+   <li><strong><a href="#">关于Jkrin</a></strong></li>
+   <li><a href="#">Jkrin简介</a></li>
+   <li><a href="#">最新活动</a></li>
+   <li><a href="#">英才招聘</a></li>
+  </ul>
+  <ul class="fot2">
+   <li><strong><a href="#">Jkrin原版教材</a></strong></li>
+   <li><a href="#">最新推荐NEW</a></li>
+   <li><a href="#">幼儿园系列</a></li>
+   <li><a href="#">小学系列</a></li>
+   <li><a href="#">学科英语系列</a></li>
+   <li><a href="#">客户反馈</a></li>
+  </ul>
+  <ul class="fot3">
+   <li><strong><a href="#">Jkrin课程体系</a></strong></li>
+   <li><a href="#">课程设置</a></li>
+   <li><a href="#">教学理念</a></li>
+   <li><a href="#">教学目标</a></li>
+   <li><a href="#">教学方法</a></li>
+   <li><a href="#">师资团队</a></li>
+  </ul>
+  <ul class="fot4">
+   <li><strong><a href="#">Jkrin上海</a></strong></li>
+   <li><a href="#">中心地图</a></li>
+   <li><a href="#">授权合作</a></li>
+   <li><a href="#">合作申请</a></li>
+  </ul>
+  <ul class="fot5">
+   <li><strong><a href="#">品牌合作</a></strong></li>
+   <li><a href="#">幼儿园合作</a></li>
+   <li><a href="#">CTP项目合作</a></li>
+   <li><a href="#">夏令营合作</a></li>
+  </ul>
+  <ul class="fot6">
+   <li><strong><a href="#">Jkrin上海中心位置</a></strong></li>
+   <li>
+    <img src="images/footMap.jpg" width="150" height="95" />
+   </li>
+  </ul>
+  <div class="clears"></div>
+ </div><!--footNavBox-->
+ </div><!--footNav/-->
+ <div class="footer">
+  <div class="copy">
+   友情链接：英语教育
+   <span class="copyRight">
+    ©2021 XXX  All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>   沪ICP备 12007626号-1 
+    技术支持：<a href="http://XXX/" target="_blank">秦王网络</a>
+   </span>
+  </div><!--copy/-->
+ </div><!--footer/-->
+</body>
+</html>

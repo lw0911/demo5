@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tabs</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			blockquote {
+				margin-top: 10px;
+			}
+			
+			.red {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<div class="layui-field-box">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+
+							<div class="layui-inline">
+								<label class="layui-form-label"><span class="red">*</span>业务类别：</label>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">手机卡</option>
+										<option value="2">手机卡-关键业务</option>
+										<option value="3">手机卡-非关键业务</option>
+									</select>
+								</div>
+								<div class="layui-input-inline">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="">全部</option>
+										<option value="1">已设置</option>
+										<option value="2">未设置</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label"><span class="red">*</span>业务名称：</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 92%;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label"><span class="red">*</span>排序：</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 92%;" placeholder="5">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label"><span class="red">*</span>流程：</label>
+								<div class="layui-input-block">
+									<button class="layui-btn layui-btn-normal">设置</button>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label"><span class="red">*</span>状态：</label>
+								<div class="layui-input-block">
+									<input type="radio" name="onoff" value="启用" title="启用" checked="">
+									<input type="radio" name="onoff" value="禁用" title="禁用">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</fieldset>
+			<div class="layui-row">
+				<div class="layui-col-xs6">
+					<div class="grid-demo grid-demo-bg1">操作人:<span>zhangsjaj</span></div>
+				</div>
+				<div class="layui-col-xs6">
+					<div class="grid-demo">操作日期:<span>2017-02-09</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+		layui.use(['element', 'layer'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			element.on('tab(demo1)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			element.on('tab(demo2)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+		});
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+			laydate.render({
+				elem: '#test12',
+				format: 'dd/MM/yyyy'
+			});
+		});
+		layui.use(['element', 'layer', 'form', 'laydate'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate;
+			//一些事件监听
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			laydate.render({
+				elem: '#date'
+			});
+
+			//自定义验证规则
+			form.verify({
+				title: function(value) {
+					if(value.length < 5) {
+						return '标题至少得5个字符啊';
+					}
+				},
+				pass: [/(.+){6,12}$/, '密码必须6到12位']
+			});
+
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+
+</html>

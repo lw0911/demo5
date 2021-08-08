@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>修改密码</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="formzone">
+        <div class="font-weight">
+            管理员列表
+        </div>
+        <div class="tablezone">
+
+            <table width="100%" cellspacing="0" cellpadding="6" border="0">
+                <tbody>
+                    <tr>
+                        <td class="innerbiaoti" width="80" height="28">
+                            类型
+                        </td>
+                        <td class="innerbiaoti" width="80" height="28">
+                            账号
+                        </td>
+                        <td class="innerbiaoti" width="80" height="28">
+                            姓名
+                        </td>
+                        <td class="innerbiaoti" width="80" height="28">邮箱 </td>
+                        <td class="innerbiaoti" width="80" height="28">手机 </td>
+                        <td class="innerbiaoti" width="80" height="28">
+                            修改权限
+                        </td>
+                        <td class="innerbiaoti" width="80" height="28">
+                            修改信息
+                        </td>
+                        <td class="innerbiaoti" width="80" height="28">
+                            修改密码
+                        </td>
+                        <td class="innerbiaoti" width="80" height="28">删除帐户</td>
+                    </tr>
+
+
+                    <form method="post" action="auth_modauth1.php"></form>
+                    <tr class="list">
+                        <td height="22"> 超级管理员 </td>
+                        <td height="22">
+                            admin
+                            <input name="user" value="admin" type="hidden" />
+
+                        </td>
+                        <td height="22"> 唐静 </td>
+                        <td>admin@sina.com </td>
+                        <td>15951968532 </td>
+                        <td width="100" height="22">
+                            <input name="Button22" value="修改权限" class="btn btn-default" type="submit" disabled=""/>
+                        </td>
+                        <td><input name="Button22" value="修改信息" class="btn btn-default" type="button" disabled=""/> </td>
+                        <td><input name="Button22" value="修改密码" class="btn btn-default" type="button" /> </td>
+                        <td width="100"><input name="Button22" value="删除帐户" onclick="cm('admin'); return false;" class="btn btn-default" disabled="" type="button" /></td>
+                    </tr>
+
+
+                    <form method="post" action="auth_modauth1.php"></form>
+                    <tr class="list">
+                        <td height="22"> 普通管理员 </td>
+                        <td height="22">
+                            adm
+                            <input name="user" value="adm" type="hidden" />
+                        </td>
+                        <td height="22"> 李四 </td>
+                        <td>adm@sina.com</td>
+                        <td>15951968532 </td>
+                        <td width="100" height="22">
+                            <input name="Button22" value="修改权限" class="btn btn-default" type="submit" />
+                        </td>
+                        <td><input name="Button22" value="修改信息" class="btn btn-default" type="button" /> </td>
+                        <td><input name="Button22" value="修改密码" class="btn btn-default" type="button" /> </td>
+                        <td width="100"><input name="Button22" value="删除帐户" onclick="cm('adm'); return false;" class="btn btn-default" type="button" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+</body>
+</html>

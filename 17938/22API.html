@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>20API开发文档</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			#footer {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				padding-left: 240px;
+				box-sizing: border-box;
+				min-width: 1024px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+
+	<body>
+		<!--Top Start!-->
+		<div id="top">
+
+			<div class="topBar">
+				<div class="inner clearfix">
+					<h4>API开发文档</h4>
+					<div class="contact topItem">
+						<h3><a href="#">联系我们<i></i></a></h3>
+						<div class="dropdown">
+							<a href="#">联系我们</a>
+							<a href="#">联系我们</a>
+							<a href="#">联系我们</a>
+						</div>
+					</div>
+					<div class="userBar topItem">
+						<div class="portrait fl">
+							<img src="images/portrait.jpg">
+						</div>
+						<h3><a href="#">验证码平台<i></i></a></h3>
+						<div class="dropdown">
+							<a href="#">用户名</a>
+							<a href="#">退出</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Top End!-->
+
+		<!--Menu Start!-->
+
+		<!--Main Start!-->
+		<div id="main">
+			<div class="">
+				<div class="contBox bgf9">
+					<div class="indexBanner"><img src="images/banner1.jpg" /></div>
+					<div class="apibox clearfix">
+						<div class="apinav">
+							<div class="apitit">
+								API系统说明
+							</div>
+							<ul>
+								<li class="active"><a href="javascript:;">用户登录</a></li>
+								<li><a href="javascript:;">获取手机号</a></li>
+								<li><a href="javascript:;">获取指定手机号</a></li>
+								<li><a href="javascript:;">获取短信</a></li>
+								<li><a href="javascript:;">手机号加入黑名单</a></li>
+								<li><a href="javascript:;">释放指定手机号</a></li>
+								<li><a href="javascript:;">释放所有手机号</a></li>
+								<li><a href="javascript:;">取当前用户信息</a></li>
+								<li><a href="javascript:;">提交发送短信内容</a></li>
+								<li><a href="javascript:;">获取发送短信状态</a></li>
+								<li><a href="javascript:;">退出</a></li>
+								<li><a href="">E语言实例下载</a></li>
+							</ul>
+						</div>
+
+						<div class="apitext">
+							<div class="apisc">
+								<h1>API接口说明文档</h1>
+								<h2 class="apitop">1、API系统说明</h2>
+								<div class="api_list">
+									<ul>
+										<li>API接口地址：<a href="">http://api.17sucai.com/api/do.php</a></li>
+										<li>接口统一编码：UTF-8</li>
+										<li>提交方式：POST/GET</li>
+										<li>提交数据：op=方法名&参数1=值1&参数2=值2</li>
+										<li>返回数据：</li>
+										<li>成功统一返回：1|其它信息1|其它信息2</li>
+										<li>失败统一返回：0|失败信息</li>
+									</ul>
+								</div>
+								<h3>1.1、注意事项</h3>
+								<div class="api_list">
+									<ul>
+										<li>1. 所有接口访问地址和参数，都需区分大小写；</li>
+										<li>2. 每个获取到的号码都必须正确处理（要么获取到验证码，要么加黑，要么释放）；</li>
+										<li>3. 不能用的号码请及时加黑，不然下次还会被重复获取到；</li>
+										<li>4. 开发者交流群：729028046</li>
+									</ul>
+								</div>
+								<h2 class="apitop">2、用户登录</h2>
+								<h3>2.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=login&u=用户名&p=用户密码&du=开发者参数[请登录平台查看]</li>
+									</ul>
+								</div>
+								<h3>2.2、提交参数</h3>
+								<div class="api_list">
+									<table border="1" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>u</td><td>Y</td><td>&nbsp;</td><td>用户名</td></tr>
+										<tr><td>p</td><td>Y</td><td>&nbsp;</td><td>密码</td></tr>
+										<tr><td>du</td><td>N</td><td>&nbsp;</td><td>开发者参数</td></tr>
+									</table>
+								</div>
+								<h3>2.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1| token[重要参数，后面的请求都需要]</li>
+									</ul>
+								</div>
+								<h3>2.4、备注</h3>
+								<div class="api_list">
+									<ul>
+										<li>只要密码不变，token是可以长期使用的，所以登录方法只需要调用一次 获取到token即可，程序运行中请不要重复调用</li>
+									</ul>
+								</div>
+								<h2 class="apitop">3、获取手机号</h2>
+								<h3>3.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=getPhone&token=token&getPhoneCount=获取数量&projId=项目ID&sp=运营商(空,移动,联通,电信,虚拟商,费虚拟商)&fltType=号段排除(excl)指定(incl)&fltText=号段1|号段2...&region=省份/城市</li>
+									</ul>
+								</div>
+								<h3>3.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>getPhoneCount</td><td>N</td><td>1</td><td>获取数量[不填默认1个]</td></tr>
+										<tr><td>projId</td><td>Y</td><td></td><td>项目ID[要先去收藏项目]</td></tr>
+										<tr><td>sp</td><td>N</td><td>随机</td><td>运营商[空为随机]，移动，联通，电信，虚拟商，非虚拟商</td></tr>
+										<tr><td>fltType</td><td>N</td><td></td><td>excl[号段排除]	incl[号段指定]</td></tr>
+										<tr><td>fltText</td><td>N</td><td></td><td>号段（如：170|171|138）</td></tr>
+										<tr><td>region</td><td>N</td><td>随机</td><td>区域[空为随机] 省份/城市</td></tr>
+									</table>
+								</div>
+								<h3>3.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|手机号码1, 手机号码2</li>
+									</ul>
+								</div>
+								<h3>3.4、备注</h3>
+								<div class="api_list">
+									<ul>
+										<li>GET方式：运营商、区域都需要URL  UTF-8编码</li>
+										<li>POST方式：运营商、区域都需要UTF-8编码</li>
+									</ul>
+								</div>
+								<h2 class="apitop">4、获取指定手机号</h2>
+								<h3>4.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=getPhone&token=token&specPhone=手机号码&projId=项目ID</li>
+									</ul>
+								</div>
+								<h3>4.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>specPhone</td><td>Y</td><td></td><td>手机号码</td></tr>
+										<tr><td>projId</td><td>Y</td><td></td><td>项目ID</td></tr>
+									</table>
+								</div>
+								<h3>4.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|手机号码</li>
+									</ul>
+								</div>
+								<h2 class="apitop">5、获取短信</h2>
+								<h3>5.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=getMessage&token=token&phone=手机号</li>
+									</ul>
+								</div>
+								<h3>5.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>Phone</td><td>Y</td><td></td><td>手机号码</td></tr>
+									</table>
+								</div>
+								<h3>5.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|短信内容</li>
+									</ul>
+								</div>
+								<h3>5.4、备注</h3>
+								<div class="api_list">
+									<ul>
+										<li>当没有获取到短信时，需要再次调用此接口，建议每5秒调用一次</li>
+									</ul>
+								</div>
+								<h2 class="apitop">6、手机号加入黑名单</h2>
+								<h3>6.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=addBlacklist&token=token&phone=手机号&projId=项目ID</li>
+									</ul>
+								</div>
+								<h3>6.3、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>Phone</td><td>Y</td><td></td><td>手机号码</td></tr>
+										<tr><td>projId</td><td>Y</td><td></td><td>项目ID</td></tr>
+									</table>
+								</div>
+								<h3>6.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|success[成功]</li>
+									</ul>
+								</div>
+								<h2 class="apitop">7、释放指定手机号</h2>
+								<h3>7.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=releasePhone&token=token&phone=手机号</li>
+									</ul>
+								</div>
+								<h3>7.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>Phone</td><td>Y</td><td></td><td>手机号码</td></tr>
+									</table>
+								</div>
+								<h3>7.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|success[成功]</li>
+									</ul>
+								</div>
+								<h2 class="apitop">8、释放所有手机号</h2>
+								<h3>8.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=releaseAllPhone&token=token</li>
+									</ul>
+								</div>
+								<h3>8.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+									</table>
+								</div>
+								<h3>8.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|success[成功]</li>
+									</ul>
+								</div>
+								<h2 class="apitop">9、取当前用户信息</h2>
+								<h3>9.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=getUserInfo&token=token</li>
+									</ul>
+								</div>
+								<h3>9.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+									</table>
+								</div>
+								<h3>9.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|余额|等级|批量取号数</li>
+									</ul>
+								</div>
+								<h2 class="apitop">10、提交发送短信内容</h2>
+								<h3>10.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=putMessage&token=token&phone=发送的手机号&msg=短信内容&sendToPhone=发送到号码</li>
+									</ul>
+								</div>
+								<h3>10.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>phone</td><td>Y</td><td></td><td>发送的手机号</td></tr>
+										<tr><td>msg</td><td>Y</td><td></td><td>要发送的短信内容</td></tr>
+										<tr><td>sendToPhone</td><td>Y</td><td></td><td>发送到号码</td></tr>
+									</table>
+								</div>
+								<h3>10.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|发送短信ID[用于查询发送短信状态]</li>
+									</ul>
+								</div>
+								<h2 class="apitop">11、获取发送短信状态</h2>
+								<h3>11.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=putMessageState&token=token&phone=发送的手机号&sendMsgId=发送短信ID</li>
+									</ul>
+								</div>
+								<h3>11.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+										<tr><td>phone</td><td>Y</td><td></td><td>发送的手机号</td></tr>
+										<tr><td>sendMsgId</td><td>Y</td><td></td><td>发送短信ID</td></tr>
+									</table>
+								</div>
+								<h3>11.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|success[发送成功]</li>
+									</ul>
+								</div>
+								<h3>11.4、备注</h3>
+								<div class="api_list">
+									<ul>
+										<li>当状态处于发送中时，需要再次调用此接口，建议每3秒调用一次</li>
+									</ul>
+								</div>
+								<h2 class="apitop">12、退出</h2>
+								<h3>12.1、GET方式调用实例</h3>
+								<div class="api_list">
+									<ul>
+										<li>http://api.17sucai.com/api/do.php?op=logout&token=token</li>
+									</ul>
+								</div>
+								<h3>12.2、提交参数</h3>
+								<div class="api_list">
+									<table border="" cellspacing="" cellpadding="" width="100%">
+										<tr align="left"><th>参数名</th><th>必传</th><th>缺省值</th><th>描述</th></tr>
+										<tr><td>token</td><td>Y</td><td></td><td>token</td></tr>
+									</table>
+								</div>
+								<h3>12.3、返回值</h3>
+								<div class="api_list">
+									<ul>
+										<li>0|失败提示信息</li>
+										<li>1|success[退出成功]</li>
+									</ul>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div id="footer">
+					<p>Copyright ©2020 All Rights <a href="http://www.17sucai.com/" title="17sucai">Reserved</a>. 苏ICP备XXX号</p>
+				</div>
+
+			</div>
+		</div>
+		<!--Main End!-->
+		<script>
+			$(function(){
+				
+					var he=function(){
+							var hal=$(window).height();
+							var he1=$(".indexBanner").height();
+							var h2=hal - he1 -85 -68-44;
+							$(".apibox").css("height",h2+'px');
+					}
+					$(window).resize(function(){
+				    he();
+			   })
+					
+					he();
+					
+					
+			     var  apinav=function(){
+			     	var index=0;
+			     	$(".apinav li").click(function(){
+			     		index=$(this).index()+1;
+			     		$(this).addClass("active").siblings("li").removeClass("active");
+			     		chan(index);
+			     	})
+			     }
+					
+		         var chan=function(num){
+		         	var hell=$(".apitext .apitop").eq(0).offset().top -80 ;
+		         	var htop=$(".apitext .apitop").eq(num).offset().top - hell;
+		         	$(".apisc").scrollTop(htop)
+		         }
+		         apinav();
+			})
+				
+				 
+	//			console.log($(".apitext h2").eq(2).offset().top)
+		</script>
+
+	</body>
+
+</html>

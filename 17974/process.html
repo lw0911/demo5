@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/admin/css/business/style.css" />
+		<title>业务流程4</title>
+		<style>
+			.edit {
+				width: 810px;
+				height: 170px;
+				margin-top: 10px;
+				border: 1px solid #a1a1a1;
+				position: relative;
+			}
+			
+			.edit div {
+				padding: 20px;
+			}
+			
+			.delDom {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				background-color: #ff6632;
+				color: #FFFFFF;
+				text-align: center;
+				display: none;
+			}
+			
+			.payment P {
+				margin-top: 10px;
+				font-size: 14px;
+			}
+			
+			.payment input[type=text] {
+				margin-left: 10px;
+			}
+			
+			.AgreementS {
+				margin-left: 10px;
+				border: 1px solid #888686;
+			}
+			
+			.einfo {
+				display: none;
+			}
+			
+			.checkde {
+				color: #ffffff;
+			}
+			
+			.doms.domCK {
+				background-color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="content">
+				<!-- <div class="header">
+					<span class="fl">设置-业务流程</span>
+					<a href="#"><img src="images/close.png" class="close fr" /></a>
+				</div> -->
+				<div class="process">
+					<!-- <span class="setting">设置流程</span> -->
+					<br />
+					<input type="button" value="选择流程" class="select_pre  domSel" />
+					<!--<img src="images/next.png">
+					<input type="button" value="选择流程" class=" select_pre on selItem" />-->
+					<hr />
+					<span class="para">流程参数</span>
+					<div class="edit">
+						<!--<textarea placeholder="选择流程节点后可进行详细编辑"></textarea>-->
+						<span class="delDom">删除节点</span>
+						<div class="payment einfo">
+							<p>业务费用<input class="paymentT" type="text"><span>元/笔</span></p>
+							<p><input class="paymentC" type="checkbox">支持客服修改金额</p>
+						</div>
+						<div class="IDCard einfo">
+							<p><input class="IDCardC" type="checkbox">无需重复识别</p>
+						</div>
+						<div class="Agreement einfo">
+							<p>协议名称<!--  <input type="text" readonly="readonly" data-Aid="" placeholder="请选择" class="AgreementS" /> -->
+								<select id="contract" name="contract" class="AgreementS">
+									
+								</select>
+							</p>
+						</div>
+					</div>
+					<input type="hidden" value="0" name="sure" id="sure" />
+					<!-- <input type="hidden" name="cancel" id="cancel" value="取消" /> -->
+				</div>
+				<div class="floor none">
+					<div class="select">
+						<div class="fl_header">
+							<span>选择流程</span>
+							<a href="#"><img src="/admin/img/business/close1.png" class="fr close1"></a>
+							<hr />
+							<div class="option">
+								<input type="button" value="身份识别" data-div="IDCard" class="option1 selitem ID" id="ID" /><img src="/admin/img/business/selected.png" class="selected1 selimg none ID" />
+								<input type="button" value="短信验证" data-div="" class="option1 selitem message" id="message" /><img src="/admin/img/business/selected.png" class="selected2 selimg none message" />
+								<input type="button" value="协议确认" data-div="Agreement" class="option1 selitem xieyi" id="xieyi" /><img src="/admin/img/business/selected.png" class="selected3 selimg none xieyi" />
+								<input type="button" value="在线支付" data-div="payment" class="option1 selitem pay" id="pay" /><img src="/admin/img/business/selected.png" class="selected4 selimg none pay" />
+								<input type="button" value="选择并返回" class="back" />
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" id="init" />
+			<input type="hidden" id="Result" />
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script>
+		/**
+		 * class 说明 需要显示弹框的class domSel
+		 * 流程每个节点 class dom{0} 
+		 * 底部流程class payment支付  IDCard身份确认  Agreement协议
+		 * */
+		$(document).ready(function() {
+			
+			//alert(window.parent.getR());
+			
+			
+			floorShow();
+			$('.close1').on('click', function() {
+				floorHide();
+			})
+			$('.selitem').on('click', function() {
+				on($(this));
+			})
+			$('.back').on('click', function() {
+				addDom($('.checkde').val(), $('.checkde').attr('data-div'))
+				floorHide();
+			})
+
+			$('.delDom').on('click', function() {
+				$('.domCK').next().remove();
+				$('.domCK').remove();
+				floorInfohide();
+			})
+
+			/*
+			 *JSON 严格按照 制定格式编写 payment value为 价格|是否需改 ，IDCard value为 是否重复，Agreement value为合同名字|合同编号
+			 * */
+			$('#sure').on('click', function() {
+				floorInfohide();
+				var DataJson = '{"data":[{datas}]}';
+				var items = [];
+				$('.doms').each(function() {
+					var dataValue = "";
+					switch($(this).attr('data-div')) {
+						case 'payment':
+							dataValue = $(this).attr('data-money') + "|" + $(this).attr('data-isChange')
+							break;
+						case 'IDCard':
+							dataValue = $(this).attr('data-isRepeat');
+
+							break;
+						case 'Agreement':
+							dataValue = $(this).attr('data-AgreementName') + "|" + $(this).attr('data-AgreementId')
+							break;
+					}
+					items.push('{"name":"' + $(this).val() + '","value":"' + dataValue + '"}')
+				})
+				DataJson = DataJson.replace('{datas}', items.join(','));
+				$('#Result').val(DataJson);
+			})
+			init($('#init').val());
+
+		})
+		var ceshi = '{"data":[{"name":"在线支付","value":"110|false"},{"name":"短信验证","value":""},{"name":"协议确认","value":"|0"},{"name":"身份识别","value":"false"}]}';
+		var ceshi2 = "asd";
+		//流程赋值的方法   取值是$(#Result).val();
+		function init(data) {
+			if(data != "") {
+				if(isJsonFormat(data)) {
+					var Ditems = JSON.parse(data).data;
+					for(var i = 0; i <Ditems.length; i++) {
+						var Ditem = Ditems[i];
+						var divName = "";
+						switch(Ditem.name) {
+							case '在线支付':
+								divName = 'payment'
+								break;
+							case '协议确认':
+								divName = 'Agreement';
+								break;
+							case '身份识别':
+								divName = 'IDCard';
+								break;
+						}
+						var s = Ditem.value.split('|');
+						var val1 = s[0];
+						var val2 = (s.length > 1 ? s[1] : "");
+						addDom(Ditem.name, divName, val1, val2, '1');
+					}
+				} else {
+					alert('初始化数据格式不正确');
+				}
+			}
+		}
+
+		function isJsonFormat(str) {
+			try {
+				$.parseJSON(str);
+			} catch(e) {
+				return false;
+			}
+			return true;
+		}
+
+		function on(obj) {
+			if($(obj).attr('class').indexOf('checkde') > -1) {
+				$(obj).css('backgroundColor', "rgb(145, 145, 145)");
+				$('img.' + $(obj).attr('id')).hide();
+				$(obj).removeClass('checkde')
+			} else {
+				$('.selitem').removeClass('checkde')
+				$('.selitem').css('backgroundColor', "rgb(145, 145, 145)");
+				$('.selimg').hide();
+				$(obj).addClass('checkde')
+				$(obj).css('backgroundColor', "#169bd5");
+				$('img.' + $(obj).attr('id')).show();
+				$('#Type').val($(obj).val());
+			}
+		}
+
+		function addDom(name, divC, value1, value2, isD) {
+			if(name != undefined) {
+
+				value1 = arguments[2] ? arguments[2] : "";
+				value2 = arguments[3] ? arguments[3] : "";
+				isD = arguments[4] ? "Have" : "";
+
+				var Dclass = "";
+				switch(divC) {
+					case 'payment':
+						Dclass = 'data-money="' + (value1 == "" ? "0" : value1) + '"  data-isChange="' + (value2 == "" ? "false" : value2) + '"'
+						break;
+					case 'IDCard':
+						Dclass = 'data-isRepeat="' + (value1 == "" ? "false" : value1) + '"';
+						break;
+					case 'Agreement':
+						Dclass = 'data-AgreementName="' + (value1 == "" ? "" : value1) + '" data-AgreementId="' + (value2 == "" ? "0" : value2) + '"'
+						break;
+				}
+				$('.domSel').before('<input type="button" ' + Dclass + ' data-div="' + divC + '"  value="' + name + '" class="select_pre on doms ' + isD + ' dom' + $('.doms').length + '" /><img class="dom' + $('.doms').length + '" src="/admin/img/business/next.png">');
+				floorInfo();
+			}
+		}
+
+		function floorInfo() { //流程参数
+			$('.doms').off('click');
+			$('.doms').on('click', function() {
+				floorInfohide();
+				$(this).addClass('domCK');
+				if($(this).attr('class').indexOf('Have') > -1) {
+					switch($(this).attr('data-div')) {
+						case 'payment':
+							$('.paymentT').val($(this).attr('data-money'));
+							$(".paymentC").prop("checked", $(this).attr('data-isChange') == "true" ? true : false);
+							break;
+						case 'IDCard':
+							$(".IDCardC").prop("checked", $(this).attr('data-isRepeat') == "true" ? true : false);
+							break;
+						case 'Agreement':
+							$('.AgreementS').val($(this).attr('data-AgreementName'));
+							$('.AgreementS').attr('data-Aid', $(this).attr('data-AgreementId'));
+							break;
+					}
+				}
+				$('.delDom').show();
+				if($(this).attr('data-div') != "") $('.' + $(this).attr('data-div')).show();
+			})
+		}
+
+		function floorInfohide() {
+			if($('.domCK').length > 0) {
+				$('.domCK').addClass('Have');
+				switch($('.domCK').attr('data-div')) {
+					case 'payment':
+						$('.domCK').attr('data-isChange', $('.paymentC').is(':checked'))
+						$('.domCK').attr('data-money', $('.paymentT').val())
+						$('.paymentT').val('');
+						$(".paymentC").prop("checked", false);
+						break;
+					case 'IDCard':
+						$('.domCK').attr('data-isRepeat', $('.IDCardC').is(':checked'))
+						$(".IDCardC").prop("checked", false);
+						break;
+					case 'Agreement':
+						$('.domCK').attr('data-AgreementId', $('.AgreementS').attr('data-Aid'))
+						$('.domCK').attr('data-AgreementName', $('.AgreementS').val())
+						$('.AgreementS').val('');
+						$('.AgreementS').attr('data-Aid', '');
+						break;
+				}
+			}
+			$('.doms').removeClass('domCK');
+			$('.einfo').hide();
+			$('.delDom').hide();
+		}
+
+		function floorShow() { //因为添加新节点时，需要重新绑定此事件，故需要先接触绑定，避免多次触发
+			$('.domSel').off('click');
+			$('.domSel').on('click', function() {
+				floorInfohide();
+				$(this).addClass('domOn');
+				$('.floor').show();
+
+			})
+		}
+
+		function floorHide() {
+			$(this).removeClass('domOn');
+			$('.floor').hide();
+			$('.selitem').removeClass('checkde')
+			$('.selitem').css('backgroundColor', "rgb(145, 145, 145)");
+			$('.selimg').hide();
+		}
+		
+		//加载协议
+	     $.ajax({
+	         timeout: 3000,
+	         async: false,
+	         type: "get",
+	         url: "/admin/business/findContractAll",
+	         dataType: "json",
+	         success: function (data) {
+	             for (var i in data) {
+	                $("#contract").append("<option value="+ data[i].id+">" + data[i].title + "</option>");
+	             }
+	         }
+	    });
+	</script>
+
+</html>

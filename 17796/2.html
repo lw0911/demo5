@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>财物</title>
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/wcy.css" rel="stylesheet">
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <link href="iconfont/iconfont.css" rel="stylesheet">
+</head>
+<body>
+<!--导航-->
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar  navbar-static-top">
+            <div class="container">
+                <div class="navbar-header navbar-relative">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar-logo" href="#">
+                        <img src="images/wlogo.png" alt=""/>
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav navbar-navxg">
+                        <li class="active"><a href="#">会议总览</a></li>
+                        <li><a href="#about">注册参会</a></li>
+                        <li><a href="#contact">票务信息</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">票务信息 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about">往届回顾</a></li>
+                        <li><a href="#contact">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+            $(document).ready(function(){
+                dropdownOpen();//调用
+            });
+            /**
+             * 鼠标划过就展开子菜单，免得需要点击才能展开
+             */
+            function dropdownOpen() {
+
+                var $dropdownLi = $('li.dropdown');
+
+                $dropdownLi.mouseover(function() {
+                    $(this).addClass('open');
+                }).mouseout(function() {
+                    $(this).removeClass('open');
+                });
+            }
+        </script>
+    </div>
+</div>
+<!--导航 end-->
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide car-slide" data-ride="carousel">
+    <!-- Indicators -->
+    <!--<ol class="carousel-indicators">-->
+    <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+    <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+    <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+    <!--</ol>-->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="first-slide" src="images/slibj.jpg">
+        </div>
+        <div class="item">
+            <img class="second-slide" src="images/slibj.jpg">
+        </div>
+        <div class="item">
+            <img class="third-slide" src="images/slibj.jpg">
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon  glyimg-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon  glyimg-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- /.carousel end-->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<!--共享文档-->
+<div class="cont-gxwd">
+    <div class="cont-gxtit">
+        <span class="con-span">
+            <i class="icon iconfont icon-jiudian"></i>
+            <div>酒店信息</div>
+        </span>
+
+    </div>
+</div>
+<!--共享文档 end-->
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-wxg cw-jd clearfix">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="text-center">红塔大酒店</h3>
+                    <p class="caption-jdp">云南红塔大酒店有限公司是由云南合和（集团）股份有限公司全资控股、云南中维酒店管理有限责任公司管理的酒店。 酒店位于美丽的云烟之乡、花灯之乡、聂耳故乡的玉溪市红塔区，紧邻聂耳公园，在客房内可尽览公园美景。优越的地理位置、交通便捷，沃尔玛大型超市、美佳华购物广场毗邻酒店。驱车5、6分钟即可抵达火车站和昆玉高速收费站。步行至繁华商业街仅需5分钟。酒店占地60亩，整体格局由主楼、裙楼、停车场、多功能厅和后花园组成，现代意味浓烈的外观、别致的园林已成为玉溪标志性建筑之一。宽阔的停车场拥有400个车位，堪称玉溪之最。 酒店内部装潢设计典雅大方，设施设备齐全。拥有各类客房195间（套），房间宽敞温馨，舒适的乳胶床垫、羽绒枕、柔软的织物和贴心的管家服务让每一位宾客都能感受到家一般的温暖。1900个餐位的中西餐厅、宴会厅，带来风格迥异的各式美食。口味纯正的滇菜、川菜、粤菜以及蕴含异国风味的东南亚风情菜和西式餐饮供客选择。2400平方米的无柱豪华多功能厅，高素质的会议、婚宴管家队伍，热情悉心的宴会服务，为您的活动无论是晚宴、婚宴还是大型商务会议提供理想场所。酒店拥有各类大小会议室15个，配有KTV、慢摇吧、棋牌室、游泳池、室外足球场、购物中心等配套设施。同时提供红塔烟草工业园区的展示、推介及服务及。 作为玉溪最负盛名的酒店，红塔大酒店自1996年10月28日开业以来，以争创一流为目标。以细致周到、精益求精的服务成功接待了多位党和国家领导人、众多政府要人和国内外各界名人，赢得了广泛的赞誉。“细致入微，体贴入心”为您带来难忘的入住体验。</p><br>
+                    <p class="caption-jdpp">酒店地址：玉溪市红塔区红塔大道32号</p>
+                    <p class="caption-jdpp">高级客房： 单间（1人）330元/间/晚； 标间（2人）330元/间/晚； 套房（1人）500元/间/晚；</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-wxg cw-jd clearfix">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="text-center">红塔大酒店</h3>
+                    <p class="caption-jdp">云南红塔大酒店有限公司是由云南合和（集团）股份有限公司全资控股、云南中维酒店管理有限责任公司管理的酒店。 酒店位于美丽的云烟之乡、花灯之乡、聂耳故乡的玉溪市红塔区，紧邻聂耳公园，在客房内可尽览公园美景。优越的地理位置、交通便捷，沃尔玛大型超市、美佳华购物广场毗邻酒店。驱车5、6分钟即可抵达火车站和昆玉高速收费站。步行至繁华商业街仅需5分钟。酒店占地60亩，整体格局由主楼、裙楼、停车场、多功能厅和后花园组成，现代意味浓烈的外观、别致的园林已成为玉溪标志性建筑之一。宽阔的停车场拥有400个车位，堪称玉溪之最。 酒店内部装潢设计典雅大方，设施设备齐全。拥有各类客房195间（套），房间宽敞温馨，舒适的乳胶床垫、羽绒枕、柔软的织物和贴心的管家服务让每一位宾客都能感受到家一般的温暖。1900个餐位的中西餐厅、宴会厅，带来风格迥异的各式美食。口味纯正的滇菜、川菜、粤菜以及蕴含异国风味的东南亚风情菜和西式餐饮供客选择。2400平方米的无柱豪华多功能厅，高素质的会议、婚宴管家队伍，热情悉心的宴会服务，为您的活动无论是晚宴、婚宴还是大型商务会议提供理想场所。酒店拥有各类大小会议室15个，配有KTV、慢摇吧、棋牌室、游泳池、室外足球场、购物中心等配套设施。同时提供红塔烟草工业园区的展示、推介及服务及。 作为玉溪最负盛名的酒店，红塔大酒店自1996年10月28日开业以来，以争创一流为目标。以细致周到、精益求精的服务成功接待了多位党和国家领导人、众多政府要人和国内外各界名人，赢得了广泛的赞誉。“细致入微，体贴入心”为您带来难忘的入住体验。</p><br>
+                    <p class="caption-jdpp">酒店地址：玉溪市红塔区红塔大道32号</p>
+                    <p class="caption-jdpp">高级客房： 单间（1人）330元/间/晚； 标间（2人）330元/间/晚； 套房（1人）500元/间/晚；</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-wxg cw-jd clearfix">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="text-center">红塔大酒店</h3>
+                    <p class="caption-jdp">云南红塔大酒店有限公司是由云南合和（集团）股份有限公司全资控股、云南中维酒店管理有限责任公司管理的酒店。 酒店位于美丽的云烟之乡、花灯之乡、聂耳故乡的玉溪市红塔区，紧邻聂耳公园，在客房内可尽览公园美景。优越的地理位置、交通便捷，沃尔玛大型超市、美佳华购物广场毗邻酒店。驱车5、6分钟即可抵达火车站和昆玉高速收费站。步行至繁华商业街仅需5分钟。酒店占地60亩，整体格局由主楼、裙楼、停车场、多功能厅和后花园组成，现代意味浓烈的外观、别致的园林已成为玉溪标志性建筑之一。宽阔的停车场拥有400个车位，堪称玉溪之最。 酒店内部装潢设计典雅大方，设施设备齐全。拥有各类客房195间（套），房间宽敞温馨，舒适的乳胶床垫、羽绒枕、柔软的织物和贴心的管家服务让每一位宾客都能感受到家一般的温暖。1900个餐位的中西餐厅、宴会厅，带来风格迥异的各式美食。口味纯正的滇菜、川菜、粤菜以及蕴含异国风味的东南亚风情菜和西式餐饮供客选择。2400平方米的无柱豪华多功能厅，高素质的会议、婚宴管家队伍，热情悉心的宴会服务，为您的活动无论是晚宴、婚宴还是大型商务会议提供理想场所。酒店拥有各类大小会议室15个，配有KTV、慢摇吧、棋牌室、游泳池、室外足球场、购物中心等配套设施。同时提供红塔烟草工业园区的展示、推介及服务及。 作为玉溪最负盛名的酒店，红塔大酒店自1996年10月28日开业以来，以争创一流为目标。以细致周到、精益求精的服务成功接待了多位党和国家领导人、众多政府要人和国内外各界名人，赢得了广泛的赞誉。“细致入微，体贴入心”为您带来难忘的入住体验。</p><br>
+                    <p class="caption-jdpp">酒店地址：玉溪市红塔区红塔大道32号</p>
+                    <p class="caption-jdpp">高级客房： 单间（1人）330元/间/晚； 标间（2人）330元/间/晚； 套房（1人）500元/间/晚；</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-wxg cw-jd clearfix">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="text-center">红塔大酒店</h3>
+                    <p class="caption-jdp">云南红塔大酒店有限公司是由云南合和（集团）股份有限公司全资控股、云南中维酒店管理有限责任公司管理的酒店。 酒店位于美丽的云烟之乡、花灯之乡、聂耳故乡的玉溪市红塔区，紧邻聂耳公园，在客房内可尽览公园美景。优越的地理位置、交通便捷，沃尔玛大型超市、美佳华购物广场毗邻酒店。驱车5、6分钟即可抵达火车站和昆玉高速收费站。步行至繁华商业街仅需5分钟。酒店占地60亩，整体格局由主楼、裙楼、停车场、多功能厅和后花园组成，现代意味浓烈的外观、别致的园林已成为玉溪标志性建筑之一。宽阔的停车场拥有400个车位，堪称玉溪之最。 酒店内部装潢设计典雅大方，设施设备齐全。拥有各类客房195间（套），房间宽敞温馨，舒适的乳胶床垫、羽绒枕、柔软的织物和贴心的管家服务让每一位宾客都能感受到家一般的温暖。1900个餐位的中西餐厅、宴会厅，带来风格迥异的各式美食。口味纯正的滇菜、川菜、粤菜以及蕴含异国风味的东南亚风情菜和西式餐饮供客选择。2400平方米的无柱豪华多功能厅，高素质的会议、婚宴管家队伍，热情悉心的宴会服务，为您的活动无论是晚宴、婚宴还是大型商务会议提供理想场所。酒店拥有各类大小会议室15个，配有KTV、慢摇吧、棋牌室、游泳池、室外足球场、购物中心等配套设施。同时提供红塔烟草工业园区的展示、推介及服务及。 作为玉溪最负盛名的酒店，红塔大酒店自1996年10月28日开业以来，以争创一流为目标。以细致周到、精益求精的服务成功接待了多位党和国家领导人、众多政府要人和国内外各界名人，赢得了广泛的赞誉。“细致入微，体贴入心”为您带来难忘的入住体验。</p><br>
+                    <p class="caption-jdpp">酒店地址：玉溪市红塔区红塔大道32号</p>
+                    <p class="caption-jdpp">高级客房： 单间（1人）330元/间/晚； 标间（2人）330元/间/晚； 套房（1人）500元/间/晚；</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- START THE FEATURETTES -->
+    <!--电脑分页-->
+    <div class="row rog-page">
+        <nav aria-label="">
+            <ul class="pagination">
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">首页</span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">6 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--电脑分页 end-->
+    <!--手机分页-->
+    <div class="row row-wphone">
+        <div class="row-phone">
+            <div>点击查看更多</div>
+            <div class="glyphicon glyphicon-menu-down"></div>
+        </div>
+    </div>
+    <!--手机分页 end-->
+</div>
+<!-- /.container -->
+<footer>
+
+    <div class="cp-foonter">
+        <div class="container">
+            <!--电脑footer-->
+            <div class="row pc-foot">
+                <div class="col-sm-4 col-md-4 pc-flist">
+                    <h3>扫一扫关注大会信息</h3>
+                    <div class="pc-wwx">
+                        <img src="images/wwx.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 pc-flist">
+                    <h3>关于主办方</h3>
+                    <div class="pc-conp">
+                        <strong>TechCrunch中国</strong><br>
+                        TechCrunch是一家全球领先的科技媒体公司，狂热致力于记录创业公司、评测互联网新产品以及报道突发科技新闻。 TechCrunch成立于2005年6月。目前，TechCrunch及其附属网站已经拥有超过1200万独立访客，每月页面访问量超过3700万次。TechCrunch社区在Twitter、 Facebook、LinkedIn、谷歌以及其他社交媒体上的关注者已经超过200万人。 TechCrunch首创的CrunchBase是关于创业公司、人物和投资者的开放数据库，目前已成为领先的科技企业及交易数据来源。
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 pc-flist pc-flispad">
+                    <h3>联系我们</h3>
+                    <div class="pc-address">
+                        <dl class="dl-horizontal">
+                            <dt>邮编：</dt>
+                            <dd>100041</dd>
+                            <dt>Email：</dt>
+                            <dd>service@zhongkefu.com</dd>
+                            <dt>联系电话：</dt>
+                            <dd>010-81301045</dd>
+                            <dt>地址：</dt>
+                            <dd>北京市石景山区中关村科技园实兴大街
+                                30号院17号楼4层</dd>
+                            <dt>地址：</dt>
+                            <dd>保定市新市区绿都皇城</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--电脑footer end-->
+            <!--手机footer-->
+            <div class="row ph-footer">
+                <div class="col-xs-4 ph-foimg">
+                    <img src="images/wwx.jpg" alt=""/>
+                </div>
+                <div class="col-xs-8 ph-focont">
+                    <h3>010-81301045</h3>
+                    <h4>中国 · 北京 · 北京中科服科技有限公司</h4>
+                    <div class="media">
+                        <div class="media-left">
+                            地址：
+                        </div>
+                        <div class="media-body">
+                            北京市石景山区中关村科技园实
+                            兴大街30号院17号楼4层
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            地址：
+                        </div>
+                        <div class="media-body">
+                            保定市新市区绿都皇城
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--手机footer end-->
+        </div>
+    </div>
+    <!--公用部分-->
+    <div class="pcy">
+        <p><a href="#">会议总览</a>|<a href="#">注册参会</a>|<a href="#">票务信息</a>|<a href="#">共享文档</a>|<a href="#">往届回顾</a>|<a
+                href="#">关于我们</a></p>
+        <span>
+            技术支持：<a href="http://www.zhongkefu.com.cn/">北京中科服科技有限公司</a>
+        </span>
+    </div>
+    <!--公用部分 end-->
+
+</footer>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+
+</body>
+</html>

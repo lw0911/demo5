@@ -1,0 +1,496 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>XXX-培训成绩表</title>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-datetimepicker.min.css">
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var picker1 = $('#datetimepicker').datetimepicker({
+                format: 'YYYY-MM',
+                locale: moment.locale('zh-cn')
+            });
+        });
+
+        function winOpen(obj, url) {
+            $(".table-1 tr").removeClass("hover");
+            $(obj).addClass("hover");
+            window.location.href = url;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box clearfix">
+            <!-- sidebar -->
+            <div class="sidebar" id="sidebar">
+                <ul class="nav nav-1" id="lg-menu">
+                    <li id="navli1" onclick="setMenu('navli', 'navul', 1, 4)">
+                        <a href="index.html" class="a-1 icon_home">系统首页</a>
+                    </li>
+                    <li id="navli2" onclick="setMenu('navli', 'navul', 2, 4)">
+                        <a href="javascript:;" class="a-1 icon_upload">上传计划表</a>
+                        <!--<ul class="nav nav-2" id="navul2">
+                            <li><a href="#" class="a-2 icon_upload_100">新建计划表</a></li>
+                            <li><a href="#" class="a-2 icon_upload_200">计划表审核</a></li>
+                        </ul>-->
+                    </li>
+                    <li class="hover" id="navli3" onclick="setMenu('navli', 'navul', 3, 4)">
+                        <a href="javascript:;" class="a-1 icon_peixun">培训列表</a>
+                        <ul class="nav nav-2" id="navul3" style="display:block;">
+                            <li><a href="peixunlist.html" class="a-2 icon_peixun_100">培训计划表</a></li>
+                            <li class="hover"><a href="scorelist.html" class="a-2 icon_peixun_200">培训成绩表</a></li>
+                        </ul>
+                    </li>
+                    <li id="navli4" onclick="setMenu('navli', '', 4, 4)">
+                        <a href="javascript:;" class="a-1 icon_jihe">培訓稽核</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /sidebar -->
+            <!-- main right -->
+            <div class="content" id="main">
+                <div class="navbar-static-top navbar-static-top-1">
+                    <a href="index.html"><img src="images/logo/logo.png" alt="logo" /></a>
+                    <div class="fr navbar-right">
+                        <span class="marginR15">2018年08月20日  星期一</span>
+                        <img src="images/upload/tx.png" alt="头像" class="tx marginR15" />
+                        <span class="marginR30">润年，欢迎您</span>
+                        <a href="" class="exit"></a>
+                    </div>
+                </div>
+                <div class="paddingTRBL6 content_right content_right_1">
+                    <div class="top_title">
+                        <label class="marginR10">培训时间：</label>
+                        <input type="text" value="" class="input input-150 marginR20" id="datetimepicker" />
+                        <input type="button" value="查询" class="sbtn sbtn-red" />
+                    </div>
+                    <div class="top_title clearfix">
+                        <ul class="clearfix fl tab">
+                            <li id="tabli1" onclick="setTab('tabli', 'tabcon', 1, 12)" class="hover">各单位总列表</li>
+                            <li id="tabli2" onclick="setTab('tabli', 'tabcon', 2, 12)">产品力管理中心</li>
+                            <li id="tabli3" onclick="setTab('tabli', 'tabcon', 3, 12)">行政人事部</li>
+                            <li id="tabli4" onclick="setTab('tabli', 'tabcon', 4, 12)">青少年事业部(成都)</li>
+                            <li id="tabli5" onclick="setTab('tabli', 'tabcon', 5, 12)">财务管理中心</li>
+                            <li id="tabli6" onclick="setTab('tabli', 'tabcon', 6, 12)">营销管理中心</li>
+                            <li id="tabli7" onclick="setTab('tabli', 'tabcon', 7, 12)">定制事业部</li>
+                            <li id="tabli8" onclick="setTab('tabli', 'tabcon', 8, 12)">吉森定制</li>
+                            <li id="tabli9" onclick="setTab('tabli', 'tabcon', 9, 12)">锐奇事业部</li>
+                            <li id="tabli10" onclick="setTab('tabli', 'tabcon', 10, 12)">吉森事业部</li>
+                            <li id="tabli11" onclick="setTab('tabli', 'tabcon', 11, 12)">优米诺事业部</li>
+                            <li id="tabli12" onclick="setTab('tabli', 'tabcon', 12, 12)">餐桌椅事业部</li>
+                        </ul>
+                        <div class="fr">
+                            <input type="button" value="下载" class="sbtn sbtn-red-b" />
+                        </div>
+                    </div>
+                    <div class="marginT6 bgffffff">
+                        <table class="table table-1" id="tabcon1" style="display:block;">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">名次</th>
+                                    <th style="width:20%">中心/事业部</th>
+                                    <th style="width:20%">总分</th>
+                                    <th style="width:20%">培训计划完成率</th>
+                                    <th style="width:20%">实际场次</th>
+                                    <th style="width:20%">计划场次</th>
+                                    <th style="width:20%">培训时长完成率</th>
+                                    <th style="width:20%">实际时长</th>
+                                    <th style="width:20%">学生评分</th>
+                                    <th style="width:20%">稽核评分</th>
+                                    <th style="width:20%">违反计划扣分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-1" id="tabcon2">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">名次</th>
+                                    <th style="width:20%">中心/事业部</th>
+                                    <th style="width:20%">总分</th>
+                                    <th style="width:20%">培训计划完成率</th>
+                                    <th style="width:20%">实际场次</th>
+                                    <th style="width:20%">计划场次</th>
+                                    <th style="width:20%">培训时长完成率</th>
+                                    <th style="width:20%">实际时长</th>
+                                    <th style="width:20%">学生评分</th>
+                                    <th style="width:20%">稽核评分</th>
+                                    <th style="width:20%">违反计划扣分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-1" id="tabcon3">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">名次</th>
+                                    <th style="width:20%">中心/事业部</th>
+                                    <th style="width:20%">总分</th>
+                                    <th style="width:20%">培训计划完成率</th>
+                                    <th style="width:20%">实际场次</th>
+                                    <th style="width:20%">计划场次</th>
+                                    <th style="width:20%">培训时长完成率</th>
+                                    <th style="width:20%">实际时长</th>
+                                    <th style="width:20%">学生评分</th>
+                                    <th style="width:20%">稽核评分</th>
+                                    <th style="width:20%">违反计划扣分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-1" id="tabcon4">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">名次</th>
+                                    <th style="width:20%">中心/事业部</th>
+                                    <th style="width:20%">总分</th>
+                                    <th style="width:20%">培训计划完成率</th>
+                                    <th style="width:20%">实际场次</th>
+                                    <th style="width:20%">计划场次</th>
+                                    <th style="width:20%">培训时长完成率</th>
+                                    <th style="width:20%">实际时长</th>
+                                    <th style="width:20%">学生评分</th>
+                                    <th style="width:20%">稽核评分</th>
+                                    <th style="width:20%">违反计划扣分</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="winOpen(this,'scorelist.html')">
+                                    <td>1</td>
+                                    <td><a href="javascript:;">产品力管理中心</a></td>
+                                    <td class="color-green">9.5</td>
+                                    <td>80%</td>
+                                    <td>34</td>
+                                    <td>50</td>
+                                    <td>95%</td>
+                                    <td>50</td>
+                                    <td>4.5</td>
+                                    <td>4</td>
+                                    <td class="color-red">0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /main -->
+        </div>
+    </div>
+</body>
+</html>

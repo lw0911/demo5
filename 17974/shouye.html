@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			.layui-container {
+				float: left;
+				margin-left: 3%;
+				margin-top: 20px;
+			}
+			
+			.layui-container .layui-row {
+				width: 50%;
+				float: left;
+			}
+			
+			.data_commen {
+				margin-top: 10px;
+				text-align: center;
+			}
+			
+			.data_commen span {
+				display: inline-block;
+				width: 96%;
+				padding: 25% 0;
+				font-size: 30px;
+				background: #ffffff;
+			}
+			
+			body {
+				background: #DDDDDD;
+			}
+			
+			.layui-btn {
+				width: 96%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-col-md2">
+				<div class="grid-demo grid-demo-bg1">
+					<div class="data_commen">
+						<span>21</span>
+						<div class="layui-btn layui-btn-normal">
+							<p>昨日浏览量（单位：人次）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md2">
+				<div class="grid-demo">
+					<div class="data_commen">
+						<span>21</span>
+						<div class="layui-btn layui-btn-normal">
+							<p>昨日浏览量（单位：人次）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md2">
+				<div class="grid-demo grid-demo-bg1">
+					<div class="data_commen">
+						<span>21</span>
+						<div class="layui-btn layui-btn-normal">
+							<p>昨日浏览量（单位：人次）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md6">
+				<div class="grid-demo">
+					<div class="layui-row" style="width:95%;height: 234px;background: #FFFFFF;float: right;margin: 10px 20px 0 0;">
+						<fieldset class="layui-elem-field layui-field-title">
+							<legend>我贡献的内部知识</legend>
+						</fieldset>
+						<textarea style="margin-top: -10px;width: 100%;height: 84%;border: none;"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="layui-row layui-col-space1">
+			<div class="layui-col-md2">
+				<div class="grid-demo grid-demo-bg1">
+					<div class="data_commen">
+						<span>21</span>
+						<div class="layui-btn layui-btn-normal">
+							<p>今日浏览量（单位：人次）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md2">
+				<div class="grid-demo">
+					<div class="data_commen">
+						<span>21</span>
+						<div class="layui-btn layui-btn-normal">
+							<p>今日浏览量（单位：人次）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md2">
+				<div class="grid-demo grid-demo-bg1">
+					<div class="data_commen">
+						<span>21</span>
+						<div class="layui-btn layui-btn-normal">
+							<p>今日浏览量（单位：人次）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md6">
+				<div class="grid-demo">
+					<div class="layui-row" style="width:95%;height: 234px;background: #FFFFFF;float: right;margin: 20px 20px 0 0;">
+						<fieldset class="layui-elem-field layui-field-title">
+							<legend>我浏览的内部知识</legend>
+						</fieldset>
+						<textarea style="margin-top: -10px;width: 100%;height: 84%;border: none;"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom_lfbtm layui-col-md6" style="float: left;display: inline-block;">
+			<div id="chartmain" style="width:550px; height: 400px;"></div>
+		</div>
+		<div class="layui-col-md6">
+			<div class="grid-demo">
+				<div class="layui-row" style="width:95%;height: 234px;background: #FFFFFF;float: right;margin: 20px 20px 0 0;">
+					<fieldset class="layui-elem-field layui-field-title">
+						<legend>我浏览的内部知识</legend>
+					</fieldset>
+					<textarea style="margin-top: -10px;width: 100%;height: 84%;border: none;"></textarea>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/echarts.js"></script>
+		<script src="layui/layui.js"></script>
+		<script>
+			//JavaScript代码区域
+			layui.use(['element', 'layer'], function() {
+				var element = layui.element;
+				var layer = layui.layer;
+				//一些事件监听
+				element.on('tab(demo)', function(data) {
+					layer.msg('切换了：' + this.innerHTML);
+
+				});
+			});
+
+			$(document).ready(function() {
+				$('.leftMain a').on("click", function(e) {
+					e.preventDefault();
+					var href = $(this).attr('href');
+					var iframe = $('#rightMain').attr("src", href);
+				})
+			})
+		</script>
+		<script type="text/javascript">
+			//指定图标的配置和数据
+			var option = {
+				title: {
+					text: '最近七天咨询量',
+					subtext: '单位：人次',
+					left: 'center'
+				},
+				tooltip: {},
+				legend: {
+					data: ['用户来源']
+				},
+				xAxis: {
+					data: ["2017-10-23", "2017-10-24", "2017-10-25", "2017-10-26", '2017-10-27', "2017-10-28", "2017-10-29"]
+				},
+				yAxis: {
+					type: 'value',
+					min: 0,
+					max: 600,
+				},
+				series: [{
+					name: '咨询人次',
+					type: 'bar',
+					data: [500, 200, 360, 100, 200, 150, 200],
+					barWidth: 30, //柱图宽度
+					itemStyle: {
+						normal: {
+							color: '#004182'
+						}
+					},
+				}]
+			};
+			//初始化echarts实例
+			var myChart = echarts.init(document.getElementById('chartmain'));
+
+			//使用制定的配置项和数据显示图表
+			myChart.setOption(option);
+		</script>
+	</body>
+
+</html>

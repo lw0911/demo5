@@ -1,0 +1,841 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>表单管理</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="formzone">
+        <div class="font-weight">
+            表单分组
+        </div>
+        <div class="tablezone">
+            <div>
+                <input type="radio" name="lb" value="0" checked="checked" />在线预约&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="lb" value="1" />产品订购&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="lb" value="2" />在线购买&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div>
+                <input type="text" class="input" value="" placeholder="输入分组名称" style="width: 350px; height:30px;line-height:30px; margin: 5px 0px;" />
+            </div>
+            <div>
+                <input type="button" class="btn btn-default" value="+新增分组" />
+            </div>
+        </div>
+    </div>
+    <div class="formzone">
+        <div class="font-weight">
+            表单设置
+        </div>
+        <div class="listzone">
+            <form name="dform" action="form_set.php" method="post">
+
+                <table width="100%" cellspacing="0" cellpadding="3" border="0" align="center">
+                    <tbody>
+                        <tr bgcolor="#f0f0f0">
+                            <td class="biaoti" width="40" height="28" align="center">启用</td>
+                            <td class="biaoti" width="50">排序</td>
+                            <td class="biaoti" width="110" height="28">表单名称 </td>
+                            <td class="biaoti" width="110" height="28">表单类型</td>
+                            <td class="biaoti" width="130" height="28">表单初始值</td>
+                            <td class="biaoti" width="40" height="28">必填</td>
+                            <td class="biaoti" height="28">备注</td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="d" value="1" checked="" disabled="" type="checkbox" /><input name="used[1]" value="1" type="hidden" />
+                                <input name="field_id[1]" value="1565" type="hidden" />
+                                <input name="moveable[1]" value="1" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[1]" class="input" value="1" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[1]" class="input" value="留言标题" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select name="fieldtype_1">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[1]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="d" value="1" checked="" disabled="" type="checkbox" /><input name="mustfill[1]" value="1" type="hidden" /> </td>
+
+                            <td>
+                                <input name="memo[1]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[2]" value="1" checked="" type="checkbox" />
+                                <input name="field_id[2]" value="1566" type="hidden" />
+                                <input name="moveable[2]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[2]" class="input" value="2" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[2]" class="input" value="留言内容" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_2">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[2]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+
+                            <td>
+                                <input name="memo[2]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[3]" value="1" type="checkbox" />
+                                <input name="field_id[3]" value="1567" type="hidden" />
+                                <input name="moveable[3]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[3]" class="input" value="3" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[3]" class="input" value="您的姓名" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_3">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[3]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[3]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[4]" value="1" type="checkbox" />
+                                <input name="field_id[4]" value="1575" type="hidden" />
+                                <input name="moveable[4]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[4]" class="input" value="4" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[4]" class="input" value="性　　别" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_4">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[4]" value="男;女" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[4]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[5]" value="1" type="checkbox" />
+                                <input name="field_id[5]" value="1568" type="hidden" />
+                                <input name="moveable[5]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[5]" class="input" value="5" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[5]" class="input" value="联系电话" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_5">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[5]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[5]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[6]" value="1" type="checkbox" />
+                                <input name="field_id[6]" value="1569" type="hidden" />
+                                <input name="moveable[6]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[6]" class="input" value="6" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[6]" class="input" value="联系地址" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_6">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[6]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[6]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[7]" value="1" type="checkbox" />
+                                <input name="field_id[7]" value="1570" type="hidden" />
+                                <input name="moveable[7]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[7]" class="input" value="7" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[7]" class="input" value="电子邮件" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_7">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[7]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[7]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[8]" value="1" type="checkbox" />
+                                <input name="field_id[8]" value="1571" type="hidden" />
+                                <input name="moveable[8]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[8]" class="input" value="8" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[8]" class="input" value="网址URL" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_8">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[8]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[8]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[9]" value="1" type="checkbox" />
+                                <input name="field_id[9]" value="1572" type="hidden" />
+                                <input name="moveable[9]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[9]" class="input" value="9" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[9]" class="input" value="QQ号码" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_9">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[9]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[9]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[10]" value="1" type="checkbox" />
+                                <input name="field_id[10]" value="1573" type="hidden" />
+                                <input name="moveable[10]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[10]" class="input" value="10" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[10]" class="input" value="公司名称" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_10">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[10]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[10]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[11]" value="1" type="checkbox" />
+                                <input name="field_id[11]" value="1574" type="hidden" />
+                                <input name="moveable[11]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[11]" class="input" value="11" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[11]" class="input" value="公司地址" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_11">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[11]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[11]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[12]" value="1" type="checkbox" />
+                                <input name="field_id[12]" value="1576" type="hidden" />
+                                <input name="moveable[12]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[12]" class="input" value="12" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[12]" class="input" value="邮政编码" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_12">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[12]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[12]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[13]" value="1" type="checkbox" />
+                                <input name="field_id[13]" value="1577" type="hidden" />
+                                <input name="moveable[13]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[13]" class="input" value="13" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[13]" class="input" value="传真号码" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_13">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[13]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[13]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[14]" value="1" type="checkbox" />
+                                <input name="field_id[14]" value="1578" type="hidden" />
+                                <input name="moveable[14]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[14]" class="input" value="14" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[14]" class="input" value="产品编号" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_14">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[14]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[14]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[15]" value="1" type="checkbox" />
+                                <input name="field_id[15]" value="1579" type="hidden" />
+                                <input name="moveable[15]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[15]" class="input" value="15" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[15]" class="input" value="产品名称" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_15">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[15]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[15]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[16]" value="1" type="checkbox" />
+                                <input name="field_id[16]" value="1580" type="hidden" />
+                                <input name="moveable[16]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[16]" class="input" value="16" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[16]" class="input" value="订购数量" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_16">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[16]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[16]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[17]" value="1" type="checkbox" />
+                                <input name="field_id[17]" value="1581" type="hidden" />
+                                <input name="moveable[17]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[17]" class="input" value="17" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[17]" class="input" value="自定义一" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_17">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[17]" value="100;200;300;400;500" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[17]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[18]" value="1" type="checkbox" />
+                                <input name="field_id[18]" value="1582" type="hidden" />
+                                <input name="moveable[18]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[18]" class="input" value="18" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[18]" class="input" value="自定义二" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_18">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[18]" value="100;200;300;400;500" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[18]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[19]" value="1" type="checkbox" />
+                                <input name="field_id[19]" value="1583" type="hidden" />
+                                <input name="moveable[19]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[19]" class="input" value="19" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[19]" class="input" value="自定义三" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_19">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[19]" value="100;200;300;400;500" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[19]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[20]" value="1" type="checkbox" />
+                                <input name="field_id[20]" value="1584" type="hidden" />
+                                <input name="moveable[20]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[20]" class="input" value="20" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[20]" class="input" value="自定义四" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_20">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[20]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[20]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[21]" value="1" type="checkbox" />
+                                <input name="field_id[21]" value="1585" type="hidden" />
+                                <input name="moveable[21]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[21]" class="input" value="21" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[21]" class="input" value="自定义五" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_21">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[21]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[21]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[22]" value="1" type="checkbox" />
+                                <input name="field_id[22]" value="1586" type="hidden" />
+                                <input name="moveable[22]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[22]" class="input" value="22" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[22]" class="input" value="自定义六" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_22">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[22]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[22]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr class="list">
+                            <td width="35" align="center">
+                                <input name="used[23]" value="1" type="checkbox" />
+                                <input name="field_id[23]" value="1587" type="hidden" />
+                                <input name="moveable[23]" value="0" type="hidden" />
+                            </td>
+                            <td width="35">
+                                <input name="xuhao[23]" class="input" value="23" size="2" maxlength="3" type="text" />
+                            </td>
+                            <td width="90">
+                                <input name="textfield[23]" class="input" value="自定义七" size="16" maxlength="60" type="text" style="width:140px;margin-right:10px;" />
+                            </td>
+
+                            <td width="90">
+                                <select  name="fieldtype_23">
+                                    <option selected="">-字段类型-</option>
+                                    <option value="1">单行文本</option>
+                                    <option value="2">多行文本</option>
+                                    <option value="3">下拉菜单</option>
+                                    <option value="4">单选菜单</option>
+                                    <option value="5">多选菜单</option>
+                                </select>
+                            </td>
+                            <td width="130">
+                                <input name="fieldvalue[23]" value="" size="26" class="input" type="text" />
+                            </td>
+                            <td width="35" align="center"> <input name="mustfill[2]" value="1" type="checkbox" /> </td>
+                            <td>
+                                <input name="memo[23]" value="" size="32" class="input" type="text" />
+                            </td>
+
+                        </tr>
+
+                        <tr align="center">
+                            <td colspan="10" class="end" height="28">
+                                <input name="Submit" value="+新增表单" class="btn btn-default" type="submit" />
+                                <input name="step" value="modify" type="hidden" />
+                                <input name="groupid" value="19" type="hidden" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="adminsubmit">
+            <input name="cc" onclick="KindSubmit();" value="提 交" class="btn btn-default" type="submit" />
+        </div>
+    </div>
+  
+</body>
+</html>

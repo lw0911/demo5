@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="XXX" />
+		<!-- 作者 -->
+		<meta name="revised" content="XXX.v3, 2019/05/01" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>XXX出品</title>
+
+		<!-- 公共样式 开始 -->
+		<link rel="shortcut icon" href="../../images/favicon.ico"/>
+		<link rel="bookmark" href="../../images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../../fonts/iconfont.css">
+		<script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../js/base.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+	    <!--[if lt IE 9]>
+	      	<script src="../../framework/html5shiv.min.js"></script>
+	      	<script src="../../framework/respond.min.js"></script>
+	    <![endif]-->
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script src="../../framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<script src="../../framework/printThis.js"></script><!-- 打印插件 -->
+		<link rel="stylesheet" type="text/css" href="../../css/base_fontSize.css"><!-- 内容页字体大小 -->
+		<!-- 公共样式 结束 -->
+		
+		<style type="text/css">
+			.hide {
+				display: none
+			}
+			.down-all, .up-all{
+				cursor: pointer;
+			}
+			.down-all:hover, .up-all:hover{
+				color: #009688;
+			}
+			.layui-icon{
+				cursor: pointer;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="cBody">
+			<div class="test-tree-table" lay-filter="myTreetable"></div>
+	
+			<script>
+				$(function(){
+					
+					layui.config({
+						base: '../../js/',
+					})
+					layui.use(['treetable', 'form'], function() {
+						var data = [{
+							"id": 1,
+							"pid": 0,
+							"title": "食品生鲜",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 2,
+							"pid": 0,
+							"title": "服装服饰",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 3,
+							"pid": 0,
+							"title": "家用电器",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 4,
+							"pid": 1,
+							"title": "进口水果",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 5,
+							"pid": 1,
+							"title": "糖果巧克力",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 6,
+							"pid": 5,
+							"title": "糖果巧克力",
+							"goodsNum": "41",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 7,
+							"pid": 5,
+							"title": "进口水果",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 8,
+							"pid": 2,
+							"title": "进口水果",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 9,
+							"pid": 2,
+							"title": "糖果巧克力",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 10,
+							"pid": 8,
+							"title": "糖果巧克力",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 11,
+							"pid": 8,
+							"title": "进口水果",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑2</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 12,
+							"pid": 6,
+							"title": "糖果巧克力1",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" lay-filter="edit">编辑1</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}, {
+							"id": 13,
+							"pid": 6,
+							"title": "进口水果1",
+							"goodsNum": "4",
+							"goodsCompany": "个",
+							"navigationBar": "是",
+							"show": "显示",
+							"price": "5",
+							"sort": "1",
+							"actions": '<button class="layui-btn layui-btn-xs" onclick="aaaa(\'13\')">编辑</button><button class="layui-btn layui-btn-xs" lay-filter="del">删除</button>'
+						}];
+						var o = layui.$,
+							treetable = layui.treetable;
+						treetable.render({
+							elem: '.test-tree-table',
+							data: data,
+							field: 'title',
+							cols: [{
+									field: 'title',
+									title: '分类名称&nbsp;<a class="down-all">[展开]</a>&nbsp;<a class="up-all">[收起]</a>',
+									width: 'auto',
+								},
+								{
+									field: 'goodsNum',
+									title: '商品数量',
+									width: '100px',
+								},
+								{
+									field: 'goodsCompany',
+									title: '商品单位',
+									width: '100px',
+								},
+								{
+									field: 'navigationBar',
+									title: '导航栏',
+									width: '100px',
+								},
+								{
+									field: 'show',
+									title: '是否显示',
+									width: '100px',
+								},
+								{
+									field: 'price',
+									title: '价格分级',
+									width: '100px',
+								},
+								{
+									field: 'sort',
+									title: '排序',
+									width: '100px',
+								},
+								{
+									field: 'actions',
+									title: '导航栏',
+									width: 'auto'
+								},
+							]
+						});
+		
+						treetable.on('treetable(myTreetable)', function(data) {
+//							console.dir(o(data.elem).html());
+						})
+				
+						o('.up-all').click(function(){
+							treetable.all('up');
+						})
+						
+						o('.down-all').click(function(){
+							treetable.all('down');
+						})
+					})
+				})
+				//编辑
+				function aaaa(id){
+					console.log(id)
+				}
+			</script>
+		</div>
+	</body>
+
+</html>

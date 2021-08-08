@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>关于我们</title>
+<link type="text/css" rel="stylesheet" href="css/public.css"/>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="layer/layer.js"></script>
+<!--<script src="js/public.js"></script>-->
+</head>
+
+<body>
+   
+       
+        
+<div class="sintro_you fr show">
+    <ul class="abt_honor clearfix">
+        <li>
+            <img src="images/abt_honors_03.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_05.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_07.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_12.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_13.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_14.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_18.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_19.jpg" width="258" height="318" alt=""/>
+        </li>
+        <li>
+            <img src="images/abt_honors_20.jpg" width="258" height="318" alt=""/>
+        </li>
+    </ul>
+    <!--分页-->
+    <ul class="pagination">
+    	<li><span>共6条数据</span></li>
+        <li>
+            <a href="#">上一页</a>
+        </li>
+        <li class="active">
+            <a href="#">1</a>
+        </li>
+        <li>
+            <a href="#">2</a>
+        </li>
+        <li>
+            <a href="#">3</a>
+        </li>
+        <li>
+            <a href="#">4</a>
+        </li>
+        <li>
+            <a href="#">5</a>
+        </li>
+        <li >
+            <a href="#">下一页</a>
+        </li>
+        <li>
+            <a href="#">尾页</a>
+        </li>
+
+    </ul>
+</div>
+        
+       
+
+</body>
+<script>
+
+/*tab切换*/
+//$(function(){
+//	$('.about_tabl li').click(function(){
+//		var num=$(this).index();
+//		$(this).addClass('abspe').siblings('li').removeClass('abspe');
+//		$('.sintro_you').eq(num).addClass('show').siblings('.sintro_you').removeClass('show');
+//	});
+//});
+
+/*分页*/
+$(function(){
+	$('.pagination li').click(function(){
+		$(this).addClass('paging').siblings('li').removeClass('paging');
+		
+	});
+});
+
+$('.abt_honor li').on('click',function(){
+	
+	layer.open({
+	  type: 1,
+	  title: false,
+	  closeBtn: 1,
+	  area: 'auto',
+	  shade: 0.8,
+	  skin: 'layui-layer-nobg', //没有背景色
+	  shadeClose: true,
+	  content: $(this).html()
+	});
+	//alert(num);
+	
+})
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

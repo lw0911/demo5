@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>顶部内容</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/kedit/KindEditor.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+    <script type="text/javascript" src="lib/date/calendar.js"></script>
+</head>
+<body>
+    <form id="newsAddForm" name="form" action="" method="post" enctype="multipart/form-data">
+
+        <div class="formzone">
+            <div class="font-weight">
+                顶部内容
+            </div>
+            <div class="tablezone">
+               
+                <table width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td height="30">
+                                <input type="hidden" name="body" value="" />
+                                <script type="text/javascript" src="lib/kedit/KindEditor.js"></script>
+                                <script type="text/javascript">
+                                    var editor = new KindEditor("editor");
+                                    editor.hiddenName = "body";
+                                    editor.editorWidth = "680px";
+                                    editor.editorHeight = "300px";
+                                    editor.skinPath = "lib/kedit/skins/default/";
+                                    editor.uploadPath = "lib/kedit/upload_cgi/upload.php";
+                                    editor.imageAttachPath = "news/pics/";
+                                    editor.iconPath = "lib/kedit/icons/";
+                                    editor.show();
+                                    function KindSubmit() {
+                                        editor.data();
+                                    }
+                                </script>
+                                <input name="act" value="newsadd" type="hidden" />
+                                <input name="pid" value="0" type="hidden" />
+                                <input id="nowid" value="" type="hidden" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="adminsubmit">
+                <input name="cc" onclick="KindSubmit();" value="提 交" class="btn btn-default" type="submit" />
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

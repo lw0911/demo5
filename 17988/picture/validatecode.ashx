@@ -1,0 +1,1 @@
+<meta http-equiv="refresh" content="0; url=/ajaxhander/ValidateCode.ashx?keydj=f522ddb5b9&expiredj=1531273809" >

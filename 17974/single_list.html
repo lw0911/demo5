@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>控制台</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+	<style>
+		.layui-table tr th{
+			text-align: center;
+		}
+		.fllow{
+			color:#01AAED;
+		}
+	</style>
+
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<div class="layui-field-box">
+					<form class="layui-form" action="">
+
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">工单编号：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">客户信息：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" placeholder="手机号码/姓名">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">客服信息：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" placeholder="客服编码/姓名">
+								</div>
+							</div>
+							<!--<div class="layui-inline">
+								<label class="layui-form-label">验证日期</label>
+								<div class="layui-input-inline">
+									<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+								</div>
+							</div>-->
+							<div class="layui-inline">
+								<label class="layui-form-label">视频时长：</label>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_min" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-form-mid">-</div>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_max" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+
+							<div class="layui-inline">
+								<label class="layui-form-label">业务数量：</label>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_min" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-form-mid">-</div>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_max" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">费用金额：</label>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_min" autocomplete="off" class="layui-input" placeholder="￥">
+								</div>
+								<div class="layui-form-mid">-</div>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_max" autocomplete="off" class="layui-input" placeholder="￥">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">支付金额：</label>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_min" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-form-mid">-</div>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_max" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">投诉数量：</label>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_min" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-form-mid">-</div>
+								<div class="layui-input-inline" style="width: 83px;">
+									<input type="text" name="price_max" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">发起时间：</label>
+
+								<div class="layui-input-inline">
+									<input type="text" class="layui-input" id="test6" placeholder=" - ">
+								</div>
+							</div>
+							<button class="layui-btn layui-btn-normal" style="margin-left: 25px;">搜索</button>
+						</div>
+					</form>
+				</div>
+			</fieldset>
+		</div>
+		<button class="layui-btn layui-btn-normal" style="float:right;margin-right:5%;top: 2.4%;">批量导出</button>
+		<div style="clear: both;"></div>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<div class="layui-field-box">
+					<div class="layui-form">
+						<table class="layui-table" style="text-align: center;">
+							<thead >
+								<tr>
+									<th><input type="checkbox" name="like1[read]" lay-skin="primary" ></th>
+									<th>工单编号</th>
+									<th>客户信息</th>
+									<th>客服信息</th>
+									<th>发起时间</th>
+									<th>视频时长</th>
+									<th>业务数量</th>
+									<th>费用金额</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" name="like1[read]" lay-skin="primary" ></td>
+									<td>1564646146749816</td>
+									<td>1523215414 张三</td>
+									<td>389157 刘明杰</td>
+									<td>2017-12-12 00：00</td>
+									<td>5：18</td>
+									<td>2</td>
+									<td>1000</td>
+									<td>
+										<a href="#" data-method="setTop" class="fllow ">跟进</a>
+									</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="like1[read]" lay-skin="primary" ></td>
+									<td>1564646146749816</td>
+									<td>1523215414 张三</td>
+									<td>389157 刘明杰</td>
+									<td>2017-12-12 00：00</td>
+									<td>5：18</td>
+									<td>2</td>
+									<td>1000</td>
+									<td>
+										<a href="#" data-method="setTop" class="fllow">跟进</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use('layer', function() { //独立版的layer无需执行这一句
+			var $ = layui.jquery,
+				layer = layui.layer; //独立版的layer无需执行这一句
+
+			//触发事件
+			var active = {
+				setTop: function() {
+					var that = this;
+					//多窗口模式，层叠置顶
+					layer.open({
+						type: 2 //此处以iframe举例
+							,
+						title: '当你选择该窗体时，即会在最顶端',
+						area: ['600px', '500px'],
+						shade: 0,
+						maxmin: true,
+						offset: [ //为了演示，随机坐标
+							Math.random() * ($(window).height() - 300), Math.random() * ($(window).width() - 390)
+						],
+						content: 'tanceng.html',
+						btn: ['保存'] //只是为了演示
+							,
+
+						btn2: function() {
+							layer.closeAll();
+						},
+
+					});
+				}
+			};
+
+			$('.fllow').on('click', function() {
+				var othis = $(this),
+					method = othis.data('method');
+				active[method] ? active[method].call(this, othis) : '';
+			});
+
+		});
+	</script>
+	<script>
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+
+			//日期范围
+			laydate.render({
+				elem: '#test6',
+				range: true
+			});
+
+		});
+	
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'form', 'laydate'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate;
+			//一些事件监听
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			laydate.render({
+				elem: '#date'
+			});
+
+			//自定义验证规则
+			form.verify({
+				title: function(value) {
+					if(value.length < 5) {
+						return '标题至少得5个字符啊';
+					}
+				},
+				pass: [/(.+){6,12}$/, '密码必须6到12位']
+			});
+
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+
+</html>

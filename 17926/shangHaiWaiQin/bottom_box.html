@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="../public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/plugins/toastr/toastr.min.css" />
+		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<!-- 时间控件样式 -->
+		<link href="../css/plugins/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+		<link href="../public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/inspinia.css" />
+		<link rel="stylesheet" href="../css/keHuGuanXi.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="../public/html5shiv.min.js"></script>
+		    <script src="../public/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+		<style>
+		ul,li{
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		h2{
+			font-size: 14px;
+		}
+		.right_b_table{
+			width: 49%;
+			float: right;
+		}
+		.liuCheng_list {
+		    margin-top: 20px;
+		}
+		.liuCheng_list li {
+		    overflow: hidden;
+		    font-size: 14px;
+		    padding: 0 0 0 4px;
+		    width: 191px;
+		    height: 45px;
+		}
+		.liuCheng_list p, .liuCheng_list dl, .liuCheng_list h1, .liuCheng_list h2 {
+		    float: left;
+		}
+		.liuCheng_list p {
+		    position: relative;
+		    width: 36px;
+		    height: 45px;
+		}
+		.liuCheng_list p .through {
+		    background: url(../img/m_icon.png) -70px -83px no-repeat;
+		}
+		
+		.liuCheng_list p span {
+		    width: 14px;
+		    height: 14px;
+		    top: 0;
+		    left: 0;
+		}
+		.liuCheng_list p span, .liuCheng_list p strong {
+		    position: absolute;
+		}
+		.liuCheng_list p .green {
+		    background: #66d763;
+		}
+		.liuCheng_list p strong {
+		    width: 4px;
+		    height: 32px;
+		    top: 13px;
+		    left: 5px;
+		}
+		.liuCheng_list p span, .liuCheng_list p strong {
+		    position: absolute;
+		}
+		.liuCheng_list dt {
+		    overflow: hidden;
+		    margin-top: -6px;
+		}
+		.liuCheng_list h1 {
+		    max-width: 68px;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    font-size: 14px;
+		}
+		.liuCheng_list h2 {
+		    margin-left: 10px;
+		    color: #AAA;
+		}
+		.liuCheng_list dd {
+		    height: 16px;
+		    line-height: 16px;
+		    overflow: hidden;
+		    color: #AAA;
+		}
+		.liuCheng_list p .notapproval {
+		    background: url(../img/m_icon.png) -49px -83px no-repeat;
+		}
+		.huiFu-comments-input,.faBu-comments-input{
+			padding: 10px 10px 0;
+    		position: relative;
+		}
+		.homepage-release-replay {
+		    border: 1px solid #ced1d6;
+		    border-radius: 3px;
+		    box-sizing: border-box;
+		    padding: 8px;
+		    padding-top: 6px;
+		    resize: none;
+		    width: 100%;
+    	}
+    	.crm-button-yellow {
+		    border-radius: 2px;
+		    color: #fff;
+		    background-color: #f39c12;
+		    cursor: pointer;
+		    padding: 0 20px;
+		    vertical-align: middle;
+		    display: inline-block;
+		    border: 1px solid #f39c12;
+		}
+		.homepage-release-replay-button {
+		    float: right;
+		    text-align: center;
+		    height: 25px !important;
+		    line-height: 25px !important;
+		}
+		.homepage-release-face-button {
+		    height: 25px;
+		    width: 25px;
+		    background: rgba(0,0,0,0) url(../img/view.png) no-repeat scroll -207px -148px;
+		    cursor: pointer;
+		    margin-right: 5px;
+		    float: left;
+		}
+		.homepage-replay-user {
+		    height: 20px;
+		    line-height: 20px;
+		    color: #0092da;
+		    white-space: nowrap;
+		}
+		.qqFace {
+		    margin-top: 4px;
+		    background: #fff;
+		    padding: 2px;
+		    border: 1px #dfe6f6 solid;
+		}
+		.qqFace table td img:hover {
+		    border: 1px #0066cc solid;
+		}
+		
+		.qqFace table td img {
+		    cursor: pointer;
+		    border: 1px #fff solid;
+		}
+		.huiFu-comments-input{
+			display: none;
+		}
+		#dialog{
+			width: 100%;
+			height:100%;
+			position: absolute;
+			top:0;
+			background:#000;
+			opacity: 0.5;
+			z-index: 1;
+			display: none;
+		}
+		#faBu_cz{
+			background:#fafafa;
+			display: none;
+		}
+		.fanWei{
+			display: inline-block;
+			float: right;
+			margin-right: 15px;
+		}
+		.fanWei button{
+			background: #fff;
+		    border: none;
+		    width: 125px;
+		    border-bottom: 1px solid #ddd;
+		    text-align: center;
+		    outline: none;
+		}
+		.drop_men{
+			position: fixed;
+			margin-left: 50px;
+			z-index: 2;
+			border:1px solid #ddd;
+			box-shadow: 3px 3px 3px #333;
+			background:#fff;
+			display: none;
+		}
+		.drop_men.active{
+			display: block;
+		}
+		.drop_men ul li{
+			padding:5px 20px;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+			cursor: pointer;
+		}
+		.drop_men ul li:hover{
+			background:#eee;
+		}
+		.sel_list{
+			padding:10px 5px;
+			border-bottom: 1px dotted #333;
+			overflow: hidden;
+		}
+		.sel_list>span{
+			border:1px solid #ddd;
+			border-radius: 20px;
+			padding:5px 10px;
+			margin:5px;
+			float: left;
+		}
+		.sel_list>span i{
+			color:#333;
+			margin-left: 5px;
+		}
+		#friend_menu{
+			border: 1px solid #ddd;
+		    border-top: none;
+		    background:#fafafa;
+		    position: relative;
+		    z-index: 1;
+		    display: none;
+		}
+		.qd_btn{
+			background:#f39c12;
+			border:1px solid #f39c12;
+			color:#fff;
+			padding:3px 20px;
+			border-radius: 3px;
+			float: right;
+		}
+		.hy_list{
+			overflow: hidden;
+		}
+		.left_ul{
+			float: left;
+			width: 20%;
+		}
+		.right_con{
+			float: right;
+			min-height: 200px;
+			border-left: 1px solid #ddd;
+			width: 80%;
+		}
+		.left_ul ul li{
+			padding:5px 0;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+		}
+		.left_ul ul li:hover{
+			background:#eee;
+		}
+		.left_ul ul li.active{
+			background: #eee;
+		}
+		.right_con ul li{
+			padding:10px 0;
+			text-align: center;
+			width: 25%;
+			float: left;
+			border:1px solid transparent;
+		}
+		.right_con ul li:hover{
+			background:#C7E0F3;
+			border-color: #A5CBE9;
+			border-radius: 3px;
+		}
+		.right_con ul li input{
+			position: relative;
+			top:2px;
+			margin-right: 5px;
+		}
+		.right_con>div{
+			display: none;
+			overflow: hidden;
+			padding:10px;
+		}
+		.right_con>div.active{
+			display: block;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div id="dialog"></div>
+		<div id="wrapper" class="container" style="padding:0;">
+			<!--标编辑-->
+			<div id="biaobj" class=" wrapper wrapper-content animated fadeInRight" style="padding: 20px 0 40px;">
+					<!-- 下部表格 -->
+					<div class="ibox-content table_bot">
+						<div class="tab_list">
+							<ul class="tab_box">
+								<li class="select_tab" data-btn="block">基本信息</li>
+								<li data-btn="block">联系人</li>
+								<li data-btn="hide">相关合同</li>
+								<li data-btn="hide">设备信息</li>
+								<li data-btn="hide">交往记录</li>
+								<li data-btn="block">维护系数</li>
+							</ul>
+							<div style="overflow: hidden;display: inline-block;float: right;margin-top:5px;">
+								<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-success">
+									<i class="fa fa-plus" style="margin-left:5px;"></i>新建
+								</button>
+								<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-success">
+									<i class="fa fa-edit" style="margin-left:5px;"></i>编辑
+								</button>
+								<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-success">
+									<i class="fa fa-close" style="margin-left:5px;"></i>删除
+								</button>
+							</div>
+						</div>
+						<div class="table_content" style="overflow:hidden;padding:10px 0;">
+							<!-- 基本信息 -->
+							<div class="active"> 
+								<table class="table jiBen_table">
+									<tbody>
+										<tr>
+											<td>
+												客户编号：<span>20160416054</span>
+											</td>
+											<td>
+												客户类型：<span>全保客户</span>
+											</td>
+											<td>
+												坐标：<span><a id="shiQu" href="javascript:void(0)">拾取</a></span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3">
+												客户名称：<span>安庆纺织医院</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												客户区域：<span>安徽省</span>
+											</td>
+											<td colspan="2">
+												负责人：<span>甘泉州</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3">
+												客户地址：<span id="keHu_dizhi">安徽安庆纺织路西巷38号</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3">
+												备注信息：<span></span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												修改人：<span></span>
+											</td>
+											<td>
+												修改时间：<span></span>
+											</td>
+											<td>
+												有效性：<span></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 联系人 -->
+							<div class="">
+								<div class="left_b_table ">
+									<div class="row">
+										<div class="col-sm-12">
+											<table class="table table-striped table-bordered table-hover dataTables-example">
+												<thead>
+													<tr>
+														<th>序号</th>
+														<th>姓名</th>
+														<th>性别</th>
+														<th>职位</th>
+														<th>手机</th>
+														<th>办公室电话</th>
+														<th>备注</th>
+														<th>修改人</th>
+														<th>修改时间</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>王明</td>
+														<td>男</td>
+														<td>院长</td>
+														<td>15932865897</td>
+														<td>0311-8019756</td>
+														<td></td>
+														<td>李丽</td>
+														<td>2016-06-01</td>
+														<td>
+															<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-white">
+																<i class="fa fa-edit" style="margin-left:5px;color:#333;"></i>编辑
+															</button>
+															<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-white">
+																<i class="fa fa-close" style="margin-left:5px;color:#333;"></i>删除
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>王明</td>
+														<td>男</td>
+														<td>院长</td>
+														<td>15932865897</td>
+														<td>0311-8019756</td>
+														<td></td>
+														<td>李丽</td>
+														<td>2016-06-01</td>
+														<td>
+															<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-white">
+																<i class="fa fa-edit" style="margin-left:5px;color:#333;"></i>编辑
+															</button>
+															<button id="gaoJi_se" data-target="gaoJiSouSuo" style="margin-left:10px;float: right;" type="button" class="btn btn-white">
+																<i class="fa fa-close" style="margin-left:5px;color:#333;"></i>删除
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+										</div>
+										<div style="height:27px;" class="col-sm-7">
+											<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+												<ul class="pagination pull-right" style="margin:-3px 0;">
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="2">2</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="right_b_table ">
+									<div class="approve-detail-right-inner">
+										<div class="liuCheng_box">
+											<ul class="liuCheng_list">
+												<li>
+													<p>
+														<span class="through"></span>
+														<strong class="green" style="display:"></strong>
+													</p>
+													<dl>
+														<dt>
+															<h1>华邦云</h1>
+															<h2>(通过)</h2>
+														</dt>
+														<dd>2017-03-13 09:54:28</dd>
+													</dl>
+												</li>
+												<li>
+													<p>
+														<span class="notapproval"></span>
+														<strong class="grey" style="display:none"></strong>
+													</p>
+													<dl>
+														<dt>
+															<h1>张丽</h1>
+															<h2></h2>
+														</dt>
+														<dd></dd>
+													</dl>
+												</li>
+												<li style="color: rgb(170, 170, 170);">经办人: 曲道(未经办) </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 相关合同 -->
+							<div class="">
+								<div class="left_b_table ">
+									<div class="row">
+										<div class="col-sm-12">
+											<table class="table table-striped table-bordered table-hover dataTables-example">
+												<thead>
+													<tr>
+														<th>任务名称</th>
+														<th>负责人</th>
+														<th>状态</th>
+														<th>开始时间</th>
+														<th>结束时间</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<a onclick="javascript:r_swiper(this)" style="color:#0D8DDB !important;" href="javascript:void(0)">20160808000301</a>
+														</td>
+														<td>王</td>
+														<td>表编辑</td>
+														<td>担保</td>
+														<td>担保标</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+										</div>
+										<div style="height:27px;" class="col-sm-7">
+											<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+												<ul class="pagination pull-right" style="margin:-3px 0;">
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 设备信息 -->
+							<div class="">
+								<div class="left_b_table ">
+									<div class="row">
+										<div class="col-sm-12">
+											<table class="table table-striped table-bordered table-hover dataTables-example">
+												<thead>
+													<tr>
+														<th>索引</th>
+														<th>单据号</th>
+														<th>发生日期</th>
+														<th>费用金额</th>
+														<th>费用类型</th>
+														<th>票据类型</th>
+														<th>费用明细</th>
+														<th>创建时间</th>
+														<th>费用核定</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>1</td>
+														<td>2016-07-27</td>
+														<td>257.50</td>
+														<td>城际交通(动车高铁)</td>
+														<td>增值税发票</td>
+														<td>邯郸到唐山市第二医院</td>
+														<td>2016-07-27</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>1</td>
+														<td>2016-07-27</td>
+														<td>257.50</td>
+														<td>城际交通(动车高铁)</td>
+														<td>增值税发票</td>
+														<td>邯郸到唐山市第二医院</td>
+														<td>2016-07-27</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>1</td>
+														<td>2016-07-27</td>
+														<td>257.50</td>
+														<td>城际交通(动车高铁)</td>
+														<td>增值税发票</td>
+														<td>邯郸到唐山市第二医院</td>
+														<td>2016-07-27</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+										</div>
+										<div style="height:27px;" class="col-sm-7">
+											<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+												<ul class="pagination pull-right" style="margin:-3px 0;">
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="2">2</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="3">3</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="4">4</a>
+													</li>
+													<li class="paginate_button previous" id="editable_previous">
+														<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="right_map_box">
+									<div class="tab_list">
+										<ul class="tab_box">
+											<li class="select_tab">标签一</li>
+											<li>标签二</li>
+											<li>标签三</li>
+										</ul>
+									</div>
+									<div class="right_tab_box">
+										<div class="map_box active">
+											<div id="map">
+												<div style="width: 100%; height: 260px;" id="allmap"></div>
+											</div>
+											<button style="float:right;" class="btn btn-success">查看大图</button>
+										</div>
+										<div>
+											<div class="row">
+												<div class="col-sm-12">
+													<table class="table table-striped table-bordered table-hover dataTables-example">
+														<thead>
+															<tr>
+																<th>索引</th>
+																<th>发生日期</th>
+																<th>报销人</th>
+																<th>费用金额</th>
+																<th>费用类型</th>
+																<th>票据类型</th>
+																<th>费用明细</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>1</td>
+																<td>2016-07-27</td>
+																<td></td>
+																<td>257.50</td>
+																<td>城际交通(动车高铁)</td>
+																<td>增值税发票</td>
+																<td>邯郸到唐山市第二医院</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>2016-07-27</td>
+																<td></td>
+																<td>257.50</td>
+																<td>城际交通(动车高铁)</td>
+																<td>增值税发票</td>
+																<td>邯郸到唐山市第二医院</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>2016-07-27</td>
+																<td></td>
+																<td>257.50</td>
+																<td>城际交通(动车高铁)</td>
+																<td>增值税发票</td>
+																<td>邯郸到唐山市第二医院</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-5">
+													<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+												</div>
+												<div style="height:27px;" class="col-sm-7">
+													<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+														<ul class="pagination pull-right" style="margin:-3px 0;">
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+															</li>
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+															</li>
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="2">2</a>
+															</li>
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="row">
+												<div class="col-sm-12">
+													<table class="table table-striped table-bordered table-hover dataTables-example">
+														<thead>
+															<tr>
+																<th>索引</th>
+																<th>发生日期</th>
+																<th>报销人</th>
+																<th>费用金额</th>
+																<th>费用类型</th>
+																<th>票据类型</th>
+																<th>费用明细</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>1</td>
+																<td>2016-07-27</td>
+																<td></td>
+																<td>257.50</td>
+																<td>城际交通(动车高铁)</td>
+																<td>增值税发票</td>
+																<td>邯郸到唐山市第二医院</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>2016-07-27</td>
+																<td></td>
+																<td>257.50</td>
+																<td>城际交通(动车高铁)</td>
+																<td>增值税发票</td>
+																<td>邯郸到唐山市第二医院</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>2016-07-27</td>
+																<td></td>
+																<td>257.50</td>
+																<td>城际交通(动车高铁)</td>
+																<td>增值税发票</td>
+																<td>邯郸到唐山市第二医院</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-5">
+													<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+												</div>
+												<div style="height:27px;" class="col-sm-7">
+													<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+														<ul class="pagination pull-right" style="margin:-3px 0;">
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+															</li>
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+															</li>
+															<li class="paginate_button previous" id="editable_previous">
+																<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 交往记录 -->
+							<div>
+								<div class="jiLu_box">
+									<div class="faBu-comments-input" style="width:60%;height: 99px; margin-top: 10px; display: block !important;">
+										<textarea id="saytext1" name="saytext" placeholder="输入评论" class="homepage-release-replay txt" data-replay="" style="outline: none; height: 50px;"></textarea>
+										<div id="faBu_cz" class="homepage-release-replay-button-con" style="overflow: hidden;border:1px solid #ddd;border-top: none;padding:5px;margin-top:-5px;">
+											<span id="faBu_btn" class="homepage-release-replay-button crm-button-yellow">发布</span>
+											<div class="fanWei">
+												<label for="" style="margin-bottom: 0; margin-top:4px;">可见范围：</label>
+												<button class="kjfw" type="button" />所有人可见</button>
+												<div class="drop_men">
+													<ul>
+														<li target="hide" data-menu="friend_menu">所有人可见</li>
+														<li target="hide" data-menu="friend_menu">好友可见</li>
+														<li target="block" data-menu="friend_menu">部分好友可见</li>
+														<li target="block" data-menu="friend_menu">部分好友不可见</li>
+														<li target="hide" data-menu="friend_menu" style="border-bottom: none;">仅自己可见</li>
+													</ul>
+												</div>
+											</div>
+											<span title="添加表情" class="homepage-release-face-button chat02_title_btn ctb01 emotion1"></span>		
+										</div>
+										<div id="friend_menu">
+											<div class="sel_list">
+												<span>张三<i class="fa fa-trash-o"></i></span>
+											</div>
+											<div style="overflow: hidden;padding:5px 10px;border-bottom: 1px dotted #333;">
+												<span style="position: relative;top:5px;">您可以在下面选择添加最多 1000位好友</span>
+												<button class="qd_btn">确定</button>
+											</div>
+											<div class="hy_list">
+												<div class="left_ul">
+													<div style="padding:15px 0;">
+														<div style="width: 80%;margin:0 auto;border:1px solid #ddd;padding:3px">
+															<input style="border:none;outline:none;" type="text" placeholder="搜索好友" name="" id="" value="" />
+															<span style="display: inline-block;width: 20px;float: right;">
+																<i style="color:#333;" class="fa fa-search"></i>
+															</span>
+														</div>
+													</div>
+													<ul>
+														<li class="active">全部好友</li>
+														<li>我的好友</li>
+														<li>朋友</li>
+													</ul>
+												</div>
+												<div class="right_con">
+													<div class="active">
+														<ul>
+															<li id="11"><input type="checkbox" /><span class="name">李四</span></li>
+															<li id="22"><input type="checkbox" /><span class="name">王五</span></li>
+															<li id="33"><input type="checkbox" /><span class="name">马六</span></li>
+															<li id="44"><input type="checkbox" /><span class="name">田七</span></li>
+															<li id="55"><input type="checkbox" /><span class="name">小明</span></li>
+														</ul>
+													</div>
+													<div>我的好友</div>
+													<div>朋友</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="jiLu_item">
+										<div class="touXiang">
+											<span class="touXiang_img">李</span>
+										</div>
+										<div class="jiLu-main-info">
+											<div class="jiLu-title">
+												<span class="user-name">李文乐</span>
+												<span class="approve-user-depname">李文乐查看请假申请</span>
+											</div>
+											<div class="jiLu-con">
+												<div class="jiLu-content"></div>
+											</div>
+											<div class="jiLu-footer">
+												<a class="jiLu-time" href="javascript:void(0);">昨天15:13</a>
+												<a class="jiLu-comment" href="javascript:void(0);">评论(0)</a>
+												<a class="jiLu-huiFu" href="javascript:void(0);">转发</a>
+											</div>
+											<div class="huiFu-comment-list">
+												<div class="huiFu-comments">
+													<div class="huiFu-comment">
+														<div style="float:left;" class="huiFu_touxiang">
+															<span class="huiFu_img">刘</span>
+														</div>
+														<div class="huiFu-body">
+															<span class="huiFu-user">刘永:</span>
+															<span class="approve-user-depname">123</span>
+														</div>
+														<div class="homepage-comment-spread-con">
+															<span class="homepage-comment-spread-collect" style="display: none;"></span>
+														</div>
+														<div class="huiFu-foot">
+															<span class="huiFu-time">11:02</span>
+															<span class="huiFu-recover" onclick="HuiFu(this)">回复</span>
+															<span class="huiFu-line">|</span>
+															<span class="huiFu-del" onclick="DelHuiFu(this)">删除</span>
+														</div>
+													</div>
+												</div>
+												<!-- 回复 -->
+												<div class="huiFu-comments-input" style="height: 99px; margin-top: 10px; display: block;border:1px solid #ddd;">
+													<textarea id="saytext2" name="saytext" placeholder="输入评论" class="homepage-release-replay txt" data-replay="" style="outline: none; height: 50px;"></textarea>
+													<div class="homepage-release-replay-button-con" style="display: block;">
+														<span class="homepage-release-replay-button crm-button-yellow">评论</span>
+														<span title="添加表情" class="homepage-release-face-button chat02_title_btn ctb01 emotion1"></span>
+														
+													</div>
+													<div class="facebox" id="facebox-583f92a70cf25c08717346ab" style="left: 20px; top: 105px; display: block;">
+														<ul></ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="jiLu_item">
+										<div class="touXiang">
+											<span class="touXiang_img">刘</span>
+										</div>
+										<div class="jiLu-main-info">
+											<div class="jiLu-title">
+												<span class="user-name">刘永</span>
+												<span class="approve-user-depname">刘永审批通过</span>
+											</div>
+											<div class="jiLu-con">
+												<div class="jiLu-content">刘永审批通过了请假申请</div>
+											</div>
+											<div class="jiLu-footer">
+												<a class="jiLu-time" href="javascript:void(0);">昨天15:02</a>
+												<a class="jiLu-comment" href="javascript:void(0);">评论(0)</a>
+												<a class="jiLu-huiFu" href="javascript:void(0);">回复</a>
+											</div>
+											<div class="huiFu-comment-list">
+												<div class="huiFu-comments">
+													<div class="huiFu-comment">
+														<div style="float:left;" class="huiFu_touxiang">
+															<span class="huiFu_img">刘</span>
+														</div>
+														<div class="huiFu-body">
+															<span class="huiFu-user">刘永:</span>
+															<span class="approve-user-depname">123</span>
+														</div>
+														<div class="homepage-comment-spread-con">
+															<span class="homepage-comment-spread-collect" style="display: none;"></span>
+														</div>
+														<div class="huiFu-foot">
+															<span class="huiFu-time">11:02</span>
+															<span class="huiFu-recover" onclick="HuiFu(this)">回复</span>
+															<span class="huiFu-line">|</span>
+															<span class="huiFu-del" onclick="DelHuiFu(this)">删除</span>
+														</div>
+													</div>
+												</div>
+												<!-- 回复 -->
+												<div class="huiFu-comments-input" style="height: 99px; margin-top: 10px; display: block;border:1px solid #ddd;">
+													<textarea id="saytext2" name="saytext" placeholder="输入评论" class="homepage-release-replay txt" data-replay="" style="outline: none; height: 50px;"></textarea>
+													<div class="homepage-release-replay-button-con" style="display: block;">
+														<span class="homepage-release-replay-button crm-button-yellow">评论</span>
+														<span title="添加表情" class="homepage-release-face-button chat02_title_btn ctb01 emotion1"></span>
+														
+													</div>
+													<div class="facebox" id="facebox-583f92a70cf25c08717346ab" style="left: 20px; top: 105px; display: block;">
+														<ul></ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="jiLu_item">
+										<div class="touXiang">
+											<span class="touXiang_img">刘</span>
+										</div>
+										<div class="jiLu-main-info">
+											<div class="jiLu-title">
+												<span class="user-name">刘永</span>
+												<span class="approve-user-depname">刘永提交请假申请</span>
+											</div>
+											<div class="jiLu-con">
+												<div class="jiLu-content"></div>
+											</div>
+											<div class="jiLu-footer">
+												<a class="jiLu-time" href="javascript:void(0);">昨天15:13</a>
+												<a class="jiLu-comment" href="javascript:void(0);">评论(0)</a>
+												<a class="jiLu-huiFu" href="javascript:void(0);">回复</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 维护系数 -->
+							<div class="">
+								<div class="row">
+									<div class="col-sm-12">
+										<table id="weiHuXiShu" class="table table-striped table-bordered table-hover dataTables-example">
+											<thead>
+												<tr>
+													<th>索引</th>
+													<th>时间</th>
+													<th>参与人</th>
+													<th>阶段</th>
+													<th>分值</th>
+													<th>内容</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>2017-09-16</td>
+													<td>张三</td>
+													<td>市场调研</td>
+													<td>20</td>
+													<td></td>
+													<td>
+														<a href="javascript:void(0)">申诉</a>
+													</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>2017-09-16</td>
+													<td>张三</td>
+													<td>市场调研</td>
+													<td>20</td>
+													<td></td>
+													<td>
+														<a href="javascript:void(0)">申诉</a>
+													</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>2017-09-16</td>
+													<td>张三</td>
+													<td>市场调研</td>
+													<td>20</td>
+													<td></td>
+													<td>
+														<a href="javascript:void(0)">申诉</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+									</div>
+									<div style="height:27px;" class="col-sm-7">
+										<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+											<ul class="pagination pull-right" style="margin:-3px 0;">
+												<li class="paginate_button previous" id="editable_previous">
+													<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+												</li>
+												<li class="paginate_button previous" id="editable_previous">
+													<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+												</li>
+												<li class="paginate_button previous" id="editable_previous">
+													<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="2">2</a>
+												</li>
+												<li class="paginate_button previous" id="editable_previous">
+													<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="3">3</a>
+												</li>
+												<li class="paginate_button previous" id="editable_previous">
+													<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="4">4</a>
+												</li>
+												<li class="paginate_button previous" id="editable_previous">
+													<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+		</div>
+		<script src="../public/jquery-1.11.3.js"></script>
+		<script src="../public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/lhgdialog/lhgdialog.js"></script>
+		<!-- 弹出警示框 -->
+		<script src="../js/plugins/toastr/toastr.min.js"></script>
+		<!-- 弹出确认框 -->
+		<script src="../public/artDialog4.1.7/artDialog.js?skin=blue"></script>
+		<script src="../public/artDialog4.1.7/plugins/iframeTools.js"></script>
+		<!-- 时间控件样式 -->
+		<script src="../js/plugins/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="../js/plugins/datetimepicker/bootstrap-datetimepicker-update.min.js"></script>
+		<script src="../js/plugins/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+
+		<script src="../js/templet_form.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=67jMQ5DmYTe1TLMBKFUTcZAR"></script>
+		<script type="text/javascript" src="../js/jquery.qqFace.js"></script>
+		<script>
+			jQuery.browser={};(function(){jQuery.browser.msie=false; jQuery.browser.version=0;if(navigator.userAgent.match(/MSIE ([0-9]+)./)){ jQuery.browser.msie=true;jQuery.browser.version=RegExp.$1;}})();
+			$(function() {
+				$('.ymd_date').datetimepicker({　
+					minView: "month",
+					format: "yyyy-mm-dd",
+					language: 'zh-CN',
+					autoclose: true,
+					pickerPosition: "bottom-left",
+
+				});
+				$('.emotion1').qqFace({
+			
+					id : 'facebox', 
+			
+					assign:'saytext1', 
+			
+					path:'arclist/'	//表情存放的路径
+			
+				});
+				$('.homepage-release-replay-button').click(function() {
+					var str2 = $(this).parent().parent().find('textarea').val();
+
+					if(str2 !== '') {
+
+						/*************获取当前时间****************/
+						var date = new Date();
+						var seperator1 = "-";
+						var seperator2 = ":";
+						var month = date.getMonth() + 1;
+						var strDate = date.getDate();
+						var getMin = date.getMinutes();
+						if(getMin >= 1 && getMin <= 9) {
+							getMin = "0" + getMin;
+						}
+						if(month >= 1 && month <= 9) {
+							month = "0" + month;
+						}
+						if(strDate >= 0 && strDate <= 9) {
+							strDate = "0" + strDate;
+						}
+						var currentdate = month + '月' + strDate + "日 " + date.getHours() + seperator2 + getMin;
+						/******************************************************/
+						var str_as = '<div class="huiFu-comments">' +
+										'<div class="huiFu-comment">' +
+											'<div style="float:left;width:30px;height:30px;" class="huiFu_touxiang">' +
+												'<span class="huiFu_img">刘</span>' +
+											'</div>' +
+											'<div class="huiFu-body">' +
+												'<span class="homepage-replay-user">刘永:</span>回复' +
+												'<span class="">刘永</span>' + replace_em(str2) +
+											'</div>' +
+											'<div class="huiFu-foot">' +
+												'<span class="huiFu-time">' + currentdate + '</span>' +
+												'<span class="huiFu-recover" onclick="HuiFu(this)">回复</span>' +
+												'<span class="huiFu-line">|</span>' +
+												'<span class="huiFu-del" onclick="DelHuiFu(this)">删除</span>' +
+											'</div>' +
+										'</div>' +
+									'</div>';
+						$(str_as).insertBefore($(this).parent().parent());
+					}
+					$(this).parent().parent().find('textarea').val('');
+				});
+				function replace_em(str) {
+
+					str = str.replace(/\</g, '&lt;');
+	
+					str = str.replace(/\>/g, '&gt;');
+	
+					str = str.replace(/\n/g, '<br/>');
+	
+					str = str.replace(/\[em_([0-9]*)\]/g, '<img src="arclist/$1.gif" border="0" />');
+	
+					return str;
+	
+				}
+				
+				
+				
+				//var val = document.getElementById('demoInput04-3').value;
+//				art.dialog.data('test', val);
+//				art.dialog.data('homeDemoPath', './_doc/');
+				
+				// 此时 iframeA.html 页面可以使用 art.dialog.data('test') 获取到数据，如：
+				// document.getElementById('aInput').value = art.dialog.data('test');
+				
+				/*申诉*/
+				var trs=$('#weiHuXiShu tbody tr');
+				for(var i=0;i<trs.length;i++){
+					$(trs[i]).find('td:last-child').find('a').click(function(){
+						art.dialog.open('new_shenQing.html', {
+							width: 700,
+							height: 400,
+							title: '提示',
+							lock:true,
+							button: [
+						        {
+						            name: '确定',
+						            callback: function () {
+						                
+						                return false;
+						            },
+						            focus: true
+						        },
+						        {
+						            name: '取消',
+						            callback: function () {
+						               
+						            }
+						        }
+						    ]
+						});
+					})
+				}
+				
+			})
+			
+			//回复方法
+			function HuiFu(e){
+				$(e).parent().parent().parent().siblings('.huiFu-comments-input').css('display', 'block');
+				$(e).parents('.jiLu_item').siblings().find('.huiFu-comments-input').css('display', 'none');
+			}
+			//点击按钮和回复框之外的地方隐藏回复框
+			$(document).click(function(e) {
+				if($(e.target).closest('.huiFu-comments-input').length == 0 && $(e.target).closest('.huiFu-recover').length == 0) {
+					$('.huiFu-comments-input').css('display', 'none');
+				}
+			})
+			//删除回复
+			function DelHuiFu(e){
+				$(e).parents('.huiFu-comments').remove();
+			}
+			$('#right_box>.tab_list>.tab_box>li').click(function() {
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var url = $(this).data('url');
+				$('#ifr', window.parent.document).attr('src', url);
+			})
+			$('.table_bot>.tab_list>.tab_box>li').click(function() {
+				if($(this).data('btn')=='hide'){
+					$(this).parent().siblings().css('display','none');
+				}else{
+					$(this).parent().siblings().css('display','block');
+				}
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var index = $(this).index();
+				$('.table_content>div:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+			})
+			$('.right_map_box>.tab_list>.tab_box>li').click(function() {
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var index = $(this).index();
+				$('.right_tab_box>div:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+			})
+			$(function() {
+				ShowMap('121.48,31.22', '百度地图', '上海', '021-888888888', '021-888888888', '20');
+			})
+
+			function getInfo(id) {
+				$.ajax({
+					type: "POST",
+					url: "WebUserControl/Contact/GetInfo.ashx",
+					cache: false,
+					async: false,
+					data: {
+						ID: id
+					},
+					success: function(data) {
+						data = eval(data);
+						var length = data.length;
+						if(length > 0) {
+							ShowMap(data[0]["Image"], data[0]["NewsTitle"], data[0]["Address"], data[0]["Phone"], data[0]["NewsTags"], data[0]["NewsNum"]);
+						}
+					}
+				});
+			}
+
+			function ShowMap(zuobiao, name, addrsee, phone, chuanzhen, zoom) {
+				var arrzuobiao = zuobiao.split(',');
+				var map = new BMap.Map("allmap");
+				map.centerAndZoom(new BMap.Point(arrzuobiao[0], arrzuobiao[1]), zoom);
+				map.addControl(new BMap.NavigationControl());
+				var marker = new BMap.Marker(new BMap.Point(arrzuobiao[0], arrzuobiao[1]));
+				map.addOverlay(marker);
+				var infoWindow = new BMap.InfoWindow('<p style="color: #bf0008;font-size:14px;">' + name + '</p><p>地址：' + addrsee + '</p>');
+				marker.addEventListener("click", function() {
+					this.openInfoWindow(infoWindow);
+				});
+				marker.openInfoWindow(infoWindow);
+			}
+			$('#gaoJi_se').click(function() {
+				var target = $(this).data('target');
+				var i = $(this).find('i');
+				if($(i).hasClass('fa-chevron-right')) {
+					$('#' + target).css('display', 'block');
+					$(i).removeClass('fa-chevron-right').addClass('fa-chevron-down');
+				} else if($(i).hasClass('fa-chevron-down')) {
+					$('#' + target).css('display', 'none');
+					$(i).removeClass('fa-chevron-down').addClass('fa-chevron-right');
+				}
+
+			})
+			/****************发布*****************/
+			$('#faBu_btn').click(function(){
+				var str2 = $(this).parent().parent().find('textarea').val();
+
+					if(str2 !== '') {
+
+						/*************获取当前时间****************/
+						var date = new Date();
+						var seperator1 = "-";
+						var seperator2 = ":";
+						var month = date.getMonth() + 1;
+						var strDate = date.getDate();
+						var getMin = date.getMinutes();
+						if(getMin >= 1 && getMin <= 9) {
+							getMin = "0" + getMin;
+						}
+						if(month >= 1 && month <= 9) {
+							month = "0" + month;
+						}
+						if(strDate >= 0 && strDate <= 9) {
+							strDate = "0" + strDate;
+						}
+						var currentdate = month + '月' + strDate + "日 " + date.getHours() + seperator2 + getMin;
+						/******************************************************/
+						var str_as = '<div class="jiLu_item">'+
+										'<div class="touXiang">'+
+											'<span class="touXiang_img">刘</span>'+
+										'</div>'+
+										'<div class="jiLu-main-info">'+
+											'<div class="jiLu-title">'+
+												'<span class="user-name">刘永</span>'+
+												'<span class="approve-user-depname">刘永审批通过</span>'+
+											'</div>'+
+											'<div class="jiLu-con">'+
+												'<div class="jiLu-content">'+str2+'</div>'+
+											'</div>'+
+											'<div class="jiLu-footer">'+
+												'<a class="jiLu-time" href="javascript:void(0);">'+currentdate+'</a>'+
+												'<a class="jiLu-comment" href="javascript:void(0);">评论(0)</a>'+
+												'<a class="jiLu-huiFu" href="javascript:void(0);">回复</a>'+
+											'</div>'+
+											'<div class="huiFu-comment-list">'+
+												
+											'</div>'+
+										'</div>'+
+									'</div>';
+						$(this).parents('.jiLu_box').append(str_as);
+					}
+					$(this).parent().parent().find('textarea').val('');
+			});
+			/*textarea输入框获取焦点显示发布按钮*/
+			$('#saytext1').focus(function(){
+				$(this).siblings('#faBu_cz').show();
+			})
+			
+			/******点击选择范围显示或隐藏下拉菜单****/
+			$('.kjfw').click(function(){
+				$(this).siblings('.drop_men').toggleClass('active');
+			})
+			/***点击其他地方收起下拉选择菜单**/
+			$(document).click(function(e){
+				if($(e.target).closest('.fanWei').length==0){
+					$('.drop_men').removeClass('active');
+				}
+			})
+			
+			$('.drop_men ul li').click(function(){
+				var inner=$(this).html();
+				$(this).parents('.fanWei').find('.kjfw').html(inner);
+				$(this).parent().parent().removeClass('active');
+				var id=$(this).attr('data-menu');
+				if($(this).attr('target')=="block"){
+					$('#'+id).show();
+				}else if($(this).attr('target')=="hide"){
+					$('#'+id).hide();
+				}
+			})
+			
+			/*点击左侧li对应的右侧显示对应的好友*/
+			$('.left_ul ul li').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				var index=$(this).index();
+				$('.right_con>div:eq('+index+')').addClass('active').siblings().removeClass('active');
+			})
+			/*下面选中某个人，显示在上面sel_list中*/
+			$('.right_con>div.active ul li').click(function(){
+				if(!$(this).find('input').prop('checked')){
+					$(this).find('input').prop('checked',true);
+					var inner=$(this).find('.name').html();
+					var id=$(this).attr('id');
+					var str='<span id='+id+'>'+inner+'<i class="fa fa-trash-o"></i></span>';
+					$('.sel_list').append(str);
+					
+				}else{
+					$(this).find('input').prop('checked',false);
+					var id=$(this).parent().attr('id');
+					$('.sel_list').find('#'+id).remove();
+				}
+				
+			})
+			
+			$(document).click(function(e){
+				if($(e.target).closest('.faBu-comments-input').length==0&&$(e.target).closest('.sel_list').length==0){
+					$('#faBu_cz').hide();
+					$('#friend_menu').hide();
+				}
+			})
+			$('.sel_list').on('click','i',function(e){
+				e.stopPropagation();
+				var id=$(this).parent().attr('id');
+				$(this).parent().remove();
+				$('.right_con>div.active ul li#'+id).find('input').prop('checked',false);
+			})
+			/***********************************/
+			
+			
+			$('#shiQu').click(function(){
+				/*点击按钮弹出框打开独立页面*/
+//				$.dialog({
+//					title: '添加人员',
+//					width: 600,
+//					height: 280,
+//					content: 'url:shangHaiWaiQin/map.html',
+//					init: function() {
+//						var iframe = this.iframe.contentWindow;
+//					},
+//					button: [{
+//						name: '保存',
+//						callback: function() {
+//							var iframe = this.iframe.contentWindow;
+//							if(!iframe.document.body) {
+//								alert('iframe还没加载完毕呢')
+//								return false;
+//							};
+//							$('#keHu_dizhi').html(this.iframe.contentWindow.diZhi);
+//						},
+//						focus: true
+//			
+//					}, {
+//						name: '取消',
+//						callback: function() {
+//			
+//						}
+//					}]
+//				});
+				art.dialog.open('map.html', {
+					width: 600,
+					height: 280,
+					title: '提示',
+					lock:true,
+					init: function() {
+						var iframe = this.iframe.contentWindow;
+					},
+					button: [
+				       {
+					        name: '确定',
+						    callback: function () {
+						        var iframe = this.iframe.contentWindow;
+								if(!iframe.document.body) {
+									alert('iframe还没加载完毕呢')
+									return false;
+								};
+								/*获取点击选中的地址*/
+								$('#keHu_dizhi').html(this.iframe.contentWindow.diZhi);
+						    },
+						    focus: true
+						},
+						{
+						    name: '取消',
+						    callback: function () {
+						               
+						    }
+						}
+					]
+				});
+			})
+			
+		</script>
+	</body>
+
+</html>

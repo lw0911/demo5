@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tree</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="layui/css/dtree.css" />
+	</head>
+
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<ul id="demoTree1" class="dtree" data-id="0"></ul>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script src="js/dtree.js"></script>
+	<script>
+		var json = {
+			"status": {
+				"code": 0,
+				"message": "操作成功"
+			},
+			"data": [{
+				"id": "001",
+				"title": "湖南省",
+				"isLast": true,
+				"level": "1",
+				"parentId": "0",
+				"children": []
+			}, {
+				"id": "002",
+				"title": "湖北省",
+				"isLast": true,
+				"level": "1",
+				"parentId": "0",
+				"children": []
+			}, {
+				"id": "003",
+				"title": "广东省",
+				"isLast": true,
+				"level": "1",
+				"parentId": "0",
+				"children": []
+			}, {
+				"id": "004",
+				"title": "浙江省",
+				"isLast": true,
+				"level": "1",
+				"parentId": "0",
+				"children": []
+			}, {
+				"id": "005",
+				"title": "福建省",
+				"isLast": true,
+				"level": "1",
+				"parentId": "0",
+				"children": []
+			}]
+		}
+		layui.config({
+			base: '../js/layui_exts/dtree' //配置 layui 第三方扩展组件存放的基础目录
+		}).extend({
+			dtree: 'dtree' //定义该组件模块名
+		}).use(['element', 'layer', 'dtree'], function() {
+			var layer = layui.layer,
+				dtree = layui.dtree,
+				$ = layui.$;
+
+			dtree.render({
+				elem: "#demoTree1", //绑定元素
+				url: 'json'
+			});
+
+			//单击节点 监听事件
+			dtree.on("node('demoTree1')", function(param) {
+				layer.msg(JSON.stringify(param));
+			});
+		});
+		//JavaScript代码区域
+		//		layui.use(['element', 'layer', 'form', 'laydate', 'dtree'], function() {
+		//			var element = layui.element;
+		//			var layer = layui.layer;
+		//			var form = layui.form;
+		//			var laydate = layui.laydate;
+		//			var dtree = layui.dtree;
+		//			//一些事件监听
+		//			var DemoTree = dtree.render({
+		//				elem: "#demoTree",
+		//				data: demoTree,
+		//				type: "all",
+		//				initLevel: "1"
+		//			});
+		//			dtree.on("node('demoTree')", function(param) {
+		//				layer.msg(JSON.stringify(param));
+		//			});
+		//
+		//		});
+	</script>
+
+</html>

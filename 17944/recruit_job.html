@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>招聘职位</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        //鼠标移上去图片放大
+        $(document).ready(function () {
+            $(".imgBox").each(function (i) {
+                $(this).find("a.preview").hover(function () {
+                    if (i < 5) {
+                        $(this).find(".bigImg").css("top", "0px");
+                    } else {
+                        $(this).find(".bigImg").css("bottom", "0px");
+                    }
+                    $(this).find(".bigImg").show();
+                }, function () {
+                    $(this).find(".bigImg").hide();
+                });
+            });
+        });
+
+
+        function Dpop(url, w, h) {
+            res = showModalDialog(url, null, 'dialogWidth: ' + w + 'px; dialogHeight: ' + h + 'px; center: yes; resizable: no; scroll: no; status: no;');
+            if (res == "ok") { window.location.reload(); }
+
+        }
+        function ordsc(nn, sc) {
+            if (nn != '') {
+                window.location = 'news_con.php?page=&sc=&pid=all&showtj=&showfb=&shownum=10&ord=' + nn;
+            } else {
+                if (sc == 'asc' || sc == '') {
+                    window.location = 'news_con.php?page=&sc=desc&pid=all&showtj=&showfb=&shownum=10&ord=' + nn;
+                } else {
+                    window.location = 'news_con.php?page=&sc=asc&pid=all&showtj=&showfb=&shownum=10&ord=' + nn;
+                }
+
+            }
+
+
+        }
+
+        function SelAll(theForm) {
+            for (i = 0 ; i < theForm.elements.length ; i++) {
+                if (theForm.elements[i].type == "checkbox" && theForm.elements[i].name != "SELALL") {
+                    theForm.elements[i].checked = !theForm.elements[i].checked;
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="formzone">
+        <div class="font-weight">
+            招聘职位
+        </div>
+        <div class="tablezone">
+            <table width="100%" cellspacing="0" cellpadding="5" border="0">
+                <tbody>
+                    <tr>
+                        <td class="innerbiaoti" width="40" height="28">选择</td>
+                        <td class="innerbiaoti" width="50" height="28">编号</td>
+                        <td class="innerbiaoti">职位名称</td>
+                        <td class="innerbiaoti" width="75">招聘状态</td>
+                        <td class="innerbiaoti" width="75">招聘人数</td>
+                        <td class="innerbiaoti" width="75">发布时间</td>
+                        <td class="innerbiaoti" width="95">应聘人数</td>
+                        <td class="innerbiaoti" width="39">修改</td>
+                        <td class="innerbiaoti" width="39">回收</td>
+                        <td class="innerbiaoti" width="39" height="28">删除</td>
+                    </tr>
+
+                    <tr class="list">
+                        <td width="40"><input name="dall[]" value="1" type="checkbox" /></td>
+                        <td width="50" height="28"> 9 </td>
+                        <td>job sad  </td>
+                        <td width="75">正在招聘</td>
+                        <td width="75">12</td>
+                        <td width="75">2017/8/9</td>
+                        <td width="95">24</td>
+                        <td width="39"><img src="images/edit.png" style="cursor:pointer" onclick="window.open('../html/?9.html','_blank')" width="24" height="24" /> </td>
+                        <td width="39"><img src="images/push.png" style="cursor:pointer" onclick="window.location='jobmodify.php?id=9'" width="24" height="24" /> </td>
+                        <td width="39" height="28">
+                            <img src="images/delete.png" style="cursor:pointer" onclick="window.location='job.php?step=del&amp;id=9&amp;page='" />
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+        <div id="showpages">
+            <div id="pagesinfo">共 617 条 每页 20 条 页次 1/62</div>
+            <div id="pages"><ul><li class="pbutton"><a href="/news/admin/news_con.php?page=1&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li><a href="/news/admin/news_con.php?page=2&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">2</a></li><li><a href="/news/admin/news_con.php?page=3&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">3</a></li><li><a href="/news/admin/news_con.php?page=4&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">4</a></li><li><a href="/news/admin/news_con.php?page=5&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">5</a></li><li><a href="/news/admin/news_con.php?page=6&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">6</a></li><li><a href="/news/admin/news_con.php?page=7&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">7</a></li><li><a href="/news/admin/news_con.php?page=8&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">8</a></li><li><a href="/news/admin/news_con.php?page=9&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">9</a></li><li><a href="/news/admin/news_con.php?page=10&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">10</a></li><li class="pbutton"><a href="/news/admin/news_con.php?page=2&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">下一页</a></li><li class="opt"><select onchange="window.location=this.options[this.selectedIndex].value"><option value="/news/admin/news_con.php?page=1&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=" selected="">第1页</option><option value="/news/admin/news_con.php?page=2&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第2页</option><option value="/news/admin/news_con.php?page=3&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第3页</option><option value="/news/admin/news_con.php?page=4&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第4页</option><option value="/news/admin/news_con.php?page=5&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第5页</option><option value="/news/admin/news_con.php?page=6&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第6页</option><option value="/news/admin/news_con.php?page=7&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第7页</option><option value="/news/admin/news_con.php?page=8&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第8页</option><option value="/news/admin/news_con.php?page=9&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第9页</option><option value="/news/admin/news_con.php?page=10&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第10页</option><option value="/news/admin/news_con.php?page=11&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第11页</option><option value="/news/admin/news_con.php?page=12&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第12页</option><option value="/news/admin/news_con.php?page=13&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第13页</option><option value="/news/admin/news_con.php?page=14&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第14页</option><option value="/news/admin/news_con.php?page=15&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第15页</option><option value="/news/admin/news_con.php?page=16&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第16页</option><option value="/news/admin/news_con.php?page=17&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第17页</option><option value="/news/admin/news_con.php?page=18&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第18页</option><option value="/news/admin/news_con.php?page=19&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第19页</option><option value="/news/admin/news_con.php?page=20&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第20页</option><option value="/news/admin/news_con.php?page=21&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第21页</option><option value="/news/admin/news_con.php?page=22&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第22页</option><option value="/news/admin/news_con.php?page=23&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第23页</option><option value="/news/admin/news_con.php?page=24&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第24页</option><option value="/news/admin/news_con.php?page=25&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第25页</option><option value="/news/admin/news_con.php?page=26&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第26页</option><option value="/news/admin/news_con.php?page=27&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第27页</option><option value="/news/admin/news_con.php?page=28&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第28页</option><option value="/news/admin/news_con.php?page=29&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第29页</option><option value="/news/admin/news_con.php?page=30&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第30页</option><option value="/news/admin/news_con.php?page=31&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第31页</option><option value="/news/admin/news_con.php?page=32&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第32页</option><option value="/news/admin/news_con.php?page=33&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第33页</option><option value="/news/admin/news_con.php?page=34&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第34页</option><option value="/news/admin/news_con.php?page=35&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第35页</option><option value="/news/admin/news_con.php?page=36&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第36页</option><option value="/news/admin/news_con.php?page=37&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第37页</option><option value="/news/admin/news_con.php?page=38&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第38页</option><option value="/news/admin/news_con.php?page=39&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第39页</option><option value="/news/admin/news_con.php?page=40&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第40页</option><option value="/news/admin/news_con.php?page=41&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第41页</option><option value="/news/admin/news_con.php?page=42&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第42页</option><option value="/news/admin/news_con.php?page=43&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第43页</option><option value="/news/admin/news_con.php?page=44&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第44页</option><option value="/news/admin/news_con.php?page=45&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第45页</option><option value="/news/admin/news_con.php?page=46&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第46页</option><option value="/news/admin/news_con.php?page=47&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第47页</option><option value="/news/admin/news_con.php?page=48&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第48页</option><option value="/news/admin/news_con.php?page=49&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第49页</option><option value="/news/admin/news_con.php?page=50&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第50页</option><option value="/news/admin/news_con.php?page=51&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第51页</option><option value="/news/admin/news_con.php?page=52&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第52页</option><option value="/news/admin/news_con.php?page=53&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第53页</option><option value="/news/admin/news_con.php?page=54&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第54页</option><option value="/news/admin/news_con.php?page=55&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第55页</option><option value="/news/admin/news_con.php?page=56&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第56页</option><option value="/news/admin/news_con.php?page=57&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第57页</option><option value="/news/admin/news_con.php?page=58&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第58页</option><option value="/news/admin/news_con.php?page=59&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第59页</option><option value="/news/admin/news_con.php?page=60&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第60页</option><option value="/news/admin/news_con.php?page=61&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第61页</option><option value="/news/admin/news_con.php?page=62&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第62页</option></select></li><li class="pbutton"><a href="/news/admin/news_con.php?page=62&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">尾页</a></li></ul></div>
+        </div>
+    </div>
+
+
+  </body>
+</html>

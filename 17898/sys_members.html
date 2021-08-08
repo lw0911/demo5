@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>网站会员管理</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="js/member.js"></script>
+<style type="text/css">
+.rb{ border-right:1px solid #666666 }
+.tb{ border-top:1px solid #666666 }
+</style>
+</head>
+<body background='images/allbg.gif' leftmargin='8' topmargin='8'>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D6D6D6" style="margin-bottom:6px">
+  <tr>
+    <td height="30" align="center" bgcolor="#F9FCEF"> 
+  <form action="member_main.php" name="form1" method="get">
+	  <table border="0" cellspacing="0" cellpadding="3">
+      <tr>
+          <td>关键字：</td>
+          <td><input name="keyword" type="text" id="keyword" size="12" style="width:120px" value="" /></td>
+          <td>&nbsp;排序：</td>
+      
+          <td>
+          	<select name="mtype" id="mtype" style="width:60px">
+               <option value=''>类型</option>
+<option value=个人>个人</option>
+<option value=企业>企业</option>
+             </select>
+          </td>
+          <td>
+            <select name="spacesta" id="spacesta" style="width:150px">
+                <option value='-10'>--会员状态--</option>
+                <option value='-2'>限制用户(禁言)</option>
+                <option value='-1'>未通过审核</option>
+                <option value='0'>审核通过，提示填写完整信息</option>
+                <option value='1'>没填写详细资料</option>
+                <option value='2'>正常使用状态</option>
+            </select>
+            </td>
+         <td>
+           <input name="imageField" class="np" type="image" src="images/button_search.gif" width="60" height="22" border="0" />
+          </td>
+        </tr>
+      </table>
+	  </form>
+    </td>
+  </tr>
+</table>
+<form name="form2">
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#cfcfcf">
+  
+  <tr bgcolor="#FEFCEF" height="30" align="center"> 
+    <td width="3%">选择</td>
+    <td width="5%">mid</td>
+    <td width="11%">登录名</td>
+    <td width="16%">email/昵称</td>
+    <td width="5%">性别</td>
+    <td width="8%">会员等级</td>
+    <td width="20%">会员属性</td>
+    <td width="14%">最后登录</td>
+    <td>操作</td>
+  </tr>
+ 
+<tr height="26" align="center" bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#FCFDEE';"
+  	 onMouseOut="javascript:this.bgColor='#FFFFFF';"> 
+  <td><input name="mid" type="checkbox" id="mid" value="1" class="np" /></td>
+  <td>1</td>
+  <td><a href="../member/index.php?uid=admin" target='_blank'>
+    <u>admin</u>  </a></td>
+	<td>
+	  	  <br />
+	  昵称：admin	</td>
+  <td>
+  	男  </td>
+  <td>
+  	<a href="member_main.php?rank=100">高级会员</a>
+  </td>
+  <td>
+  	个人用户 &nbsp;<font color='red'>[管理员]</font>  	<br />
+  	金币：0 积分：10000  </td>
+  <td>
+  	14-08-25 17:16  	<br />
+  	【0.0.0.0】
+  </td>
+  <td align="center">
+    <a href="member_view.php?id=1">修改</a> | 
+    <a href="member_do.php?id=1&dopost=delmember">删除</a> |
+    <a href="content_list.php?mid=1" target="_blank">文档</a> |
+    <a href="member_toadmin.php?id=1" target="_self">提升</a>
+  </td>
+</tr>
+ 
+<tr bgcolor="#ffffff"> 
+ <td height="36" colspan="9">
+	&nbsp;
+	<a href="javascript:selAll()" class="coolbg">全选</a>
+	<a href="javascript:noSelAll()" class="coolbg">取消</a>
+	<a href="javascript:delArc(0)" class="coolbg">&nbsp;删除&nbsp;</a>
+ （如果已经整合了论坛的用户请不要使用批量删除功能）</td>
+</tr>
+<tr bgcolor="#F9FCEF"> 
+ <td height="36" colspan="9" align="center">
+	<span>共 1 页/1条记录</span>
+ </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

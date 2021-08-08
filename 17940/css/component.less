@@ -1,0 +1,551 @@
+@import "reset.less";
+// 初始化
+// 颜色
+@colorblue: #3695ff;
+@coloryellow: #ff850a;
+@colorgray: #c7d2e0;
+@colorlock: #fff6d6;
+@colorgraysmall: #f4f8fc;
+
+@colorbluesmall: #e8ebf4;
+@colorblacksmall: #ddd;
+@colorblackheavy: #666;
+@colorblacklight: #999;
+//  --------------------
+
+// 边框颜色
+// 大小
+@px2x: 12px;
+@px4x: 14px;
+@px6x: 16px;
+@px8x: 18px;
+
+.mrb10 {
+    margin-bottom: 10px;
+}
+
+#app {
+    padding: 20px;
+
+    .section {
+        margin-bottom: 5px;
+    }
+}
+
+.ios-fr {
+    float: right;
+}
+
+
+.ios-fl {
+    float: left;
+}
+
+// 单行文本
+.ios-form-group {
+    .ios-input-box {
+        display: flex;
+
+        .ios-input {
+            height: 32px;
+            flex: 1;
+            background: @colorgraysmall;
+            border: 1px solid @colorblacksmall;
+            color: @colorblacklight;
+            padding: 0 5px;
+            font-size: @px4x;
+
+            &:focus {
+                border: 1px solid @colorblue;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: @colorgray;
+                font-size: @px2x;
+            }
+        }
+
+        .ios-input.ios-input-lock {
+            background: @colorlock;
+        }
+    }
+
+    .ios-textarea-box {
+        display: flex;
+
+        .ios-textarea {
+            min-height: 102px;
+            flex: 1;
+            background: @colorgraysmall;
+            border: 1px solid @colorblacksmall;
+            color: @colorblacklight;
+            padding: 5px;
+            font-size: @px4x;
+            resize: none;
+
+            &:focus {
+                border: 1px solid @colorblue;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: @colorgray;
+                font-size: @px2x;
+            }
+        }
+
+        .ios-textarea.ios-textarea-lock {
+            background: @colorlock;
+        }
+    }
+
+    .ios-select-box {
+        display: flex;
+
+        .ios-select {
+            height: 32px;
+            flex: 1;
+            background: @colorgraysmall url(../imgs/down.png) right 10px center no-repeat;
+            appearance: none;
+            -webkit-appearance: none;
+            border: 1px solid @colorblacksmall;
+            color: @colorblacklight;
+            padding: 0 5px;
+            font-size: @px2x;
+
+            &:focus {
+                border: 1px solid @colorblue;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: @colorgray;
+                font-size: @px2x;
+            }
+        }
+
+        .ios-select.ios-select-lock {
+            background: @colorlock url(../imgs/down.png) right 10px center no-repeat;
+        }
+    }
+
+    .ios-radio-box {
+        display: flex;
+        border: 1px solid @colorblacksmall;
+        height: 32px;
+        flex: 1;
+        align-items: center;
+
+        .ios-radio-box-label {
+            height: 100%;
+            cursor: pointer;
+            margin-left: 10px;
+            padding-right: 5px;
+            display: flex;
+            align-items: center;
+            color: @colorblackheavy;
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            input[type="radio"]:checked+.ios-radio-span {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-size: @px2x;
+                color: @colorblackheavy;
+
+                &::before {
+                    content: " ";
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid #3695ff;
+                    border-radius: 50%;
+                    background: url(../imgs/cile.png) center center no-repeat;
+                    margin-right: 5px;
+                }
+            }
+
+            .ios-radio-span {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-size: @px2x;
+                color: @colorblackheavy;
+
+                &::before {
+                    content: " ";
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid #c7d2e0;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+
+    .ios-checkbox-box {
+        display: flex;
+        border: 1px solid @colorblacksmall;
+        height: 32px;
+        flex: 1;
+        align-items: center;
+
+        .ios-checkbox-box-label {
+            height: 100%;
+            cursor: pointer;
+            margin-left: 10px;
+            padding-right: 5px;
+            display: flex;
+            align-items: center;
+            color: @colorblackheavy;
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked+.ios-checkbox-span {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-size: @px4x;
+                color: @colorblackheavy;
+
+                &::before {
+                    content: " ";
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid #3695ff;
+                    background: url(../imgs/f.png) center center no-repeat;
+                    margin-right: 5px;
+                }
+            }
+
+            .ios-checkbox-span {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-size: @px4x;
+                color: @colorblackheavy;
+
+                &::before {
+                    content: " ";
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid #c7d2e0;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .ios-upload-box {
+        border: 1px solid #ddd;
+
+        .ios-upload-btn {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #666;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .ios-upload-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 7px;
+            cursor: pointer;
+            margin: 5px;
+            width: 90px;
+            font-size: 12px;
+            background: #3695ff;
+            color: #fff;
+
+            input {
+                display: none;
+            }
+
+            &::active {
+                opacity: 0.8;
+            }
+        }
+
+        .ios-upload-show-image {
+            display: block;
+            padding: 10px;
+
+            p {
+                font-size: 12px;
+                color: #999;
+            }
+        }
+    }
+}
+
+.ios-radio-box-single {
+    height: 100%;
+    cursor: pointer;
+    margin-left: 10px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    color: @colorblackheavy;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"]:checked+.ios-radio-span-single {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: @px4x;
+        color: @colorblackheavy;
+        border-radius: 50%;
+
+        &::before {
+            content: " ";
+            width: 12px;
+            height: 12px;
+            border: 2px solid #3695ff;
+            background: url(../imgs/cile.png) center center no-repeat;
+            margin-right: 5px;
+        }
+    }
+
+    .ios-radio-span-single {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: @px4x;
+        color: @colorblackheavy;
+
+        &::before {
+            content: " ";
+            width: 12px;
+            height: 12px;
+            border: 2px solid #c7d2e0;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.ios-checkbox-box-single {
+    height: 100%;
+    cursor: pointer;
+    margin-left: 10px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    color: @colorblackheavy;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked+.ios-checkbox-span-single {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: @px4x;
+        color: @colorblackheavy;
+
+        &::before {
+            content: " ";
+            width: 12px;
+            height: 12px;
+            border: 2px solid #3695ff;
+            background: url(../imgs/f.png) center center no-repeat;
+            margin-right: 5px;
+        }
+    }
+
+    .ios-checkbox-span-single {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: @px4x;
+        color: @colorblackheavy;
+
+        &::before {
+            content: " ";
+            width: 12px;
+            height: 12px;
+            border: 2px solid #c7d2e0;
+            margin-right: 5px;
+        }
+    }
+}
+
+// // 大标题
+// .ios-large-title {
+//     font-size: @px8x;
+//     color: @colorblackheavy;
+//     height: 30px;
+//     display: flex;
+//     align-items: center;
+//     font-weight: bold;
+// }
+
+// 文本提示标题
+.ios-title {
+    font-size: @px2x;
+    color: @colorblacklight;
+    height: 25px;
+    display: flex;
+    align-items: center;
+
+    .ios-tip-must {
+        color: @coloryellow;
+        font-size: @px2x;
+        height: 25px;
+        width: 15px;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+    }
+
+    .ios-tip-name {
+        height: 25px;
+        display: flex;
+        color: #333;
+        align-items: center;
+    }
+}
+
+.ios-button {
+    // 默认是自适应
+    border: none;
+    font-size: @px2x;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 15px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background: @colorblacklight;
+    color: #fff;
+    outline: none;
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.ios-button.ios-button-yellow {
+    background: @coloryellow;
+}
+
+.ios-button.ios-button-blue {
+    background: @colorblue;
+}
+
+.ios-button.ios-button-1x {
+    font-size: @px4x;
+    height: 32px;
+    line-height: 32px;
+}
+
+.ios-button.ios-button-2x {
+    font-size: @px4x;
+    height: 35px;
+    line-height: 35px;
+}
+
+.ios-button.ios-button-3x {
+    font-size: @px4x;
+    height: 40px;
+    line-height: 40px;
+}
+
+// 弹窗
+.ios-eject-box {
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+
+    .ios-eject-wrap {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .ios-eject-center-x {
+            width: 300px;
+        }
+
+        .ios-eject-center-2x {
+            width: 600px;
+        }
+
+        .ios-eject-center-3x {
+            width: 900px;
+        }
+
+        .ios-eject-center-4x {
+            width: 1200px;
+        }
+
+        .ios-eject-header {
+            background: #3695ff;
+
+            height: 45px;
+            display: flex;
+            justify-content: space-between;
+
+            .ios-eject-name {
+                color: #fff;
+                padding: 0 10px;
+                display: flex;
+                font-size: @px4x;
+                align-items: center;
+            }
+
+            .ios-eject-close {
+                padding: 0 10px;
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                color: #fff;
+                user-select: none;
+                font-size: @px4x*2;
+
+                &:active {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .ios-eject-body {
+            background: #fff;
+            padding: 10px;
+
+            .ios-ask-title {
+                font-size: @px4x;
+                color: @colorblacklight;
+            }
+        }
+
+        .ios-eject-footer {
+            background: #f2f2f2;
+            padding: 0 10px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+}

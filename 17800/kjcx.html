@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>科技创新</title>
+<link rel="stylesheet" type="text/css" href="yangshi.css"/>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+
+<body id="kjcx">
+<div id="btn1">
+     <img src="img/xiaobiaotu/fh.jpg" />
+</div>
+
+<div id="header">
+        <div id="header_info">
+<div id="menu">
+                <div id="sousuo">
+                    <input type="" name="keywords"  value="请输入关键字" class="search1" onblur="if(this.value==''){this.value='请输入关键字';this.className='search1'}" onfocus="if(this.value==this.defaultValue){this.value='';this.className='search2'}"  />
+                    <input name="" type="submit" value="提交"  class="submit" style=" height:22px; line-height:22px;" />
+                 </div>
+                <div class="qingc"></div>
+                <ul id="menu_in">
+                <div id="logo"><img src="img/logo.jpg" /></div>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="jcxx.html">基本信息</a></li>
+                    <li><a href="qyjjyx.html">企业经济运行情况</a></li>
+                    <li><a href="qywh.html">企业文化</a></li>
+                    <li><a href="xwdt.html">新闻动态</a></li>
+                    <li id="ys"><a href="kjcx.html">科技创新</a></li>
+                    <li><a href="shzr.html">社会责任</a></li>
+                    <li><a href="lxwm.html">联系我们</a></li>
+                </ul>  
+            </div>
+        </div>
+</div>
+<div id="conten">
+    <div id="main">
+        <h3>科技动态</h3>
+            <img src="img/fy/kjdtPic1.jpg" />
+        <ul id="t4">
+            <li>广州市建筑集团企业博士后工作站被评为2013年度广州市优秀博士后工作站<span>2020-06-27</span></li>
+            <li>集团公司多项科技计划项目成果通过验收<span>2020-06-27</span></li>
+            <li>集团又有两名博士后出站<span>2020-06-27</span></li>
+            <li>建筑集团荣获2014年度国家科学技术二等奖<span>2020-06-27</span></li>
+            <li>集团召开2014年度工作会议<span>2020-06-27</span></li>
+            <li>2014年度档案评估工作荣获“优秀”等级<span>2020-06-27</span></li>
+            <li>集团荣获“2014年度广东省优秀企业文化突出贡献单位”称号<span>2020-06-27</span></li>
+            <li>大力推进项目绿色施工<span>2020-06-27</span></li>
+            <li>集团发布第二份社会责任报告<span>2020-06-27</span></li>
+            <li>集团2014中国企业排名第292位<span>2020-06-27</span></li>
+        </ul>
+    
+    </div>
+    <div id="sidebar">
+        <ul id="li1">
+            <li><span>▶</span><a href="#">集团要闻</a></li>
+            <li><span>▶</span><a href="#">下属企业动态</a></li>
+            <li><span>▶</span><a href="#">行业资讯</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="qingc"></div>
+
+<div id="footer">
+  <p>Copyright(c)2020 XXX</p>
+  <div id="foo">
+        <ul id="footer_in">
+            <li><img src="img/xiaobiaotu/qrcode.png" /></li>
+            <li><img src="img/xiaobiaotu/pic1.gif" /></li>
+        </ul>
+        <div id="zi">XXX    Design by uweb</div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+var t1;
+var btn1=document.getElementById('btn1');
+//窗口.滚动条=方法
+
+function gerBack(){
+	var scrollTop=document.body.scrollTop;
+	//变量 滚动条的高度=文档.页面.滚动条的高度
+	document.title=scrollTop;
+	if( scrollTop<=0){
+		clearInterval(t1);
+	}else{
+		var speed=scrollTop/10;
+		document.title=speed;
+		document.body.scrollTop=scrollTop-speed;
+	}
+}
+btn1.onclick=function(){
+	t1=setInterval(gerBack,50)
+}
+</script>

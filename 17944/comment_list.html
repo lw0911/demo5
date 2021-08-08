@@ -1,0 +1,377 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>评论管理</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Dialog -->
+    <link href="lib/artDialog/skins/default.css" rel="stylesheet" type="text/css" />
+    <script src="lib/artDialog/artDialog.source.js" type="text/javascript"></script>
+    <script src="lib/artDialog/iframeTools.source.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+    <div class="formzone">
+        <div class="font-weight">
+            评论管理
+        </div>
+        <div class="searchzone">
+            <table width="100%" height="28" cellspacing="0" cellpadding="2" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <form method="get" action="bbs.php"></form>
+
+                        <td class="title" height="30">
+                            <select name="showcatid">
+                                <option value="all">选择分类</option>
+                                <option value="1">文章评论</option>
+                                <option value="109">产品咨询</option>
+                                <option value="110">知识问答</option>
+                                <option value="2">图片点评</option>
+                                <option value="3">下载点评</option>
+                                <option value="4">产品点评</option>
+                                <option value="111">用户茶座</option>
+                                <option value="6">供求信息点评</option>
+                            </select>
+                          
+                            <select name="showfb">
+                                <option value="all">是否发布</option>
+                                <option value="1">已发布</option>
+                                <option value="0">未发布</option>
+                            </select>
+                            <select name="showtj">
+                                <option value="all">是否回复</option>
+                                <option value="1">已回复</option>
+                                <option value="0">未回复</option>
+                            </select>
+                            <select name="showtj">
+                                <option value="all">是否推荐</option>
+                                <option value="1">已推荐</option>
+                                <option value="0">未推荐</option>
+                            </select>
+                            <select name="shownum">
+                                <option value="20" selected="">每页20条</option>
+                                <option value="30">每页30条</option>
+                                <option value="50">每页50条</option>
+
+                                <option value="100">每页100条</option>
+                            </select>
+                            <input name="key" size="23" class="input" value="" type="text" style="height:28px; line-height:28px;"/>
+
+                            <input name="Submit" value="搜索" class="btn btn-default" type="submit" style="padding: 3px 12px;" />
+                            <span class="piliang">
+                                <input name="tp" id="tp" value="search" type="hidden" />
+                            </span>
+                        </td>
+
+
+                        <td class="title" colspan="2" align="right">&nbsp; </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <form name="delfm" method="post" action="bbs.php">
+            <div class="listzone">
+                <table width="100%" cellspacing="0" cellpadding="3" border="0" align="center">
+                    <tbody>
+                        <tr class="list">
+                            <td class="biaoti" style="cursor:pointer" onclick="ordsc('id','asc')" width="40" align="center">选择</td>
+                            <td class="biaoti" style="cursor:pointer" onclick="ordsc('id','asc')" width="50">编号</td>
+                            <td class="biaoti" width="80" height="28">分类</td>
+                            <td class="biaoti" width="200" style="cursor:pointer" onclick="ordsc('title','asc')" height="28">评论来源</td>
+                            <td class="biaoti" width="200" style="cursor:pointer" onclick="ordsc('desc','asc')" height="28">评论简介</td>
+                            <td class="biaoti" width="120" height="28">评论人</td>
+                            <td class="biaoti" style="cursor:pointer" onclick="ordsc('uptime','asc')" width="150" height="28">评论时间</td>
+                            <td class="biaoti" width="39" height="28">审核</td>
+                            <td class="biaoti" width="39" height="28">推荐</td>
+                            <td class="biaoti" width="39" height="28">置顶</td>
+                            <td class="biaoti" width="39" height="28">回复</td>
+                            <td class="biaoti" width="39" height="28">查看</td>
+                            <td class="biaoti" width="39" height="28">删除</td>
+                        </tr>
+
+
+                        <tr class="list">
+                            <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="517" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 517 </td>
+                            <td width="60">资讯评论</td>
+                            <td>对 网站建设步骤 的评论      </td>
+                            <td>对 网站建设步骤 的评论      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2013-05-28 16:50</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="MyWindowOpenSmallPage('comment_view.html', 800, 600, '评论详情')" />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="518" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 518 </td>
+                            <td width="60">资讯评论</td>
+                            <td>对 腾讯马化腾：未来互联网发展三大趋势 的评论      </td>
+                            <td>对 腾讯马化腾：未来互联网发展三大趋势 的评论      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2013-06-24 11:21</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="519" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 519 </td>
+                            <td width="60">资讯评论</td>
+                            <td>对 淘宝虚拟3元“白雪可乐”，爱心接力抢通生命通道 的评论      </td>
+                            <td>对 淘宝虚拟3元“白雪可乐”，爱心接力抢通生命通道 的评论      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2016-10-07 19:07</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="520" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 520 </td>
+                            <td width="60">资讯评论</td>
+                            <td>对 和上帝的对话 的评论      </td>
+                            <td>对 和上帝的对话 的评论      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2013-08-01 17:41</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="521" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 521 </td>
+                            <td width="60">资讯评论</td>
+                            <td>对 丢弃不了的猪 的评论      </td>
+                            <td>对 和上帝的对话 的评论      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2013-08-01 17:42</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="522" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 522 </td>
+                            <td width="60">资讯评论</td>
+                            <td>对 这是个女的吗 的评论      </td>
+                            <td>对 这是个女的吗 的评论      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2013-08-09 10:23</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="523" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 523 </td>
+                            <td width="60">资讯评论</td>
+                            <td>Types Of Home Moving Companies      </td>
+                            <td>Types Of Home Moving Companies      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2015-11-15 00:28</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="524" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 524 </td>
+                            <td width="60">资讯评论</td>
+                            <td>Day Buying And Selling Mentorship Review Learning To Trade By Daytradetowin      </td>
+                            <td>Day Buying And Selling Mentorship Review Learning To Trade By Daytradetowin      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2015-12-19 02:35</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="525" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 525 </td>
+                            <td width="60">资讯评论</td>
+                            <td>Diet Programs And Meals - The Carbohydrate Addicts Diet      </td>
+                            <td>Diet Programs And Meals - The Carbohydrate Addicts Diet      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2015-12-19 05:22</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+
+                        <tr class="list">
+                             <td width="30" height="26" align="center">
+                                <input class="chkBox" name="dall[]" value="526" type="checkbox" />
+                            </td>
+                            <td width="50" height="26"> 526 </td>
+                            <td width="60">资讯评论</td>
+                            <td>4 Simple Tips On How To Make Consistent Profits At Forex      </td>
+                            <td>4 Simple Tips On How To Make Consistent Profits At Forex      </td>
+                            <td>美丽的夏天</td>
+                            <td width="139">2015-12-19 05:22</td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39"> <img src="images/toolbar_ok.png" /></td>
+                            <td width="39"> <img src="images/toolbar_no.png" /> </td>
+                            <td width="39">
+                                <img src="images/look.png" style="cursor:pointer" onclick="window.open('comment_view.html', 'newwindow', 'height=600,width=800,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no') " />
+                            </td>
+                            <td width="39">
+                                <img src="images/delete.png" style="cursor:pointer" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="piliang">
+                <input name="SELALL" value="1" onclick="SelAll(this.form)" type="checkbox" />
+                全选&nbsp;
+                <input name="step" value="delall" type="radio" />
+                彻底删除
+                <input name="step" value="setfb" checked="" type="radio" />
+                <select name="iffb" id="iffb">
+                    <option value="1">评论审核</option>
+                    <option value="0">取消审核</option>
+                </select>
+
+                <input name="step" value="settj" type="radio" />
+                <select name="tj" id="tj">
+                    <option value="1">推荐</option>
+                    <option value="0">不推荐</option>
+                </select>
+                <input name="step" value="zdtj" type="radio" />
+                <select name="tj" id="tj">
+                    <option value="1">置顶</option>
+                    <option value="0">不置顶</option>
+                </select>
+
+                <input class="btn btn-default" value="提交" onclick="delfm.submit()" style="padding:3px 12px;" type="button" />
+
+                <input name="page" size="3" value="" type="hidden" />
+                <input name="ord" size="3" value="id" type="hidden" />
+                <input name="sc" size="3" value="desc" type="hidden" />
+                <input name="key" size="3" value="" type="hidden" />
+
+                <input name="showtj" value="" type="hidden" />
+                <input name="showfb" value="" type="hidden" />
+                <input name="pid" value="all" type="hidden" />
+                <input name="shownum" value="10" type="hidden" />
+
+            </div>
+        </form>
+        <div id="showpages">
+            <div id="pagesinfo">共 617 条 每页 20 条 页次 1/62</div>
+            <div id="pages"><ul><li class="pbutton"><a href="/news/admin/news_con.php?page=1&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li><a href="/news/admin/news_con.php?page=2&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">2</a></li><li><a href="/news/admin/news_con.php?page=3&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">3</a></li><li><a href="/news/admin/news_con.php?page=4&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">4</a></li><li><a href="/news/admin/news_con.php?page=5&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">5</a></li><li><a href="/news/admin/news_con.php?page=6&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">6</a></li><li><a href="/news/admin/news_con.php?page=7&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">7</a></li><li><a href="/news/admin/news_con.php?page=8&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">8</a></li><li><a href="/news/admin/news_con.php?page=9&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">9</a></li><li><a href="/news/admin/news_con.php?page=10&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">10</a></li><li class="pbutton"><a href="/news/admin/news_con.php?page=2&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">下一页</a></li><li class="opt"><select onchange="window.location=this.options[this.selectedIndex].value"><option value="/news/admin/news_con.php?page=1&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=" selected="">第1页</option><option value="/news/admin/news_con.php?page=2&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第2页</option><option value="/news/admin/news_con.php?page=3&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第3页</option><option value="/news/admin/news_con.php?page=4&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第4页</option><option value="/news/admin/news_con.php?page=5&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第5页</option><option value="/news/admin/news_con.php?page=6&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第6页</option><option value="/news/admin/news_con.php?page=7&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第7页</option><option value="/news/admin/news_con.php?page=8&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第8页</option><option value="/news/admin/news_con.php?page=9&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第9页</option><option value="/news/admin/news_con.php?page=10&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第10页</option><option value="/news/admin/news_con.php?page=11&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第11页</option><option value="/news/admin/news_con.php?page=12&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第12页</option><option value="/news/admin/news_con.php?page=13&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第13页</option><option value="/news/admin/news_con.php?page=14&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第14页</option><option value="/news/admin/news_con.php?page=15&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第15页</option><option value="/news/admin/news_con.php?page=16&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第16页</option><option value="/news/admin/news_con.php?page=17&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第17页</option><option value="/news/admin/news_con.php?page=18&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第18页</option><option value="/news/admin/news_con.php?page=19&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第19页</option><option value="/news/admin/news_con.php?page=20&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第20页</option><option value="/news/admin/news_con.php?page=21&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第21页</option><option value="/news/admin/news_con.php?page=22&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第22页</option><option value="/news/admin/news_con.php?page=23&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第23页</option><option value="/news/admin/news_con.php?page=24&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第24页</option><option value="/news/admin/news_con.php?page=25&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第25页</option><option value="/news/admin/news_con.php?page=26&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第26页</option><option value="/news/admin/news_con.php?page=27&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第27页</option><option value="/news/admin/news_con.php?page=28&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第28页</option><option value="/news/admin/news_con.php?page=29&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第29页</option><option value="/news/admin/news_con.php?page=30&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第30页</option><option value="/news/admin/news_con.php?page=31&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第31页</option><option value="/news/admin/news_con.php?page=32&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第32页</option><option value="/news/admin/news_con.php?page=33&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第33页</option><option value="/news/admin/news_con.php?page=34&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第34页</option><option value="/news/admin/news_con.php?page=35&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第35页</option><option value="/news/admin/news_con.php?page=36&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第36页</option><option value="/news/admin/news_con.php?page=37&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第37页</option><option value="/news/admin/news_con.php?page=38&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第38页</option><option value="/news/admin/news_con.php?page=39&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第39页</option><option value="/news/admin/news_con.php?page=40&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第40页</option><option value="/news/admin/news_con.php?page=41&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第41页</option><option value="/news/admin/news_con.php?page=42&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第42页</option><option value="/news/admin/news_con.php?page=43&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第43页</option><option value="/news/admin/news_con.php?page=44&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第44页</option><option value="/news/admin/news_con.php?page=45&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第45页</option><option value="/news/admin/news_con.php?page=46&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第46页</option><option value="/news/admin/news_con.php?page=47&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第47页</option><option value="/news/admin/news_con.php?page=48&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第48页</option><option value="/news/admin/news_con.php?page=49&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第49页</option><option value="/news/admin/news_con.php?page=50&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第50页</option><option value="/news/admin/news_con.php?page=51&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第51页</option><option value="/news/admin/news_con.php?page=52&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第52页</option><option value="/news/admin/news_con.php?page=53&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第53页</option><option value="/news/admin/news_con.php?page=54&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第54页</option><option value="/news/admin/news_con.php?page=55&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第55页</option><option value="/news/admin/news_con.php?page=56&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第56页</option><option value="/news/admin/news_con.php?page=57&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第57页</option><option value="/news/admin/news_con.php?page=58&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第58页</option><option value="/news/admin/news_con.php?page=59&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第59页</option><option value="/news/admin/news_con.php?page=60&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第60页</option><option value="/news/admin/news_con.php?page=61&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第61页</option><option value="/news/admin/news_con.php?page=62&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">第62页</option></select></li><li class="pbutton"><a href="/news/admin/news_con.php?page=62&amp;shownum=10&amp;pid=all&amp;sc=desc&amp;ord=id&amp;showtj=&amp;showfb=&amp;key=">尾页</a></li></ul></div>
+        </div>
+    </div>
+      
+  </body>
+</html>

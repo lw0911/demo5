@@ -1,0 +1,202 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>信息</title>
+    <link rel="stylesheet" href="js/bstable/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bstable/css/bootstrap-table.css">
+    <link href="css/table1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/produce.css">
+</head>
+
+<body style="background-color: #ecf0f5;color: #475059;min-width: 1150px;overflow: auto" >
+<div class="notice_main " style=";padding: 0 4px">
+    <div class="e_chart">
+        <div class="charts_last charts">
+            <p class="charts_p" style="text-align: left;padding-left: 6px">个人信息</p>
+            <div class="tree_left" style="display: block;position: relative;margin-right: 10px">
+
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                        <td rowspan ="7" style="width: 250px"><img src="img/my.jpg" width="250" class="pic"/></td>
+                        <td class="bold">身份证号码</td>
+                        <td>511522199809086754</td>
+                        <td class="bold">姓名</td>
+                        <td>美美</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">出生日期</td>
+                        <td>1998-09-08</td>
+                        <td class="bold">性别</td>
+                        <td>女</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">籍贯</td>
+                        <td>成都</td>
+                        <td class="bold">联系电话</td>
+                        <td>1390876908</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">民族</td>
+                        <td>汉</td>
+                        <td class="bold">学历</td>
+                        <td>本科</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">户口所在地</td>
+                        <td colspan="5">xxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">常住地址</td>
+                        <td colspan="5">xxxxxxxxxxxxxxxxxxxxxxx</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="pic_nav">
+                    <ul>
+                        <li class="pic_nav_active"><img src="img/my.jpg"/></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="e_chart">
+        <div class="charts_last charts">
+            <p class="charts_p" style="text-align: left;padding-left: 6px">工作或学习记录</p>
+            <div style="margin: 10px">
+                <table id="table"></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="e_chart">
+        <div class="charts_last charts">
+            <p class="charts_p" style="text-align: left;padding-left: 6px">生活轨迹时间轴</p>
+            <div class="demo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="main-timeline">
+                                <div class="timeline">
+                                    <div class="timeline-content">
+                                        <div class="circle"><span><i class="fa fa-globe"></i></span></div>
+                                        <div class="content">
+                                            <span class="year">2017-05-02</span>
+                                            <h4 class="title">学习经历</h4>
+                                            <p class="description">该员工：“xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx”。</p>
+                                            <div class="icon"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline">
+                                    <div class="timeline-content">
+                                        <div class="circle"><span><i class="fa fa-rocket"></i></span></div>
+                                        <div class="content">
+                                            <span class="year">2010-06-11至2017-06-13</span>
+                                            <h4 class="title">工作经历</h4>
+                                            <p class="description">该员工由：“xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXX”。</p>
+                                            <div class="icon"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline">
+                                    <div class="timeline-content">
+                                        <div class="circle"><span><i class="fa fa-briefcase"></i></span></div>
+                                        <div class="content">
+                                            <span class="year">2017-06-13</span>
+                                            <h4 class="title">工作经历一</h4>
+                                            <p class="description">该员工：“xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx”。</p>
+                                            <div class="icon"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline">
+                                    <div class="timeline-content">
+                                        <div class="circle"><span><i class="fa fa-mobile"></i></span></div>
+                                        <div class="content">
+                                            <span class="year">2017-6-25</span>
+                                            <h4 class="title">工作经历二</h4>
+                                            <p class="description">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。</p>
+                                            <div class="icon"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script>
+    $(".pic_nav ul li").each(function(){
+        $(this).click(function(){
+            $(".pic_nav ul li").removeClass("pic_nav_active");
+            $(this).addClass("pic_nav_active");
+            $(".pic").attr("src",$(this).find("img").attr("src"));
+        })
+    });
+    $(function () {
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            url: "json/role.json",
+            dataType: "json",
+            pagination: true, //分页
+            pageSize: 10,
+            pageNumber: 1,
+            search: false, //显示搜索框
+            contentType: "application/x-www-form-urlencoded",
+            queryParams:null,
+            columns: [
+                {
+                    title: "编号",
+                    field: 'id',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '开始时间',
+                    field: 'title',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '结束时间',
+                    field: 'date',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '内容',
+                    field: 'person',
+                    align: 'center'
+                },
+                {
+                    title: '备注',
+                    field: 'person',
+                    align: 'center'
+                }
+
+
+            ]
+        });
+    });
+</script>
+</body>
+</html>

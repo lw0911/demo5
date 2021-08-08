@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link href="public/inspinia.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="public/animate.css" rel="stylesheet">
+		<link href="css/plugins/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+		<link href="public/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    	<link href="js/multipleselect/multiple-select.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/new_page_if.css" />
+		<style>
+			th.prev {
+    			background: url(img/dateleft.png) -3px !important;
+			}
+			th.next {
+    			background: url(img/dateright.png) -10px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="width:20px;height:100%;position:relative;left:16px;box-shadow: -5px 0 20px #8e9092;"></div>
+		<div class="container-frame-detail" id="containerDetail" style="display: block; right: 0px; width:780px;position:relative;bottom:100%;left:16px;height:100%;">
+			<div class="detail-inner" id="detailInner">
+				<div class="slid-panel-header clearfix">
+					<span class="panel-title">客户详情</span>
+					<span class="form-close-icon">X</span>
+				</div>
+				<div class="detail_left">
+					<div class="detail_left_inner">
+						<div class="detail_left_head">
+							<span class="detail_left_title">
+								张三
+							</span>
+							<div class="header-btn-wrap">
+								<span class="tag_in_grid" title="本月签约" style="background-color: #E8CD1B">
+									<span class="tag_text">金牌用户</span>
+								</span>
+								<span class="tag_in_grid" title="本月签约" style="background-color: #f2616f">
+									<span class="tag_text">银牌用户</span>
+								</span>
+								<span class="tag_in_grid" title="本月签约" style="background-color: #5CBAE6">
+									<span class="tag_text">铜牌用户</span>
+								</span>
+							</div>
+						</div>
+						<div class="cus_simple_info">
+							<div class="tagSelector-warp">
+								<div class="tag-item-list">
+									<span class="ardess" style="">
+										广东猪兼强互联网科技有限公司
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="customer_tabs fn-clear">
+							<ul class="detail_main_nav">
+								<li>
+									<a class="slide-panel-tab slide_nav_hover" href="javascript:void(0)">任务信息</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">配件信息</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">客户信息</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">工单信息</a>
+								</li>
+								<!--<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">合同</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">任务</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">文档</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">邮件</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">通话记录</a>
+								</li>
+								<li>
+									<a class="slide-panel-tab" href="javascript:void(0)">销售团队</a>
+								</li>-->
+							</ul>
+							<div class="detail_panels_main_body">
+		
+								<div id="renWu_msg" class="active">
+									<form id="dataform" method="post" class="form-horizontal" action="">
+										<div style="overflow:hidden;">
+											<div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">任务编号：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<input type="text" class="form-control" id="Values" name="Values" value="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">派发方式：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<select class="select2_demo_1 form-control">
+														<option value="2">全部</option>
+														<option value="3">担保标</option>
+														<option value="4">抵押标</option>
+														<option value="5">信用标</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="" class="col-lg-2 col-md-2 col-sm-3 control-label">创建时间：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<div class="date input-append form_date ymd_date" id="addtimeCalendar" style="float:left;margin-right:5px;">
+								                        <div class="input-group">
+								                            <input class="form-control input-sm" type="text" name="addtime" id="addtime">
+								                            <span class="add-on input-group-addon">
+								                            	<i class="fa fa-calendar" style="color:black;"></i>
+								                            </span>
+								                        </div>
+								                    </div>
+								                </div>
+								            </div>
+							            </div>
+							            
+							            <div class="hide_box" style="overflow:hidden;">
+								            <div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">任务状态：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<input type="text" class="form-control" id="Values" name="Values" value="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">预计工时：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<input type="text" class="form-control" id="Values" name="Values" value="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">客户名称：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<input type="text" class="form-control" id="Values" name="Values" value="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">任务名称：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<input type="text" class="form-control" id="Values" name="Values" value="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-2 col-md-2 col-sm-3 control-label">任务内容：</label>
+												<div class="col-md-6 col-lg-6 col-sm-6">
+													<textarea class="form-control" name="" rows="" cols=""></textarea>
+												</div>
+											</div>
+										</div>
+										<a class="show-more-info">查看更多</a>
+										<div class="hr-line-dashed"></div>
+										<div class="form-group" style="text-align: center;">
+											<button id="baoCun" type="button" class="btn btn-w-m btn-primary">保存</button>
+										</div>
+									</form>
+								</div>
+		
+								<div id="peiJian_msg">
+									<div class="row">
+										<div class="col-lg-12">
+											<table class="table table-striped table-bordered table-hover dataTables-example">
+												<thead>
+													<tr>
+														<th>索引</th>
+														<th>配件编号</th>
+														<th>配件名称</th>
+														<th>返修库</th>
+														<th>库位号</th>
+														<th>入返修库时间</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>王</td>
+														<td>表编辑</td>
+														<td>担保</td>
+														<td>担保标</td>
+														<td>担保</td>
+														<td>担保标</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>王</td>
+														<td>表编辑</td>
+														<td>担保</td>
+														<td>担保标</td>
+														<td>担保</td>
+														<td>担保标</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>王</td>
+														<td>表编辑</td>
+														<td>担保</td>
+														<td>担保标</td>
+														<td>担保</td>
+														<td>担保标</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>王</td>
+														<td>表编辑</td>
+														<td>担保</td>
+														<td>担保标</td>
+														<td>担保</td>
+														<td>担保标</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+			
+								<div id="keHu_msg">
+									<div class="accordion-container">
+										<div class="accordion-header">
+											<span class="head-default-text">共2个联系人</span>
+										</div>
+										<ul>
+											<li class="accordion-row" data-id="101458600011">
+												<h3 class="accordion-tab">
+													<p class="accordion-row-lable">2016年08月</p>
+													<p style="display:inline-block;margin-left:250px;line-height: 30px;">凭证号：<span>2016080800302</span></p>
+													<p class="li-opera-icons">
+														<i class="accordion-icon"></i>
+													</p>
+												</h3>
+												<div class="detail-modify-container" style="display: none; height: auto;">
+													<div class="modify-detail-container">
+														<div class="modify-body">
+															<div class="modify-base-info">
+																<table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#dddddd">
+															        <tbody>
+																        <tr>
+																          	<th style="width:150px;">设备名称（全称） </th>
+																          	<th>年折旧额（元） </th>
+																        </tr>
+																        <tr>
+																          	<td>高频往复式摩擦试验仪 </td>
+																          	<td>  </td>
+																          
+																        </tr>
+																        <tr>
+																          	<td> 2000 </td>
+																          	<td>  </td>
+																        </tr>
+															      	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>	
+												</div>
+											</li> 
+											<li class="accordion-row" data-id="101458621036">
+												<h3 class="accordion-tab">
+													<p class="accordion-row-lable">eeee</p>
+													<p class="li-opera-icons">
+														<i class="accordion-icon"></i>
+													</p>
+												</h3>
+												<div class="detail-modify-container" style="display: none; height: auto;">
+													<div class="modify-detail-container">
+														<div class="modify-body">
+															<div class="modify-base-info">
+																<div class="newclient-item-info" mappingname="ownerId">
+																	<span class="lable-container">
+																		<span class="input-label">所有者</span>
+																		<span class="normal"></span>
+																	</span>
+																	<span class="input-container" id="3027">
+																		刘永
+																	</span>
+																	<span class="error-warn"></span>
+																</div>
+																<div class="newclient-item-info" mappingname="cust_id">
+																	<span class="lable-container">
+																		<span class="input-label">公司名称</span>
+																		<span class="normal"></span>
+																	</span>
+																	<span class="input-container" id="1037">
+																		123
+																	</span>
+																		<span class="error-warn"></span>
+																</div>
+																<a class="show-more-info" href="javascript:void(0)" target="_blank">查看更多</a>
+																<div class="modify-special-info" style="display: none;"></div>
+															</div>
+														</div>
+													</div>	
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="gongDan_msg">
+									工单信息
+								</div>
+								<!--<div id="hetong_content">
+									工单信息
+								</div>
+								<div id="renwu_content">
+									任务
+								</div>
+								<div id="wendang_content">
+									文档
+								</div>
+			
+								<div id="youjian_content">
+									邮件
+								</div>
+								<div id="jilu_content">
+									通话记录
+								</div>
+								<div id="xiaoshou_content">
+									销售团队
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="public/jquery-1.11.3.js"></script>
+		<script src="js/plugins/lhgdialog/lhgdialog.js"></script>
+		<!-- 时间控件样式 -->
+		<script src="js/plugins/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="js/plugins/datetimepicker/bootstrap-datetimepicker-update.min.js"></script>
+		<script src="js/plugins/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+		<!-- 弹出框 -->
+		<script src="public/zTree/js/jquery.ztree.all.js"></script>
+    	<script src="js/multipleselect/multiple-select.js"></script>
+		<script src="js/new_page_if.js"></script>
+		<script type="text/javascript">
+			$('#baoCun').click(function(){
+				parent.location.href='my_TiBaoJiLu.html';
+			})
+		</script>
+	</body>
+
+</html>

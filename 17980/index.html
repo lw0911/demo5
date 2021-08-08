@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/comon.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--顶部搜索和导航-->
+			<div class="header">
+				<div class="search_logo">
+					<div class="content">
+						<div class="logo">
+							<a href="index.html">
+								<img src="img/NewLogo.png" alt="" />
+							</a>
+						</div>
+						<div class="search">
+							<div class="search_in">
+								<input type="text" name="" id="" placeholder="请输入您要搜索的内容"/>
+								<a href="javascript:;" class="fa fa-search"></a>
+							</div>
+							<div class="user_cart">
+								<a href="shopcar.html">购物车<span> 0 </span>件</a>
+							</div>
+							<div class="user">
+								<!--登陆前-->
+								<div class="user_name">
+									<a href="register.html">注册</a>
+									<a href="login.html">登录</a>
+								</div>
+								
+								<!--登录后-->
+								<div class="user_p" style="display:none;">
+									<a href="javascript:;">
+										<img src="img/DefaultAvatar.png" alt="" />
+									</a>
+									<div class="user_info">
+										<i></i>
+										<em></em>
+										<h5>M10353...，欢迎回来！</h5>
+										<p>UID：10353128</p>
+										<div class="user_go">
+											<a href="javascript:;" class="mycenter">个人中心</a>
+											<a href="javascript:;" class="out">退出登录</a>
+										</div>
+										<div class="user_nav">
+											<a href="javascript:;">我的订单<span>(0)</span></a>
+											<a href="javascript:;">待处理订单<span>(0)</span></a>
+											<a href="javascript:;">浏览记录<span>(0)</span></a>
+											<a href="javascript:;">关注商品<span>(0)</span></a>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="clear_both"></div>
+					</div>
+				</div>
+				<div class="nav" id="nav">
+					<div class="content">
+						<div class="menu">
+							<ul>
+								<li><a href="index.html">首页</a></li>
+								<li class="list"><a href="product_list.html">精品自选<span class="fa fa-angle-down"></span></a></li>
+								<li class="list"><a href="combo.html">热销套餐<span class="fa fa-angle-down"></span></a></li>
+								<li class="list"><a href="case.html">推荐方案<span class="fa fa-angle-down"></span></a></li>
+								<li class="list"><a href="service.html">特约服务<span class="fa fa-angle-down"></span></a></li>
+								<li class="list"><a href="hall.html">展厅<span class="fa fa-angle-down"></span></a></li>
+								<li class="list"><a href="my.html">个人中心<span class="fa fa-angle-down"></span></a></li>
+							</ul>
+							<div class="sev">
+								<a href="javascript:;">联盟商</a>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+			<!--右侧栏-->
+			<div class="hr_nav">
+				<a href="javascript:;" class="cart">
+					<span></span>
+					<i>0</i>
+				</a>
+				<a href="javascript:;" class="mycenter">
+					<span></span>
+				</a>
+				<a href="javascript:;" class="kf">
+					<span></span>
+				</a>
+				<a href="javascript:;" style="margin-bottom:0;display:none;" id="gotop" class="top">
+					<span></span>
+				</a>
+			</div>
+			<!--banner-->
+			<div class="banner">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+			<!--登录弹窗-->
+			<div class="login_bg" style="display:none;">
+			</div>
+			<div class="login_wrap" style="display:none;">
+				<div class="login_head">
+					<a href="javascript:;" class="fa fa-close"></a>
+				</div>
+				<a href="javascript:;"></a>
+				
+				<div class="login_box">
+					<div class="login_title">
+						登录乐租
+					</div>
+					<div class="login_user">
+						<input type="text" />
+						<input type="password"/>
+						<a href="javascript:;">登录</a>
+						<p><span>还没有帐号<a href="javascripy:;">立即注册</a></span><a href="javascript:;">忘记密码</a></p>
+					</div>
+				</div>
+			</div>
+			<!--楼层开始-->
+			<div style="height:20px"></div>
+			<!--楼层定位-->
+			<div class="floor_pos" style="display:none;">
+				<ul>
+					<li>
+						<a href="javascript:;" class="">1F</a>
+					</li>
+					<li>
+						<a href="javascript:;">2F</a>
+					</li>
+					<li>
+						<a href="javascript:;">3F</a>
+					</li>
+					<li>
+						<a href="javascript:;">4F</a>
+					</li>
+					<li>
+						<a href="javascript:;">5F</a>
+					</li>
+					<li>
+						<a href="javascript:;">6F</a>
+					</li>
+				</ul>
+			</div>
+			<!--1F-->
+			<div class="floor">
+				<div class="content">
+					<div class="f_title">
+						<span><i>1F </i> 精品自选</span>
+						<strong><a href="javascript:;" class="active"> 精品</a><a href="javascript:;">热卖 </a></strong>
+					</div>
+					<div class="f_pro">
+						<div class="f_pro_l">
+							<img src="img/121.jpg" alt="" />
+							<p>
+								<a href="javascript:;">保健服务</a><a href="javascript:;">体验服务</a>
+								<a href="javascript:;">管理服务</a><a href="javascript:;">陪护服务</a>
+							</p>
+						</div>
+						<div class="f_pro_r">
+							<ul>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="f_pro_r_sh"></div>
+									<div class="f_pro_r_con">
+										<a href="javascript:;"><img src="img/product_1a.jpg" alt="" /></a>
+										<h4><a href="javascript:;">自选精品商品名称</a></h4>
+										<p>
+											<strong>￥32605.00</strong>
+											<span>
+												<a href="javascript:;" title="关注" class="car"></a>
+												<a href="javascript:;" title="加入购物车" class="in"></a>
+											</span>
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="clear_both"></div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<!--底部-->
+			<div class="footer">
+				<div class="content">
+					<div class="foot">
+						<div class="foot_l">
+							<p><a href="javascript:;">商家申请入驻乐租</a></p>
+							<p>Copyright © 2020 乐租 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> <span>|</span>XXX <span>|</span>XXX</p>
+							<p>鄂网审[2014]第0374号<span>|</span>互联网信息服务资格证书编号(京)-非经营性-2015-0170 <span>|</span><a href="javascript:;" style="font-weight:normal;">站长统计</a></p>
+							<ul>
+								<li><a href="javascript:;"><img src="img/ICP.png" alt="" /></a></li>
+								<li><a href="javascript:;"><img src="img/pinpai.png" alt="" /></a></li>
+								<li><a href="javascript:;"><img src="img/chengxin.png" alt="" /></a></li>
+								<li><a href="javascript:;"><img src="img/kexin.png" alt="" /></a></li>
+							</ul>
+						</div>
+						<div class="foot_r">
+							<ul>
+								<li class="two">
+									<a href="javascript:;">
+										<span ></span>
+										<em>微商城</em>
+										<p><img src="img/wx-down-business.png" alt="" /></p>
+									</a>
+								</li>
+								<li class="thr">
+									<a href="javascript:;">
+										<span ></span>
+										<em>设计师</em>
+										<p><img src="img/wx-down.png" alt="" /></p>
+									</a>
+								</li>
+								<li class="four">
+									<a href="javascript:;">
+										<span ></span>
+										<em>联盟商</em>
+										<p><img src="img/android-down.png" alt="" /></p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="clear_both"></div>
+					</div>
+				</div>
+			</div>
+ 
+		</div>
+	</body>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/comon.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</html>

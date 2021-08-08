@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>新增资讯</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!-- <link href="Content/Layui-KnifeZ/css/layui.css" rel="stylesheet"/> -->
+        <script src="Content/Layui-KnifeZ/layui.js"></script>
+        <script src="Content/ace/ace.js"></script>
+    </head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                             <span>*</span>
+                             标题
+                        </label>
+                        <div class="layui-input-block lafite_width_30">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">
+                                <span>*</span>
+                                类别
+                            </label>
+                            <div class="layui-input-inline">
+                                <select name="city" lay-verify="required">
+                                    <option value=""></option>
+                                    <option value="0">北京</option>
+                                    <option value="1">上海</option>
+                                    <option value="2">广州</option>
+                                    <option value="3">深圳</option>
+                                    <option value="4">杭州</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">
+                                来源
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">
+                                <span>*</span>
+                                地区
+                            </label>
+                            <div class="layui-input-inline">
+                                 <select name="city" lay-verify="required">
+                                    <option value=""></option>
+                                    <option value="0">北京</option>
+                                    <option value="1">上海</option>
+                                    <option value="2">广州</option>
+                                    <option value="3">深圳</option>
+                                    <option value="4">杭州</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            关键字
+                        </label>
+                        <div class="layui-input-block lafite_width_30">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="关键词之间用，号分隔" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">
+                            <span>*</span>
+                            导读
+                        </label>
+                        <div class="layui-input-block lafite_width_60">
+                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea lafite_textarea"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">
+                            推荐
+                        </label>
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="首页头条" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="热门推荐">
+                            <input type="checkbox" name="like1[game]" lay-skin="primary" title="要闻推荐">
+                            <input type="checkbox" name="like1[game]" lay-skin="primary" title="首页推荐">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            封面图片
+                        </label>
+                        <div class="layui-upload">
+                            <button type="button" class="layui-btn lafite_btn" id="lafite_upload">点击上传</button> 
+                            <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px; margin-left: 5%">
+                                预览图：
+                                <div class="layui-upload-list" id="demo2"></div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            正文
+                        </label>
+                        <div class="layui-input-block">
+                            <textarea id="layeditDemo"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                        <button class="lafite-layui-btn lafite_margin_left_20" lay-submit lay-filter="formDemo">返回</button>
+                        <button lay-submit lay-filter="formDemo" class="lafite-layui-btn2 lafite_margin_left_20px">提交发布</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>layui.use(['layedit', 'laydate', 'form', 'upload'],
+        function() {
+            var $ = layui.jquery
+            ,upload = layui.upload,
+            layedit = layui.layedit;
+            var laydate = layui.laydate;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#start' //指定元素
+            });
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#end' //指定元素
+            });
+
+            //日期时间范围
+            laydate.render({
+                elem: '#test10'
+                ,type: 'datetime'
+                ,range: true
+            });
+
+             //日期时间范围
+             laydate.render({
+                elem: '#test11'
+                ,type: 'datetime'
+                ,range: true
+            });
+
+            //多图片上传
+            upload.render({
+                elem: '#lafite_upload'
+                ,url: '/upload/'
+                ,multiple: true
+                ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
+                });
+                }
+                ,done: function(res){
+                //上传完毕
+                }
+            });
+
+            layedit.set({
+            //暴露layupload参数设置接口 --详细查看layupload参数说明
+            uploadImage: {
+                url: 'your url',
+                accept: 'image',
+                acceptMime: 'image/*',
+                exts: 'jpg|png|gif|bmp|jpeg',
+                size: 1024 * 10,
+                done: function (data) {
+                    console.log(data);
+                }
+            }
+            , uploadVideo: {
+                url: 'your url',
+                accept: 'video',
+                acceptMime: 'video/*',
+                exts: 'mp4|flv|avi|rm|rmvb',
+                size: 1024 * 10 * 2,
+                done: function (data) {
+                    console.log(data);
+                }
+            }
+            , uploadFiles: {
+                url: 'your url',
+                accept: 'file',
+                acceptMime: 'file/*',
+                size: '20480',
+                done: function (data) {
+                    console.log(data);
+                }
+            }
+            //右键删除图片/视频时的回调参数，post到后台删除服务器文件等操作，
+            //传递参数：
+            //图片： imgpath --图片路径
+            //视频： filepath --视频路径 imgpath --封面路径
+            , calldel: {
+                url: 'your url',
+                done: function (data) {
+                    console.log(data);
+                }
+            }
+            //开发者模式 --默认为false
+            , devmode: true
+            //插入代码设置 --hide:true 等同于不配置codeConfig
+            , codeConfig: {
+                hide: false,  //是否显示编码语言选择框
+                default: 'javascript' //hide为true时的默认语言格式
+            }
+            //新增iframe外置样式和js
+            // , quote:{
+            //    style: ['/Content/Layui-KnifeZ/css/layui.css','/others'],
+            //    js: ['/Content/Layui-KnifeZ/lay/modules/jquery.js']
+            // }
+            //自定义样式-暂只支持video添加
+            //, customTheme: {
+            //    video: {
+            //        title: ['原版', 'custom_1', 'custom_2']
+            //        , content: ['', 'theme1', 'theme2']
+            //        , preview: ['', '/images/prive.jpg', '/images/prive2.jpg']
+            //    }
+            //}
+            //插入自定义链接
+            , customlink:{
+                title: '插入layui官网'
+                , href: 'https://www.layui.com'
+                ,onmouseup:''
+            }
+            , facePath: 'http://knifez.gitee.io/kz.layedit/Content/Layui-KnifeZ/'
+            , devmode: true
+            , videoAttr: ' preload="none" ' 
+            , tool: [
+                'html', 'undo', 'redo', 'code', 'strong', 'italic', 'underline', 'del', 'addhr', '|', 'fontFomatt', 'fontfamily','fontSize', 'fontBackColor', 'colorpicker', 'face'
+                , '|', 'left', 'center', 'right', '|', 'link', 'unlink', 'images', 'image_alt', 'video','attachment', 'anchors'
+                , '|'
+                , 'table','customlink'
+                , 'fullScreen'
+            ]
+            , height: '300px'
+        });
+        var ieditor = layedit.build('layeditDemo');
+        //设置编辑器内容
+        layedit.setContent(ieditor, "<h1>请编辑资讯内容</h1>", false);
+
+
+           
+        });
+        
+
+    </script>
+
+</html>

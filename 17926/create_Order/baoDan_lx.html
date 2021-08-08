@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="../public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/plugins/toastr/toastr.min.css" />
+		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/inspinia.css" />
+		<!--<link rel="stylesheet" href="../css/baoDan_lx.css" />-->
+		<style>
+			body{
+				background:#eee;
+			}
+			.lx_box{
+				width:30%;
+				margin:0 auto 15px;
+				border:1px solid #ddd;
+				border-radius: 5px;
+				background-color:#fff;
+			}
+			.lx_box ul li,.lx_box ul{
+				margin:0;
+				padding:0;
+				list-style: none;
+				overflow: hidden;
+			}
+			.lx_box ul li{
+				float: left;
+				width: 50%;	
+				font-size: 15px;
+				color:#aaa;
+				text-align: center;
+				padding:10px 0 15px; 
+			}
+			.lx_box ul li.active{
+				background:#5270f3;
+				color:#fff;
+			}
+			.lx_box .lx_title{
+				padding:10px 0;
+				text-align: center;
+				margin:0;
+				border-bottom: 1px solid #ddd;
+			}
+			p.ins{
+				font-size: 12px;
+				margin-top:10px;
+			}
+		</style>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="../public/html5shiv.min.js"></script>
+		    <script src="../public/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+	</head>
+
+	<body>
+		<div id="wrapper" class="container">
+			<!--报单类型-->
+			<div class=" wrapper wrapper-content animated fadeInLeft">
+				<div class="lx_box">
+					<p class="lx_title">用车对象</p>
+					<ul>
+						<li>
+							<p>公司用车</p>
+							<img src="../img/question.png" alt="" />
+							<p class="ins">工作出行,我来帮您</p>
+							<span>未选择</span>
+						</li>
+						<li class="active">
+							<p>个人用车</p>
+							<img src="../img/question.png" alt="" />
+							<p class="ins">日常行走,爱你就走</p>
+							<span>以选择</span>
+						</li>
+					</ul>
+				</div>
+				<div class="lx_box">
+					<p class="lx_title">报单类型</p>
+					<ul>
+						<li class="active">
+							<p>新车提报单</p>
+							<img src="../img/question.png" alt="" />
+							<p class="ins">填好资料,一步到位</p>
+							<span>未选择</span>
+						</li>
+						<li>
+							<p>二手车提报单</p>
+							<img src="../img/question.png" alt="" />
+							<p class="ins">爱车评估,好车多贷</p>
+							<span>以选择</span>
+						</li>
+					</ul>
+				</div>
+				<div class="lx_box">
+					<p class="lx_title">租赁类型</p>
+					<ul>
+						<li>
+							<p>正租</p>
+							<img src="../img/question.png" alt="" />
+							<p class="ins">挂租赁公司拍照</p>
+							<span>未选择</span>
+						</li>
+						<li class="active">
+							<p>回租</p>
+							<img src="../img/question.png" alt="" />
+							<p class="ins">挂客户个人拍照</p>
+							<span>以选择</span>
+						</li>
+					</ul>
+				</div>
+				<div class="lx_box" style="border:none;text-align: center;background:#eee;">
+					<input type="radio" name="sel" id="sel" value="" />自用
+					<input type="radio" name="sel" id="sel" value="" />待租
+				</div>
+				<div class="lx_box" style="border:none;text-align: center;">
+					<button style="width: 100%;font-weight: 700;" class="btn btn-primary">创建个人新车回租提报单</button>
+				</div>
+			</div>
+		</div>
+		<script src="../public/jquery-1.11.3.js"></script>
+		<script src="../public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/lhgdialog/lhgdialog.js"></script>
+		<!-- 弹出警示框 -->
+		<script src="../js/plugins/toastr/toastr.min.js"></script>
+		<!-- 弹出确认框 -->
+		<script src="../public/artDialog4.1.7/artDialog.js?skin=blue"></script>
+		<script src="../public/artDialog4.1.7/plugins/iframeTools.js"></script>
+
+		<!--<script src="../js/baoDan_lx.js"></script>-->
+		<script>
+			$('.tab_box>li').click(function() {
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var index = $(this).index();
+				$('.tab_content>div:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+
+</html>

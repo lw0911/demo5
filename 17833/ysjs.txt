@@ -1,0 +1,44 @@
+window.onload=function(){
+	(function(){
+		var oDiv=document.getElementById('banner');
+		var oUl=document.getElementById('scroll');
+		var aLi=oUl.children;
+		var a=1;
+		var timer=null;
+		tab();
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].index=i;
+			aLi[i].onmouseover=function(){
+				for(var i=0;i<aLi.length;i++)
+				{
+					aLi[i].className='';
+				}
+				this.className='active'
+				a=this.index;
+				oDiv.style.background='url(images/header/'+(this.index+1)+'.jpg) repeat-x center top #010101'
+			}
+		}
+		function tab(){
+			timer=setInterval(function(){
+				a++;
+				if(a==11){
+					a=1;
+				}
+				for(var i=0;i<aLi.length;i++)
+				{
+					aLi[i].className='';
+				}
+				aLi[a-1].className='active'
+
+				oDiv.style.background='url(images/header/'+a+'.jpg)  repeat-X center top #010101'
+			},5000)
+		}
+		
+		oUl.onmouseover=function(){
+			clearInterval(timer)
+		}
+		oUl.onmouseout=function(){
+			tab();
+		}
+	})();
+}

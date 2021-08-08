@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="../public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/plugins/toastr/toastr.min.css" />
+		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/inspinia.css" />
+		<!--<link rel="stylesheet" href="../css/baoDan_lx.css" />-->
+		<style>
+			body {
+				background: #eee;
+			}
+			#wrapper{
+				overflow: hidden;
+				padding:0;
+			}
+			.btn_box {
+				background: #fff;
+				padding: 10px 15px;
+			}
+			
+			.lx_box {
+				width: 30%;
+				float: left;
+				margin-right: 15px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				background-color: #fff;
+			}
+			
+			.lx_box .lx_title {
+				padding: 10px 0;
+				text-align: center;
+				margin: 0;
+				border-bottom: 1px solid #ddd;
+			}
+			
+			.form-group {
+				overflow: hidden;
+				margin: 10px 0;
+			}
+			
+			.form-group label {
+				margin-bottom: 0;
+				line-height: 34px;
+				text-align: right;
+			}
+			.guid_box{
+				padding:15px 5px;
+			}
+			.guid_box a{
+				display: inline-block;
+				width: 18px;
+				height:18px;
+				background-color:#aaa;
+				border-radius: 50%;
+			}
+			.guid_box a.on{
+				width:50px;
+				height:30px;
+				background:#3AA07F;
+				border-radius: 20px;
+				position:relative;
+				top:6px;
+			}
+			.guid_box b{
+				display: inline-block;
+				width: 25px;
+				border-bottom: 1px solid #aaa;
+				position: relative;
+				top:-9px;
+			}
+		</style>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="../public/html5shiv.min.js"></script>
+		    <script src="../public/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+	</head>
+
+	<body>
+		<div id="wrapper" class="container">
+			<div class="btn_box">
+				<button class="btn btn-primary">修改</button>
+				<button class="btn btn-primary">提报本单</button>
+			</div>
+			<!--报单类型-->
+			<div class=" wrapper wrapper-content animated fadeInLeft">
+				<div class="guid_box">
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)" class="on"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+					<b></b>
+					<a href="javascript:void(0)"></a>
+				</div>
+				<div class="lx_box">
+					<p class="lx_title">基本信息</p>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">融资类型：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">首付比率%：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">GPS类型：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">期效：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">提前预收：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="0.00" disabled="disabled">
+						</div>
+					</div>
+				</div>
+				<div class="lx_box">
+					<p class="lx_title">融资明细</p>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">车款：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="125000.00" disabled="disabled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">GPS：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="0.00" disabled="disabled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">保险融资总额：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="19778.72" disabled="disabled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">第一年交保险：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="950.72" disabled="disabled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">第一年商业险：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="950.72" disabled="disabled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">第一年车船险：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control" value="950.72" disabled="disabled">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../public/jquery-1.11.3.js"></script>
+		<script src="../public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/lhgdialog/lhgdialog.js"></script>
+		<!-- 弹出警示框 -->
+		<script src="../js/plugins/toastr/toastr.min.js"></script>
+		<!-- 弹出确认框 -->
+		<script src="../public/artDialog4.1.7/artDialog.js?skin=blue"></script>
+		<script src="../public/artDialog4.1.7/plugins/iframeTools.js"></script>
+
+		<!--<script src="../js/baoDan_lx.js"></script>-->
+		<script>
+			$('.tab_box>li').click(function() {
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var index = $(this).index();
+				$('.tab_content>div:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+
+</html>

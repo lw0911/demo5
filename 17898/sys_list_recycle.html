@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文档管理</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body leftmargin="8" topmargin="8" background='images/allbg.gif'>
+<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#cfcfcf" align="center">
+<tr bgcolor="#E7E7E7">
+<td height="28" colspan="7" background="images/tbg.gif" style="padding-left:10px;">
+	<b>文档回收站</b> &nbsp;
+</td>
+</tr>
+<form name="form2">
+<tr align="center" bgcolor="#FBFCE2" height="25">
+<td width="6%">ID</td>
+<td width="4%">选择</td>
+<td width="28%">文章标题</td>
+<td width="10%">更新时间</td>
+<td width="10%">类目</td>
+<td width="8%">点击</td>
+<td width="10%">操作</td>
+</tr>
+<tr align='center' bgcolor="#FFFFFF"  onMouseMove="javascript:this.bgColor='#FCFDEE';" onMouseOut="javascript:this.bgColor='#FFFFFF';"
+	height="25" oncontextmenu="ShowMenu(event,this,1,'1231')">
+<td>1</td>
+<td><input name="arcID" type="checkbox" id="arcID" value="1" class="np"></td>
+<td align='left'>
+	<a href='archives_do.php?aid=1&dopost=editArchives'><u>1231</u></a>
+</td>
+<td>2014-08-23</td>
+<td>123</td>
+<td>100</td>
+<td><a href="javascript:moveArc(1)">还原</a> | <a href="javascript:delArc(1)">删除</a></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td height="24" colspan="7">
+&nbsp;
+<a href="javascript:selAll()" class="coolbg">全选</a>
+<a href="javascript:noSelAll()" class="coolbg">取消</a>
+<a href="javascript:moveArc(0)" class="coolbg">&nbsp;还原&nbsp;</a>
+<a href="javascript:delArc(0)" class="coolbg">&nbsp;删除&nbsp;</a></td>
+</tr>
+</form>
+<tr align="right" bgcolor="#F9FCEF">
+<td height="30" colspan="7" align="center">
+	<span>共 1 页/1条记录</span></td>
+</tr>
+</table>
+</body>
+</html>

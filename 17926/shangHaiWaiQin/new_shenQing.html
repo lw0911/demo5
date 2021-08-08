@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td {
+			    margin: 0;
+			    padding: 0;
+			    font-size: 14px;
+			}
+			.shenSu-body {
+			    max-height: 80%;
+			    padding: 0 15px;
+			    min-height: 300px;
+			    overflow-y: auto;
+			    overflow-x: hidden;
+			}
+			.shenSu_content {
+			    margin: 20px;
+			}
+			.approve-form-title {
+			    font-size: 14px;
+			    text-align: center;
+			}
+			.shenSu_content table {
+			    border-collapse: collapse;
+			    border-spacing: 0;
+			    position: relative;
+			}
+			.shenSu_content table tr th {
+			    color: #777;
+			    text-align: left;
+			    height: 40px;
+			    font-weight: normal;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    display: inline-block;
+			    line-height: 40px;
+			}
+			.biaoTi {
+			    color: red;
+			    vertical-align: middle;
+			    padding-right: 2px;
+			}
+			.shenSu_content table tr th {
+			    text-align: left;
+			    font-weight: normal;
+			    white-space: nowrap;
+			    line-height: 40px;
+			}
+			.shenSu_content table tr td {
+			    height: 30px;
+			    text-align: left;
+			}
+			.has-general {
+			    position: relative;
+			}
+			.shenSu_content input, .shenSu_content textarea, .shenSu_content select {
+			    border-left: 0;
+			    border-right: 0;
+			    border-top: 0;
+			    border-bottom: 1px solid #eaeaea;
+			}
+			.int {
+			    border: 1px solid #ccc;
+			    border-radius: 1px;
+			    color: #aaa;
+			    height: 26px;
+			    line-height: normal;
+			    outline: 0 none;
+			    text-indent: 5px;
+			    width: 100%;
+			}
+			.has-general label.control-label {
+			    background-color: #fff;
+			    color: #aaa;
+			    cursor: default;
+			    height: 25px;
+			    left: 1px;
+			    line-height: 25px;
+			    position: absolute;
+			    right: 1px;
+			    text-align: left;
+			    text-indent: 5px;
+			    top: 1px;
+			    z-index: 2;
+			}
+			.has-general label.control-label {
+			    display: none;
+			}
+			.row_selected {
+			    position: absolute;
+			    overflow: auto;
+			    display: none;
+			    border-bottom: 1px solid #e0e0e0;
+			    border-left: 1px solid #e0e0e0;
+			    border-right: 1px solid #e0e0e0;
+			    background: #FFF;
+			    z-index: 100;
+			}
+			.row_selected li {
+			    position: relative;
+			    border-bottom: 1px dotted #e0e0e0;
+			}
+			.row_selected li dl {
+			    overflow: hidden;
+			}
+			.row_selected li dl dt {
+			    float: left;
+			    margin: 8px 0 4px 7px;
+			    width: 20px;
+			    height: 20px;
+			    overflow: hidden;
+			    border-radius: 3px;
+			    background: #098ecc;
+			    line-height: 20px;
+			    text-align: center;
+			    color: #FFF;
+			}
+			.row_selected li dl dt img {
+			    width: 20px;
+			    height: 20px;
+			    display: block;
+			    border: 0;
+			    cursor: pointer;
+			}
+			img {
+			    vertical-align: middle;
+			}
+			.row_selected li dl dd {
+			    float: left;
+			    height: 33px;
+			    line-height: 33px;
+			    padding: 0 0 0 14px;
+			    overflow: hidden;
+			    cursor: pointer;
+			}
+			.form_txt {
+			    background-color: #f3f3f3;
+			    border: 1px solid #bbb;
+			    margin: 10px 0;
+			    padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="shenSu-body">
+			<div class="shenSu_content" style="">
+				<table width="100%">
+					<tbody>
+						<tr>
+							<th style="width:100%;text-align: center;">
+								<span class="biaoTi">&nbsp;</span>标题
+							</th>
+							<!--<td colspan="3" style="width:590px;">
+								<label></label>
+							</td>-->
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<th style="width: 80px;">
+								<span class="biaoTi">*</span>申请人
+							</th>
+							<td style="width: 255px;">
+								<div class="has-general">
+									<input class="int" type="text">
+									<label class="tip"></label>
+									<label class="control-label"></label>
+								</div>
+							</td>
+							<th style="width: 80px;padding-left:10px">
+								<span class="biaoTi">*</span>申请类型
+							</th>
+							<td style="width: 255px;">
+								<div class="has-general">
+									<input class="int" placeholder="维护系数" value="">
+									<label class="control-label" title="请选择部门"></label>
+									<ol id="" class="row_selected" style="display: none; width: 246px; left: 1px; top: 29px; max-height: 100px;">
+										<li>
+											<dl>
+												<dt style="visibility: hidden;">
+													<img src="" alt="" style="display:">
+												</dt>
+												<dd style="width:184px">深圳销售一部</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt style="visibility: hidden;">
+													<img src="" alt="" style="display:">
+												</dt>
+												<dd style="width:184px">审计部</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt style="visibility: hidden;">
+													<img src="" alt="" style="display:"></dt>
+												<dd style="width:184px">新</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt style="visibility: hidden;">
+													<img src="" alt="" style="display:"></dt>
+												<dd style="width:184px">销售总监</dd>
+											</dl>
+										</li>
+									</ol>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--<table width="675px">
+					<tbody>
+						<tr>
+							<th style="width: 80px;">
+								<span class="biaoTi">&nbsp;</span>申诉时间
+							</th>
+							<td style="width: 255px;">
+								华邦云<input type="hidden" value="" ></td>
+							<th style="width: 80px;padding-left:10px">
+								<span class="biaoTi">*</span>报销项目
+							</th>
+							<td style="width: 255px;">
+								<span>
+									<div class="pulldown-container">
+										<div class="pulldown-input">
+											<span class="pulldown-text">电话</span>
+											<span class="pulldown-icon"></span>
+										</div>
+										<div class="pulldown-search-wrapper" style="display: none;">
+											<div class="search-section">
+												<span class="search-content">
+													<input type="text" value="" class="search" placeholder="搜索">
+												</span>
+												<span class="icon-search" title="搜索"></span>
+											</div>
+										</div>
+										<div class="pulldown-list ps-container" style="height: 0px; overflow: hidden; border-top: 0px; max-height: 101px; display: none;">
+											<div id="车费" class="row-content  opts" title="车费" style="height: 25px; line-height: 25px;">车费</div>
+											<div id="住宿" class="row-content  opts" title="住宿" style="height: 25px; line-height: 25px;">住宿</div>
+											<div id="电话" class="row-content  opts" title="电话" style="height: 25px; line-height: 25px;">电话</div>
+											<div id="餐饮" class="row-content  opts" title="餐饮" style="height: 25px; line-height: 25px;">餐饮</div>
+											<div class="searchNoResult none">没有数据</div>
+											<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+												<div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+											</div>
+											<div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+												<div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+											</div>
+										</div>
+									</div>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>-->
+				<table width="100%">
+					<tbody>
+						<tr>
+							<th style="width: 80px;">
+								<span class="biaoTi">&nbsp;</span>申请日期
+							</th>
+							<td style="width: 255px;">
+								<!--2017-06-03 11:17:21
+								<input type="hidden" value="2017-06-03 11:17:21" >-->
+								<div class="has-general">
+									<input class="int" type="text" value="2017-06-03 11:17:21">
+									<label class="tip"></label>
+									<label class="control-label"></label>
+								</div>
+							</td>
+							<th style="width: 80px;padding-left:10px">
+								<!--<span class="biaoTi">*</span>文本输入-->
+							</th>
+							<td style="width: 255px;">
+								<!--<div class="has-general has-error" >
+									<input class="int" type="text">
+									<label class="tip"></label>
+									<label class="control-label" title="必填">必填</label>
+								</div>-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<th style="width: 80px;">
+								<span class="biaoTi">*</span>申诉理由
+							</th>
+							<td style="width: 255px;">
+								<div class="has-general">
+									<input class="int" type="text">
+									<label class="tip"></label>
+									<label class="control-label"></label>
+								</div>
+							</td>
+							<th style="width: 80px;padding-left:10px"></th>
+							<td style="width: 255px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<th style="width: 80px;">
+								<span class="biaoTi">*</span>备注
+							</th>
+							<td colspan="3" style="width:590px;">
+								<div class="has-general">
+									<textarea class="int"></textarea>
+									<label class="control-label"></label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="form_txt" style="width:100%">
+					<p>表单说明：</p><pre></pre>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

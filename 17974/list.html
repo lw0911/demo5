@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>控制台</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+
+			<fieldset class="layui-elem-field layui-field-title">
+				<legend>列表模板</legend>
+			</fieldset>
+
+			<div class="layui-tab layui-tab-brief" lay-filter="demo">
+				<ul class="layui-tab-title">
+					<li class="layui-this">待付款</li>
+					<li>待发货</li>
+					<li>待收货</li>
+					<li>待评价</li>
+					<li>退回/售后</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						<fieldset class="layui-elem-field">
+							<legend>搜索</legend>
+							<div class="layui-row">
+								<div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">输入框</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" required lay-verify="required" placeholder="移动6/12平板6/12 桌面4/12" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">输入框</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" required lay-verify="required" placeholder=" 移动6/12平板6/12桌面4/12" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs4 layui-col-sm12 layui-col-md4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">输入框</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" required lay-verify="required" placeholder="移动4/12平板12/12桌面：4/12" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
+									<div class="layui-form-item">
+										<label class="layui-form-label">输入框</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" required lay-verify="required" placeholder="移动4/12平板7/12桌面8/12" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">输入框</label>
+										<div class="layui-input-block">
+											<input type="text" name="title" required lay-verify="required" placeholder="移动4/12平板5/12桌面4/12" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+									<div class="layui-form-item">
+										<label class="layui-form-label">输入框</label>
+										<div class="layui-input-block">
+											<input type="text" id="ceshiDate" name="title" required lay-verify="required" placeholder="移动6/12平板6/12 桌面6/12" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+
+									<button class="layui-btn" style="margin-left: 10px;">搜索</button>
+
+								</div>
+							</div>
+						</fieldset>
+						<button class="layui-btn"><i class="layui-icon">&#xe608;</i> 添加</button>
+
+						<div class="layui-btn-group">
+							<button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon">&#xe654;</i></button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon">&#xe642;</i></button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon">&#xe640;</i></button>
+						</div>
+						<hr>
+						<table class="layui-table" lay-size="sm">
+							<colgroup>
+								<col width="150">
+								<col width="200">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>昵称</th>
+									<th>加入时间</th>
+									<th>签名</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>贤心</td>
+									<td>2016-11-29</td>
+									<td>人生就像是一场修行</td>
+								</tr>
+								<tr>
+									<td>许闲心</td>
+									<td>2016-11-28</td>
+									<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="layui-tab-item">内容2</div>
+					<div class="layui-tab-item">内容3</div>
+					<div class="layui-tab-item">内容4</div>
+					<div class="layui-tab-item">内容5</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script>
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'laydate','table'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var laydate = layui.laydate;
+			 var table = layui.table;
+			//一些事件监听
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			//执行一个laydate实例
+			laydate.render({
+				elem: '#ceshiDate' //指定元素
+			});
+
+		});
+	</script>
+
+</html>

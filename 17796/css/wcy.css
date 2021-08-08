@@ -1,0 +1,864 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+    color: #5a5a5a;
+}
+a:hover{
+    text-decoration: none;
+}
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar{
+    margin-bottom: 0;
+}
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+    width: auto;
+}
+.navbar-relative{
+    position: relative;
+}
+.navbar-logo{
+    position: absolute;
+    left: 0;
+    top: -3.2em;
+    margin-left: -35px !important;
+}
+.navbar-logo img{
+    width: 65%;
+}
+.navbar-navxg > li > a{
+    font-size: 16px;
+    color: #333333;
+    padding: 22px 25px;
+}
+.navbar-navxg .active a{
+    color: #3e81b6 !important;
+    border-top: 3px solid #3e81b6;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+    color: #3e81b6 !important;
+    background-color:transparent;
+}
+.navbar-relative .navbar-toggle{
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-relative .navbar-toggle .icon-bar{
+    background-color: #333333;
+}
+.navbar-navxg{
+    background-color: rgba(255,255,255,0.8);
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+    height:350px;
+    /*-moz-box-shadow:1px 4px 8px #f0f0f0;*/
+    /*-webkit-box-shadow:1px 4px 8px #f0f0f0;*/
+    /*box-shadow:1px 4px 8px #f0f0f0;*/
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+.car-slide .carousel-control.left{
+    background-image: none;
+}
+.car-slide .carousel-control.right{
+    background-image: none;
+}
+
+.car-slide .carousel-control{
+    color: #ececec;
+    width: 20%;
+}
+.glyimg-left{
+    background-image: url("../images/wprve.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.glyimg-right{
+    background-image: url("../images/wnext.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.glyimg-left,.glyimg-right{
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+    width: 21px;
+    height: 40px;
+}
+.glyimg-left,.glyimg-right{
+    left: 50%;
+    margin-left: -10px;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 350px;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 350px;
+}
+/*共享文档*/
+.cont-gxwd{
+    -moz-box-shadow: 1px 4px 8px #f0f0f0  inset;
+    -webkit-box-shadow: 1px 4px 8px #f0f0f0  inset;
+    box-shadow: 1px 4px 8px #f0f0f0  inset;
+    position: relative;
+    min-height: 20px;
+}
+.cont-gxtit{
+    position: absolute;
+    width: 100%;
+    height: 125px;
+    left: 0;
+    top: -268%;
+    text-align: center;
+}
+.con-span{
+    background-image: url(../images/wtitbj.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 128px;
+    height: 125px;
+    display: block;
+    margin: 0 auto;
+    color: #005aa1;
+    font-size: 16px;
+    padding-top: 6%;
+}
+.con-span i{
+    font-size: 25px;
+}
+/*共享文档 end*/
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+/*list*/
+.marketing{
+    padding-top:20%;
+}
+.col-wxg .dl-horizontal{
+    margin-bottom: -6px;
+}
+.col-wxg .dl-horizontal dt img{
+    height: 88px;
+    width:100%;
+}
+
+.col-wxg .dl-horizontal dd h3{
+    margin-top:15px;
+    font-size:16px;
+    color: #333333;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.col-wxg .dl-horizontal dd h5{
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    line-height: 1.5
+}
+.col-wxg .dl-horizontal dd div{
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 28px;
+}
+.col-wxg .dl-horizontal dd p{
+    text-align: center;
+}
+/*list end*/
+/*分页*/
+
+.rog-page{
+    display: none;
+}
+.row-phone{
+    text-align: center;
+    color: #b8b8b8;
+    margin-bottom: 15px;
+}
+/*分页 end*/
+/*footer*/
+.cp-foonter{
+    background: #3e81b6;
+    -webkit-box-shadow:inset 0 0 32px #003d7e;
+    -moz-box-shadow:inset 0 0 32px #003d7e;
+    box-shadow:inset 0 0 32px #003d7e;
+}
+.pc-foot{
+    padding-top: 40px;
+    padding-bottom:50px;
+    display: none;
+}
+.pc-flist h3{
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.pc-wwx img{
+    width: 217px;
+    height: 217px;
+}
+.pc-conp{
+    color: #fff;
+    font-size: 14px;
+}
+.pc-address{
+    font-size: 16px;
+    color: #fff;
+}
+.pc-address .dl-horizontal dt{
+    width: 80px;
+    text-align: left;
+}
+.pc-address .dl-horizontal dd{
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+.pc-flispad{
+    padding-left: 60px;
+}
+
+.pcy{
+    background: #3e81b6;
+    text-align: center;
+    color: #fff;
+    padding-top: 22px;
+    padding-bottom: 15px;
+}
+.pcy p a{
+    color: #fff;
+    padding: 0 4px;
+}
+.pcy span a{
+    color: #fff;
+}
+/*手机footer*/
+.ph-footer{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.ph-foimg img{
+    width: 100%;
+    height: auto;
+}
+.ph-focont{
+    padding-left: 0;
+    color: #fff;
+}
+.ph-focont h3{
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom:7px;
+}
+.ph-focont h4{
+    margin-top: 0;
+    font-size: 12px;
+    margin-bottom:7px;
+}
+.ph-focont .media{
+    margin-top: 0;
+    font-size: 12px;
+    margin-bottom:7px;
+}
+.ph-focont .media .media-left{
+    width:20%;
+    padding-right: 0;
+    white-space: nowrap;
+}
+/*手机footer end*/
+/*footer end*/
+/*票务*/
+.wpw-span{
+    color: #333333;
+    font-size: 14px;
+    display: block;
+    margin-top: 5%;
+}
+.wpw-span span{
+    display: block;
+    margin-bottom: 5px;
+}
+.cw-wxg {
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
+/*票务 end*/
+/*酒店信息*/
+.cw-jd .thumbnail{
+    border: none;
+}
+.cw-jd .thumbnail .caption h3{
+    color: #3e81b6;
+    margin-top: 0;
+    margin-bottom: 2%;
+}
+.caption-jdp{
+    color: #888888;
+    line-height: 1.8;
+}
+.caption-jdpp{
+    color: #333333;
+}
+/*酒店信息 end*/
+/* Featurettes
+------------------------- */
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper .container {
+        padding-right: 0;
+        padding-left:0;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .navbar-logo{
+        width: 375px;
+        top: -4.2em;
+        margin-left: -42px !important;
+    }
+    .navbar-logo img{
+        width: 100%;
+    }
+    .navbar-navxg{
+        background-color: transparent;
+    }
+
+    /*轮播*/
+    .carousel{
+        height: 594px;
+    }
+    .carousel .item{
+        height: 594px;
+    }
+    .carousel-inner > .item > img{
+        height: 594px;
+    }
+    .glyimg-left,.glyimg-right{
+        width: 42px;
+        height: 80px;
+        margin-top: -10px;
+        opacity: 1;
+    }
+    .glyimg-left{
+        margin-left: -10px;
+    }
+    .car-slide .carousel-control{
+        color: #ececec;
+        width: 50%;
+    }
+    .glyimg-left,.glyimg-right{
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        margin-top: -10px;
+        width: 43px;
+        height:80px;
+    }
+    /*轮播 end*/
+    /*共享文档*/
+    .con-span{
+        padding-top: 3%;
+    }
+    /*共享文档 end*/
+    /*列表*/
+    .marketing{
+        padding-top:12%;
+    }
+    .col-wxg .dl-horizontal dt img{
+        height: 110px;
+    }
+    .col-wxg .dl-horizontal dd h3{
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
+    .col-wxg .dl-horizontal dd h5{
+        margin-bottom: 7px;
+    }
+    .col-wxg .dl-horizontal dd div{
+        margin-bottom: 10px;
+    }
+    .col-wxg .dl-horizontal dd p{
+        text-align: left;
+    }
+    /*列表 end*/
+    /*分页*/
+    .row-wphone{
+        display: none;
+    }
+    .rog-page{
+        text-align: right;
+        display: block;
+    }
+    .rog-page .pagination > li > a, .pagination > li > span{
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        margin: 0 4px;
+        padding-top: 9px;
+    }
+    /*分页 end*/
+    /*footer*/
+    .cp-foonter{
+        background: #3e81b6;
+        -webkit-box-shadow:inset 0 0 32px #003d7e;
+        -moz-box-shadow:inset 0 0 32px #003d7e;
+        box-shadow:inset 0 0 32px #003d7e;
+    }
+    .pc-foot{
+        padding-top: 40px;
+        padding-bottom:50px;
+        display: block;
+    }
+    .pc-flist h3{
+        color: #fff;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .pc-wwx img{
+        width: 217px;
+        height: 217px;
+    }
+    .pc-conp{
+        color: #fff;
+        font-size: 14px;
+    }
+    .pc-address{
+        font-size: 16px;
+        color: #fff;
+    }
+    .pc-address .dl-horizontal dt{
+        width: 80px;
+        text-align: left;
+    }
+    .pc-address .dl-horizontal dd{
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+    .pc-flist{
+        padding-left: 0;
+    }
+    .pc-flispad{
+        padding-left: 0;
+    }
+
+    .pcy{
+        background: #3e81b6;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+    .pcy p a{
+        color: #fff;
+        padding: 0 18px;
+        font-size: 12px;
+    }
+    .pcy span a{
+        color: #fff;
+    }
+    .ph-footer{
+        display: none;
+    }
+    /*footer end*/
+    /*票务信息*/
+    .cw-wxg .dl-horizontal dt{
+        width: 350px;
+    }
+    .cw-wxg .dl-horizontal dt img{
+        height: 170px;
+    }
+    .cw-wxg .dl-horizontal dd{
+        margin-left: 375px;
+    }
+    .cw-wxg .dl-horizontal dd h3{
+        margin-top: 20px;
+        font-size: 22px;
+    }
+    .cw-wxg .dl-horizontal dd h5{
+        line-height: 1.5;
+    }
+    .wpw-span{
+        color: #333333;
+        font-size: 16px;
+        display: block;
+        margin-top: 5%;
+    }
+    .wpw-span span{
+        display:inline-block;
+        margin-bottom: 0;
+        margin-right: 65px;
+    }
+    .cw-wxg {
+        border-bottom: 1px solid #dbdbdb;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    /*票务信息 end*/
+    /*酒店信息*/
+    .caption-jdp{
+        font-size: 16px;
+        line-height: 2;
+    }
+    /*酒店信息 end*/
+
+
+}
+
+@media (min-width: 992px) {
+    /*共享文档*/
+    .con-span{
+        padding-top: 2.5%;
+    }
+    /*共享文档 end*/
+    /*列表*/
+    .marketing{
+        padding-top:10%;
+    }
+    .col-wxg .dl-horizontal dt{
+        width:190px;
+    }
+    .col-wxg .dl-horizontal dt img{
+        height: 120px;
+    }
+    .col-wxg .dl-horizontal dd{
+        margin-left: 205px;
+    }
+    .col-wxg .dl-horizontal dd h3{
+        font-size: 20px;
+        margin-top:0;
+    }
+    .col-wxg .dl-horizontal dd h5{
+        font-size: 16px;
+    }
+    .col-wxg .dl-horizontal dd div{
+        font-size: 14px;
+    }
+    .col-wxg .dl-horizontal dd p{
+        text-align:left;
+    }
+    /*列表 end*/
+    /*分页*/
+    .row-wphone{
+        display: none;
+    }
+    .rog-page{
+        text-align: right;
+        display: block;
+    }
+    .rog-page .pagination > li > a, .pagination > li > span{
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        margin: 0 4px;
+        padding-top: 9px;
+    }
+    /*分页 end*/
+    /*footer*/
+    .cp-foonter{
+        background: #3e81b6;
+        -webkit-box-shadow:inset 0 0 32px #003d7e;
+        -moz-box-shadow:inset 0 0 32px #003d7e;
+        box-shadow:inset 0 0 32px #003d7e;
+    }
+    .pc-foot{
+        padding-top: 40px;
+        padding-bottom:50px;
+        display: block;
+    }
+    .pc-flist h3{
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .pc-wwx img{
+        width: 217px;
+        height: 217px;
+    }
+    .pc-conp{
+        color: #fff;
+        font-size: 14px;
+    }
+    .pc-address{
+        font-size: 16px;
+        color: #fff;
+    }
+    .pc-address .dl-horizontal dt{
+        width: 80px;
+        text-align: left;
+    }
+    .pc-address .dl-horizontal dd{
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+    .pc-flispad{
+        padding-left: 60px;
+    }
+
+    .pcy{
+        background: #3e81b6;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+    .pcy p a{
+        color: #fff;
+        padding: 0 18px;
+    }
+    .pcy span a{
+        color: #fff;
+    }
+    .ph-footer{
+        display: none;
+    }
+    /*footer end*/
+    /*票务信息*/
+    .cw-wxg .dl-horizontal dt{
+        width: 350px;
+    }
+    .cw-wxg .dl-horizontal dt img{
+        height: 170px;
+    }
+    .cw-wxg .dl-horizontal dd{
+        margin-left: 375px;
+    }
+    .cw-wxg .dl-horizontal dd h3{
+        margin-top: 20px;
+    }
+    .cw-wxg .dl-horizontal dd h5{
+        line-height: 1.5;
+    }
+    .wpw-span{
+        color: #333333;
+        font-size: 16px;
+        display: block;
+        margin-top: 5%;
+    }
+    .wpw-span span{
+        display:inline-block;
+        margin-bottom: 0;
+        margin-right: 65px;
+    }
+    .cw-wxg {
+        border-bottom: 1px solid #dbdbdb;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    /*票务信息 end*/
+    /*酒店信息*/
+    .caption-jdp{
+        font-size: 16px;
+        line-height: 2;
+    }
+    /*酒店信息 end*/
+
+
+}
+@media (min-width: 1200px){
+    .container {
+        width: 1200px;
+    }
+    /*共享文档*/
+    .con-span{
+        padding-top: 1%;
+    }
+    /*共享文档 end*/
+    /*列表*/
+    .marketing{
+        padding-top:5%;
+    }
+    .col-wxg .dl-horizontal dt{
+        width:250px;
+    }
+    .col-wxg .dl-horizontal dt img{
+        height: 160px;
+    }
+    .col-wxg .dl-horizontal dd{
+        margin-left: 270px;
+    }
+    .col-wxg .dl-horizontal dd h3{
+        font-size: 22px;
+        margin-top:0;
+        margin-bottom: 15px;
+    }
+    .col-wxg .dl-horizontal dd h5{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .col-wxg .dl-horizontal dd div{
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+    .col-wxg .dl-horizontal dd p{
+        text-align:left;
+    }
+    /*列表 end*/
+    /*分页*/
+    .row-wphone{
+        display: none;
+    }
+    .rog-page{
+        text-align: right;
+        display: block;
+    }
+    .rog-page .pagination > li > a, .pagination > li > span{
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        margin: 0 4px;
+        padding-top: 9px;
+    }
+    /*分页 end*/
+    /*footer*/
+    .cp-foonter{
+        background: #3e81b6;
+        -webkit-box-shadow:inset 0 0 32px #003d7e;
+        -moz-box-shadow:inset 0 0 32px #003d7e;
+        box-shadow:inset 0 0 32px #003d7e;
+    }
+    .pc-foot{
+        padding-top: 40px;
+        padding-bottom:50px;
+        display: block;
+    }
+    .pc-flist h3{
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .pc-wwx img{
+        width: 217px;
+        height: 217px;
+    }
+    .pc-conp{
+        color: #fff;
+        font-size: 14px;
+    }
+    .pc-address{
+        font-size: 16px;
+        color: #fff;
+    }
+    .pc-address .dl-horizontal dt{
+        width: 80px;
+        text-align: left;
+    }
+    .pc-address .dl-horizontal dd{
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+    .pc-flispad{
+        padding-left: 60px;
+    }
+
+    .pcy{
+        background: #3e81b6;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+    .pcy p a{
+        color: #fff;
+        padding: 0 18px;
+    }
+    .pcy span a{
+        color: #fff;
+    }
+    .ph-footer{
+        display: none;
+    }
+    /*footer end*/
+    /*票务信息*/
+    .cw-wxg{
+
+    }
+    .cw-wxg .dl-horizontal dt{
+        width: 350px;
+    }
+    .cw-wxg .dl-horizontal dt img{
+        height: 170px;
+    }
+    .cw-wxg .dl-horizontal dd{
+        margin-left: 375px;
+    }
+    .cw-wxg .dl-horizontal dd h3{
+        margin-top: 20px;
+    }
+    .cw-wxg .dl-horizontal dd h5{
+        line-height: 1.5;
+    }
+    .wpw-span{
+        color: #333333;
+        font-size: 16px;
+        display: block;
+        margin-top: 4.5%;
+    }
+    .wpw-span span{
+        display:inline-block;
+        margin-bottom: 0;
+        margin-right: 65px;
+    }
+    .cw-wxg {
+        border-bottom: 1px solid #dbdbdb;
+        padding-left: 0;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    /*票务信息 end*/
+    /*酒店信息*/
+    .caption-jdp{
+        font-size: 16px;
+        line-height: 2.5;
+    }
+    /*酒店信息 end*/
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑图片</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			.layui-upload-img {
+				width: 92px;
+				height: 92px;
+				margin: 0 10px 10px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field">
+				<legend>上传</legend>
+				<div class="layui-field-box">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<label class="layui-form-label">APP版本号</label>
+							<div class="layui-inline">
+								<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="APP版本号" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">操作系统</label>
+							<div class="layui-input-block">
+								<input type="checkbox" name="like[iOS]" title="iOS">
+								<input type="checkbox" name="like[Android]" title="Android">
+								<input type="checkbox" name="like[web]" title="web">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">APP名字</label>
+							<div class="layui-inline">
+								<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="APP名字" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">默认</label>
+							<div class="layui-input-block">
+								<input type="radio" name="pretermit" value="Y" title="是" checked="">
+								<input type="radio" name="pretermit" value="N" title="否">
+							</div>
+						</div>
+						<div class="layui-form-item" >
+							<label class="layui-form-label" style="padding: 9px 0; width: 103px;">Banner图片位置</label>
+							<div class="layui-input-block">
+								<select name="interest" lay-filter="aihao">
+									<option value="0">上</option>
+									<option value="1">中</option>
+									<option value="2" selected="">下</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-form-item" style="margin-left: 110px;">
+							<div class="layui-upload">
+								<button type="button" class="layui-btn" id="test1">上传图片</button>
+								<div class="layui-upload-list">
+									<img class="layui-upload-img" id="demo1">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</fieldset>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script>
+		//JavaScript代码区域
+		layui.use(['element', 'layer', 'form', 'laydate', 'upload'], function() {
+			var $ = layui.jquery;
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+			var laydate = layui.laydate,
+				upload = layui.upload;
+
+			var uploadInst = upload.render({
+				elem: '#test1',
+				url: '/upload/',
+				before: function(obj) {
+					//预读本地文件示例，不支持ie8
+					obj.preview(function(index, file, result) {
+						$('#demo1').attr('src', result); //图片链接（base64）
+					});
+				},
+				done: function(res) {
+					//如果上传失败
+					if(res.code > 0) {
+						return layer.msg('上传失败');
+					}
+					//上传成功
+				},
+				error: function() {
+					//演示失败状态，并实现重传
+					var demoText = $('#demoText');
+					demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+					demoText.find('.demo-reload').on('click', function() {
+						uploadInst.upload();
+					});
+				}
+			});
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				layer.msg(JSON.stringify(data.field));
+				return false;
+			});
+
+		});
+	</script>
+
+</html>

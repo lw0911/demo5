@@ -1,0 +1,153 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>发布职位</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/kedit/KindEditor.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+    <script type="text/javascript" src="lib/date/calendar.js"></script>
+</head>
+<body>
+    <form id="newsAddForm" name="form" action="" method="post" enctype="multipart/form-data">
+
+        <div class="formzone">
+            <div class="font-weight">
+                发布职位
+            </div>
+            <div class="tablezone">
+
+
+                <table width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td width="100" height="30" align="center">职位名称</td>
+                            <td height="30">
+                                <input name="jobname" class="input" id="jobname" value="" size="30" maxlength="200" type="text" />
+                                <font color="#FF0000">*</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">职位类型</td>
+                            <td height="30">
+                                <input name="jobtype" value="全职" checked="checked" type="radio" />
+                                全职          <input name="jobtype" value="兼职" type="radio" />
+                                兼职          <input name="jobtype" value="全/兼职" type="radio" />
+                                全/兼职
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">工作经验</td>
+                            <td height="30">
+                                <select name="experience" id="experience">
+                                    <option value="不要求" selected="selected">不要求</option>
+                                    <option value="应届毕业生">应届毕业生</option>
+                                    <option value="1年以上">1年以上</option>
+                                    <option value="2年以上">2年以上</option>
+                                    <option value="3年以上">3年以上</option>
+                                    <option value="4年以上">4年以上</option>
+                                    <option value="5年以上">5年以上</option>
+                                    <option value="6年以上">6年以上</option>
+                                    <option value="7年以上">7年以上</option>
+                                    <option value="8年以上">8年以上</option>
+                                    <option value="9年以上">9年以上</option>
+                                    <option value="10年以上">10年以上</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">学历要求</td>
+                            <td height="30">
+                                <select name="education" id="education">
+                                    <option value="不要求" selected="selected">不要求</option>
+                                    <option value="初中">初中</option>
+                                    <option value="高中">高中</option>
+                                    <option value="中专">中专</option>
+                                    <option value="大专">大专</option>
+                                    <option value="本科">本科</option>
+                                    <option value="硕士">硕士</option>
+                                    <option value="博士">博士</option>
+                                    <option value="博士后">博士后</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">招聘人数</td>
+                            <td height="30">
+                                <input name="pnums" class="input" id="pnums" value="" size="3" maxlength="200" type="text" />
+                                <font color="#FF0000">*</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">工作地点</td>
+                            <td height="30">
+                                <input name="jobaddr" class="input" id="jobaddr" value="" size="30" maxlength="200" type="text" />
+                                <font color="#FF0000">*</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">职位描述</td>
+                            <td height="30">
+                                <textarea name="jobintro" rows="8" class="textarea" id="jobintro" style="width:500px"></textarea>
+                                <font color="#FF0000">*</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">招聘要求</td>
+                            <td height="30">
+                                <textarea name="jobrequest" rows="8" class="textarea" id="jobrequest" style="width:500px"></textarea>
+                                <font color="#FF0000">*</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">联 系 人</td>
+                            <td height="30"><input name="contact" class="input" id="contact" value="" size="30" maxlength="200" type="text" />              </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">联系电话</td>
+                            <td height="30"><input name="tel" class="input" id="tel" value="" size="50" maxlength="200" type="text" />              </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">电子邮件</td>
+                            <td height="30"><input name="email" class="input" id="email" value="" size="50" maxlength="200" type="text" />              </td>
+                        </tr>
+                        <tr>
+                            <td height="30" align="center">招聘状态</td>
+                            <td height="30">
+                                <select name="jobstat" id="jobstat">
+                                    <option value="1" selected="selected">正在招聘</option>
+                                    <option value="0">停止招聘</option>
+
+                                </select>
+                            </td>
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="adminsubmit">
+                <input name="cc" onclick="KindSubmit();" value="提 交" class="btn btn-default" type="submit" />
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

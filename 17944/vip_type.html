@@ -1,0 +1,230 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>会员类型</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="formzone">
+        <div class="font-weight">
+            会员类型
+        </div>
+        <div class="tablezone" style="clear:both;">
+
+            <table width="100%" cellspacing="0" cellpadding="5" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td class="innerbiaoti" width="10" height="28">会员类型</td>
+                        <td class="innerbiaoti" width="120" height="28">会员分组</td>
+                        <td class="innerbiaoti" width="20" height="28">注册许可</td>
+                        <td class="innerbiaoti" width="20" height="28">设置修改</td>
+                        <td class="innerbiaoti" width="20" height="28">删除</td>
+                    </tr>
+                    <tr class="list">
+                        <td width="0">  
+						 
+						     <select name="membergroupid" width="30">
+                                <option value="1" selected="">普通会员</option>
+                                <option value="2">特约版主</option> 
+								<option value="3">企业会员</option>
+                            </select> 
+						
+						</td>
+                        <td width="120">  
+						     <select name="membergroupid">
+                                <option value="1" selected="">个人</option>
+                                <option value="2">企业</option> 
+								<option value="3">其他</option>
+                            </select> 
+						</td>
+                        <td><img src="images/toolbar_no.png" /></td>
+                        <td><a href="member_type_setup.php?membertypeid=26"><img src="images/set.png" border="0" /></a></td>
+                        <td><img src="images/delete.png" style="cursor:pointer" onclick="cm('26')" /></td>
+                    </tr>
+                    <tr class="list">
+                           <td width="0">  
+						 
+						     <select name="membergroupid" width="30">
+                                <option value="1" selected="">普通会员</option>
+                                <option value="2">特约版主</option> 
+								<option value="3">企业会员</option>
+                            </select> 
+						
+						</td>
+                        <td width="120">  
+						     <select name="membergroupid">
+                                <option value="1" selected="">个人</option>
+                                <option value="2">企业</option> 
+								<option value="3">其他</option>
+                            </select> 
+						</td>
+                        <td><img src="images/toolbar_no.png" /></td>
+                        <td height="26"><a href="member_type_setup.php?membertypeid=38"><img src="images/set.png" border="0" /></a></td>
+                        <td height="26"><img src="images/delete.png" style="cursor:pointer" onclick="cm('38')" /></td>
+                    </tr>
+                    <tr class="list">
+                        <td width="0">  
+						 
+						     <select name="membergroupid" width="30">
+                                <option value="1" selected="">普通会员</option>
+                                <option value="2">特约版主</option> 
+								<option value="3">企业会员</option>
+                            </select> 
+						
+						</td>
+                        <td width="120">  
+						     <select name="membergroupid">
+                                <option value="1" selected="">个人</option>
+                                <option value="2">企业</option> 
+								<option value="3">其他</option>
+                            </select> 
+						</td>
+                        <td><img src="images/toolbar_no.png" /></td>
+                        <td height="26"><a href="member_type_setup.php?membertypeid=39"><img src="images/set.png" border="0" /></a></td>
+                        <td height="26"><img src="images/delete.png" style="cursor:pointer" onclick="cm('39')" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="button" class="btn btn-default" value="+新增会员类型" />
+    </div>
+    <div class="formzone">
+        <div class="font-weight">
+            会员类型设置
+        </div>
+        <div class="tablezone">
+
+            <table width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+                <tbody>
+
+                    <tr>
+                        <td width="127" height="28">
+                            <div align="right">会员类型 :</div>
+                        </td>
+                        <td>
+                            <input name="membertype" size="22" value="普通会员" class="input" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="127" height="28" align="right">会员分组 :</td>
+                        <td>
+                            <select name="membergroupid">
+                                <option value="1" selected="">个人</option>
+                                <option value="2">企业</option> 
+								<option value="3">其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="127" height="35">
+                            <div align="right">注册许可 :</div>
+                        </td>
+                        <td>
+                            <select name="ifcanreg">
+                                <option value="1">允许直接从网站注册会员</option>
+                                <option value="0" selected="">禁止直接从网站注册会员</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="127" height="28">
+                            <div align="right">有效天数 :</div>
+                        </td>
+                        <td>
+                            <input name="expday" size="3" value="0" class="input" type="text" />天        [会员注册后默认有效天数，0为不限制]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="127" height="28">
+                            <div align="right">注册协议 :</div>
+                        </td>
+                        <td>
+                            <textarea name="regxy" cols="60" rows="8" class="textarea">
+                                会员注册协议
+
+                                1.
+                                2.
+                                3.
+                                4.
+                                5.
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="127" height="28">
+                            <div align="right">注册邮件 :</div>
+                        </td>
+                        <td>
+                            <textarea name="regmail" cols="60" rows="8" class="textarea">
+                                {#user#},您好!
+
+                                感谢您注册成为本站会员!请牢记您的会员信息！
+
+                                登录账号: {#user#}
+                                密码: {#password#}
+
+                                网址:http://www.qiewen.net
+                            </textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="button" class="btn btn-default" value="提 交" />
+    </div>
+    <div class="formzone">
+        <div class="font-weight">
+            权限设置
+        </div>
+        <form name="delfm" action="feedback.php" method="post">
+            <div class="tablezone" style="clear:both;">
+                <table width="100%" cellspacing="0" cellpadding="5" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td class="innerbiaoti" width="120" height="28">权限</td>
+                            <td class="innerbiaoti" width="120" height="28">所属模块</td>
+                            <td class="innerbiaoti" width="120" height="28">权限描述</td>
+                        </tr>
+                        <tr>
+                            <td width="120" height="28" colspan="3"><input name="SELALL" value="1" onclick="SelAll(this.form)" type="checkbox" />&nbsp;全选</td>
+                        </tr>
+                        <tr class="list">
+                            <td><input name="dall[]" value="1" type="checkbox" /></td>
+                            <td width="120"> 基础        </td>
+                            <td>网站参数设置</td>
+                        </tr>
+                        <tr class="list">
+                            <td><input name="dall[]" value="2" type="checkbox" /></td>
+                            <td width="120"> 基础        </td>
+                            <td>网站参数设置</td>
+                        </tr>
+                        <tr class="list">
+                            <td><input name="dall[]" value="3" type="checkbox" /></td>
+                            <td width="120"> 基础        </td>
+                            <td>网站参数设置</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="button" class="btn btn-default" value="提 交" />
+        </form>
+    </div>
+</body>
+</html>

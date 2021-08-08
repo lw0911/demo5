@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="../public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/plugins/toastr/toastr.min.css" />
+		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/inspinia.css" />
+		<!--<link rel="stylesheet" href="../css/baoDan_lx.css" />-->
+		<style>
+			body {
+				background: #eee;
+			}
+			#wrapper{
+				overflow: hidden;
+				padding:0;
+			}
+			.btn_box {
+				background: #fff;
+				padding: 10px 15px;
+			}
+			
+			.lx_box {
+				width: 30%;
+				float: left;
+				margin-right: 15px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				background-color: #fff;
+			}
+			
+			.lx_box .lx_title {
+				padding: 10px 0;
+				text-align: center;
+				margin: 0;
+				border-bottom: 1px solid #ddd;
+			}
+			
+			.form-group {
+				overflow: hidden;
+				margin: 10px 0;
+			}
+			
+			.form-group label {
+				margin-bottom: 0;
+				line-height: 34px;
+				text-align: right;
+			}
+		</style>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="../public/html5shiv.min.js"></script>
+		    <script src="../public/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+	</head>
+
+	<body>
+		<div id="wrapper" class="container">
+			<div class="btn_box">
+				<button class="btn btn-primary">保存</button>
+				<button class="btn btn-default">提报本单</button>
+			</div>
+			<!--报单类型-->
+			<div class=" wrapper wrapper-content animated fadeInLeft">
+
+				<div class="lx_box">
+					<p class="lx_title">基本信息</p>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">姓名：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">是否自查征信：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2" style="line-height: 34px;">
+							<input type="radio" checked name="czx">是
+							<input type="radio" name="czx">否
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">证件类型：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">证件号码：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">申请人学历：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="2">初中以下</option>
+								<option value="3">高中</option>
+								<option value="4">大专</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">性别：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2" style="line-height: 34px;">
+							<input type="radio" checked name="ganer">男
+							<input type="radio" name="ganer">女
+						</div>
+					</div>
+				</div>
+				<div class="lx_box">
+					<p class="lx_title">工作信息</p>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">公司名称：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">公司所在省份：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="1">选择省份</option>
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">公司所在市：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="1">选择市</option>
+								<option value="2">初中以下</option>
+								<option value="3">高中</option>
+								<option value="4">大专</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">公司电话：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" placeholder="0311-12345678" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">公司详细地址：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">工作类型：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2" style="line-height: 34px;">
+							<input type="radio" checked name="czx">国家公务员
+							<input type="radio" name="czx">否
+						</div>
+					</div>
+				</div>
+				<div class="lx_box">
+					<p class="lx_title">居住信息</p>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">现居省份：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="1">选择省份</option>
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">现居城市：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="1">选择市</option>
+								<option value="2">初中以下</option>
+								<option value="3">高中</option>
+								<option value="4">大专</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-lg-3 col-md-2 col-sm-2 control-label">现居详细地址：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">居住类型：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2" style="margin-top:7px;">
+							<input type="radio" checked name="czx">本地户口(且属于企业法人/大股东或有本地医社保)
+						</div>
+						<div class="col-lg-9 col-md-2 col-sm-2" style="margin-top:4px;float: right;">
+							<input type="radio" name="czx">本地房产(且属于企业法人/大股东或有本地医社保)
+						</div>
+						<div class="col-lg-9 col-md-2 col-sm-2" style="margin-top:4px;float: right;">
+							<input type="radio" name="czx">其他
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 col-md-1 col-sm-1 control-label" for="">现居省份：</label>
+						<div class="col-lg-9 col-md-2 col-sm-2 chosen-container chosen-container-single">
+							<select class="select2_demo_1 form-control">
+								<option value="1">选择省份</option>
+								<option value="2">身份中</option>
+								<option value="3">学生证</option>
+								<option value="4">结婚证</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../public/jquery-1.11.3.js"></script>
+		<script src="../public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/lhgdialog/lhgdialog.js"></script>
+		<!-- 弹出警示框 -->
+		<script src="../js/plugins/toastr/toastr.min.js"></script>
+		<!-- 弹出确认框 -->
+		<script src="../public/artDialog4.1.7/artDialog.js?skin=blue"></script>
+		<script src="../public/artDialog4.1.7/plugins/iframeTools.js"></script>
+
+		<!--<script src="../js/baoDan_lx.js"></script>-->
+		<script>
+			$('.tab_box>li').click(function() {
+				$(this).addClass('select_tab').siblings().removeClass('select_tab');
+				var index = $(this).index();
+				$('.tab_content>div:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,1633 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by dede58.com/" /><title>个人主页</title>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="Assets/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="Assets/css/thems.css">
+<script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabBox_u .tabCont_u:first").css("display","block");
+	$(".tabBox_u .tabNav_u li").click(function(){
+		$(this).siblings("li").removeClass("now");
+		$(this).addClass("now");
+		$(this).parents(".tabBox_u").find(".tabCont_u").css("display","none");
+		var i=$(this).index();
+		$(this).parents(".tabBox_u").find(".tabCont_u:eq("+i+")").css("display","block");
+	});
+	
+	$(".tabBox_tz .tabCont_tz:first").css("display","block");
+	$(".tabBox_tz .tabNav_tz li").click(function(){
+		$(this).siblings("li").removeClass("now");
+		$(this).addClass("now");
+		$(this).parents(".tabBox_tz").find(".tabCont_tz").css("display","none");
+		var i=$(this).index();
+		$(this).parents(".tabBox_tz").find(".tabCont_tz:eq("+i+")").css("display","block");
+	});
+	
+	$(".tabBox_hd .tabCont_hd:first").css("display","block");
+	$(".tabBox_hd .tabNav_hd li").click(function(){
+		$(this).siblings("li").removeClass("now");
+		$(this).addClass("now");
+		$(this).parents(".tabBox_hd").find(".tabCont_hd").css("display","none");
+		var i=$(this).index();
+		$(this).parents(".tabBox_hd").find(".tabCont_hd:eq("+i+")").css("display","block");
+	});
+})
+</script>
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="Assets/css/ie.css"/>
+<script type="text/javascript" src="Assets/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="Assets/js/html5.js"></script>
+<style type="text/css">
+body{
+	behavior:url(css3pie.htc);
+    behavior:url(csshover.htc);
+    
+}
+</style>
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="Assets/js/DD_belatedPNG_0.0.7a.js"></script>
+<script>
+  DD_belatedPNG.fix('.nav li.line,.hot-event .switch-tab .current');
+</script>
+<![endif]-->
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+<div class="head_m">
+	<div class="head_l">
+    	<div class="logo"><a href="index.html"><img src="Assets/images/logo.png" alt=""/></a></div>
+        <ul class="nav clearfix">
+        	<li class="now"><span><a href="index.html">首页</a></span></li>
+            <li class="xia">
+            	<span><a href="zppm.html">发现</a><em>&nbsp;</em></span>
+                <ul>
+                	<li><a href="zppm.html">作品排名</a></li>
+                    <li><a href="zzpm.html">作者排名</a></li>
+                </ul>
+            </li>
+            <li class="xia">
+            	<span><a href="huodong.html">活动</a><em>&nbsp;</em></span>
+                <ul>
+                	<li><a href="huodong.html">旅游活动</a></li>
+                    <li><a href="huodong.html">外拍活动</a></li>
+                </ul>
+            </li>
+            <li><span><a href="saishi.html">赛事</a></span></li>
+            <li><span><a href="zuzhi.html">组织</a></span></li>
+            <li><span><a href="luntan.html">论坛</a></span></li>
+            <li><span><a href="article.html">文章</a></span></li>
+        </ul>
+    </div>
+    <div class="head_r clearfix">
+        <ul class="user_n clearfix">
+            <li>
+            	<a href="upload.html"><img src="Assets/images/icon4.png" alt=""/></a>
+            </li>
+            <li class="email">
+            	<span>
+                	<a href="new_list.html">
+                	<img src="Assets/images/icon3.png" alt=""/>
+                    <em>5</em>
+                    </a>
+                </span>
+            </li>
+            <li class="user">
+            	<div class="user_a">
+                    <span class="tx">
+                    	<div class="y25">&nbsp;</div>
+                    	<img src="Assets/upload/pic1.png" alt=""/>
+                    </span>
+                    <span class="name">xxliangx</span>
+                    <em>&nbsp;</em>
+                </div>
+                <ul>
+                	<li><a href="grsz.html">个人信息设置</a></li>
+                    <li><a href="usercenter.html">我的作品</a></li>
+                    <li><a href="usercenter.html">我的帖子</a></li>
+                    <li><a href="usercenter.html">我的收藏</a></li>
+                    <li><a href="usercenter.html">我的组织</a></li>
+                    <li><a href="usercenter.html">我的活动</a></li>
+                    <li><a href="usercenter.html">我的任务</a></li>
+                    <li class="tc"><span><a href="">退出</a></span>|<span><a href="login.html">切换账号</a></span></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="search">
+        	<input name="" type="text">
+            <a href=""><img src="Assets/images/search.png" alt=""/></a>
+        </div>
+    </div>
+    <!--右侧悬浮框-->
+<div class="xfk">
+	<div class="x_search">
+    	<input name="" type="text">
+        <a href=""><img src="Assets/images/search.png" alt=""/></a>
+    </div>
+    <div class="x_main">
+    	<!--滑动门-->
+    	<div class="tabBox_t">
+            <div class="tabBox">
+              <ul class="tabNav">
+                <li class="now">好友</li>
+                <li>粉丝</li>
+                <li>黑名单</li>
+              </ul>
+              <div class="tabCont" style="display:block;">
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+              </div>
+              <div class="tabCont">
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+              </div>
+              <div class="tabCont">
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <dl class="clearfix">
+                	<dt>
+                        <a>
+                        	<span><img src="Assets/upload/pic2.png" alt=""/></span>
+                            <em>5</em>
+                            <div class="y37">&nbsp;</div>
+                        </a>
+                    </dt>
+                    <dd><a>Cru小可</a></dd>
+                    <dd>ID：489686</dd>
+                </dl>
+              </div>
+            </div>
+        </div>
+        <!--滑动门-->
+        <div class="xfk_cz"><span class="">&nbsp;</span></div>
+        <!--会话框-->
+        <div class="hhk">
+        	<div class="hhk_h">
+            	<dl class="clearfix">
+                	<dt><img src="Assets/upload/pic6.jpg" alt=""/></dt>
+                    <dd class="name">一然1213</dd>
+                    <dd>ID：489686</dd>
+                </dl>
+                <div class="hhk_hr">
+                	<a href="">关注</a>
+                    <a href="">拉黑</a>
+                    <span class="close_h"><img src="Assets/images/icon12.png" alt=""/></span>
+                </div>
+            </div>
+            <div class="hhk_m clearfix">
+            	<ul class="hhk_ml">
+                	<li>
+                    	<span><a href="">季晓东</a></span>
+                        <em><img src="Assets/images/close.png" alt=""/></em>
+                    </li>
+                    <li>
+                    	<span><a href="">馒头</a></span>
+                        <em><img src="Assets/images/close.png" alt=""/></em>
+                    </li>
+                    <li>
+                    	<span><a href="">天机木风</a></span>
+                        <em><img src="Assets/images/close.png" alt=""/></em>
+                    </li>
+                    <li class="now">
+                    	<span><a href="">凉拖</a></span>
+                        <em><img src="Assets/images/close.png" alt=""/></em>
+                    </li>
+                </ul>
+                <div class="hhk_mr">
+                    <ul class="huihua clearfix">
+                        <li class="zhu">
+                            <div class="time">2014-6-17 10:41</div>
+                            <div class="ctn">
+                                <span>最近在忙什么啊</span>
+                                <div class="icon">&nbsp;</div>
+                            </div>
+                        </li>
+                        <li class="ke">
+                            <div class="time">2014-6-17 10:43</div>
+                            <div class="ctn">
+                                <span>到处跑，刚从四川回来</span>
+                                <div class="icon">&nbsp;</div>
+                            </div>
+                        </li>
+                        <li class="zhu">
+                            <div class="time">2014-6-17 10:46</div>
+                            <div class="ctn">
+                                <span>有什么新货发来看看</span>
+                                <div class="icon">&nbsp;</div>
+                            </div>
+                        </li>
+                        <li class="ke">
+                            <div class="time">2014-6-17 10:43</div>
+                            <div class="ctn">
+                                <span><img src="Assets/upload/pic7.jpg" width="149" height="82" alt=""/></span>
+                                <div class="icon">&nbsp;</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tubiao">
+                    	<a href=""><img src="Assets/images/icon22.png" alt="" width="18" height="13"/></a>
+                        <a href=""><img src="Assets/images/icon23.png" width="16" height="16" alt=""/></a>
+                    </div>
+                    <div class="h_ctn">
+                        <textarea name="" cols="" rows=""></textarea>
+                    </div>
+                    <div class="send"><a href="">发送</a></div>
+                 </div>
+            </div>
+        </div>
+        <!--会话框-->
+    </div>
+</div>
+<!--右侧悬浮框-->
+</div>
+</div>
+<!--头部-->
+<div class="space_hx">&nbsp;</div>
+<!--个人主页-->
+<div class="user_c">
+	<div class="user_c1">
+    	<img src="Assets/upload/pic12.jpg" alt=""/>
+    </div>
+    <div class="user_c2">
+    	<dl class="clearfix">
+        	<dt>
+            	<img src="Assets/upload/pic11.jpg" alt=""/>
+                <div class="ua">
+                	<span>
+                    	<i>2765</i>
+                        <em>关注</em>
+                    </span>
+                    <span>
+                    	<i>2765</i>
+                        <em>粉丝</em>
+                    </span>
+                    <span class="zp">
+                    	<i>246</i>
+                        <em>作品</em>
+                    </span>
+                </div>
+            </dt>
+            <dd class="name">
+            	<span>xxliang</span>
+                <em>VIP5</em>
+            </dd>
+            <dd class="dz"><span>深圳</span></dd>
+            <dd>希望就在前方，只要一直向前</dd>
+            <dd class="xinx">
+            	<span class="man">&nbsp;</span>
+                <span>25级</span>
+                <span>ID:156489</span>
+                <span>
+                	<a href="" class="xh">
+                    	<img src="Assets/images/icon33.png" alt=""/>
+                        <em>深圳摄影协会</em>
+                    </a>
+                </span>
+                <a href="" class="xlblog"><em>新浪微博</em></a>
+                <a href="" class="txblog"><em>腾讯微博</em></a>
+            </dd>
+        </dl>
+        <a href="" class="liaotian"><img src="Assets/images/ta1.png" alt=""/></a>
+         <a href="" class="jiata"><img src="Assets/images/ta2.png" alt=""/></a>
+    </div> 
+    <div class="space_hx">&nbsp;</div>
+    <div class="user_c3">
+    	<!--主要内容-->
+        <div class="tabBox_tu">
+            <div class="tabBox_u">
+              <ul class="tabNav_u">
+                <li class="now">他的作品</li>
+                <li>他的收藏</li>
+                <li>他的活动</li>
+                <li>他的帖子</li>
+                <li>他的好友</li>
+              </ul>
+              <div class="tabCont_u" style="display:block;">
+              	<!--我的作品-->
+                <ul class="p2_m clearfix">
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>2014-5-12</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--分页-->
+                <div id="pages">
+                    <a href="" class="prev">&nbsp;</a>
+                    <span>1</span>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="" class="next">&nbsp;</a>
+                    <a href="" class="bg">尾页</a> 
+                </div>
+                <!--分页-->
+                <div class="box_jx">&nbsp;</div>
+                <!--我的作品-->
+              </div>
+              <div class="tabCont_u">
+                <!--我的收藏-->
+                <ul class="p2_m clearfix">
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="zp_detail.html"><img src="Assets/upload/pic4.jpg" alt=""/></a>
+                        <div class="des">
+                            <h3><a href="zp_detail.html">Lady in the pink</a></h3>
+                            <div class="des_f">
+                                <strong>张晶晶</strong>
+                                <span><img src="Assets/images/icon15.png" style="width:20px; height:13px;" alt=""/><em>1240</em></span>
+                                <span><img src="Assets/images/icon16.png" style="width:19px; height:17px;" alt=""/><em>157</em></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--分页-->
+                <div id="pages">
+                    <a href="" class="prev">&nbsp;</a>
+                    <span>1</span>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="" class="next">&nbsp;</a>
+                    <a href="" class="bg">尾页</a> 
+                </div>
+                <!--分页-->
+                <div class="box_jx">&nbsp;</div>
+                <!--我的收藏-->
+              </div>
+              <div class="tabCont_u">
+                <!--我的活动-->
+                <div class="tabBox_thd">
+                    <div class="tabBox_hd">
+                      <a href="create_hd.html" class="cjhd">创建活动</a>
+                      <ul class="tabNav_hd clearfix">
+                        <li class="now"><span>进行中的活动</span></li>
+                        <li><span>已完结的活动</span></li>
+                      </ul>
+                      <div class="tabCont_hd" style="display:block;">
+                      	  <!--进行中的活动-->
+                           <ul class="my_hd clearfix">
+                           	<li>
+                            	<a href="hd_detail2.html"><img src="Assets/upload/pic13.jpg" alt=""/></a>
+                                <h3><a href="hd_detail2.html">2014呼伦贝尔夏季摄影创作经典活动</a></h3>
+                                <div class="des">活动简介：人生路上，遇见善良，学会付出；遇见微笑，学会分享；遇见坎坷，学会勇敢。人生路艰难，但是如果你有笑对人生的能力</div>
+                                <ul class="detail clearfix">
+                                	<li>发起人：xxliang</li>
+                                    <li>时间：2014-6-8/15</li>
+                                    <li>人数：<span>48</span>/100</li>
+                                    <li>地点：呼伦贝尔</li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<a href="hd_detail2.html"><img src="Assets/upload/pic13.jpg" alt=""/></a>
+                                <h3><a href="hd_detail2.html">2014呼伦贝尔夏季摄影创作经典活动</a></h3>
+                                <div class="des">活动简介：人生路上，遇见善良，学会付出；遇见微笑，学会分享；遇见坎坷，学会勇敢。人生路艰难，但是如果你有笑对人生的能力</div>
+                                <ul class="detail clearfix">
+                                	<li>发起人：xxliang</li>
+                                    <li>时间：2014-6-8/15</li>
+                                    <li>人数：<span>48</span>/100</li>
+                                    <li>地点：呼伦贝尔</li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<a href="hd_detail2.html"><img src="Assets/upload/pic13.jpg" alt=""/></a>
+                                <h3><a href="hd_detail2.html">2014呼伦贝尔夏季摄影创作经典活动</a></h3>
+                                <div class="des">活动简介：人生路上，遇见善良，学会付出；遇见微笑，学会分享；遇见坎坷，学会勇敢。人生路艰难，但是如果你有笑对人生的能力</div>
+                                <ul class="detail clearfix">
+                                	<li>发起人：xxliang</li>
+                                    <li>时间：2014-6-8/15</li>
+                                    <li>人数：<span>48</span>/100</li>
+                                    <li>地点：呼伦贝尔</li>
+                                </ul>
+                            </li>
+                           </ul>
+                           <div class="box_jx">&nbsp;</div>
+                          <!--进行中的活动-->
+                      </div>
+                      <div class="tabCont_hd">
+                      	  <!--时间轴-->
+                          <div class="hd_time">
+                          	<ul class="clearfix">
+                            	<li class="nian">
+                                	<span>2104<em>&nbsp;</em></span>
+                                    <ul>
+                                    	<li class="xia"><em>&nbsp;</em>
+                                    	<li><a href="">2014</a></li>
+                                        <li><a href="">2013</a></li>
+                                        <li><a href="">2012</a></li>
+                                        <li><a href="">2011</a></li>
+                                        <li class="bg_f">&nbsp;</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                	<span><a href="">1月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">2月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">3月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li class="now">
+                                	<span><a href="">4月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">5月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">6月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">7月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">8月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">9月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">10月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">11月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <li>
+                                	<span><a href="">12月</a></span>
+                                    <i>&nbsp;</i>
+                                </li>
+                            </ul>
+                          </div>
+                          <!--时间轴-->
+                          <div class="space_hx">&nbsp;</div>
+                          <!--已完结的活动-->
+                          <ul class="my_hd clearfix">
+                           	<li>
+                            	<a href="hd_detail2.html"><img src="Assets/upload/pic13.jpg" alt=""/></a>
+                                <h3><a href="hd_detail2.html">2014呼伦贝尔夏季摄影创作经典活动</a></h3>
+                                <div class="des">活动简介：人生路上，遇见善良，学会付出；遇见微笑，学会分享；遇见坎坷，学会勇敢。人生路艰难，但是如果你有笑对人生的能力</div>
+                                <ul class="detail clearfix">
+                                	<li>发起人：xxliang</li>
+                                    <li>时间：2014-6-8/15</li>
+                                    <li>人数：<span>48</span>/100</li>
+                                    <li>地点：呼伦贝尔</li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<a href="hd_detail2.html"><img src="Assets/upload/pic13.jpg" alt=""/></a>
+                                <h3><a href="hd_detail2.html">2014呼伦贝尔夏季摄影创作经典活动</a></h3>
+                                <div class="des">活动简介：人生路上，遇见善良，学会付出；遇见微笑，学会分享；遇见坎坷，学会勇敢。人生路艰难，但是如果你有笑对人生的能力</div>
+                                <ul class="detail clearfix">
+                                	<li>发起人：xxliang</li>
+                                    <li>时间：2014-6-8/15</li>
+                                    <li>人数：<span>48</span>/100</li>
+                                    <li>地点：呼伦贝尔</li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<a href="hd_detail2.html"><img src="Assets/upload/pic13.jpg" alt=""/></a>
+                                <h3><a href="hd_detail2.html">2014呼伦贝尔夏季摄影创作经典活动</a></h3>
+                                <div class="des">活动简介：人生路上，遇见善良，学会付出；遇见微笑，学会分享；遇见坎坷，学会勇敢。人生路艰难，但是如果你有笑对人生的能力</div>
+                                <ul class="detail clearfix">
+                                	<li>发起人：xxliang</li>
+                                    <li>时间：2014-6-8/15</li>
+                                    <li>人数：<span>48</span>/100</li>
+                                    <li>地点：呼伦贝尔</li>
+                                </ul>
+                            </li>
+                           </ul>
+                           <!--分页-->
+                            <div id="pages">
+                                <a href="" class="prev">&nbsp;</a>
+                                <span>1</span>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="">6</a>
+                                <a href="" class="next">&nbsp;</a>
+                                <a href="" class="bg">尾页</a> 
+                            </div>
+                            <!--分页-->
+                           <div class="box_jx">&nbsp;</div>
+                          <!--已完结的活动-->
+                      </div>
+                     </div>
+                 </div>
+                <!--我的活动-->
+              </div>
+              <div class="tabCont_u">
+                <!--我的帖子-->
+                <div class="tabBox_ttz">
+                    <div class="tabBox_tz">
+                      <ul class="tabNav_tz clearfix">
+                        <li class="now"><span>我的帖子</span></li>
+                        <li><span>我的回复</span></li>
+                        <li><span>回复我的</span></li>
+                      </ul>
+                      <div class="tabCont_tz" style="display:block;">
+                        <!--我的帖子-->
+                        <ul class="my_tz">
+                        	<li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li><li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>发表</span>
+                                <span class="title"><a href="lt_detail.html">逆光摄影的几个小技巧，让你轻松拍出高大上的大片</a></span>
+                                <div class="tz_listr">
+                                	<span>浏览量：5468</span>
+                                    <span>回复：158</span> 
+                                </div>
+                            </li>
+                        </ul>
+                        <!--分页-->
+                        <div id="pages">
+                            <a href="" class="prev">&nbsp;</a>
+                            <span>1</span>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="" class="next">&nbsp;</a>
+                            <a href="" class="bg">尾页</a> 
+                        </div>
+                        <!--分页-->
+                        <div class="box_jx">&nbsp;</div>
+                        <!--我的帖子-->
+                      </div>
+                      <div class="tabCont_tz">
+                        <!--我的回复-->
+                        <ul class="my_tz">
+                        	<li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>回复</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>回复</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>回复</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>回复</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span>回复</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--分页-->
+                        <div id="pages">
+                            <a href="" class="prev">&nbsp;</a>
+                            <span>1</span>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="" class="next">&nbsp;</a>
+                            <a href="" class="bg">尾页</a> 
+                        </div>
+                        <!--分页-->
+                        <div class="box_jx">&nbsp;</div>
+                        <!--我的回复-->
+                      </div>
+                      <div class="tabCont_tz">
+                        <!--回复我的-->
+                        <ul class="my_tz">
+                        	<li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span><a href="usercenter_ta.html">宝宝猪</a></span>
+                                <span>回复我</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span><a href="usercenter_ta.html">宝宝猪</a></span>
+                                <span>回复我</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span><a href="usercenter_ta.html">宝宝猪</a></span>
+                                <span>回复我</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span><a href="usercenter_ta.html">宝宝猪</a></span>
+                                <span>回复我</span>
+                                <span class="title"><a href="">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span><a href="usercenter_ta.html">宝宝猪</a></span>
+                                <span>回复我</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="day">6月27日</span>
+                                <span><a href="usercenter_ta.html">宝宝猪</a></span>
+                                <span>回复我</span>
+                                <span class="title"><a href="lt_detail.html">"超赞的乙组摄影，真是美轮美奂"</a></span>
+                                <div class="huifu">
+                                	<div class="h_ctn">游西湖外拍活动的成果，跟大家分享</div>
+                                    <div class="tz_listr">
+                                        <span>浏览量：5468</span>
+                                        <span>回复：158</span> 
+                                    </div>
+                                    <span class="icon_s">&nbsp;</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--分页-->
+                        <div id="pages">
+                            <a href="" class="prev">&nbsp;</a>
+                            <span>1</span>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="" class="next">&nbsp;</a>
+                            <a href="" class="bg">尾页</a> 
+                        </div>
+                        <!--分页-->
+                        <div class="box_jx">&nbsp;</div>
+                        <!--回复我的-->
+                      </div>
+                    </div>
+                </div>
+                <!--我的帖子-->
+              </div>
+              <div class="tabCont_u">
+                <!--我的好友-->
+                <ul class="friend clearfix"> 
+                	<li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    	<div class="name"><a href="usercenter_ta.html">小小小渔童</a></div>
+                        <div class="tou">
+                        	<a href="usercenter_ta.html"><div class="y161">&nbsp;</div>
+                            </a>
+                        	<a href="usercenter_ta.html"><img src="Assets/upload/pic19.jpg" alt=""/></a>
+                        </div>
+                        <ul class="xx clearfix"> 
+                        	<li>
+                            	关注
+                                <span>456</span>
+                            </li>
+                            <li>
+                            	粉丝
+                                <span>15.8万</span>
+                            </li>
+                            <li>
+                            	作品
+                                <span>156</span>
+                            </li>
+                            <li class="dj">
+                            	等级
+                                <span>25</span>
+                            </li>
+                        </ul>
+                        <ul class="zp clearfix">
+                        	<li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                            <li><a href="zp_detail.html"><img src="Assets/upload/pic20.jpg" alt=""/></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--分页-->
+                <div id="pages">
+                    <a href="" class="prev">&nbsp;</a>
+                    <span>1</span>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="" class="next">&nbsp;</a>
+                    <a href="" class="bg">尾页</a> 
+                </div>
+                <!--分页-->
+                <div class="box_jx">&nbsp;</div>
+                <!--我的好友-->
+              </div>
+            </div>
+        </div>
+        <!--主要内容-->
+    </div>
+</div>
+<!--个人主页-->
+<div class="space_hx">&nbsp;</div>
+<!--底部-->
+<div class="footer_bg">
+	<div class="foot_m clearfix">
+    	<ul>
+        	<li><span>关于</span></li>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">公司荣誉</a></li>
+            <li><a href="">产品介绍</a></li>
+        </ul>
+        <ul>
+        	<li><span>新手入门</span></li>
+            <li><a href="">用户等级说明</a></li>
+            <li><a href="">用户权益守门</a></li>
+            <li><a href="">常见问题</a></li>
+        </ul>
+        <ul class="pro">
+        	<li><span>产品下载</span></li>
+        	<li>
+            	<a href=""><img src="Assets/images/f1.png" width="59" height="68" alt=""/></a>
+                <a href=""><img src="Assets/images/f2.png" width="70" height="70" alt=""/></a>
+                <a href=""><img src="Assets/images/f3.png" width="60" height="60" alt=""/></a>
+            </li>
+        </ul>
+        <ul class="contact">
+        	<li><span>联系我们</span></li>
+            <li><b>XXX</b></li>
+        </ul>
+        <ul class="bq">
+        	<li><span>版权信息</span></li>
+            <li>XXX信息技术</li>
+            <li>&copy;2020</li>
+            <li>All right Reserved |</li>
+            <li>苏ICP备XXX号-2 | <a href="">站长统计</a></li>
+        </ul>
+        <!--返回顶部-->
+        <div class="backtop">
+            <a id="gotop" href="javascript:void(0)"><img src="Assets/images/top.png" alt=""/></a>
+        </div>
+        <!--返回顶部-->
+    </div>
+</div>
+<!--底部-->
+
+<script language="javascript">
+$(function(){
+	//返回顶部
+	$('#gotop').click(function(){
+		$('body,html').animate({scrollTop:0},500);	
+	});
+	
+	//右侧悬浮框
+	$(".tabBox .tabCont:first").css("display","block");
+	$(".tabBox .tabNav li").mouseover(function(){
+		$(this).siblings("li").removeClass("now");
+		$(this).addClass("now");
+		$(this).parents(".tabBox").find(".tabCont").css("display","none");
+		var i=$(this).index();
+		$(this).parents(".tabBox").find(".tabCont:eq("+i+")").css("display","block");
+	});
+	
+	//右边悬浮框
+	$('.tabNav').hide();
+	$('.x_search input').hide();
+	$('.xfk_cz span').click(function(){
+		$(this).toggleClass("sq_h");
+		$('.xfk').toggleClass("xfk_d");
+		$('.xfk_cz').toggleClass("xfk_cz_d");
+		$('.x_search').toggleClass("x_search_d");
+		$('.tabNav').toggle();
+		$('.x_search input').toggle();
+		
+	});
+	
+	//会话框
+	$('.hhk').hide();
+	$('.tabCont dl').click(function(){
+		$('.hhk').show();	
+	});
+	
+	$('.close_h').click(function(){
+		$('.hhk').hide();	
+	});
+});
+</script>
+
+</body>
+</html>

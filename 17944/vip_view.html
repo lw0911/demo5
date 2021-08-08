@@ -1,0 +1,246 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>会员详情</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="formzone">
+        <div class="font-weight">
+            会员详情
+        </div>
+        <div class="tablezone">
+
+            <table width="100%" cellspacing="0" cellpadding="3" border="0" align="center">
+
+                <tbody>
+                    <tr>
+                        <td colspan="4" height="12"></td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">登录账号</td>
+                        <td width="400">
+
+                            <table width="100%" cellspacing="1" cellpadding="1" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td><input readonly="" class="input" size="13" name="u" value="xiaomi" type="text" /></td>
+                                        <td>网名昵称</td>
+                                        <td><input name="pname" class="input" id="pname" value="小米" size="15" type="text" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td width="90" align="center">登录密码</td>
+                        <td>
+                            <input class="input" size="18" name="password" value="******" type="password" />
+                            <input name="ResetPass" value="yes" onclick="regform.password.value='';regform.password.focus();" type="checkbox" />
+                            重设密码
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="85" align="center">公司名称</td>
+                        <td><input name="company" class="input" id="company" value="" size="50" style="width:200px;" type="text" /></td>
+                        <td width="90" align="center">会员姓名</td>
+                        <td>
+                            <input name="name" class="input" id="name" value="小米" size="12" type="text" />
+                            &nbsp;
+                            <input name="sex" value="1" type="radio" />
+                            先生       <input name="sex" value="2" checked="" type="radio" />
+                            女士
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">通信地址</td>
+                        <td><input name="addr" class="input" id="addr" value="" size="50" style="width:200px;" type="text" /></td>
+                        <td width="90" align="center">所在区域</td>
+                        <td>
+                            <script language="javascript" src="js/zone.js"></script>
+                            <script language="javascript">
+                                pList.add(new province('南京', '1'));
+                                pList.addAt('0', new area('ALL', '1'));
+                                pList.add(new province('上海', '2'));
+                                pList.addAt('1', new area('ALL', '2'));
+                                pList.add(new province('天津', '3'));
+                                pList.addAt('2', new area('ALL', '3'));
+                                pList.add(new province('重庆', '4'));
+                                pList.addAt('3', new area('ALL', '4'));
+                                pList.add(new province('浙江', '5'));
+                                pList.addAt('4', new area('杭州', '8'));
+                                pList.addAt('4', new area('嘉兴', '9'));
+                                pList.addAt('4', new area('宁波', '21'));
+                                pList.addAt('4', new area('湖州', '22'));
+                                pList.addAt('4', new area('温州', '23'));
+                                pList.addAt('4', new area('台州', '24'));
+                                pList.addAt('4', new area('金华', '25'));
+                                pList.addAt('4', new area('舟山', '26'));
+                                pList.add(new province('江苏', '6'));
+                                pList.addAt('5', new area('南京', '10'));
+                                pList.addAt('5', new area('苏州', '11'));
+                                pList.add(new province('广东', '7'));
+                                pList.addAt('6', new area('ALL', '7'));
+                            </script>
+
+
+                            <select onkeyup="if(window.event.keyCode==13) document.regform.zoneid.focus();" onchange="provinceSelChange(regform.zoneid,regform.Province.value,'1')" name="Province">
+                                <script language="javascript">
+
+                                    document.write(pList.getOptionString('0'));
+                                </script>
+                                <option value="0" selected="">南京</option>
+                                <option value="1">上海</option>
+                                <option value="2">天津</option>
+                                <option value="3">重庆</option>
+                                <option value="4">浙江</option>
+                                <option value="5">江苏</option>
+                                <option value="6">
+                                    广东
+
+                                </option>
+                            </select>
+
+                            <div id="zonediv" style="position: absolute; width: 150px; height: 26px; z-index: 1; visibility: hidden;">
+
+                                <select onkeyup="if(window.event.keyCode==13) document.regform.regCardNum.focus();" name="zoneid">
+
+                                    <script language="javascript">
+                                        document.write(pList.getOptionAreasString(regform.Province.value, regform.zoneid, '1', 1));
+                                    </script>
+                                    <option value="1" selected="">ALL</option>
+                                </select>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="85" height="26" align="center">电话号码</td>
+                        <td>
+                            <input name="tel" class="input" id="tel" value="" size="50" style="width:200px;" type="text" />
+
+
+                        </td>
+                        <td width="90" align="center">邮政编码</td>
+                        <td><input name="postcode" class="input" id="postcode" value="" size="12" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">手机号码</td>
+                        <td><input name="mov" class="input" id="mov" value="" size="50" style="width:200px;" type="text" /></td>
+                        <td width="90" align="center">主页/博客</td>
+                        <td><input name="url" class="input" id="url" value="" size="39" type="text" style="width:200px;" /></td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">电子邮件</td>
+                        <td><input name="email" class="input" id="email" value="" size="50" style="width:200px;" type="text" /></td>
+                        <td width="90" align="center">出生年月</td>
+                        <td>
+                            <input class="input" size="4" name="birth0" value="0" type="text" />
+                            年       <input class="input" size="2" name="birth1" value="" type="text" />
+                            月       <input class="input" size="2" name="birth2" value="" type="text" />
+                            日
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">QQ号码</td>
+                        <td>
+                            <span class="title">
+                                <input name="qq" class="input" id="qq" value="" size="50" style="width:200px;" type="text" />
+                            </span>
+                        </td>
+                        <td width="90" align="center">MSN帐号</td>
+                        <td><input name="msn" class="input" id="msn" value="" size="39" type="text" style="width:200px;" /></td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">身份证件</td>
+                        <td>
+                            <input name="passtype" class="input" id="passtype" value="" size="10" type="text" style="width:200px;" />
+                            <span class="title">
+                                <input name="passcode" class="input" id="passcode" value="" size="32" type="text" style="width:200px;" />
+                            </span>
+                        </td>
+                        <td width="90" align="center">推荐标签</td>
+                        <td>
+                            <input name="tags[]" class="input" id="tags" value="" size="7" type="text" />
+                            <input name="tags[]" class="input" id="tags" value="" size="7" type="text" />
+                            <input name="tags[]" class="input" id="tags" value="" size="7" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="85" align="center">个人简介</td>
+                        <td valign="top">
+
+                            <textarea class="textarea" name="bz" cols="37" rows="8">小米大米米粒</textarea>
+                        </td>
+                        <td colspan="2" valign="top">
+                            <table width="100%" cellspacing="1" cellpadding="5" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="78" align="center">实名认证</td>
+                                        <td>
+                                            <select name="rz">
+                                                <option value="0">未认证</option>
+                                                <option value="1" selected="">已认证</option>
+                                            </select>
+                                            <span class="adminsubmit">
+                                                <input name="oldrz" id="oldrz" value="1" type="hidden" />
+                                                &nbsp; 业务员
+                                                <select name="salesname" id="salesname">
+                                                    <option value="" selected="">未指定</option>
+                                                    <option value="管理员">管理员</option>
+                                                    <option value="" selected=""></option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="78" align="center">到期时间</td>
+                                        <td>
+                                            <select name="sayexp" onchange="checkexp(this.form.sayexp.options[this.form.sayexp.selectedIndex].value)">
+                                                <option value="0" selected="">不限</option>
+                                                <option value="1">限制</option>
+                                            </select>
+                                            <div id="ttt" style="position: absolute; width: 200px; height: 26px; z-index: 1; visibility: hidden;">
+                                                <select name="yy"><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option></select> 年<select name="mm"><option value="01" selected="">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select> 月<select name="dd"><option value="01" selected="">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> 日<input name="ho" value="7" type="hidden" /><input name="mi" value="0" type="hidden" /><input name="se" value="0" type="hidden" />
+                                            </div>
+                                            <script>checkexp('0')</script>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="78" align="center">注册时间</td>
+                                        <td><span class="adminsubmit">2013-9-15 20:51:20 [221.218.106.128] </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="78" align="center">末次登录</td>
+                                        <td><span class="adminsubmit">2013-9-16 17:35:13 [123.184.92.114] </span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="button" class="btn btn-default" value="提交" />
+    </div>
+
+
+</body>
+</html>

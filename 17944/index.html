@@ -1,0 +1,343 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>XXX</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- layout CSS -->
+    <link href="css/layout.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Dialog -->
+    <link href="lib/artDialog/skins/default.css" rel="stylesheet" type="text/css" />
+    <script src="lib/artDialog/artDialog.source.js" type="text/javascript"></script>
+    <script src="lib/artDialog/iframeTools.source.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <header class="dark_grey">
+        <!-- Header start -->
+        <div class="top">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    <img src="images/logo_01.png" class="logo-img" />
+                </a>
+            </div>
+            <div class="top-right">
+                <div class="top-time">
+                    <i class="ti-panel"></i>
+                    <span class="tab-time">2019-03-05&nbsp;&nbsp;12:24:26</span>&nbsp;&nbsp;<span class="tab-line">|</span>&nbsp;&nbsp;
+                    <span class="tab-city">南京</span>&nbsp;&nbsp;
+                    <span class="tab-tianqi">晴天 36</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="top-user">
+                    <div class="my-select dk-select user-select">
+                        <div class="dk-selected" tabindex="0">
+                            <img src="images/index_19.png" class="user-header" />
+                            <span class="substr" title="admin">admin</span>
+                        </div>
+                        <ul class="dk-select-options">
+                            <li class="dk-option">
+                                <a class="divPersonalInfo">修改密码</a>
+                            </li>
+                            <li class="dk-option">
+                                <a href="login.html" target="_self">退出管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top-home">
+                    <span class="tab-home glyphicon glyphicon-home"></span>
+                    <span class="tab-home-name">网站首页</span>
+                </div>
+                <div class="top-exit">
+                    <span class="tab-exit glyphicon glyphicon-log-out"></span>
+                    <span class="tab-exit-name">退出管理</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="has-scrollbar">
+                <div class="sidebar-wrapper">
+                    <div class="navbutton" id="navbutton-collapsed">
+                        <a href="#" class="simple-text">
+                            <!--<img src="images/menu_zd.png" />-->
+                            <i class="glyphicon glyphicon-step-backward"></i>
+                        </a>
+                    </div>
+                    <ul class="nav-ul">
+                        <li class="nav-li-1 active">
+                            <a href="javascript:ClickShow(1);"><i class="glyphicon glyphicon-home" title="首页"></i><span class="nav-title">首&nbsp;&nbsp;&nbsp;&nbsp;页 </span></a>
+                            <i class="ti-jt glyphicon glyphicon-menu-up"></i>
+                        </li>
+                        <li class="nav-li-2"><a href="javascript:ClickShow(2);" iframeurl="system_service.html"><i class="glyphicon glyphicon-th-large" title="系统"></i><span class="nav-title">系&nbsp;&nbsp;&nbsp;&nbsp;统 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-3"><a href="javascript:ClickShow(3);" iframeurl="set_adminList.html"><i class="glyphicon glyphicon-cog" title="设置"></i><span class="nav-title">设&nbsp;&nbsp;&nbsp;&nbsp;置 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-4"><a href="javascript:ClickShow(4);" iframeurl="mobile_menu.html"><i class="glyphicon glyphicon-phone" title="移动端"></i><span class="nav-title">移动端 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-5"><a href="javascript:ClickShow(5);" iframeurl="vip_form.html"><i class="glyphicon glyphicon-user" title="会员"></i><span class="nav-title">会&nbsp;&nbsp;&nbsp;&nbsp;员 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-6"><a href="javascript:ClickShow(6);" iframeurl="menu_categroy.html"><i class="glyphicon glyphicon-menu-hamburger" title="菜单"></i><span class="nav-title">菜&nbsp;&nbsp;&nbsp;&nbsp;单 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-7"><a href="javascript:ClickShow(7);" iframeurl="web_list.html"><i class="glyphicon glyphicon-list-alt" title="网页"></i><span class="nav-title">网&nbsp;&nbsp;&nbsp;&nbsp;页 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-8"><a href="javascript:ClickShow(8);" iframeurl="news_list.html"><i class="glyphicon glyphicon-th-list" title="文章"></i><span class="nav-title">文&nbsp;&nbsp;&nbsp;&nbsp;章 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-9"><a href="javascript:ClickShow(9);" iframeurl="product_list.html"><i class="glyphicon glyphicon-shopping-cart" title="产品"></i><span class="nav-title">产&nbsp;&nbsp;&nbsp;&nbsp;品 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-10"><a href="javascript:ClickShow(10);" iframeurl="pictrue_list.html"><i class="glyphicon glyphicon-picture" title="图片"></i><span class="nav-title">图&nbsp;&nbsp;&nbsp;&nbsp;片 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-11"><a href="javascript:ClickShow(11);" iframeurl="demo_list.html"><i class="glyphicon glyphicon-folder-open" title="案例"></i><span class="nav-title">案&nbsp;&nbsp;&nbsp;&nbsp;例 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-12"><a href="javascript:ClickShow(12);" iframeurl="comment_list.html"><i class="glyphicon glyphicon-edit" title="评论"></i><span class="nav-title">评&nbsp;&nbsp;&nbsp;&nbsp;论 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-13"><a href="javascript:ClickShow(13);" iframeurl="feedback_list.html"><i class="glyphicon glyphicon-envelope" title="反馈"></i><span class="nav-title">反&nbsp;&nbsp;&nbsp;&nbsp;馈 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-14"><a href="javascript:ClickShow(14);" iframeurl="download_list.html"><i class="glyphicon glyphicon-download" title="下载"></i><span class="nav-title">下&nbsp;&nbsp;&nbsp;&nbsp;载 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-15"><a href="javascript:ClickShow(15);" iframeurl="recruit_list.html"><i class="glyphicon glyphicon-eye-open" title="招聘"></i><span class="nav-title">招&nbsp;&nbsp;&nbsp;&nbsp;聘 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-16"><a href="javascript:ClickShow(16);" iframeurl="vedio_list.html"><i class="glyphicon glyphicon-play-circle" title="视频"></i><span class="nav-title">视&nbsp;&nbsp;&nbsp;&nbsp;频 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-17"><a href="javascript:ClickShow(17);" iframeurl="poster_biaozhi.html"><i class="glyphicon glyphicon-bullhorn" title="广告"></i><span class="nav-title">广&nbsp;&nbsp;&nbsp;&nbsp;告 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-18"><a href="javascript:ClickShow(18);" iframeurl="tool_code1.html"><i class="glyphicon glyphicon-wrench" title="工具"></i><span class="nav-title">工&nbsp;&nbsp;&nbsp;&nbsp;具 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-19"><a href="javascript:ClickShow(19);" iframeurl="depot_dustbin.html"><i class="glyphicon glyphicon-trash" title="仓库"></i><span class="nav-title">仓&nbsp;&nbsp;&nbsp;&nbsp;库 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                        <li class="nav-li-20"><a href="javascript:ClickShow(20);" iframeurl="development_1.html"><i class="glyphicon glyphicon-cd" title="研发"></i><span class="nav-title">研&nbsp;&nbsp;&nbsp;&nbsp;发 </span></a><i class="ti-jt glyphicon glyphicon-menu-up"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left-sidebar">
+                <div class="user_tab user_tab_left user_tab_left_show" id="user_tab_left_1">
+                    <h3 class="user_tab-title">首&nbsp;&nbsp;&nbsp;&nbsp;页 <span class="spanzk">+</span></h3>
+                    <ul>
+                        <a href="#" target="table" iframeurl="default.html"><li class="tab_onclick"><span>后台首页</span></li></a>
+                        <a href="#" target="table" iframeurl="default.html"><li><span>退出后台</span></li></a>
+                        <a href="#" target="table" iframeurl="default.html"><li><span>前台首页</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_2">
+                    <h3 class="user_tab-title">系 统 <span class="spanzk">+</span></h3>
+                    <ul>
+                        <a href="#" target="table" iframeurl="system_service.html"><li><span>服务器</span></li></a>
+                        <a href="#" target="table" iframeurl="system_web.html"><li><span>网站信息</span></li></a>
+                        <a href="#" target="table" iframeurl="system_logininfo.html"><li><span>登录记录</span></li></a>
+                        <a href="#" target="table"><li><span></span></li></a>
+                        <a href="#" target="table" iframeurl="system_update.html"><li><span>系统升级</span></li></a>
+                        <a href="#" target="table" iframeurl="system_data.html"><li><span>数据备份</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_3">
+                    <h3 class="user_tab-title">设 置 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="set_adminList.html"><li><span>管理员列表</span></li></a>
+                        <a href="#" target="table" iframeurl="set_adminAdd.html"><li><span>增加管理员</span></li></a>
+                        <a href="#" target="table" iframeurl="set_adminPassword.html"><li><span>修改密码</span></li></a>
+                        <a href="#" target="table"><li><span></span></li></a>
+                        <a href="#" target="table" iframeurl="set_sigleset.html"><li><span>基本设置</span></li></a>
+                        <a href="#" target="table" iframeurl="set_top.html"><li><span>顶部内容</span></li></a>
+                        <a href="#" target="table" iframeurl="set_foot.html"><li><span>底部内容</span></li></a>
+                        <a href="#" target="table" iframeurl="set_custom.html"><li><span>自定内容</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_4">
+                    <h3 class="user_tab-title">移动端 <span class="spanzk">+</span></h3>
+                    <ul>
+                        <a href="#" target="table" iframeurl="mobile_menu.html"><li><span>菜单设置</span></li></a>
+                        <a href="#" target="table" iframeurl="mobile_logo.html"><li><span>Logo设置</span></li></a>
+                        <a href="#" target="table" iframeurl="mobile_foot.html"><li><span>底部信息</span></li></a>
+                        <a href="#" target="table" iframeurl="mobile_nav.html"><li><span>快捷导航</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_5">
+                    <h3 class="user_tab-title">会 员 <span class="spanzk">+</span></h3>
+                    <ul>
+                        <a href="#" target="table" iframeurl="vip_form.html"><li><span>会员管理</span></li></a>
+                        <a href="#" target="table" iframeurl="vip_type.html"><li><span>会员类型</span></li></a>
+                        <a href="#" target="table" iframeurl="vip_poster.html"><li><span>会员公告</span></li></a>
+                        <a href="#" target="table" iframeurl="vip_add.html"><li><span>发布公告</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_6">
+                    <h3 class="user_tab-title">菜 单 <span class="spanzk">+</span></h3>
+                    <ul>
+                        <a href="#" target="table" iframeurl="menu_categroy.html"><li><span>菜单分类</span></li></a>
+                        <a href="#" target="table" iframeurl="menu_main.html"><li><span>主菜单</span></li></a>
+                        <a href="#" target="table" iframeurl="menu_top.html"><li><span>顶部菜单</span></li></a>
+                        <a href="#" target="table" iframeurl="menu_foot.html"><li><span>底部菜单</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_7">
+                    <h3 class="user_tab-title">网 页 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="web_list.html"><li><span>网页管理</span></li></a>
+                        <a href="#" target="table" iframeurl="web_categroy.html"><li><span>网页分类</span></li></a>
+                        <a href="#" target="table" iframeurl="web_add.html"><li><span>增加网页</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_8">
+                    <h3 class="user_tab-title">文 章 <span class="spanzk">+</span></h3>
+                    <ul>
+                        <a href="#" target="table" iframeurl="news_list.html"><li><span>文章管理</span></li></a>
+                        <a href="#" target="table" iframeurl="news_categroy.html"><li><span>文章分类</span></li></a>
+                        <a href="#" target="table" iframeurl="news_add.html"><li><span>发布文章</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_9">
+                    <h3 class="user_tab-title">产 品 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="product_list.html"><li><span>产品管理</span></li></a>
+                        <a href="#" target="table" iframeurl="product_categroy.html"><li><span>产品分类</span></li></a>
+                        <a href="#" target="table" iframeurl="product_add.html"><li><span>发布产品</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_10">
+                    <h3 class="user_tab-title">图 片 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="pictrue_list.html"><li><span>图片管理</span></li></a>
+                        <a href="#" target="table" iframeurl="pictrue_categroy.html"><li><span>图片分类</span></li></a>
+                        <a href="#" target="table" iframeurl="pictrue_add.html"><li><span>发布图片</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_11">
+                    <h3 class="user_tab-title">案 例 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="demo_list.html"><li><span>案例管理</span></li></a>
+                        <a href="#" target="table" iframeurl="demo_categroy.html"><li><span>案例分类</span></li></a>
+                        <a href="#" target="table" iframeurl="demo_add.html"><li><span>发布案例</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_12">
+                    <h3 class="user_tab-title">评 论 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="comment_list.html"><li><span>评论管理</span></li></a>
+                        <a href="#" target="table" iframeurl="comment_set.html"><li><span>评论设置</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_13">
+                    <h3 class="user_tab-title">反 馈 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="feedback_list.html"><li><span>反馈管理</span></li></a>
+                        <a href="#" target="table" iframeurl="feedback_form.html"><li><span>表单管理</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_14">
+                    <h3 class="user_tab-title">下 载 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="download_list.html"><li><span>下载管理</span></li></a>
+                        <a href="#" target="table" iframeurl="download_categroy.html"><li><span>下载分类</span></li></a>
+                        <a href="#" target="table" iframeurl="download_add.html"><li><span>发布下载</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_15">
+                    <h3 class="user_tab-title">招 聘 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="recruit_list.html"><li><span>应聘列表</span></li></a>
+                        <a href="#" target="table" iframeurl="recruit_job.html"><li><span>招聘职位</span></li></a>
+                        <a href="#" target="table" iframeurl="recruit_add.html"><li><span>发布职位</span></li></a>
+                        <a href="#" target="table" iframeurl="recruit_form.html"><li><span>表单管理</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_16">
+                    <h3 class="user_tab-title">视 频 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="vedio_list.html"><li><span>视频管理</span></li></a>
+                        <a href="#" target="table" iframeurl="vedio_categroy.html"><li><span>视频分类</span></li></a>
+                        <a href="#" target="table" iframeurl="vedio_add.html"><li><span>发布视频</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_17">
+                    <h3 class="user_tab-title">广 告 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="poster_biaozhi.html"><li><span>网站标志</span></li></a>
+                        <a href="#" target="table" iframeurl="poster_banner.html"><li><span>轮播图片</span></li></a>
+                        <a href="#" target="table" iframeurl="poster_foot.html"><li><span>底部图片</span></li></a>
+                        <a href="#" target="table" iframeurl="poster_web.html"><li><span>页面图片</span></li></a>
+                        <a href="#" target="table" iframeurl="poster_href.html"><li><span>友情链接</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_18">
+                    <h3 class="user_tab-title">工 具 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="tool_code1.html"><li><span>统计代码</span></li></a>
+                        <a href="#" target="table" iframeurl="tool_code2.html"><li><span>客服代码</span></li></a>
+                        <a href="#" target="table" iframeurl="tool_code3.html"><li><span>QQ 代码</span></li></a>
+                        <a href="#" target="table" iframeurl="tool_code4.html"><li><span>分享代码</span></li></a>
+                        <a href="#" target="table" iframeurl="tool_code5.html"><li><span>其 它</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_19">
+                    <h3 class="user_tab-title">仓 库 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="depot_dustbin.html"><li><span>回收站</span></li></a>
+                        <a href="#" target="table" iframeurl="depot_drafts.html"><li><span>草稿箱</span></li></a>
+                    </ul>
+                </div>
+                <div class="user_tab user_tab_left" id="user_tab_left_20">
+                    <h3 class="user_tab-title">研 发 <span class="spanzk">+</span></h3>
+
+                    <ul>
+                        <a href="#" target="table" iframeurl="development_1.html"><li><span>使用协议</span></li></a>
+                        <a href="#" target="table" iframeurl="development_2.html"><li><span>版权信息</span></li></a>
+                        <a href="#" target="table" iframeurl="development_3.html"><li><span>联系XXX</span></li></a>
+                        <a href="#" target="table" iframeurl="development_4.html"><li><span>帮助中心</span></li></a>
+                        <a href="#" target="table" iframeurl="development_5.html"><li><span>通知活动</span></li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="icon_zk" id="icon-zk-collapsed"><i class="glyphicon glyphicon-triangle-left"></i></div>
+            <!--<div class="nano-pane"><div class="nano-slider"></div></div>-->
+
+        </div>
+        <div id="content" class="no-sidebar">
+            <div class="inner_content">
+                <div class="user_iframe">
+                    <div class="user_iframe-content">
+                        <div class="daohanglink">
+                            <span class="tab tab-01 current">
+                                <span class="tab-title tab-title-first">后台首页</span><span class="tab-close"></span><span class="tab-line">|</span>
+                            </span>
+                            <span class="tab tab-02">
+                                <span class="tab-title">密码修改</span><span class="tab-close">×</span><span class="tab-line">|</span>
+                            </span>
+                            <span class="tab tab-03">
+                                <span class="tab-title">设置</span><span class="tab-close">×</span><span class="tab-line">|</span>
+                            </span>
+                        </div>
+
+                        <!--内容页开始-->
+                        <div id="iframeDiv">
+                            <iframe id="framecon" src="default.html" name="con" style="width:100%;height:100%; border:none;" frameborder="0" onload="SetIframeHeight(this);">IE</iframe>
+                        </div>
+                        <!--/内容页结束-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div style="padding-left:25%;padding-top:50%;">
+                <h3>
+                    右侧导航<br />
+                    内容未定...
+                </h3>
+            </div>
+        </div>
+        <div class="right-sidebar-toggle">
+            <i class="fa-spin glyphicon glyphicon-backward"></i>
+        </div>
+    </div>
+    
+</body>
+</html>

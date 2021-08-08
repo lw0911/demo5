@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>友情链接</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Copyright 2017-2019 南京XXX科技有限公司 版权所有" />
+    <meta name="keywords" content="hanzhuo" />
+    <meta name="author" content="hanzhuo" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />-->
+    <!-- Styles -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="js/layout.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="formzone">
+        <div class="font-weight">
+            友情链接分组
+        </div>
+        <div class="tablezone">
+            <div>
+                <input type="radio" name="lb" value="0" checked="checked" />默认友情链接&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="lb" value="1" />合作伙伴链接&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="lb" value="2" />客户图片链接&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div>
+                <input type="text" class="input" value="" placeholder="输入分组名称" style="width: 350px; height:30px;line-height:30px; margin: 10px 0px;" />
+            </div>
+            <div>
+                <input type="button" class="btn btn-default" value="+新增分组" />
+            </div>
+        </div>
+    </div>
+    <div class="formzone">
+        <div class="font-weight">
+            友情链接管理
+        </div>
+        <div class="tablezone">
+
+            <table width="100%" cellspacing="0" cellpadding="3" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td height="35" colspan="6">
+                            <input type="radio" name="lb" value="0" checked="checked" />文字链接&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="lb" value="1" />图片链接&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="innerbiaoti" width="54" height="24"> 序号</td>
+                        <td class="innerbiaoti" width="150">链接名称</td>
+                        <td class="innerbiaoti" height="24"> 链接网址</td>
+                        <td class="innerbiaoti" height="24"> 图片</td>
+                        <td class="innerbiaoti" width="60" height="24"> 修改</td>
+                        <td class="innerbiaoti" width="60" height="24"> 删除</td>
+                    </tr>
+
+                    <form action="link.php" method="post"></form>
+                    <tr class="list">
+                        <td width="54" height="45">
+
+                            <input name="xuhao" size="2" value="0" class="input" type="text" />
+
+                        </td>
+                        <td width="150">
+                            <input name="name" size="16" value="hanzhuo" maxlength="200" class="input" type="text" />
+                        </td>
+                        <td height="45">
+
+                            <input name="url" size="30" value="http://www.bjhanzhuo.com" maxlength="200" class="input" type="text" />
+
+                        </td>
+                        <td height="45">  </td>
+                        <td width="60" height="45">
+                            <div align="center">
+                                <input name="step" value="modify" type="hidden" />
+                                <input name="groupid" value="1" type="hidden" />
+                                <input name="id" value="71" type="hidden" />
+                                <input name="cc" value="修改" class="btn btn-default" type="submit" />
+                            </div>
+                        </td>
+                        <td width="60" height="45">
+                            <div align="center">
+                                <input name="cc" value="删除" onclick="self.location='link.php?step=del&amp;groupid=1&amp;id=71'" class="btn btn-default" type="button" />
+                            </div>
+                        </td>
+                    </tr>
+                    <form action="link.php" method="post"></form>
+                    <tr class="list">
+                        <td width="54" height="45">
+
+                            <input name="xuhao" size="2" value="0" class="input" type="text" />
+
+                        </td>
+                        <td width="150">
+                            <input name="name" size="16" value="XXX科技" maxlength="200" class="input" type="text" />
+                        </td>
+                        <td height="45">
+
+                            <input name="url" size="30" value="http://www.bjhanzhuo.com" maxlength="200" class="input" type="text" />
+
+                        </td>
+                        <td height="45">  </td>
+                        <td width="60" height="45">
+                            <div align="center">
+                                <input name="step" value="modify" type="hidden" />
+                                <input name="groupid" value="1" type="hidden" />
+                                <input name="id" value="70" type="hidden" />
+                                <input name="cc" value="修改" class="btn btn-default" type="submit" />
+                            </div>
+                        </td>
+                        <td width="60" height="45">
+                            <div align="center">
+                                <input name="cc" value="删除" onclick="self.location='link.php?step=del&amp;groupid=1&amp;id=70'" class="btn btn-default" type="button" />
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

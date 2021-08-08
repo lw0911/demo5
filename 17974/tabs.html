@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tabs</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			blockquote {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field layui-field-title">
+				<legend>默认Tab选项卡</legend>
+			</fieldset>
+
+			<a href="http://www.layui.com/doc/element/tab.html" target="_blank" class="layui-btn">不清楚?看文档啊~</a>
+
+			<blockquote class="layui-elem-quote">左右切换</blockquote>
+
+			<div class="layui-tab" lay-filter="demo">
+				<ul class="layui-tab-title">
+					<li class="layui-this">网站设置</li>
+					<li>用户管理</li>
+					<li>权限分配</li>
+					<li>商品管理</li>
+					<li>订单管理</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">内容1</div>
+					<div class="layui-tab-item">内容2</div>
+					<div class="layui-tab-item">内容3</div>
+					<div class="layui-tab-item">内容4</div>
+					<div class="layui-tab-item">内容5</div>
+				</div>
+			</div>
+			
+			<blockquote class="layui-elem-quote">Tab简洁风格</blockquote>
+
+			<div class="layui-tab layui-tab-brief" lay-filter="demo1">
+				<ul class="layui-tab-title">
+					<li class="layui-this">网站设置</li>
+					<li>用户管理</li>
+					<li>权限分配</li>
+					<li>商品管理</li>
+					<li>订单管理</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">内容1</div>
+					<div class="layui-tab-item">内容2</div>
+					<div class="layui-tab-item">内容3</div>
+					<div class="layui-tab-item">内容4</div>
+					<div class="layui-tab-item">内容5</div>
+				</div>
+			</div>
+			
+			<blockquote class="layui-elem-quote">Tab卡片风格</blockquote>
+
+			<div class="layui-tab layui-tab-card" lay-filter="demo2">
+				<ul class="layui-tab-title">
+					<li class="layui-this">网站设置</li>
+					<li>用户管理</li>
+					<li>权限分配</li>
+					<li>商品管理</li>
+					<li>订单管理</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">内容1</div>
+					<div class="layui-tab-item">内容2</div>
+					<div class="layui-tab-item">内容3</div>
+					<div class="layui-tab-item">内容4</div>
+					<div class="layui-tab-item">内容5</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+		layui.use(['element', 'layer'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+			
+			element.on('tab(demo1)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+			
+			element.on('tab(demo2)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+		});
+	</script>
+
+</html>

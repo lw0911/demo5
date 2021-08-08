@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>家天下号</title>
+<meta content="家天下号" name="keywords" />
+<meta content="家天下号" name="description" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+<link href="css/zhuce.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/lrtk.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/jquery.superslide.2.1.1.js"></script>
+</head>
+<body>
+<div class="top_box">
+  <div class="top_nav">
+    <div class="top_left">欢迎来到家天下号官方网站，我们竭诚为您服务！</div>
+    <div class="fx"> 
+        <a href="#" class="weibo" rel="nofollow"></a> 
+        <a href="#" class="kongjian" rel="nofollow"></a> 
+        <a href="#" class="tengxun" rel="nofollow"></a> 
+        <a href="#" class="youxiang" rel="nofollow"></a> 
+        <a href="#" class="qq" rel="nofollow"></a> 
+        <a href="#" class="rrw" rel="nofollow"></a> 
+        <a href="#" class="kxw" rel="nofollow"></a> 
+    </div>
+    <div class="top_right">
+      <div class="phone"><a href="login.html">移动端</a></div>
+      <div class="login"><a href="login.html">登录</a></div>
+      <div class="regist">
+        <ul>
+          <li><a href="zhuce.html">免费注册</a></li>
+          <li><a href="#">在线预约</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="header">
+	<div class="logo"><a href="#"><img src="images/logo.png" width="194" height="55" /></a></div>
+    <div class="logo01"><a href="#"><img src="images/logo_01.png" width="368" height="40" /></a></div>
+    <div class="logo02"><a href="#"><img src="images/logo_02.png" width="387" height="45" /></a></div>
+</div>
+
+<div class="top_menus">
+<div class="menus">
+	<ul>
+    	<li><a href="index.html" title="首页">首页</a></li>
+        <li><a href="about.html" title="公司概况">公司概况</a></li>
+        <li><a href="new_list.html" title="新闻动态">新闻动态</a></li>
+        <li><a href="luxian_list.html" title="精选线路">精选线路</a></li>
+        <li><a href="shop_list.html" title="养生商城">养生商城</a></li>
+        <li><a href="baodian.html" title="旅游宝典">旅游宝典</a></li>
+        <li><a href="huiyuan.html" title="会员尊享">会员尊享</a></li>
+        <li><a href="zuimei.html" title="醉美夕阳">醉美夕阳</a></li>
+        <li><a href="paishe_list.html" title="我行我秀">我行我秀</a></li>
+        <li><a href="youkeshuo.html" title="游客说">游客说</a></li>
+        <li><a href="contact.html" title="联系我们">联系我们</a></li>
+    </ul>
+</div>
+
+<form action="search.php" method="get">
+        	<dl class="top_search">
+            	<dt><input type="text" onblur="if(this.value == '')this.value='成百上千旅游路线，总有一款适合您！'" onfocus="if(this.value == '成百上千旅游路线，总有一款适合您！')this.value = ''" value="成百上千旅游路线，总有一款适合您！" name="title" class="input_text" /></dt>
+                <dd><input type="image" class="input_image" src="images/dd_bg.png" /></dd>
+            </dl>
+        </form>
+</div>
+
+<div class="main">
+<div class="zhuce_bt">
+      <div class="zhuce_catpos">当前位置：<a href="index.html" title="首页">首页</a> > <a href="zhuce.html">会员注册</a></div>会员注册</div>
+      
+<ul id="zctags">
+	<li class="selectTag"> <a href="javascript:void(0)" onclick="selectTag('tagContent0',this)">手机注册</a></li>
+	<li class=""> <a href="javascript:void(0)" onclick="selectTag('tagContent1',this)">邮箱注册</a> </li>
+    <span>我已经注册，现在就<a href="login.html">登陆</a></span>
+</ul>
+<div class="theme_main">
+	<div id="zccon">
+					<div id="zctagContent">
+						<div style="display: block;" class="tagContent selectTag" id="tagContent0"> 　
+							<div id="zhuce_l">
+								<div class="mail">
+									<span class="text_font">*手机号：</span>
+									<input type="text" value="" autocomplete="off" class="f-text" id="phone" name="phone" onblur="checkPhone();">
+									<span class="inline-tip" id='phoneshow' >用于登录和找回密码，不会公开</span>
+								</div>
+								
+								<div class="mail">
+									<span class="text_font">短信验证码：</span>
+									<input type="text" value="" autocomplete="off" class="f-text" id="msgCode" name="msgCode">
+									<span class="inline-tip" id="yanzhengma" style="display: none;">请填写验证码</span>
+                                    <input type="button" value="免费获取短信验证码" id="msgBt" onclick="msgClick()" class="btn-normal btn-small">
+								</div>
+			
+								<div class="mail">
+									<span class="text_font">设置密码：</span>
+									<input type="password" value="" autocomplete="off" class="f-text" id="mima1"  name="password" onblur="checkPwd()" />
+									<span class="inline-tip" id="mima1show" style="display: none;"></span>
+								</div>
+								<div class="mail">
+									<span class="text_font">确认密码：</span>
+									<input type="password" value="" autocomplete="off" class="f-text" id="mima2" onblur="checkrePwd();">
+										<span class="inline-tip" id="mima2show" style="display: none;"></span>
+								</div>
+                                <div class="mail">
+									<span class="text_font">昵称：</span>
+									<input type="password" value="" autocomplete="off" class="f-text" id="mima2" onblur="checkrePwd();">
+										<span class="inline-tip" id="mima2show" style="display: none;"></span>
+								</div>
+                                <div class="mail">
+									<span class="text_font">我是：</span>
+									<input class="input_radio" name="_isLead" id="_isLeadYes" value="2" type="radio">
+									<label for="radiobutton">游客</label>&nbsp;&nbsp;&nbsp;
+									<input checked="checked" class="input_radio" name="_isLead" id="_isLeadNo" value="1" type="radio">
+									<label for="radiobutton">同行</label>
+								</div>
+                                <div class="mail"> <span class="text_font">验证码：</span>
+									<div class="yzm">
+										<input id="login-yzm" class="f-yzm" name="very"
+											type="text" onkeypress="enterPre()" onkeydown="enterPre()">
+										<span class="hyzpic">
+											<img src="images/yanzhengma.jpg" id="veryImg" width="81" height="36" onclick="javascript:this.src='images/yanzhengma.jpg';" />
+										</span>
+										<span class="hyz">
+											<a href="javascript:void(0)" onclick="changeVery();">看不清？换一张</a>
+										</span>
+										<span class="inline-tip" id="yzmtmp" style="display: none;"></span>
+									</div>
+								</div>
+                                
+								<div class="agree">
+			
+									<input value="1" checked="checked" name="remember_username"
+										id="checkB" class="f-check" type="checkbox">
+									<label class="normal" for="remember-username" id="check2B">同意“服务条款”和“隐私权相关政策”</label>
+			
+								</div>
+								<div class="ljzcan">
+									<input type='hidden' id="flag1" value='2' />
+									<input type='hidden' id="flag2" value='2' />
+									<input type='hidden' id="flag3" value='2' />
+									<input class="ljzc" name="commit" value="提交注册" onclick="checkForm()" type="button" >
+								</div>
+							</div>
+						</div>
+						<div style="display: none;" class="tagContent" id="tagContent1">
+							<div id="zhuce_l">
+								<div class="mail"> 
+									<span class="text_font">邮箱：</span>
+									<input type="text" value="" autocomplete="off" class="f-text" name="email" id="email">
+									<span class="inline-tip" id="emailtmp">用于登录和找回密码，不会公开</span> 
+								</div>
+								<div class="mail"> <span class="text_font">用户名 ：</span>
+									<input type="text" value="" autocomplete="off" class="f-text" name="name" id="name">
+									<span class="inline-tip" id="nametmp" style="display: none;"></span>
+								</div>
+								<div class="mail"> <span class="text_font">创建密码：</span>
+									<input type="password" value="" autocomplete="off" class="f-text" name="pass1" id="pass1">
+									<span class="inline-tip" id="pass1tmp" style="display: none;"></span>
+								</div>
+								<div class="mail"> <span class="text_font">确认密码：</span>
+									<input type="password" value="" autocomplete="off" class="f-text" name="pass2" id="pass2" onblur="checkPass()">
+									<span class="inline-tip" id="pass2show" style="display: none;"></span>
+								</div>
+								<div class="mail"> <span class="text_font">验证码：</span>
+									<div class="yzm">
+										<input id="login-yzm" class="f-yzm" name="very"
+											type="text" onkeypress="enterPre()" onkeydown="enterPre()">
+										<span class="hyzpic">
+											<img src="images/yanzhengma.jpg" id="veryImg" width="81" height="36" onclick="javascript:this.src='images/yanzhengma.jpg';" />
+										</span>
+										<span class="hyz">
+											<a href="javascript:void(0)" onclick="changeVery();">换一张</a>
+										</span>
+										<span class="inline-tip" id="yzmtmp" style="display: none;"></span>
+									</div>
+								</div>
+								<div class="agree">
+									<input value="1" id="checkBx" checked="checked" name="remember_username" class="f-check" type="checkbox">
+									<label class="normal" for="remember-username">同意“服务条款”和“隐私权相关政策”</label>
+								</div>
+								<div class="ljzcan">
+									<input type='hidden' id="flag4" value='2' />
+									<input class="ljzc" id="submit1" name="commit" value="立即注册"  onclick="sub()" type="button">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				function selectTag(showContent,selfObj){
+					// 操作标签
+					var tag = document.getElementById("zctags").getElementsByTagName("li");
+					var taglength = tag.length;
+					for(i=0; i<taglength; i++){
+						tag[i].className = "";
+					}
+					selfObj.parentNode.className = "selectTag";
+					// 操作内容
+					for(i=0; j=document.getElementById("tagContent"+i); i++){
+						j.style.display = "none";
+					}
+					document.getElementById(showContent).style.display = "block";
+				}
+				</script>	
+    <div id="zhuce_r"><img src="images/zhuce.jpg" /></div>
+</div>
+<!-------------------------------------------------zhuce------end-------------------------------------------------------------------->
+<div class="clear"></div>
+</div>
+<!-------------------------------------------------main------end-------------------------------------------------------------------->
+<div class="m4">
+<div class="m4_left">
+	<ul>
+    	<h1>官网会员注册问题</h1>
+    	<li><a href="#" title="手机注册和邮箱注册有哪些...">手机注册和邮箱注册有哪些...</a></li>
+        <li><a href="#" title="网站注册会员有什么好处？">网站注册会员有什么好处？</a></li>
+        <li><a href="#" title="会员注册有什么优惠政策？">会员注册有什么优惠政策？</a></li>
+        <li><a href="#" title="注册成为会员需要哪些资料...">注册成为会员需要哪些资料...</a></li>
+    </ul>
+    
+    <ul>
+    	<h1>旅游行程问题</h1>
+    	<li><a href="#" title="手机注册和邮箱注册有哪些...">手机注册和邮箱注册有哪些...</a></li>
+        <li><a href="#" title="网站注册会员有什么好处？">网站注册会员有什么好处？</a></li>
+        <li><a href="#" title="会员注册有什么优惠政策？">会员注册有什么优惠政策？</a></li>
+        <li><a href="#" title="注册成为会员需要哪些资料...">注册成为会员需要哪些资料...</a></li>
+    </ul>
+    
+    <ul>
+    	<h1>支付和退款问题</h1>
+    	<li><a href="#" title="手机注册和邮箱注册有哪些...">手机注册和邮箱注册有哪些...</a></li>
+        <li><a href="#" title="网站注册会员有什么好处？">网站注册会员有什么好处？</a></li>
+        <li><a href="#" title="会员注册有什么优惠政策？">会员注册有什么优惠政策？</a></li>
+        <li><a href="#" title="注册成为会员需要哪些资料...">注册成为会员需要哪些资料...</a></li>
+    </ul>
+    
+    </div>
+    
+    <div class="m4_right">
+    	<dl>
+            <dt><img src="images/weixin.jpg" width="130" height="130" /><span>扫一扫微信关注</span></dt>
+            <dd>
+                <span style="font-size:20px;">家天下旅游</span><br/>
+                <span>服务热线：XXX</span><br/>
+                <span style="color:#000;">地址：XXXXXX</span>
+            </dd>
+        </dl>
+    </div>
+	<div class="clear"></div>
+</div>
+
+
+<div class="footer">
+	<ul>
+    	<li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">员工风采</a></li>
+        <li><a href="#">网站地图</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <li><a href="#">友情链接</a></li>
+    </ul>
+</div>
+
+<div class="foot">
+山东家天下国际旅行社有限公司 旅游经营许可证：L-SD-01260<br/>
+山东交运旅游集团济南家天下分公司 旅游经营许可证号：L-SD-CJ00010 <br/>
+Copyright © 2016-2020 山东家天下国际旅行社有限公司 版权所有　管理备案号：鲁ICP备10202078号-2<br/>
+旅游局投诉电话：<span>12301</span>&nbsp;&nbsp;技术支持：<a href="http://www.jnyunchang.com/">云畅网络</a>
+<ul>
+	<li><img src="images/copyright01.jpg" width="103" height="32" alt="经营性网站 备案信息" /></li>
+    <li><img src="images/copyright02.jpg" width="103" height="32" alt="可信网站 信用评价" /></li>
+    <li><img src="images/copyright03.jpg" width="103" height="32" alt="可信网站 信用评价" /></li>
+</ul>
+</div>
+</body>
+</html>

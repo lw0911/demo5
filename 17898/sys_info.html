@@ -1,0 +1,528 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>系统配置参数</title>
+<script type="application/javascript" src="js/tab.js"></script>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+</head>
+<body background='images/allbg.gif' leftmargin='8' topmargin='8'>
+<div style="min-width:780px">
+ <table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#D6D6D6" align="center">
+      <tr>
+           <td height="28" background="images/tbg.gif" style="padding-left:10px;"><b>系统配置参数：</b></td>
+      </tr>
+      <tr>
+           <td height="24" bgcolor="#ffffff" align="center"> 
+                <a href='javascript:ShowConfig(1,8)'>站点设置</a>  | 
+                <a href='javascript:ShowConfig(2,8)'>核心设置</a>  | 
+                <a href='javascript:ShowConfig(3,8)'>附件设置</a>  | 
+                <a href='javascript:ShowConfig(4,8)'>会员设置</a>  | 
+                <a href='javascript:ShowConfig(5,8)'>互动设置</a> 
+           </td>
+      </tr>
+ </table>
+ <table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-top:10px" bgcolor="#D6D6D6" align="center">
+  <tr>
+   <td bgcolor="#FFFFFF" width="100%"><form action="sys_info.php" method="post" name="form1">
+     <input type="hidden" name="dopost" value="save">
+<div id="_search"></div>
+<div id="_mainsearch">
+          <table width="100%" style='' id="td1" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">参数说明</td>
+       <td>参数值</td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">站点根网址： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_basehost' id='edit___cfg_basehost' value="http://localhost:802" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">网页主页链接： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_indexurl' id='edit___cfg_indexurl' value="/" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">主页链接名： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_indexname' id='edit___cfg_indexname' value="主页" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">网站名称： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_webname' id='edit___cfg_webname' value="我的网站" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">文档HTML默认保存路径： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_arcdir' id='edit___cfg_arcdir' value="/a" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">图片/上传文件默认路径： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_medias_dir' id='edit___cfg_medias_dir' value="/uploads" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">模板默认风格： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_df_style' id='edit___cfg_df_style' value="default" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">网站版权信息： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_powerby' row='4' id='edit___cfg_powerby' class='textarea_info' style='width:98%;height:50px'>Copyright &amp;copy; 2002-2011 DEDECMS. 织梦科技 版权所有</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">站点默认关键字： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_keywords' id='edit___cfg_keywords' value="" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">站点描述： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_description' row='4' id='edit___cfg_description' class='textarea_info' style='width:98%;height:50px'></textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">网站备案号： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_beian' id='edit___cfg_beian' value="" style='width:80%'></td>
+      </tr>
+     </table>
+  <table width="100%" style='display:none' id="td2" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">FTP使用说明</td>
+       <td>参数值</td>
+      </tr>
+	
+    <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">FTP主机： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ftp_host' id='edit___cfg_ftp_host' value="" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">FTP端口： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ftp_port' id='edit___cfg_ftp_port' value='21' style='width:30%'></td>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">FTP用户名： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ftp_user' id='edit___cfg_ftp_user' value="" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">FTP密码： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ftp_pwd' id='edit___cfg_ftp_pwd' value="" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">网站根在FTP中的目录： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ftp_root' id='edit___cfg_ftp_root' value="/" style='width:80%'></td>
+      </tr>
+         
+         
+            <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">邮箱发送使用说明</td>
+       <td>参数值</td>
+      </tr>   
+         
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否启用smtp方式发送邮件： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_sendmail_bysmtp' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_sendmail_bysmtp' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">smtp服务器： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_smtp_server' id='edit___cfg_smtp_server' value="smtp.qq.com" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">smtp服务器端口： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_smtp_port' id='edit___cfg_smtp_port' value="25" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">SMTP服务器的用户邮箱： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_smtp_usermail' id='edit___cfg_smtp_usermail' value="desdev@vip.qq.com" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">SMTP服务器的用户帐号： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_smtp_user' id='edit___cfg_smtp_user' value="desdev" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">SMTP服务器的用户密码： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_smtp_password' id='edit___cfg_smtp_password' value="7260444huxiao" style='width:80%'></td>
+      </tr>
+         
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">数据库类型（支持mysql和mysqli）： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mysql_type' id='edit___cfg_mysql_type' value="mysql" style='width:80%'></td>
+      </tr>
+           </table>
+          <table width="100%" style='display:none' id="td3" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">参数说明</td>
+       <td>参数值</td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">缩略图默认宽度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ddimg_width' id='edit___cfg_ddimg_width' value='240' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">缩略图默认高度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ddimg_height' id='edit___cfg_ddimg_height' value='180' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">图片浏览器文件类型： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_imgtype' id='edit___cfg_imgtype' value="jpg|gif|png" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">允许上传的软件类型： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_softtype' row='4' id='edit___cfg_softtype' class='textarea_info' style='width:98%;height:50px'>zip|gz|rar|iso|doc|xsl|ppt|wps</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">允许的多媒体文件类型： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_mediatype' row='4' id='edit___cfg_mediatype' class='textarea_info' style='width:98%;height:50px'>swf|mpg|mp3|rm|rmvb|wmv|wma|wav|mid|mov</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">图集默认显示图片的大小： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_album_width' id='edit___cfg_album_width' value='800' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">图集多行多列样式默认行数： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_album_row' id='edit___cfg_album_row' value='3' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">图集多行多列样式默认列数： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_album_col' id='edit___cfg_album_col' value='4' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">图集多页多图每页显示最大数： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_album_pagesize' id='edit___cfg_album_pagesize' value='12' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">图集默认样式<br />1为多页多图,2为多页单图,3为缩略图列表： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_album_style' id='edit___cfg_album_style' value='2' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">图集默认缩略图大小： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_album_ddwidth' id='edit___cfg_album_ddwidth' value='200' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员上传头像大小限制(单位：KB)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_max_face' id='edit___cfg_max_face' value='50' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">附件保存形式(按data函数日期参数)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_addon_savetype' id='edit___cfg_addon_savetype' value="ymd" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">异步上传缩略图(空间太不稳定的用户关闭此项)： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_qk_uploadlit' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_qk_uploadlit' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">缩略图是否使用强制大小(对背景填充)： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_ddimg_full' value='Y'>是 <input type='radio' class='np' name='edit___cfg_ddimg_full' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">缩略图空白背景填充颜色(0-白,1-黑)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_ddimg_bgcolor' id='edit___cfg_ddimg_bgcolor' value='0' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">上传缩略图后是否马上弹出裁剪框： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_uplitpic_cut' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_uplitpic_cut' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">图集是否使用水印(小图也会受影响)： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_album_mark' value='Y'>是 <input type='radio' class='np' name='edit___cfg_album_mark' value='N' checked>否 </td>
+      </tr>
+           </table>
+          <table width="100%" style='display:none' id="td4" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">参数说明</td>
+       <td>参数值</td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否开启会员功能： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_open' value='Y'>是 <input type='radio' class='np' name='edit___cfg_mb_open' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否开启会员图集功能： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_album' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_album' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否允许会员上传非图片附件： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_upload' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_upload' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员上传文件大小(K)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_upload_size' id='edit___cfg_mb_upload_size' value='1024' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否开放会员对自定义模型投稿： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_sendall' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_sendall' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否把会员指定的远程文档下载到本地： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_rmdown' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_rmdown' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">会员附件许可的类型： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_mb_addontype' row='4' id='edit___cfg_mb_addontype' class='textarea_info' style='width:98%;height:50px'>swf|mpg|mp3|rm|rmvb|wmv|wma|wav|mid|mov|zip|rar|doc|xsl|ppt|wps</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员附件总大小限制(MB)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_max' id='edit___cfg_mb_max' value='500' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">不允许注册的会员id： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_mb_notallow' row='4' id='edit___cfg_mb_notallow' class='textarea_info' style='width:98%;height:50px'>www,bbs,ftp,mail,user,users,admin,administrator</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">用户id最小长度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_idmin' id='edit___cfg_mb_idmin' value='3' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">用户密码最小长度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_pwdmin' id='edit___cfg_mb_pwdmin' value='3' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">前台密码验证类型：默认32 — 32位md5，可选：<br />l16 — 前16位， r16 — 后16位， m16 — 中间16位： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_pwdtype' id='edit___cfg_mb_pwdtype' value="32" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否严格限定会员登录id<br>允许会员使用二级域名必须设置此项： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_md_idurl' value='Y'>是 <input type='radio' class='np' name='edit___cfg_md_idurl' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">注册会员默认级别<br>[会员权限管理中]查看级别代表的数字： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_rank' id='edit___cfg_mb_rank' value='10' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否限制Email只能注册一个帐号： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_md_mailtest' value='Y'>是 <input type='radio' class='np' name='edit___cfg_md_mailtest' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员使用权限开通状态<br>(-10 邮件验证 -1 手工审核, 0 没限制)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_spacesta' id='edit___cfg_mb_spacesta' value='-10' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否允许用户空间显示未审核文章： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_allowncarc' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_allowncarc' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否允许新会员注册： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_allowreg' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_allowreg' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否禁止访问管理员帐号的空间： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_adminlock' value='Y'>是 <input type='radio' class='np' name='edit___cfg_mb_adminlock' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员空间中所有文档的频道ID(不限为0)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_spaceallarc' id='edit___cfg_mb_spaceallarc' value='0' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">是否允许用户笔名/昵称重复： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_wnameone' value='Y'>是 <input type='radio' class='np' name='edit___cfg_mb_wnameone' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员动态是否需要审核： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_feedcheck' value='Y'>是 <input type='radio' class='np' name='edit___cfg_mb_feedcheck' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">会员状态是否需要审核： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_msgischeck' value='Y'>是 <input type='radio' class='np' name='edit___cfg_mb_msgischeck' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">注册是否需要完成详细资料的填写： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_reginfo' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_reginfo' value='N'>否 </td>
+      </tr>
+           </table>
+          <table width="100%" style='display:none' id="td5" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">参数说明</td>
+       <td>参数值</td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">禁用词语（系统将直接停止用户动作）<br/>用|分开，但不要在结尾加|： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_notallowstr' row='4' id='edit___cfg_notallowstr' class='textarea_info' style='width:98%;height:50px'>非典|艾滋病|阳痿</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">替换词语（词语会被替换成***）<br/>用|分开，但不要在结尾加|： </td>
+       <td align="left" style="padding:3px;"><textarea name='edit___cfg_replacestr' row='4' id='edit___cfg_replacestr' class='textarea_info' style='width:98%;height:50px'>她妈|它妈|他妈|你妈|去死|贱人</textarea></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">评论及留言(是/否)需审核： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_feedbackcheck' value='Y'>是 <input type='radio' class='np' name='edit___cfg_feedbackcheck' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">评论加验证码重确认： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_feedback_ck' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_feedback_ck' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">两次评论至少间隔时间(秒钟)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_feedback_time' id='edit___cfg_feedback_time' value='30' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">每个IP一小时内最大评论数： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_feedback_numip' id='edit___cfg_feedback_numip' value='30' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">会员投稿是否使用验证码： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_vdcode_member' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_vdcode_member' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">会员投稿是否检测重复标题： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_mb_cktitle' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_mb_cktitle' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">投稿多长时间后不能再修改[天]： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_mb_editday' id='edit___cfg_mb_editday' value='7' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">被踩扣除文章好评度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_caicai_sub' id='edit___cfg_caicai_sub' value='2' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">被顶扣除文章好评度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_caicai_add' id='edit___cfg_caicai_add' value='2' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">详细好评可获好评度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_feedback_add' id='edit___cfg_feedback_add' value='5' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">详细恶评扣除好评度： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_feedback_sub' id='edit___cfg_feedback_sub' value='5' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否禁止所有评论(将包括禁止顶踩等)： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_feedback_forbid' value='Y'>是 <input type='radio' class='np' name='edit___cfg_feedback_forbid' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">投稿可获取积分： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_sendarc_scores' id='edit___cfg_sendarc_scores' value='10' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">参与评论可获积分： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_sendfb_scores' id='edit___cfg_sendfb_scores' value='3' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">上传头像增加积分： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_face_adds' id='edit___cfg_face_adds' value='10' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">填写详细资料增加积分： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_moreinfo_adds' id='edit___cfg_moreinfo_adds' value='20' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">多少积分可以兑换一个金币： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_money_scores' id='edit___cfg_money_scores' value='50' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">登录会员中心获积分： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_login_adds' id='edit___cfg_login_adds' value='2' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">会员推广获积分： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_userad_adds' id='edit___cfg_userad_adds' value='10' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否允许匿名评论： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_feedback_guest' value='Y'>是 <input type='radio' class='np' name='edit___cfg_feedback_guest' value='N' checked>否 </td>
+      </tr>
+           </table>
+          <table width="100%" style='display:none' id="td6" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">参数说明</td>
+       <td>参数值</td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">(是/否)开启分页标题，开启会影响HTML生成速度： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_arcsptitle' value='Y'>是 <input type='radio' class='np' name='edit___cfg_arcsptitle' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">(是/否)开启长文章自动分页： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_arcautosp' value='Y'>是 <input type='radio' class='np' name='edit___cfg_arcautosp' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">文章自动分页大小（单位: K）： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_arcautosp_size' id='edit___cfg_arcautosp_size' value='5' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">上级列表是否包含子类内容： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_list_son' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_list_son' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">使用关键词关连文章： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_keyword_like' value='Y'>是 <input type='radio' class='np' name='edit___cfg_keyword_like' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">网站主页调用函数最大索引文档数<br>不适用于经常单栏目采集过多内容的网站<br>不启用本项此值设置为0即可： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_index_max' id='edit___cfg_index_max' value='10000' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">arclist标签调用缓存<br />(0 不启用，大于0值为多少秒)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_index_cache' id='edit___cfg_index_cache' value='86400' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否启用模板缓存： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_tplcache' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_tplcache' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">模板缓存目录： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_tplcache_dir' id='edit___cfg_tplcache_dir' value="/data/tplcache" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">发布/修改单个文档是否使用调用缓存： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_makesign_cache' value='Y'>是 <input type='radio' class='np' name='edit___cfg_makesign_cache' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">最大搜索检查文档数： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_search_max' id='edit___cfg_search_max' value='50000' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">最大返回搜索结果数： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_search_maxrc' id='edit___cfg_search_maxrc' value='300' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">搜索间隔时间(秒/对网站所有用户)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_search_time' id='edit___cfg_search_time' value='3' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否启用副栏目： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_need_typeid2' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_need_typeid2' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">id 文档ID，content 标签最终内容<br />(修改此变量后必须更新系统缓存)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_cache_type' id='edit___cfg_cache_type' value="id" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">发布文章后马上更新网站主页： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_makeindex' value='Y'>是 <input type='radio' class='np' name='edit___cfg_makeindex' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">发表文章后马上更新相关栏目： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_make_andcat' value='Y'>是 <input type='radio' class='np' name='edit___cfg_make_andcat' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">发表文章后马上更新上下篇： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_make_prenext' value='Y' checked>是 <input type='radio' class='np' name='edit___cfg_make_prenext' value='N'>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">需缓存内容全局缓存时间(秒)： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_puccache_time' id='edit___cfg_puccache_time' value='36000' style='width:30%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">是否启用memcache缓存，如果为否(N)，默认使用文件缓存： </td>
+       <td align="left" style="padding:3px;"><input type='radio' class='np' name='edit___cfg_memcache_enable' value='Y'>是 <input type='radio' class='np' name='edit___cfg_memcache_enable' value='N' checked>否 </td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">默认memcache缓存服务器地址： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_memcache_mc_defa' id='edit___cfg_memcache_mc_defa' value="memcache://127.0.0.1:11211/default127" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#F9FCEF">
+       <td width="300">附加memcache缓存服务器地址： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_memcache_mc_oth' id='edit___cfg_memcache_mc_oth' value="" style='width:80%'></td>
+      </tr>
+            <tr align="center" height="25" bgcolor="#ffffff">
+       <td width="300">顶踩缓存异步更新间隔（0为不缓存）： </td>
+       <td align="left" style="padding:3px;"><input type='text' name='edit___cfg_digg_update' id='edit___cfg_digg_update' value='0' style='width:30%'></td>
+      </tr>
+           </table>
+          <table width="100%" style='display:none' id="td7" border="0" cellspacing="1" cellpadding="1" bgcolor="#cfcfcf">
+      <tr align="center" bgcolor="#FBFCE2" height="25">
+       <td width="300">参数说明</td>
+       <td>参数值</td>
+      </tr>
+          
+     </table>
+    </form></td>
+  </tr>
+ </table>
+</div>
+</body>
+</html>

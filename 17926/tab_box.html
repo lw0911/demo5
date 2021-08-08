@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link rel="stylesheet" href="css/plugins/toastr/toastr.min.css" />
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="public/inspinia.css" />
+		<link rel="stylesheet" href="css/my_TiBaoJiLu.css" />
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="public/html5shiv.min.js"></script>
+		    <script src="public/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+	</head>
+
+	<body>
+		<div id="wrapper" class="container">
+			<!--标编辑-->
+			<div id="biaobj" class=" wrapper wrapper-content animated fadeInRight">
+				<h3>任务</h3>
+				<div class="right_box" id="right_box">
+					<form action="" class="form-horizontal">
+						<div class="form-group">
+							<label for="" class="col-lg-1 col-md-2 col-sm-2 control-label">名称：</label>
+							<div class="col-lg-2 col-md-2 col-sm-2">
+								<input style="margin-left:-80px;" type="text" class="form-control" />
+							</div>
+							<label class="col-lg-1 col-md-1 col-sm-1 control-label" for="">角色：</label>
+							<div class="col-lg-3 col-md-2 col-sm-2 chosen-container chosen-container-single">
+								<select class="select2_demo_1 form-control">
+									<option value="2">全部</option>
+									<option value="3">担保标</option>
+									<option value="4">抵押标</option>
+									<option value="5">信用标</option>
+								</select>
+							</div>
+							<label class="col-lg-1 col-md-1 col-sm-1 control-label" for="">姓名：</label>
+							<div class="col-lg-2 col-md-2 col-sm-2">
+								<input type="text" class="form-control" />
+							</div>
+							<button onclick="alert_t()" style="width:82px;height:34px;" type="button" class="col-lg-3 btn btn-success">搜索</button>
+							<button onclick="add_user()" style="margin-left:10px;" type="button" class="btn btn-success"> <i class="fa fa-plus"></i> 添加</button>
+						</div>
+					</form>
+
+					<!--表格部分-->
+					<div class="ibox-content">
+						<div class="row">
+							<div class="col-sm-12">
+								<table class="table table-striped table-bordered table-hover dataTables-example">
+									<thead>
+										<tr>
+											<th>任务名称</th>
+											<th>负责人</th>
+											<th>状态</th>
+											<th>开始时间</th>
+											<th>结束时间</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<a onclick="javascript:r_swiper(this)" style="color:#0D8DDB !important;" href="javascript:void(0)">20160808000301</a>
+											</td>
+											<td>王</td>
+											<td>表编辑</td>
+											<td>担保</td>
+											<td>担保标</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="dataTables_info" id="editable_info" role="status" aria-live="polite">显示从1到8，总8条</div>
+							</div>
+							<div style="height:27px;" class="col-sm-7">
+								<div class="dataTables_paginate paging_simple_numbers" id="editable_paginate">
+									<ul class="pagination pull-right" style="margin:-3px 0;">
+										<li class="paginate_button previous" id="editable_previous">
+											<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="0">上一页</a>
+										</li>
+										<li class="paginate_button previous" id="editable_previous">
+											<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="1">1</a>
+										</li>
+										<li class="paginate_button previous" id="editable_previous">
+											<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="2">2</a>
+										</li>
+										<li class="paginate_button previous" id="editable_previous">
+											<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="3">3</a>
+										</li>
+										<li class="paginate_button previous" id="editable_previous">
+											<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="4">4</a>
+										</li>
+										<li class="paginate_button previous" id="editable_previous">
+											<a href="#" aria-controls="editable" data-dt-idx="0" tabindex="5">下一页</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<iframe id="ifr" src="Tab_swiper.html" frameborder="no" scrolling="no" width="780px" height="100%" allowtransparency="true"></iframe>
+		
+		<script src="public/jquery-1.11.3.js"></script>
+		<script src="public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/plugins/lhgdialog/lhgdialog.js"></script>
+		<!-- 弹出警示框 -->
+		<script src="js/plugins/toastr/toastr.min.js"></script>
+		<!-- 弹出确认框 -->
+		<script src="public/artDialog4.1.7/artDialog.js?skin=blue"></script>
+    	<script src="public/artDialog4.1.7/plugins/iframeTools.js"></script>
+    	
+    	<script src="js/templet_form.js"></script>
+	</body>
+</html>

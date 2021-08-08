@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>slider</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			.layui-carousel div div {
+				text-align: center;
+				line-height: 280px;
+				background-color: #1E9FFF!important;
+				color: #FFFFFF;
+				font-size: 28px;
+			}
+			
+			blockquote {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<fieldset class="layui-elem-field layui-field-title">
+				<legend>slider</legend>
+			</fieldset>
+
+			<a href="http://www.layui.com/doc/modules/carousel.html" target="_blank" class="layui-btn">不清楚?看文档啊~</a>
+
+			<blockquote class="layui-elem-quote">左右切换</blockquote>
+
+			<div class="layui-carousel" id="test1">
+				<div carousel-item>
+					<div>条目1</div>
+					<div>条目2</div>
+					<div>条目3</div>
+					<div>条目4</div>
+					<div>条目5</div>
+				</div>
+			</div>
+
+			<blockquote class="layui-elem-quote">上下切换</blockquote>
+
+			<div class="layui-carousel" id="test2">
+				<div carousel-item>
+					<div>条目1</div>
+					<div>条目2</div>
+					<div>条目3</div>
+					<div>条目4</div>
+					<div>条目5</div>
+				</div>
+			</div>
+
+			<blockquote class="layui-elem-quote">渐隐渐显切换</blockquote>
+
+			<div class="layui-carousel" id="test3">
+				<div carousel-item>
+					<div>条目1</div>
+					<div>条目2</div>
+					<div>条目3</div>
+					<div>条目4</div>
+					<div>条目5</div>
+				</div>
+			</div>
+
+			<blockquote class="layui-elem-quote">动态添加</blockquote>
+
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">输入框</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" id="SN" required lay-verify="required|number|count" placeholder="请填写数量" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<button class="layui-btn" lay-submit="" lay-filter="demo1">设置</button>
+				</div>
+			</form>
+
+			<div class="layui-carousel" id="test4">
+				<div carousel-item>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		layui.use(['carousel', 'form', 'layer'], function() {
+			var carousel = layui.carousel;
+			var layer = layui.layer;
+			var form = layui.form;
+			//建造实例
+			carousel.render({
+				elem: '#test1',
+				width: '100%',
+				arrow: 'hover',
+				anim: 'default'
+			});
+
+			//建造实例
+			carousel.render({
+				elem: '#test2',
+				width: '100%',
+				arrow: 'hover',
+				anim: 'updown'
+			});
+
+			//建造实例
+			carousel.render({
+				elem: '#test3',
+				width: '100%',
+				arrow: 'hover',
+				anim: 'fade'
+			});
+
+			//建造实例
+			var test4 = carousel.render({
+				elem: '#test4',
+				width: '100%',
+				arrow: 'hover',
+				anim: 'default'
+			});
+			
+			
+			form.verify({
+				count: function(value) {
+					if(Number(value) >10) {
+						return '不能超过10个';
+					}
+				},
+				pass: [/(.+){6,12}$/, '密码必须6到12位']
+			});
+			
+			
+
+			//监听提交
+			form.on('submit(demo1)', function(data) {
+				//				layer.msg(JSON.stringify(data.field));
+				$('#test4 div').empty();
+				var sN = Number($("#SN").val());
+				for(var i=0; i < sN; i++) {
+					$('#test4 div').append('<div>条目' + (i+1) + '</div>');
+				}
+				test4.reload();
+				return false;
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Bootstrap core CSS -->
+		<link href="public/bootstrap.min.css" title="" rel="stylesheet" />
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="public/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="public/inspinia.css" />
+		<link rel="stylesheet" href="css/pop-up.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		    <script src="../../../https@oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		    <script src="../../../https@oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<title>信息管理系统</title>
+	</head>
+
+	<body>
+		<div id="wrapper" class="container">
+			<div class="wrapper wrapper-content">
+				<div class="right_box">
+					<div style="border:none;box-shadow:none;" class="right_one row">
+						<div class="col-md-12 col-sm-12 col-xs-12" style="float:left;">
+							<form class="form-horizontal" method="post" id="dataform" action="/applicationsetting/post?name=SiteOption" novalidate="novalidate">
+								<div class="form-group">
+									<label class="col-lg-2 control-label">用户名:</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="UploadFileRoot" name="UploadFileRoot" value="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-2 control-label">密码:</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="UploadFileRoot" name="UploadFileRoot" value="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-2 control-label">确认密码:</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="UploadFileRoot" name="UploadFileRoot" value="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-2 control-label">权限:</label>
+									<div class="col-lg-6">
+										<input class="sel" type="checkbox" /><span class="check_user">专家</span>
+										<input class="sel" type="checkbox" /><span class="check_user">服务商</span>
+									</div>
+								</div>
+							</form>
+							<button id="cleck_me">点击</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="public/jquery-1.11.3.js"></script>
+		<script src="public/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/plugins/lhgdialog/lhgdialog.js"></script>
+		<script type="text/javascript">
+			$('#cleck_me').click(function() {
+				var DG = frameElement.api;
+				var windowapi = frameElement == null ? window.top : frameElement.api,
+					W = windowapi == null ? window.top : windowapi.opener; //内容页中调用窗口实例对象接口
+				var zIndex = W == null ? 1976 : W.$.dialog.setting.zIndex + 1;
+				$.dialog({
+					title: '添加人员',
+					width: 400,
+					height: 250,
+					zIndex:zIndex,
+					lock: true,
+					parent:DG,
+					content: 'url:abc.html',
+					init: function() {
+						//var iframe = this.iframe.contentWindow;
+						//var ul = iframe.document.getElementById('right_list');
+					},
+					button: [{
+						name: '保存',
+						callback: function() {
+							var iframe = this.iframe.contentWindow;
+							if(!iframe.document.body) {
+								alert('iframe还没加载完毕呢')
+								return false;
+							};
+
+						},
+						focus: true
+
+					}, {
+						name: '取消',
+						callback: function() {
+							
+						}
+					}]
+				});
+			})
+		</script>
+	</body>
+
+</html>

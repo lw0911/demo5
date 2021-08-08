@@ -1,0 +1,565 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "微软雅黑";
+}
+.mrb10 {
+  margin-bottom: 10px;
+}
+#app {
+  padding: 20px;
+}
+#app .section {
+  margin-bottom: 5px;
+}
+.ios-fr {
+  float: right;
+}
+.ios-fl {
+  float: left;
+}
+.ios-form-group .ios-input-box {
+  display: flex;
+}
+.ios-form-group .ios-input-box .ios-input {
+  height: 32px;
+  flex: 1;
+  background: #f4f8fc;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 0 5px;
+  font-size: 14px;
+}
+.ios-form-group .ios-input-box .ios-input:focus {
+  border: 1px solid #3695ff;
+  outline: none;
+}
+.ios-form-group .ios-input-box .ios-input::placeholder {
+  color: #c7d2e0;
+  font-size: 12px;
+}
+.ios-form-group .ios-input-box .ios-input.ios-input-lock {
+  background: #fff6d6;
+}
+.ios-form-group .ios-textarea-box {
+  display: flex;
+}
+.ios-form-group .ios-textarea-box .ios-textarea {
+  min-height: 102px;
+  flex: 1;
+  background: #f4f8fc;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 5px;
+  font-size: 14px;
+  resize: none;
+}
+.ios-form-group .ios-textarea-box .ios-textarea:focus {
+  border: 1px solid #3695ff;
+  outline: none;
+}
+.ios-form-group .ios-textarea-box .ios-textarea::placeholder {
+  color: #c7d2e0;
+  font-size: 12px;
+}
+.ios-form-group .ios-textarea-box .ios-textarea.ios-textarea-lock {
+  background: #fff6d6;
+}
+.ios-form-group .ios-select-box {
+  display: flex;
+}
+.ios-form-group .ios-select-box .ios-select {
+  height: 32px;
+  flex: 1;
+  background: #f4f8fc url(../imgs/down.png) right 10px center no-repeat;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 0 5px;
+  font-size: 12px;
+}
+.ios-form-group .ios-select-box .ios-select:focus {
+  border: 1px solid #3695ff;
+  outline: none;
+}
+.ios-form-group .ios-select-box .ios-select::placeholder {
+  color: #c7d2e0;
+  font-size: 12px;
+}
+.ios-form-group .ios-select-box .ios-select.ios-select-lock {
+  background: #fff6d6 url(../imgs/down.png) right 10px center no-repeat;
+}
+.ios-form-group .ios-radio-box {
+  display: flex;
+  border: 1px solid #ddd;
+  height: 32px;
+  flex: 1;
+  align-items: center;
+}
+.ios-form-group .ios-radio-box .ios-radio-box-label {
+  height: 100%;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+.ios-form-group .ios-radio-box .ios-radio-box-label input[type="radio"] {
+  display: none;
+}
+.ios-form-group .ios-radio-box .ios-radio-box-label input[type="radio"]:checked + .ios-radio-span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+}
+.ios-form-group .ios-radio-box .ios-radio-box-label input[type="radio"]:checked + .ios-radio-span::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #3695ff;
+  border-radius: 50%;
+  background: url(../imgs/cile.png) center center no-repeat;
+  margin-right: 5px;
+}
+.ios-form-group .ios-radio-box .ios-radio-box-label .ios-radio-span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+}
+.ios-form-group .ios-radio-box .ios-radio-box-label .ios-radio-span::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #c7d2e0;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.ios-form-group .ios-checkbox-box {
+  display: flex;
+  border: 1px solid #ddd;
+  height: 32px;
+  flex: 1;
+  align-items: center;
+}
+.ios-form-group .ios-checkbox-box .ios-checkbox-box-label {
+  height: 100%;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+.ios-form-group .ios-checkbox-box .ios-checkbox-box-label input[type="checkbox"] {
+  display: none;
+}
+.ios-form-group .ios-checkbox-box .ios-checkbox-box-label input[type="checkbox"]:checked + .ios-checkbox-span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+.ios-form-group .ios-checkbox-box .ios-checkbox-box-label input[type="checkbox"]:checked + .ios-checkbox-span::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #3695ff;
+  background: url(../imgs/f.png) center center no-repeat;
+  margin-right: 5px;
+}
+.ios-form-group .ios-checkbox-box .ios-checkbox-box-label .ios-checkbox-span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+.ios-form-group .ios-checkbox-box .ios-checkbox-box-label .ios-checkbox-span::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #c7d2e0;
+  margin-right: 5px;
+}
+.ios-form-group .ios-upload-box {
+  border: 1px solid #ddd;
+}
+.ios-form-group .ios-upload-box .ios-upload-btn {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+}
+.ios-form-group .ios-upload-box .ios-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 7px;
+  cursor: pointer;
+  margin: 5px;
+  width: 90px;
+  font-size: 12px;
+  background: #3695ff;
+  color: #fff;
+}
+.ios-form-group .ios-upload-box .ios-upload-label input {
+  display: none;
+}
+.ios-form-group .ios-upload-box .ios-upload-label::active {
+  opacity: 0.8;
+}
+.ios-form-group .ios-upload-box .ios-upload-show-image {
+  display: block;
+  padding: 10px;
+}
+.ios-form-group .ios-upload-box .ios-upload-show-image p {
+  font-size: 12px;
+  color: #999;
+}
+.ios-radio-box-single {
+  height: 100%;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+.ios-radio-box-single input[type="radio"] {
+  display: none;
+}
+.ios-radio-box-single input[type="radio"]:checked + .ios-radio-span-single {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  border-radius: 50%;
+}
+.ios-radio-box-single input[type="radio"]:checked + .ios-radio-span-single::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #3695ff;
+  background: url(../imgs/cile.png) center center no-repeat;
+  margin-right: 5px;
+}
+.ios-radio-box-single .ios-radio-span-single {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+.ios-radio-box-single .ios-radio-span-single::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #c7d2e0;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.ios-checkbox-box-single {
+  height: 100%;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+.ios-checkbox-box-single input[type="checkbox"] {
+  display: none;
+}
+.ios-checkbox-box-single input[type="checkbox"]:checked + .ios-checkbox-span-single {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+.ios-checkbox-box-single input[type="checkbox"]:checked + .ios-checkbox-span-single::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #3695ff;
+  background: url(../imgs/f.png) center center no-repeat;
+  margin-right: 5px;
+}
+.ios-checkbox-box-single .ios-checkbox-span-single {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+.ios-checkbox-box-single .ios-checkbox-span-single::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #c7d2e0;
+  margin-right: 5px;
+}
+.ios-title {
+  font-size: 12px;
+  color: #999;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+.ios-title .ios-tip-must {
+  color: #ff850a;
+  font-size: 12px;
+  height: 25px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+.ios-title .ios-tip-name {
+  height: 25px;
+  display: flex;
+  color: #333;
+  align-items: center;
+}
+.ios-button {
+  border: none;
+  font-size: 12px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 15px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background: #999;
+  color: #fff;
+  outline: none;
+}
+.ios-button:active {
+  opacity: 0.8;
+}
+.ios-button.ios-button-yellow {
+  background: #ff850a;
+}
+.ios-button.ios-button-blue {
+  background: #3695ff;
+}
+.ios-button.ios-button-1x {
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+}
+.ios-button.ios-button-2x {
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+}
+.ios-button.ios-button-3x {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+}
+.ios-eject-box {
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+}
+.ios-eject-box .ios-eject-wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-center-x {
+  width: 300px;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-center-2x {
+  width: 600px;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-center-3x {
+  width: 900px;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-center-4x {
+  width: 1200px;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-header {
+  background: #3695ff;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-header .ios-eject-name {
+  color: #fff;
+  padding: 0 10px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-header .ios-eject-close {
+  padding: 0 10px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: #fff;
+  user-select: none;
+  font-size: 28px;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-header .ios-eject-close:active {
+  opacity: 0.8;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-body {
+  background: #fff;
+  padding: 10px;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-body .ios-ask-title {
+  font-size: 14px;
+  color: #999;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-footer {
+  background: #f2f2f2;
+  padding: 0 10px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ios-eject-box .ios-eject-wrap .ios-eject-footer span {
+  margin-left: 10px;
+}

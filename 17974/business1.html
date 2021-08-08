@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tabs</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<style>
+			blockquote {
+				margin-top: 10px;
+			}
+			.layui-show{
+				text-align: center;
+				padding: 20px;
+			}
+			.layui-show p{
+				padding: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="padding: 15px;" class="layui-anim layui-anim-upbit">
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<p>即将发起“更改服务密码”的线上客服业务流程</p>
+					<div><span>业务费用</span><input type="text" value="5" style="width:35px;height: 20px;"/>元/笔</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+		layui.use(['element', 'layer'], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			element.on('tab(demo1)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+			element.on('tab(demo2)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+
+			});
+
+		});
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+			laydate.render({
+				elem: '#test12',
+				format: 'dd/MM/yyyy'
+			});
+		});
+	</script>
+
+</html>

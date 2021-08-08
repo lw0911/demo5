@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="XXX" />
+		<!-- 作者 -->
+		<meta name="revised" content="XXX.v3, 2019/05/01" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>XXX出品</title>
+
+		<!-- 公共样式 开始 -->
+		<link rel="shortcut icon" href="../../images/favicon.ico"/>
+		<link rel="bookmark" href="../../images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../../fonts/iconfont.css">
+		<script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../js/base.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+	    <!--[if lt IE 9]>
+	      	<script src="../../framework/html5shiv.min.js"></script>
+	      	<script src="../../framework/respond.min.js"></script>
+	    <![endif]-->
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script src="../../framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<script src="../../framework/printThis.js"></script><!-- 打印插件 -->
+		<link rel="stylesheet" type="text/css" href="../../css/base_fontSize.css"><!-- 内容页字体大小 -->
+		<!-- 公共样式 结束 -->
+		
+		<!-- zTree 开始 -->
+		<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+		<script type="text/javascript" src="../../framework/jquery.ztree.core.js"></script>
+		<script type="text/javascript" src="../../framework/jquery.ztree.excheck.js"></script>
+		<!-- zTree 结束 -->
+		
+
+	</head>
+
+	<body>
+		<div class="cBody">
+			<div class="console">
+				<a id="checkAll" class="layui-btn layui-btn-sm" href="#">全选</a>
+				<a id="checkReverse" class="layui-btn layui-btn-sm" href="#">反选</a>
+				<a id="checkAllFalse" class="layui-btn layui-btn-sm" href="#">取消</a>
+				<a id="checkOpen" class="layui-btn layui-btn-sm layui-btn-normal" href="#">展开</a>
+				<a id="checkClose" class="layui-btn layui-btn-sm layui-btn-normal" href="#">收起</a>
+				<a class="layui-btn layui-btn-sm layui-btn-danger" href="#">确认</a>
+			</div>
+			<ul id="powerMenu" class="ztree"></ul>
+		</div>
+		<SCRIPT>
+	
+			var zNodes =[
+				{ id:1, pId:0, name:"代理管理", open:false},
+				{ id:11, pId:1, name:"代理添加"},
+				{ id:12, pId:1, name:"代理列表"},
+				{ id:2, pId:0, name:"商品管理", checked:false, open:false},
+				{ id:21, pId:2, name:"基本商品库"},
+				{ id:22, pId:2, name:"添加商品"},
+				{ id:23, pId:2, name:"分类列表"},
+				{ id:3, pId:0, name:"商品管理"},
+				{ id:31, pId:3, name:"基本商品库"},
+				{ id:32, pId:3, name:"添加商品"},
+				{ id:33, pId:3, name:"分类列表"},
+				{ id:4, pId:0, name:"运营管理"},
+				{ id:41, pId:4, name:"广告管理"},
+				{ id:42, pId:4, name:"代理销售统计"},
+				{ id:43, pId:4, name:"分管销售统计"},
+				{ id:44, pId:4, name:"日销售统计"},
+				{ id:45, pId:4, name:"客户订单统计"},
+				{ id:5, pId:0, name:"财务管理"},
+				{ id:51, pId:5, name:"代理财务管理"},
+				{ id:52, pId:5, name:"财务结算"},
+				{ id:53, pId:5, name:"提现审核"},
+				{ id:54, pId:5, name:"结算单"},
+				{ id:55, pId:5, name:"平台收入"},
+				{ id:6, pId:0, name:"系统设置"},
+				{ id:61, pId:6, name:"组织机构管理"},
+				{ id:62, pId:6, name:"菜单管理"},
+				{ id:63, pId:6, name:"角色管理"},
+				{ id:64, pId:6, name:"意见反馈"}
+			];
+			var setting = {
+				check: {
+					enable: true,
+					chkboxType: { "Y" : "ps", "N" : "ps" }
+				},
+				data: {
+					simpleData: {
+						enable: true
+					}
+				},
+				view: {
+					showIcon: false
+				}
+			};
+			
+			$(document).ready(function(){
+				$.fn.zTree.init($("#powerMenu"), setting, zNodes);
+		    	$("#checkAll").bind("click", function(){
+			        var zTree = $.fn.zTree.getZTreeObj("powerMenu");
+			        zTree.checkAllNodes(true);
+		    	});
+		    	$("#checkAllFalse").bind("click", function(){
+			        var zTree = $.fn.zTree.getZTreeObj("powerMenu");
+			        zTree.checkAllNodes(false);
+		    	});
+		    	$("#checkOpen").bind("click", function(){
+			        var zTree = $.fn.zTree.getZTreeObj("powerMenu");
+			        zTree.expandAll(true);
+		    	});
+		    	$("#checkClose").bind("click", function(){
+			        var zTree = $.fn.zTree.getZTreeObj("powerMenu");
+			        zTree.expandAll(false);
+		    	});
+		    	$("#checkReverse").bind("click", checkReverse);
+		    	
+			});
+			
+			//zTree反选功能
+		    function checkReverse() {
+				var zTree_Menu = $.fn.zTree.getZTreeObj("powerMenu");
+		        var allNodes = zTree_Menu.getNodes();//获取所有节点
+		        var nodes = zTree_Menu.transformToArray(allNodes); //转变为数组
+		        console.log(nodes)
+		        $.each(nodes, function(index, node) {
+		        	if(node.checked){
+		                node.checked = false;  //设为选中
+		        	}else{
+		                node.checked = true;  //设为选中
+		        	}
+		            zTree_Menu.updateNode(node);//更新状态
+		        });
+		        //检测二级是否被选中，如果被选中，则把一级选中
+		        
+		        zTree_Menu.expandAll(true);//展开整棵树
+		    }
+			
+		</SCRIPT>
+	</body>
+
+</html>

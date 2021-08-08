@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>苹果官网</title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+</head>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+	.main {
+		width: 100%;
+		height: 1250px;
+		background: #EAEAEA; 
+	}
+		.adv {
+			width: 100%;
+			height: 45px;
+			background: #444444;
+		}
+		.adv span {
+			position: relative;
+			top: 15px;
+			left: 83%;
+			color: #A8A8AA;
+			font-size: 12px;
+		}
+	.nav {
+		width: 100%;
+		height: 40px;
+		background: rgba(2,2,2,1);
+	}
+		.nav img {
+			width: 40px;
+			height: 40px;
+		}
+		.nav ul {
+			margin-left: 150px;
+		}
+		.nav ul li {
+			width: 70px;
+			height: 40px;
+			margin-left: 50px;
+			line-height: 40px;
+			float: left;
+			list-style: none;
+			color: #ADADAD;
+		}
+			.nav ul li:hover {
+				color: #F3F3F3;
+				cursor: pointer;
+			}
+	.lun {
+		width: 100%;
+		height: 520px;
+		overflow: hidden;
+	}
+		.lun img {
+			float: left;
+			width: 100%;
+			height: 100%;
+		}
+		.div {
+			position: absolute;
+			left: 0px;
+			top: 85px;
+			width: 100%;
+			height: 160px;
+			display: none;
+			color: white;
+		}
+		.d1 {
+			background: #F29D30;
+		}
+			.font {
+				font-size: 45px;
+				margin: 30px 0px 10px 560px;
+			}
+			.d1 span {
+				font-size: 24px;
+				margin-left: 220px;
+			}
+		.d3 {
+			color: black;
+		}
+			.d3 .font {
+				width: 150px;
+				height: 70px;
+				background: url(images/d3.png) no-repeat;
+				background-size: 100%;
+			}
+			.d3 span {
+				font-size: 24px;
+				margin-left: 560px;
+			}
+		.d4 {
+			color: white;
+		}
+			.d4 span {
+				font-size: 35px;
+				margin-left: 500px;
+			}
+	.line {
+		position: absolute;
+		left: 520px;
+		top: 560px;
+	}
+		.line ul li {
+			list-style: none;
+			float: left;
+			width: 50px;
+			height: 3px;
+			margin-left: 10px;
+		}
+		.frist ul li {
+			background: #DBDBDB;
+		}
+		.second ul li {
+			width: 0px;
+			background: gray;
+		}
+	.table {
+		width: 100%;
+		height: 200px;
+	}
+		.pic img{
+			float: left;
+			width: 24.6%;
+			height: 196px;
+			border: 2px solid white; 
+			transition:1s;
+		}
+		.pic img:hover {
+			cursor: pointer;
+			transform:scale(1.1);
+		}
+	.footer {
+		margin: auto;
+		width: 1000px;
+		height: 445px;
+	}
+		.foot_top {
+			font-size: 12px;
+			line-height: 50px;
+			color: gray;
+			height: 50px;
+			border-bottom: 1px solid #F5F5F5;
+		}
+		.foot_list {
+			margin-top: 30px;
+			width: 100%;
+			height: 200px;
+		}
+			.l_list {
+				width: 20%;
+				height: 100%;
+				float: left;
+			}
+			.l_list ul li {
+				margin-top: 3px;
+				font-size: 12px;
+				list-style: none;
+				color: #707070;
+			}
+			.l_list ul li:hover {
+				cursor: pointer;
+				text-decoration: underline;
+				color: black;
+			}
+			.l_list .l_title {
+				color: black;
+			}
+			.l_list .l_title:hover {
+				cursor: "";
+				text-decoration: none;
+			}
+		.foot_top span {
+			color: #0070C9;
+		}
+		.bottom {
+			line-height: 18px;
+			color: #707070;
+			font-size: 11px;
+		}
+		.log {
+			width: 50px;
+			position: relative;
+			top: -30px;
+			left: 950px;
+			color: black;
+			font-size: 11px;
+		}
+</style>
+<body>
+	<div class="main">
+		<div class="adv">
+			<span><广告></span>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><img src="images/logo.png"/></li>
+				<li>Mac</li>
+				<li>ipad</li>
+				<li>iphone</li>
+				<li>Watch</li>
+				<li>Music</li>
+				<li>技术支持</li>
+			</ul>
+		</div>
+		<div class="lun">
+			<img src="images/lun1.jpg"/>
+			<div class="div d1">
+				<div class="font">新年制造。</div>
+				<span>新春开新意，我们邀请了几位艺术家使用APPLE产品来创作年画，重新演绎这一春节传统。</span>
+			</div>
+			<img src="images/lun2.jpg"/>
+			<div class="div d2">
+				<div class="font">iphone<br>7,在此</div>
+			</div>
+			<img src="images/lun3.jpg"/>
+			<div class="div d3">
+				<div class="font"></div>
+			</div>
+			<img src="images/lun4.jpg"/>
+			<div class="div d4">
+				<div class="font">MacBook Pro</div>
+				<span>一身才华，一触，即发。</span>
+			</div>
+		</div>
+		<div class="line frist">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="line second">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="table">
+			<div class="pic">
+				<img src="images/pic1.jpg">
+			</div>
+			<div class="pic">
+				<img src="images/pic2.jpg">
+			</div>
+			<div class="pic">
+				<img src="images/pic3.jpg">
+			</div>
+			<div class="pic">
+				<img src="images/pic4.jpg">
+			</div>
+		</div>
+		<div class="footer">
+			<div class="foot_top">双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。</div>
+			<div class="foot_list">
+				<div class="l_list">
+					<ul>
+						<li class="l_title">选购及了解</li>
+						<li>mac</li>
+						<li>ipad</li>
+						<li>iphone</li>
+						<li>Watch</li>
+						<li>Music</li>
+						<li>iTunes</li>
+						<li>iPod</li>
+						<li>配件</li>
+					</ul>
+				</div>
+				<div class="l_list">
+					<ul>
+						<li class="l_title">Apple store 商店</li>
+						<li>查找零售店</li>
+						<li>Genius Bar 天才吧</li>
+						<li>讲座和学习</li>
+						<li>青少年活动</li>
+						<li>Apple Store App</li>
+						<li>翻新和优惠</li>
+						<li>分期付款</li>
+						<li>重复使用和循环利用</li>
+						<li>订单状态</li>
+						<li>选购帮助</li>
+					</ul>
+				</div>
+				<div class="l_list">
+					<ul>
+						<li class="l_title">选购及了解</li>
+						<li>mac</li>
+						<li>ipad</li>
+						<li>iphone</li>
+						<li>Watch</li>
+						<li>Music</li>
+						<li>iTunes</li>
+						<li>iPod</li>
+						<li>配件</li>
+					</ul>
+				</div>
+				<div class="l_list">
+					<ul>
+						<li class="l_title">教育应用</li>
+						<li>查找零售店</li>
+						<li>Genius Bar 天才吧</li>
+						<li>讲座和学习</li>
+						<li>青少年活动</li>
+						<li>Apple Store App</li>
+						<li>翻新和优惠</li>
+						<li>分期付款</li>
+						<li>重复使用和循环利用</li>
+						<li>订单状态</li>
+						<li>选购帮助</li>
+					</ul>
+				</div>
+				<div class="l_list">
+					<ul>
+						<li class="l_title">关于Apple</li>
+						<li>mac</li>
+						<li>ipad</li>
+						<li>iphone</li>
+						<li>Watch</li>
+						<li>Music</li>
+						<li>iTunes</li>
+						<li>iPod</li>
+						<li>配件</li>
+					</ul>
+				</div>
+			</div>
+			<div class="foot_top">
+				更多选购方式：前往 <span>Apple Store 零售店</span>，致电 400-666-8800 或查找在你附近的<span>授权经销商</span>。
+			</div>
+			<div class="bottom">
+				Copyright © 2017 Apple Inc. 保留所有权利。隐私政策 使用条款 销售政策 法律信息 网站地图<br>
+				京公安网安备 11010502008968 京ICP备10214630
+			</div>
+			<div class="log"><img src="images/16.png"> 中国</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		var i = 0;
+		lunBo();
+		function lunBo() {
+			$(".lun >img").hide();
+			$(".div").hide();
+			$(".div").eq(i).show("fold",1000);
+			$(".lun >img").eq(i).show("drop",500);
+			$(".second > ul > li").eq(i).animate({
+				width:"50px"
+			},8000);
+			++i;
+			if(i > 3){
+				i=0;
+				function delay(){
+					$(".second > ul > li").animate({
+						width:"0px"
+					},0)
+				}
+				setTimeout(delay,8000);
+				}
+		}
+		setInterval(lunBo,8500);
+	})
+</script>

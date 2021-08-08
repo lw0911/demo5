@@ -1,0 +1,188 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by dede58.com/" /><title>个人设置</title>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="Assets/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="Assets/css/grsz.css">
+<script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabBox_sz .tabCont_sz:first").css("display","block");
+	$(".tabBox_sz .tabNav_sz li").click(function(){
+		$(this).siblings("li").removeClass("now");
+		$(this).addClass("now");
+		$(this).parents(".tabBox_sz").find(".tabCont_sz").css("display","none");
+		var i=$(this).index();
+		$(this).parents(".tabBox_sz").find(".tabCont_sz:eq("+i+")").css("display","block");
+	});
+})
+</script>
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="Assets/css/ie.css"/>
+<script type="text/javascript" src="Assets/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="Assets/js/html5.js"></script>
+<style type="text/css">
+body{
+	behavior:url(css3pie.htc);
+    behavior:url(csshover.htc);
+    
+}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="grsz">
+	<div class="grsz_t">
+    	<span>个人设置</span>
+        <div class="close">&nbsp;</div>
+        <div class="toux">
+        	<div class="y139">&nbsp;</div>
+        	<img src="Assets/upload/pic11.jpg" alt=""/>
+            <a href="" class="edit">&nbsp;</a>
+        </div>
+    </div>
+	<form action="" method="post">
+	<div class="tabBox_tsz">
+        <div class="tabBox_sz">
+          <ul class="tabNav_sz">
+            <li class="now">基本信息</li>
+            <li>修改密码</li>
+          </ul>
+          <div class="tabCont_sz" style="display:block;">
+            <!--基本信息-->
+            <ul class="xx_ctn">
+            	<li class="name clearfix">
+                	<span class="ctn_l">用户名：</span>
+                    <div class="gr_ctnr">
+                    	<input name="" type="text" value="xxliang">
+                    </div>
+                </li>
+                <li class="email clearfix">
+                	<span class="ctn_l">邮箱：</span>
+                    <div class="gr_ctnr">
+                        <input name="" type="text" value="94291698@qq.com">
+                        <a href="">验证邮箱</a>
+                    </div>
+                </li>
+                <li class="name clearfix">
+                	<span class="ctn_l">个性签名：</span>
+                    <div class="gr_ctnr">
+                    	<input name="" type="text">
+                    </div>
+                </li>
+                <li class="realname clearfix">
+                	<span class="ctn_l">真是姓名：</span>
+                    <div class="gr_ctnr">
+                    	<input name="" type="text">
+                    </div>
+                </li>
+                <li class="sex clearfix">
+                	<span class="ctn_l">性别：</span>
+                    <div class="gr_ctnr">
+                        <span>
+                            <input name="sex" type="radio" value="" checked="checked">
+                            <em>男</em>
+                        </span>
+                        <span>
+                            <input name="sex" type="radio" value="">
+                            <em>女</em>
+                        </span>
+                        
+                        <div class="yins clearfix">
+                            <span class="ctn_l">隐私：</span>
+                            <div class="yins_xz">
+                                <span>
+                                    所有人可见
+                                    <em>&nbsp;</em>
+                                </span>
+                                <ul>
+                                    <li><a href="">仅朋友可见</a></li>
+                                    <li><a href="">仅自己可见</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="address clearfix">
+                	<span class="ctn_l">地址：</span>
+                    <div class="gr_ctnr clearfix">
+                    	<div class="lei">
+                            <span>
+                                <strong>广东</strong>
+                                <em>&nbsp;</em>
+                            </span>
+                            <ul>
+                                <li><a href="">广东</a></li>
+                                <li><a href="">广西</a></li>
+                                <li><a href="">湖南</a></li>
+                            </ul>
+                        </div>
+                        <div class="lei">
+                            <span>
+                                <strong>深圳</strong>
+                                <em>&nbsp;</em>
+                            </span>
+                            <ul>
+                                <li><a href="">广州</a></li>
+                                <li><a href="">东莞</a></li>
+                                <li><a href="">佛山</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="num clearfix">
+                	<span class="ctn_l">社交账号：</span>
+                    <div class="gr_ctnr">
+                        <span><img src="Assets/images/icon34.png" alt=""/></span>
+                        <span><img src="Assets/images/icon35.png" alt=""/></span>
+                        <input name="" type="text">
+                        <a href="">添加</a>
+                    </div>
+                </li>
+                <li class="shuom clearfix">
+                	<span class="ctn_l">个人说明：</span>
+                    <div class="gr_ctnr">
+                    	<textarea name="" cols="" rows=""></textarea>
+                    </div>
+                </li>
+            </ul>
+            <div class="sav">
+            	<a href="">保存</a>
+            </div>
+            <!--基本信息-->
+          </div>
+          <div class="tabCont_sz">
+          	<!--修改密码-->
+             <ul class="xx_ctn">
+            	<li class="name clearfix">
+                	<span class="ctn_l">原密码：</span>
+                    <div class="gr_ctnr">
+                    	<input name="" type="text" value="xxliang">
+                    </div>
+                </li>
+                <li class="name clearfix">
+                	<span class="ctn_l">新密码：</span>
+                    <div class="gr_ctnr">
+                    	<input name="" type="password">
+                    </div>
+                </li>
+                <li class="name clearfix">
+                	<span class="ctn_l">确认新密码：</span>
+                    <div class="gr_ctnr">
+                    	<input name="" type="password">
+                    </div>
+                </li>
+             </ul>
+             <div class="sav">
+            	<a href="">确定</a>
+            </div>
+            <!--修改密码-->
+          </div>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

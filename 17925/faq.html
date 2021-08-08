@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap Admin</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap-responsive.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
+<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+<script src="lib/jquery-1.8.1.min.js" type="text/javascript"></script>
+<!-- Demo page code -->
+<style type="text/css">
+    #line-chart {
+        height:300px;
+        width:800px;
+        margin: 0px auto;
+        margin-top: 1em;
+    }
+    .brand { font-family: georgia, serif; }
+    .brand .first {
+        color: #ccc;
+        font-style: italic;
+    }
+    .brand .second {
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--<![endif]--> 
+<body> 
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <ul class="nav pull-right">
+                    <li id="fat-menu" class="dropdown">
+                        <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i> Jack Smith
+                            <i class="icon-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">设置</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="sign-in.html">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="brand" href="index.html"><span class="first">你的</span> <span class="second">公司</span></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                 <div class="sidebar-nav">
+                     <div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i class="icon-dashboard"></i>仪表盘</div>
+                     <ul id="dashboard-menu" class="nav nav-list collapse in">
+                        <li><a href="index.html">首页</a></li>
+                        <li ><a href="users.html">样本列表</a></li>
+                        <li ><a href="user.html">项目样本</a></li>
+                        <li ><a href="gallery.html">画廊</a></li>
+                        <li ><a href="calendar.html">日历</a></li>
+                        <li class="active"><a href="faq.html">常见问题解答</a></li>
+                        <li ><a href="help.html">帮助</a></li>
+                     </ul>
+                     <div class="nav-header" data-toggle="collapse" data-target="#accounts-menu"><i class="icon-briefcase"></i>账户<span class="label label-info">+10</span></div>
+                     <ul id="accounts-menu" class="nav nav-list collapse in">
+                        <li ><a href="sign-in.html">登录</a></li>
+                        <li ><a href="sign-up.html">注册</a></li>
+                        <li ><a href="reset-password.html">重置密码</a></li>
+                     </ul>
+                     <div class="nav-header" data-toggle="collapse" data-target="#settings-menu"><i class="icon-exclamation-sign"></i>错误页面</div>
+                     <ul id="settings-menu" class="nav nav-list collapse in">
+                        <li ><a href="403.html">403 页面</a></li>
+                        <li ><a href="404.html">404 页面</a></li>
+                        <li ><a href="500.html">500 页面</a></li>
+                        <li ><a href="503.html">503 页面</a></li>
+                     </ul>
+                     <div class="nav-header" data-toggle="collapse" data-target="#legal-menu"><i class="icon-legal"></i>法律</div>
+                     <ul id="legal-menu" class="nav nav-list collapse in">
+                        <li ><a href="privacy-policy.html">隐私政策</a></li>
+                        <li ><a href="terms-and-conditions.html">条款和条件</a></li>
+                     </ul>
+                 </div>
+            </div>
+        	<div class="span9">
+                <div class="faq-content">
+                    <h1 class="page-title">常见问题解答</h1>
+                    <div class="well">
+                        <h2>最常问的</h2>
+                        <ol>
+                            <li><a href="#q1">如果我有一个问题？</a></li>
+                            <li><a href="#q2">我在哪里得到支持？</a></li>
+                            <li><a href="#q3">解决问题需要多长时间？</a></li>
+                            <li><a href="#q4">谁能帮助我？</a></li>
+                            <li><a href="#q5">你在哪里？</a></li>
+                        </ol>
+                        <h2>关于服务</h2>
+                        <ol>
+                            <li><a href="#q11">多少钱？</a></li>
+                            <li><a href="#q12">我是每月还是每年？</a></li>
+                            <li><a href="#q13">你有什么服务水平？</a></li>
+                            <li><a href="#q14">你如何保护你的数据？</a></li>
+                            <li><a href="#q15">我可以联系广告吗？</a></li>
+                            <li><a href="#q16">我可以安装自定义字体吗？</a></li>
+                            <li><a href="#q17">我什么时候结束？</a></li>
+                            <li><a href="#q18">我在哪里可以找到一个自定义设计？</a></li>
+                        </ol>
+                        <hr>
+                        <h2>最常见的问题</h2>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i>顶部</a>
+                        <h3 id="q1">如果我有一个问题?</h3>
+                        <p>igernut鳄梨猫耳菊甜菜甜菜根香菜JíCama水芹。沙漠葡萄树蕃茄萝卜青菜荸荠防风蒲公英水芹葫芦甜椒鹰嘴蓍草大头菜蚕豆菠菜豌豆。西葫芦海甘蓝椒葱银甜菜树蕃茄。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q2">我在哪里得到支持?</h3>
+                        <p>沙漠葡萄酢浆草葡萄葫芦南瓜土荆芥玉米紫菜豌豆大蒜大蒜沙漠葡萄干玉米莲藕。南洋杉坚果bitterleaf瓜裙带菜卷心甜菜荸荠玉米韭菜小豆萝卜饭豆竹笋克旺芋头南瓜番茄。番茄卷心繁缕芜菁甘蓝甜菜甜椒茄子胡萝卜卡卡杜李蓍草鹰嘴tigernut塞拉利昂bologi秋葵豌豆caulie葡萄。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q3">解决问题需要多长时间?</h3>
+                        <p>南瓜甘蓝甜菜扁豆蒜泥茄子小豆马铃薯洋葱花椰菜芹菜。饭豆芋小松茴香沙漠葡萄干甜辣椒芥笋紫菜罟绿豆猫耳菊蒜黑眼豌豆。小松荸荠辣根裙带菜大葱甜菜草原萝卜茴香克旺克。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q4">谁能帮助我?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q5">你在哪里?</h3>
+                        <p>甜椒黄瓜茄子空心菜caulie克旺。小豆扁豆茄子青椒小松布鲁塞尔发芽大豆番茄洋葱。西葫芦南瓜土豆茴香巴雅坚果甘蓝牛皮菜。布鲁塞尔菜葫芦洋葱小松蚕豆绿豆花生豆海甘蓝菜芦笋番茄大葱猫耳菊。</p>
+                        <hr>
+                        <h2>关于服务</h2>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q11">多少钱?</h3>
+                        <p>igernut鳄梨猫耳菊甜菜甜菜根香菜JíCama水芹。沙漠葡萄树蕃茄萝卜青菜荸荠防风蒲公英水芹葫芦甜椒鹰嘴蓍草大头菜蚕豆菠菜豌豆。西葫芦海甘蓝椒葱银甜菜树蕃茄。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q12">我是每月还是每年?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q13">你有什么服务水平？</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q14">你如何保护你的数据?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q15">我可以联系广告吗?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q16">我可以安装自定义字体吗?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q17">我什么时候结束?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                        <a href="#" style="float: right; line-height: 1.25em; display: inline-block; padding: .75em 0em;"><i class="icon-circle-arrow-up"></i> 顶部</a>
+                        <h3 id="q18">我在哪里可以找到一个自定义设计?</h3>
+                        <p>玉米epazote蚕豆大白菜萝卜冬天马齿苋马齿苋属（豆科）种子薤果岭夏季绿豆饭豆塞拉利昂bologi jícama竹笋。萝卜果岭amaranth冻僵的冬天马齿苋草原萝卜豌豆葡萄海莴苣菊苣芋头。车前草的卡卡杜瓜海莴苣罟大蒜菊苣。</p>
+                    </div>
+                </div>
+        	</div>
+    	</div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2020 <a href="#">Portnine</a></p>
+    </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+
+

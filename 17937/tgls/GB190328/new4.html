@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="XXX" />
+		<!-- 作者 -->
+		<meta name="revised" content="XXX.v3, 2019/05/01" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>XXX出品</title>
+
+		<!-- 公共样式 开始 -->
+		<link rel="shortcut icon" href="../../images/favicon.ico"/>
+		<link rel="bookmark" href="../../images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../../fonts/iconfont.css">
+		<script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../js/base.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+	    <!--[if lt IE 9]>
+	      	<script src="../../framework/html5shiv.min.js"></script>
+	      	<script src="../../framework/respond.min.js"></script>
+	    <![endif]-->
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script src="../../framework/cframe.js"></script><!-- 仅供所有子页面使用 -->
+		<script src="../../framework/printThis.js"></script><!-- 打印插件 -->
+		<link rel="stylesheet" type="text/css" href="../../css/base_fontSize.css"><!-- 内容页字体大小 -->
+		<!-- 公共样式 结束 -->
+		
+		<link rel="stylesheet" type="text/css" href="../../css/formRL.css">
+		
+		<!-- 滚动条插件 -->
+		<link href="../../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+		<script src="../../framework/jquery-ui.min.js"></script>
+		<script src="../../framework/jquery.mousewheel.min.js"></script>
+		<script src="../../framework/jquery.mCustomScrollbar.min.js"></script>
+	</head>
+
+	<body>
+		<div class="cBody">
+			<form id="addForm" class="layui-form layui-col-md8" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">所属分管</label>
+					<div class="layui-input-inline shortInput">
+	                    <select lay-filter="cityid">
+	                        <option value="">请选择所属分管</option>
+	                    </select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">广告类型</label>
+					<div class="layui-input-inline shortInput">
+	                    <select lay-filter="cityid">
+	                        <option value="">请选择广告类型</option>
+	                    </select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">广告头图</label>
+					<div class="layui-input-block">
+						<button type="button" class="layui-btn layui-btn-warm" id="ggtt">上传图片</button>
+						<font>图片规范：750x328像素，200k以内</font>
+					</div>
+				</div>
+				<script>
+					layui.use(['upload','laydate'], function() {
+	  					var laydate = layui.laydate;
+						var $ = layui.jquery,
+							upload = layui.upload;
+	
+						//普通图片上传
+						upload.render({
+							elem: '#ggtt',
+							url: '/upload/',
+							done: function(res) {
+								//如果上传失败
+								if(res.code > 0) {
+									return layer.msg('上传失败');
+								}
+								//上传成功
+							}
+						});
+					});
+				</script>
+				<div class="layui-form-item">
+					<label class="layui-form-label">广告名称</label>
+					<div class="layui-input-block">
+						<input type="text" required lay-verify="required" placeholder="请输入广告名称" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">内容</label>
+					<div class="layui-input-block">
+						<textarea placeholder="请输入介绍内容，可为空，最多不超过5000个字" class="layui-textarea"></textarea>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">选择商品</label>
+					<div class="layui-input-block">
+						<button type="button" class="layui-btn layui-btn-normal">添加商品</button>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<table class="layui-table">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>商品名称</th>
+									<th>商品图片</th>
+									<th>规格</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>小白菜</td>
+									<td><img src="../../images/goodsPIC1.png" width="30" height="30"></td>
+									<td>¥10.00/斤</td>
+									<td><a class="layui-btn layui-btn-xs" href="#">删除</a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>小白菜</td>
+									<td><img src="../../images/goodsPIC1.png" width="30" height="30"></td>
+									<td>¥10.00/斤</td>
+									<td><a class="layui-btn layui-btn-xs" href="#">删除</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">投放位置</label>
+					<div class="layui-input-inline shortInput">
+	                    <select name="cityid" id="cityid" lay-filter="cityid">
+	                        <option value="">请选择市</option>
+	                    </select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">广告视图</label>
+					<div class="layui-input-block">
+						<button type="button" class="layui-btn layui-btn-warm" id="ggst">上传图片</button>
+						<font>图片规范：686x300像素，200k以内</font>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label"></label>
+					<div class="layui-input-inline">
+						<img class="layui-upload-img" src="" id="ggst_pic" width="243">
+					</div>
+				</div>
+				<script>
+					layui.use(['upload','laydate'], function() {
+	  					var laydate = layui.laydate;
+						var $ = layui.jquery,
+							upload = layui.upload;
+	
+						//普通图片上传
+						upload.render({
+							elem: '#ggst',
+							url: '/upload/',
+							before: function(obj) {
+								//预读本地文件示例，不支持ie8
+								obj.preview(function(index, file, result) {
+									$('#ggst_pic').attr('src', result); //图片链接（base64）
+								});
+							},
+							done: function(res) {
+								//如果上传失败
+								if(res.code > 0) {
+									return layer.msg('上传失败');
+								}
+								//上传成功
+							}
+						});
+					});
+				</script>
+				
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit lay-filter="submitBut">立即提交</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+			
+			<!-- 我是一个手机模拟模块 -->
+			<div class="layui-col-md4">
+				<div class="phone">
+					<img src="../../images/iphone_bg.png" width="100%"/>
+					<div class="phone_con">
+						<div class="phone_top">
+							<i class="iconfont icon-dajiantouzuo"></i>
+							<font>餐厨专区</font>
+						</div>
+						<img src="../../images/phone_banner.jpg" width="100%" />
+						<div class="phone_text">
+							为了带给您更好的体验，《乱世王者》将于11月15日发布全新版本，各位主公可更新至最新版本1.2.66体验最新游戏内容，安卓版本将于15日进行更新，iOS版本也将在稍后更新，非常感谢大家对《乱世王者》的支持！性价比最高。
+						</div>
+						<div class="phone_goods">
+							<ul>
+								<li>
+									<img src="../../images/goodsPIC2.png" />
+									<div class="dis">
+										<h1>汇编</h1>
+										<p class="p1">￥1.65/袋(1斤)</p>
+										<p class="p2">￥1.65/斤</p>
+										<div class="but"><span>去购买</span></div>
+									</div>
+								</li>
+								<li>
+									<img src="../../images/goodsPIC2.png" />
+									<div class="dis">
+										<h1>汇编</h1>
+										<p class="p1">￥1.65/袋(1斤)</p>
+										<p class="p2">￥1.65/斤</p>
+										<div class="but"><span>去购买</span></div>
+									</div>
+								</li>
+								<li>
+									<img src="../../images/goodsPIC2.png" />
+									<div class="dis">
+										<h1>汇编</h1>
+										<p class="p1">￥1.65/袋(1斤)</p>
+										<p class="p2">￥1.65/斤</p>
+										<div class="but"><span>去购买</span></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<script>
+						$(function(){
+							$(".phone_con").mCustomScrollbar();
+						})
+					</script>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

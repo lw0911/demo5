@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="XXX" />
+		<!-- 作者 -->
+		<meta name="revised" content="XXX.v3, 2019/05/01" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>XXX出品</title>
+
+		<!-- 公共样式 开始 -->
+		<link rel="stylesheet" type="text/css" href="../../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../../fonts/iconfont.css">
+		<script type="text/javascript" src="../../framework/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../js/base.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
+		<!--[if lt IE 9]>
+	      	<script src="../../framework/html5shiv.min.js"></script>
+	      	<script src="../../framework/respond.min.js"></script>
+	    <![endif]-->
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script src="../../framework/cframe.js"></script>
+		<!-- 仅供所有子页面使用 -->
+		<script src="../../framework/printThis.js"></script>
+		<!-- 打印插件 -->
+		<link rel="stylesheet" type="text/css" href="../../css/base_fontSize.css">
+		<!-- 内容页字体大小 -->
+		<!-- 公共样式 结束 -->
+		
+		<link rel="stylesheet" type="text/css" href="../../css/complexForm.css">
+		
+		<!-- zTree 开始 -->
+		<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+		<script type="text/javascript" src="../../framework/jquery.ztree.core.js"></script>
+		<script type="text/javascript" src="../../framework/jquery.ztree.excheck.js"></script>
+		<!-- zTree 结束 -->
+
+	</head>
+
+	<body>
+		<div class="cBody">
+			<form class="layui-form" action="">
+				<table class="layui-table"  lay-skin="nob">
+					<colgroup>
+						<col width="100">
+						<col width="120">
+						<col width="220">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="tdRight">优惠券名称：</td>
+							<td colspan="2">
+								<input type="text" name="" placeholder="请输入优惠券名称" class="layui-input">
+							</td>
+							<td class="tipsText">限22个汉字，不能录入特殊字符</td>
+						</tr>
+						<tr>
+							<td class="tdRight">优惠券类型：</td>
+							<td>
+	      						<input type="radio" name="sex" value="满减券" title="满减券" checked>
+							</td>
+							<td>
+								<font class="full">满</font><input type="text" name="" placeholder="100" class="layui-input w40">
+								<font class="reduce">减</font><input type="text" name="" placeholder="20" class="layui-input w40">
+							</td>
+							<td class="tipsText">满减限额需大于0，同时立减金额要小于满减限额</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td>
+								<input type="radio" name="sex" value="折扣券" title="折扣券">
+	      						<i class="iconfont icon-tishi-copy tips" onmouseenter="getTips(this, '两种折扣设置仅能选其一')" onmouseleave="layer.closeAll('tips')"></i>
+							</td>
+							<td>
+								<font class="full">满</font><input type="text" name="" placeholder="100" class="layui-input w40">
+								<font class="reduce">减</font><input type="text" name="" placeholder="9.5" class="layui-input w40">
+								<input type="checkbox" name="" lay-skin="primary" checked>
+							</td>
+							<td class="tipsText">输入金额为0即不限额</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td>
+							</td>
+							<td>
+								<font class="full"></font><input type="text" name="" placeholder="9.5" class="layui-input w40">
+								<font class="reduce">折最高减</font><input type="text" name="" placeholder="9.5" class="layui-input w40"> 折
+								<input type="checkbox" name="" lay-skin="primary">
+							</td>
+							<td class="tipsText">输入金额为0即无优惠上限</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td>
+	      						<input type="radio" name="sex" value="现金券" title="现金券">
+							</td>
+							<td>
+								<font class="full"></font><input type="text" name="" placeholder="30" class="layui-input w40">
+								<font class="reduce">元</font>
+							</td>
+							<td class="tipsText">输入大于0的整数</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td class="tipsText" colspan="3">促销商品不能叠加使用所有优惠券</td>
+						</tr>
+						<tr>
+							<td class="tdRight">发放时间：</td>
+							<td colspan="2">
+								<input type="text" class="layui-input timeText" placeholder="年-月-日" id="ffTime1">
+								<font class="ffTimeLine">-</font>
+								<input type="text" class="layui-input timeText" placeholder="年-月-日" id="ffTime2">
+							</td>
+							<td class="tipsText">不能为空</td>
+						</tr>
+						<tr>
+							<td class="tdRight">发放方式：</td>
+							<td>
+	      						<input type="radio" name="radio1" value="自动" title="自动" checked>
+	      						<i class="iconfont icon-tishi-copy tips" onmouseenter="getTips(this, '达到以下条件系统自动发放')" onmouseleave="layer.closeAll('tips')"></i>
+							</td>
+							<td>
+	      						<input type="checkbox" name="" title="新注册账户" lay-skin="primary">
+							</td>
+							<td class="tipsText"></td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td>
+							</td>
+							<td>
+	      						<input type="checkbox" name="" title="第一次下单" lay-skin="primary">
+	      						<font class="full">满</font><input type="text" name="" placeholder="100" class="layui-input w40"><font class="reduce">元</font>
+							</td>
+							<td class="tipsText">输入金额为0即不限额</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td>
+							</td>
+							<td>
+	      						<input type="checkbox" name="" title="下单用户" lay-skin="primary">
+	      						<font class="full">满</font><input type="text" name="" placeholder="100" class="layui-input w40"><font class="reduce">元</font>
+							</td>
+							<td class="tipsText">输入金额为0即不限额</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td>
+							</td>
+							<td>
+	      						<input type="checkbox" name="" title="充值用户" lay-skin="primary">
+	      						<font class="full">充</font><input type="text" name="" placeholder="100" class="layui-input w40"><font class="reduce">元</font>
+							</td>
+							<td class="tipsText">输入大于0的整数</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="3">
+								<input type="radio" name="radio1" value="指定用户" title="指定用户">
+	      						<i class="iconfont icon-tishi-copy tips" onmouseenter="getTips(this, '后台的指定发放列表中选择客户后发放')" onmouseleave="layer.closeAll('tips')"></i>
+							</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="3">
+								<input type="radio" name="radio1" value="手动领取" title="手动领取">
+	      						<i class="iconfont icon-tishi-copy tips" onmouseenter="getTips(this, '用户在领券中心手动领取')" onmouseleave="layer.closeAll('tips')"></i>
+							</td>
+						</tr>
+						<tr>
+							<td class="tdRight">发放数量：</td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="限量" title="限量" checked>
+	      						<input type="text" name="" class="layui-input w40"><font class="reduce">张</font>
+							</td>
+							<td class="tipsText"></td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="不限量" title="不限量" checked>
+							</td>
+							<td class="tipsText"></td>
+						</tr>
+						<tr>
+							<td class="tdRight">发放数量：</td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="每个账户限" title="每个账户限" checked>
+	      						<input type="text" name="" placeholder="1" class="layui-input w40"><font class="reduce">张</font>
+							</td>
+							<td class="tipsText">输入大于0的整数</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="每个账户限每天" title="每个账户限每天" checked>
+	      						<input type="text" name="" placeholder="1" class="layui-input w40"><font class="reduce">张</font>
+	      						<i class="iconfont icon-tishi-copy tips" onmouseenter="getTips(this, '仅限“手动领取”时可选')" onmouseleave="layer.closeAll('tips')"></i>
+							</td>
+							<td class="tipsText">输入大于0的整数</td>
+						</tr>
+						<tr>
+							<td class="tdRight">有效期限：</td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="发放或领取当天有效" title="发放或领取当天有效" checked>
+							</td>
+							<td class="tipsText"></td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="发放或领取后N天有效" title="发放或领取后N天有效" checked>
+	      						<input type="text" name="" placeholder="60" class="layui-input w40"><font class="reduce">天</font>
+							</td>
+							<td class="tipsText">输入大于0的整数</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="某时段内有效" title="某时段内有效" checked>
+								<input type="text" class="layui-input timeText" placeholder="年-月-日" id="ffTime1">
+								<font class="ffTimeLine">-</font>
+								<input type="text" class="layui-input timeText" placeholder="年-月-日" id="ffTime2">
+							</td>
+							<td class="tipsText">不能为空</td>
+						</tr>
+						<tr>
+							<td class="tdRight">使用范围：</td>
+							<td colspan="2">
+	      						<input type="radio" name="radio1" value="全场通用" title="全场通用" checked>
+	      						<input type="radio" name="radio1" value="技术栈" title="类目">
+	      						<input type="radio" name="radio1" value="单品" title="单品">
+							</td>
+							<td class="tipsText"></td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="3" style="display: none;">
+								<ul id="powerMenu" class="ztree"></ul>
+								<script>
+									var zNodes =[
+										{ id:1, pId:0, name:"代理管理", open:false},
+										{ id:11, pId:1, name:"代理添加"},
+										{ id:12, pId:1, name:"代理列表"},
+										{ id:2, pId:0, name:"商品管理", checked:false, open:false},
+										{ id:21, pId:2, name:"基本商品库"},
+										{ id:22, pId:2, name:"添加商品"},
+										{ id:23, pId:2, name:"分类列表"},
+										{ id:3, pId:0, name:"商品管理"},
+										{ id:31, pId:3, name:"基本商品库"},
+										{ id:32, pId:3, name:"添加商品"},
+										{ id:33, pId:3, name:"分类列表"},
+										{ id:4, pId:0, name:"运营管理"},
+										{ id:41, pId:4, name:"广告管理"},
+										{ id:42, pId:4, name:"代理销售统计"},
+										{ id:43, pId:4, name:"分管销售统计"},
+										{ id:44, pId:4, name:"日销售统计"},
+										{ id:45, pId:4, name:"客户订单统计"},
+										{ id:5, pId:0, name:"财务管理"},
+										{ id:51, pId:5, name:"代理财务管理"},
+										{ id:52, pId:5, name:"财务结算"},
+										{ id:53, pId:5, name:"提现审核"},
+										{ id:54, pId:5, name:"结算单"},
+										{ id:55, pId:5, name:"平台收入"},
+										{ id:6, pId:0, name:"系统设置"},
+										{ id:61, pId:6, name:"组织机构管理"},
+										{ id:62, pId:6, name:"菜单管理"},
+										{ id:63, pId:6, name:"角色管理"},
+										{ id:64, pId:6, name:"意见反馈"}
+									];
+									var setting = {
+										check: {
+											enable: true,
+											chkboxType: { "Y" : "ps", "N" : "ps" }
+										},
+										data: {
+											simpleData: {
+												enable: true
+											}
+										},
+										view: {
+											showIcon: false
+										}
+									};
+									
+									$(document).ready(function(){
+										$.fn.zTree.init($("#powerMenu"), setting, zNodes);
+								    	$("#checkAll").bind("click", function(){
+									        var zTree = $.fn.zTree.getZTreeObj("powerMenu");
+									        zTree.checkAllNodes(true);
+								    	});
+								    	
+									});
+									
+								</script>
+							</td>
+							<td colspan="3">
+								<button class="layui-btn layui-btn-normal" onclick="updateBut()">添加商品</button>
+								<table class="layui-table" lay-skin="row" lay-even>
+									<colgroup>
+										<col width="150">
+										<col width="200">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>序号</th>
+											<th>商品名称</th>
+											<th>默认价格</th>
+											<th>规格单位</th>
+											<th>商品图片</th>
+											<th>操作</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>小白菜</td>
+											<td>￥5.8</td>
+											<td>斤</td>
+											<td><img src="../../images/goodsPIC1.png" width="20" height="20" onmouseenter="imgBig(this)" onmouseleave="imgSmall(this)"/></td>
+											<td>
+												<button class="layui-btn layui-btn-xs" onclick="updateBut()">删除</button>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>小白菜</td>
+											<td>￥5.8</td>
+											<td>斤</td>
+											<td><img src="../../images/goodsPIC2.png" width="20" height="20" onmouseenter="imgBig(this)" onmouseleave="imgSmall(this)"/></td>
+											<td>
+												<button class="layui-btn layui-btn-xs" onclick="updateBut()">删除</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="tdRight"></td>
+							<td colspan="3">
+						    	<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+						        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<script>
+			$(function() {
+
+				layui.use('laydate', function() {
+					var laydate = layui.laydate;
+			
+					//执行一个laydate实例
+					laydate.render({
+						elem: '#ffTime1' //指定元素
+					});
+			
+					//执行一个laydate实例
+					laydate.render({
+						elem: '#ffTime2' //指定元素
+					});
+				});
+			})
+		</script>
+	</body>
+
+</html>
