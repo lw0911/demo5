@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mr.郭/QQ:1007694939">
+    <title>会员注册</title>
+    <!--引入Font Awesome字体库样式表-->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <!--引入guojian.min.css组件样式表-->
+    <link rel="stylesheet" href="static/css/guojian.min.css">
+    <!--引入style.css自定义样式表-->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!--引入jquery.min.js组件脚本-->
+    <script src="static/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!--body部分开始-->
+    <div class="gj-dlzc">
+        <h3><img src="static/picture/logo2.png" alt="logo"></h3>
+		<h5>会员注册:</h5>
+        <form action="" method="post" onsubmit="return checkall()">
+            <input type="hidden" name="referer" value="">
+            <table cellpadding="0" cellspacing="1">
+                <input type="text" name="username" id="username" value="" placeholder="请输入用户名">
+                <input type="text" name="email" id="email" value="" placeholder="请输入e-mail">
+                <input type="password" name="password" id="password" value="" placeholder="请输入密码">
+                <input type="password" name="password2" id="password2" value="" placeholder="请再次输入密码">
+                <input type="text" name="code" id="code" value="" placeholder="验证码">
+                <div class="gjdl-zc">
+                    <img src="static/picture/code.jpg" onclick="this.src=this.src+'?'" title="看不清，换一张">
+                    <button type="submit" name="dosubmit" value="同意注册">立即注册</button>
+                </div>
+            </table>
+        </form>
+        <div class="gjdl-sx">
+            <span>已有账号？</span>
+            <a href="index.html" class="btn btn-qq"><i class="fa fa-user" aria-hidden="true"></i> 点击登录</a>
+            <a href="qq_login.html"><i class="fa fa-qq" aria-hidden="true"></i> QQ登录</a>
+        </div>
+        <a href="index.html" class="fan">返回首页</a>
+        <p>Powered by YzmCMS</p>
+    </div>
+
+
+    <!--引入guojian.min.js组件脚本-->
+    <script src="static/js/guojian.min.js" type="text/javascript"></script>
+    
+</body>
+
+</html>

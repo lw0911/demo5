@@ -1,0 +1,524 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>门禁系统-中控考勤系统-消费机-别墅对讲-巡更-指纹刷卡考勤</title>
+<meta name="Keywords" content="东莞考勤、东莞中控、中控东莞代理、东莞门禁、东莞XXX" />
+<meta name="Description" content="东莞XXX电子科技有限公司”是深圳市富安宝科技旗下单位，公司集智能楼宇，智能门锁，无线通讯的研发生产销售为一体的综合性企业。" />
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<link href="css/cityLayout.css" type="text/css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+/*文章详情页面*/
+.maps-menu {width:940px; height:25px; line-height:25px; margin:10px auto; border:1px solid #ccc; border-radius:3px; padding:5px 10px;}/*当前页面位置导航菜单*/
+.wz-box700 {width:748px; margin-right:10px; float:left; border:1px solid #ccc; border-radius:3px; padding:10px 0;}
+.wz-box700 .bt { width:728px; height:60px; line-height:50px; border-bottom:1px dotted #ccc; text-align:center; font-size:16px; font-weight:bold; padding:0 10px;}
+.wz-box700 .inf { width:728px; height:30px; line-height:30px; margin:10px 0;overflow:hidden;white-space: nowrap;text-overflow: ellipsis; font-size:12px; padding:0 10px;}
+.wz-box700 .inf span { margin-right:20px; color:#aaa;}
+.wz-box700 .inf span a{ color:#aaa; text-decoration:none;}
+.wz-box700 .next_prv{width:728px; height:35px; line-height:35px; border-top:1px dotted #ccc; margin-top:10px;padding:0 10px;}
+.wz-box700 .next_prv a{ width:320px; height:35px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+#content1 {padding:0 10px;overflow: hidden;width:728px;}
+#content1 img { max-width:728px;}
+
+.wz-list245 {width:200px; float:right; }
+.wz-list245 .wz-box{width:198px; border:1px solid #ccc; margin-bottom:10px;}
+.wz-list245 .wz-box .tit{height:40px; line-height:40px; width:198px; background:#EBEBEB; text-align:center; border-bottom:1px solid #ccc; font-size:16px; font-weight:bold;}
+.wz-list245 .wz-box ul li{width:178px; height:35px; line-height:35px; border-bottom:1px dotted #ccc; padding:0 10px 0 10px;overflow:hidden; font-size:14px;}
+.wz-list245 .wz-box ul li span{ padding:0 4px; background:#aaa; color:#fff; font-size:12px; margin-right:5px;}
+#content1 img{ max-width:100%;}
+#content1 table,td{ max-width:100%;}
+</style>
+<script type="text/javascript">
+//动态调整字体大小
+	function change_content1(size)
+	{document.getElementById('content1').style.fontSize=size+'px';}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+var browser = navigator.userAgent.toLowerCase(); 
+var isMobile = false; 
+for (var i=0; i<mobileAgent.length; i++){ if (browser.indexOf(mobileAgent[i])!=-1){ isMobile = true; 
+//alert(mobileAgent[i]); 
+location.href = 'wap';
+break; } } 
+</script>
+<div id="wh5"></div>
+<div id="w1k">
+	<div class="w960-box">
+    	<div class="wh20">
+        	<a href="wap">手机版</a> | <a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">收藏本站</a> | <a href="article_item.html">联系我们</a>
+        </div>
+        <div class="topbg-box">
+        	<div style="width:225px; height:130px; float:left;background:url(images/logo.png) no-repeat;"></div>
+            <div class="wz">
+            	<h1>智能门锁制造专家</h1>
+                <h2>500多家经销商共同见证</h2>
+            </div>
+            <div class="tel400">XXX</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+//加入收藏兼容360和IE6
+function shoucang(sTitle,sURL)
+{
+try
+{
+window.external.addFavorite(sURL, sTitle);
+}
+catch (e)
+{
+try
+{
+window.sidebar.addPanel(sTitle, sURL, "");
+}
+catch (e)
+{
+alert("抱歉，您的浏览器不支持此操作。 请使用按键 Ctrl+D 收藏。");
+}
+}
+}
+</script>
+<!--主导航菜单-->
+<div class="top-menu-box">
+	<ul>
+    	<li><a href="index.html">网站首页</a></li>
+    	<li>
+        	<a href="product.html">产品中心</a>
+            <div class="zi">
+            	<a href="product.html">酒店门锁系统</a>
+                <a href="product.html">豪华大门锁</a>
+                <a href="product.html">智能门锁</a>
+            </div>
+        </li>
+		<li><a href="article.html">工程案例</a></li>
+        <li>
+        	<a href="javascript:;">下载中心</a>
+            <div class="zi">
+            	<a href="article_item.html">说明下载</a>
+                <a href="article_item.html">驱动下载</a>
+            </div>
+        </li>
+        <li><a href="article_item.html">关于我们</a></li>
+        <li><a href="article.html">文章资讯</a></li>
+        <li><a href="article.html">招商加盟</a></li>
+        <li><a href="article.html">解决方案</a></li>
+        <li><a href="video.html">视频中心</a></li>
+        <li><a href="article_item.html">联系我们</a></li>
+    </ul>
+</div>
+<!--获取随机的内页广告图片-->
+<div class="ad960250">
+	<a href="#" ><img src="images/ad960250a.jpg" /></a>
+</div>
+<div class="search-box">
+	<div class="w960-box">
+    	<div class="w70">
+        	<span style="font-weight:bold;">热门搜索：</span>
+            <a href="product.html">中控指纹机</a>
+            <a href="product.html">东莞考勤</a>
+            <a href="product.html">中控东莞代理</a>
+            <a href="product.html">东莞门禁</a>
+            <a href="product.html">东莞门禁系统</a>
+            <a href="product.html">东莞门禁安装</a>
+            <a href="product.html">东莞楼宇对讲</a>
+        </div>
+        <div class="w30">
+       	  <form id="search" name="search" method="post" action="">
+            <input type="text" name="keyname" id="keyname" class="wbk">
+            <input type="image" name="imageField" id="imageField" class="cx">
+          </form>
+        </div>
+    </div><div class="clearfix"></div>
+</div>
+
+<div class="maps-menu"><a href="index.html">首页</a> - <a href="article.html">文章列表</a> - 查看详情</div>
+<div class="content_box">
+
+	<div class="wz-box700">
+    	<div class="bt">文章标题</div>
+        <div class="inf">
+        	<span>文章出处：某某某</span>
+        	<span>文章作者：小编</span>
+            <span>人气：568</span>
+            <span>发布日期：2016/1/23</span>
+            <span>字体：【<a href="javascript:change_content1(16)">大</a> <a href="javascript:change_content1(14)">中</a> <a href="javascript:change_content1(12)">小</a>】</span>
+        </div>
+        <div id="content1">
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<img src="images/20160721173748644864.jpg" align="left" /><span style="line-height:2.5;">东莞XXX信息科技有限公司（BlueNested Information Technology Co.ltd），是专门从事应用软件开发、通讯技术开发、IT产品分销及相关技术服务的高科技企业，致力于为客户提供从需求分析到系统集成、工程实施和售后服务等全面专业的 IT 综合服务。</span> 
+</p>
+<br />
+<br />
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">XXX拥有一支专业、敬业的技术团队，他们对企业管理、信息管理、电子商务、网络技术、软件开发等领域具有深刻的了解和丰富的经验，为客户提供大大小小的系统集成、软件开发和技术服务。XXX坚持以自主创新、诚信经营、共谋发展，致力于为企业客户提供深入和长期的顾问咨询、客户化定制开发及配套的系统服务。经过不断的探索和努力，公司研发了多个核心软件产品，如<span style="color:#0099FF;">XXX物流流转信息平台、旅游业业务调度平台、纸业分切管理系统</span>等软件产品，并在相关行业得到了实际应用，得到用户单位一致好评。</span><img src="images/20160721175522272227.jpg" align="right" /> 
+</p>
+<br />
+<br />
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">XXX建立了完善的客户服务体系，能为用户提供售前支持、咨询、方案设计、项目管理、软件研发、售后技术服务，为客户提供全方位的技术支持，我们承诺售前售后服务态度一致绝不变脸，技术咨询1个工作日内必定回复。</span> 
+</p>
+<br />
+<br />
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">企业使命：帮助客户提高管理并创造价值，为客户提供有价值的服务；</span> 
+</p>
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">经营理念：诚信经营、服务为本、改革创新、追求卓越；</span> 
+</p>
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">团队精神：团结互助、积极进取、勤于专研、尽心尽责、勇于创新；</span> 
+</p>
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">合作理念：共存、共享、共赢、共荣，始终为客户提供最佳的产品和最优质的服务；</span> 
+</p>
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;">客户的成功就是我们的成功，不断为客户提供最高性价比的产品及优质的系统解决方案，是我们始终不变的追求。XXX必将为客户创造更大的价值。</span> 
+</p>
+<p style="font-family:'Microsoft YaHei';font-size:16px;color:#999999;">
+	<span style="line-height:2.5;color:#FF0000;"><strong>积累财富是一个辛苦而又漫长的过程，您为此付出的努力虽然我们看不见但我们能体会到，因为同样的事情也在我们身上重复，所以--价格--我们从不玩虚的！</strong></span> 
+</p>
+<img src="images/20160721191675867586.jpg" alt="" />
+        </div>
+        <div style="width:728px;padding:0 10px;"><!--百度分享-->
+            <!-- Baidu Button BEGIN -->
+            <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="margin-top:20px;">
+                <span class="bds_more">分享到：</span>
+                <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+                <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+                <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+                <a href="#" title="分享到QQ收藏" class="bds_qq"></a>
+                <a href="#" title="分享到人人网" class="bds_renren"></a>
+                <a href="#" title="分享到网易微博" class="bds_t163"></a>
+                <a href="#" title="分享到百度云收藏" class="bds_baidu"></a>
+                <a href="#" title="分享到一键分享" class="bds_mshare"></a>
+                <a href="#" title="分享到百度贴吧" class="bds_tieba"></a>
+                <a href="#" title="分享到QQ好友" class="bds_sqq"></a>
+                <a href="#" title="分享到百度空间" class="bds_hi"></a>
+                <a href="#" title="分享到MSN" class="bds_msn"></a>
+                <a href="#" title="分享到蘑菇街" class="bds_mogujie"></a>
+                <a href="#" title="分享到邮件分享" class="bds_mail"></a>
+                <a href="#" title="分享到复制网址" class="bds_copy"></a>
+                <a href="#" title="分享到打印" class="bds_print"></a>
+                <span class="bds_more">更多</span>
+                <a title="累计分享0次" href="#" class="shareCount">0</a>
+            </div>
+            <!-- Baidu Button END -->
+        </div><div style=" clear:both;"></div>
+        <div class="next_prv">
+			<a href="article_item.html" style="float:left;">上一篇：智能家居的未来发展方向是什么？</a>
+            <a href="article_item.html" style="float:right; text-align:right;">下一篇：生物识别技术应用将会越来越广</a>
+        </div>
+        <div style=" clear:both;"></div>
+<!--相关资讯-->
+<div class="heng-public">
+    <div class="tit"><a href="article.html" style="float:left;">相关资讯</a><a href="article.html" style="float:right;">更多...</a></div>
+        <ul>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+            <li><a href="article_item.html">行业资讯行业资讯行业资讯1</a></li>
+        </ul>
+        <div style="clear:both;"></div>
+</div>
+<!--推荐产品-->
+<div class="heng-tj">
+    <div class="tit">推荐产品</div>
+    <ul>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215173248784878s.jpg">
+                <p>全不锈钢智能指纹密码锁</p>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215171214871487s.jpg">
+                <p>带防护盖智能指纹密码刷卡锁</p>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215173248784878s.jpg">
+                <p>全不锈钢智能指纹密码锁</p>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215171214871487s.jpg">
+                <p>带防护盖智能指纹密码刷卡锁</p>
+            </a>
+        </li>
+    </ul>
+    <div style="clear:both;"></div>
+</div>
+    </div>
+    
+    <div class="wz-list245">
+		<div class="wz-box">
+        	<div class="tit"><a href="article.html">热门文章</a></div>
+            <ul>
+                <li>
+                    <span style="background:#f00;">1</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">2</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">3</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">4</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">5</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span>6</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span>7</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span>8</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+                <li>
+                    <span>9</span>
+                    <a href="article_item.html">智能家居的未来发展方向是什么？</a>
+                </li>
+            </ul>
+        </div>
+		<div class="wz-box">
+        	<div class="tit"><a href="article.html">最新文章</a></div>
+            <ul>
+                <li>
+                    <span style="background:#f00;">1</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">2</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">3</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">4</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span style="background:#f00;">5</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span>6</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span>7</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span>8</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+                <li>
+                    <span>9</span>
+                    <a href="article_item.html">生物识别技术应用将会越来越广</a>
+                </li>
+            </ul>
+        </div>
+<!--右侧推荐产品-->
+<div class="shu-tj">
+    <div class="tit"><a href="product.html">最新产品</a></div>
+    <ul>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215173248784878s.jpg">
+                <div class="pro-name">全不锈钢智能指纹密码锁</div>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215171214871487s.jpg">
+                <div class="pro-name">全不锈钢智能指纹密码锁</div>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215173248784878s.jpg">
+                <div class="pro-name">全不锈钢智能指纹密码锁</div>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215171214871487s.jpg">
+                <div class="pro-name">全不锈钢智能指纹密码锁</div>
+            </a>
+        </li>
+        <li>
+            <a href="product_item.html">
+                <img src="attached/image/20160215/20160215173248784878s.jpg">
+                <div class="pro-name">全不锈钢智能指纹密码锁</div>
+            </a>
+        </li>
+    </ul>
+    <div style="clear:both;"></div>
+</div>
+<!--联系我们-->
+<div class="right_about">
+    <div class="tit">联系我们</div>
+    <div class="tel400">XXX</div>
+    <p><span>电话：</span>XXX</p>
+    <p><span>传真：</span>0769-22320785</p>
+    <p><span>邮箱：</span>csy@sat-lift.com</p>
+    <p style="line-height:20px;"><span>地址：</span>广东省东莞市东城南路东升大厦605</p>
+    <p style="line-height:20px;"><span>经营范围：</span>酒店锁、指纹门锁、密码门锁、指纹密码锁、铜锁等…</p>
+</div>
+    </div>
+    
+    <div style=" clear:both;"></div>
+</div>
+
+<!--footer-->
+<div id="w0h5"></div>
+<div class="link-box">
+    <div class="w960">
+        <a href="/" target="_blank">东莞XXX信息科技有限公司</a>
+        <a href="http://news.163.com" target="_blank">网易新闻</a>
+        <a href="#" target="_blank">搜狐网</a>
+        <a href="#" target="_blank">央视证券资讯</a>
+        <a href="#" target="_blank">渤海银行</a>
+        <a href="#" target="_blank">中国电建</a>
+    </div>
+</div>
+<div id="w0h200">
+  <div id="w1h200">
+  	<div class="w1h40">
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="product.html">产品中心</a></li>
+                <li><a href="article.html">工程案例</a></li>
+                <li><a href="article.html">下载中心</a></li>
+                <li><a href="article_item.html">关于我们</a></li>
+                <li><a href="article.html">招商加盟</a></li>
+            </ul>
+        </div>
+            <div class="r">咨询电话：XXX&nbsp;&nbsp;&nbsp;&nbsp;客服QQ：XXX&nbsp;&nbsp;&nbsp;&nbsp;XXX</div>
+    </div>
+    <div id="w1h120">
+      <div class="key_r"><span style="font-weight:bold; margin-right:10px;">网站关键词：</span>
+      <a href="product.html">中控指纹机</a>
+      <a href="product.html">东莞考勤</a>
+      <a href="product.html">东莞中控</a>
+      <a href="product.html">中控东莞代理</a>
+      <a href="product.html">东莞门禁</a>
+      <a href="product.html">东莞门禁系统</a>
+      <a href="product.html">东莞门禁安装</a>
+      <a href="product.html">东莞楼宇对讲</a>
+      <a href="product.html">东莞门禁系统安装</a>
+      <a href="product.html">考勤解决方案</a>
+      <a href="product.html">可视对讲</a>
+      <a href="product.html">中控指纹机</a>
+      <a href="product.html">中控考勤机</a>
+      <a href="product.html">门禁解决方案</a>
+      <a href="product.html">手机考勤</a>
+      <a href="product.html">东莞中控代理</a>
+      <a href="product.html">可视门铃</a>
+      <a href="product.html">WIFI对讲</a>
+      <a href="product.html">WIFI楼宇对讲</a>
+      <a href="product.html">别墅对讲</a>
+      <a href="product.html">无线对讲门铃</a>
+      <a href="product.html">智能家居</a>
+      <a href="product.html">社区整体解决方案</a>
+      <a href="product.html">智能化</a>
+      <a href="product.html">智慧社区</a>
+      <a href="product.html">数字对讲</a>
+      <a href="product.html">楼宇对讲生产厂家</a>
+      <a href="product.html">楼宇对讲方案</a>
+      <a href="product.html">楼宇对讲解决方案</a>
+      <a href="product.html">东莞楼宇对讲</a>
+      <a href="product.html">东莞楼宇对讲生产厂家</a>
+      <a href="product.html">楼宇对讲系统</a>
+      <a href="product.html">东莞XXX电子科技有限公司</a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F08b1f1f877a4fabc503b2f7bf44a4810' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script src=" http://hm.baidu.com/h.js?08b1f1f877a4fabc503b2f7bf44a4810" type="text/javascript"></script></div>
+<div style="width:100px; height:100px; float:right;">
+	<img src="images/wap_ico.jpg" width="100" height="100" alt=""/>
+    <div style="100%; line-height:18px; text-align:center; font-size:12px; color:#6d6d6d;">扫码关注公众号</div>
+</div>
+    </div>
+    
+    <div class="w1h40">
+   	  <div id="zz">©2020 东莞XXX电子科技有限公司版权所有&nbsp;&nbsp;Copyright youjunuo.com allrights reserved.&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备XXX号</div>
+   	  <div id="yy"><a href="/" target="_blank">网站技术支持：东莞XXX信息科技  QQ:XXX</a></div>
+    </div>
+  </div>
+</div>
+<div id="w0h40"></div>
+<!--浮动客服-->
+<div id="rightArrow"><a href="javascript:;" title="在线客户"></a></div>
+<div id="floatDivBoxs">
+	<div class="floatDtt">在线客服</div>
+    <div class="floatShadow">
+        <ul class="floatDqq">
+            <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=XXX&Site=youjunuo.com&Menu=yes"><img src="images/qq.png" align="absmiddle">&nbsp;&nbsp;在线客服1号</a></li>
+            <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=XXX&Site=youjunuo.com&Menu=yes"><img src="images/qq.png" align="absmiddle">&nbsp;&nbsp;在线客服2号</a></li>
+            <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=XXX&Site=youjunuo.com&Menu=yes"><img src="images/qq.png" align="absmiddle">&nbsp;&nbsp;商务客服3号</a></li>
+        </ul>
+        <div class="floatDtxt">热线电话</div>
+        <div class="floatDtel">XXX<br />XXX</div>
+        <div style="text-align:center;padding:10PX 0 5px 0;background:#EBEBEB;"><img src="images/wap_ico.jpg"><br>微信公众账号</div>
+    </div>
+    <div class="floatDbg"></div>
+</div>
+<script type="text/javascript">
+var flag=1;
+$('#rightArrow').click(function(){
+	if(flag==1){
+		$("#floatDivBoxs").animate({right: '-175px'},300);
+		$(this).animate({right: '-5px'},300);
+		$(this).css('background-position','-50px 0');
+		flag=0;
+	}else{
+		$("#floatDivBoxs").animate({right: '0'},300);
+		$(this).animate({right: '170px'},300);
+		$(this).css('background-position','0px 0');
+		flag=1;
+	}
+});
+</script>
+<!--百度分享-->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=4&amp;pos=left&amp;uid=0"></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+</script>
+</body>
+</html>

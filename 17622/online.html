@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+<head>
+<!-- 字符编码 -->
+<meta charset="utf-8">
+<!-- IE兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!-- 采用高速模式渲染（目前仅有360支持） -->
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="">
+<meta name="description" content="通过专业的免费诊断帮海风学员匹配最合拍的老师、定制个性化提分方案。独创在线1对1学习平台,搭载语音视频交汇、教学过程全录制、板书、录音、错题随时回顾等强大功能,实现高效补习目标。">
+<meta name="baidu-site-verification" content="wcMMFTPk07" />
+<title>如何上课开启量身定制的补习-海风教育</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<!--   <link rel="stylesheet" href="css/bootstrap.css"> -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/teachers.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery-1.7.2.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+<!--  <script type="text/javascript" src="js/hotspot.min.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!-- 浏览器判断 -->
+<!--[if lt IE 7]>
+    <script>window.location.href='./error.html'</script>
+    <![endif]-->
+<script src="js1/jquery.lazyload.js"></script>
+
+<!--[if !IE]><!-->
+<script src="js/haifengLibRoll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script>
+        $(function(){
+            window.scrollReveal = new scrollReveal({ reset: true, move: '50px'});
+        })
+    </script> -->
+<!--<![endif]-->
+<script>
+        $(function(){
+            $("img.lazy").lazyload({
+                effect : "fadeIn"
+            });
+
+        })
+
+    </script>
+<script>
+        function test(){
+            $("#LXB_CONTAINER" ).hide();
+        }
+        $(function(){
+            setInterval(test, 100 )
+
+        })
+
+    </script><script type="text/javascript">
+     $(function(){
+         $(".nav_menu .nav_menu_item").hover(function(){
+            $(this).find('ul').show();
+          },function(){
+            $(this).children('ul').stop().slideUp('fast');
+          } );
+        /*$(".nav_menu .nav_menu_item").hover(function(){
+            $(this).children('ul').stop().slideDown('fast');
+            console.info('down')
+          },function(){
+              $(this).children('ul').stop().slideUp('fast');
+            console.info('up')
+          } );*/
+            //防止有些浏览器出现异常
+           /* $(".nav").mouseleave(function(){
+              $(".nav_menu" ).children('ul').stop().slideToggle('fast');
+          } )
+            $(".nav_submenu").mouseleave(function(){
+                $(".nav_menu" ).children('ul').stop().slideUp('fast');
+            } ) */
+
+        var select_title=location.pathname+location.search;
+         console.info(select_title)
+        $(".nav_menu_item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    //console.info(href)
+                    if(select_title.indexOf(href)>0){
+                        $(this ).parents('li' ).find('.no_is_sub').addClass('active');
+                    }
+                }
+            })
+        })
+        $(".nav_submenu-item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    if(select_title.indexOf(href)>0){
+                        $(this ).addClass('active');
+                    }
+                }
+            })
+        })
+     })
+</script>
+<script>
+    /*广告系统参数传递*/
+    function GetUrlArgsObj() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var args=GetUrlArgsObj();
+    if(typeof (args.adid)=="undefined"){
+        args.adid="";
+    }
+    var adid=args.adid;
+    $(function(){
+        if(adid){
+            $('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if(typeof (href)!="undefined"&&!href.match(/\#/)&&href.indexOf('javascript')==-1){
+
+                    console.info(href)
+                    if(!href.match(/\?/)){
+                        adid='?adid='+args.adid;
+                    }else{
+                        adid='&adid='+args.adid;
+                    }
+                    if(href.indexOf("//")!=-1){
+                        $(this ).attr('href',href+adid);
+                    }else{
+                        var cur_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        $(this ).attr('href',cur_protocol+ location.hostname +'/' + href+adid);
+                    }
+                }
+            });
+        }
+
+
+        $("#lunbo li" ).click(function(){
+            var href=$(this ).attr('href');
+            window.open(href+adid);
+        })
+
+    })
+
+    function jumpUrl( link ){
+        var jump_link = link;
+        if(typeof (args.adid) != "undefined"&&args.adid ){
+            if(jump_link.match(/\?/)){
+                jump_link = link+'#adid='+args.adid;
+            }else{
+                jump_link = link+'?adid='+args.adid;
+            }
+
+        }
+        window.open(jump_link);
+    }
+</script>
+<script type="text/javascript">window._pt_lt = new Date().getTime();</script>
+</head>
+<script type="text/javascript">
+  window._pt_sp_2 = [];
+  _pt_sp_2.push('setAccount,68d72831');
+  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  
+  (function() {
+    var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+    atag.src = _protocol + 'js.ptengine.cn/js/pta.js';
+    var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+    stag.src = _protocol + 'js.ptengine.cn/js/pts.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+  })();
+</script>
+<body >
+<!--header导航开始-->
+<div class="header">
+  <div class="container clearfix">
+    <div class="header_nav"> <a class="logo fl" href="#"> <img src="images/logo.png" alt=""> </a>
+      <ul class="nav_menu ">
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">首页</a> </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" onclick="jumpUrl('');">课程介绍</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item "><a onclick="jumpUrl('');">学科辅导</a></li>
+            <li class="nav_submenu-item "><a onclick="#">自主招生辅导</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item"> <a class="no_is_sub" href="#">海风优势</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a href="#">教研质量</a></li>
+            <li class="nav_submenu-item"><a href="#">师资力量</a> </li>
+            <li class="nav_submenu-item"><a onclick="#">学员成绩</a> </li>
+            <li class="nav_submenu-item"><a href="#">海风Q&amp;A</a> </li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">名师公开课 </a>
+          <ul class="nav_submenu " style="display: none;">
+            <li class="nav_submenu-item"><a href="#">公开课课表页面</a> </li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" onclick="#">自测工具 </a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a onclick="#">志愿填报</a></li>
+            <li class="nav_submenu-item"><a onclick="#">专业倾向测试</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">在线学习中心</a>
+          <ul class="nav_submenu ">
+            <li class="nav_submenu-item"><a href="#">平台简介</a></li>
+            <li class="nav_submenu-item"><a href="#">如何上课</a> </li>
+            <li class="nav_submenu-item"><a onclick="#">选课中心</a></li>
+          </ul>
+        </li>
+        <li class="nav_menu_item "> <a class="no_is_sub" href="#">客户端下载 </a> </li>
+      </ul>
+      <div class="header_tel fr"> <img src="images/phone.png" alt="" class="fl phone_img"> <a>4008-331-112</a> </div>
+    </div>
+  </div>
+</div>
+<!--header导航结束--> 
+<script>
+    $(document).ready(function () {
+        var p = 0, t = 0;
+
+        $(window).scroll(function (e) {
+            p = $(this).scrollTop();
+            if (t <= p) {//下滚
+                $("#layout_header_menu").hide();
+            }
+            else {//上滚
+                $("#layout_header_menu").show();
+            }
+            setTimeout(function () { t = p; }, 0);
+        });
+    });
+
+</script>
+<!-- End: Header -->
+<link rel="stylesheet" href="css/course.css">
+<!-- 轮播图片 专区 -->
+<div class="clearfix banner" >
+  <img src="images/Online.jpg" a alt="如何上课开启量身定制的补习-海风教育" title="如何上课开启量身定制的补习-海风教育"/>
+</div>
+<!-- 第二屏：课前诊断测试开始 -->
+<div class="featurette Online_page " >
+  <div class="container">
+    <div class="OnlineT">
+      <ul>
+        <li class="title-line"></li>
+        <li><span>1</span>课前诊断测试</li>
+        <li class="title-line"></li>
+      </ul>
+    </div>
+    <p class="min-title">史上最专业的诊断</p>
+    <div class="Online-Box">
+      <div class="Online-left fl">
+        <p>针对补习科目及目标的不同，海风教研组精心设计了70多种诊断试卷，</p>
+        <p>为学生当前学习情况进行精准把脉，为量身定制教学计划提供基础参考。</p>
+      </div>
+      <div class=" fl">
+        <img src="images/01_icn.png" alt="课前诊断测试" title="史上最专业的诊断"/>
+      </div>
+    </div>
+    <div class="btn-box">
+      <a class=" btn btn-primary "  onclick="window.open('')" target="_blank">立即开始测试</a>
+    </div>
+   
+  </div>
+</div>
+<!-- 第二屏：课前诊断测试结束 -->
+<!-- 第三屏：匹配上课老师开始 -->
+<div class="featurette Online_page clearfix  bgf2" >
+  <div class="container">
+    <div class="OnlineT">
+      <ul>
+        <li class="title-line"></li>
+        <li><span>2</span>匹配上课老师</li>
+        <li class="title-line"></li>
+      </ul>
+    </div>
+    <p class="min-title">组建最合拍师生二人组</p>
+    <div class="Online-Box">
+      <ul>
+        <li>
+          <img src="images/teacher_icn_01.png" alt="匹配上课老师" title="汇集100余位清北复交、" />
+          <p>汇集200余位清北复交、</p>
+          <p>英美海归精英教师</p>
+        </li>
+        <li>
+          <img src="images/teacher_icn_02.png" alt="匹配上课老师" title="名校背景+教研实力" />
+          <p>名校背景+教研实力</p>
+          <p>+教学经验3重验证保障</p>
+        </li>
+        <li>
+          <img src="images/teacher_icn_03.png" alt="匹配上课老师" title="平均年龄30-，严格" />
+          <p>平均年龄30-，严格</p>
+          <p>但不严肃，年轻而负责</p>
+        </li>
+        <li>
+          <img src="images/teacher_icn_04.png" alt="匹配上课老师" title="资深学霸、学神，自有" />
+          <p>资深学霸、学神，自有</p>
+          <p>提分绝活、解题秘籍</p>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-box">
+      <a class=" btn btn-primary "   onclick="window.open('')" target="_blank">点击详情</a>
+    </div>
+   
+  </div>
+</div>
+<!-- 第三屏：匹配上课老师结束 -->
+<!-- 第四屏：定制提分方案开始  -->
+<div class="featurette Online_page " >
+  <div class="container">
+    <div class="OnlineT">
+      <ul>
+        <li class="title-line"></li>
+        <li><span>3</span>定制提分方案</li>
+        <li class="title-line"></li>
+      </ul>
+    </div>
+    <p class="min-title">每个冠军都有专属方案</p>
+    <div class="Online-Box">
+      <div class=" fl">
+         <img src="images/02_icn.png" alt="定制提分方案" title="每个冠军都有专属方案"/>
+      </div>
+      <div class=" fl Online-left">
+        <p>由教研组学科负责人、任课老师和同学的专属助教、课程顾问一同研究打磨，</p>
+        <p>根据每位学生的能力特质、当前水平及目标期望，设计最高效最适合的方案。</p>
+      </div>
+    </div>
+    <div class="btn-box">
+      <a class=" btn btn-primary "   onclick="window.open('')">
+            点击了解</a>
+    </div>
+   
+  </div>
+</div>
+<!-- 第四屏：定制提分方案结束  -->
+<!-- 第五屏：开始在线上课开始  -->
+<div class="featurette Online_page bgf2 " >
+  <div class="container">
+    <div class="OnlineT">
+      <ul>
+        <li class="title-line"></li>
+        <li><span>4</span>开始在线上课</li>
+        <li class="title-line"></li>
+      </ul>
+    </div>
+    <p class="min-title">进入海风一站式在线学习中心，开启全新智能、便捷学习体验！</p>
+      <div class="Online-Box">
+        <div class="Online-left fl">
+          <p>正如智能手机VS传统座机，上课、问答、作业、板书演练等</p>
+          <p>一切传统课堂的教学功能，通过网络科技均可轻松实现，远</p>
+         <p>远不止于此，海风在线1对1六大智能功能等你来体验！</p>
+        </div>
+        <div class=" fl ">
+          <img src="images/03_icn.png" alt="开始在线上课" title="进入海风一站式在线学习中心，开启全新智能、便捷学习体验！" class="Online-img" />
+        </div>
+      </div>
+    <div class="btn-box">
+      <a class=" btn btn-primary " target="_blank"  onclick="window.open('')">
+           立即开始测试</a>
+    </div>
+   
+  </div>
+</div>
+<!-- 第五屏：开始在线上课结束  -->
+
+<div class="page08_mian">
+  <div class="foot_box container ">
+    <form class="form" action=" " method="post" id="tmsLandingForm">
+      <div class="ui-form-item title "> 立即预约 </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input type="text" class="ui-input" name='studentName'placeholder="请填写您的姓名" id="name">
+        </div>
+        <div class="ui-form-explain"> 请输入姓名 </div>
+      </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input value="" class="ui-input" type="text" placeholder="请填写您的手机号" id="phone" name='firstPhone' maxlength="11">
+        </div>
+        <div class="ui-form-explain "> 请输入手机号 </div>
+      </div>
+      <input type='hidden' name='formId' value='6'>
+      <div class="ui-form-item"> <a class="ui-button" id='tmsLandingFormBtn'>开始预约</a> </div>
+    </form>
+  </div>
+</div>
+<!-- 活动页面 -->
+<div class="reserve">
+  <div class="reserve_box container ">
+    <form class="reserve_form" action=" " method="post" id="tmsLandingForm">
+      <div class="zero"> <a onclick=" "> <img src="images/fankui.png"> </a> </div>
+      <div id="wufeng">
+        <ul>
+          <li> <a > <span style="color:white">张*林妈妈今日电话助教：孩子最近厌学情绪严重，十一期间作业都没做，老师也批评了他。和孩子聊了海风在线补习模式之后，他倒是觉得挺新奇的，也没排斥，试听下来他还挺满意，准备报课了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white"> 王*铮家长短信反馈：以前过十一，孩子要么玩不好，要么学不好。今年有了海风在线平台，学习和出行两不误，他特别开心。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white">刘*焉妈妈来电：孩子最近学习状态特别好，有了海风的错题本，她明显知道自己问题出在哪里了，这个势头很好，特意和老师说一声，借着这个势能再冲一冲。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+        </ul>
+      </div>
+      <div class="page-right fl"> <img src="images/miss.png"> <a target="_blank" style="cursor: pointer;"> <img src="images/gaokao3.png"> </a> </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.easie.js"></script> 
+<script type="text/javascript" src="js/wufeng.js"></script> 
+<script type="text/javascript">
+$(function(){
+    wufeng(90800);
+})
+</script> <script type='text/javascript'>
+$(function(){var adid = location.href.match(/adid=([a-zA-Z0-9]+)/);
+    var adidNo='';
+    if(adid && adid[1]) {
+        adidNo=adid[1];
+    }
+    var tmsLandingFormUrl = 'landingForm/register?adidNo='+adidNo;
+    var oS=$('.ui-form-explain');
+    $('#tmsLandingFormBtn').click(function(){
+        var phone=$('#phone').val();
+        var name=$('#name').val();
+                if(!name||name==""){
+            oS[0].style.display="block";
+            return false;
+        }
+        if(!phone||phone==""){
+            oS[1].style.display="block";
+            return false;
+        }else if(phone!==""&&!/(^(13|14|15|17|18|)\d{9}$)/.test(phone)){
+            oS[1].style.display="block";
+            return false;
+        }
+    $('#phone').focus(function(){
+        $(oS[1]).hide();
+    });
+    $('#name').focus(function(){
+            $(oS[0]).hide();
+    });
+        $.ajax({
+            type : 'post',
+            data : $('#tmsLandingForm').serialize(),
+            url : tmsLandingFormUrl,dataType : 'jsonp',
+            jsonp: 'callbackparam',
+            success : function(json){if(json.error==1) {alert(json.msg);} else {location.href ='';
+                }}
+        });
+    });
+})
+</script> 
+<script>
+function bb() {
+    var body_height=$('body' ).height();
+    var window_height=$(window).height();
+        if ($(this).scrollTop() >=body_height-window_height-158) {
+                $(".reserve").css("position","relative");
+            }else{
+                $(".reserve").css("position","fixed");
+        }
+        }
+$(window).scroll(bb);
+bb();
+</script> 
+<!-- footer开始 --> 
+<!-- footer -->
+<div class="footer_pege">
+  <div class="container clearfix">
+    <div class="footer_main"> <a href="teachers.html" target="_blank">海风师资</a>| <a href="research.html" target="_blank">海风教研</a>| <a onclick=" )" target="_blank">学员成绩</a>| <a href="Online.html" target="_blank">学习中心</a>| <a href="cooperation.html" tppabs=" " target="_blank">商务合作</a>| <a href="joinUs.html" target="_blank">加入我们</a> </div>
+    <p> ©2020hfjy.com All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> XXX <span class="icp_num">XXX</span> </p>
+  </div>
+</div>
+<!--footer结束  --> 
+<!-- 侧边栏开始 --> 
+<script>
+    $(function(){
+        $("#go_top").click(function(){
+            $('html,body').animate({scrollTop:0},500);
+            return false;
+        });
+        $("#hangyeyanzheng").click(function(e){
+            e.preventDefault();
+            window.open(' ');
+        })
+        var _cur_host = window.location.host;
+        if( _cur_host.indexOf('yphen100.com')>0 ) $('.icp_num').text('沪ICP备11030714号-1');
+
+        if( _cur_host.indexOf('f100.net')>0 ) $('.icp_num').text('沪ICP备11030714号-3');
+    })
+</script> 
+<!--右侧贴边导航quick_links.js控制-->
+<div class="mui-mbar-tabs">
+  <div class="quick_link_mian">
+    <div class="quick_links_panel">
+      <div id="quick_links" class="quick_links">
+        <ul>
+          <li> <a class="history_list"><i class="view"></i></a>
+            <div class="mp_tooltip" style=" visibility:hidden;" onclick="window.open(' ')">
+              <p> 在线客服 </p>
+              <p class="p3" onclick="window.open(' ')"> (点击详情) </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li class="quick_toggle"> <a class="my_qlinks"><i class="setting"></i></a>
+            <div class="ibar_login_box status_login">
+              <div class="avatar_box">
+                <p> 海风微信 </p>
+                <p class="avatar_imgbox"> <img src="images/img_qrcode.png" alt=""> </p>
+              </div>
+              <i class="icon_arrow_white"></i> </div>
+          </li>
+  
+          <li> <a class="mpbtn_histroy"><i class="tel"></i></a>
+            <div class="mp_tooltip">
+              <p onclick="window.open(' ')"> 海风热线 </p>
+              <p class="p3"> 4008-331-112 </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li id="go_top"> <a class="mpbtn_histroy"> <i class="tops"></i> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(".quick_links_panel li").mouseenter(function(){
+        $(this).children(".mp_tooltip").stop().animate({left:-130,queue:true});
+        $(this).children(".mp_tooltip").css("visibility","visible");
+        $(this).children(".ibar_login_box").css("display","block");
+    });
+    $(".quick_links_panel li").mouseleave(function(){
+        $(this).children(".mp_tooltip").css("visibility","hidden");
+        $(this).children(".mp_tooltip").stop().animate({left:-159,queue:true});
+        $(this).children(".ibar_login_box").css("display","none");
+    });
+    $(".quick_toggle").mouseover(function(){
+        $(this).children(".ibar_login_box").stop().animate({left:-160,queue:true});
+        $(this).children(".ibar_login_box").css("visibility","visible");
+        $(this).children(".avatar_box").css("display","block");
+    });
+    $(".quick_toggle ").mouseleave(function(){
+        $(this).children(".ibar_login_box").css("visibility","hidden");
+        $(this).children(".ibar_login_box").stop().animate({left:-180,queue:true});
+        $(this).children(".avatar_box").css("display","none");
+    });
+</script>
+</body>
+</html>
+

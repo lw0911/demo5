@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>发布提问</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="UEditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="UEditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="UEditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="UEditor/plupload/plupload.full.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/tagsinput/jquery.tagsinput.css" />
+<script type="text/javascript" src="css/tagsinput/jquery.tagsinput.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		//$('#tags').tagsInput({width:'auto'});
+		//$('#tags').importTags('foo,bar,baz');
+		$('#tags').importTags('');
+		$('#tags').tagsInput({
+	
+			 height:'auto', //设置高度
+			 width:'auto',  //设置宽度
+			 interactive:true, //是否允许添加标签，false为阻止
+			 //'onAddTag':callback_function, //增加标签的回调函数
+			 //'onRemoveTag':callback_function, //删除标签的回调函数
+			 //'onChange' : callback_function, //改变一个标签时的回调函数
+			 removeWithBackspace : true, //是否允许使用退格键删除前面的标签，false为阻止
+			 minChars : 0, //每个标签的小最字符
+			 maxChars : 20, //每个标签的最大字符，如果不设置或者为0，就是无限大
+			 placeholderColor : '#666666', //设置defaultText的颜色
+			onChange: function(elem, elem_tags)
+			{
+				var languages = ['php','ruby','javascript'];
+				$('.tag', elem_tags).each(function()
+				{
+					if($(this).text().search(new RegExp('\\b(' + languages.join('|') + ')\\b')) >= 0)
+						$(this).css('background-color', 'yellow');
+				});
+			}
+		});
+
+	});
+
+
+
+</script>
+</head>
+
+<body>
+
+<header>
+	<div class="top">
+        <a href="index.html" class="logo"></a>
+        <a href="index.html" class="nav">首页</a>
+        <a href="index.html" class="nav">全部问题</a>
+        <a href="index.html" class="nav">高分悬赏</a>
+        <a href="vist.html" class="nav">待回答</a>
+        <a href="class.html" class="nav">导航</a>
+        <div class="user">
+        	<a href="" class="log">登录</a>
+            <a href="" class="log">注册</a>
+            <a href="" class="log">个人中心</a>
+        </div>
+      <div class="so">
+          <input type="text" name="key" class="key" placeholder="请输入关键词">
+          <input type="submit" class="sobut" value="搜索答案">
+        </div>
+        
+  </div>
+</header>
+
+
+
+<div class="ask_main">
+
+	
+    
+    <div class="amVist">
+    
+        <div class="curNav">
+            <a href="">网站首页</a><span>></span><a>发布提问</a>
+        </div>
+        
+        <!--发布提问 S--->
+        <div class="AnswerQuestions">
+        <form id="form1" name="form1" method="post" action="">
+        
+            <div class="text">
+                <input type="text" name="textfield" class="input" placeholder="标题：一句话描述清楚问题（最多可输入40个中文字）" required/>
+            </div>
+            
+            <div class="text">
+            <select name="select" id="select">
+              <option value="">请选择分类</option>
+              <option value="">社会民生</option>
+              <option value="">健康生活</option>
+              <option value="">文化艺术</option>
+              <option value="">电脑网络</option>
+              <option value="">行政地区</option>
+              <option value="">医疗卫生</option>
+              <option value="">经济金融</option>
+              <option value="">法律法规</option>
+              <option value="">科学教育</option>
+              <option value="">体育运动</option>
+              <option value="">电子数码</option>
+              <option value="">娱乐休闲</option>
+              <option value="">心理分析</option>
+            </select>
+            </div>
+            
+            <div class="text">
+                <textarea name="content22" id="editor" style="width:99.8%;height:300px;" placeholder="清楚的描述问题细节，让回答员清楚的了解原因（请勿发布违规内容）"></textarea>
+            </div>
+            <div class="text">
+            <h2>添加标签(<span>最多添加5个标签</span>)</h2>
+            <input id="tags" type="text" class="tags" value="PHP,JS"  placeholder="输入后按回车添加标签">
+            </div>
+            
+            <div class="xuans">
+            	<span> 悬赏</span>
+                <select name="select" id="select">
+                  <option value="0">0</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="40">40</option>
+                  <option value="50">50</option>
+                  <option value="60">60</option>
+                  <option value="70">70</option>
+                </select>
+                <span style="color:#999">积分</span>
+            </div>
+            
+            <div class="text">
+            	<h2><span>悬赏会提高问题的曝光度和获取答案的速度.</span> 注意：提问被删悬赏不退</h2>
+            </div>
+            
+            <div class="tijiao">
+            	<input type="submit" class="button" value="确定提问">
+            </div>
+            <div class="text">
+            	<h3><span>提交表示您已经同意本站</span><a href="">协议</a></h3>
+            </div>
+        
+        </form>
+        </div>
+    	<!--发布提问 E--->
+    
+    	
+    </div>
+    
+    
+
+	<div class="amRight" id="floatLeft2">
+        <h2>最新公告</h2>
+        <div class="titleList">
+        	<a href="">谁帮忙下载个文件呢，有偿，文件需要1个下载积分</a>
+            <a href="">多个矩阵相乘程序的编写，我是新手</a>
+        </div>
+        
+        <div class="userInfo">
+        	<div class="us">
+            	<a href="" class="portrait"><img src="images/2.jpg"></a>
+                <div class="info">
+                	<a href="">xiezhengyi</a>
+                    <span><dl>声望：</dl><em>2601</em></span>
+                </div>
+            </div>
+            <div class="wenda">
+                <div class="txt"><i class="w">问</i><span>提了 <a href="">767</a> 个问题， <a href="">349</a> 人进行了回答</span></div>
+                <div class="txt"><i class="d">答</i><span>回答了 <a href="">0</a> 个问题</span></div>
+            </div>
+        </div>
+        
+        
+       
+
+
+       
+       
+        
+    </div>
+		
+
+</div>
+
+            
+<script type="text/javascript">
+ //百度编辑器配置Start
+ var ue = UE.getEditor('editor', {
+	  //配置http://fex.baidu.com/ueditor/#start-toolbar
+	  toolbars: [
+		  ['fullscreen', 'source', 'undo', 'redo', 'bold','snapscreen','italic','emotion','insertcode']
+	  ],
+	  autoHeightEnabled: true,
+	  autoFloatEnabled: true
+  });
+</script>
+<script type="text/javascript">
+window.onload = function () {
+	// offset() 获得div1当前的位置，左上角坐标(x,y)
+
+	var posa =  $('#floatLeft2').offset();
+	//滚动条滚动事件
+	$(window).scroll(function () { 
+		
+		
+		if ($(this).scrollTop() > posa.top ) {
+			$('#floatLeft2').css('top', $(this).scrollTop() - posa.top);
+		} 
+		else if ($(this).scrollTop() <=  posa.top ) {
+			$('#floatLeft2').css('top',0).css('position', 'relative');
+		}
+	})
+};
+</script>
+</body>
+</html>

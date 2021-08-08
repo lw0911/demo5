@@ -1,0 +1,39 @@
+/*dede58.com 做最好的织梦整站模板下载网站*/
+/*banner style*/
+body{ margin:0; padding:0; position:relative; }
+#banner{ height:980px;overflow:hidden;background:url(../images/imgloader.gif) no-repeat center center #FFF; }
+.slide_down,.slide_into{ display:block;font-size:18px;color:#a45900;background-color:#fff033;width:140px;height:30px;text-align:center;line-height:30px;border-radius:15px;box-shadow:2px 2px 2px rgba(0,0,0,.2);float:right;position:relative;top:240px}
+.slide_down{ margin-right:20px}
+.slide_down:hover,.slide_into:hover{ text-decoration:none;color:#ff7e00}
+/*fwslider style*/
+#fwslider{position: relative;width: 100%;}
+#fwslider .slider_container{}
+#fwslider .slide{display: none;position: absolute;top: 0;left: 0;z-index: 0;width: 100%;text-align: center;}
+#fwslider .slide img{/*width:100%;*/}
+#fwslider .slidePrev{margin-left: 25px;width: 31px;height: 100px;position: absolute;top: 50%;left: -50px;opacity: 0.7;z-index: 10;}
+#fwslider .slidePrev span{background-image: url(../images/slide_arrow.png);width:31px;height: 100px;float: left;background-position: 0 0;background-repeat: no-repeat;cursor: pointer;}
+#fwslider .slideNext{width: 31px;height: 100px;position: absolute;top: 50%;right:-50px;opacity: 0.7;z-index: 10;margin-right: 25px;}
+#fwslider .slideNext span{background-image: url(../images/slide_arrow.png);width:31px;height:100px;float:left;background-position:0 -100px;background-repeat:no-repeat;cursor:pointer;}
+#fwslider .timers{height: 2px; position: absolute;bottom: 50px; left:50%; margin-left:-820px; z-index: 3; width:1640px!important;}
+#fwslider .timer{height: 2px; width: 400px;background-color: #fff;float: left;margin-right: 10px;overflow: hidden; filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;}
+#fwslider .progress{height: 2px;width: 0%;background-color: #ffcc00;float: left;}
+#fwslider .slide_content{top: 0;left: 50%;position: absolute;width: 470px;height: 350px;}
+#fwslider .slide_content_wrap{max-width: 470px;text-align: right;font-family: \5FAE\8F6F\96C5\9ED1;font-style: italic;}
+#fwslider .title{opacity: 0;color: #fff;font-size: 36px;padding: 10px;float: left;font-style: normal;font-weight: 400;padding: 20px;line-height: 40px;}
+#fwslider .description{opacity: 0;color: #FC3;font-size: 18px;background: #000;padding: 10px;clear: both;float: left;margin-top: 2px;line-height: 24px;font-family: 'Open Sans';font-style: normal;font-weight: 400;}
+#fwslider .readmore{opacity: 0;clear: both;float: left;text-transform: uppercase;font-size: 10px;color: #919191;background: #000;padding: 10px;text-decoration: none;margin-top: 2px;font-family: 'Open Sans';font-style: normal;font-weight: 400;}
+#fwslider .readmore:hover{color: #fff;}
+.footer{width: 100%;float: left;text-align: center;}
+.footer p{font-family: 'Open Sans';font-style: normal;font-weight: 400;font-size: 12px;color: #585858;margin-top: 20px;}
+/* ------------------------------- 4. Media Query Max Width 1300, Min Width 720 ------------------------------- */
+@media only screen and (min-width:720px) and (max-width: 1300px){
+#fwslider .slide_content_wrap{margin-left: 50px;margin-top: 40px;}
+#fwslider .title{font-size: 26px;}
+#fwslider .description{font-size: 12px;}
+}
+/* ------------------------------- 5. Media Query Max Width 719 ------------------------------- */
+@media only screen and (max-width:719px){
+#fwslider .slide_content_wrap{display: none;}
+#fwslider .timers{display: none;}
+#fwslider .slide_content{cursor: pointer;}
+}

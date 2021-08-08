@@ -1,0 +1,203 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;border:0;}
+table{empty-cells:show;border-collapse:collapse;border-spacing:0;}
+h1{font-size:16px;} h2,h3,h4{font-size:12px;} h5,h6{font-size:12px;}
+abbr,acronym{border:0;font-variant:normal}
+address,caption,cite,code,dfn,th,var,optgroup,i,b,em,small,ins,tt,big{font-size:12px; font-style:normal; text-decoration:none; font-weight:normal;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button,textarea,select{*font-size:100%}
+a{ text-decoration:none; color:#333;cursor:pointer;}
+.clear{
+    display:block;
+    overflow:hidden;
+    clear:both;
+    height:0;
+    line-height:0;
+    font-size:0;
+    width:900px;
+}
+body{font:12px/180% "微软雅黑", Verdana, Lucida ,Helvetica,sans-serif; color:#333;
+    background:url("../images/bg0.jpg")/*tpa=http://www.musestudio.net/images/../images/bg0.jpg*/ center; position:relative; -webkit-text-size-adjust:none;}
+html{ overflow-x:hidden;}
+
+
+/*网站头部开始*/
+.head{
+    background:url("../images/i1.jpg")/*tpa=http://www.musestudio.net/templets/default/images/../images/i1.jpg*/ repeat-x 0 0;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%
+}
+.head .bd{
+    height:81px;
+    width:1070px;
+    margin:0 auto
+}
+.logo{
+    background:url("../images/logo.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/logo.png*/ no-repeat 0 0;
+    width:300px;
+    height:60px;
+    overflow:hidden;
+    float:left; margin-top:10px;
+}
+.logo a{width:248px;padding-top:45px;display:block}
+
+/*---导航---*/
+#nav{
+    height:50px;
+    text-align:center;
+    clear:both;
+    margin-top:25px;
+    float:right;
+    width:760px
+
+}
+#nav ul{float:left}
+#nav li{float:left;height:51px;position:relative}
+#nav li.line_off{background:none}
+#nav li a{display:block;float:left;height:45px;padding-top:6px;line-height:18px;font-size:12px;color:#666;width:70px;blr:expression(this.onFocus=this.blur());outline:none;position:relative; font-family:"微软雅黑"}
+#nav a:hover,#nav .active a,#nav li.sfhover a{
+    color:#A00;
+    text-decoration:none;
+}
+#nav li a span{font-size:12px;width:71px; color:#bbbbbb;line-height:12px;padding-bottom:15px;display:block;cursor:pointer;position:relative;font-family:"Calibri";}
+#nav .n{background:url("../images/i2.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/i2.png*/ no-repeat 0 3px;width:16px;height:51px;float:left}
+/*---当前分类---*/
+#nav li ul{display:none;position:absolute;top:51px;left:-30px;width:116px;padding:10px 0;background:url("../images/nav2.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2.png*/ repeat-y;z-index:11}
+/*#nav li:hover ul{display:block}*/
+#nav li ul li{line-height:30px;height:30px;margin:0;background-image:none;position:relative;z-index:2}
+#nav li ul a,#nav li.active ul a,#nav li.sfhover ul a{background:none;font-weight:300;height:auto;color:#666;line-height:24px;width:110px;margin-left:3px;font-size:13px;float:none;padding:0 0 6px;background:url("../images/nav2.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2.png*/ no-repeat -234px -100px;_background:url("../images/nav2_1.gif")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2_1.gif*/ no-repeat 0 -30px}
+#nav li ul a:hover{background:url("../images/nav2.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2.png*/ no-repeat -234px 0;_background:url("../images/nav2_1.gif")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2_1.gif*/ no-repeat 0 0;color:#fff;font-weight:300}
+#nav li ul .t{position:relative;z-index:2;top:14px;left:0;width:116px;height:4px;font-size:0;line-height:0;overflow:hidden;background:url("../images/nav2.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2.png*/ no-repeat -116px 0;_background:url("../images/nav2_2.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/nav2_2.png*/ no-repeat}
+
+/*网站头部结束*/
+
+/*中部banner切换开始*/
+.banner{ width:1000px; margin:0 auto; height:688px; clear:both; position:relative; margin-top:80px;}
+.bigbox{ width:1920px; height:688px; overflow:hidden; position:absolute; left:-960px; margin-left:50%; top:0; z-index:1;}
+.banner .bigbox li{ position:absolute; left:0; top:0; z-index:1;}
+.banner .bigbox li.hover{ z-index:2;}
+.banner a.prev{
+    width:28px;
+    height:50px;
+    display:block;
+    position:absolute;
+    left:15px;
+    top:226px;
+    z-index:5;
+    margin-top:-16px;
+    background:url("../images/bg15.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/bg15.png*/ no-repeat left top;
+}
+.banner a.prev:hover{ background-position:left bottom;}
+.banner a.next{ width:28px; height:50px; display:block; position:absolute; right:15px; top:33%; z-index:5; margin-top:-16px; background:url("../images/bg15.png")/*tpa=http://www.musestudio.net/templets/default/images/../images/bg15.png*/ no-repeat right top;}
+.banner a.next:hover{ background-position:right bottom;}
+.banner .smallbox{ height:15px; position:absolute; left:-1000px; bottom:5px; z-index:5; text-align:right; width:100%;}
+.banner .smallbox ul{ display:inline-block; padding-right:50px;}
+.banner .smallbox li{ float:left; display:block; padding-right:10px;}
+.banner .smallbox li a{ width:13px; height:13px; display:block; ) no-repeat left top;}
+/*banner切换结束*/
+/*上部地址以及联系方式开始*/
+.png{
+    width:1920px;
+    height:210px;
+    background:url("../images/sh.jpg")/*tpa=http://www.musestudio.net/images/../images/sh.jpg*/ repeat-x;
+    position:absolute;
+    left:-960px;
+    margin-left:50%;
+    bottom:0;
+    z-index:2;
+    text-align:center;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+.yuy{
+    width:290px;
+    height:30px;
+    position:absolute;
+    display:block;
+    left:200px;
+    z-index:4;
+    cursor:pointer;
+    top:87px;
+}
+
+
+/*底部开始*/
+.foot{ clear:both; width:100%; background:url("../images/bg34.gif")/*tpa=http://www.musestudio.net/templets/default/images/../images/bg34.gif*/ repeat-x center top #cacaca; margin-top:-20px;margin-top:50px;}
+.foot01{ width:1000px; height:84px; display:block; margin:0 auto; background:url("../images/bg33.gif")/*tpa=http://www.musestudio.net/templets/default/images/../images/bg33.gif*/ no-repeat left top;}
+.foot01 .phone{ width:235px; float:left; padding-top:50px;}
+.foot01 .phone b{ display:block; padding-left:52px;}
+.foot01 .phone b { white-space:nowrap; font-family:微软雅黑; font-size:22px; color:#414141; font-weight:bold;}
+.foot01 .phone b em{ font-size:22px; font-weight:bold; color:#dc0000;}
+
+
+.foot01 .add{ width:483px; float:left; padding-top:36px; padding-left:20px;}
+.foot01 .add a{ display:block;}
+.foot01 .add a b{ white-space:nowrap; font-family:微软雅黑; font-size:14px; color:#6b6b6b; font-weight:bold; line-height:18px;}
+.foot01 .add a:hover b{ color:#000;}
+.foot01 .Share{ width:145px; float:left; padding-left:27px; padding-top:40px;}
+.foot01 .Share li{ float:left; padding-right:5px;}
+.foot01 .Share li a{ display:block;}
+.foot01 .Share li a tt{ display:none;}
+.foot01 .Share li a:hover tt{ display:block;}
+.foot01 .Share li a:hover ins{ display:none;}
+.foot01 .ontop{ float:left; padding-top:18px; padding-left:25px;}
+.foot01 .ontop a{ display:block;}
+.foot01 .ontop a tt{ display:none;}
+.foot01 .ontop a:hover tt{ display:block;}
+.foot01 .ontop a:hover ins{ display:none;}
+/*底部导航开始*/
+.footnav{ clear:both; width:1000px; margin:0 auto; height:103px; padding-top:36px; }
+.footnav h1{
+    float:left;
+    display:block;
+    width:320px;
+    text-align:center;
+}
+.footnav ul{ float:left; width:660px; display:block;}
+.footnav ul li{ float:left; padding-right:20px; padding-bottom:12px;}
+.footnav ul li a{ width:120px; height:30px; line-height:30px; text-align:center; display:block; background:#fff;}
+.footnav ul li a em{ display:none;}
+.footnav ul li a i{ display:block; font-family:Verdana, Geneva, sans-serif; font-size:12px; text-transform:uppercase; font-weight:bold; color:#a8a8a8;}
+.footnav ul li a:hover i{ display:none;}
+.footnav ul li a b{ display:none;}
+.footnav ul li a:hover b{ font-family:微软雅黑; font-size:14px; color:#fff; display:block; font-weight:bold;}
+.footnav ul li a:hover{ background:#000; color:#FFFFFF}
+/*底部导航结束*/
+
+/*地图地址开始*/
+.ltd{ clear:both; width:970px; margin:0 auto; padding-top:22px; padding-bottom:20px; color:#333;}
+.ltd a{ color:#fff;}
+.ltd p{ line-height:16px; display:block;}
+.ltd i{ line-height:16px; display:block; font-family:Verdana, Geneva, sans-serif; font-size:10px; text-transform:uppercase;}
+.ltd span{ color:#000; line-height:18px; display:block; padding-top:10px;}
+.ltd span a{
+    color:#999;
+    padding-left:5px;
+    padding-right:5px;
+}
+.ltd1 span a:hover{ text-decoration:underline;}
+
+.ltd1{ clear:both; width:100%; margin:0 auto; padding-top:0px; padding-bottom:10px; color:#fff; background:#999}
+.ltd1 .friend{ width:970px; margin:auto; padding-top:8px;}
+.ltd1 .friend a{color:#fff;}
+.ltd1 .friend p{ line-height:16px; display:block;}
+.ltd1 .friend i{ line-height:16px; display:block; font-family:Verdana, Geneva, sans-serif; font-size:10px; text-transform:uppercase;}
+.ltd1 .friend span{ color:#ccc; line-height:18px; display:block; padding-top:10px;}
+.ltd1 .friend span a{
+    color:#ccc;
+    padding-left:5px;
+    padding-right:5px;
+}
+.ltd1 .friend span a:hover{ color:#000; text-decoration:underline;}
+.ltd1 .friend li{ font-size:12px; line-height:18px; float:left; margin-right:10px;}
+.ltd1 .friend li a{ color:#FFFFFF; text-decoration:none}
+.ltd1 .friend li a:hover{ color:#FF6600}
+.clearfix:after{visibility: hidden;display: block;font-size: 0;content: ".";clear: both;}
+
+/*地图地址结束*/
+/*底部结束*/

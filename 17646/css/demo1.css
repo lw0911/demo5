@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/*初始化  reset*/
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+    color: #666;
+}
+
+ol, ul {
+    list-style: none
+}
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration: none
+}
+
+fieldset, img {
+    border: 0;
+    vertical-align: top;
+}
+
+a, input, button, select, textarea {
+    outline: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+/*bigbanner滚动动画*/
+.bigBanner {
+    /*background: url("../images/bigBanner-bj.jpg") no-repeat center;*/
+    background-color: white;
+    height: 680px;
+    position: relative;
+    margin-top: 81px;
+}
+
+.bigBanner .banner-box {
+    width: 1340px;
+    height: 680px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: red;*/
+}
+
+.bigBanner ul {
+    width: 5360px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bigBanner li {
+    float: left;
+    width: 1340px;
+    height: 680px;
+    overflow: hidden;
+}
+
+#arr {
+    display: none;
+    display: block;
+}
+
+#arr span {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -35px;
+    background: #000;
+    cursor: pointer;
+    line-height: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 50px;
+    color: #fff;
+    opacity: 0.2;
+    border: 2px solid #fff;
+}
+
+#arr span:hover {
+    background: none;
+    opacity: 0.8;
+    color: darkred;
+}
+
+#arr #right {
+    right: 100px;
+    left: auto;
+}
+
+.callus {
+    height: 210px;
+    width: 1340px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -670px;
+    z-index: 1;
+    text-align: center;
+    background: url("../images/sh.jpg");
+    opacity: 0.7;
+}
+
+/*bigbanner滚动动画*/
+
+/*imgshow*/
+.imgshow {
+    height: 450px;
+    padding: 73px 0;
+}
+
+.imgshow .imgshow-wrap {
+    width: 1220px;
+    height: 454px;
+    margin: 0 auto;
+}
+
+.imgshow-wrap-left {
+    float: left;
+    width: 400px;
+    height: 450px;
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.imgshow-wrap-left li {
+    width: 400px;
+    height: 45px;
+}
+
+.imgshow-wrap-left .menuGroup {
+    width: 400px;
+    height: 270px;
+}
+
+.imgshow-wrap-left span {
+    width: 380px;
+    border: 10px solid #D9D9D9;
+    border-radius: 5px;
+    height: 25px; /*25+20*/
+    display: block;
+    text-align: center;
+    background-color: white;
+}
+
+.menuDiv {
+    width: 400px;
+    height: 225px; /*25+20*/
+    display: none;
+}
+
+.menuGroup .menuEspecial {
+    display: block;
+}
+
+.imgshow-wrap-right {
+    float: right;
+    width: 800px; /*800--450*/
+    height: 450px;
+    border: 2px solid #D9D9D9;
+    border-radius: 10px;
+    position: relative;
+    z-index: 9000;
+    overflow: hidden;
+    /*background-color: yellow;*/
+}
+
+.imgshow-wrap-right .wrSpan {
+    position: absolute;
+    display: none;
+    width: 800px;
+    height: 450px;
+    z-index: 7000;
+    top: 0;
+    left: 0;
+    /*background-color: coral;*/
+}
+
+.wrSpan .btn {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    z-index: 8000;
+    top: 20px;
+    right: 20px;
+    background: url(../images/return.png) no-repeat;
+    cursor: pointer;
+    /*background-color: coral;*/
+}
+
+.imgshow-wrap-right .wright {
+    position: absolute;
+    /* top: 20px;
+     left: 20px;*/
+    top: 0;
+    left: 0;
+    width: 189px; /*193--105*/
+    height: 101px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/*imgshow*/
+.wrap {
+    height: 865px;
+    overflow: hidden;
+    background-color: #EFFFBF;
+}
+
+.slide {
+    width: 1015px;
+    height: 745px;
+    margin: 50px auto;
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: #CFFFBF;
+
+}
+
+.slide li {
+    float: left;
+    width: 233px;
+    height: 355px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 5px solid white;
+    opacity: 1;
+    position: relative;
+    background-color: white;
+}
+
+.slide span {
+    width: 233px;
+    height: 6px;
+    margin: 1px auto;
+    position: relative;
+    display: block;
+    border-radius: 5px;
+}
+
+.slide .bj {
+    background-color: saddlebrown;
+}
+
+.slide .hgln {
+    width: 233px;
+    height: 350px;
+    position: absolute;
+    background: url("../images/logo3.png") no-repeat;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/*作品展示1*/
+.product {
+    height: 520px;
+    background-color: #F8F3CF;
+    overflow: hidden;
+    /*padding: 35px 0;*/
+}
+
+.product .productWrap {
+    margin: 50px auto;
+    width: 1200px;
+    height: 400px;
+    /*border: 2px solid white;*/
+    overflow: hidden;
+    border: 10px solid white;
+    border-radius: 5px;
+
+}
+
+.productWrap ul {
+    width: 1300px;
+
+}
+
+.productWrap li {
+    width: 240px;
+    height: 400px;
+    overflow: hidden;
+    display: none;
+}
+
+.productWrap .lidiv {
+    opacity: 0.2;
+    width: 240px;
+    height: 400px;
+}
+
+/*.productWrap li a {
+    width: 186px;
+    height: 560px;
+    display: block;
+
+}*/
+
+/*作品展示1*/
+/*公共切换栏开始*/
+.public-tab {
+    height: 160px;
+    background: white;
+}
+
+.tab {
+    width: 934px;
+    margin: 0 auto;
+    height: 160px;
+    text-align: center;
+}
+
+.tab a {
+    color: #9fa0a0;
+    width: 70px;
+    display: inline-block;
+
+}
+
+.tab .tablogo {
+    margin-top: 30px;
+}
+
+/*公共切换栏结束*/
+
+
+
+
+
+
+

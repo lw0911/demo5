@@ -1,0 +1,239 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>蓝色软件企业网站</title>
+<link href="css/reset.css"  rel="stylesheet" type="text/css" />
+<link href="css/main.css"  rel="stylesheet" type="text/css" />
+<link href="css/sub.css"  rel="stylesheet" type="text/css" />
+    <!--导航特效-->
+    <script type="text/javascript" src="js/jquery-1.js" ></script>
+    <script type="text/javascript" src="js/smartmenu-min.js" ></script>
+    <script type="text/javascript">
+      jQuery(window).ready(function(){
+      jQuery("#navigation").Smartmenu({animationDuration: 350});
+      });
+      //SyntaxHighlighter.all();
+    </script>
+    <!--导航特效end-->
+    
+    <script language="javascript">
+      var Obj=''
+      document.onmouseup=MUp
+      document.onmousemove=MMove
+      
+      function MDown(Object){
+      Obj=Object.id
+      document.all(Obj).setCapture()
+      pX=event.x-document.all(Obj).style.pixelLeft;
+      pY=event.y-document.all(Obj).style.pixelTop;
+      }
+      
+      function MMove(){
+      if(Obj!=''){
+      document.all(Obj).style.left=event.x-pX;
+      document.all(Obj).style.top=event.y-pY;
+      }
+      }
+      
+      function MUp(){
+      if(Obj!=''){
+      document.all(Obj).releaseCapture();
+      Obj='';
+      }
+      }
+    </script>
+    <style type="text/css">
+      #massage_box{ position:absolute; background:#fff url("../images/headerbg.jpg") repeat-x; left:300px; top:49px; width:775px; height:486px;filter:dropshadow(color=#666666,offx=3,offy=3,positive=2); z-index:2; visibility:hidden;/* border-top:3px #ea820e solid;*/ padding-top:3px;}
+      #mask{ position:absolute; top:0; left:0; width:expression(body.scrollWidth); height:expression(body.scrollHeight); filter:ALPHA(opacity=60); z-index:1; visibility:hidden}
+      .massage{/*border:#036 solid; border-width:1 1 3 1;*/ width:100%; height:100%; color:#036; font-size:12px; line-height:150%}
+      .header{ color:#fff}
+      #massage_box ul{ margin-right:25; float:left; display:block;}
+      #massage_box ul li{padding-left:70px; font:12px/24px Candara; color:#093079; }
+      #massage_box ul li strong{ height:47px; font:bold 14px/47px Candara; color:#093079}
+      #massage_box ul li a{ color:#093079;font:12px/24px Candara; text-decoration:none;  padding-left:9px; }
+      #massage_box ul li a:hover{ color:#e37006;font:12px/24px Candara; text-decoration:none; background:url("../../images/submenulihover.png"/) left center no-repeat; padding-left:9px;}
+    </style>
+</head>
+<body>
+ <div id="head">
+      <div class="headcontent">
+        <div id="sbmlogo"><a href=""><h1>XXXX科技有限公司</h1></a></div>
+        <div class="topright">
+          <div id="logoright">
+            <!--popwindow end-->
+            <div id="search">
+
+              <form action="http://www.baidu.com/" id="searchform" name="searchform" target="_blank">
+                <div>
+                  <input type="hidden" name="cx" value="006465712199409902246:uo3hlxpkyqo" />
+                  <input type="hidden" name="ie" value="UTF-8" />
+                  <input type="text" name="q" id="searchkey" value="Search" onfocus="this.className='m_off';if (this.value=='Search') {this.value=''}" onblur="this.className='m_on' ;if (value=='' ) {value='Search'}" />
+                  <input type="submit" name="sa" value="    " onclick="_gaq.push(['_trackEvent','sitesearch','search_headbar','']);" />
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div id="navigation" class="smartmenu">
+            <ul>
+              <li><a href="index.html" class="current">首页</a></li> 
+              <li id=""><a href="prolist.html">产品中心</a>
+                <ul>
+                    <li><a href="#">ERP软件</a></li>  
+                    <li><a href="#">财务软件</a>
+                    <li><a href="#">加密软件</a></li>  
+                    <li><a href="#">服务器</a></li>  
+                </ul>
+              </li>   
+              <li id="">
+                <a href="prolist.html">解决方案</a>
+                <ul>
+                  <li><a href="#">技术解决方案</a></li>
+                  <li><a href="#">行业解决方案</a></li>
+                  <li><a href="#">成功案例</a></li>                             
+                </ul>
+              </li>                
+              <li id=""><a href="list.html">新闻中心</a>
+                <ul>
+                  <li><a href="#">公司动态</a></li><li><a href="#">行业资讯</a></li>  
+                </ul>
+              </li> 
+              <li id=""><a href="download.html">服务支持</a>
+                <ul>
+               <li><a href="#">资料文档</a></li>
+               <li><a href="#">软件更新</a></li> 
+                </ul>
+              </li>   
+          <li id=""> <a href="about.html">合作伙伴</a>
+
+      <ul>
+                  <li><a href="#">渠道战略</a></li><li><a href="#">合作加盟</a></li>  
+                </ul>
+      </li>
+    <li id=""><a href="about.html">关于我们</a>
+                 <ul>
+                  <li><a href="#">公司介绍</a></li>
+                  <li><a href="#">联系我们</a></li>
+                  <li><a href="#">招贤纳士</a></li>
+                  <li><a href="#">在线地图</a></li>  
+                </ul>
+              </li>     
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+ <div id="body" style="background:none">
+      <div class="subbanner" style="background:url(images/aboutbgbg.jpg) top center repeat-x">
+        <div class="subbannercontent" style=" width:100%; background:url(images/aboutbg.jpg) top center no-repeat">
+          <div class="subbody" style="padding-top:31px;">
+            <div class="subbodyleft">
+              <ul>
+                <li class="firstli">新闻中心</li>
+                  <li><a href="">行业新闻</a></li><li><a href="">公司新闻</a></li>
+              </ul>
+              <div class="follows"></div>
+            </div>
+            <div class="subbodyright">
+              <div class="location" style="line-height:30px;"><a href="/">首页</a> - <a href="">新闻中心</a> - 行业新闻</div>
+              <h2>NEWS</h2>
+              <div class="bigclass">行业新闻</div>
+
+
+              <div class="newslist bigclass">
+              <div id="post-249" class="post-249 post type-post status-publish format-standard hentry category-sbm-news">
+              <h3><span style="float:left;font-family:微软雅黑;font-size:15px"><a href="newsview.html">全球互联网产业研究之</a></span>.
+                  <span style="float:right">2016-05-14</span>
+              </h3>
+              <p class="content" style="color:gray">今年以来，陆续上线的原创音乐市场成外界关注的焦点，无论是唱片公司还是在线音乐平台，纷纷发布了原创音乐交易平台。<a href="newsview.html" class="more">查看详细</a>
+              </p>
+              </div>
+              <div class="clear"></div>
+              </div>
+
+<div class="newslist bigclass">
+              <div id="post-249" class="post-249 post type-post status-publish format-standard hentry category-sbm-news">
+              <h3><span style="float:left;font-family:微软雅黑;font-size:15px"><a href="newsview.html">全球互联网产业研究之</a></span>.
+                  <span style="float:right">2016-05-14</span>
+              </h3>
+              <p class="content" style="color:gray">今年以来，陆续上线的原创音乐市场成外界关注的焦点，无论是唱片公司还是在线音乐平台，纷纷发布了原创音乐交易平台。<a href="newsview.html" class="more">查看详细</a>
+              </p>
+              </div>
+              <div class="clear"></div>
+              </div>
+
+<div class="newslist bigclass">
+              <div id="post-249" class="post-249 post type-post status-publish format-standard hentry category-sbm-news">
+              <h3><span style="float:left;font-family:微软雅黑;font-size:15px"><a href="newsview.html">全球互联网产业研究之</a></span>.
+                  <span style="float:right">2016-05-14</span>
+              </h3>
+              <p class="content" style="color:gray">今年以来，陆续上线的原创音乐市场成外界关注的焦点，无论是唱片公司还是在线音乐平台，纷纷发布了原创音乐交易平台。<a href="newsview.html" class="more">查看详细</a>
+              </p>
+              </div>
+              <div class="clear"></div>
+              </div>
+<div class="newslist bigclass">
+              <div id="post-249" class="post-249 post type-post status-publish format-standard hentry category-sbm-news">
+              <h3><span style="float:left;font-family:微软雅黑;font-size:15px"><a href="newsview.html">全球互联网产业研究之</a></span>.
+                  <span style="float:right">2016-05-14</span>
+              </h3>
+              <p class="content" style="color:gray">今年以来，陆续上线的原创音乐市场成外界关注的焦点，无论是唱片公司还是在线音乐平台，纷纷发布了原创音乐交易平台。<a href="newsview.html" class="more">查看详细</a>
+              </p>
+              </div>
+              <div class="clear"></div>
+              </div>
+<div class="newslist bigclass">
+              <div id="post-249" class="post-249 post type-post status-publish format-standard hentry category-sbm-news">
+              <h3><span style="float:left;font-family:微软雅黑;font-size:15px"><a href="newsview.html">全球互联网产业研究之</a></span>.
+                  <span style="float:right">2016-05-14</span>
+              </h3>
+              <p class="content" style="color:gray">今年以来，陆续上线的原创音乐市场成外界关注的焦点，无论是唱片公司还是在线音乐平台，纷纷发布了原创音乐交易平台。<a href="newsview.html" class="more">查看详细</a>
+              </p>
+              </div>
+              <div class="clear"></div>
+              </div>
+             
+              
+             
+             
+             
+              <br />  
+                
+               <div class="page">1 2 3 4 ></div>
+              
+              
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+      <div id="footer" class="subfooter" style="top:150px; background:url(images/subfooterbg.png) bottom center repeat-x;">
+                   <div class="footercontent">
+        <div class="share">
+          <span class="follow"><a href="" class="sharetwitter"></a>
+            <a href=""  class="sharefacebook"></a></span> <a href="#" class="top"></a>
+        </div>
+        <div class="links">Copyright © 2020 XXX科技有限公司. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a></div>
+        <div class="contacts">
+          <ul>
+            <li class="tel">XXX</li>
+            <li class="fax">XXX</li>
+            <li class="email"><a href="">XXX.com</a></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+           <div style="width:100%;height:100%;;background-color:#07132d"">
+     <div style="width:960px;height:90px;margin:0 auto;background-color:#07132d;color:#41638d">
+</div>           </div>
+
+
+</div>
+                    </div>
+</body>
+</html>

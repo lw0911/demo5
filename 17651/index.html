@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>网站模板</title>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/basis.css"/>
+
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/respond.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script type='text/javascript' src='js/bootstrap.min.js'></script>
+	<script>
+		$(function(){
+		   $('#left-menu').sidr({
+				name: 'sidr-left',
+				side: 'right'
+		    });
+		   $('.nav-tabs2 li').click(function (){
+		   		var index = $(this).index();
+				$(this).attr('class',"active").siblings('li').attr('class','');
+				$('.tab-content2 .tab-pane').eq(index).addClass('active').siblings('.tab-content2 .tab-pane').removeClass('active');
+		   })
+		   $('.nav-tabs1 li').click(function (){
+		   		var index = $(this).index();
+				$(this).attr('class',"active").siblings('li').attr('class','');
+				$('.tab-content1 .tab-pane').eq(index).addClass('active').siblings('.tab-content1 .tab-pane').removeClass('active');
+		   })
+		});
+		$(function() { !
+		    function() {
+		        var a = $("[data-th-collapse='accordion']");
+		        a.mouseenter(function() {
+		            $(this).siblings(a).removeClass("active"),
+		            $(this).addClass("active")
+		        })
+		    } ()
+		}) 
+		$(function () {
+            var speed = 800;//滚动速度
+			var h=document.body.clientHeight;
+			
+            //回到顶部
+            $("#toTop").click(function () {
+			  	$('html,body').animate({
+					scrollTop: '0px'
+				},
+				speed);			
+            });
+            //回到底部
+            var windowHeight = parseInt($("body").css("height"));//整个页面的高度
+            $("#toBottom").click(function () {
+				//alert(h);
+                $('html,body').animate({
+					scrollTop: h+'px'
+				},
+				speed);
+            });
+        });
+	</script>
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.min.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<body>
+		
+		<header id="header">
+			<section class="top hidden-sm hidden-xs wow fadeIn clearfix">
+				<div class="container">
+					<div class="fl">
+						<span>您好游客，欢迎来到常熟XXX服装城！</span>
+					</div>
+					<div class="fr">
+						<a class="top-ico1 fl">收藏本站</a>
+						<a class="top-ico1 fl">我的XXX</a>
+						<a class="top-ico1 fl">网站地图</a>
+						<a class="top-ico1 fl">联系客服</a>
+						<span class="top-ico2 fl">服务热线：XXX</span>
+					</div>
+					
+				</div>
+			</section>
+			<section class="clearfix container nav-box">
+				<div class="fl wow fadeInLeft logo animated" style="visibility: visible; animation-name: fadeInLeft;">
+					<a href="#"><img src="img/logo.png"></a>
+				</div>
+				<div class="fr wow fadeInRight frlogin">
+					<div class="search">
+						<form method="GET" action="index">
+		                    	<input type="text" name="keyword" class="input_doc" value="">
+		                    	<input type="submit" name="button" id="button" value="搜索" class="input_but">
+						</form>
+	                </div>
+					<div class="logins">
+						<a href="#">登录</a>
+						&nbsp;|&nbsp;
+						<a href="#">免费注册</a>
+					</div>
+					
+				</div>
+			</section>
+			<div class="navbg">
+				<section class="clearfix container nav-box">
+					<nav class="navbar navbar-default equinav" role="navigation">
+	
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div><!-- /.navbar-header -->
+						
+						<div class="collapse navbar-collapse">    
+							<ul class="nav navbar-nav fadeInRight wow">
+								<li class="active"><a href="#">首页</a></li>
+								<li><a href="#">羊绒羊毛大衣</a></li>
+								<li><a href="#">欧韩馆</a></li>
+								<li><a href="#">女裤工厂店</a></li>
+								<li><a href="#">XXX品牌集合店</a></li>
+								<li><a href="#">时尚资讯</a></li>
+								<li>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">楼层业态<b class="caret"></b></a>
+									<ul class="dropdown-menu depth_0">
+										<li><a href="#">XXX一层</a></li>
+										<li><a href="#">XXX二层</a></li>
+										<li><a href="#">XXX三层</a></li>
+										<li><a href="#">XXX四层</a></li>
+										<li><a href="#">XXX五层</a></li>
+										<li><a href="#">地下一层</a></li>
+										<li><a href="#">A栋</a></li>
+										<li><a href="#">B栋</a></li>
+									</ul>
+								</li>
+								
+							</ul>
+						</div><!-- /.navbar-collapse -->
+						
+					</nav>
+				</section>
+			</div>
+			
+		</header>
+		<section class="swiper-container wow fadeInDown" id="t-ban">
+			<div class="swiper-button-next2"></div>
+		    <div class="swiper-button-prev2"></div>
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="img/ban1.jpg"/></div>
+	            <div class="swiper-slide"><img src="img/ban1.jpg"/></div>
+				<div class="swiper-slide"><img src="img/ban1.jpg"/></div>
+	        </div>
+	   		 <!-- Add Pagination -->
+	   		 <div class="swiper-pagination"></div>
+	    </section>
+	    
+	    <section class="box1">
+	    	<div class="container yw-box">
+	    		<div class="title1 wow slideInLeft">
+	    			<span>&nbsp;&nbsp;&nbsp;&nbsp;</span><h1 id="stops">羊绒羊毛大衣</h1><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	    		</div>
+	    		<div class="news-img fl wow fadeInUp animated newsimg" style="visibility: visible; animation-name: bounceInRight;">
+				    <div class="swiper-container swiper-container-horizontal" id="news-imgfoc">
+				        <div class="swiper-wrapper">
+				            <div class="swiper-slide swiper-slide-active" style="width: 585px; margin-right: 30px;">
+								<img src="img/nimg.jpg">
+				            </div>
+				            <div class="swiper-slide swiper-slide-next" style="width: 585px; margin-right: 30px;">
+								<img src="img/nimg.jpg">
+				            </div>
+				            <div class="swiper-slide" style="width: 585px; margin-right: 30px;">
+								<img src="img/nimg.jpg">
+				            </div>
+				            <div class="swiper-slide" style="width: 585px; margin-right: 30px;">
+								<img src="img/nimg.jpg">
+				            </div>
+				            <div class="swiper-slide" style="width: 585px; margin-right: 30px;">
+								<img src="img/nimg.jpg">
+				            </div>
+				            <div class="swiper-slide" style="width: 585px; margin-right: 30px;">
+								<img src="img/nimg.jpg">
+				            </div>
+				        </div>
+				        <div class="swiper-button-next2"></div>
+				        <div class="swiper-button-prev2 swiper-button-disabled"></div>
+				    </div>	    				
+	    		</div>
+
+	    		<div class="row">
+	    			<ul class="clearfix syff-list">
+	    				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceInLeft">
+	    					<div class="ff-img">
+	    						<a href="#"><img src="img/ff.jpg"/></a>
+	    						<p>
+	    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”…<a href="#">【点击详情】</a>
+	    						</p>
+	    						<h3>羊绒羊毛大衣品牌</h3>
+	    					</div>
+	    				    					
+	    				</li>
+	    				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12  wow fadeInUp">
+	    					<div class="ff-img">
+	    						<a href="#"><img src="img/ff2.jpg"/></a>
+	    						<p>
+	    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”…<a href="#">【点击详情】</a>
+	    						</p>
+	    						<h3>羊绒羊毛大衣产业基地</h3>
+	    					</div>
+	    					    					
+	    				</li>
+	    				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceInRight">
+	    					<div class="ff-img">
+	    						<a href="#"><img src="img/ff3.jpg"/></a>
+	    						<p>
+	    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”…<a href="#">【点击详情】</a>
+	    						</p>
+	    						<h3>羊绒羊毛大衣资讯</h3>
+	    					</div>
+	    					  					
+	    				</li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    </section>
+	    
+	    <section class="box2">	    	
+	    	<div class="container clearfix sy-about">
+	    		<div class="fl sy-abimg wow bounceInLeft">
+	    			<div class="title1 wow slideInLeft">
+		    			<span>&nbsp;&nbsp;&nbsp;&nbsp;</span><h1>欧韩馆</h1><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		    		</div>
+	    			<div class="news-img fl wow fadeInUp animated newsimg" style="visibility: visible; animation-name: bounceInRight;">
+					    <div class="swiper-container swiper-container-horizontal" id="news-imgfoc2">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide swiper-slide-active" style="width: 585px; margin-right: 30px;">
+									<img src="img/about.jpg">
+									<p class="slidetext">
+		    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”，它是山羊外表皮层粗毛根部的一层薄薄的细绒，这层羊绒是为了适应寒冬长出的，绒毛非常细密柔软，这层羊绒是为了适…<a href="#">【点击详情】</a>
+		    						</p>
+					            </div>
+					            <div class="swiper-slide swiper-slide-next" style="width: 585px; margin-right: 30px;">
+									<img src="img/about.jpg">
+									<p class="slidetext">
+		    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”，它是山羊外表皮层粗毛根部的一层薄薄的细绒，这层羊绒是为了冬长出的，绒毛非常细密柔软，这层羊绒是为了适…<a href="#">【点击详情】</a>
+		    						</p>
+					            </div>
+					            <div class="swiper-slide" style="width: 585px; margin-right: 30px;">
+									<img src="img/about.jpg">
+									<p class="slidetext">
+		    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊维皇后”，它是山羊外表皮层粗毛根部的一层薄薄的细绒，这层羊绒是为了适应寒冬长出的，绒毛非常细密柔软，这层羊绒是为了适…<a href="#">【点击详情】</a>
+		    						</p>
+					            </div>
+					        </div>
+					        <div class="swiper-pagination"></div>
+					    </div>	    				
+		    		</div>
+	    		</div>
+	    		<div class="fr sy-abtxt wow bounceInRight ff-img">
+	    			<div class="title1 wow slideInLeft">
+		    			<span>&nbsp;&nbsp;&nbsp;&nbsp;</span><h1>女裤工厂店</h1><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		    		</div>
+		    		<a href="#"><img src="img/about2.jpg" /></a>
+		    		<p>
+						羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”…<a href="#">【点击详情】</a>
+					</p>
+	    		</div>
+	    	</div>
+	    	<div class="container clearfix hb-list wow fadeInUp">		
+		        <div class="swiper-button-next"></div>
+		        <div class="swiper-button-prev"></div>
+			    <div class="swiper-container" id="hb-img">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide"><img src="img/link.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link2.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link3.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link4.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link5.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link7.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link3.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link4.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link2.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link7.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link3.jpg"/></div>
+			            <div class="swiper-slide"><img src="img/link2.jpg"/></div>
+			        </div>
+			    </div>
+	    	</div>
+	    </section>
+	    
+	    <section class="box3">
+	    	<div class="container clearfix">
+    		  	<ul class="clearfix syff-list">
+    				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceInLeft">
+    					<div class="col-md-4 hidden-sm" style="width:100%;padding:0;">
+						    <section class="panel panel-default indexsecs devices-rank">
+						        <div class="panel-heading">
+						            <h2 class="panel-title">
+						                XXX大事件
+						                <small>
+						                    <a class="pull-right" href="#" target="_blank">
+						                        更多&gt;
+						                    </a>
+						                </small>
+						            </h2>
+						        </div>
+						        <div class="panel-body panel-body2">
+						            <div class="ff-img" style="margin-bottom:28px;">
+			    						<a href="#"><img src="img/dsj1.jpg"></a>
+			    						<p>
+			    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”…<a href="#">【点击详情】</a>
+			    						</p>
+		
+			    					</div>
+			    					<div class="ff-img">
+			    						<a href="#"><img src="img/dsj2.jpg"></a>
+			    						<p>
+			    							羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。羊绒被称为“纤维皇后”…<a href="#">【点击详情】</a>
+			    						</p>
+	
+			    					</div>
+						        </div>
+						    </section>
+						</div>	
+    				    					
+    				</li>
+    				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12  wow fadeInUp">
+    					<div class="col-md-4 hidden-sm" style="width:100%;padding:0;">
+						    <section class="panel panel-default indexsecs devices-rank">
+						        <div class="panel-heading">
+						            <h2 class="panel-title">
+						                热门资讯
+						                <small>
+						                    <a class="pull-right" href="#" target="_blank">
+						                        更多&gt;
+						                    </a>
+						                </small>
+						            </h2>
+						        </div>
+						        <div class="panel-body">
+						            <ul class="nav nav-tabs nav-tabs2" role="tablist">
+						                <li role="presentation" class="active">
+						                    <a href="javascript:;" aria-controls="rank_tv" role="tab" data-toggle="tab">
+						                        羊绒羊毛大衣资讯
+						                    </a>
+						                </li>
+						                <li role="presentation">
+						                    <a href="javascript:;" aria-controls="rank_box" role="tab" data-toggle="tab">
+						                        欧韩馆资讯
+						                    </a>
+						                </li>
+						            </ul>
+						            <div class="tab-content tab-content2">
+						                <div class="tab-pane active" id="rank_tv" role="tabpanel">
+						                    <ul class="list-unstyled devices-rank-list">
+						                        <li data-th-collapse="accordion" class="active">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                               
+						                                <h3>
+						                                    为什么要选择来常熟服装城批？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tabs2.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                	<h3>小标题标题小标题标题小</h3>
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…<a class="" href="#">【点击详情】</a>
+						                                    </p>
+						                                    
+						                                </div>
+						                            </div>
+						                        </li>
+						                    </ul>
+						                </div>
+						                <div class="tab-pane" id="rank_box" role="tabpanel">
+                               				<ul class="list-unstyled devices-rank-list">
+						                        <li data-th-collapse="accordion">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-1">
+						                                    1
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-2">
+						                                    2
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion"  class="active">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-3">
+						                                    3
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    4
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    5
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    6
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    7
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                    </ul>
+                            			</div>
+						            </div>
+						        </div>
+						    </section>
+						</div>				    					
+    				</li>
+    				<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceInRight">
+    					<div class="col-md-4 hidden-sm" style="width:100%;padding:0;">
+						    <section class="panel panel-default indexsecs devices-rank">
+						        <div class="panel-heading">
+						            <h2 class="panel-title">
+						                精彩排行
+						                <small>
+						                    <a class="pull-right" href="#" target="_blank">
+						                        更多&gt;
+						                    </a>
+						                </small>
+						            </h2>
+						        </div>
+						        <div class="panel-body">
+						            <ul class="nav nav-tabs nav-tabs1" role="tablist">
+						                <li role="presentation" class="active">
+						                    <a href="javascript:;" aria-controls="rank_tv" role="tab" data-toggle="tab">
+						                        潮流资讯
+						                    </a>
+						                </li>
+						                <li role="presentation">
+						                    <a href="javascript:;" aria-controls="rank_box" role="tab" data-toggle="tab">
+						                        行业动态
+						                    </a>
+						                </li>
+						            </ul>
+						            <div class="tab-content tab-content1">
+						                <div class="tab-pane active" id="rank_tv" role="tabpanel">
+						                    <ul class="list-unstyled devices-rank-list">
+						                        <li data-th-collapse="accordion" class="active">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-1">
+						                                    1
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-2">
+						                                    2
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-3">
+						                                    3
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    4
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    5
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    6
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    7
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                    </ul>
+						                </div>
+						                <div class="tab-pane" id="rank_box" role="tabpanel">
+                               				<ul class="list-unstyled devices-rank-list">
+						                        <li data-th-collapse="accordion">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-1">
+						                                    1
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-2">
+						                                    2
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion"  class="active">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span class="ranking-item-3">
+						                                    3
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    4
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    5
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    6
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                        <li data-th-collapse="accordion" class="">
+						                            <a class="rank-item-title" href="#" target="_blank">
+						                                <span>
+						                                    7
+						                                </span>
+						                                <h3>
+						                                    为什么要选择来常熟？
+						                                </h3>
+						                                <span class="rank-item-price">
+						                                    2016-08-08
+						                                </span>
+						                            </a>
+						                            <div class="rank-item-content">
+						                                <div class="rank-item-image">
+						                                    <img src="img/tab1.jpg">
+						                                </div>
+						                                <div class="rank-item-text">
+						                                    <p>
+						                                        羊绒大衣是衣身较长，保暖效果好，以羊绒为面料的大衣。皇后…
+						                                    </p>
+						                                    <a class="btn btn-primary pull-right" href="#">
+						                                        查看
+						                                    </a>
+						                                </div>
+						                            </div>
+						                        </li>
+						                    </ul>
+                            			</div>
+						            </div>
+						        </div>
+						    </section>
+						</div>  					
+    				</li>
+    			</ul>  		
+	    		    		
+	    	</div>
+	    </section>
+
+	    
+	    
+	   	<footer id="footer">
+		   <div class="container foot-top">
+		   		<div class="fl foot-lx wow bounceInLeft">
+		   			
+		            <dl class="wow lightSpeedIn animated" data-wow-delay="0.3s">
+						<dt>关于XXX</dt>
+						<dd><a href="#">XXX简介</a></dd>
+						<dd><a href="#">管理团队</a></dd>
+						<dd><a href="#">XXX服务</a></dd>
+		            </dl>
+		            <dl class="wow lightSpeedIn animated" data-wow-delay="0.5s">
+						<dt>联系我们</dt>
+						<dd><a href="#">地理位置</a></dd>
+						<dd><a href="#">联系电话</a></dd>
+						<dd><a href="#">公司邮箱</a></dd>
+						<dd><a href="#">百度地图</a></dd>
+		            </dl>
+		            <dl class="wow lightSpeedIn animated" data-wow-delay="0.7s">
+						<dt>招商专区</dt>
+						<dd><a href="#">商户入驻</a></dd>
+		            </dl>
+		            <dl class="wow lightSpeedIn animated" data-wow-delay="0.9s">
+						<dt>楼层指引</dt>
+						<dd><a href="#">品牌索引</a></dd>
+		            </dl>
+		            <dl class="wow lightSpeedIn animated" data-wow-delay="1.1s">
+						<dt>XXX品牌集合店</dt>
+						<dd><a href="#">品牌合作</a></dd>
+		            </dl>
+					<dl class="wow lightSpeedIn animated nest" data-wow-delay="1.1s">
+						<dt>联系我们</dt>
+						<dd>常熟XXX服装城</dd>
+						<dd>常熟市招商北路8号（常熟汽车南站旁）</dd>
+						<dd>服务专线：XXX</dd>
+		            </dl>
+		   		</div>
+		   		<p class="wow fadeInUp animated">版权所有 © 常熟XXX服装城 2020 苏ICP备XXX号-1</p>
+		   	</div>
+		   
+		   	<div class="copy wow fadeInUp">
+		   		<div class="fadeInUpcon"><span>友情链接：</span>
+		   		<a href="">XXX纺织集团</a><i>|</i><a href="#">中国裤业网</a><i>|</i><a href="#">四季服装城</a><i>|</i><a href="#">上海新七浦服装市场</a><i>|</i><a href="#">杭州四季青服装网</a><i>|</i><a href="#">常熟招商城</a><i>|</i><a href="#">快递查询</a><i>|</i><a href="#">中国纺织经济信息网</a><i>|</i><a href="#">广州白马服装市场</a>
+               <a href="#">纺织服装周刊</a><i>|</i><a href="#">杭州意法服饰城</a><i>|</i><a href="#">郑州锦荣轻纺城</a></div>
+		   		
+		   	</div>
+	   	</footer>
+
+	    <div id="scroll">
+	        <div class="scrollItem">用户<br>反馈</div>
+	        <div class="scrollItem wx"></div>
+	        <div class="scrollItem wb"></div>
+	        <div class="scrollItem" id="toTop"></div>
+	    </div>
+
+	    <script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+	    <script>
+			if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+				new WOW().init();
+			};
+		</script>
+
+	    
+	    
+	    <!--首页焦点图 JS-->
+	    <script>
+		    var swiper = new Swiper('#t-ban', {
+		        pagination: '#t-ban .swiper-pagination',
+		        paginationClickable: true,
+		        nextButton: '#t-ban .swiper-button-next2',
+	        	prevButton: '#t-ban .swiper-button-prev2',
+		        loop : true,
+		    });
+	    </script>
+	     <!--首页焦点图 JS-->
+	    <script>
+		    var swiper = new Swiper('#news-imgfoc2', {
+		        pagination: '#news-imgfoc2 .swiper-pagination',
+		        paginationClickable: true,
+		        loop : true,
+		    });
+	    </script>
+	    
+	   <!--首页合作伙伴 JS-->     
+    	<script>
+	    var swiper = new Swiper('#hb-img', {
+	        pagination: '#hb-img .swiper-pagination',
+	        paginationClickable: true,
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        slidesPerView: 7,
+	        spaceBetween: 0,
+	        breakpoints: {
+	            1120: {
+	                slidesPerView: 4,
+	            },
+	            960: {
+	                slidesPerView: 3,
+	            },
+	            640: {
+	                slidesPerView: 2,
+	            },
+	            480: {
+	                slidesPerView: 1,
+	            }
+	        }
+	    });
+    </script>
+
+	    
+	    <!--首页新闻图片 JS-->  
+		<script>
+	    var swiper = new Swiper('#news-imgfoc', {
+	        pagination: '#news-imgfoc .swiper-pagination',
+	        paginationClickable: '#news-imgfoc .swiper-pagination',
+	        nextButton: '#news-imgfoc .swiper-button-next2',
+	        prevButton: '#news-imgfoc .swiper-button-prev2',
+	        spaceBetween: 30
+	    });
+	    </script>
+	    
+	    
+		<!--首页主营业务 JS-->      
+	    <script>
+		    var swiper = new Swiper('#yw-list', {
+		    pagination: '#yw-list .swiper-pagination',
+	        paginationClickable: true,
+	        slidesPerView: 5,
+	        breakpoints: {
+	            1200: {
+	                slidesPerView: 4,
+	                spaceBetween: 0
+	            },
+	            768: {
+	                slidesPerView: 3,
+	                spaceBetween: 0
+	            },
+	            640: {
+	                slidesPerView: 2,
+	                spaceBetween: 0
+	            },
+	            370: {
+	                slidesPerView: 1,
+	                spaceBetween: 0
+	            }
+	        }
+	    });
+	    </script>
+	    <!-- 返回顶部 JS -->
+	    <script type="text/javascript">
+	    	$(function(){
+				var h3_height = $("#stops").offset().top;
+
+				$(window).scroll(function(){
+					var this_scrollTop = $(this).scrollTop();
+					if(this_scrollTop>h3_height ){
+						$("#scroll").show();
+					}else {
+						$("#scroll").hide();
+					}
+				});
+			});
+	    </script>
+		
+	</body>
+</html>

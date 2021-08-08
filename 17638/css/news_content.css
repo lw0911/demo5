@@ -1,0 +1,228 @@
+@charset "UTF-8";
+.nav .nav4{
+    background:#041b30;
+}
+/*banner样式*/
+.banner{ 
+    width:100%;
+    min-width: 1200px;
+}
+
+/*面包屑导航样式*/
+.bread { 
+    width:100%;
+    height:57px;
+    line-height: 57px;
+    margin-top: 30px;
+    margin-bottom: 85px;
+    background: #e6e6e6;
+    font-size: 18px;
+    color:#666;
+}
+.bread .breadLeft span {
+    color: #333;
+}
+
+/*.bread .breadRight li{
+     position: relative;
+}
+.bread .breadRight li:hover a{
+    color:#f14e0d;
+}
+.bread .breadRight .current{
+    color:#f14e0d;
+}
+.bread .breadRight i{
+    width:30px;
+    height:1px;
+    background-color: #f14e0d;
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    position: absolute;
+    bottom:1px;
+    right:20px;
+    opacity:0;
+}
+.bread .breadRight li:hover i{
+    opacity: 1;
+}
+.bread .breadRight2 {
+    margin-right: 20px;
+    margin-left: 20px;
+}*/
+/*新闻内容样式*/
+.news {
+    font-size: 16px;
+}
+/*新闻左*/
+.news .newsLeft {
+    width:900px;
+    background-color: #f2f2f2;
+    padding-bottom: 90px; 
+}
+.news .newsLeft .pic .picBig {
+    position: relative;
+    color:#fff;
+    cursor: pointer;
+}
+.news .newsLeft .pic p {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:860px;
+    height:70px;
+    line-height: 70px;
+    padding-left: 40px;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    transition:all 0.5s;
+}
+.news .newsLeft .pic:hover p{
+    opacity: 1;
+}
+.news .newsLeft .picSmall {
+    font-size: 0;
+    width: 520px;
+    height:90px;
+    margin-left: 30px;
+    padding:20px 0 60px 0;
+}
+.news .newsLeft .picSmall li { 
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    padding-right:40px; 
+}
+.news .newsLeft .txt{
+    margin-left:30px;
+    text-align: justify;
+    width: 840px;
+}
+.news .newsLeft .txt h3 {
+    font-size: 22px;
+    padding-bottom: 30px;
+}
+.news .newsLeft .txt .outer{
+    width:162px;
+    height:30px;
+    perspective:1000px;
+    cursor: pointer;
+}
+.news .newsLeft .txt .cube{
+    width:162px;
+    height:30px;
+    border:1px solid red;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    position: relative;
+    transform-style:perspective-3d;
+    transition:all 2s;
+}
+.news .newsLeft .txt .p1 {
+    border:1px solid #f14e0d;
+    width:160px;
+    height:28px;
+    color:#333;
+    position: absolute;
+    top:0;
+    left:0;
+    transform:translateZ(14px);
+}
+.news .newsLeft .txt .outer .cube .p2 {
+    background: #f14e0d;
+    border:1px solid red;
+    width:162px;
+    height:30px;
+    color:#fff;
+    position: absolute;
+    top:0;
+    left:0;
+    /*opacity: 0;*/
+    transform:rotateX(-90deg) translateZ(15px);
+    transition:all 2s;
+}
+.news .newsLeft .txt .cube:hover{
+    transform:rotateX(90deg);
+}
+.news .newsLeft .txt .cube:hover .p2{
+    opacity: 1;
+}
+
+/*新闻右侧*/
+.news{
+    margin-bottom: 120px;
+}
+.news .newsRight {
+    text-align: left;
+    font-size: 20px;
+    width:260px;
+    margin-left: 40px;
+}
+.news .newsRight .list li {
+    width:250px;
+    height: 90px;
+    border-top: 1px solid #b2b2b2; 
+    padding: 26px 0 14px 10px;
+    cursor: pointer;
+}
+.news .newsRight .list p{
+    transition:all 0.5s;
+}
+.news .newsRight .list li:hover p{
+    transform:translateX(20px);
+}
+.news .newsRight h3 {
+    padding: 20px 0;
+    margin-left: 10px;
+    transition:all 0.5s;
+    cursor: pointer;
+}
+.news .newsRight h3:hover {
+    transform:translateX(20px);
+}
+.news .newsRight .time {
+    font-size: 16px;
+    color:#999;
+    padding-top: 16px;
+}
+.news .newsRight .last {
+    font-size:18px; 
+} 
+.news .newsRight img {
+    margin-left: 14px;
+    padding-top:6px;
+}
+.news .newsRight .station {
+    font-size: 20px;
+    width:260px;
+    margin-top: -30px;
+    height: 60px;
+    line-height: 60px;
+}
+.news .newsRight .station li{
+    padding-left: 10px;
+    border-bottom: 1px solid #b2b2b2;
+    height: 60px; 
+    cursor:pointer;
+}
+.news .newsRight .station li a{
+    transition:all 0.5s;
+}
+/*.news .newsRight .station li:hover p{
+    transform:translateX(20px);
+}*/
+.news .newsRight .station li:hover a{
+    transform:translateX(20px);
+    display: inline-block;
+    
+}
+.news .newsRight .station .station1{
+    font-size: 26px;
+    font-weight: bold;
+} 
+.news .newsRight .station .station4 {
+    border-bottom: none;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XXX个人空间</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<bgsound src="mp3/yinghuacao.mp3" autostart=true loop=1>
+<STYLE TYPE="text/css">
+    <!--
+.s1{position:absolute;font-size:12pt;color: blue;visibility: hidden;}
+.s2{position:absolute;font-size:20pt;color:red;visibility:hidden;}
+.s3{position:absolute;font-size:16pt;color:gold;visibility:hidden;}
+.s4{position:absolute;font-size:14pt;color:lime;visibility:hidden;}
+  -->
+    </STYLE>
+    <DIV ID="div1" CLASS="s1">*</DIV>
+    <DIV ID="div2" CLASS="s2">*</DIV>
+    <DIV ID="div3" CLASS="s3">*</DIV>
+    <DIV ID="div4" CLASS="s4">*</DIV>
+    <script language="javascript" type="text/javascript" class="s5">
+    var nav = (document.layers);
+    var tmr = null;
+    var spd = 50;
+    var x = 0;
+    var x_offset = 5;
+    var y = 0;
+    var y_offset = 15;
+    if(nav) document.captureEvents(Event.MOUSEMOVE);
+    document.onmousemove = get_mouse;
+    function get_mouse(e)
+    {
+    x = (nav) ? e.pageX : event.clientX+document.body.scrollLeft;
+    y = (nav) ? e.pageY : event.clientY+document.body.scrollTop;
+    x += x_offset;
+    y += y_offset;
+    beam(1);
+    }
+    function beam(n)
+    {
+    if(n<5)
+    {
+    if(nav)
+    {
+    eval("document.div"+n+".top="+y);
+    eval("document.div"+n+".left="+x);
+    eval("document.div"+n+".visibility='visible'");
+    }
+    else
+    {
+    eval("div"+n+".style.top="+y);
+    eval("div"+n+".style.left="+x);
+    eval("div"+n+".style.visibility='visible'");
+    }
+    n++;
+    tmr=setTimeout("beam("+n+")",spd);
+    }
+    else
+    {
+    clearTimeout(tmr);
+    fade(4);
+    }
+    }
+    function fade(n)
+    {
+    if(n>0)
+    {
+    if(nav)eval("document.div"+n+".visibility='hidden'");
+    else eval("div"+n+".style.visibility='hidden'");
+    n--;
+    tmr=setTimeout("fade("+n+")",spd);
+    }
+    else clearTimeout(tmr);
+    }
+    </script>
+</head>
+
+<body>
+<!--头部-->
+<div class="top">
+	<div class="logo"><img src="images/logo.jpg" /></div>
+	<div class="top_info"><a href="#"><img src="images/shoucang.gif" width="170" height="15" border="0" /></a></div>
+	<div class="menu">
+		<ul>
+			<li><a href="index.html" class="sel">Home<br />个人首页</a></li>
+			<li><a href="jingcaitupian.html">Pic<br />精彩图片</a></li>
+			<li><a href="wenzhangjinghua.html">Article<br />文章精华</a></li>
+			<li><a href="xinqingrizhi.html">Journal<br />心情日志</a></li>
+			<li><a href="lianxixiuxiu.html">Contact<br />秀秀简介</a></li>
+		</ul>
+	</div>
+</div>
+<!--中间-->
+<div class="main">
+	<!--左侧-->
+	<div class="m_left">
+		<!--左上-->
+		<div class="ml1">
+			<div class="ml1_left">
+				<div class="ml11">
+					<div class="ml1_riqi">2012-07-04</div>
+					<div class="ml1_title">天气好热啊</div>
+					<div class="ml1_main">今天乌云密布，没有一丝风，又闷又热！</div>
+				</div>
+				<div class="ml12">
+					<div class="ml1_riqi">2012-07-04</div>
+					<div class="ml1_title">天气好热啊</div>
+					<div class="ml1_main">今天乌云密布，没有一丝风，又闷又热！</div>
+				</div>
+			</div>
+			<div class="ml1_right">
+				<div class="ml13">
+					<div class="ml1_riqi">2012-07-04</div>
+					<div class="ml1_title">天气好热啊</div>
+					<div class="ml1_main">今天乌云密布，没有一丝风，又闷又热！</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--左中-->
+		<div class="ml2">
+			<div class="ml2_title">每日更新</div>
+			<div class="ml2_main">|&nbsp;&nbsp;我允许你在我面钱走来走去，但不允许你在我的世界走来走去！</div>
+			<div class="clear"></div>
+		</div>
+		<!--左下-->
+		<div class="ml3">
+			<div class="ml3_left">
+				<div class="ml3_title"><span>文章精华</span><a href="wenzhangjinghua.html"><img src="images/more.gif" width="31" height="9" border="0" title="点击查看更多" /></a></div>
+			
+				<div class="ml3_main">
+					<ul>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己我会更加爱惜自己我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ml3_right">
+				<div class="ml3_title"><span>心情日志</span><a href="xinqingrizhi.html"><img src="images/more.gif" width="31" height="9" border="0" title="点击查看更多" /></a></div>
+			
+				<div class="ml3_main">
+					<ul>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己我会更加爱惜自己我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+						<li><a href="#">没有你的日子里，我会更加爱惜自己</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--右侧-->
+	<div class="m_right">
+		<!--右上-->
+		<div class="mr1">
+			<div class="mr1_title">点滴心情</div>
+			<div class="mr1_main">雷锋做了好事从来不留名，因为他都写在日记本里了！</div>
+		</div>
+		<!--右中-->
+		<div class="mr2">
+			<div class="mr2_title">精彩瞬间</div>
+			<div class="mr2_main"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" align="middle" style="width: 259px; height: 160px">
+                                    <param name="allowScriptAccess" value="sameDomain" />
+									<param name="wmode" value="opaque" />
+                                    <param name="movie" value="Flvplayer.swf" />
+                                    <param name="quality" value="high" />
+                                    <param name="bgcolor" value="#000000" />
+                                    <param name="FlashVars" value="vcastr_file=video/1.flv" />
+                                    <embed src="Flvplayer.swf"  wmode="opaque" value="vcastr_file=video/2.flv" quality="high" bgcolor="#000000" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                    </object></div>
+		</div>
+		<div class="mr3">
+			<div class="mr3_title">精彩图片</div>
+			<div class="mr3_main">
+				<div id="link_logo" style="overflow:hidden;width:267px;height:130px;">
+				  <div id="link_logo1" style="overflow:hidden">
+				  	<table border="0" cellspacing="0" cellpadding="0" width="267">
+						<tr>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/1.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/2.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/3.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/4.jpg" width="60" height="60" border="0" /></a></td>
+						</tr>
+						<tr>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/5.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/6.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/7.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/8.jpg" width="60" height="60" border="0" /></a></td>
+						</tr>
+						<tr>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/9.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/10.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/11.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/12.jpg" width="60" height="60" border="0" /></a></td>
+						</tr>
+						<tr>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/1.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/2.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/3.jpg" width="60" height="60" border="0" /></a></td>
+							<td width="25%" height="65" valign="middle" align="center"><a href="#"><img src="images/4.jpg" width="60" height="60" border="0" /></a></td>
+						</tr>
+					</table>
+					<div class="clear"></div>
+				  </div>
+				  <div id="link_logo2"></div>
+				</div>
+				<script type="text/javascript">
+ var speed=65
+  link_logo2.innerHTML=link_logo1.innerHTML
+    function Marquee2(){
+	  if(link_logo2.offsetTop-link_logo.scrollTop<=0)
+	     link_logo.scrollTop-=link_logo1.offsetHeight
+		   else{
+		    link_logo.scrollTop++
+			   }
+			      }
+				     var MyMar2=setInterval(Marquee2,speed)
+					    link_logo.onmouseover=function() {clearInterval(MyMar2)}
+						   link_logo.onmouseout=function() {MyMar2=setInterval(Marquee2,speed)}
+</script>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="footer">
+	<div class="f_logo"><img src="images/footer_logo.gif" width="92" height="48" border="0" /></div>
+	<div class="copy">
+		<p>Copyright2020 &copy; XXX个人版权所有  </p>
+		<p>联系地址：XXX&nbsp;&nbsp;&nbsp;&nbsp;电话：XXX&nbsp;&nbsp;&nbsp;&nbsp;QQ/MSN：XXX</p>
+	</div>
+	<div class="clear"></div>
+</div>
+</body>
+</html>

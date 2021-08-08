@@ -1,0 +1,953 @@
+<!doctype html>
+<html>
+<head>
+<!-- 字符编码 -->
+<meta charset="utf-8">
+<!-- IE兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!-- 采用高速模式渲染（目前仅有360支持） -->
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="">
+<meta name="description" content="如何科学理性挑选补习机构？看师资？看教研？看过往成绩单？家长常见的疑问和困惑在这里能得到全面的解答。">
+<meta name="baidu-site-verification" content="wcMMFTPk07" />
+<title>补习答疑 -挑出最好的补习机构-海风教育</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<!--   <link rel="stylesheet" href="css/bootstrap.css"> -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/teachers.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery-1.7.2.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+<!--  <script type="text/javascript" src="js/hotspot.min.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!-- 浏览器判断 -->
+<!--[if lt IE 7]>
+    <script>window.location.href='./error.html'</script>
+    <![endif]-->
+<script src="js/jquery.lazyload.js"></script>
+
+<!--[if !IE]><!-->
+<script src="js/haifengLibRoll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script>
+        $(function(){
+            window.scrollReveal = new scrollReveal({ reset: true, move: '50px'});
+        })
+    </script> -->
+<!--<![endif]-->
+<script>
+        $(function(){
+            $("img.lazy").lazyload({
+                effect : "fadeIn"
+            });
+
+        })
+
+    </script>
+<script>
+        function test(){
+            $("#LXB_CONTAINER" ).hide();
+        }
+        $(function(){
+            setInterval(test, 100 )
+
+        })
+
+    </script><script type="text/javascript">
+     $(function(){
+         $(".nav_menu .nav_menu_item").hover(function(){
+            $(this).find('ul').show();
+          },function(){
+            $(this).children('ul').stop().slideUp('fast');
+          } );
+        /*$(".nav_menu .nav_menu_item").hover(function(){
+            $(this).children('ul').stop().slideDown('fast');
+            console.info('down')
+          },function(){
+              $(this).children('ul').stop().slideUp('fast');
+            console.info('up')
+          } );*/
+            //防止有些浏览器出现异常
+           /* $(".nav").mouseleave(function(){
+              $(".nav_menu" ).children('ul').stop().slideToggle('fast');
+          } )
+            $(".nav_submenu").mouseleave(function(){
+                $(".nav_menu" ).children('ul').stop().slideUp('fast');
+            } ) */
+
+        var select_title=location.pathname+location.search;
+         console.info(select_title)
+        $(".nav_menu_item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    //console.info(href)
+                    if(select_title.indexOf(href)>0){
+                        $(this ).parents('li' ).find('.no_is_sub').addClass('active');
+                    }
+                }
+            })
+        })
+        $(".nav_submenu-item" ).each(function(){
+            $(this ).find('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if( href ){
+                    //href=href.split('.')[0];
+                    if(select_title.indexOf(href)>0){
+                        $(this ).addClass('active');
+                    }
+                }
+            })
+        })
+     })
+</script>
+<script>
+    /*广告系统参数传递*/
+    function GetUrlArgsObj() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var args=GetUrlArgsObj();
+    if(typeof (args.adid)=="undefined"){
+        args.adid="";
+    }
+    var adid=args.adid;
+    $(function(){
+        if(adid){
+            $('a' ).each(function(){
+                var href=$(this ).attr('href');
+                if(typeof (href)!="undefined"&&!href.match(/\#/)&&href.indexOf('javascript')==-1){
+
+                    console.info(href)
+                    if(!href.match(/\?/)){
+                        adid='?adid='+args.adid;
+                    }else{
+                        adid='&adid='+args.adid;
+                    }
+                    if(href.indexOf("//")!=-1){
+                        $(this ).attr('href',href+adid);
+                    }else{
+                        var cur_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                        $(this ).attr('href',cur_protocol+ location.hostname +'/' + href+adid);
+                    }
+                }
+            });
+        }
+
+
+        $("#lunbo li" ).click(function(){
+            var href=$(this ).attr('href');
+            window.open(href+adid);
+        })
+
+    })
+
+    function jumpUrl( link ){
+        var jump_link = link;
+        if(typeof (args.adid) != "undefined"&&args.adid ){
+            if(jump_link.match(/\?/)){
+                jump_link = link+'#adid='+args.adid;
+            }else{
+                jump_link = link+'?adid='+args.adid;
+            }
+
+        }
+        window.open(jump_link);
+    }
+</script>
+<script type="text/javascript">window._pt_lt = new Date().getTime();</script>
+</head>
+<script type="text/javascript">
+  window._pt_sp_2 = [];
+  _pt_sp_2.push('setAccount,68d72831');
+  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  
+  (function() {
+    var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+    atag.src = _protocol + 'js.ptengine.cn/js/pta.js';
+    var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+    stag.src = _protocol + 'js.ptengine.cn/js/pts.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+  })();
+</script>
+<link rel="stylesheet" href="css/class.css">
+<body >
+<div class="class_pege">
+    <div class="w clearfix">
+        <a class="logo fl" href="index.htm" >
+            <img src="images/class_logo.png" alt="">
+        </a>
+    </div>
+</div>
+<!--2016年9月课表开始-->
+<div class="class_pege02" id="index_1">
+    <div class="w clearfix">
+        <div class="class_pege01_box">
+            <h3 class="title">2016年11月课表 </h3>
+            <div class="table_main">
+                <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+                    <tbody>
+                    <tr class="firstRow">
+                        <th width="200">
+                            开课时间
+                        </th>
+                        <th width="610">
+                            开课主题
+                        </th>
+                        <th width="150">
+                            主讲人
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/1 周二 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                           备战高考一模 高中语文&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;提分要点解析
+                        </td>
+                        <td width="150">
+                           周云娇
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/4 周五 <span>19:30</span>
+                        </td>
+                        <td width="610">
+                            备战高考一模 高中物理&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;运动学必考分析
+                        </td>
+
+                        <td width="150">
+                            徐晓磊
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/8 周二 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                             备战高考一模 高中数学&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;老师教你如何提分
+                        </td>
+                        <td width="150">
+                            狄俊祺
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/11 周五 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                            名牌大学绿色通道————自主招生政策解读与准备指导（第二波）
+                        </td>
+                        <td width="150">
+                           杨婷
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/15 周二 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                            备战高考一模 高中化学&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;必考点与解题技巧点拨
+                        </td>
+                        <td width="150">
+                           伦红叶
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/18 周五 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                           备战高考一模 高中英语&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;攻破核心考点
+                        </td>
+                        <td width="150">
+                            仲颖鸣
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/22 周二 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                            备战高考一模 高中生物&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;重难点大突破
+                        </td>
+                        <td width="150">
+                            肖勤梅
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200">
+                            2016/11/25 周五 <span> 19:30</span>
+                        </td>
+                        <td width="610">
+                            改革来了：普通高中生综合素质评价体系政策解读（第二波）
+                        </td>
+                        <td width="150">
+                            杨婷
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/>
+        </div>
+    </div>
+</div>
+<!--016年9月课表结束-->
+<!--016年8月课表开始-->
+
+<div class="class_pege03" id="index_2">
+  <div class="w clearfix">
+    <p> <img src="images/wangqi.png" alt="" /> </p>
+    <div class="class_pege02_box">
+      <h3 class="title_b">2016年10月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/30 周五 <span> 19:30</span></td>
+              <td width="610"> 孩子一生的源动力：品格力 ——青少年综合素质培养指导讲座 </td>
+              <td width="150"> 杨婷 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/8 周六 <span>19:30</span></td>
+              <td width="610"> 明明很爱，却用恨来表达----教你如何与孩子沟通 </td>
+              <td width="150"> 杨婷 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/11 周二 <span> 19:30</span></td>
+              <td width="610"> +3选考 化学：方法技巧点拨与必考点解析 </td>
+              <td width="150"> 伦红叶 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/14 周五 <span> 19:30</span></td>
+              <td width="610"> 上海纽约大学申请流程分享会 </td>
+              <td width="150"> 仲颖鸣 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/18 周二 <span> 19:30</span></td>
+              <td width="610"> +3选考 物理：运动学加三必考解析，取高分于无形 </td>
+              <td width="150"> 徐晓磊 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/21 周五 <span> 19:30</span></td>
+              <td width="610"> 自主招生政策相关 </td>
+              <td width="150"> 杨婷 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/25 周二 <span> 19:30</span></td>
+              <td width="610"> +3选考 生物 ：一小时突破选三生物重难点 </td>
+              <td width="150"> 肖勤梅 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/10/28 周五 <span> 19:30</span></td>
+              <td width="610"> 综合素质政策解读 </td>
+              <td width="150"> 杨婷 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<div class="class_pege03" id="index_3">
+  <div class="w clearfix">
+    <div class="class_pege02_box">
+      <h3 class="title_b">2016年9月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/8 周四 <span> 19:30</span></td>
+              <td width="610"> 中考语文满分大揭秘，一起揭开它的神秘面纱 </td>
+              <td width="150"> 林奇涵 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/9 周五 <span>19:30</span></td>
+              <td width="610"> 三分钟读懂文言文，教你做古人的解语花 </td>
+              <td width="150"> 林奇涵 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/13 周二 <span> 19:30</span></td>
+              <td width="610"> 一堂课搞定图形运动，活捉动点让它无处可逃 </td>
+              <td width="150"> 杨衍刘 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/16 周五 <span> 19:30</span></td>
+              <td width="610"> 1小时掌握高中数学函数核心，满分不再愁 </td>
+              <td width="150"> 刘邦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/18 周日 <span> 19:30</span></td>
+              <td width="610"> 家长如何帮助学生提升学习力？ ——家庭教育改善与学习能力提升讲座 </td>
+              <td width="150"> 杨婷 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/22 周四 <span> 19:30</span></td>
+              <td width="610"> 史上最强单词高效记忆法，一堂课让你全掌握 </td>
+              <td width="150"> 顾佳伟 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/23 周五 <span> 19:30</span></td>
+              <td width="610"> 如何躲过高中英语阅读“陷阱”，拿下阅读大满贯 </td>
+              <td width="150"> 曾海阳 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/9/30 周五 <span> 19:30</span></td>
+              <td width="610"> 孩子一生的源动力：品格力——青少年综合素质培养指导讲座 </td>
+              <td width="150"> 杨婷 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<div class="class_pege03" id="index_4">
+  <div class="w clearfix">
+    <div class="class_pege03_box">
+      <h3 class="title_b">2016年8月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/8/5 周五 <span> 19:30</span></td>
+              <td width="610"> 2016自主招生政策解析 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/8/12 周五 <span>19:30</span></td>
+              <td width="610"> 自主招生备考个人经历规划 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/8/18 周四<span> 19:30</span></td>
+              <td width="610"> 60分钟改变传统沟通模式 </td>
+              <td width="150"> 仲颖鸣 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/8/19 周五 <span> 19:30</span></td>
+              <td width="610"> 自主招生面试高频问题分析 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/8/26 周五 <span> 19:30</span></td>
+              <td width="610"> 选择专业你必须知道的事 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<!--016年8月课表结束--> 
+<!--016年7月课表开始-->
+<div class="class_pege04" id="index_5">
+  <div class="w clearfix">
+    <div class="class_pege04_box">
+      <h3 class="title_b">2016年7月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/7 周四 <span> 19:30</span></td>
+              <td width="610"> 【暑假班】初高衔接——英语如何做到“高”人一等 </td>
+              <td width="150"> 曾海阳 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/14 周四 <span>19:30</span></td>
+              <td width="610"> 【暑假班】初高衔接——高中化学早班车 </td>
+              <td width="150"> 伦红叶 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/15 周五 <span> 19:30</span></td>
+              <td width="610"> 高中语文重点知识与解题方法 </td>
+              <td width="150"> 周云娇 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/21 周四 <span> 19:30</span></td>
+              <td width="610"> 【暑假班】初高衔接——“有力的跨越”：揭秘初高中物理学习思维转变 </td>
+              <td width="150"> 徐晓磊 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/22 周五 <span> 19:30</span></td>
+              <td width="610"> 高中数学重点知识与解题方法 </td>
+              <td width="150"> 狄俊祺 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/28 周四 <span> 19:30</span></td>
+              <td width="610"> 【暑假班】初高衔接——从初中数学的“小溪”迈向高中数学的“大河” </td>
+              <td width="150"> 狄俊祺 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/7/29 周五 <span> 19:30</span></td>
+              <td width="610"> 高中英语重点知识与解题方法梳理 </td>
+              <td width="150"> 仲颖鸣 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<!--016年7月课表结束--> 
+<!--016年6月课表开始-->
+<div class="class_pege05" id="index_6">
+  <div class="w clearfix">
+    <div class="class_pege05_box">
+      <h3 class="title_b">2016年6月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/3 周五 <span> 19:30</span></td>
+              <td width="610"> 高中化学重点知识与解题方法 </td>
+              <td width="150"> 郑勇 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/9 周四 <span>19:30</span></td>
+              <td width="610"> 自主招生面试高频问题分析 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/10 周五 <span> 19:30</span></td>
+              <td width="610"> 高中政治重点知识与解题方法 </td>
+              <td width="150"> 杨微 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/15 周三 <span> 19:30</span></td>
+              <td width="610"> 高中物理重点知识与解题方法 </td>
+              <td width="150"> 徐晓磊 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/18 周六 <span> 19:30</span></td>
+              <td width="610"> 高中生物重点知识与解题方法 </td>
+              <td width="150"> 肖勤梅 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/24 周五 <span> 19:30</span></td>
+              <td width="610"> 高中历史重点知识与解题方法 </td>
+              <td width="150"> 姚畅 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/6/30 周四 <span> 19:30</span></td>
+              <td width="610"> 【暑假班】初高衔接——之破译文学真谛，玩转高中语文 </td>
+              <td width="150"> 周云娇 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<!--016年6月课表结束--> 
+<!--016年5月课表开始-->
+<div class="class_pege06" id="index_7">
+  <div class="w clearfix">
+    <div class="class_pege06_box">
+      <h3 class="title_b">2016年5月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/10 周二 <span> 19:30</span></td>
+              <td width="610"> 志愿填报技巧 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/12 周四 <span>19:30</span></td>
+              <td width="610"> 2016自主招生政策解析 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/13 周五 <span> 19:30</span></td>
+              <td width="610"> 高中语文重点知识与解题方法 </td>
+              <td width="150"> 周云娇 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/18 周三 <span> 19:30</span></td>
+              <td width="610"> 60分钟改变传统沟通模式 </td>
+              <td width="150"> 仲颖鸣 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/20 周五 <span> 19:30</span></td>
+              <td width="610"> 高中数学重点知识与解题方法 </td>
+              <td width="150"> 狄俊祺 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/27 周五 <span> 19:30</span></td>
+              <td width="610"> 高中英语重点知识与解题方法梳理 </td>
+              <td width="150"> 仲颖鸣 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<!--016年5月课表结束--> 
+<!--016年4月课表开始-->
+<div class="class_pege07" id="index_8">
+  <div class="w clearfix">
+    <div class="class_pege07_box">
+      <h3 class="title_b">2016年4月课表 </h3>
+      <div class="table_main">
+        <table cellpadding="0" cellspacing="0" width="960" class="table-lists">
+          <tbody>
+            <tr class="firstRow">
+              <th width="200"> 开课时间 </th>
+              <th width="610"> 开课主题 </th>
+              <th width="150"> 主讲人 </th>
+            </tr>
+            <tr>
+              <td width="200"> 2016/4/28 周四 <span> 19:30</span></td>
+              <td width="610"> 2016综合评价政策解析 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/10 周二 <span>19:30</span></td>
+              <td width="610"> 志愿填报技巧 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/12 周四 <span> 19:30</span></td>
+              <td width="610"> 2016自主招生政策解析 </td>
+              <td width="150"> 雷珏亦 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/13 周五 <span> 19:30</span></td>
+              <td width="610"> 高中语文学习'指南针'——高中语文重点知识与解题方法 </td>
+              <td width="150"> 周云娇 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/20 周五 <span> 19:30</span></td>
+              <td width="610"> 用好数学“工具箱”——高中数学重点知识与解题方法 </td>
+              <td width="150"> 狄俊祺 </td>
+            </tr>
+            <tr>
+              <td width="200"> 2016/5/27 周五 <span> 19:30</span></td>
+              <td width="610"> 做好高考英语先行军——高中英语重点知识与解题方法梳理 </td>
+              <td width="150"> 仲颖鸣 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <img src="images/tablebg.png" height="" width="" alt="" class="tablebg fl"/> </div>
+  </div>
+</div>
+<!--016年4月课表结束-->
+<!--016年4月课表结束-->
+<div class="page08_mian">
+  <div class="foot_box container ">
+    <form class="form" action=" " method="post" id="tmsLandingForm">
+      <div class="ui-form-item title "> 立即预约 </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input type="text" class="ui-input" name='studentName'placeholder="请填写您的姓名" id="name">
+        </div>
+        <div class="ui-form-explain"> 请输入姓名 </div>
+      </div>
+      <div class="ui-form-item ">
+        <div class="input-wrap">
+          <input value="" class="ui-input" type="text" placeholder="请填写您的手机号" id="phone" name='firstPhone' maxlength="11">
+        </div>
+        <div class="ui-form-explain "> 请输入手机号 </div>
+      </div>
+      <input type='hidden' name='formId' value='6'>
+      <div class="ui-form-item"> <a class="ui-button" id='tmsLandingFormBtn'>开始预约</a> </div>
+    </form>
+  </div>
+</div><!-- 活动页面 -->
+<div class="reserve">
+  <div class="reserve_box container ">
+    <form class="reserve_form" action=" " method="post" id="tmsLandingForm">
+      <div class="zero"> <a onclick=" "> <img src="images/fankui.png"> </a> </div>
+      <div id="wufeng">
+        <ul>
+          <li> <a > <span style="color:white">张*林妈妈今日电话助教：孩子最近厌学情绪严重，十一期间作业都没做，老师也批评了他。和孩子聊了海风在线补习模式之后，他倒是觉得挺新奇的，也没排斥，试听下来他还挺满意，准备报课了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white"> 王*铮家长短信反馈：以前过十一，孩子要么玩不好，要么学不好。今年有了海风在线平台，学习和出行两不误，他特别开心。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+          <li> <a > <span style="color:white">刘*焉妈妈来电：孩子最近学习状态特别好，有了海风的错题本，她明显知道自己问题出在哪里了，这个势头很好，特意和老师说一声，借着这个势能再冲一冲。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a> </li>
+        </ul>
+      </div>
+      <div class="page-right fl"> <img src="images/miss.png"> <a target="_blank" style="cursor: pointer;"> <img src="images/gaokao3.png"> </a> </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.easie.js"></script> 
+<script type="text/javascript" src="js/wufeng.js"></script> 
+<script type="text/javascript">
+$(function(){
+    wufeng(90800);
+})
+</script> 
+<script type='text/javascript'>
+$(function(){var adid = location.href.match(/adid=([a-zA-Z0-9]+)/);
+    var adidNo='';
+    if(adid && adid[1]) {
+        adidNo=adid[1];
+    }
+    var tmsLandingFormUrl = 'landingForm/register?adidNo='+adidNo;
+    var oS=$('.ui-form-explain');
+    $('#tmsLandingFormBtn').click(function(){
+        var phone=$('#phone').val();
+        var name=$('#name').val();
+                if(!name||name==""){
+            oS[0].style.display="block";
+            return false;
+        }
+        if(!phone||phone==""){
+            oS[1].style.display="block";
+            return false;
+        }else if(phone!==""&&!/(^(13|14|15|17|18|)\d{9}$)/.test(phone)){
+            oS[1].style.display="block";
+            return false;
+        }
+    $('#phone').focus(function(){
+        $(oS[1]).hide();
+    });
+    $('#name').focus(function(){
+            $(oS[0]).hide();
+    });
+        $.ajax({
+            type : 'post',
+            data : $('#tmsLandingForm').serialize(),
+            url : tmsLandingFormUrl,dataType : 'jsonp',
+            jsonp: 'callbackparam',
+            success : function(json){if(json.error==1) {alert(json.msg);} else {location.href ='';
+                }}
+        });
+    });
+})
+</script> 
+<script>
+function bb() {
+    var body_height=$('body' ).height();
+    var window_height=$(window).height();
+        if ($(this).scrollTop() >=body_height-window_height-158) {
+                $(".reserve").css("position","relative");
+            }else{
+                $(".reserve").css("position","fixed");
+        }
+        }
+$(window).scroll(bb);
+bb();
+</script> 
+<!-- footer开始 --> 
+<!-- footer -->
+<div class="footer_pege">
+  <div class="container clearfix">
+    <div class="footer_main"> <a href="teachers.html" target="_blank">海风师资</a>| <a href="research.html" target="_blank">海风教研</a>| <a onclick=" )" target="_blank">学员成绩</a>| <a href="Online.html" target="_blank">学习中心</a>| <a href="cooperation.html" tppabs=" " target="_blank">商务合作</a>| <a href="joinUs.html" target="_blank">加入我们</a> </div>
+    <p> ©2020hfjy.com All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a> XXX <span class="icp_num">XXX</span> </p>
+  </div>
+</div>
+<!--footer结束  --> 
+<!-- 侧边栏开始 --> 
+<script>
+    $(function(){
+        $("#go_top").click(function(){
+            $('html,body').animate({scrollTop:0},500);
+            return false;
+        });
+        $("#hangyeyanzheng").click(function(e){
+            e.preventDefault();
+            window.open('');
+        })
+        var _cur_host = window.location.host;
+        if( _cur_host.indexOf('yphen100.com')>0 ) $('.icp_num').text('沪ICP备11030714号-1');
+
+        if( _cur_host.indexOf('f100.net')>0 ) $('.icp_num').text('沪ICP备11030714号-3');
+    })
+</script> 
+<!--右侧贴边导航quick_links.js控制-->
+<div class="mui-mbar-tabs">
+  <div class="quick_link_mian">
+    <div class="quick_links_panel">
+      <div id="quick_links" class="quick_links">
+        <ul>
+          <li> <a class="history_list"><i class="view"></i></a>
+            <div class="mp_tooltip" style=" visibility:hidden;" onclick="window.open(' ')">
+              <p> 在线客服 </p>
+              <p class="p3" onclick="window.open(' ')"> (点击详情) </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li class="quick_toggle"> <a class="my_qlinks"><i class="setting"></i></a>
+            <div class="ibar_login_box status_login">
+              <div class="avatar_box">
+                <p> 海风微信 </p>
+                <p class="avatar_imgbox"> <img src="images/img_qrcode.png" alt=""> </p>
+              </div>
+              <i class="icon_arrow_white"></i> </div>
+          </li>
+  
+          <li> <a class="mpbtn_histroy"><i class="tel"></i></a>
+            <div class="mp_tooltip">
+              <p onclick="window.open(' ')"> 海风热线 </p>
+              <p class="p3"> 4008-331-112 </p>
+              <i class="icon_arrow_right_black"></i> </div>
+          </li>
+          <li id="go_top"> <a class="mpbtn_histroy"> <i class="tops"></i> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(".quick_links_panel li").mouseenter(function(){
+        $(this).children(".mp_tooltip").stop().animate({left:-130,queue:true});
+        $(this).children(".mp_tooltip").css("visibility","visible");
+        $(this).children(".ibar_login_box").css("display","block");
+    });
+    $(".quick_links_panel li").mouseleave(function(){
+        $(this).children(".mp_tooltip").css("visibility","hidden");
+        $(this).children(".mp_tooltip").stop().animate({left:-159,queue:true});
+        $(this).children(".ibar_login_box").css("display","none");
+    });
+    $(".quick_toggle").mouseover(function(){
+        $(this).children(".ibar_login_box").stop().animate({left:-160,queue:true});
+        $(this).children(".ibar_login_box").css("visibility","visible");
+        $(this).children(".avatar_box").css("display","block");
+    });
+    $(".quick_toggle ").mouseleave(function(){
+        $(this).children(".ibar_login_box").css("visibility","hidden");
+        $(this).children(".ibar_login_box").stop().animate({left:-180,queue:true});
+        $(this).children(".avatar_box").css("display","none");
+    });
+</script> 
+<script>
+    (function(){
+        //百度统计
+        var bp = document.createElement('script');
+        bp.src = '../push.zhanzhang.baidu.com/push.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<div class="sidebar" id="right-fixed">
+  <ul>
+    <li><a href="#index_1" title="1">2016年11月</a></li>
+    <li><a href="#index_2" title="2">2016年10月</a></li>
+    <li><a href="#index_3" title="3">2016年9月</a></li>
+    <li><a href="#index_4" title="4">2016年8月</a></li>
+    <li><a href="#index_5" title="5">2016年7月</a></li>
+    <li><a href="#index_6" title="6">2016年6月</a></li>
+    <li><a href="#index_7" title="7">2016年5月</a></li>
+    <li><a href="#index_8" title="8">2016年4月</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+    // 悬浮菜单
+    // 悬浮菜单
+    $(function () {
+        $("#right-fixed li a").click(function () {
+            $(this).addClass('currt').parents('li').siblings().find('a').removeClass('currt');
+        });
+        $('#right-fixed a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 800);
+                    return false;
+                }
+            }
+        });
+        function a(x, y) {
+            l = $('.w').offset().left;
+            w = $('.w').width();
+            if (l < 200) {
+                x = -x - 117;
+            }
+            $('#right-fixed').css('left', (l + w + x) + 'px');
+            $('#right-fixed').css('top', y + 'px');
+
+        }
+
+        $(function () {
+            $(window).scroll(function () {
+                t = $(document).scrollTop();
+                if (t > 50) {
+                    $('#right-fixed').show();
+                } else {
+                    $('#right-fixed').hide();
+                }
+
+            })
+            $(window).resize(function () {
+               t = $(document).scrollTop();
+                if (t > 50) {
+                    $('#right-fixed').show();
+                } else {
+                    $('#right-fixed').hide();
+                }
+                  a(20, 120);
+
+            })
+       
+        });
+
+              a(20, 120);
+          
+
+
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+   <meta name="author" content="order by dede58.com/" />
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="XXX速运、XXX速运" name="keywords">
+    <meta content="XXX速运、XXX速运" name="description">
+    <meta content="Li Zhen Ya Team" name="author">
+    <title>XXX速运-订单支付</title>
+    <link type="text/css" rel="stylesheet" href="theme/css/core.css">
+    <link type="text/css" rel="stylesheet" href="theme/css/home.css">
+    <script type="text/javascript" src="theme/js/jquery-1.4.2.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.tabPanel ul li').click(function(){
+                $(this).addClass('hit').siblings().removeClass('hit');
+                $('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+
+<header id="lzy-header">
+    <div class="lzy-container clearfix">
+        <div class="lzy-he-logo">
+            <h1>
+                <a href="index.html"><img src="theme/img/logo.png" title="" about="" name=""></a>
+            </h1>
+        </div>
+        <div class="lzy-che-nav">
+            <ul>
+                <li><a href="user-index.html">用户首页</a></li>
+                <li><a href="order.html">订单</a></li>
+                <li><a href="capital.html" >资金</a></li>
+                <li><a href="inventory-list.html">库存</a></li>
+                <li><a href="personal-info.html">个人信息</a></li>
+                <li><a href="#" class="current">网站设置</a></li>
+            </ul>
+        </div>
+
+        <div class="lzy-register">
+            <ul>
+                <li><span  class="sign">欢迎，邓杰</span></li>
+                <li><a href="#">用户设置</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="lzy-content lzy-content-order" id="lzy-adaption">
+        <div class="lzy-boxes lzy-boxes-order clearfix">
+            <div class="tabPanel clearfix">
+                <ul>
+                    <li>填单</li>
+                    <li class="hit">我的订单</li>
+                </ul>
+                <div class="panes">
+                    <div class="pane">
+                        <div class="panes-tab user-home">
+                            <h3>订单支付</h3>
+                        </div>
+                        <div class="login_m">
+                            <div class="login_boder">
+                                <div class="login_padding">
+                                    <div class="essential">
+                                        <p>订单：lizhenya@163.com</p>
+                                        <p>姓名：   邓杰</p>
+                                        <p>手机：   18611688681</p>
+                                        <p>微信：   企业地址</p>
+                                        <p>Q Q：&nbsp;   428402</p>
+                                     </div>
+                                    <h2>企业营业执照扫描件</h2>
+                                    <p class="license"><img src="theme/img/user/u-zz.png" width="248" height="172"></p>
+                                    <div class="rem_sub">
+                                        <div class="clearfix"><input type="submit" value="返 回" id="button-1" name="button" class="sub_button tab-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane"   style="display:block;">
+                        <div class="panes-tab payment-tab">
+                            <h3>订单支付</h3>
+                        </div>
+                        <div class="lzy-payment">
+
+                            <div class="login_m">
+                                <div class="login_boder">
+                                    <div class="login_padding info">
+                                        <p>订单:<span>469113897302</span></p>
+                                        <p>应付款:<span class="info-text">€16.00</span></p>
+                                        <div class="rem_sub">
+                                            <div class="clearfix" style="background-color:#25aaee; color:#b6b5b1; margin-bottom:14px;"><img src="theme/img/user/u-zfb.png"></div>
+                                        </div>
+                                        <div class="rem_sub">
+                                            <div class="clearfix" style="border:1px solid #b6b5b1;;"><img src="theme/img/user/u-pal.png"></div>
+                                        </div>
+                                        <div class="rem_sub">
+                                            <div class="clearfix"><input type="submit" value="余额支付" id="button" name="button" class="sub_button"></div>
+                                            <p style="padding-bottom:20px; padding-top:5px; color:#f39800;">当前余额：¥1,024.00</p>
+                                        </div>
+                                        <div class="rem_sub">
+                                            <div class="clearfix"><input type="submit" class="sub_button tab-button" name="button" id="button-2" value="返回订单"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pane" >
+                        <div class="panes-tab email-tab">
+                            <h3>邮件设置</h3>
+                        </div>
+                        <div class="login_m">
+                            <div class="login_boder">
+                                <div class="login_padding">
+                                    <h2>设置SMTP服务器</h2>
+                                    <label>
+                                        <input type="text" placeholder="" value="" class="txt_input txt_input2" id="usermail">
+                                    </label>
+                                    <h2>账号</h2>
+                                    <label>
+                                        <input type="text" placeholder="" value="" class="txt_input txt_input2" id="username">
+                                    </label>
+                                    <h2>密码</h2>
+                                    <label>
+                                        <input type="password" class="txt_input" id="userpwd" name="textfield2">
+                                    </label>
+                                    <h2>邮件模版</h2>
+                                    <label>
+                                        <textarea></textarea>
+                                    </label>
+
+                                    <div class="rem_sub">
+                                        <div class="clearfix"><input type="submit" value="保 存" id="button" name="button" class="sub_button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane">
+                        <div class="panes-tab password-tab">
+                            <h3>密码修改</h3>
+                        </div>
+                        <div class="login_m">
+                            <div class="login_boder">
+                                <div class="login_padding">
+                                    <h2>旧密码</h2>
+                                    <label>
+                                        <input type="text" placeholder="" value="" class="txt_input txt_input2" id="usermail">
+                                        <p style="font-size:12px;">*密码必须包含字母</p>
+                                    </label>
+
+                                    <h2>新密码</h2>
+                                    <label>
+                                        <input type="text" placeholder="" value="" class="txt_input txt_input2" id="username">
+                                    </label>
+                                    <h2>重复新密码</h2>
+                                    <label>
+                                        <input type="password" class="txt_input" id="userpwd" name="textfield2">
+                                    </label>
+
+                                    <div class="rem_sub">
+                                        <div class="clearfix"><input type="submit" value="保 存" id="button" name="button" class="sub_button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane">
+                        <h1>价格</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<footer>
+    <div class="lzy-adaption">
+        <div class="lzy-copyright">
+            <p>Copyright © 2020. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>. 沪ICP备XXX号</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

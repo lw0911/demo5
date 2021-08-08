@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/cloudzoom.css" />	
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/guizhou.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/cloudzoom.js"></script>
+    <script src="js/page.js"></script>
+	<title>贵州山地旅游</title>
+	<style type="text/css">
+		body{ min-width: 1200px !important;}
+		.swiper-wrapper div.swiper-slide{ float: left; width:11% !important;}
+		.guizhoubg li{ display: none;}
+		.guizhous{opacity: 0;}
+	</style>
+	<!--启动CloudZoom就可以了，quickStart()立即启动-->
+	<script type="text/javascript">
+		CloudZoom.quickStart();
+	</script>
+</head>
+
+<body>
+	<!-- 头部 开始 -->
+	<div class="head">
+		<div class="head_top">
+			<div class="w1200 clearFloat">
+				<div class="left fl"><span>本商城推介信息为广告</span></div>
+				<div class="right fr">
+					<span>请</span>
+					<a href="javascript:;">登录</a>|
+					<a href="javascript:;">注册</a>|
+					<a href="javascript:;">我的融e购</a>|
+					<a href="javascript:;">购物车</a>|
+					<a href="javascript:;">帮助中心</a>|
+					<a href="javascript:;">客服电话</a>
+				</div>
+			</div>
+		</div>
+		<div class="head_down">
+			<div class="w1200">
+				<div class="logo fl">
+					<a href="javascript:;">
+						<img class="ig1" src="images/index1.png" />
+						<img class="ig2" src="images/index2.png" />
+					</a>
+				</div>
+				<div class="ser fr">
+					<div class="right1">
+						<div class="right1_box"><input type="text" placeholder="输入查找关键字" /></div>
+						<input class="in2" type="button" value="搜索" />
+					</div>
+					<div class="right2"><span>热门搜索：科沃斯机器人</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	<div class="nav">
+		<div class="w1200 clearFloat">
+			<div class="left fl"><a href="javascript:;">所有商品分类</a></div>
+			<div class="right fr">
+				<ul class="clearFloat">
+					<li><a href="javascript:;">首页</a></li>
+					<li><a href="javascript:;">大牌e起购</a></li>
+					<li><a href="javascript:;">百元店</a></li>
+					<li><a href="javascript:;">跨境馆</a></li>
+					<li><a href="javascript:;">汽车城</a></li>
+					<li><a href="javascript:;">购房中心</a></li>
+					<li><a href="javascript:;">金融</a></li>
+					<li><a href="javascript:;">企业采购</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 导航 结束 -->
+	<!-- banner 开始 -->
+	<div class="banner">
+		<div class="lunbo fullSlide">
+			<a class="prev"></a>
+			<a class="next"></a>
+			<div class="bd">
+				<ul>
+					<li style="background:url(images/index3.jpg) center 0 no-repeat;background-size:cover;"><a href="javascript:;"></a></li>
+					<li style="background:url(images/banner.jpg) center 0 no-repeat;background-size:cover;"><a href="javascript:;"></a></li>
+					<li style="background:url(images/banner_1.jpg) center 0 no-repeat;background-size:cover;"><a href="javascript:;"></a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			jQuery(".fullSlide").slide({mainCell:".bd ul", effect:"fold", autoPlay:true, delayTime:700});
+		</script>
+		<div class="quan">
+			<div class="w1200">
+				<ul>
+					<li class="li1 clearFloat">
+						<div class="jian"><span>减</span></div>
+						<div class="li_left fl">
+							<em>￥</em>
+							<i>3</i>
+						</div>
+						<div class="li_right fl">
+							<div class="p1"><span>满59元</span>即可使用</div>
+							<a class="lq" href="javascript:;">领取优惠券</a>
+						</div>
+					</li>
+					<li class="li2 clearFloat">
+						<div class="jian"><span>减</span></div>
+						<div class="li_left fl">
+							<em>￥</em>
+							<i>5</i>
+						</div>
+						<div class="li_right fl">
+							<div class="p1"><span>满79元</span>即可使用</div>
+							<a class="lq" href="javascript:;">领取优惠券</a>
+						</div>
+					</li>
+					<li class="li3 clearFloat">
+						<div class="jian"><span>减</span></div>
+						<div class="li_left fl">
+							<em>￥</em>
+							<i>10</i>
+						</div>
+						<div class="li_right fl">
+							<div class="p1"><span>满158元</span>即可使用</div>
+							<a class="lq" href="javascript:;">领取优惠券</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner_db"></div>
+	</div>
+	<!-- banner 结束 -->
+	<!-- 小导航 开始 -->
+	<div class="nav2">
+		<div class="w1200">
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index7.png" /></div>
+							<p>首页</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index8.png" /></div>
+							<p>游在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index9.png" /></div>
+							<p>吃在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index10.png" /></div>
+							<p>住在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index11.png" /></div>
+							<p>行在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index12.png" /></div>
+							<p>玩在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index13.png" /></div>
+							<p>购在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index8.png" /></div>
+							<p>游在贵州</p>
+						</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+							<div class="ig"><img src="images/index9.png" /></div>
+							<p>吃在贵州</p>
+						</a>
+		            </div>
+		        </div>
+		        <div style="clear: both;"></div>
+		    </div>
+		    <script>
+		    var swiper = new Swiper('.swiper-container', {
+		        slidesPerView: 7,
+		        paginationType: 'fraction'
+		    });
+		    </script>
+		</div>
+	</div>
+	<!-- 小导航 结束 -->
+	<!-- 地图 开始 -->
+	<div class="map">
+		<div class="tit"><img src="images/index20.png"/></div>
+		<div class="guizhoubox">
+			<div  class="guizhouMap">
+				<div id="guizhous"></div>
+				<ul class="guizhoubg">
+					<img id="guizimg" src="images/guizhou.png"/>
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<li><img src="images/as1.png"/></li>
+				<li><img src="images/gy1.png"/></li>
+				<li><img src="images/lps1.png"/></li>
+				<li><img src="images/map.png"/></li>
+				<li><img src="images/bj1.png"/></li>
+				<li><img src="images/tr1.png"/></li>
+				<li><img src="images/xy1.png"/></li>
+				<li><img src="images/kl1.png"/></li>
+				<li><img src="images/dy1.png"/></li>
+			</ul>
+			</div>
+			<div class="guizAlte">
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第0个-->
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第1个-->
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第2个-->
+				
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第3个-->
+				
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第4个-->
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第5个-->
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第6个-->
+				
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第7个-->
+				
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				<!--点击地图出现的DI-->
+				<!--顺序不改  0安顺、1贵阳、2六盘水、3遵义、4毕节、5铜仁、6兴义、7凯里、8都匀-->
+				<!--第8个-->
+				<div class="listConter">
+				<!--商家logo-->
+				<ul class="logoTal">
+					<li><a href="#"><img src="images/zhuanzhu.png"/></a></li>	
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<li><a href="#"><img src="images/logotype.png"/></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+				<!--景区-->
+				
+				<div class="mapConter">
+					
+					<ul class="imgTal">
+						<li class="active"><img  src="images/bb1.png"/></li>
+						<li><img  class="gray" src="images/bb2.png"/></li>
+						<li><img  class="gray" src="images/r1.jpg"/></li>
+						<div style="clear: both;"></div>
+					</ul>
+					<ul class="textTel">
+						<li class="active">
+							<h3>甲秀楼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>酸汤鱼</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						<li>
+							<h3>米酒</h3>
+							<p>甲秀楼在贵州省贵阳市城南的南明河上，以河中一块巨石为基而建，是国家AAA级旅游景区。
+甲秀楼始建于明朝，后楼毁重建，改名“来凤阁”。清代甲秀楼多次重修，并恢复原名。现存建筑是宣统元年(1909年)重建的。
+甲秀楼上下三层，白石为栏，层层收进，由桥面至楼顶高约20米。南明河从楼前流过，汇为涵碧潭。楼侧由石拱“浮玉桥”连接两岸，桥上原有小亭一座叫“涵碧亭”。甲秀楼朱梁碧瓦，四周水光山色，名实相符，堪称甲秀</p>
+							<a href="#" class="abtn"><img src="images/gengduo.png"/></a>
+					
+						</li>
+						
+					</ul>
+					</div>
+					<div class="clickBtn"><img src="images/guanbi.png"/></div>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+	</div>
+	<!-- 地图 结束 -->
+	<!-- 黔货故事 开始 -->
+	<div class="history">
+		<div class="tit"><img src="images/index18.png" /></div>
+		<div class="det_in">
+			<div class="det w1200 fullSlides">
+				<div class="det_top hd">
+					<ul class="clearFloat">
+						<li>
+							<span>黔货故事名称</span>
+						</li>
+						<li>
+							<span>黔货故事名称</span>
+						</li>
+						<li>
+							<span>黔货故事名称</span>
+						</li>
+						<li class="li_active">
+							<span>黔货故事名称</span>
+						</li>
+						<li>
+							<span>黔货故事名称</span>
+						</li>
+						<li>
+							<span>黔货故事名称</span>
+						</li>
+						<li>
+							<span>黔货故事名称</span>
+						</li>
+					</ul>
+				</div>
+				<div class="det_middle"><img src="images/index15.png" /></div>
+				<div class="bd">
+					<ul>
+					<li class="det_down" style="display:none;">
+					<div class="det_down_tit">贵州高山黑糯米1</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+				<li class="det_down" style="display:none;">
+					<div class="det_down_tit">贵州高山黑糯米2</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+				<li class="det_down" style="display:none;">
+					<div class="det_down_tit">贵州高山黑糯米3</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+				<li class="det_down">
+					<div class="det_down_tit">贵州高山黑糯米4</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+				<li class="det_down" style="display:none;">
+					<div class="det_down_tit">贵州高山黑糯米5</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+				<li class="det_down" style="display:none;">
+					<div class="det_down_tit">贵州高山黑糯米6</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+				<li class="det_down" style="display:none;">
+					<div class="det_down_tit">贵州高山黑糯米7</div>
+					<p>故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容故事内容</p>
+					<div class="more"><a href="javascript:;">立即查看&gt;&gt;</a></div>
+				</li>
+					
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+			jQuery(".fullSlides").slide({ mainCell:".bd ul", effect:"fold", delayTime:300, autoPlay:true });
+		</script>
+	<!-- 黔货故事 结束 -->
+	<!-- 精品推荐 开始 -->
+	<div class="bout">
+		<div class="tit"><img src="images/index18.png" /></div>
+		<div class="w1200">
+			<div class="w3cFocus">
+				<div class="w3cFocusIn">
+					<div class="bd">
+						<ul id="fdbox">
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom" ><img class="cloudzoom" data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30" src="images/index20.jpg" /></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介1</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg" data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30" /></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介2</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg" data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30" /></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介3</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg" data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30" /></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介4</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg" data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30" /></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介5</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg"  data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30"/></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介6</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg"  data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30"/></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介7</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+							<li class="clearFloat">
+								<div class="li_ig fl jqueryzoom"><img class="cloudzoom" src="images/index20.jpg" data-cloudzoom="zoomSizeMode:'image',zoomImage: 'images/fd.jpg',autoInside: 30" /></div>
+								<div class="li_fon fl">
+									<div class="sp1">商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介商品名称和简介8</div>
+									<div class="sp2">特价销售  ￥ 300.00</div>
+									<div class="sp3 clearFloat">
+										<div class="sp3_det">
+											<p>原价</p>
+											<i>￥1000</i>
+										</div>
+										<div class="sp3_det">
+											<p>折扣</p>
+											<i>2.8折</i>
+										</div>
+										<div class="sp3_det">
+											<p>立省</p>
+											<i>￥88</i>
+										</div>
+									</div>
+									<div class="ljqg"><a href="javascript:;">立即抢购</a></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="hd">
+						<ul>
+							<li><img src="images/index21.jpg" /></li>
+							<li><img src="images/index22.jpg" /></li>
+							<li><img src="images/index21.jpg" /></li>
+							<li><img src="images/index22.jpg" /></li>
+							<li><img src="images/index21.jpg" /></li>
+							<li><img src="images/index22.jpg" /></li>
+							<li><img src="images/index21.jpg" /></li>
+							<li><img src="images/index22.jpg" /></li>
+						</ul>
+					</div>
+				</div>
+				<a class="prev" href="javascript:void(0)"></a>
+				<a class="next" href="javascript:void(0)"></a>
+
+		</div>
+
+		<script type="text/javascript">
+			jQuery(".w3cFocus").slide({ mainCell:".bd ul", effect:"fold", delayTime:300, autoPlay:true });
+		</script>
+		</div>
+	</div>
+	<!-- 精品推荐 结束 -->
+	<!-- 底部 开始 -->
+	<div class="foot">
+		<div class="w1200">
+			<div class="foot1">
+				<ul class="clearFloat">
+					<li>
+						<dl>
+							<dt><span>注册登录</span></dt>
+							<dd><a href="javascript:;">会员注册</a></dd>
+							<dd><a href="javascript:;">会员登录</a></dd>
+							<dd><a href="javascript:;">商城搜索</a></dd>
+							<dd><a href="javascript:;">商品购买</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><span>支付方式</span></dt>
+							<dd><a href="javascript:;">会员注册</a></dd>
+							<dd><a href="javascript:;">会员登录</a></dd>
+							<dd><a href="javascript:;">商城搜索</a></dd>
+							<dd><a href="javascript:;">商品购买</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><span>售后服务</span></dt>
+							<dd><a href="javascript:;">会员注册</a></dd>
+							<dd><a href="javascript:;">会员登录</a></dd>
+							<dd><a href="javascript:;">商城搜索</a></dd>
+							<dd><a href="javascript:;">商品购买</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><span>关于商城</span></dt>
+							<dd><a href="javascript:;">会员注册</a></dd>
+							<dd><a href="javascript:;">会员登录</a></dd>
+							<dd><a href="javascript:;">商城搜索</a></dd>
+							<dd><a href="javascript:;">商品购买</a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="foot2">
+				<div class="left fl">
+					<a href="javascript:;">工行首页</a>|
+					<a href="javascript:;">XXX版权所有</a>
+				</div>
+				<div class="right fr">
+					<span>京ICP证030247</span>
+					<a href="javascript:;"><img src="images/index24.png" /></a>
+					<a href="javascript:;"><img src="images/index25.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 结束 -->
+</body>
+
+</html>

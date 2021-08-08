@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="order by dede58.com/" />
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>XXX咨询设计有限公司</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" href="css/zy.css" type="text/css">
+
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+</head>
+<body id="z_bj">
+<!--头部-->
+<div class="toubu toubu_z">
+    <div class="bj_jz bj_jz_z">
+        <div class="logo"><a href="./"><img src="images/logo1.png"></a></div>
+        <div class="daohang">
+           <ul class="venus-menu venus-menu_z">
+                <li><a href="gdgk.html">公司概况</a></li>
+                <img src="images/yig_03.png">
+                <li><a href="hxtd.html">核心团队</a></li>
+                <img src="images/yig_03.png">
+                <li><a href="alzs.html">案例展示</a></li>
+                <img src="images/yig_03.png">
+                <li><a href="xwzx.html">新闻中心</a></li>
+                <img src="images/yig_03.png">
+                <li><a href="lxwm.html">联系我们</a></li>
+            </ul> 
+        </div>
+    </div>
+</div>
+
+<!--内容-->
+<div class="nr_bj">
+    <div class="nrjz">
+        <div class="erji">
+            <ul>
+                <li class="dq"><h1></h1> <a href="alzs.html">公司新闻</a></li>
+                <i></i>
+                <li><a href="#">媒体报道</a></li>
+            </ul>
+            <div class="styled-select_xq">
+                <a href="#" class="zq"><img src="images/zuoyou_03.png"></a>
+                <a href="#"><img src="images/zuoyou_05.png"></a>
+            </div>
+        </div>
+        <!-- content block 
+        <div id="content_1" class="content"></div> -->
+            <div class="jianjie">
+                <img src="images/xwt_03.jpg">
+                <h1>李总参加行业访谈会！</h1>
+                <span>2017-2-28</span>
+                <p> 为更好落实迎宾服务，物业公司多次召开专题会议，部署安排各部门接待细节及迎宾中易出现问题的应急方案。如开启写字楼大堂东侧平推门、中楼速通门方便客人出入；启用三部高区专用电梯，并培训客户公司相关接待人员；协助客户公司在大堂迎宾为更好落实迎宾服务，物业公司多次召开专题会议，部署安排各部门接待细节及迎宾中易出现问题的应急方案。</p>
+            </div>
+        
+           
+    </div>
+    <!-- Google CDN jQuery with fallback to local -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+    <!-- custom scrollbars plugin -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).load(function(){
+                $("#content_1").mCustomScrollbar({
+                    scrollInertia:550,
+                    horizontalScroll:true,
+                    mouseWheelPixels:116,
+                    scrollButtons:{
+                        enable:true,
+                        scrollType:"pixels",
+                        scrollAmount:116
+                    },
+                    callbacks:{
+                        onScroll:function(){ snapScrollbar(); }
+                    }
+                });
+                /* toggle buttons scroll type */
+                var content=$("#content_1");
+                $("a[rel='toggle-buttons-scroll-type']").html("<code>scrollType: \""+content.data("scrollButtons_scrollType")+"\"</code>");
+                $("a[rel='toggle-buttons-scroll-type']").click(function(e){
+                    e.preventDefault();
+                    var scrollType;
+                    if(content.data("scrollButtons_scrollType")==="pixels"){
+                        scrollType="continuous";
+                    }else{
+                        scrollType="pixels";
+                    }
+                    content.data({"scrollButtons_scrollType":scrollType}).mCustomScrollbar("update");
+                    $(this).html("<code>scrollType: \""+content.data("scrollButtons_scrollType")+"\"</code>");
+                });
+                /* snap scrollbar fn */
+                var snapTo=[];
+                $("#content_1 .images_container img").each(function(){
+                    var $this=$(this),thisX=$this.position().left;
+                    snapTo.push(thisX);
+                });
+                function snapScrollbar(){
+                    var posX=$("#content_1 .mCSB_container").position().left,closestX=findClosest(Math.abs(posX),snapTo);
+                    $("#content_1").mCustomScrollbar("scrollTo",closestX,{scrollInertia:350,callbacks:false});
+                }
+                function findClosest(num,arr){
+                    var curr=arr[0];
+                    var diff=Math.abs(num-curr);
+                    for(var val=0; val<arr.length; val++){
+                        var newdiff=Math.abs(num-arr[val]);
+                        if(newdiff<diff){
+                            diff=newdiff;
+                            curr=arr[val];
+                        }
+                    }
+                    return curr;
+                }
+            });
+        })(jQuery);
+    </script>
+
+
+</div>
+
+
+
+<!--页未-->
+<div class="yewei yewei_z">
+    <div class="yewei_jz" style="width: 1024px;">
+        <div>
+            <p>京ICP备XXX号-4 / 京ICP证XXX号  北京市公安局朝阳分局备案编号:XXX</p>
+            <p>Copyright © 2020</p>
+        </div>
+        <div class="fx">
+            <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style_24x24">
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

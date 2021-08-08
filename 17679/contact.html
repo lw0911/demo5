@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by dede58.com/" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta  name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>响应式金融股权投资管理企业模板(自适应手机端)</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<script src="js/touchslide.1.1.js" type="text/javascript"></script>
+<script src="js/jq.mobi.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.superslide.2.1.1.js"></script>
+<script type="text/javascript" src="js/pzinputmsg.js"></script>
+<script type="text/javascript" src="js/navslide.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script>
+            $(function () {
+                $('#tcgao').hide();
+            })
+        </script>
+<script type="text/javascript" src="js/jquery.scrollto.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#ljth_h").click(function () {
+            $.scrollTo('#ljth', 500);
+            $('#ljth').css('padding-top', '85px');
+        });
+        $("#tzln_h").click(function () {
+            $.scrollTo('#tzln', 800);
+            $('#tzln').css('padding-top', '85px');
+        });
+        $("#thyw_h").click(function () {
+            $.scrollTo('#thyw', 1000);
+            $('#thyw').css('padding-top', '85px');
+        });
+        $("#xwdt_h").click(function () {
+            $.scrollTo('#xwdt', 1200);
+        });
+       
+    });
+   
+
+</script>
+</head>
+<body style="outline: none;">
+
+<div class="pz_top" id="pz_top">
+  <div class="w_1200">
+    <div class="c_1200_1">
+      <div class="logo"><a href=""><img src="picture/logo.jpg" width="153" height="60"></a></div>
+      <div class="r_menu">
+        <div class="menu"  id="navSlide">
+          <ul>
+            <li class="nli nli_1"> <span> <a class="l1_a" href="index.html">
+              <div class="limg"><img src="picture/top_img64575469.png" width="19" height="19"></div>
+              <div class="chi">首&nbsp;&nbsp;页</div>
+              </a> </span> </li>
+            <li class="nli nli_1 " id="nav2"> <span> <a class="l1_a" href="about.html" target="_self">
+              <div class="limg"><img src="picture/top_imgt1.png" width="19" height="19"></div>
+              <div class="chi">走进我们</div>
+              </a> <b></b> </span>  </li><li class="nli nli_1 " id="nav2"> <span> <a class="l1_a" href="yewu.html" target="_self">
+              <div class="limg"><img src="picture/top_imgt2.png" width="19" height="19"></div>
+              <div class="chi">公司业务</div>
+              </a> <b></b> </span>  </li><li class="nli nli_1 " id="nav2"> <span> <a class="l1_a" href="news.html" target="_self">
+              <div class="limg"><img src="picture/top_imgt3.png" width="19" height="19"></div>
+              <div class="chi">新闻中心</div>
+              </a> <b></b> </span>  </li><li class="nli nli_1 on" id="nav2"> <span> <a class="l1_a" href="contact.html" target="_self">
+              <div class="limg"><img src="picture/top_imgt4.png" width="19" height="19"></div>
+              <div class="chi">联系我们</div>
+              </a> <b></b> </span>  </li>
+          </ul>
+          </li>
+          <li class="nli nli_2" id="login_in"> <span> 
+            <script src="js/zhuangtai.js"></script> 
+            </span> </li>
+          </ul>
+          <script>
+                               $('#denglu').click(function () {
+                                   $('.pf_load').show();
+                               })
+                           </script> 
+        </div>
+        <div class="small_menu"> <a href="javascript:;" onclick="$('.menu,.cha').show(200);"><img src="picture/top_img4.jpg" width="48" height="46"></a> <a class="cha" href="javascript:;" onclick="$('.menu,.cha').hide(200);"><img src="picture/top_img5.jpg" width="48" height="46"></a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="width:100%;float:left;" id="tcgao"></div>
+<div class="pz_banner"> 
+  <!--pcbanner开始-->
+  <div style="height:504px; position: relative;" class="banner_box_pc">
+    <div style="position: absolute; left: 50%; margin-left: -960px; top: 0; width:1920px;">
+      <div style="width:1920px; height:504px;">
+        <div id="mapall" style="width:100%;height:100%;"></div>
+        <script type="text/javascript" src="js/ef988ee59aa34e0cb703ebd011030c9e.js"></script> 
+        <script>
+    $(function () {
+        drawbaidumap();
+        $(window).resize(function () {
+            drawbaidumap();
+        });
+    });
+    function drawbaidumap() {
+        //地图适应高度
+        var winheight = $(window).height();
+        //$(".contactnei").height(winheight-120);
+        //$("#mapall").height(winheight-20);
+
+        var map = new BMap.Map("mapall");
+        var point = new BMap.Point(121.459401, 31.234308);
+        map.centerAndZoom(point, 15);
+        var mapStyle = { style: "dark" };
+        map.setMapStyle(mapStyle);
+        map.addControl(new BMap.NavigationControl());
+        var pt = new BMap.Point(121.459401, 31.234308);
+        var icon = new BMap.Icon("skin/images/map-marker.png", new BMap.Size(50, 50), { 'anchor': new BMap.Size(20, 60) });
+        var marker = new BMap.Marker(pt, { icon: icon });
+        map.addOverlay(marker);
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    }
+</script> 
+      </div>
+    </div>
+    <div class="c_0100_1">
+      <div class="w_1200">
+        <div class="pz_SideLayer" id="pcleft">  </div>
+      </div>
+    </div>
+    <script>
+            var btn = 1200 - $(".c_0100_1 .pz_SideLayer").width();
+            var btnl = btn / 2;
+            $(".c_0100_1 .pz_SideLayer").css("margin-left", btnl + "px");
+		      </script> 
+  </div>
+  <!--pcbanner结束--> 
+  <!--padbanner开始-->
+  
+  <div style="position: absolute; left: 50%; margin-left: -500px; top: 0;">
+    <div class="c_0100_2">
+      <div class="w_1200">
+        <div class="pz_SideLayer">  </div>
+      </div>
+      <script>
+                var btn = 1000 - $(".c_0100_2 .pz_SideLayer").width();
+                var btnl = btn / 2;
+                $(".c_0100_2 .pz_SideLayer").css("margin-left", btnl + "px");
+		      </script> 
+    </div>
+  </div>
+  <!--padbanner结束--> 
+  <!--phonebanner开始-->
+  <div id="slideBox" class="banner_box_phone"> 
+    
+    <!--phonebanner结束--> 
+  </div>
+</div>
+<script>
+    $('#left20').addClass('hover');
+    $('#left220').addClass('hover');
+</script>
+<div class="pz_main" style="background-color:#f6f6f6;">
+  <div class="w_1200">
+    <div class="c_0100_3 kuan1">
+      <div class="pz_SideLayer_phone">  </div>
+      <script>
+            	    $('#left320').addClass('hover');
+            	    var btn = $(".c_0100_3").width() - $(".c_0100_3 .pz_SideLayer_phone").width();
+            	    var btnl = btn / 2;
+            	    $(".c_0100_3 .pz_SideLayer_phone").css("margin-left", btnl + "px");
+		      </script> 
+    </div>
+  </div>
+  <div class="w_1200">
+    <div class="c_1200_7">
+      <div class="title_4">
+        <div class="m_tit_con"> <span>联系方式</span>
+          <div class="tit_eng">
+            <div class="engcon"> Contact Us </div>
+          </div>
+        </div>
+        <script>
+                    var btn = $(".title_4").width() - $(".title_4 .m_tit_con").width();
+                    var btnl = btn / 2;
+                    $(".title_4 .m_tit_con").css("margin-left", btnl + "px");
+		      </script> 
+      </div>
+      <div class="t_1200_18">
+        <div class="t_1200_10">
+          <p><img src="picture/6358224600006577481595986.jpg" width="100%" title="contact_img4.jpg"/></p>
+          <ul class=" list-paddingleft-2">
+            <ul class=" list-paddingleft-2" style="list-style-type: square;">
+              <li>
+                <div class="tit_contact"><span style="font-size: 24px;">某某股权投资基金管理有限公司</span></div>
+                <div class="text_contact">地址：XXX<br/>
+                  客服热线：XXX<br/>
+                  邮箱：admin@baidu.com</div>
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <div class="t_1200_11">
+          <div class="title_5">各大区联系方式</div>
+          <div class="tt_1200_1">
+            <div class="ul_cont">
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—上海大区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：021-6688-6094</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：上海市闸北区恒丰路329号隆宇国际商务广场3369
+                          -5588室</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—华中大区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：027-85506699</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：武汉市江汉区建设大道568号新世界国贸大厦46楼</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—华东大区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：0571-28223366</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：杭州市西湖区杭大路15号嘉华国际1003-1006室</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="ul_cont">
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—西南大区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：023-60336699</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：重庆市渝中区民权路28号英利国际48楼</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—西北地区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：029-85450737</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：西安市碑林区环城南路336号珠江时代广场C座8楼</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—华南大区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：0755-329899988</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：深圳市福田区金田路安联大厦A座25楼</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="ul_cont">
+              <div class="li_cont">
+                <div class="tit_cont">百度云股权投资基金管理有限公司—东北大区</div>
+                <div class="text_cont">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr class="firstRow">
+                        <td width="25"><img src="picture/contact_img8.png" height="14" width="15"/></td>
+                        <td>联系电话：0411-82209262</td>
+                      </tr>
+                      <tr>
+                        <td><img src="picture/contact_img9.png" height="17" width="13"/></td>
+                        <td>公司地址：大连市中山区港兴路6号万达中心36楼</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+            $("#nav8").addClass("on");
+ </script> 
+
+<div class="pz_down"> 
+  <!--底部开始手机用另外一个底-->
+  <div class="w_0100 c_0100_bg4">
+    <div class="w_1200">
+      <div class="c_1200_5">
+        <div class="t_1200_5">
+          <div class="l_790">  <a href="#" target="_self">走进我们</a>  <a href="#" target="_self">公司业务</a>  <a href="#" target="_self">新闻中心</a>  <a href="#" target="_self">联系我们</a>  </div>
+          <div class="r_215">
+            <div class="pz_select_2"  > <span>友情链接</span>
+              <ul>
+                
+                <li class="option"><a href='/' target='_blank'>模板</a> </li>
+                
+                <li class="option"><a href='/host/' target='_blank'>主机</a> </li>
+                
+                <li class="option"><a href='/' target='_blank'>响应式模板</a> </li>
+                
+                <li class="option"><a href='/' target='_blank'>建站素材</a> </li>
+                
+              </ul>
+              <input name="ShowType" id="ShowType" type="hidden" value="" />
+            </div>
+            <script>
+                        var xl = $(".r_215 .pz_select_2");
+                        $(xl).click(function () {
+                            var yc = $(this).children("ul").css("display");
+                            if (yc == "none") {
+                                $(".r_215 .pz_select_2 ul").hide();
+                                $(this).children("ul").show();
+                                $(".pf_xl").show();
+                            } else { $(this).children("ul").hide(); $(".pf_xl").hide(); }
+                        })
+
+					</script> 
+          </div>
+        </div>
+        <div class="t_1200_6">
+          <div class="l_790_2">
+            <p> 全国免费咨询电话：XXX <br/>
+              公司名称<span>：</span>某某股权投资基金管理有限公司 <br/>
+              &nbsp;公司地址<span>：</span>XXX<br/>
+              版权所有:Copyright &copy; 2020 某某企业有限公司 版权所有 </p>
+          </div>
+          <div class="r_105">
+            <div class="weixin"> <a href="#" class="dbg1" style="position:relative; z-index:1;">
+              <div class="pf_wx">
+                <div class="wximg">
+                  <p><img src="picture/6358034065306001681703050.jpg" height="97" width="99" title="down_img7.jpg"/></p>
+                </div>
+              </div>
+              </a> </div>
+            <div class="weibo">
+              <p><a href="#" target="_blank" class="dbg2">&nbsp;</a></p>
+            </div>
+            <div class="fenxiang"><a href="#" id="bshare-shareto" class="dbg3 jiathis"  target="_blank"  ></a></div>
+            <script type="text/javascript" src="js/jia.js" charset="utf-8"></script></div>
+        </div>
+      </div>
+      <!--手机版底部-->
+      <div class="c_1200_6">
+        <div class="t_0100_5">  <a href="#" target="_self">走进我们</a>  <a href="#" target="_self">公司业务</a>  <a href="#" target="_self">新闻中心</a>  <a href="#" target="_self">联系我们</a>  </div>
+        <div class="t_0100_6">
+          <div class="l_45">
+            <div class="pz_select_3"  > <span>友情链接</span>
+              <ul>
+                
+                <li> <a href='/' target='_blank'>模板</a>  </li>
+                
+                <li> <a href='/host/' target='_blank'>主机</a>  </li>
+                
+                <li> <a href='/' target='_blank'>响应式模板</a>  </li>
+                
+                <li> <a href='/' target='_blank'>建站素材</a>  </li>
+                
+              </ul>
+              <input name="ShowType" id="Hidden1" type="hidden" value="" />
+            </div>
+            <script>
+						    var xl = $(".l_45 .pz_select_3");
+						    $(xl).click(function () {
+						        var yc = $(this).children("ul").css("display");
+						        if (yc == "none") {
+						            $(".l_45 .pz_select_3 ul").hide();
+						            $(this).children("ul").show();
+						            $(".pf_xl").show();
+						        } else { $(this).children("ul").hide(); $(".pf_xl").hide(); }
+						    })
+                        </script> 
+          </div>
+          <div class="l_105">
+            <div class="weixin"> <a href="#" class="dbg1" style="position:relative; z-index:1;">
+              <div class="pf_wx">
+                <div class="wximg">
+                  <p><img src="picture/6358034065306001681703050.jpg" height="97" width="99" title="down_img7.jpg"/></p>
+                </div>
+              </div>
+              </a> </div>
+            <div class="weibo">
+              <p><a href="http://weibo.com/" target="_blank" class="dbg2">&nbsp;</a></p>
+            </div>
+            <div class="fenxiang"><a href="#" id="bshare-shareto" class="dbg3 jiathis"  target="_blank"  ></a></div>
+            <script type="text/javascript" src="js/jia.js" charset="utf-8"></script> 
+          </div>
+        </div>
+        <div class="t_0100_7">
+          <p>Copyright &copy; 2020 某某企业有限公司 版权所有<br/>
+            全国免费咨询电话：XXX &nbsp;公司地址<span>：</span>XXX</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html> 

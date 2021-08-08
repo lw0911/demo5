@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title>会员中心-通过电子邮箱找回密码</title>
+	  <link href="static/css/member_reset.css" rel="stylesheet" type="text/css">
+	  <meta name="description" content="yzmcms,通过电子邮箱找回密码">
+  </head>
+  <body>
+        <div class="w1">
+			<div class="w880 head">
+			  <div class="right"><a href="index.html">回到首页</a></div>
+			  <a href="register.html" class="current">注册</a> 欢迎登录
+			</div>
+		</div>
+		<!--主要内容-->
+		<div class="main">
+		  <h1>通过电子邮箱找回密码</h1>
+		  <div class="main_left">
+				<div class="title">
+				<span>步骤：1. 确认账号 &nbsp;&nbsp;>&nbsp;&nbsp; 2.安全验证 &nbsp;&nbsp;>&nbsp;&nbsp; 3. 重置密码&nbsp;&nbsp;>&nbsp;&nbsp; 4. 成功</span>
+				</div>	
+                <div class="form">
+				 
+				 				 <form method="post" action="">	
+                  <ul>				 
+				  <li>用户名：<input type="text" placeholder="用户名" required="" name="username" class="input"></li>
+				  <li>验证码：<input type="text" placeholder="验证码" required="" name="code" class="input code"><img src="static/picture/code.jpg" onclick="this.src=this.src+'?'" class="codeimg" title="看不清，换一张"></li>
+				  <li><input type="submit" name="dosubmit" value="下一步" class="submit"> <a href="init.html">重新选择验证方式</a></li>
+				  </ul>
+				  </form>
+				  				
+				</div>				
+		  </div>
+		  <div class="main_right">
+            <p>已经有了账号？</p>  
+            <p>请直接登录</p> 
+            <br>			
+            <p><a href="login.html" class="button">登录</a></p> 
+		  </div>
+		</div>
+          <script>
+		   function checkall(){
+		    var password = document.getElementById("password").value;
+		    var password2 = document.getElementById("password2").value;
+			if(password.length < 6){
+			   alert('密码不能低于6位！');
+			   return false;
+			 }
+			if(password != password2){
+			  alert('两次密码不一致！');
+			  return false;
+			}
+		   }
+		  </script>
+		<!--网站底部-->
+		<div class="footer">
+		  <p>Powered by <a href="javascript:;" target="_blank">YzmCMS内容管理系统</a> © 2014-2018  版权所有</p>
+		</div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<title>网站首页</title>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bases.css" />
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+<script src="js/js.js"></script>
+</head>
+
+<body>
+<header class="header">
+    <div class="toptip_bgc"></div>
+    <section class="container" style="position:relative;">
+        <div class="toptip fr"> <span class="fr">网站地图</span><span class="fr">|</span> <span class="fr">收藏网站</span><span class="fr">|</span> <span class="toptel fr">0755-23255032 </span> </div>
+        <div class="widget-area"><a href="/" class="logo"><img src="images/logo.png" /></a></div>
+        <ul class="fr">
+            <li><a href="index.html" class="cur">首页</a></li>
+            <li><a href="about.html">关于某某公司</a></li>
+            <li><a href="pro.html">产品中心</a></li>
+            <li><a href="photo.html">疾病领域</a></li>
+            <li><a href="news.html">新闻资讯</a></li>
+            <li><a href="/">服务中心</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div class="search fr">
+            <div class="search_bg"></div>
+        </div>
+        <dl id="formsea">
+            <form  method="" action="">
+                <dt>
+                <input type="text"  class="seacon" value="请输入关键词" onfocus="if(this.value == '请输入关键词')this.value = ''" onblur="if(this.value == '')this.value='请输入关键词'">
+                </dt>
+                <dd>
+                    <input class="seabtn" type="submit" value="">
+                    <div class="clear"></div>
+                </dd>
+            </form>
+        </dl>
+        <div class="clear"></div>
+    </section>
+</header>
+<div class="index-banner">
+    <div class="swiper-container indexBan">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:url(ban/1.jpg) center top no-repeat;"></div>
+            <div class="swiper-slide" style="background:url(ban/2.jpg) center top no-repeat;"></div>
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</div>
+<script>
+	var swiper = new Swiper('.indexBan', {
+		nextButton: '.left',
+		prevButton: '.right',
+		paginationClickable: true,
+		autoplay : 5000,
+		loop:true
+	});
+</script>
+<footer class="bg-c-939393 w-all p-t-25 p-b-40 overfhide">
+    <section class="container footercon overfhide">
+        <div class="w-550 fl fs-14 ftc-fff line-hg38"> 友情链接：某某某有限公司    某某某有限公司 <br/>
+            某某某有限公司    百度    某某某有限公司<br/>
+            版权所有 © 2020 某某某有限公司      鲁ICP备00000000号-0 </div>
+        <div class="w-550 fr fs-14 ftc-fff line-hg38 txt-al-r"> <strong> 某某某某某某</strong><br/>
+            电话：0755-00000000     传真：0755-00000000<br/>
+            邮箱：qqqqqq@126.com </div>
+    </section>
+</footer>
+</body>
+</html>

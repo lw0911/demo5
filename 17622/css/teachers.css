@@ -1,0 +1,934 @@
+/* 
+* @Author: anchen
+* @Date:   2016-08-23 10:47:22
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-10-12 18:53:52
+*/
+
+
+/*轮播图片*/
+.teachers_banner{
+    width:100%;
+    height:600px;
+    background: url(../images/teachers_banner.jpg) no-repeat center top;
+    background-size: cover;
+     position: relative;
+    overflow: hidden;
+}
+.teachers_b{
+  position:relative;
+  margin-top:100px;
+}
+#slide {
+    margin: 0 auto;
+    width: 760px;
+    height: 330px;
+    position: relative;
+  }
+
+#slide li {
+    position: absolute;
+    width:760px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    background:#fff;
+    overflow:hidden;
+    box-shadow: 0 0 20px #1d374d;
+}
+
+#slide li img {
+    width: 100%;
+    height: 100%;
+}
+.slide_left{
+ /* width:240px;*/
+}
+.slide_right{
+ /* width:440px;*/
+  padding: 40px;
+  -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+.slide_right h3{
+font: 400 30px/18px "Microsoft Yahei";
+color:#222222;
+}
+.slide_right h3 span{
+  display:inline-block;
+  margin-left:10px;
+  font: 400 14px/36px "Microsoft Yahei";
+color:#555555;
+}
+.slide_right p{
+  padding:20px 0 30px;
+  color:#555555;
+    font: 400 14px/24px "Microsoft Yahei";
+    border-bottom: 1px solid #dbdbdb;
+}
+.slide_right dl{
+  padding-top:30px;
+}
+.slide_right dd{
+  float: left;
+  width:33.3%;
+   color:#777;
+    font: 400 12px/24px "Microsoft Yahei";
+
+}
+.slide_right dd h3{
+color:#ff9000;
+margin-bottom:20px;
+}
+.arrow {
+   /* display: none;*/
+}
+
+.arrow .prev,
+.arrow .next {
+    position: absolute;
+    width: 64px;
+    top: 38%;
+    z-index: 9;
+    font: 700 96px 'simsun';
+    opacity: 0.3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.arrow .prev {
+    left: -220px;
+}
+
+.arrow .next {
+    right: -220px;
+}
+
+.arrow .prev:hover,
+.arrow .next:hover {
+    color: #00a0e9;
+    opacity: .7;
+}
+  
+  .teachers_t{
+    font: 400 36px/60px "Microsoft Yahei";
+    color:#fff;
+    margin-bottom:30px;
+    text-align:center;
+  }
+
+.slidLinkBtn {
+    position: relative;
+    font: 400 16px "Microsoft Yahei";
+    display: inline-block;
+    margin-right: 40px;
+    color: #df001f;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+
+.slidLinkBtn i {
+    position: absolute;
+    top: 0px;
+    right: -18px;
+    color: #df001f;
+    margin-left: 5px;
+    font-size: 16px;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.slidLinkBtn:hover {
+    color: #df001f;
+}
+.slidLinkBtn:hover i {
+    color: #df001f;
+    margin: 0 -3px 0 8px;
+}
+.teachers_page01 .slidLinkBtn{
+    margin-top:20px;
+}
+
+/*海风智能学习中心*/
+.section {
+    position: relative;
+    overflow: hidden;
+}
+.teachers_page01{
+    width:100%;
+    height:550px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/teachers_page01.jpg);
+    background-position: center center;
+}
+.teachers_text {
+    margin:60px auto 40px;
+}
+.teachers_text h3{
+font: 400 40px/36px "Microsoft Yahei";
+color:#3d4247;
+}
+.teachers_text h3 span{
+  display:inline-block;
+  margin-left:10px;
+  font: 100 40px/36px "思源黑体 CN";
+color:#3d4247;
+}
+ .teachers_text p{
+     font: 200 14px/36px "Microsoft Yahei";
+    color:#8a9299;
+    margin-top:15px;
+}
+.teachers_page3{
+  width:100%;
+  background:#f7f7f7;
+  text-align: center;
+}
+.teachers_box{
+    margin:0 auto;
+    width:605px;
+    height:246px;
+}
+.teachers_box ul{
+    width:605px;
+    height:246px;
+   
+}
+.teachers_box ul li{
+    float: left;
+    width:605px;
+    height: 46px;
+    background:url(../images/b_bg_01.png)no-repeat;
+    margin-bottom:5px;
+    font: 400 12px/46px "Microsoft Yahei";
+    color:#fff;
+    -moz-perspective:500px;
+        -ms-perspective:500px;
+         -o-perspective:500px;
+            perspective:500px;
+}
+.teachers_box ul li:nth-child(2){
+     background:url(../images/b_bg_02.png)no-repeat;
+}
+.teachers_box ul li:nth-child(3){
+     background:url(../images/b_bg_03.png)no-repeat;
+}
+.teachers_box ul li:nth-child(4){
+     background:url(../images/b_bg_04.png)no-repeat;
+}
+.teachers_box ul li:nth-child(5){
+     background:url(../images/b_bg_05.png)no-repeat;
+}
+.teachers_box ul li .unit{
+            width: 605px;
+            height:46px;
+            position: relative;
+
+    font: 400 12px/46px "Microsoft Yahei";
+    color:#fff;
+    transform-style:preserve-3d;
+       -moz-transition:all 0.4s ease 0s;
+        -ms-transition:all 0.4s ease 0s;
+         -o-transition:all 0.4s ease 0s;
+            transition:all 0.4s ease 0s;
+ }
+
+.teachers_box ul li .unit span{
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 605px;
+    height:46px;
+    text-align: center;
+    line-height:50px;
+}
+m
+.teachers_box ul li .unit span.chinese{
+  
+    transform:translateZ(20px);
+}
+.teachers_box ul li .unit span.english{
+   color:#fff;
+   -webkit-transform:rotateX(-90deg) translateZ(20px);
+       -moz-transform:rotateX(-90deg) translateZ(20px);
+        -ms-transform:rotateX(-90deg) translateZ(20px);
+         -o-transform:rotateX(-90deg) translateZ(20px);
+            transform:rotateX(-90deg) translateZ(20px);
+}
+.teachers_box ul li:hover .unit{
+    transform:rotateX(90deg);
+}
+.teachers_page01_mian{
+    width: 1200px;
+     height:550px;
+    margin: 0 auto;
+    position:relative;
+}
+.teachers_page01_l{
+position: absolute;
+left:50px;
+bottom:0;
+}
+.teachers_page01_r{
+position: absolute;
+right:50px;
+bottom:0;
+}
+.teachers_page3 ul{
+  overflow:hidden;
+  width:1000px;
+  margin:0 auto;
+    margin-top: -10px;
+
+  height:1400px;
+  position:relative;
+}
+.teachers_page3 ul li{
+  position:absolute;
+  top:0;
+  left:0;
+}
+.teachers_page3 ul .no1{
+top:330px;
+}
+.teachers_page3 ul .no2{
+top:0;
+left:250px;
+}
+.teachers_page3 ul .no3{
+top:530px;
+left:250px;
+
+}
+.teachers_page3 ul .no4{
+top:0;
+left:500px;
+}
+.teachers_page3 ul .no5{
+top:380px;
+left:500px;
+}
+.teachers_page3 ul .no6{
+top:0;
+left:750px;
+}
+.teachers_page3 ul .no7{
+top:408px;
+left:750px;
+}
+.teachers_page2{
+    width:100%;
+    /*height:565px;*/
+    background:#fff;
+    text-align: center;
+    
+}
+.teachers_page3{
+    width:100%;
+   text-align: center;
+    padding-bottom:20px;
+    
+}
+.teachers_page4{
+    width:100%;
+    height:766px;
+    text-align: center;
+    background:#f7f7f7;
+   
+    
+}
+.teachers_page3 .teachers_page3_box{
+    margin:80px  40px;
+    overflow:hidden;
+}
+.teachers_page3 .teachers_page3_box .teachers_page3_left{
+    width:460px;
+}
+.teachers_page3 .teachers_page3_box .teachers_page3_right{
+    width:460px;
+    text-align:left;
+}
+.container-mian {
+    position: relative;
+  margin: 60px auto 20px auto;
+  width: 1000px;
+  height: 499px;
+  padding: 0;
+  text-align: center;
+}
+#container1 p{
+  font-size:12px;
+    font-family: "Microsoft Yahei";
+}
+.container-mian img{
+  display:inline-block;
+  width:125px;
+  height:125px;
+}
+.largeimage{
+  position: relative;
+  z-index: 1000;
+}
+
+img.info-icon{
+  cursor: pointer;
+  z-index: 1001;
+}
+#container1 .line1{
+   margin:0px;
+   position:absolute;
+   top:0px;
+    margin-top:125px;
+    padding:0px;
+}
+#container1 .line2{
+   margin:0px;
+   position:absolute;
+   top:0px;
+    margin-top:250px;
+    padding:0px;
+}
+#container1 .line3{
+   margin:0px;
+   position:absolute;
+   top:0px;
+    margin-top:372px;
+    padding:0px;
+}
+#container1 .info-icon1, #container1 .info-icon9 ,#container1 .info-icon17{
+  position: absolute;
+  top: 0px;
+  left:0px;
+}
+#container1 .info-icon2,#container1 .info-icon10{
+  position: absolute;
+  top: 0px;
+  left: 125px;
+}
+#container1 .info-icon3,#container1 .info-icon11{
+  position: absolute;
+  top: 0px;
+  left:250px;
+}
+#container1 .info-icon4,#container1 .info-icon12{
+  position: absolute;
+  top: 0px;
+  left: 375px;
+}
+
+#container1 .info-icon5,#container1 .info-icon13{
+  position: absolute;
+  top: 0px;
+  left: 500px;
+}
+
+#container1 .info-icon6,#container1 .info-icon14{
+  position: absolute;
+  top: 0px;
+  left: 625px;
+}
+#container1 .info-icon7,#container1 .info-icon15{
+  position: absolute;
+  top: 0px;
+  left: 750px;
+}
+#container1 .info-icon8,#container1 .info-icon16{
+  position: absolute;
+  top: 0px;
+  left: 875px;
+}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+   max-width: 400px; 
+   width:350px;
+  text-align: left;
+border:0;
+padding:0px;
+  white-space: normal;
+  /* background-color: #ffffff; */
+  /* border: 1px solid #cccccc; */
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  /* background-clip: padding-box; */
+}
+#pop1 ,#pop9 ,#pop17 ,#pop25{
+  position: absolute;
+  top: -20px;
+  left: 124px;
+}
+
+#pop2 ,#pop10,#pop18 ,#pop26{
+  position: absolute;
+  top:-25px;
+  left: 250px;
+}
+
+#pop3,#pop11,#pop19,#pop27{
+  position: absolute;
+  top:-25px;
+  left: 375px;
+}
+
+#pop4,#pop12,#pop20 ,#pop28{
+  position: absolute;
+  top:-25px;
+  left: 500px;
+}
+
+#pop5 ,#pop13,#pop21 ,#pop29{
+  position: absolute;
+  top: -30px;
+  left: 625px;
+
+}
+
+#pop6 ,#pop14 ,#pop22 ,#pop30{
+  position: absolute;
+   top: -25px;
+  left: 275px;
+}
+
+#pop7,#pop15 ,#pop23 ,#pop31{
+  position: absolute;
+  top: -25px;
+  left:398px;
+}
+
+#pop8,#pop16 ,#pop24 ,#pop32{
+  position: absolute;
+  top: -25px;
+  left: 522px;
+}
+
+.popover.top {
+  margin-top: -10px;
+}
+
+.popover.right {
+  margin-left: 10px;
+}
+
+.popover.bottom {
+  margin-top: 10px;
+}
+
+.popover.left {
+  margin-left: -10px;
+}
+
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 18px;
+  font-weight:bold;
+  font-weight: normal;
+  line-height: 18px;
+  color:#00a0e9;
+   font-family: "Microsoft Yahei";
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+}
+
+.popover-content {
+  padding: 9px 14px;
+  background:#00a0e9;
+  color:#fff;
+}
+
+.popover .arrow,
+.popover .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+ border-left-color:#00a0e9;
+  border-style: solid;
+}
+
+.popover .arrow {
+  border-width: 11px;
+}
+
+.popover .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+
+.popover.top .arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  border-bottom-width: 0;
+}
+
+.popover.top .arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  border-top-color: #ffffff;
+  border-bottom-width: 0;
+}
+
+.popover.right .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  
+  border-right-color: rgba(0, 0, 0, 0.25);
+  border-right-color: #00a0e9;
+  border-left-width: 0;
+}
+
+.popover.right .arrow:after {
+  bottom: -10px;
+  left: 1px;
+/*  border-right-color: #ffffff;
+*/  border-left-width: 0;
+  border-right-color: #00a0e9; 
+}
+
+.popover.bottom .arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-color: #00a0e9;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-top-width: 0;
+}
+
+.popover.bottom .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  border-bottom-color: #ffffff;
+  border-top-width: 0;
+}
+
+.popover.left .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-left-color:#00a0e9;
+/*  border-left-color: rgba(0, 0, 0, 0.25);
+*/  border-right-width: 0;
+}
+
+.popover.left .arrow:after {
+  right: 1px;
+  bottom: -10px;
+/*  border-left-color: #ffffff;
+  border-right-width: 0;*/
+}
+.popover.left .arrow:after {
+  right: 1px;
+  bottom: -10px;
+  /* border-left-color: #ffffff; */
+  border-right-width: 0;
+  content: " ";
+}
+.animated {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes cardInTop {
+  0% {
+    -webkit-transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(-90deg) scale(0.5, 0.5);
+  }
+  100% {
+    -webkit-transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+@keyframes cardInTop {
+  0% {
+    -webkit-transform-origin: 50% 100% 0px;
+            transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(-90deg) scale(0.5, 0.5);
+              transform: perspective(500px) rotateX(-90deg) scale(0.5, 0.5);
+  }
+  100%
+  {
+    -webkit-transform-origin: 50% 100% 0px;
+            transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+.cardInTop {
+  -webkit-animation-name: cardInTop;
+  animation-name: cardInTop;
+}
+
+@-webkit-keyframes cardInBottom {
+  0% {
+    -webkit-transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(90deg) scale(0.5, 0.5);
+  }
+  100% {
+    -webkit-transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+@keyframes cardInBottom {
+  0% {
+    -webkit-transform-origin: 50% 0% 0px;
+            transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(90deg) scale(0.5, 0.5);
+              transform: perspective(500px) rotateX(90deg) scale(0.5, 0.5);
+  }
+  100%
+  {
+    -webkit-transform-origin: 50% 0% 0px;
+            transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+.cardInBottom {
+  -webkit-animation-name: cardInBottom;
+  animation-name: cardInBottom;
+}
+
+
+@-webkit-keyframes cardInLeft {
+  0% {
+    -webkit-transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(-90deg) scale(0, 0);
+  }
+  100% {
+    -webkit-transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+@keyframes cardInLeft {
+  0% {
+    -webkit-transform-origin: 100% 50% 0px;
+            transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(-90deg) scale(0, 0);
+              transform: perspective(500px) rotateX(-90deg) scale(0, 0);
+  }
+  100%
+  {
+    -webkit-transform-origin: 100% 50% 0px;
+            transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+.cardInLeft {
+  -webkit-animation-name: cardInLeft;
+  animation-name: cardInLeft;
+}
+
+@-webkit-keyframes cardInRight {
+  0% {
+    -webkit-transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(90deg) scale(0, 0);
+  }
+  100% {
+    -webkit-transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+@keyframes cardInRight {
+  0% {
+    -webkit-transform-origin: 0% 50% 0px;
+            transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(90deg) scale(0, 0);
+              transform: perspective(500px) rotateX(90deg) scale(0, 0);
+  }
+  100%
+  {
+    -webkit-transform-origin: 0% 50% 0px;
+            transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+}
+
+.cardInRight {
+  -webkit-animation-name: cardInRight;
+  animation-name: cardInRight;
+}
+
+
+@-webkit-keyframes cardOutTop {
+  0% {
+    -webkit-transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(-90deg) scale(0.5, 0.5);
+      opacity: 0;
+  }
+}
+
+@keyframes cardOutTop {
+  0% {
+    -webkit-transform-origin: 50% 100% 0px;
+            transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100%
+  {
+    -webkit-transform-origin: 50% 100% 0px;
+            transform-origin: 50% 100% 0px;
+      -webkit-transform: perspective(500px) rotateX(-90deg) scale(0.5, 0.5);
+              transform: perspective(500px) rotateX(-90deg) scale(0.5, 0.5);
+      opacity: 0;
+  }
+}
+
+.cardOutTop {
+  -webkit-animation-name: cardOutTop;
+  animation-name: cardOutTop;
+}
+
+@-webkit-keyframes cardOutBottom {
+  0% {
+    -webkit-transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(90deg) scale(0.5, 0.5);
+      opacity: 0;
+  }
+}
+
+@keyframes cardOutBottom {
+  0% {
+    -webkit-transform-origin: 50% 0% 0px;
+            transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100%
+  {
+    -webkit-transform-origin: 50% 0% 0px;
+            transform-origin: 50% 0% 0px;
+      -webkit-transform: perspective(500px) rotateX(90deg) scale(0.5, 0.5);
+              transform: perspective(500px) rotateX(90deg) scale(0.5, 0.5);
+      opacity: 0;
+  }
+}
+
+.cardOutBottom {
+  -webkit-animation-name: cardOutBottom;
+  animation-name: cardOutBottom;
+}
+
+@-webkit-keyframes cardOutLeft {
+  0% {
+    -webkit-transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(90deg) scale(0, 0);
+      opacity: 0;
+  }
+}
+
+@keyframes cardOutLeft {
+  0% {
+    -webkit-transform-origin: 100% 50% 0px;
+            transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100%
+  {
+    -webkit-transform-origin: 100% 50% 0px;
+            transform-origin: 100% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(90deg) scale(0, 0);
+              transform: perspective(500px) rotateX(90deg) scale(0, 0);
+      opacity: 0;
+  }
+}
+
+.cardOutLeft {
+  -webkit-animation-name: cardOutLeft;
+  animation-name: cardOutLeft;
+}
+
+
+@-webkit-keyframes cardOutRight {
+  0% {
+    -webkit-transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateY(-90deg) scale(0, 0);
+      opacity: 0;
+  }
+}
+
+@keyframes cardOutRight {
+  0% {
+    -webkit-transform-origin: 0% 50% 0px;
+            transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(0deg) scale(1, 1);
+              transform: perspective(500px) rotateX(0deg) scale(1, 1);
+      opacity: 1;
+  }
+  100%
+  {
+    -webkit-transform-origin: 0% 50% 0px;
+            transform-origin: 0% 50% 0px;
+      -webkit-transform: perspective(500px) rotateX(-90deg) scale(0, 0);
+              transform: perspective(500px) rotateX(-90deg) scale(0, 0);
+      opacity: 0;
+  }
+}
+
+.cardOutRight {
+  -webkit-animation-name: cardOutRight;
+  animation-name: cardOutRight;
+}
+

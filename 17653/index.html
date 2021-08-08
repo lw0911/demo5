@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XXX文化传播有限公司</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+</head>
+<style>
+
+	  #qz_item01{ height:700px;display: block; background:url(images/bg.jpg)  no-repeat top center fixed;position: relative;}
+	  #qz_item02{ height:700px;display: block; background:#eee}
+	  #qz_item03{ height:900px;display: block; background:#fff}
+	  #qz_item04{ height:700px;display: block; background:#eee}
+	  #qz_item05{ height:1050px;display: block; background:#fff}
+	  #qz_item06{ height:900px;display: block; background:url(images/dt.jpg)  no-repeat top center fixed;position: relative;}
+	  #qz_item07{ height:900px;display: block; background:#dd4}
+
+
+		.qz_title{display:block;text-align: center;position: relative;margin-left:-2000px; transition:0.7s all; -webkit-transition:0.7s all; -moz-transition:0.7s all; -o-transition:0.7s all;}
+		.qz_title h2{height:50px;line-height:50px;font-size: 36px;color: #333;}
+		.qz_title p{display: block;height:30px;line-height: 30px;font-size: 16px;color: #666}
+		.qz_title span{height:2px;width:100px;display: block;background:#199f0c;margin:20px auto;}
+
+		
+		.cur .qz_title{margin-left:0;}
+
+		.qz_titlef{display:block;text-align: center;position: relative;margin-left:-2000px; transition:0.7s all; -webkit-transition:0.7s all; -moz-transition:0.7s all; -o-transition:0.7s all;}
+		.qz_titlef h2{height:50px;line-height:50px;font-size: 36px;color: #fff;}
+		.qz_titlef p{display: block;height:30px;line-height: 30px;font-size: 16px;color: #fff}
+		.qz_titlef span{height:2px;width:100px;display: block;background:#199f0c;margin:20px auto;}
+		.cur .qz_titlef{margin-left:0;}
+
+
+		.qz_bg1{display: block;width:1000px;margin:0px auto 0;padding-top:200px;}
+		.qz_bg1 h2{font-size:36px;font-weight: bold;height:50px;line-height: 50px;text-align: center;color: #fff;margin-bottom:20px;letter-spacing:8px;}
+		.qz_bg1 h2 strong{color: #199f0c;}
+		.qz_bg1 p{text-align: center;font-size: 16px;line-height: 30px;color: #fff;}
+		.qz_ser{display: block;margin-top:80px;}
+
+		.qz_ser li{float: left;width:194px;text-align: center;padding:0 15px;position:relative;margin-top:180px; opacity: 0;transition:1s all; -webkit-transition:1s all; -moz-transition:1s all; -o-transition:1s all;}
+		.qz_ser li img{border-radius: 90px;border:3px solid #fff;margin-bottom:10px;}
+		.qz_ser li img:hover{border:3px solid #529535;background: #529535;}
+		.qz_ser li h3{height:26px;line-height: 26px;font-size: 16px;font-weight: bold;color: #666;margin-bottom: 5px;}
+		.qz_ser li h3 p{font-size: 14px;line-height: 24px;}
+
+		.cur .qz_ser li.on1{transition-delay:0.5s;margin-top:0; opacity: 1;}
+		.cur .qz_ser li.on2{transition-delay:1s;margin-top:0; opacity: 1;}
+		.cur .qz_ser li.on3{transition-delay:1.5s;margin-top:0; opacity: 1;}
+		.cur .qz_ser li.on4{transition-delay:2s;margin-top:0; opacity: 1;}
+		.cur .qz_ser li.on5{transition-delay:2.5s;margin-top:0; opacity: 1;}
+
+		.qz_ttab > span{display: block;}
+		.qz_ttab ul.qz_casenav{width:1120px;display: block;text-align: center; opacity: 0;margin-top:-100px; transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;}
+		.qz_ttab ul.qz_casenav li{text-align:center;height:30px;line-height:30px;font-size:14px;cursor:pointer;color: #666;display: inline-block;*zoom:1;*display: inline;border-radius: 5px;margin:0 10px;padding:0 10px;}
+		.qz_ttab ul.qz_casenav li.active{color:#199f0c;}
+		.qz_contn{width: 1120px;margin:0 auto;display: block;padding:30px 0;}
+		.qz_contnone{display:none;}
+		.qz_caselist{display: block;width:1120px;opacity:0;transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;}
+		.qz_caselist ul{display: block;width:1140px;}
+		.qz_caselist li{width:265px;height:192px;display: block;margin-right:20px;margin-bottom:20px;float: left;position: relative;}
+		.qz_caselist li p{width:265px;height: 192px;display: block;overflow: hidden;}
+		.qz_caselist li img{width:265px;height: 192px;display: block;  transition: 0.4s all; -webkit-transition: 0.4s all; -moz-transition: 0.4s all; -o-transition: 0.4s all;}
+		.qz_caselist li:hover p > img
+			{
+				-webkit-transform: scale(1.2);
+		        -moz-transform: scale(1.2);
+		        -o-transform: scale(1.2);
+		        -ms-transform: scale(1.2);
+			}
+		.qz_caselist li span{background: url(images/iconw.png);width:225px;height:112px;position: absolute;left: 0;top:0;display: none;padding:40px 20px;}
+		.qz_caselist li span h3{color: #fff;font-size: 16px;font-weight: bold;text-align: center;line-height: 24px;}
+		.qz_caselist li span h5{color: #fff;font-size: 12px;line-height: 20px;text-align: center;margin: 10px 0;}
+		.qz_caselist li span img{width: 40px;height:40px;margin:0 auto;border:2px solid #fff;border-radius: 90px;}
+		
+
+		.cur .qz_ttab ul.qz_casenav{opacity:1;margin-top:0;transition-delay:0.8s;margin:40px auto 20px;}
+		.cur .qz_caselist{transition-delay:1.5s;opacity:1;}
+
+
+
+		.qz_about{display:block;width:1120px;margin-top: 50px;overflow: hidden;}
+		.qz_about img{float: left;width:560px;margin-right:20px;margin-left:-1000px;position: relative;transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;}
+		.qz_about span{float:right;width:540px;margin-right:-1500px;position: relative;transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;}
+		.qz_about span h3{line-height:30px;font-size: 24px;margin-bottom:10px;}
+		.qz_about span p{line-height: 26px;margin-bottom: 30px;}
+
+		.cur .qz_about img{margin-left:0;transition-delay:1s;opacity:1;}
+		.cur .qz_about span{margin-right:0;transition-delay:1s;opacity:1;}
+
+		.qz_newslist{display: block;width:1120px;margin-top:50px;opacity:0;transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;}
+		.cur .qz_newslist{opacity:1;transition-delay:1s;}
+		.qz_newslist ul{width: 1140px;}
+		.qz_newslist li {float: left;width:225px;height:253px;padding:20px;display: block;margin-right: 20px;margin-bottom:20px;background: #f7f7f7;color: #333;position: relative;}
+		.qz_newslist li img{width: 225px;margin-bottom:10px;}
+		.qz_newslist li h3{font-size: 16px;height:30px;line-height: 30px;overflow: hidden;width:100%;display: block;}
+		.qz_newslist li span{font-size:46px;font-weight: bold;height:50px;line-height: 50px;position: relative;color: #333;}
+		.qz_newslist li span strong{position: absolute;left:40px;bottom:5px;color: #333;font-size: 20px;height:20px;line-height: 20px;width:30px;text-align: left;background:#eee;font-weight: normal;}
+		.qz_newslist li .qz_newsp{position: absolute;left:0;bottom:0;background:#199f0c;color: #fff;padding:20px;width:225px;height:253px;display: none;}
+		.qz_newslist li .qz_newsp h4{font-size: 18px;font-weight: bold;line-height: 24px;height:24px;overflow: hidden;display: block;}
+		.qz_newslist li .qz_newsp em{background: #fff;width:60px;height:1px;display: block;margin:10px 0;}
+		.qz_newslist li .qz_newsp p{display: block;font-size: 14px;line-height: 24px;height:215px;overflow: hidden;}
+
+
+		.qz_cont{display: block;margin-top:50px;}
+		.qz_contc{display: block;text-align: center;border-bottom:1px solid #fff;margin:0px auto 30px;width:800px;padding-bottom:30px;transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;opacity:0;}
+
+		.cur .qz_contc{opacity:1;transition-delay:0s;}
+
+		.qz_contc li{display: inline-block;text-align: center;margin:0 20px;width:200px;height:150px;color: #fff;}
+		.qz_contc li img{height:30px;width:30px;display: block;margin:0 auto 20px;}
+		.qz_contc li p{display: block;height:100px;line-height: 25px;}
+		.qz_contc li strong{display: block;font-size:18px;line-height: 30px;}
+
+		.qz_contb{margin:0 auto;width:800px;transition: 1.5s all; -webkit-transition: 1.5s all; -moz-transition: 1.5s all; -o-transition: 1.5s all;opacity:0;}
+		.cur .qz_contb{margin:0 auto;opacity:1;transition-delay:1s;}
+		.qz_contb h3{display: block;text-align: center;font-size: 28px;color: #fff;margin-bottom:40px;}
+		.qz_contb span{width:840px;display: block;margin-bottom:20px;}
+		.qz_contb span input{width:358px;float: left;margin-right:40px;border:0;border:1px solid #f1f1f1;font-size: 14px;padding:10px;height:24px;line-height: 24px;border-radius:5px;}
+		.qz_contb textarea{width:778px;border:1px solid #f1f1f1;padding:10px;line-height:24px;border-radius: 5px;}
+		.qz_contb button{display: block;width:150px;border:0;border-radius: 5px;margin:20px auto;height:40px;line-height: 40px;cursor: pointer;color: #fff;background: #199f0c}
+
+		.qz_lookj{display: block;width:150px;background:#199f0c;height:40px;line-height: 40px;color: #fff;text-align: center;border-radius: 10px;font-size: 16px;margin:0 auto;}
+		.qz_lookj:hover{color: #fff;}
+
+</style>
+<body>
+	<div class="qz_menubg">
+		<div class="qz_wrap">
+			<div class="qz_logo">
+				<img src="images/logo.png" alt="">
+			</div>
+			<div class="qz_menu" id="qz_menu">
+				<ul>
+					<li><a href="javascript:void(0)">XXX首页</a></li>
+					<li><a href="javascript:void(0)">服务领域</a></li>
+					<li><a href="javascript:void(0)">XXX案例</a></li>
+					<li><a href="javascript:void(0)">走进XXX</a></li>
+					<li><a href="javascript:void(0)">XXX资讯</a></li>
+					<li><a href="javascript:void(0)">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="qz_item01">
+		<div class="qz_bg1 cl">
+			<h2><strong>XXX文化传播</strong>有限公司</h2>
+			<p>公司创立于2016年，是一家致力于品牌网络数字创意运营服务的互联网推广机构。<br />提供数字品牌全案策划、移动微信运营开发、高端网站设计、网络活动策划、设计包装、企业形象策划、线上线下活动策划等服务。</p>
+		</div>
+	</div>
+	<div id="qz_item02">
+		<div class="qz_top180">
+			<div class="qz_wrap">
+				<div class="qz_title">
+					<h2>服务领域</h2>
+					<span></span>
+					<p>八年的积累，我们制造标准并不断更新标准 / 成立于2016年 / 服务过百家企业单位</p>
+				</div>
+				<div class="qz_ser">
+					<ul class="cl">
+						<li class="on1">
+							<img src="images/sign01.png" name="picture" onMouseOver="this.src='images/sign01_.png'" onMouseOut="this.src='images/sign01.png'">
+							<h3>高端网站建设</h3>
+							<p>互联网网站建设综合服务包括企事业数字门户建设、互联网金融平台建设、营销型网站建</p>
+						</li>
+						<li class="on2">
+							<img src="images/sign02.png" name="picture" onMouseOver="this.src='images/sign02_.png'" onMouseOut="this.src='images/sign02.png'">
+							<h3>电商平台开发</h3>
+							<p>电子商务综合服务是为了解决消费者的网上购物、商户之间的网上交易和在线支付问题，</p>
+						</li>
+						<li class="on3">
+							<img src="images/sign03.png" name="picture" onMouseOver="this.src='images/sign03_.png'" onMouseOut="this.src='images/sign03.png'">
+							<h3>企业形象策划</h3>
+							<p>企业形象策划是对企业形象进行包装和推广，通过创意设计和精心策划，塑造企业独特的</p>
+						</li>
+						<li class="on4">
+							<img src="images/sign04.png" name="picture" onMouseOver="this.src='images/sign04_.png'" onMouseOut="this.src='images/sign04.png'">
+							<h3>活动全案策划</h3>
+							<p>活动全案策划是指组织各类活动从前期准备到活动结束的全案策划，从执行到监控的全程</p>
+						</li>
+						<li class="on5">
+							<img src="images/sign05.png" name="picture" onMouseOver="this.src='images/sign05_.png'" onMouseOut="this.src='images/sign05.png'">
+							<h3>舞台设备搭建</h3>
+							<p>舞台设备搭建是指各类活动舞台搭建所需要的灯光、音响、摄影摄像等设备租赁及全程管</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="qz_item03">
+		<div class="qz_top120">
+			<div class="qz_wrap">
+				<div class="qz_title">
+					<h2>XXX案例</h2>
+					<span></span>
+					<p>致力于品牌网络数字创意运营服务的互联网推广机构</p>
+				</div>
+				<div class="qz_ttab cl">
+					<span>
+						<ul class="qz_casenav cl">
+							<li class="active">Web建设</li>|
+							<li>网站模板</li>|
+							<li>形象设计</li>
+						</ul>
+					</span>
+					<div class="qz_contn cl">
+						<div class="qz_caselist">
+							<ul class="cl">
+								<li>
+									<a href="images/img1.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img1.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="images/img2.png" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img2.png" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								
+								<li>
+									<a href="images/img3.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img3.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="images/img4.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img4.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="images/img5.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img5.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="images/img6.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img6.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="images/img7.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img7.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="images/img8.jpg" data-lightbox="example-set"  rel="lightbox">
+										<p><img src="images/img8.jpg" alt=""></p>
+										<span>
+											<h3>XXX文化传播</h3>
+											<h5>Web建设</h5>
+											<img src="images/icon2.png" alt="" />
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="qz_contn qz_contnone cl">
+					</div>
+					<div class="qz_contn qz_contnone cl">
+					</div>
+					<a href="case.html" class="qz_lookj"  target="_blank">+查看更多</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="qz_item04">
+		<div class="qz_top180">
+			<div class="qz_wrap">
+				<div class="qz_title">
+					<h2>走进XXX</h2>
+					<span></span>
+					<p>我们是谁？八年的积累，我们制造标准 并不断更新标准！</p>
+				</div>
+				<div class="qz_about cl">
+					<img src="images/qz_about.png" alt="" />
+					<span>
+						<h3>我们是谁</h3>
+						<p>
+							公司创立于2016年，是一家致力于品牌网络数字创意运营服务的互联网推广机构。提供数字品牌全案策划、移动微信运营开发、高端网站设计、网络活动策划、设计包装、企业形象策划、线上线下活动策划等服务。
+						</p>
+						<h3>我们的品牌客户</h3>
+						<p> 
+							我们的品牌客户已经包括中国食品网(21food.cn)、集成吊顶网(jcdd.com)、再生资源网(zz91.com)等；不管您是整个品牌的互联网运营托管还是小到网站设计网页视觉改造，我们都能优质高效的完成委托任务。
+						</p>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="qz_item05">
+		<div class="qz_top120">
+			<div class="qz_wrap">
+				<div class="qz_title">
+					<h2>XXX资讯</h2>
+					<span></span>
+					<p>不断的更新，不断的创造，属于你我他的互联网信息时代</p>
+				</div>
+				<div class="qz_newslist">
+					<ul class="cl">
+						<li>
+							<a href="">
+							<img src="images/img1.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+							</a>
+						</li>
+						<li>
+							<img src="images/img2.png" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/img3.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/img4.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/img5.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/img6.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/img7.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/img8.jpg" alt="" />
+							<h3>XXX文化传播资讯</h3>
+							<span>
+								23
+								<strong>07</strong>
+							</span>
+							<div class="qz_newsp">
+								<h4>XXX文化传播资讯</h4>
+								<em></em>
+								<p>XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯XXX文化传播资讯</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<a href="news.html" class="qz_lookj"  target="_blank" style="margin-top:40px;">+查看更多</a>
+			</div>
+			
+		</div>
+	</div>
+	<div id="qz_item06">
+		<div class="qz_top120">
+			<div class="qz_wrap">
+				<div class="qz_titlef">
+					<h2>联系我们</h2>
+					<span></span>
+					<p>我们是谁？八年的积累，我们制造标准 并不断更新标准！</p>
+				</div>
+				<div class="qz_cont">
+					<div class="qz_contc cl">
+						<li>
+							<img src="images/qz_icon1.png" alt="" />
+							<p>
+								<strong>地址</strong>XXX
+							</p>
+						</li>
+						<li>
+							<img src="images/qz_icon2.png" alt="" />
+							<p>
+								<strong>电话</strong>XXX<br />XXX
+							</p>
+						</li>
+						<li>
+							<img src="images/qz_icon3.png" alt="" />
+							<p>
+								<strong>邮箱</strong>
+								XXX<br>
+								XXX
+							</p>
+						</li>
+					</div>
+					<div class="qz_contb cl">
+						<h3>我要留言</h3>
+							<form class="cl">
+								<span class="cl">
+									<input type="email" class="form-control" placeholder="姓名">
+									<input type="email" class="form-control" placeholder="联系电话">
+								</span>
+								<textarea class="form-control" rows="4" placeholder="留言内容"></textarea>
+								<button type="submit" class="btn btn-default">留言提交</button>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="qz_footbg">
+		<div class="qz_wrap">
+			<div class="qz_footbot ">
+	        	<span class="fl">Copyright © 2020 浙江XXX电气有限公司 All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.</span>
+	            <span class="fr">
+	            技术支持: <a href="">嘉兴XXX文化传播有限公司</a></span>
+	        </div>
+		</div>
+	</div>
+</body>
+	<script>
+		$(document).ready(function(){
+		  $(".qz_caselist ul li").hover(function(){
+		    $(this).find("span").stop().fadeToggle("200");
+		  });
+		});
+		$(document).ready(function(){
+		  $(".qz_newslist ul li").hover(function(){
+		    $(this).find(".qz_newsp").stop().slideToggle("600");
+		  });
+		});
+	</script>
+	<script type="text/javascript">
+		var qzhead=$("#qz_item01").height();
+		$(window).scroll(function(){
+			var topScr=$(window).scrollTop();
+			if (topScr>=qzhead) {
+				$(".qz_menubg").addClass("qz_menuadd");
+			}else{
+				$(".qz_menubg").removeClass("qz_menuadd");
+			}
+		})
+	</script>
+	<script>
+	  $(function(){
+	   var AllHet = $(window).height();
+	   var mainHet= $('.qz_menu').height();
+	   var fixedTop = (AllHet - mainHet)/2
+	 //  $('div.qz_menu').css({top:fixedTop+'px'}); 
+	   $('div.qz_menu li').click(function(){
+			var ind = $('div.qz_menu li').index(this)+1;
+			var topVal = $('#qz_item0'+ind).offset().top;
+			$('body,html').animate({scrollTop:topVal},500)
+		})
+	   $(window).scroll(scrolls)
+	   scrolls()
+	   function scrolls(){
+		   var f1,qi2,qi3,qi4,qi5,qi6,qi7;
+		   var fixRight = $('div.qz_menu li');
+		   var fixazxc = $('qz_bgbg div');
+		   var sTop = $(window).scrollTop();
+			   qi1 = $('#qz_item01').offset().top;
+			   qi2 = $('#qz_item02').offset().top;
+			   qi3 = $('#qz_item03').offset().top;
+			   qi4 = $('#qz_item04').offset().top;
+			   qi5 = $('#qz_item05').offset().top;
+			   qi6 = $('#qz_item06').offset().top;
+		   
+			
+		   if(sTop>=qi1){
+			   fixRight.eq(0).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=qi2-100){
+			   fixRight.eq(1).addClass('cur').siblings().removeClass('cur');
+			   $('#qz_item02').addClass('cur');
+			   }
+		   if(sTop>=qi3-100){
+			   fixRight.eq(2).addClass('cur').siblings().removeClass('cur');
+			   $('#qz_item03').addClass('cur');
+			   }
+		   if(sTop>=qi4-100){
+			   fixRight.eq(3).addClass('cur').siblings().removeClass('cur');
+			   $('#qz_item04').addClass('cur');
+			   }
+		   if(sTop>=qi5-100){
+			   fixRight.eq(4).addClass('cur').siblings().removeClass('cur');
+			   $('#qz_item05').addClass('cur');
+			   }
+		   if(sTop>=qi6-100){
+			   fixRight.eq(5).addClass('cur').siblings().removeClass('cur');
+			   $('#qz_item06').addClass('cur');
+			   }
+	     }
+	   })
+	</script>
+	<script type="text/javascript">
+		$(function () {
+		   $('.qz_ttab ul.qz_casenav li').click(function(){
+		        //获得当前被点击的元素索引值
+		        var Index = $(this).index();
+				//给菜单添加选择样式
+			    $(this).addClass('active').siblings().removeClass('active');
+				//显示对应的div
+				$('.qz_ttab').children('div').eq(Index).show().siblings('div').hide();
+		   
+		   });
+		});
+	</script> 
+</html>

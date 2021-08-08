@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我们</title>
+<link rel="stylesheet" type="text/css" href="Content/css/style.css">
+  <script type="text/javascript"  src="Script/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript"  src="Script/common.js"></script>
+  <script type="text/javascript"  src="Script/jquery.SuperSlide.js"></script>
+</head>
+
+<body>
+<div id="top_main">
+   <div id="top">
+    <div id="top_1">
+     <a href="#" target="_self">[登录]&nbsp;</a>
+     <a href="#" target="_self">[注册]&nbsp;</a>
+     <a href="#" target="_self">[忘记密码]</a>
+    </div>
+    <div id="top_2">
+     <a href="#" target="_blank"><span class="MobileEdition">手机版&nbsp;</span></a>
+     <a href="#" target="_self">简体中文版&nbsp;</a>
+     <a href="#" target="_self">English</a>
+    </div>
+   </div>
+  </div>
+  
+  <!-------------------------------->
+  <div id="logo_main">
+   <div id="logo">
+    <!--网站Logo 开始-->
+    <div class="WebLogo">
+     <a href="#" target="_self"><img src="Content/img/logo.png" title="某某婚纱" alt="某某婚纱"></a>
+    </div>
+    <!--网站Logo 结束-->
+    <!--导航条 开始-->
+    <div id="navigation">
+      <ul class="navigationlist">
+      <li><a href="index.html" class="current">首页</a></li>
+      <li><a href="yhhd.html">优惠活动</a></li>
+      <li><a href="tscj.html">特色场景</a></li>
+      <li><a href="about_us.html">关于我们</a></li>
+      <li><a href="zxdt.html">最新动态</a></li>
+      <li><a href="fwbj.html">服务报价</a>
+       <ul class="subnavigationlist" style="display: none;">
+        <li><a href="#">婚纱套系</a></li>
+        <li><a href="#">艺术写真</a></li>
+       </ul></li>
+      <li><a href="zpxs.html">作品欣赏</a>
+       <ul class="subnavigationlist" style="display: none;">
+        <li><a href="#" >宝宝照</a></li>
+        <li><a href="#">艺术照</a></li>
+        <li><a href="#">婚纱礼服</a></li>
+       </ul></li>
+      <li><a href="join_us.html">加入我们</a></li>
+      <li><a href="#">联系我们</a></li>
+     </ul>
+    </div>
+    <!--导航条 结束-->
+   </div>
+  </div>
+  
+  <!----------------------------------->
+  
+  <div id="banner_main">
+   <div id="banner">
+    <div class="tempWrap" style="overflow:hidden; position:relative; width:1423px">
+     <div class="tempWrap" style="overflow:hidden; position:relative; width:1423px"><ul class="bannerlist" style="width: 2846px; left: -1423px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+      <li style="background: rgb(43, 138, 14); float: left; width: 1423px;"><img src="Content/img/2.jpg" style="margin-left: -238px;"></li>
+      <li style="float: left; width: 1423px;"><img src="Content/img/1.jpg" style="margin-left: -238px;"></li>
+     </ul></div>
+    </div>
+   </div>
+   <div class="hd">
+    <ul><li class="">1</li><li class="on">2</li></ul>
+   </div>
+  </div>
+  
+  <!--------------------------->
+  
+  <script>
+if ($(".bannerlist li").length > 0) {
+    $('#banner_main').slide({
+        titCell: '.hd ul',
+        mainCell: '#banner ul',
+        autoPlay: true,
+        autoPage: true,
+        delayTime: 500,
+        effect: 'left'
+    });
+    $(window).resize(function() {
+        CenterBanner();
+    });
+    $(document).ready(function(e) {
+        CenterBanner();
+    });
+} else {
+    $("#banner_main").hide();
+}
+
+function CenterBanner() {
+    var imgWidth = parseInt($(".bannerlist li img:first").width());
+    if (imgWidth <= 0) return;
+    var winWidth = parseInt($(window).width());
+    var offset = parseInt((winWidth - imgWidth) / 2);
+    $(".bannerlist li img").css("margin-left", offset + 'px');
+} </script>
+
+
+<!----------------------------------->
+
+<div id="announcement_main">
+   <div id="announcement">
+    <ul class="announcementlist">
+     <li><a href="#" target="_self" title="服务热线"><img src="Content/img/hotline.png"></a></li>
+     <li><a href="#" target="_blank" title="在线客服"><img src="Content/img/qq.png"></a></li>
+     <li><a href="#" target="_blank" title="新浪微博"><img src="Content/img/sina.png"></a></li>
+     <li><a href="#" target="_blank" title="腾讯微博"><img src="Content/img/tencent.png"></a></li>
+    </ul>
+   </div>
+</div>
+<!-------------announcement_main end------------------------->
+
+<div class="job">
+   <!--左侧区域 开始-->
+   <div id="left">
+    <div class="left_title1">
+     <h2>站内搜索</h2>
+    </div>
+    <div class="left_body1">
+     <form name="frmInfoSearch" method="post" action="#">
+      <table class="search_table">
+       <tbody>
+        <tr>
+         <th><input name="Keywords" class="form_text" type="text" value="" maxlength="50" /></th>
+         <td><input class="form_button btn btn-small" name="submit" type="submit" value="搜索" /></td>
+        </tr>
+       </tbody>
+      </table>
+      <input type="hidden" name="__hash__" value="69c23a15" />
+     </form>
+    </div>
+    <div class="left_bottom1"></div>
+    <div class="left_title">
+     <h2>优惠活动</h2>
+    </div>
+    <div class="left_body">
+     <ul class="gridlist6">
+      <li><a href="#" target="_blank"><img src="Content/img/huodong1.png" title="“爱你一世”主题" alt="“爱你一世”主题" /></a>
+       <div class="InfoContent">
+        <a href="#" target="_blank">“爱你一世”主题</a>
+       </div></li>
+      <li><a href="#" target="_blank"><img src="Content/img/huodong1.png" title="2015新年优惠特辑" alt="2015新年优惠特辑" /></a>
+       <div class="InfoContent">
+        <a href="#" target="_blank">2015新年优惠特辑</a>
+       </div></li>
+     </ul>
+    </div>
+    <div class="left_bottom"></div>
+    <div class="left_title">
+     <h2>联系我们</h2>
+    </div>
+    <div class="left_body">
+     <div class="contact_wrap">
+      联系人：陈小姐
+      <br />手机：13512345678
+      <br />电话：010-12345678
+      <br />传真：010-12345678
+      <br />邮件：12345@qq.com
+      <br />邮政编码：400000
+      <br />网址：
+      <a href="#" target="_blank" class="WebUrl">http://www.ww.com</a>
+      <br />地址：*****************
+      <br />
+     </div>
+    </div>
+    <div class="left_bottom"></div>
+   </div>
+   <!--左侧区域 结束-->
+   <!--右侧区域 开始-->
+   <div id="right">
+    <div class="right_title">
+     <!--当前位置 开始-->
+     <div id="location">
+      当前位置「
+      <a href="#" target="_self">首页</a>&nbsp;&gt;&nbsp;
+      <a href="#" target="_self">加入我们</a>」 
+     </div>
+     <!--当前位置 结束-->
+     <h2>加入我们</h2>
+    </div>
+    <div class="right_body">
+     <ul class="joblist">
+      <li>
+       <table class="job_table">
+        <tbody>
+         <tr>
+          <th class="">职位名称</th>
+          <td colspan="2" class="t2">前台接待</td>
+          <td>
+           <div class="operation">
+            <a class="btn" href="#">应聘此岗位</a>
+           </div></td>
+         </tr>
+         <tr>
+          <th class="">招聘人数</th>
+          <td class="t2">2</td>
+          <th class="t3">有效期至</th>
+          <td class="t4">长期有效</td>
+         </tr>
+         <tr>
+          <th class="">学历要求</th>
+          <td class="t2">大专</td>
+          <th class="t3">性别要求</th>
+          <td class="t4">女</td>
+         </tr>
+         <tr>
+          <th class="">年龄要求</th>
+          <td class="t2">20-25</td>
+          <th class="t3">薪金待遇</th>
+          <td class="t4">面议</td>
+         </tr>
+         <tr></tr>
+         <tr>
+          <th class="">语言要求</th>
+          <td class="t2">不限</td>
+          <th class="t3">工作地点</th>
+          <td class="t4">北京</td>
+         </tr>
+         <tr>
+          <th>详细要求</th>
+          <td colspan="3" class="Requirement">
+           <div class="cc_l">
+             职位要求：
+           </div> 
+           <div class="cc_m" style="height: 100%">
+             1、性格开朗，待人热情，身高1.60米以上，形象好，气质佳；
+            <br /> 2、普通话流利，具有良好的语言表达能力和沟通应变能力；
+            <br /> 3、熟练使用电脑、传真机及各种办公软件word，excel；
+            <br /> 4、工作积极主动，认真严谨，具备良好的团队合作精神；
+            <br /> 5、具有良好的思想道德素质，责任心强，较强的服务意识。
+           </div> </td>
+         </tr>
+        </tbody>
+       </table></li>
+      <li>
+       <table class="job_table">
+        <tbody>
+         <tr>
+          <th class="">职位名称</th>
+          <td colspan="2" class="t2">平面设计师</td>
+          <td>
+           <div class="operation">
+            <a class="btn" href="#">应聘此岗位</a>
+           </div></td>
+         </tr>
+         <tr>
+          <th class="">招聘人数</th>
+          <td class="t2">5</td>
+          <th class="t3">有效期至</th>
+          <td class="t4">长期有效</td>
+         </tr>
+         <tr>
+          <th class="">学历要求</th>
+          <td class="t2">大专以上</td>
+          <th class="t3">性别要求</th>
+          <td class="t4">女</td>
+         </tr>
+         <tr>
+          <th class="">年龄要求</th>
+          <td class="t2">20-30</td>
+          <th class="t3">薪金待遇</th>
+          <td class="t4">5000-8000/月</td>
+         </tr>
+         <tr></tr>
+         <tr>
+          <th class="">语言要求</th>
+          <td class="t2">不限</td>
+          <th class="t3">工作地点</th>
+          <td class="t4">北京</td>
+         </tr>
+         <tr>
+          <th>详细要求</th>
+          <td colspan="3" class="Requirement">
+           <div class="cc_l"> 
+            <strong>职位说明：</strong>
+           </div> 
+           <div class="cc_m">
+             从事我司软件产品相关美术设计，包括企业Logo、Flash动画设计、图标设计、网页美工等
+           </div> 
+           <div class="cc_m">
+             &nbsp;
+           </div> 
+           <div class="cc_l"> 
+            <strong>职位要求：</strong>
+           </div> 
+           <div class="cc_m" style="height: 100%">
+             1、美术、平面设计相关专业，大专以上学历；
+            <br /> 2、有扎实的美术功底、良好的创意思维和理解能力，能及时把握客户需求；
+            <br /> 3、熟练使用设计相关工具，如Photoshop、Illustrator、Dreamweaver、Flash等；
+            <br /> 4、了解div+css+js网页布局设计；
+            <br /> 5、善于与人沟通，良好的团队合作精神和高度的责任感，能够承受压力，有创新精神，保证工作质量；
+           </div> <p> &nbsp;</p> </td>
+         </tr>
+        </tbody>
+       </table></li>
+      <li>
+       <table class="job_table">
+        <tbody>
+         <tr>
+          <th class="">职位名称</th>
+          <td colspan="2" class="t2">销售经理</td>
+          <td>
+           <div class="operation">
+            <a class="btn" href="#">应聘此岗位</a>
+           </div></td>
+         </tr>
+         <tr>
+          <th class="">招聘人数</th>
+          <td class="t2">10</td>
+          <th class="t3">有效期至</th>
+          <td class="t4">长期有效</td>
+         </tr>
+         <tr>
+          <th class="">学历要求</th>
+          <td class="t2">大专以上</td>
+          <th class="t3">性别要求</th>
+          <td class="t4">男女不限</td>
+         </tr>
+         <tr>
+          <th class="">年龄要求</th>
+          <td class="t2">20-25岁</td>
+          <th class="t3">薪金待遇</th>
+          <td class="t4">面议</td>
+         </tr>
+         <tr></tr>
+         <tr>
+          <th class="">语言要求</th>
+          <td class="t2">不限</td>
+          <th class="t3">工作地点</th>
+          <td class="t4">北京</td>
+         </tr>
+         <tr>
+          <th>详细要求</th>
+          <td colspan="3" class="Requirement">
+           <div class="cc_l"> 
+            <strong>职位说明：</strong>
+           </div> 
+           <div class="cc_m">
+             开拓市场，完成公司分配的销售任务；市场调研，挖掘客户潜在需求。
+           </div> 
+           <div class="cc_m">
+             &nbsp;
+           </div> 
+           <div class="cc_l"> 
+            <strong>职位要求：</strong>
+           </div> 
+           <div class="cc_m" style="height: 100%">
+             1、普通话标准，性格开朗，善于与人沟通，具有一定的亲和力；
+            <br /> 2、有一定的客户资源优先；
+            <br /> 3、具有一定的市场开拓能力，挖掘客户潜在需求能力；
+            <br /> 4、具有良好的客户服务意识，高度的责任感。
+           </div> </td>
+         </tr>
+        </tbody>
+       </table></li>
+     </ul>
+     <div class="page"></div>
+    </div>
+    <div class="right_bottom"></div>
+   </div>
+   <!--右侧区域 结束-->
+   <div class="clear"></div>
+  </div>
+
+
+
+<!----------------------------------->
+
+<div id="link_main">
+   <div id="link">
+    <div class="right_title3">
+     <h2>友情链接</h2>
+    </div>
+    <div class="right_body3">
+     <div class="link_pic">
+      <ul>
+       <!--循环开始-->
+       <!--循环结束-->
+      </ul>
+     </div>
+     <div class="link_text">
+      <ul>
+       <!--Link循环开始-->
+       <li><a href="#" target="_blank" title="南方航空"><b>南方航空</b></a></li>
+       <li><a href="#" target="_blank" title="中国旅游摄影网"><b>中国旅游摄影网</b></a></li>
+       <li><a href="#" target="_blank" title="全摄影"><b>全摄影</b></a></li>
+       <li><a href="#" target="_blank" title="北京婚纱摄影网"><b>北京婚纱摄影网</b></a></li>
+       <li><a href="#" target="_blank" title="中国婚纱交易网"><b>中国婚纱交易网</b></a></li>
+       <li><a href="#" target="_blank" title="中国婚纱摄影网"><b>中国婚纱摄影网</b></a></li>
+       <li><a href="#" target="_blank" title=" 中国内衣网"><b> 中国内衣网</b></a></li>
+       <li><a href="#" target="_blank" title="中国床上用品网"><b>中国床上用品网</b></a></li>
+       <li><a href="#" target="_blank" title="中国服装网"><b>中国服装网</b></a></li>
+       <li><a href="#" target="_blank" title="中国糖酒网"><b>中国糖酒网</b></a></li>
+       <li><a href="#" target="_blank" title="中国轻纺网"><b>中国轻纺网</b></a></li>
+       <li><a href="#" target="_blank" title="中国相机网"><b>中国相机网</b></a></li>
+       <li><a href="#" target="_blank" title="中国婚纱网"><b>中国婚纱网</b></a></li>
+       <li><a href="#" target="_blank" title="中国婚庆行业协会"><b>中国婚庆行业协会</b></a></li>
+       <li><a href="#" target="_blank" title="中国婚庆杂志"><b>中国婚庆杂志</b></a></li>
+       <li><a href="#" target="_blank" title="时尚婚庆杂志"><b>时尚婚庆杂志</b></a></li>
+       <!--Link循环结束-->
+      </ul>
+     </div>
+    </div>
+    <div class="right_bottom3"></div>
+   </div>
+  </div>
+  <!-- 友情链接 结束-->
+  <!-- 底部导航 开始-->
+  
+  <div class="bottom_navigation_main">
+   <div class="bottom_navigation">
+    <div class="bottom_navigation_list">
+     <div class="right_title4">
+      <a href="#">首页</a>
+     </div>
+     <div class="right_body4">
+      <ul class="subnavigationlist"></ul>
+     </div>
+     <div class="right_bottom4"></div>
+    </div>
+    <div class="bottom_navigation_list">
+     <div class="right_title4">
+      <a href="#">优惠活动</a>
+     </div>
+     <div class="right_body4">
+      <ul class="subnavigationlist"></ul>
+     </div>
+     <div class="right_bottom4"></div>
+    </div>
+    <div class="bottom_navigation_list">
+     <div class="right_title4">
+      <a href="#">特色场景</a>
+     </div>
+     <div class="right_body4">
+      <ul class="subnavigationlist"></ul>
+     </div>
+     <div class="right_bottom4"></div>
+    </div>
+    <div class="bottom_navigation_list">
+     <div class="right_title4">
+      <a href="#">关于我们</a>
+     </div>
+     <div class="right_body4">
+      <ul class="subnavigationlist"></ul>
+     </div>
+     <div class="right_bottom4"></div>
+    </div>
+    <div class="bottom_navigation_list">
+     <div class="right_title4">
+      <a href="#">最新动态</a>
+     </div>
+     <div class="right_body4">
+      <ul class="subnavigationlist"></ul>
+     </div>
+     <div class="right_bottom4"></div>
+    </div>
+    <div class="bottom_navigation_list">
+     <div class="right_title4">
+      <a href="#">服务报价</a>
+     </div>
+     <div class="right_body4">
+      <ul class="subnavigationlist">
+       <li><a href="#" target="_self">婚纱套系</a></li>
+       <li><a href="#" target="_self">艺术写真</a></li>
+      </ul>
+     </div>
+     <div class="right_bottom4"></div>
+    </div>
+    <div class="clear"></div>
+   </div>
+  </div>
+  <!-- 底部导航 结束-->
+  <!-- 底部版权 开始-->
+  <div id="copyright_main">
+   <div id="copyright">
+    <div class="bottom_info">
+     <b>地址：</b>******************版权所有&nbsp;ICP备**********号&nbsp;
+    </div>
+   </div>
+  </div>
+   <div id="topcontrol" title="回顶部" style="position: fixed; bottom: 150px; right: 20px; opacity: 1; cursor: pointer;">
+   <a href="#"><img src="Content/img/1.gif" /></a>
+  
+</body>
+</html>

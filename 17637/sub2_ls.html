@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>详情页</title>
+<!----><script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/news.js"></script>
+<!---->
+<link href="css/common.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/nav_right.css" />
+<link href="css/sub2_style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/footer.css" />
+<script type="text/javascript">
+$(document).ready(function () {
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+		},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+		})
+	$dragBln = false;
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e) {
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	})
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	})
+	$(".main_image a").click(function() {
+		if($dragBln) {
+			return false;
+		}
+	})
+	timer = setInterval(function() { $("#btn_next").click();}, 5000);
+	$(".main_visual").hover(function() {
+		clearInterval(timer);
+	}, function() {
+		timer = setInterval(function() { $("#btn_next").click();}, 5000);
+	})
+	$(".main_image").bind("touchstart", function() {
+		clearInterval(timer);
+	}).bind("touchend", function() {
+		timer = setInterval(function() { $("#btn_next").click();}, 5000);
+	})
+});
+</script>
+</head>
+<body>
+<body style="height:1200px">
+<div style="background:url(images/bg02.jpg) no-repeat; height:988px;">
+<!--左侧翻页效果
+<div class="left"> <a name="top" href="#footer" class="btu_top"></a> <a href="#middle" class="home"></a> <a name="footer" href="#top" class="btu_buttom"></a> </div>--> 
+<!--导航栏-->
+<div class="nav">
+  <li><a target="new" href="index.html?param=feiliao#basic-html-setup">肥&nbsp;&nbsp;&nbsp;&nbsp;料</a></li>  
+  <li><a target="new" href="index.html?param=nongyao#basic-html-setup">农&nbsp;&nbsp;&nbsp;&nbsp;药</a></li>  
+  <li><a target="new" href="index.html?param=zhongzi#basic-html-setup">种&nbsp;&nbsp;&nbsp;&nbsp;子</a></li>
+  <li><a href="index.html#footer">联系信息</a></li>
+  <li><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+</div>
+<!--logo图标--> 
+<a href="index.html">
+<div class="logo_icon"></div>
+</a> 
+<!--右侧导航栏-->
+<div  style="top:0; right:0; *position:fixed; width:75px; height:100%; position:absolute; z-index:999;">
+  <div class="mui-mbar-tabs">
+    <div class="button_gnj" id="button_gnj"> <!--功能键按钮-->
+      <li><img src="images/gnj.png" /></li>
+    </div>
+    <div class="quick_link_mian">
+      <div class="quick_links_panel" >
+        <div id="quick_links" class="quick_links"><!--所有产品-->
+          <li > <img src="images/sy_arw.jpg" width="110%" style="margin-top:180%;" />
+            <div class="ibar_login_box status_login">
+              <div class="status_login">
+                <ul class="user_info">
+                  <li><a href="sub1_ls.html">巨仁</a> <a href="index_sub1.html">乔泰</a><a href="sub1_p.html" >战俘</a> <a href="sub1_x.html">伟功</a><a href="sub1_p.html">宝丰</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="quick_weixin_toggle" >
+          <li id="div2"> <!--微信扫码--> 
+            <img src="images/weixin.jpg" />
+            <div class="mp_qrcode"><img src="images/weixin_code_145.png"/></div>
+          </li>
+          <li class="language" ><!--语言选择id="div3"--> 
+            <a href="#"></a></li>
+          <li id="div4"> <!--联系电话<--> 
+            <img src="images/call.jpg" />
+            <div class="mp_tooltip">咨询热线：XXX</div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--新闻公告-->
+<div  class="news" style="height:360px;top:14%; *top:114%; _position:absolute; *position:fixed;">
+  <li style="width:534px; height:45px; line-height:45px; text-align:left; font-size:18px; padding-left:0; background:url(images/news.png) no-repeat center center;"><span style="margin-left:40px; color:#fff;" onclick="news_contentupDiv('news_content-div');"><a href="#" style="color:#fff">新闻公告：林业产业增长势头强劲</a></span></li>
+  <div id='news_content-div' class="news_content-box">
+    <div class="news_content-box-body" style="font-size:16px" >
+      <li class="click1" style="width:500px; "><a href="javascript:void(0);" onclick="show();"> 林业产业增长势头强劲 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(1);" onclick="show();"> 李克强：深入推进金融改革开放助力实体经济升级发展 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(2);" onclick="show();"> 2015年化肥行业六大常态汇总分析</a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(3);" onclick="show();"> 测土配方施肥大幅推进 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(4);" onclick="show();"> 肥料复合化成趋势 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(5);" onclick="show();"> 农民用肥结构发生变化 </a></li>
+    </div>
+    <span id="guanbi"><a href="javascript:void(0);" onclick="hideDiv('news_content-div');"><img src="images/guanbi.png" /></a></span> </div>
+</div>
+<!--首先设置一个层:-->
+<div class="bg"></div>
+<div id="news_content" class="news_content" style="font-size:16px; top:20%; position:absolute;"> <span style=" float:right; text-align:right;"><a id="close_bg" href="#" onclick="hideDiv('news_content','.bg');"><img src="images/guanbi.png" /></a></span>
+  <div class="news_content_body" style="width:670px">
+    <p>本报北京4月23日讯 记者黄俊毅从国家林业局2015年国家级林业重点展会新闻发布会上获悉：我国林业产业继续保持强劲的增长势头，2014年林产品总产值达5.26万亿元，比2013年增长11.1%。
+      国家林业局发展规划与资金管理司副司长、全国木材行业管理办公室主任孙建在会上说，林业在对提高农民收入、满足社会多样化需求等方面发挥了巨大作用，从2001年起，全国林业总产值保持了年均22%的高增长。2014年，林业第二产业和第三产业比重已达66%，林产品达十多万种，涉及100多万家企业及数亿农民。2014年，林产品出口总额1399.5亿美元，同比增长8.4%。
+      目前，林业会展经济在促进全国林产品大市场形成等方面发挥着越来越重要的作用。为进一步活跃全国林产品市场，扩大消费，促进林业产业转型升级，国家林业局今年将与有关省份联合举办5个林产品交易博览会。据悉，今年5月下旬到11月上旬，国家林业局将与江西、山东、浙江、福建、广西等省区人民政府，分别举办5个林产品交易博览会。这5个林产品交易博览会分别是：第十二届中国林产品交易会、第8届中国义乌国际森林产品博览会、第十一届海峡两岸林业博览会暨投资贸易洽谈会、第二届中国（赣州）家具产业博览会、第十二届中国—东盟博览会林产品及木制品展。</p>
+    <p>“这些博览会既是全国优质林业产品的展示平台，也是林业企业和企业、林业企业和广大消费者的互动平台，在提高林产品质量、档次、科技含量、品牌和附加值等方面将发挥引领示范作用。”孙建表示，这5个博览会属于经国务院有关部门清理、同意保留的展会，今年预计将有40多个国家和地区的300多家企业参展，有100多个国家和地区的6000余名外商前来采购。</p>
+  </div>
+</div>
+<!--详情满屏左右滚动的焦点-->
+<div class="main_visual">
+  <div class="flicking_con">
+    <div class="flicking_inner"> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> </div>
+  </div>
+  <div class="main_image">
+    <ul>
+      <!--第一张图-->
+      <li><span>
+        <div class="p_left">
+          <h1> 磷酸二氢钾的作用 </h1>
+          <p> 侨泰磷钾核动力采用国家
+            先进的科学技术和直接法生产工艺，融合全球纯度最高的磷矿和钾矿，添加了效助剂，质量好，纯度高。 </p>
+        </div>
+        <img src="images/qt_ls.png" /><!--图片区-->
+        <div class="p_right">
+          <h2>产品特点 </h2>
+          <p>本品具有促进农作物光合作用，
+            迅速补充土壤有效营养元素，提高土壤肥力，易为作物吸收利用，促进茎、秆、粒的生长。使作物苗旺杆壮、增加千粒重，提高结实率，增强作物抗倒伏、抗寒、抗旱抗病虫害能力，改善作物品质等功能。具有用量少、肥高效、易吸收、见效快、使用方便、增产效果显著等特点。是无毒、无害、无残留的绿色肥料。</p>
+        </div>
+        </span>
+        <div class="call_zx"><a href="#"><img src="images/tel.jpg" /> </a> </div>
+      </li>
+      <!--第二张图-->
+      <li><span>
+        <div class="p_left">
+          <h1> 侨泰硼的作用 </h1>
+          <p > 侨泰硼采用先进的科学技术，添
+            加高效助剂而成。本产品溶解快。吸利用率高，可有效补充作物硼元素在棉花、油菜、向日葵、玉米、小麦、西瓜、甜瓜、打瓜、等作物使用后，增产效果明显。 </p>
+        </div>
+        <img src="images/qt_p.png" /><!--图片区-->
+        <div class="p_right">
+          <h2>产品功效 </h2>
+          <p >使用本品能有效防治作物因硼
+            引起的种生理性疾病。同时有效提高作物对氨、磷、钾的吸收效率，提高瓜果蔬菜的商品性，增强作物的抗逆性，本产品当季使用当季吸收，在土壤中无残留，不造成污染，符合环保要求及无公害农业发展方向，特别适宜大型农业机械操作，能与其他措施配合使用，简化操作技术，省工省本，使用前景广阔。 </p>
+        </div>
+        </span>
+        <div class="call_zx"><a href="#"><img src="images/tel.jpg" /> </a> </div>
+      </li>
+      <!--第三张图-->
+      <li><span>
+        <div class="p_left">
+          <h1> 水溶磷钾的作用 </h1>
+          <p > 磷钾能促进植株茎秆健壮，改善果实品质，增强植株抗寒能力	，提高果实糖分和维生素C的含量，和氮的情况一样，缺磷钾症状首先出现老叶。<br>
+            磷钾素供应不足时，碳水化合物代谢受压制，而呼吸作用加强，因此，缺磷钾时植株抗逆能力减弱，易受病害侵袭，果实品质下降，着色不良。 </p>
+        </div>
+        <img src="images/tp_ls.png" /><!--图片区-->
+        <div class="p_right">
+          <h2>产品特点 </h2>
+          <p >本产品是高品质磷酸二氢钾，适合作物果实、膨果、着色、增甜时使用，明显提高产量和经济效益。<br>
+            <br>
+            根部施肥、叶面施肥均可，效果显著。全面补充营养，见效快。完全水溶，吸收率高。 </p>
+        </div>
+        </span>
+        <div class="call_zx"><a href="#"><img src="images/tel.jpg" /> </a> </div>
+      </li>
+      <!--第四张图-->
+      <li><span>
+        <div class="p_left">
+          <h1> 侨泰锌的作用 </h1>
+          <p > 侨泰锌应施在缺锌的土壤和
+            对锌反应感的作物上，主要有玉米、水稻、棉花、亚麻、甜菜、大豆、菜豆、柑桔、苹果、油葵、桃、番茄等作物。如水稻缺锌，施锌后稻苗表现为“五早”，即早转青、早分蘗、早抽穗、早成熟。本品特别适合新疆盐碱地使用，滴灌后提高棉花、玉米出苗率，增加氮磷钾的吸收利用率。 </p>
+        </div>
+        <img src="images/qt_x.png"/><!--图片区-->
+        <div class="p_right">
+          <h2>产品功效 </h2>
+          <p >本品具有促进农作物光合作用，
+            迅速补充土壤有效营养元素，提高土壤肥力，易为作物吸收利用，促进茎、秆、粒的生长。使作物苗旺杆壮、增加千粒重，提高结实率，增强作物抗倒伏、抗寒、抗旱抗病虫害能力，改善作物品质等功能。具有用量少、肥高效、易吸收、见效快、使用方便、增产效果显著等特点。是无毒、无害、无残留的绿色肥料。 </p>
+        </div>
+        </span>
+        <div class="call_zx"><a href="#"><img src="images/tel.jpg" /> </a> </div>
+      </li>
+      
+      <!--第五张图-->
+      <li><span>
+        <div class="p_left">
+          <h1> 巨仁锌的作用 </h1>
+          <p > 巨仁锌应施在缺锌的土壤和
+            对锌反应感的作物上，主要有玉米、水稻、棉花、亚麻、甜菜、大豆、菜豆、柑桔、苹果、油葵、桃、番茄等作物。如水稻缺锌，施锌后稻苗表现为“五早”，即早转青、早分蘗、早抽穗、早成熟。本品特别适合新疆盐碱地使用，滴灌后提高棉花、玉米出苗率，增加氮磷钾的吸收利用率。 </p>
+        </div>
+        <img src="images/tp_x.png" /><!--图片区-->
+        <div class="p_right">
+          <h2>产品功效 </h2>
+          <p >本品具有促进农作物光合作用，
+            迅速补充土壤有效营养元素，提高土壤肥力，易为作物吸收利用，促进茎、秆、粒的生长。使作物苗旺杆壮、增加千粒重，提高结实率，增强作物抗倒伏、抗寒、抗旱抗病虫害能力，改善作物品质等功能。具有用量少、肥高效、易吸收、见效快、使用方便、增产效果显著等特点。是无毒、无害、无残留的绿色肥料。 </p>
+        </div>
+        </span>
+        <div class="call_zx"><a href="#"><img src="images/tel.jpg" /> </a> </div>
+      </li>
+    </ul>
+    <a href="javascript:;" id="btn_prev"></a> <a href="javascript:;" id="btn_next"></a> </div>
+</div>
+<div class="main_image_bg"></div>
+
+<!--产品推荐--> 
+<span style="font-size:30px; color:#fff; left:18%; top:660px; z-index:999999; font-family:'微软雅黑'; position:absolute">产品推荐</span>
+<div class="slidBox">
+  <div class="slb_frbox"> <img class="slb_frBtnL prev" src="images/fly_20.png" />
+    <div class="slb_frUl">
+      <ul id="slb_fu" >
+        <li><a href="#"> <img src="images/fly_11.jpg" /> </a> </li>
+        <li><a href="#"> <img src="images/fly_13.jpg" /> </a> </li>
+        <li><a href="#"> <img src="images/fly_15.jpg" /> </a> </li>
+        <li><a href="#"> <img src="images/fly_17.jpg" /> </a> </li>
+      </ul>
+    </div>
+    <img class="slb_frBtnR next" src="images/fly_21.png" /> </div>
+  <script type="text/javascript">
+$(document).ready(function () {
+	
+	/* 图片滚动效果 */
+	$(".slb_frbox").slide({
+		titCell: "",
+		mainCell: ".slb_frUl ul",
+		autoPage: false,
+		effect: "leftLoop",
+		autoPlay: false,
+		vis: 4
+	});		
+});
+</script> 
+  <!--滚动块-->
+  <div class="block"></div>
+</div>
+<!--页脚-->
+<footer  id="lxfs" style="width:100%; z-index:999; color:#fff; text-align:center; height:380px; top:980px; margin:0 auto; position:absolute">
+  <div class="f_bottom" style="height:380px">
+   <div class="link">
+    <div class="link_box"><a target="new" href="http://www.ampcn.com/"><img src="images/url1.jpg" />
+      <h1>中国农资网</h1>
+      </a></div>
+    <div class="link_box"><a target="new" href="http://www.cast.net.cn/"><img src="images/url2.jpg" />
+      <h1>中国农业科技信息网</h1>
+      </a></div>
+    <div class="link_box"><a target="new" href="http://www.agri.gov.cn/"><img src="images/url3.jpg" />
+      <h1>中国农业信息网</h1>
+      </a></div>
+    <div class="link_box"><a target="new" href="http://www.zzys.moa.gov.cn/"><img src="images/url4.jpg" />
+      <h1>中国种植业信息网</h1>
+      </a></div>
+    <div class="link_box"><a target="new" href="http://www.sannong.net/"><img src="images/url5.jpg" />
+      <h1>中国三农网</h1>
+      </a></div>
+    <div class="link_box"><a target="new" href="http://www.agrichem.cn/"><img src="images/url6.jpg" />
+      <h1>中国农药网</h1>
+      </a></div>
+  </div>
+  <div class="adress"> <img src="images/footer_logo.png" />
+    <p style="font-size:15px; color:#cccccc; line-height:24px;"> 沪ICP备XXX号 &nbsp;&nbsp; 版权所有：上海XXX信息科技有限公司 &nbsp;&nbsp;服务热线：XXX</p>
+        <p style="font-size:15px; color:#cccccc; line-height:24px;">地 址：XXX &nbsp;&nbsp;邮编：200082 &nbsp;&nbsp;传真：XXX</p>
+        <p style="font-size:15px; color:#cccccc; line-height:24px;">邮件咨询：kefu@yc-e.net &nbsp;&nbsp;附近交通：地铁：12号线 隆昌路站;8号线 黄兴路站</p>
+  </div>
+</footer>
+
+<!--右侧导航引用的js[if lte IE 8]>
+<!--[if lte IE 8]>
+<script src="js/ieBetter.js"></script>
+<![endif]--> 
+<script type="text/javascript">
+//var image=document.getElementById("image")<bgsound src="" loop="-1" id="image">;
+document.getElementById("an").onmousedown=function(){
+    if(this.src.indexOf("play1pressed")!=-1){
+        this.src="images/weixin_code_145.png";
+    }else{
+        this.src="images/yy.jpg";
+    }
+}
+</script> 
+<SCRIPT type=text/javascript>
+$(document).ready(function(){
+            $('.quick_link_mian').hide();
+			$('#button_gnj').click(function(){
+				$('.quick_link_mian').fadeToggle();
+				$("#quick_links").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle("slow");
+	            $("#div4").fadeToggle("slow");
+    });
+  });
+$(document).ready(function(){
+  $("#button_gnj").click(function(){
+    $("#quick_links").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn("slow");
+	$("#div4").fadeIn("slow");
+  });
+});
+</script> 
+<script type="text/javascript" src="js/parabola.js"></script> 
+<script type="text/javascript">
+	$(".quick_links_panel li").mouseenter(function(){
+		$(this).children(".mp_tooltip").animate({left:-300,queue:true});
+		$(this).children(".mp_tooltip").css("visibility","visible");
+		$(this).children(".ibar_login_box").css("display","block");
+	});
+	$(".quick_links_panel li").mouseleave(function(){
+		$(this).children(".mp_tooltip").css("visibility","hidden");
+		$(this).children(".mp_tooltip").animate({left:-120,queue:true});
+		$(this).children(".ibar_login_box").css("display","none");
+	});
+	$(".quick_weixin_toggle li").mouseover(function(){
+		$(this).children(".mp_qrcode").show();
+	});
+	$(".quick_weixin_toggle li").mouseleave(function(){
+		$(this).children(".mp_qrcode").hide();
+	});
+	$("#yuy").mousedown.click(function(){
+		$("#div3").show(".language");
+	});
+</script>
+</body>
+</html>

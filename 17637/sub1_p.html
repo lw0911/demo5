@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>品牌页_选择</title>
+<link href="css/sub1_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/3D-style.css" />
+<link rel="stylesheet" type="text/css" href="css/nav_right.css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/ZoomPic.js"></script>
+<script src="js/news.js"></script>
+</head>
+<style type="text/css"></style>
+
+<body class="background">
+<div class="bg-photo bg-photo-1" style="display: block;"> </div>
+<!--页面通用栏目开始--> 
+<!--左侧翻页效果
+<div class="left"> <a name="top" href="#footer" class="btu_top"></a> <a href="#middle" class="home"></a> <a name="footer" href="#top" class="btu_buttom"></a> </div>--> 
+<!--logo图标--> 
+<a href="index.html">
+<div class="logo_icon"></div>
+</a> 
+<!--右侧导航栏-->
+<div  style="top:0; right:0; *position:fixed; width:75px; height:100%; position:absolute;">
+  <div class="mui-mbar-tabs">
+    <div class="button_gnj" id="button_gnj"> <!--功能键按钮-->
+      <li><img src="images/gnj.png" /></li>
+    </div>
+    <div class="quick_link_mian">
+      <div class="quick_links_panel" >
+        <div id="quick_links" class="quick_links"><!--所有产品-->
+          <li > <img src="images/sy_arw.jpg" width="110%" style="margin-top:180%;" />
+            <div class="ibar_login_box status_login">
+              <div class="status_login">
+                <ul class="user_info">
+                  <li><a href="sub1_ls.html">巨仁</a> <a href="index_sub1.html">乔泰</a><a href="sub1_p.html" >战俘</a> <a href="sub1_x.html">伟功</a><a href="sub1_p.html">宝丰</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="quick_weixin_toggle" >
+          <li id="div2"> <!--微信扫码--> 
+            <img src="images/weixin.jpg" />
+            <div class="mp_qrcode"><img src="images/weixin_code_145.png"/></div>
+          </li>
+          <li class="language" ><!--语言选择id="div3"--> 
+            <a href="#"></a></li>
+          <li id="div4"> <!--联系电话<--> 
+            <img src="images/call.jpg" />
+            <div class="mp_tooltip">咨询热线：XXX</div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--页面通用栏目结束--> 
+<!--导航栏-->
+<div class="nav">
+  <li><a target="new" href="index.html?param=feiliao#basic-html-setup">肥&nbsp;&nbsp;&nbsp;&nbsp;料</a></li>
+  <li><a target="new" href="index.html?param=nongyao#basic-html-setup">农&nbsp;&nbsp;&nbsp;&nbsp;药</a></li>
+  <li><a target="new" href="index.html?param=zhongzi#basic-html-setup">种&nbsp;&nbsp;&nbsp;&nbsp;子</a></li>
+  <li><a href="index.html#footer">联系信息</a></li>
+  <li><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+</div>
+<!--新闻公告-->
+<div  class="news" style="height:360px;top:14%; *top:114%; _position:absolute; *position:fixed;">
+  <li style="width:534px; height:45px; line-height:45px; text-align:left; font-size:18px; padding-left:0; background:url(images/news.png) no-repeat center center;"><span style="margin-left:40px; color:#fff;" onclick="news_contentupDiv('news_content-div');"><a href="#" style="color:#fff">新闻公告：林业产业增长势头强劲</a></span></li>
+  <div id='news_content-div' class="news_content-box">
+    <div class="news_content-box-body" style="font-size:16px" >
+      <li class="click1" style="width:500px; "><a href="javascript:void(0);" onclick="show();"> 林业产业增长势头强劲 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(1);" onclick="show();"> 李克强：深入推进金融改革开放助力实体经济升级发展 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(2);" onclick="show();"> 2015年化肥行业六大常态汇总分析</a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(3);" onclick="show();"> 测土配方施肥大幅推进 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(4);" onclick="show();"> 肥料复合化成趋势 </a></li>
+      <li class="click1" style="width:500px"><a href="javascript:void(5);" onclick="show();"> 农民用肥结构发生变化 </a></li>
+    </div>
+    <span id="guanbi"><a href="javascript:void(0);" onclick="hideDiv('news_content-div');"><img src="images/guanbi.png" /></a></span> </div>
+</div>
+<!--首先设置一个层:-->
+<div class="bg"></div>
+<div id="news_content" class="news_content" style="font-size:16px; top:20%; position:absolute;"> <span style=" float:right; text-align:right;"><a id="close_bg" href="#" onclick="hideDiv('news_content','.bg');"><img src="images/guanbi.png" /></a></span>
+  <div class="news_content_body" style="width:670px">
+    <p>本报北京4月23日讯 记者黄俊毅从国家林业局2015年国家级林业重点展会新闻发布会上获悉：我国林业产业继续保持强劲的增长势头，2014年林产品总产值达5.26万亿元，比2013年增长11.1%。
+      国家林业局发展规划与资金管理司副司长、全国木材行业管理办公室主任孙建在会上说，林业在对提高农民收入、满足社会多样化需求等方面发挥了巨大作用，从2001年起，全国林业总产值保持了年均22%的高增长。2014年，林业第二产业和第三产业比重已达66%，林产品达十多万种，涉及100多万家企业及数亿农民。2014年，林产品出口总额1399.5亿美元，同比增长8.4%。
+      目前，林业会展经济在促进全国林产品大市场形成等方面发挥着越来越重要的作用。为进一步活跃全国林产品市场，扩大消费，促进林业产业转型升级，国家林业局今年将与有关省份联合举办5个林产品交易博览会。据悉，今年5月下旬到11月上旬，国家林业局将与江西、山东、浙江、福建、广西等省区人民政府，分别举办5个林产品交易博览会。这5个林产品交易博览会分别是：第十二届中国林产品交易会、第8届中国义乌国际森林产品博览会、第十一届海峡两岸林业博览会暨投资贸易洽谈会、第二届中国（赣州）家具产业博览会、第十二届中国—东盟博览会林产品及木制品展。</p>
+    <p>“这些博览会既是全国优质林业产品的展示平台，也是林业企业和企业、林业企业和广大消费者的互动平台，在提高林产品质量、档次、科技含量、品牌和附加值等方面将发挥引领示范作用。”孙建表示，这5个博览会属于经国务院有关部门清理、同意保留的展会，今年预计将有40多个国家和地区的300多家企业参展，有100多个国家和地区的6000余名外商前来采购。</p>
+  </div>
+</div>
+<!--主体样式-->
+<div class="sd_box" style="width:100%; height:580px; float:left; margin:0 auto; padding:0; margin-top:10px;"> <span class="cp">请选择产品</span>
+  <div class="kePublic"> 
+    <!--效果html开始-->
+    
+    <div id="focus_Box"> <span class="prev">&nbsp;</span> <span class="next">&nbsp;</span>
+      <ul>
+        <li> <a href="sub2_p.html"><img width="20%" height="20%" alt="标题" src="images/products_left.jpg" /></a>
+          <p> <span>巨仁：硼</span> </p>
+        </li>
+        <li> <a href="sub2_x.html"><img width="20%" height="20%" alt="标题" src="images/products_right.jpg" /></a>
+          <p> <span>巨仁：锌</span> </p>
+        </li>
+        <li> <a href="sub2_ls.html"><img width="2	0%" height="20%" alt="标题" src="images/products_center.jpg" /></a>
+          <p> <span>巨仁：酸磷二氢钾</span> </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--效果html结束--> 
+<!--页脚
+<footer  id="lxfs" style="width:100%; color:#fff; text-align:center; height:100px;  padding-top:80px; margin:0 auto; float:left;">联系方式</footer>--> 
+
+<!--右侧导航引用的js[if lte IE 8]>
+<script src="js/ieBetter.js"></script>
+<![endif]--> 
+<script type="text/javascript">
+//var image=document.getElementById("image")<bgsound src="" loop="-1" id="image">;
+document.getElementById("an").onmousedown=function(){
+    if(this.src.indexOf("play1pressed")!=-1){
+        this.src="images/weixin_code_145.png";
+    }else{
+        this.src="images/yy.jpg";
+    }
+}
+</script> 
+<SCRIPT type=text/javascript>
+$(document).ready(function(){
+            $('.quick_link_mian').hide();
+			$('#button_gnj').click(function(){
+				$('.quick_link_mian').fadeToggle();
+				$("#quick_links").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle("slow");
+	            $("#div4").fadeToggle("slow");
+    });
+  });
+$(document).ready(function(){
+  $("#button_gnj").click(function(){
+    $("#quick_links").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn("slow");
+	$("#div4").fadeIn("slow");
+  });
+});
+</script> 
+<script type="text/javascript" src="js/parabola.js"></script> 
+<script type="text/javascript">
+	$(".quick_links_panel li").mouseenter(function(){
+		$(this).children(".mp_tooltip").animate({left:-300,queue:true});
+		$(this).children(".mp_tooltip").css("visibility","visible");
+		$(this).children(".ibar_login_box").css("display","block");
+	});
+	$(".quick_links_panel li").mouseleave(function(){
+		$(this).children(".mp_tooltip").css("visibility","hidden");
+		$(this).children(".mp_tooltip").animate({left:-120,queue:true});
+		$(this).children(".ibar_login_box").css("display","none");
+	});
+	$(".quick_weixin_toggle li").mouseover(function(){
+		$(this).children(".mp_qrcode").show();
+	});
+	$(".quick_weixin_toggle li").mouseleave(function(){
+		$(this).children(".mp_qrcode").hide();
+	});
+	$("#yuy").mousedown.click(function(){
+		$("#div3").show(".language");
+	});
+	$(function(){ ("#yuy").toggle(function(){ $("#yuy").css("background-image"," url(images/yy.jpg)"); },function(){ $("#yuy").css("background-image"," url(images/xiez.jpg)"); }) })
+</script>
+</body>
+</html>

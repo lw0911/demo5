@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>金牌农资</title>
+<meta name="description" content="CSS3 Full Screen Vertical Scroller with jQuery animation fallback" />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<!--<link rel="stylesheet" href="css/scroll_style.css">-->
+<link rel="stylesheet" href="css/home-style.css">
+<link rel="stylesheet" href="css/footer.css">
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/fsvs.js"></script>-->
+<script src="js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="css/nav_right.css" />
+<link rel="stylesheet" type="text/css" href="css/flxz_style.css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/news.js"></script>
+<script type="text/javascript" src="js/jquery_1.7.2.js"></script>
+<script type="text/javascript" src="js/jQueryRotateCompressed.2.2.js"></script>
+<script type="text/javascript" src="js/zzsc.js"></script>
+<script type="text/javascript" src="js/parabola.js"></script> 
+</head>
+<body scroll=no>
+<div>
+<!--页面通用栏目开始--> 
+<!--左侧翻页效果-->
+<div class="left"> <a  href="#fsvs-initial-setup" class="btu_top"></a> <a  href="#fsvs-initial-setup" class="home"></a> <a  href="#basic-html-setup" class="btu_buttom"></a> </div>
+<!--logo图标--> 
+<a href="index.html">
+<div class="logo_icon"></div>
+</a> 
+<!--右侧导航栏-->
+<div  style="top:0; right:0; *position:fixed; width:75px; height:100%; position:absolute;">
+  <div class="mui-mbar-tabs">
+    <div class="button_gnj" id="button_gnj"> <!--功能键按钮-->
+      <li><img src="images/gnj.png" /></li>
+    </div>
+    <div class="quick_link_mian">
+      <div class="quick_links_panel" >
+        <div id="quick_links" class="quick_links"><!--所有产品-->
+          <li > <img src="images/sy_arw.jpg" width="110%" style="margin-top:180%;" />
+            <div class="ibar_login_box status_login">
+              <div class="status_login">
+                <ul class="user_info">
+                  <li><a href="sub1_ls.html">巨仁</a> <a href="index_sub1.html">乔泰</a><a href="sub1_p.html" >战俘</a> <a href="sub1_x.html">伟功</a><a href="sub1_p.html">宝丰</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="quick_weixin_toggle" >
+          <li id="div2"> <!--微信扫码--> 
+            <img src="images/weixin.jpg" />
+            <div class="mp_qrcode"><img src="images/weixin_code_145.png"/></div>
+          </li>
+          <li class="language" ><!--语言选择id="div3"--> 
+            <a href="#"></a></li>
+          <li id="div4"> <!--联系电话<--> 
+            <img src="images/call.jpg" />
+            <div class="mp_tooltip">咨询热线：XXX</div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--页面通用栏目结束-->
+
+  <!--第一屏-->
+  <div class="stage" id="stage1" style="background:url(images/bg.jpg) center center; position:relative;">
+    <div>
+      <div>
+        <!--产品选项卡-->
+        <div class="option_box">
+          <div class="option">
+            <div class="button_img">
+              <div class="button_img1"><a href="#basic-html-setup"></a></div>
+            </div>
+            <div class="button_img" style="float:left;">
+              <div class="button_img2"><a href="#basic-html-setup"></a></div>
+            </div>
+            <div class="button_img" style="float:left;">
+              <div class="button_img3"><a href="#basic-html-setup"></a></div>
+            </div>
+          </div>
+        </div>
+     </div>
+    </div>
+  </div>
+  <!--第二屏-->
+  <div  class="stage" id="stage2" name ="refresh" style="background:url(images/bg02.jpg) center center; position:relative;">
+    <div id="second">
+      <!--<div>--> 
+        <!--导航栏-->
+        <div class="nav" style="*left:10%; _position:absolute; *position:fixed;">
+          <li><a href="#basic-html-setup" onclick="checkme1();return ture;">肥&nbsp;&nbsp;&nbsp;&nbsp;料</a></li>
+          <li><a href="#basic-html-setup" onclick="checkme2();return ture;">农&nbsp;&nbsp;&nbsp;&nbsp;药</a></li>
+          <li><a href="#basic-html-setup" onclick="checkme();return ture;">种&nbsp;&nbsp;&nbsp;&nbsp;子</a></li>
+          <li><a href="#stage3">联系信息</a></li>
+          <li><a href="#fsvs-initial-setup">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+        </div>
+     <!-- </div>-->
+      <!--新闻公告-->
+      <div  class="news"  style="height:460px;top:14%; *top:114%; position:absolute; *position:fixed; margin:0 auto; padding:0;">
+        <li style="width:534px; height:45px; line-height:45px; text-align:left; font-size:18px; padding-left:0; background:url(images/news.png) no-repeat center center;"><span style="margin-left:40px; color:#fff;" onclick="news_contentupDiv('news_content-div');"><a href="#" style="color:#fff">新闻公告：林业产业增长势头强劲</a></span></li>
+        <div id='news_content-div' class="news_content-box">
+          <div class="news_content-box-body" style="font-size:16px; width:520px;" >
+            <li class="click1" style="width:500px; "><a href="javascript:void(0);" onclick="show();"> 林业产业增长势头强劲 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(1);" onclick="show();"> 李克强：深入推进金融改革开放助力实体经济升级发展 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(2);" onclick="show();"> 2015年化肥行业六大常态汇总分析</a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(3);" onclick="show();"> 测土配方施肥大幅推进 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(4);" onclick="show();"> 肥料复合化成趋势 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(5);" onclick="show();"> 农民用肥结构发生变化 </a></li>
+            <li class="click1" style="width:500px; "><a href="javascript:void(0);" onclick="show();"> 林业产业增长势头强劲 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(1);" onclick="show();"> 李克强：深入推进金融改革开放助力实体经济升级发展 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(2);" onclick="show();"> 2015年化肥行业六大常态汇总分析</a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(3);" onclick="show();"> 测土配方施肥大幅推进 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(4);" onclick="show();"> 肥料复合化成趋势 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(5);" onclick="show();"> 农民用肥结构发生变化 </a></li>
+            <li class="click1" style="width:500px; "><a href="javascript:void(0);" onclick="show();"> 林业产业增长势头强劲 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(1);" onclick="show();"> 李克强：深入推进金融改革开放助力实体经济升级发展 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(2);" onclick="show();"> 2015年化肥行业六大常态汇总分析</a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(3);" onclick="show();"> 测土配方施肥大幅推进 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(4);" onclick="show();"> 肥料复合化成趋势 </a></li>
+            <li class="click1" style="width:500px"><a href="javascript:void(5);" onclick="show();"> 农民用肥结构发生变化 </a></li>
+          </div>
+          <span id="guanbi"><a href="javascript:void(0);" onclick="hideDiv('news_content-div');"><img src="images/guanbi.png" /></a></span> 
+        </div>
+      </div>
+      <!--首先设置一个层:-->
+      <div class="bg"></div>
+      <div id="news_content" class="news_content" style="font-size:16px; top:20%; position:absolute;"> <span style=" float:right; text-align:right;"><a id="close_bg" href="#" onclick="hideDiv('news_content','.bg');"><img src="images/guanbi.png" /></a></span>
+        <div class="news_content_body">
+          <p>本报北京4月23日讯 记者黄俊毅从国家林业局2015年国家级林业重点展会新闻发布会上获悉：我国林业产业继续保持强劲的增长势头，2014年林产品总产值达5.26万亿元，比2013年增长11.1%。
+            国家林业局发展规划与资金管理司副司长、全国木材行业管理办公室主任孙建在会上说，林业在对提高农民收入、满足社会多样化需求等方面发挥了巨大作用，从2001年起，全国林业总产值保持了年均22%的高增长。2014年，林业第二产业和第三产业比重已达66%，林产品达十多万种，涉及100多万家企业及数亿农民。2014年，林产品出口总额1399.5亿美元，同比增长8.4%。
+            目前，林业会展经济在促进全国林产品大市场形成等方面发挥着越来越重要的作用。为进一步活跃全国林产品市场，扩大消费，促进林业产业转型升级，国家林业局今年将与有关省份联合举办5个林产品交易博览会。据悉，今年5月下旬到11月上旬，国家林业局将与江西、山东、浙江、福建、广西等省区人民政府，分别举办5个林产品交易博览会。这5个林产品交易博览会分别是：第十二届中国林产品交易会、第8届中国义乌国际森林产品博览会、第十一届海峡两岸林业博览会暨投资贸易洽谈会、第二届中国（赣州）家具产业博览会、第十二届中国—东盟博览会林产品及木制品展。</p>
+          <p>“这些博览会既是全国优质林业产品的展示平台，也是林业企业和企业、林业企业和广大消费者的互动平台，在提高林产品质量、档次、科技含量、品牌和附加值等方面将发挥引领示范作用。”孙建表示，这5个博览会属于经国务院有关部门清理、同意保留的展会，今年预计将有40多个国家和地区的300多家企业参展，有100多个国家和地区的6000余名外商前来采购。</p>
+          <p>本报北京4月23日讯 记者黄俊毅从国家林业局2015年国家级林业重点展会新闻发布会上获悉：我国林业产业继续保持强劲的增长势头，2014年林产品总产值达5.26万亿元，比2013年增长11.1%。
+            国家林业局发展规划与资金管理司副司长、全国木材行业管理办公室主任孙建在会上说，林业在对提高农民收入、满足社会多样化需求等方面发挥了巨大作用，从2001年起，全国林业总产值保持了年均22%的高增长。2014年，林业第二产业和第三产业比重已达66%，林产品达十多万种，涉及100多万家企业及数亿农民。2014年，林产品出口总额1399.5亿美元，同比增长8.4%。
+            目前，林业会展经济在促进全国林产品大市场形成等方面发挥着越来越重要的作用。为进一步活跃全国林产品市场，扩大消费，促进林业产业转型升级，国家林业局今年将与有关省份联合举办5个林产品交易博览会。据悉，今年5月下旬到11月上旬，国家林业局将与江西、山东、浙江、福建、广西等省区人民政府，分别举办5个林产品交易博览会。这5个林产品交易博览会分别是：第十二届中国林产品交易会、第8届中国义乌国际森林产品博览会、第十一届海峡两岸林业博览会暨投资贸易洽谈会、第二届中国（赣州）家具产业博览会、第十二届中国—东盟博览会林产品及木制品展。</p>
+          <p>“这些博览会既是全国优质林业产品的展示平台，也是林业企业和企业、林业企业和广大消费者的互动平台，在提高林产品质量、档次、科技含量、品牌和附加值等方面将发挥引领示范作用。”孙建表示，这5个博览会属于经国务院有关部门清理、同意保留的展会，今年预计将有40多个国家和地区的300多家企业参展，有100多个国家和地区的6000余名外商前来采购。</p>
+          <p>本报北京4月23日讯 记者黄俊毅从国家林业局2015年国家级林业重点展会新闻发布会上获悉：我国林业产业继续保持强劲的增长势头，2014年林产品总产值达5.26万亿元，比2013年增长11.1%。
+            国家林业局发展规划与资金管理司副司长、全国木材行业管理办公室主任孙建在会上说，林业在对提高农民收入、满足社会多样化需求等方面发挥了巨大作用，从2001年起，全国林业总产值保持了年均22%的高增长。2014年，林业第二产业和第三产业比重已达66%，林产品达十多万种，涉及100多万家企业及数亿农民。2014年，林产品出口总额1399.5亿美元，同比增长8.4%。
+            目前，林业会展经济在促进全国林产品大市场形成等方面发挥着越来越重要的作用。为进一步活跃全国林产品市场，扩大消费，促进林业产业转型升级，国家林业局今年将与有关省份联合举办5个林产品交易博览会。据悉，今年5月下旬到11月上旬，国家林业局将与江西、山东、浙江、福建、广西等省区人民政府，分别举办5个林产品交易博览会。这5个林产品交易博览会分别是：第十二届中国林产品交易会、第8届中国义乌国际森林产品博览会、第十一届海峡两岸林业博览会暨投资贸易洽谈会、第二届中国（赣州）家具产业博览会、第十二届中国—东盟博览会林产品及木制品展。</p>
+          <p>“这些博览会既是全国优质林业产品的展示平台，也是林业企业和企业、林业企业和广大消费者的互动平台，在提高林产品质量、档次、科技含量、品牌和附加值等方面将发挥引领示范作用。”孙建表示，这5个博览会属于经国务院有关部门清理、同意保留的展会，今年预计将有40多个国家和地区的300多家企业参展，有100多个国家和地区的6000余名外商前来采购。</p>
+        </div>
+      </div>
+      <!--肥料产品选择-->
+      <div class="friend_box" name="second">
+        <div  class="friend">
+          <div class="mr_frbox">
+           <img class="mr_frBtnL prev" src="images/scroll_left.png" />
+            <div class="mr_frUl"><!--种子系列-->
+              <div id="zzxl">
+                <ul id="mr_fu">
+                  <li id='qtxx'><a href='index_sub1.html'> <img src='images/zf.png' /></a></li>
+                  <li id='qtxx'><a href='index_sub1.html'> <img src='images/qt.png' /> </a> </li>
+                </ul>
+              </div>
+            </div>
+            <img class="mr_frBtnR next" src="images/scroll_right.png" />
+           </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    	 window.location.hash = "#!stage3";
+    </script>
+<script type="text/javascript">
+	 	$(document).ready(function(e) {
+            var url=window.location.search; 
+			var param = url.substr(1).split('=')[1];
+			if(param == 'zhongzi'){
+				checkme();
+			}else if(param == 'feiliao'){
+				checkme1();
+			}else{
+				checkme2();
+			}
+        });
+		function checkme()
+		{
+      	 	$('#zzxl').html('');
+			var $zhongzi = "<ul id='mr_fu' ><li id='qtxx'><a href='index_sub1.html'> <img src='images/zf.png' /></a></li><li id='qtxx'><a href='index_sub1.html'> <img src='images/qt.png' /> </a> </li> </ul>";
+			$('#zzxl').append($zhongzi);
+		}
+		function checkme1()
+		{
+      	 	$('#zzxl').html('');
+			var $zhongzi = "<ul id='mr_fu' ><li id='qtxx'><a href='index_sub1.html'> <img src='images/jr.png' /></a></li><li id='qtxx'><a href='index_sub1.html'> <img src='images/qt.png' /> </a> </li> </ul>";
+			
+			$('#zzxl').append($zhongzi);
+		}
+		function checkme2()
+		{
+      	 	$('#zzxl').html('');
+			var $zhongzi = "<ul id='mr_fu' ><li id='qtxx'><a href='index_sub1.html'> <img src='images/jrf.png' /></a></li><li id='qtxx'><a href='index_sub1.html'> <img src='images/jrf.png' /> </a> </li> </li><li id='qtxx'><a href='index_sub1.html'> <img src='images/jrf.png' /> </a> </li></ul>";
+			
+			$('#zzxl').append($zhongzi);
+		}
+	 </script> 
+    <script type="text/javascript">
+$(document).ready(function () {
+	
+	/* 图片滚动效果 */
+	$(".mr_frbox").slide({
+		titCell: "",
+		mainCell: ".mr_frUl ul",
+		autoPage: false,
+		effect: "leftLoop",
+		autoPlay: false,
+		vis: 2,
+		
+		
+	});		
+});
+</script
+    
+    ><!--效果html结束--> 
+    <!--[if lte IE 8]>
+<script src="js/ieBetter.js"></script>
+<![endif]--> 
+    <script type="text/javascript">
+//var image=document.getElementById("image")<bgsound src="" loop="-1" id="image">;
+document.getElementById("an").onmousedown=function(){
+    if(this.src.indexOf("play1pressed")!=-1){
+        this.src="images/weixin_code_145.png";
+    }else{
+        this.src="images/yy.jpg";
+    }
+}
+</script>
+   <SCRIPT type=text/javascript>
+$(document).ready(function(){
+            $('.quick_link_mian').hide();
+			$('#button_gnj').click(function(){
+				$('.quick_link_mian').fadeToggle();
+				$("#quick_links").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle("slow");
+	            $("#div4").fadeToggle("slow");
+    });
+  });
+$(document).ready(function(){
+  $("#button_gnj").click(function(){
+    $("#quick_links").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn("slow");
+	$("#div4").fadeIn("slow");
+  });
+});
+</script>
+   
+ <script type="text/javascript">
+	$(".quick_links_panel li").mouseenter(function(){
+		$(this).children(".mp_tooltip").animate({left:-300,queue:true});
+		$(this).children(".mp_tooltip").css("visibility","visible");
+		$(this).children(".ibar_login_box").css("display","block");
+	});
+	$(".quick_links_panel li").mouseleave(function(){
+		$(this).children(".mp_tooltip").css("visibility","hidden");
+		$(this).children(".mp_tooltip").animate({left:-120,queue:true});
+		$(this).children(".ibar_login_box").css("display","none");
+	});
+	$(".quick_weixin_toggle li").mouseover(function(){
+		$(this).children(".mp_qrcode").show();
+	});
+	$(".quick_weixin_toggle li").mouseleave(function(){
+		$(this).children(".mp_qrcode").hide();
+	});
+	$("#yuy").mousedown.click(function(){
+		$("#div3").show(".language");
+	});
+	</script> 
+  </div>
+  <!--第二屏结束--> 
+  <!--第三屏开始-->
+  <div id="stage3" style="height: 100%;overflow: hidden;">
+  <footer class="stage"  style="background:#fff; width:100%;margin:0 auto; padding:0;height: 100%;overflow: hidden;">
+    <div class="f_top">
+      <div class="f_box">
+        <div class="f_boxl">
+          <h1>扫描二维码</h1>
+          <h1>获取最新资讯</h1>
+          <img src="images/wx.jpg" /> </div>
+        <div class="f_boxr"> <span>全国服务热线：</span>
+          <h1>XXX</h1>
+          <span>本地服务热线：</span>
+          <h1>XXX</h1>
+          <span>公司地址：</span>
+          <h3>XXX</h3>
+        </div>
+      </div>
+    </div>
+    <div class="f_bottom" style="height: 470px;">
+      <div class="link">
+        <div class="link_box"><a target="new" href="http://www.ampcn.com/"><img src="images/url1.jpg" />
+          <h1>中国农资网</h1>
+          </a></div>
+        <div class="link_box"><a target="new" href="http://www.cast.net.cn/"><img src="images/url2.jpg" />
+          <h1>中国农业科技信息网</h1>
+          </a></div>
+        <div class="link_box"><a target="new" href="http://www.agri.gov.cn/"><img src="images/url3.jpg" />
+          <h1>中国农业信息网</h1>
+          </a></div>
+        <div class="link_box"><a target="new" href="http://www.zzys.moa.gov.cn/"><img src="images/url4.jpg" />
+          <h1>中国种植业信息网</h1>
+          </a></div>
+        <div class="link_box"><a target="new" href="http://www.sannong.net/"><img src="images/url5.jpg" />
+          <h1>中国三农网</h1>
+          </a></div>
+        <div class="link_box"><a target="new" href="http://www.agrichem.cn/"><img src="images/url6.jpg" />
+          <h1>中国农药网</h1>
+          </a></div>
+      </div>
+      <div class="adress"> <img src="images/footer_logo.png" />
+        <p style="font-size:15px; color:#cccccc; line-height:24px;"> 沪ICP备XXX号 &nbsp;&nbsp; 版权所有：上海XXX信息科技有限公司 &nbsp;&nbsp;服务热线：XXX</p>
+        <p style="font-size:15px; color:#cccccc; line-height:24px;">地 址：XXX &nbsp;&nbsp;邮编：200082 &nbsp;&nbsp;传真：XXX</p>
+        <p style="font-size:15px; color:#cccccc; line-height:24px;">邮件咨询：kefu@yc-e.net &nbsp;&nbsp;附近交通：地铁：12号线 隆昌路站;8号线 黄兴路站</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!--第三屏结束--> 
+</div>
+</body>
+</html>

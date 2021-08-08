@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>安徽XXX餐饮管理有限公司</title>
+<link href="css/css_whir.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript"  src="script/nav.js"></script>
+<script type="text/javascript" src="script/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+<!--头部-->
+<div id="header">
+  <div class="top_bg">
+    <div class="logo"><a href="#"><img src="images/logo.jpg" width="150" height="126" /></a></div>
+    <div class="top">
+      <!--导航-->
+      <div class="guide">
+        <div class="welcom">Welcome to HuafangStory !　</div>
+        <div class="login"><a href="login.html">登录</a>　|　<a href="login.html">注册</a></div>
+        <div class="shopcart">购物车（<a href="huiyuanzhongxin.html">0</a>）</div>
+        <div class="searchbox">
+          <input type="text" value="" name="" class="input" />
+          <input type="image" src="images/sbtn.jpg"  class="btn"/>
+        </div>
+      </div>
+      <!--菜单导航-->
+      <div class="nav">
+        <ul id="navul" class="cl">
+          <li><a href="index.html">首页</a></li>
+          <li class="navmenu"><a href="product_list.html">鲜花订购</a>
+		  <div class="subnav">
+            <ul>
+              <li><a href="news_list.html">花房新闻</a></li>
+              <li><a href="news_list.html">最新通告</a></li>
+              <li><a href="news_list.html">图片新闻</a></li>
+            </ul>
+          </div>
+		  </li>
+          <li><a href="yuyue.html">用餐预约</a></li>
+          <li><a href="#">花漾咖啡花屋</a></li>
+          <li><a href="about.html">关于花房</a></li>
+        </ul>
+		<script type="text/javascript">
+   
+ $(document).ready(function(){
+//	$('.hyinfo li ').hover(function(){$(this).find('.subbox').stop(true,true).slideToggle(); });
+  $('.navmenu').mouseenter(function(){
+
+$(this).find('.subnav').css("display","block");//you can give it a speed
+
+  });
+  $('.navmenu').mouseleave(function(){
+$(this).find('.subnav').css("display","none");
+
+ 
+  //jQuery(this).css("background-image", "none");
+   
+
+  });
+  
+});
+
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<!--图片切换-->
+<div class="fullSlide">
+  <div class="bd">
+    <ul>
+      <li _src="url(images/banner.jpg)" style="background:#fff center 0 no-repeat;"></li>
+      <li _src="url(images/banner.jpg)" style="background:#fff center 0 no-repeat;"></li>
+      <li _src="url(images/banner.jpg)" style="background:#fff center 0 no-repeat;"></li>
+      <li _src="url(images/banner.jpg)" style="background:#fff center 0 no-repeat;"></li>
+    </ul>
+  </div>
+  <div class="hd">
+    <ul>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+jQuery(".fullSlide").hover(function() {
+    jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 1.2)
+},
+function() {
+    jQuery(this).find(".prev,.next").fadeOut()
+});
+jQuery(".fullSlide").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    effect: "fold",
+    autoPlay: true,
+    autoPage: true,
+    trigger: "click",
+    startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+        if ( !! curLi.attr("_src")) {
+            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+        }
+    }
+});
+</script>
+<!--中间内容-->
+<div id="container">
+  <!--营业时间-->
+  <div class="hours">
+    <div class="time">
+      <h1>营业时间<br />
+        time</h1>
+      <h2>10:00-22:00</h2>
+    </div>
+  </div>
+  <!--图片展示-->
+  <div class="picshow">
+    <ul class="list">
+      <li class="li1"><a href="product_detail.html"><img src="images/pic.jpg" width="568" height="700" /></a></li>
+      <li class="li2"><a href="product_detail.html"><img src="images/pic1.jpg" width="226" height="226" /></a></li>
+      <li class="li3"><a href="product_detail.html"><img src="images/pic2.jpg" width="226" height="226" /></a></li>
+      <li class="li4"><a href="product_detail.html"><img src="images/pic3.jpg"  width="463" height="465"/></a></li>
+      <li class="li5"><a href="product_detail.html"><img src="images/pic4.jpg" width="463" height="226" /></a></li>
+    </ul>
+  </div>
+  <!--大图展示-->
+  <div class="picshow1"> <a href="product_detail.html"><img src="images/pic5.jpg" width="1280" height="865" /></a> </div>
+  <div class="clear"></div>
+  <!--图片展示-->
+  <div class="picshow2">
+    <ul class="list1">
+      <li class="pic1"><a href="product_detail.html"><img src="images/pic6.jpg" /></a></li>
+      <li class="pic2"><a href="product_detail.html"><img src="images/pic7.jpg" /></a></li>
+      <li class="pic3"><a href="product_detail.html"><img src="images/pic8.jpg" /></a></li>
+      <li class="pic4"><a href="product_detail.html"><img src="images/pic9.jpg" /></a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <!--大图展示-->
+  <div class="picshow1"> <a href="product_detail.html"><img src="images/pic10.jpg" width="1280" height="445" /></a> </div>
+</div>
+<!--底部-->
+<div id="footer">
+  <div class="f_nav">
+    <div class="item">
+      <dl>
+        <dt>service</dt>
+        <dd><a href="#">联系客服</a></dd>
+        <dd><a href="#">退换货说明</a></dd>
+        <dd><a href="#">售后特色服务</a></dd>
+        <dd><a href="#">售后服务政策</a></dd>
+      </dl>
+    </div>
+    <div class="item">
+      <dl>
+        <dt>payment</dt>
+        <dd><a href="#">货到付款</a></dd>
+        <dd><a href="#">在线支付</a></dd>
+        <dd><a href="#">邮政汇款</a></dd>
+        <dd><a href="#">发票说明</a></dd>
+      </dl>
+    </div>
+    <div class="item1">
+      <div class="title">Qr code</div>
+      <div class="code"><img src="images/ewm.jpg" width="85" height="85" /></div>
+      <div class="lxwm">邮箱：XXX<br />
+        电话：XXX<br />
+        问卷调查<br />
+        <a href="#">留言反馈</a></div>
+    </div>
+  </div>
+  <!--版权信息-->
+  <div class="foot">
+    <div class="copyright">
+      <div class="kjnav"><a href="index.html">首页</a> <a href="#">鲜花订购</a> <a href="yuyue.html">用餐预约</a> <a href="#">花漾咖啡花屋</a> <a href="about.html">关于花房</a></div>
+      <div class="copy">Copyright © 2020. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>.   Designed by <a href="#">Wanhu</a></div>
+    </div>
+    <!--分享-->
+    <ul class="fx">
+      <li><a href="#"><img src="images/txwb.jpg" /></a></li>
+      <li><a href="#"><img src="images/xlwb.jpg" /></a></li>
+      <li><a href="#"><img src="images/fx.jpg" /></a></li>
+    </ul>
+  </div>
+</div>
+<!--左侧导航-->
+<div id="leftsead">
+	<ul>
+		<li><a href="tencent://message/?uin=1234567&Site=test315.nesky.cn&Menu=yes"><img src="images/qqd.jpg" width="124" height="54"  class="hides"/><img src="images/qq.jpg" width="54" height="54" class="shows" /></a></li>
+		<li><a class="youhui"><img src="images/zcwx.jpg" width="54" height="54" class="shows" /><img src="images/wxd.png" width="145" height="288" class="hides"/></a></li>
+		<li><a href="#"><img src="images/zcwbd.jpg" width="124"height="54" class="hides"/><img src="images/zcwb.jpg" width="54" height="54" class="shows" /></a></li>
+		<li><a href="#"><img src="images/zcmapd.jpg" width="124"height="54" class="hides"/><img src="images/zcmap.jpg" width="54" height="54" class="shows" /></a></li>
+		<li><a id="top_btn"><img src="images/fhtbd.jpg" width="124" height="54" class="hides"/><img src="images/fhdb.jpg" width="54" height="54" class="shows" /></a></li>
+	</ul>
+</div><!--leftsead end-->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#leftsead a").hover(function(){
+		if($(this).prop("className")=="youhui"){
+			$(this).children("img.hides").show();
+		}else{
+			$(this).children("img.hides").show();
+			$(this).children("img.shows").hide();
+			$(this).children("img.hides").animate({marginLeft:'0px'},'slow'); 
+		}
+	},function(){ 
+		if($(this).prop("className")=="youhui"){
+			$(this).children("img.hides").hide('slow');
+		}else{
+			$(this).children("img.hides").animate({marginLeft:'-143px'},'slow',function(){$(this).hide();$(this).next("img.shows").show();});
+		}
+	});
+
+	$("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});
+
+});
+</script>
+
+</body>
+</html>

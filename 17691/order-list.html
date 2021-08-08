@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+   <meta name="author" content="order by dede58.com/" />
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="XXX速运、XXX速运" name="keywords">
+    <meta content="XXX速运、XXX速运" name="description">
+    <meta content="Li Zhen Ya Team" name="author">
+    <title>XXX速运-订单详情</title>
+    <link type="text/css" rel="stylesheet" href="theme/css/core.css">
+    <link type="text/css" rel="stylesheet" href="theme/css/home.css">
+    <script type="text/javascript" src="theme/js/jquery-1.4.2.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.tabPanel ul li').click(function(){
+                $(this).addClass('hit').siblings().removeClass('hit');
+                $('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+
+<header id="lzy-header">
+    <div class="lzy-container clearfix">
+        <div class="lzy-he-logo">
+            <h1>
+                <a href="index.html"><img src="theme/img/logo.png" title="" about="" name=""></a>
+            </h1>
+        </div>
+        <div class="lzy-che-nav">
+            <ul>
+                <li><a href="user-index.html">用户首页</a></li>
+                <li><a href="order.html" class="current">订单</a></li>
+                <li><a href="capital.html">资金</a></li>
+                <li><a href="#">库存</a></li>
+                <li><a href="#">个人信息</a></li>
+            </ul>
+        </div>
+
+        <div class="lzy-register">
+            <ul>
+                <li><span  class="sign">欢迎，邓杰</span></li>
+                <li><a href="#">用户设置</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="lzy-content lzy-content-order">
+        <div class="lzy-boxes lzy-boxes-order clearfix">
+            <div class="tabPanel clearfix">
+                <ul>
+                    <li>填单</li>
+                    <li class="hit">我的订单</li>
+                </ul>
+                <div class="panes">
+                    <div class="pane">
+                        <div class="panes-tab">
+                            <h3>快捷填单</h3>
+                            <ol>
+                                <li>填写包裹信息前，请先将包裹打包、称重，并按照实重填写。从03.02.14开始由于DHL计重规则的调整，DHL开始对超重执行0容忍，<br>大于0.001kg则按下一个重量级计价。为了包裹能快速出库，推荐大家买单时多预估点包装耗材以及预留0.1kg的国际单的重量。</li>
+                                <li>超重的包裹需按4欧/公斤补款后才能出库。补款连接：http://item.taobao.com/item.htm?id=38631607995<br>(PS: 易欧洲推出了每走20个包裹可以自动减免1公斤的超重补款，具体细则请看公告：易欧洲-积分升重细则）</li>
+                                <li>订单一旦点击提交，则无法自行更改；若有错误，可在第2步我的订单中删除并重填。易欧洲入库前，如需更改可在第3步我的包裹中发起售后申请。<br>注意所有小数点的填写请用“.”表示，否则系统不能识别。</li>
+                                <li>发件人的门牌不能输入英文字母，如有英文字母的请输入到前面的街道名中。<br>门牌和邮编的数字请用英文输入法来输，不要用中文输入法，会影响DHL识别出单。</li>
+                                <li>需要批量填写包裹的，在收件人黄色条上点“+”会增加不同收件人的包裹，同一收件人多个包裹的，在蓝色包裹条上点“+”，<br>会增加同一收件人的包裹，增加物品品种在Germany后面点+。</li>
+                            </ol>
+                            <p>＊特别提醒：根据我们的经验DHL对破损的赔付率非常低，都是因为包装不符合国际运输的规范要求，各位在打包时一定要注意包装要防潮，防震，防压。<br>因为包装不好造成的破损DHL是一律不予赔付的。</p>
+                        </div>
+                        <div class="lzy-tab">
+                            <table width="1089" border="0" class="tab-pick">
+                                <tr>
+                                    <th>选择物流渠道</th>
+                                    <th>预计天数（工作日）</th>
+                                    <th>保额</th>
+                                    <th>收件国</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" placeholder="">EMS</td>
+                                    <td>7-9天</td>
+                                    <td>€120</td>
+                                    <td>中国大陆</td>
+                                </tr>
+                            </table>
+                            <table width="1089" border="0" cellspacing="0" cellpadding="0" class="tab-sender">
+                                <tr style="padding-bottom:10px;">
+                                    <td colspan="5"><span>发件人信息</span><i>（英文字母填写）</i></td>
+                                    <td align="right"><a href="#">选择发件人</a></td>
+                                </tr>
+                                <tr>
+                                    <td>发件人姓名：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>发件人电话：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td rowspan="4" valign="top">发件人公司：</td>
+                                    <td rowspan="4" valign="top"><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>发件人街道信息：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>门牌号码：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>发件人邮政编码：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>地址补充信息：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>发件人城市</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>发件人国家：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                            </table>
+                            <table width="1089" border="0" cellspacing="0" cellpadding="0" class="tab-sender">
+                                <tr style="padding-bottom:10px;">
+                                    <td colspan="5"><span>开发票地址 </span><i>（英文字母填写）</i></td>
+                                </tr>
+                                <tr>
+                                    <td>姓名：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>公司：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>邮编：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>地址：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>门牌号码：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>所在城市：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                            </table>
+                            <table width="1089" border="0" cellspacing="0" cellpadding="0" class="tab-sender">
+                                <tr style="padding-bottom:10px;">
+                                    <td colspan="5"><span>收货人信息 </span><i>（中文汉字填写）</i></td>
+                                    <td align="right"><a href="#" class="minus">-</a><a href="#" class="plus">+</a><a href="#">选择发件人</a></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人姓名：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>收件人手机：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>邮政编码：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人地址：</td>
+                                    <td>
+                                        <select>
+                                            <option>北京</option>
+                                            <option>上海</option>
+                                            <option>广州</option>
+                                            <option>深圳</option>
+                                            <option>天津</option>
+                                            <option>成都</option>
+                                            <option>重庆</option>
+                                            <option>杭州</option>
+                                            <option>南京</option>
+                                            <option>沈阳</option>
+                                        </select>
+                                        <select>
+                                            <option>市辖区</option>
+                                            <option>市辖县</option>
+                                        </select>
+                                        <select>
+                                            <option>东城区</option>
+                                            <option>西城区</option>
+                                            <option>海淀区</option>
+                                            <option>朝阳区</option>
+                                            <option>丰台区</option>
+                                            <option>石景山区</option>
+                                            <option>通州区</option>
+                                            <option>通州区</option>
+                                            <option>顺义区</option>
+                                            <option>房山区</option>
+                                            <option>大兴区</option>
+                                            <option>昌平区</option>
+                                            <option>怀柔区</option>
+                                            <option>平谷区</option>
+                                            <option>门头沟区</option>
+                                        </select>
+                                    </td>
+                                    <td></td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr style="padding-bottom:10px;">
+                                    <td colspan="5"><span>收件人拼音信息 </span><i>（填写上面的中文信息后系统将会自动翻译，请人工检查确认无误后再提交）</i></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人姓名拼音：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人地址拼音：</td>
+                                    <td><input placeholder="" value="" name=""  style="width:60px; margin-right:5px;"><input placeholder="" value="" name=""  style="width:60px; margin-right:5px;"><input placeholder="" value="" name=""  style="width:60px;"></td>
+                                    <td></td>
+                                    <td><input placeholder="" value="" name="" ></td>
+
+                                </tr>
+                            </table>
+
+                            <table width="1089" border="0" cellspacing="0" cellpadding="0" class="tab-sender">
+                                <tr style="padding-bottom:10px;">
+                                    <td colspan="5"><span>包裹信息 </span><i>（英文字母填写）</i></td>
+                                    <td align="right"><a href="#" class="minus">-</a><a href="#" class="plus">+</a></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人姓名：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>收件人手机：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                    <td>邮政编码：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人地址：</td>
+                                    <td>
+                                        <select>
+                                            <option>北京</option>
+                                            <option>上海</option>
+                                            <option>广州</option>
+                                            <option>深圳</option>
+                                            <option>天津</option>
+                                            <option>成都</option>
+                                            <option>重庆</option>
+                                            <option>杭州</option>
+                                            <option>南京</option>
+                                            <option>沈阳</option>
+                                        </select>
+                                        <select>
+                                            <option>市辖区</option>
+                                            <option>市辖县</option>
+                                        </select>
+                                        <select>
+                                            <option>东城区</option>
+                                            <option>西城区</option>
+                                            <option>海淀区</option>
+                                            <option>朝阳区</option>
+                                            <option>丰台区</option>
+                                            <option>石景山区</option>
+                                            <option>通州区</option>
+                                            <option>通州区</option>
+                                            <option>顺义区</option>
+                                            <option>房山区</option>
+                                            <option>大兴区</option>
+                                            <option>昌平区</option>
+                                            <option>怀柔区</option>
+                                            <option>平谷区</option>
+                                            <option>门头沟区</option>
+                                        </select>
+                                    </td>
+                                    <td></td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr style="padding-bottom:10px;">
+                                    <td colspan="5"><span>收件人拼音信息 </span><i>（填写上面的中文信息后系统将会自动翻译，请人工检查确认无误后再提交）</i></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人姓名拼音：</td>
+                                    <td><input placeholder="" value="" name="" ></td>
+                                </tr>
+                                <tr>
+                                    <td>收件人地址拼音：</td>
+                                    <td><input placeholder="" value="" name=""  style="width:60px; margin-right:5px;"><input placeholder="" value="" name=""  style="width:60px; margin-right:5px;"><input placeholder="" value="" name=""  style="width:60px;"></td>
+                                    <td></td>
+                                    <td><input placeholder="" value="" name="" ></td>
+
+                                </tr>
+                            </table>
+                            <div class="tab-text clearfix"><p>共计：<span>12</span></p></div>
+                            <div class="tab-submit">
+                                <a href="#">提 交</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane" style="display:block;">
+                        <div class="panes-tab finite-tab">
+                            <h3>订单详情</h3>
+                        </div>
+                        <div class="lzy-tab2">
+                            <div class="lzy-tab3">
+                                <table width="1089" border="0" cellspacing="0" cellpadding="0" class="tab-excel tab-page">
+                                    <tr>
+                                        <td>订单号：<span>LL00116503586909</span></td>
+                                        <td> 订单总重：<span>1kg</span></td>
+                                        <td>物流：<span>EMS</span></td>
+                                        <td>状态：<span>新建</span></td>
+                                        <td align="right"><a href="#">等待付款</a><a href="#">已经付款</a><a href="#">订单完成</a><a href="#">取消订单</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>订单创建于：<span>2016-03-09 23:04:54 </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>发件人：<span>李嘉桦</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>发票抬头： <span>不需要发票</span></td>
+                                    </tr>
+                                </table>
+                                <table class="tab-content">
+                                    <tr>
+                                        <th>运单包裹</th>
+                                        <th>包裹号</th>
+                                        <th>重量</th>
+                                        <th>状态</th>
+                                        <th>实付运费</th>
+                                    </tr>
+                                    <tr>
+                                        <td>hemeng，北京市 市辖区门头沟区xinjianlu</td>
+                                        <td>LB0011652077862 </td>
+                                        <td>1kg</td>
+                                        <td>新建</td>
+                                        <td>新€16.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" style="padding: 0;border:none;">
+                                               <table cellspacing="0" cellpadding="0" style="width: 100%; height: 100%;" class="tab-nesting">
+                                                   <tr>
+                                                       <td>品种</td>
+                                                       <td>描述</td>
+                                                       <td>海关代码</td>
+                                                       <td>数量</td>
+                                                       <td>单价</td>
+                                                       <td>总净重</td>
+                                                       <td>报关价值</td>
+                                                       <td>产地</td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td>手机 </td>
+                                                       <td>手机配件 </td>
+                                                       <td>98005</td>
+                                                       <td>4</td>
+                                                       <td>€33</td>
+                                                       <td>3kg</td>
+                                                       <td>€1</td>
+                                                       <td>美国</td>
+                                                   </tr>
+                                               </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="tab-storage"><a href="#">包囊入库</a><a href="#">包囊出库</a></div>
+                                <table class="tab-content">
+                                    <tr>
+                                        <th>运单包裹</th>
+                                        <th>包裹号</th>
+                                        <th>重量</th>
+                                        <th>状态</th>
+                                        <th>实付运费</th>
+                                    </tr>
+                                    <tr>
+                                        <td>hemeng，北京市 市辖区门头沟区xinjianlu</td>
+                                        <td>LB0011652077862 </td>
+                                        <td>1kg</td>
+                                        <td>新建</td>
+                                        <td>新€16.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" style="padding: 0;border:none;">
+                                            <table cellspacing="0" cellpadding="0" style="width: 100%; height: 100%;" class="tab-nesting">
+                                                <tr>
+                                                    <td>品种</td>
+                                                    <td>描述</td>
+                                                    <td>海关代码</td>
+                                                    <td>数量</td>
+                                                    <td>单价</td>
+                                                    <td>总净重</td>
+                                                    <td>报关价值</td>
+                                                    <td>产地</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>手机 </td>
+                                                    <td>手机配件 </td>
+                                                    <td>98005</td>
+                                                    <td>4</td>
+                                                    <td>€33</td>
+                                                    <td>3kg</td>
+                                                    <td>€1</td>
+                                                    <td>美国</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="tab-storage"><a href="#">包囊入库</a><a href="#">包囊出库</a></div>
+                                <div class="tab-encyst">订单实付总运费：<span>€16.00</span></div>
+                            </div>
+                        </div>
+                        <div class="panes-tab time-tab">
+                            <h3>订单状态</h3>
+                        </div>
+                        <div class="lzy-tab3">
+                            <ol class="lzy-tab-ul">
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>确认订单</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>订单超重，实际重量 5kg 还应支付 €5.00</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>深圳转运中心公司 已发出,下一站 北京转运中心</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>订单超重，实际重量 5kg 还应支付 €5.00</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>用户重新提交</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>深圳转运中心公司 已发出,下一站 深圳机场</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>快件已到达 北京市海淀区中关村</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>北京市海淀区中关村派件员：李嘉桦 134470119183正在为您派件</span>
+                                </li>
+                                <li>
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>北京市海淀区中关村公司 已签收 签收人：前台，感谢使用圆通速递，期待再次为您服务</span>
+                                </li>
+                                <li class="tab-current">
+                                    <span>2016-03-12 15:59</span>
+                                    <span>管理员</span>
+                                    <span>订单完成</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="lzy-adaption">
+        <div class="lzy-copyright">
+            <p>Copyright © 2020. All Rights Reserved <a href="http://www.aizhanzhe.com/template.html" target="_blank">懒之才</a>. 沪ICP备XXX号</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

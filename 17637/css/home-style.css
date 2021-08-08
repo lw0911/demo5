@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+/*左侧翻页样式*/
+.left {
+	left: 2%;
+	top: 32%;
+	/*margin-top:400px;*/
+	height: 220px;
+	width: 50px;
+	position:absolute;
+	z-index: 999;
+}
+.btu_top {
+	height: 50px;
+	width: 50px;
+	background: url(../images/top_yc.png) no-repeat;
+	display:block;
+	clear:both;
+	margin:0 auto;
+}
+.btu_top:hover {
+	filter: alpha(opacity=0.4);
+	opacity: 0.4;
+}
+.home {
+	margin-top: 30px;
+	height: 50px;
+	width: 50px;
+	background: url(../images/home.png) no-repeat;
+	display:block;
+	clear:both;
+	margin:0 auto;
+}
+.home:hover {
+	filter: alpha(opacity=0.4);
+	opacity: 0.4;
+}
+.btu_buttom {
+	margin-top: 30px;
+	height: 50px;
+	width: 50px;
+	background: url(../images/bottom.png) no-repeat;
+	display:block;
+	clear:both;
+	margin:0 auto;
+}
+.btu_buttom:hover {
+	filter: alpha(opacity=0.4);
+	opacity: 0.4;
+}
+.left a{
+	float:left;
+	display:block;
+	height:50px;
+	width:50px;	
+	margin-top:25px;
+}
+
+/*logo图标样式*/
+.logo_icon {
+	top: 1%;
+	left: 2%;
+	z-index:9999;
+	width: 330px;
+	height: 120px;
+	position:absolute;
+	background: url(../images/logo.png) no-repeat;
+}
+/*右侧导航栏样式*/
+.right {
+	right: 1%;
+	top: 2%;
+	width: 36px;
+	height: 36px;
+	position: fixed;
+	background: url(../images/gnj.png) no-repeat;
+}
+
+/*产品选项卡样式*/
+.option_box{
+	width:100%;
+	height:212px;
+	bottom:3%;
+	margin:0 auto;
+	padding:0;
+	position:absolute;
+	}
+.option {
+    *width:expression((this.offsetWidth < 1080) ? (this.width = 1080 +'px') : true);
+	position:relative;
+	height: 212px;
+	width: 1080px;
+	margin:0 auto;
+	/*float:right;
+	right:8%;
+	left:26%;*/
+	text-align:center;
+	padding: 0px;
+	overflow: auto;
+}
+.button_img {
+	/*position: absolute;*/
+	max-width: 360px;
+	max-height: 170px;
+	float: left;
+	z-index: 66;
+}
+*html .button_img {
+width:expression(this.width<360&&this.width<this.height?170:auto);
+height:expresion(this.height<170?170:auto);
+}
+img {
+	width: 100%;
+	height: auto;
+}
+.button_img div {
+	height: auto;
+	width: 360px;
+}
+.button_img a {
+	height: 212px;
+}
+.button_img1 a {
+	background: url(../images/zz.png) no-repeat;
+	width: 100%;
+	min-width: 360px;
+	left: 170px;
+	bottom: 9%;
+	float: left;
+ *width:expression((this.offsetWidth < 360) ? (this.width = 360 +'px') : true);
+/*display: block;*/
+}
+.button_img1 a:hover {
+	width: 360px;
+	height: 212px;
+	background:url(../images/zz_bs.png) no-repeat;
+}
+.button_img2 a {
+	background: url(../images/ny.png) no-repeat;
+	width: 100%;
+	min-width: 360px;
+	left: 170px;
+	float: left;
+	display: block;
+}
+.button_img2 a:hover {
+	width: 360px;
+	height: 212px;
+	background:url(../images/ny_bs.png) no-repeat;
+}
+.button_img3 a {
+	background: url(../images/fl.png) no-repeat;
+	width: 100%;
+	min-width: 360px;
+	float: left;
+/*left: 170px;
+display: block;
+*/
+}
+.button_img3 a:hover {
+	width: 360px;
+	height: 212px;
+	background:url(../images/fl_bs.png) no-repeat;
+}

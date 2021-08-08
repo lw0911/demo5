@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>选择模板主题</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="css/style.css" rel="stylesheet">
+<script src="js/jQuery1.7.js"></script>
+<script src="js/jquery.tabs.js"></script>
+<script>
+	$(function(){
+		
+		/*	
+			$(".header-nav-item ul li").click(function(){
+				 var key=$(this).attr("keydata");
+				 
+				  $(".tab_menu li[keydata]").removeClass("current")
+				  
+				    $(".tab_menu li[keydata='"+key+"']").addClass("current");
+					$(".tab_box div[keydata]").addClass("hide");
+					$(".tab_box div[keydata='"+key+"']").removeClass("hide");
+		    })	
+		
+		*/
+
+		
+		var ulflag=0;
+		$(".user").click(function(){
+			var praent=$(this);
+			if(ulflag==0){
+				$(praent).find("ul").show()	
+				ulflag=1;
+				
+			}else{
+				$(praent).find("ul").hide()	
+				ulflag=0;
+		   }
+			
+	    })	
+	})
+</script>
+
+
+
+
+<script type="text/javascript">
+$(function(){
+	$('.demo2').Tabs({
+		event:'click'
+	});
+});	
+</script>
+
+
+</head>
+
+<body class="intro-wrap" style="    background-color: #E8E9EE;">
+
+        <div class="hy_top">
+            <div class="header">
+                <div class="logo"><img src="images/logo.png"  height="50px" width="50px"></div>
+                <div class="nav">
+                    <ul class="menu">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">产品优势</a></li>
+                        <li><a href="#">产品服务</a></li>
+                        <li><a href="#">模板主题</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">控制面板</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div> 
+                <div class="user">
+                   <div class="header-nav-item user-infobar btn-group ">
+                                <a href="#"  class="userinfo-link">
+                                    <div class="user-header-img"><img src="images/tx.jpg" width="100" height="100"  alt=""/></div>
+                                    <span class="user-name">ali</span>
+                                    <span class="user-infobar-arrow"> <img src="images/xiala.png" width="16" height="16"  alt=""/></span>
+                                </a>
+                                <ul class="dropdown-menu bullet pull-right">
+                                <span> </span>
+                                    <li keydata='1'><a href="user_zl.html"> <img src="images/gr.png" width="16" height="21"  alt=""/>用户信息</a></li>
+                                    <li keydata='2'> <a href="system_message.html"> <img src="images/wj.png" width="21" height="16"  alt=""/>系统消息</a></li>
+                                     <li keydata='3'> <a href="system_announcement.html"><img src="images/tz.png" width="24" height="21"  alt=""/>系统公告 </a></li>
+                                     <li keydata='4'><a href="transaction_record.html"><img src="images/jy.png" width="20" height="20"  alt=""/>交易记录</a></li>
+                                    <li><a href="#"> <img src="images/zx.png" width="21" height="21"  alt=""/>注销</a></li>
+                                </ul>
+                            </div>       
+                </div><div class="clear"></div>
+            </div>
+         </div>
+     
+   <!-------------top end--------------------->
+   <div class="dashboard-topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dashboard-page-title">
+                    <strong>控制面板</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div><!-------------------dashboard-topbar end------------------------->
+   
+   
+   <div class="zd_manage_big container">
+   			<ul>
+            	<li>
+                	
+                    <div class="site-list-topbar">
+                            <div class="col-md-7">
+                                <!--site-name-->
+                                <div class="site-name">
+                                    111
+                                    <span class="label label-info">大众版</span>
+                                </div>
+                                <!--/site-name-->
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <div class="btn-toolbar site-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                            <a href="#" class="btn btn-success" style="color:#fff;">去升级</a>
+                                    </div>
+                                    <div class="btn-group">
+                                            <a class="btn btn-default" onclick="deleteSite('870')" href="javascript:;" style="color:#000;"> 删除</a>                                            
+                                    </div>   
+                                </div>
+                            </div>
+                        </div><!-----------site-list-topbar end------------------->
+                        
+                        <div class="site-list-container clearfix">
+
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="site-img"><a href="#"><img src="images/thumbnail.jpg" class="preview"></a></div>
+                                       
+                          </div>
+                                    <div class="col-sm-10 site-info">
+                                        <p><i class="fa fa-hdd-o"></i> 站点ID：870</p>
+                                        <p><i class="fa fa-clock-o"></i> 创建时间：2016-05-05 13:40:48</p>
+                                        <p><i class="fa fa-clock-o"></i> 更新时间：2016-05-05 13:40:48</p>
+                                        <p><i class="fa fa-clock-o"></i> 到期时间：永久</p>
+                                        <p>
+                                            <i class="fa fa-globe"></i> 二级域名：                                                111.wemorefun.com
+                                        </p>
+
+                   
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                        
+                </li><!-----------------li one end--------------------->
+                
+                
+                <li>
+                	
+                    <div class="site-list-topbar">
+                            <div class="col-md-7">
+                                <!--site-name-->
+                                <div class="site-name">
+                                    111
+                                    <span class="label label-info">大众版</span>
+                                </div>
+                                <!--/site-name-->
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <div class="btn-toolbar site-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                            <a href="#" class="btn btn-success" style="color:#fff;">去升级</a>
+                                    </div>
+                                    <div class="btn-group">
+                                            <a class="btn btn-default" onclick="deleteSite('870')" href="javascript:;" style="color:#000;"> 删除</a>                                            
+                                    </div>   
+                                </div>
+                            </div>
+                        </div><!-----------site-list-topbar end------------------->
+                        
+                        <div class="site-list-container clearfix">
+
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="site-img"><a href="#"><img src="images/thumbnail.jpg" class="preview"></a></div>
+                                       
+                          </div>
+                                    <div class="col-sm-10 site-info">
+                                        <p><i class="fa fa-hdd-o"></i> 站点ID：870</p>
+                                        <p><i class="fa fa-clock-o"></i> 创建时间：2016-05-05 13:40:48</p>
+                                        <p><i class="fa fa-clock-o"></i> 更新时间：2016-05-05 13:40:48</p>
+                                        <p><i class="fa fa-clock-o"></i> 到期时间：永久</p>
+                                        <p>
+                                            <i class="fa fa-globe"></i> 二级域名：                                                111.wemorefun.com
+                                        </p>
+
+                   
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                        
+                </li><!---------------------li two end-------------------------------->
+                
+                
+                <li>
+                	
+                    <div class="site-list-topbar">
+                            <div class="col-md-7">
+                                <!--site-name-->
+                                <div class="site-name">
+                                    111
+                                    <span class="label label-info">大众版</span>
+                                </div>
+                                <!--/site-name-->
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <div class="btn-toolbar site-toolbar" role="toolbar">
+                                    <div class="btn-group">
+                                            <a href="#" class="btn btn-success" style="color:#fff;">去升级</a>
+                                    </div>
+                                    <div class="btn-group">
+                                            <a class="btn btn-default" onclick="deleteSite('870')" href="javascript:;" style="color:#000;"> 删除</a>                                            
+                                    </div>   
+                                </div>
+                            </div>
+                        </div><!-----------site-list-topbar end------------------->
+                        
+                        <div class="site-list-container clearfix">
+
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="site-img"><a href="#"><img src="images/thumbnail.jpg" class="preview"></a></div>
+                                       
+                          </div>
+                                    <div class="col-sm-10 site-info">
+                                        <p><i class="fa fa-hdd-o"></i> 站点ID：870</p>
+                                        <p><i class="fa fa-clock-o"></i> 创建时间：2016-05-05 13:40:48</p>
+                                        <p><i class="fa fa-clock-o"></i> 更新时间：2016-05-05 13:40:48</p>
+                                        <p><i class="fa fa-clock-o"></i> 到期时间：永久</p>
+                                        <p>
+                                            <i class="fa fa-globe"></i> 二级域名：                                                111.wemorefun.com
+                                        </p>
+
+                   
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                        
+                </li><!---------------li three end---------------------->
+            </ul>
+            
+            
+            
+   		
+   
+   			
+   </div>
+   
+   
+   
+   
+</body>
+</html>
